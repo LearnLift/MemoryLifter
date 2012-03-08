@@ -1,0 +1,230 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)--> <!--(Document created with RoboEditor. )============================--> <!--(==============================================================)-->
+
+<head>
+
+<title>Importer</title>
+
+<!--(Meta)==========================================================-->
+
+<meta HTTP-EQUIV=Content-Type Content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=946>
+<meta name=layout-width content=1071>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="..\ML_Help.css">
+
+
+
+<!--(Style Sheet)===================================================-->
+
+<style>
+<!--
+
+body {
+	background-color: #ffffff;
+}
+
+-->
+</style>
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body style="color: #000000;">
+
+<!--(Generated Script Links)========================================--> <!--(Generated Code)================================================--> <!--(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)==================--> <!--begin!kadov{{===================================================-->
+<script type="text/javascript"
+		language=JavaScript1.2
+		src="../ehlpdhtm.js"
+		x-save-method=compute-relative></script>
+<script type="text/javascript"
+		language=JavaScript1.2>
+<!-- 
+if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function();if( typeof( kadovInitTrigger ) != 'function' ) kadovInitTrigger = new Function();if( typeof( kadovFilePopupInit ) != 'function' ) kadovFilePopupInit = new Function();if( typeof( kadovTextPopupInit ) != 'function' ) kadovTextPopupInit = new Function();
+ //-->
+</script>
+
+<!--}}end!kadov=====================================================--> <!--(==============================================================)-->
+
+
+<!--(Resources)=====================================================--> <!--(Generated Code)================================================--> <!--(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)==================-->
+
+<div class=x-popup-text id=POPUP207469396  style='display: none; position: absolute' >
+<!--kadov-resources-begin{{-->
+<p>(Le format CSV est l'un des formats de fichier dont les valeurs sont s&eacute;par&eacute;es par un d&eacute;limiteur, ce dernier pouvant &ecirc;tre n'importe quel caract&egrave;re. De nombreuses applications comme Microsoft Excel<symbol name=Trademark><!--begin!kadov{{-->™<!--}}end!kadov--> autorisent les fichiers csv &agrave; utiliser n'importe quel caract&egrave;re de d&eacute;limitation)</p>
+<!--}}kadov-resources-end-->
+</div>
+
+<div class=x-popup-text id=POPUP207659617  style='display: none; position: absolute' >
+<!--kadov-resources-begin{{-->
+<p>(Les chapitres sont con&ccedil;us pour faciliter l'organisation des cartes dans le dictionnaire en rubriques logiques : alimentation, v&oelig;ux, course, etc..)</p>
+<!--}}kadov-resources-end-->
+</div>
+
+<!--(End Resources)=================================================-->
+
+
+<h2 class=Topic><a NAME=import></a><b>Importer des cartes depuis le fichier</b></h2>
+
+<h2 class=Topic><b style="font-weight: bold;">Importation des cartes d'un fichier</b></h2>
+
+<p>MemoryLifter permet d'importer des donn&eacute;es &agrave; partir d'un fichier texte ou <a class=expandspot 															x-use-popup=#POPUP207469396 															x-popup-type=expanding 															href="javascript:kadovTextPopup(this)" 															id=a1>csv</a><!--begin!kadov{{--><script 
+ type="text/javascript"
+	language=JavaScript1.2><!--
+kadovTextPopupInit('a1');
+//--></script><!--}}end!kadov--> avec les d&eacute;limiteurs suivants.</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	
+	<li class=kadov-p-CNumList><p class=NumList><b style="font-weight: bold;">Tabulation</b>&nbsp;: les paires de mot sont s&eacute;par&eacute;es par une tabulation et les cartes par des retours chariot</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList><b style="font-weight: bold;">Point-virgule</b>&nbsp;: les paires de mot sont s&eacute;par&eacute;es par un point virgule et les cartes par des retours chariot</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList><b style="font-weight: bold;">Virgule</b>&nbsp;: les paires de mot sont s&eacute;par&eacute;es par une virgule et les cartes par des retours chariot</p></li>
+</ul>
+
+&nbsp; 
+
+<p class=Note
+	style="font-weight: bold;"><b><span style="font-weight: bold;">Remarques&nbsp;:</b></span></p>
+
+<ul>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Actuellement, seuls les formats de fichier texte sont pris en charge. <br> Si vous souhaitez importer des donn&eacute;es &agrave; partir d'un autre format (traitement de texte par exemple), essayez d'enregistrer les donn&eacute;es au format texte standard.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Dans les fichiers d&eacute;limit&eacute;s par une virgule, l'importation peut &eacute;chouer si une virgule est utilis&eacute;e dans des guillemets, par exemple &quot;&quot;Donne-le moi&quot;, dit-il&quot;.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si des caract&egrave;res sp&eacute;ciaux n'apparaissent pas dans le fichier export&eacute; d'Excel, essayez de l'enregistrer au format TXT (*.txt - Unicode Text) ou au format CSV (*.csv - Comma delimited).</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si Unicode n'est pas s&eacute;lectionn&eacute;, Excel n'exporte g&eacute;n&eacute;ralement pas correctement les caract&egrave;res &eacute;trangers (caract&egrave;res dans une autre langue que celle du syst&egrave;me).</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>S&eacute;lectionnez le jeu de caract&egrave;res correct pour vos donn&eacute;es.</p></li>
+</ul>
+
+&nbsp; 
+
+<p class=SubTopic1><b style="font-weight: bold;">Pour importer un fichier</b></p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Dans le menu <b>Edition</b>, s&eacute;lectionnez <b>Importation de cartes <span style="font-weight: normal;">=&gt;</span> A partir du fichier...</b></p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Dans la bo&icirc;te de dialogue <span style="font-weight: bold;">Importer</span>, cliquez sur <span style="font-weight: bold;">Charger le fichier...</span> 
+ </p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>S&eacute;lectionnez le fichier &agrave; importer.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Cliquez sur <b>Ouvrir</b>. </p></li>
+</ol>
+
+<p class=Note
+	style="margin-left: 40px;"><span style="font-weight: bold;">Remarque&nbsp;:</span> 
+ </p>
+
+<p class=Note
+	style="margin-left: 40px;">MemoryLifter va d&eacute;sormais tenter de d&eacute;terminer le d&eacute;limiteur utilis&eacute; par le fichier, charger le contenu du fichier et vous permettre de visualiser les 19 premi&egrave;res cartes.<br> Si MemoryLifter &eacute;choue, saisissez ou s&eacute;lectionnez le format de fichier appropri&eacute; dans le champ <span style="font-weight: bold;">Format des fichiers</span>.</p>
+
+<p class=Note>&nbsp;</p>
+
+<ol start=5
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Sp&eacute;cifiez les champs &agrave; importer &agrave; l'aide du <b><a HREF="javascript:BSSCPopup('memo6a0i.htm');" 							id=a2 							style="font-weight: normal;">s&eacute;lecteur de champ</a><!--begin!kadov{{--><script 
+ type="text/javascript"
+	language=JavaScript1.2><!--
+kadovFilePopupInit('a2');
+//--></script><!--}}end!kadov--></b>.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Organisez les champs &agrave; l'aide du <b><a href="javascript:BSSCPopup('memo6a0i.htm');" 			id=a4 			style="font-weight: normal;">s&eacute;lecteur de champ</a><!--begin!kadov{{--><script 
+ type="text/javascript"
+	language=JavaScript1.2><!--
+kadovFilePopupInit('a4');
+//--></script><!--}}end!kadov--></b>.</p></li>
+</ol>
+
+<p class=Note
+	style="margin-left: 40px; font-weight: bold;">Remarque&nbsp;:</p>
+
+<p class=Note
+	style="margin-left: 40px;">Reproduisez la s&eacute;quence des colonnes dans votre fichier source.</p>
+
+<p class=Note
+	style="margin-left: 40px;">&nbsp;</p>
+
+<ol start=7
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Pr&eacute;visualisez les cartes dans le champ <span style="font-weight: bold;">Aper&ccedil;u</span>. </p></li>
+</ol>
+
+<p class=Note
+	style="margin-left: 40px; font-weight: bold;">Remarque&nbsp;:</p>
+
+<p class=Note
+	style="margin-left: 40px;">Si la pr&eacute;visualisation des colonnes n'est pas bonne, essayez de s&eacute;lectionner un autre format de fichier dans le champ <span style="font-weight: bold;">Format de fichiers</span>.</p>
+
+<p class=Note
+	style="margin-left: 40px;">Si la pr&eacute;visualisation des caract&egrave;res n'est pas bonne, essayez de s&eacute;lectionner un autre jeu de caract&egrave;res dans le champ <span style="font-weight: bold;">Jeu de caract&egrave;res (page de codes)</span>.</p>
+
+<p class=Note
+	style="margin-left: 40px;">&nbsp;</p>
+
+<ol start=8
+	style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>D&eacute;s&eacute;lectionnez l'option <span style="font-weight: bold;">Contient l'en-t&ecirc;te</span> si le fichier source ne contient pas de ligne d'en-t&ecirc;te.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>S&eacute;lectionnez l'option <span style="font-weight: bold;">S&eacute;parer les synonymes</span> si vous avez s&eacute;par&eacute; les synonymes de la question ou de la r&eacute;ponse dans le fichier source par des virgules.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Dans le champ <span style="font-weight: bold;">Chapitre par d&eacute;faut</span>, s&eacute;lectionnez un <a class=expandspot 									x-use-popup=#POPUP207659617 									x-popup-type=expanding 									href="javascript:kadovTextPopup(this)" 									id=a3>chapitre</a><!--begin!kadov{{--><script 
+ type="text/javascript"
+	language=JavaScript1.2><!--
+kadovTextPopupInit('a3');
+//--></script><!--}}end!kadov--> pour les cartes import&eacute;es. </p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Cliquez sur <b>Importer</b> pour lancer l'importation.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Cliquez sur <span style="font-weight: bold;">Fermer</span> pour commencer l'apprentissage.</p></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">Voir &eacute;galement :</b> </p>
+
+<ul>
+	
+	<li class=kadov-p
+		class=kadov-p><a HREF="memo5ur8.htm">Exporter les cartes</a></li>
+	
+	<li class=kadov-p
+		class=kadov-p><a HREF="memo3n72.htm">Ouvrir un module d'apprentissage</a></li>
+</ul>
+
+</body>
+
+</html>

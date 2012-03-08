@@ -1,0 +1,127 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>The box system</title>
+
+<!--(Meta)==========================================================-->
+
+<meta HTTP-EQUIV=Content-Type Content="text/html; charset=windows-1252">
+<meta NAME=MS-HKWD CONTENT="The box system">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=934>
+<meta name=layout-width content=1071>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="..\ML_Help.css">
+
+
+
+<!--(Style Sheet)===================================================-->
+
+<style>
+<!--
+
+body {
+	background-color: #ffffff;
+}
+
+-->
+</style>
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body style="color: #000000;">
+
+<h2 class=Topic><a NAME=flashcards_and_the_box_system></a>T<b>he box system 
+ </b></h2>
+
+<p>MemoryLifter uses virtual flashcards and the Leitner box system to augment 
+ your learning ability.</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">The box system</b></p>
+
+<p>The box system (also called &quot;Leitner system&quot;) was originally 
+ conceived by German learning-psychologist Sebastian Leitner in the 1970s. 
+ </p>
+
+<p>Its purpose is to provide a structure to help people learn and retain 
+ information in short-term and long-term memory.</p>
+
+<p>&nbsp;</p>
+
+<p>In the box system flashcards are assigned to a set of <i>x</i> boxes 
+ (10 boxes in the case of MemoryLifter).</p>
+
+<p>Box sizes increase with the box's number. </p>
+
+<p>By the time a card has been promoted to the highest box, the material 
+ should be fixed in long-term memory.</p>
+
+<p>&nbsp;</p>
+
+<p>The quantity of flashcards inside each box level provides a quick feedback 
+ of the current state of the user's knowledge and memory retention (short-term 
+ and/or long-term).</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">MemoryLifter's box system 
+ algorithm</b></p>
+
+<p>MemoryLifter uses a slightly modified version of the original box system 
+ algorithm to present and track the cards for learning.</p>
+
+<p>&nbsp;</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Initially, all cards are 
+ pulled from the pool, which contains all available cards.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter checks whether 
+ any of the boxes are full. <br>
+	If so, it asks a card from that box. <br>
+	If none of the boxes are full, MemoryLifter places a new card from 
+ the pool in the first box and asks it.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>If a card is answered correctly, 
+ MemoryLifter promotes it to the next box.<br>
+	Otherwise, it is demoted to box 1.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>When placing a card in 
+ a box, MemoryLifter puts it at the end of the box. <br>
+	When asking cards from the box, they are asked in the order they were 
+ placed in the box (first in - first out principle).</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter continues 
+ with step 2 to 4 until the pool is empty.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>If the pool is empty, the 
+ oldest card from the Learning Module will be asked. <br>
+	A message box will be opened to inform you of this.</p></li>
+</ol>
+
+</body>
+
+</html>

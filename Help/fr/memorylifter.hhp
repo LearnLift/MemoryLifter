@@ -1,0 +1,93 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=memorylifter.chm
+Contents file=memorylifter.hhc
+Default Window=Main
+Default topic=html\ML_WhatisNew.htm
+Display compile notes=No
+Display compile progress=No
+Full-text search=Yes
+Index file=memorylifter.hhk
+Language=0x40c French (France)
+Title=MemoryLifter Help
+
+[WINDOWS]
+Main="MemoryLifter Help","memorylifter.hhc","memorylifter.hhk",,,,,,,0x40520,200,0x200e,[0,0,650,400],0x0,0x0,,0,0,0,0
+
+
+[FILES]
+html\memo9tbm.htm
+html\memo85ys.htm
+html\memo8nl0.htm
+html\memo1d9v.htm
+html\memo6dis.htm
+html\memo9otv.htm
+html\memo4dyq.htm
+html\Style_Editor.htm
+html\memo5ur8.htm
+html\memo4p0u.htm
+html\memo288n.htm
+html\memo94fi.htm
+html\memo4f78.htm
+html\memo8y43.htm
+html\memo1bub.htm
+html\Add_an_image,_audio,_or_video.htm
+html\memo6vg2.htm
+html\memo93u5.htm
+html\memo6l68.htm
+html\memo5oft.htm
+html\memo6a0i.htm
+html\memo3n72.htm
+html\memo2koj.htm
+html\memo9sqf.htm
+html\memo35et.htm
+html\memo0wu0.htm
+html\memo3gkz.htm
+html\memo1cku.htm
+html\ML_WhatisNew.htm
+html\About_MemoryLifter.htm
+html\memo7omr.htm
+html\memo37n8.htm
+html\memo5qk3.htm
+html\memo8c6r.htm
+html\memo0hyd.htm
+html\Learning_in_review_mode.htm
+html\Learn_-_Slideshow_mode.htm
+html\Learning_with_Correct-on-the-fly_option.htm
+html\Skipping_cards_you_know.htm
+html\Learning_in_random_question_mode.htm
+html\Using_the_automated_learning_planner.htm
+html\memo2khe.htm
+html\memo359j.htm
+html\Learning_in_multiple_choice_and_other_modes.htm
+html\Collect.htm
+html\Learning_Module_overview.htm
+html\Learning.htm
+html\Distractors.htm
+html\Change_Language.htm
+html\Change_Style.htm
+html\Changing_the_commentary_sounds.htm
+html\Toolbar.htm
+html\Cardstyle_Editor.htm
+html\Starting_Memory_Lifter.htm
+html\Good_to_know.htm
+html\Close.htm
+html\Recent_Learning_Modules.htm
+html\Getting_familiar_with_the_My_Learning_Modules_dialog_box.htm
+html\Teachers.htm
+eHelp.xml
+ehlpdhtm.js
+RoboHHRE.lng
+memorylifter.brs
+
+[ALIAS]
+#include memorylifter.ali
+
+[MAP]
+#include BSSCDefault.h
+
+[TEXT POPUPS]
+BSSCDefault.h
+
+[INFOTYPES]
+

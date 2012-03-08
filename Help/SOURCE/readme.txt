@@ -1,0 +1,1 @@
+This is the initial MemoryLifter 2.0 RoboHelp project.
