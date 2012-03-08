@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Synchronization.Data.Server</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Synchronization.Data.Server">
+			<summary>This namespace contains types that are used for client and server synchronization in Sync Services for ADO.NET. The following namespaces are used in client and server synchronization: <see cref="N:Microsoft.Synchronization" />, <see cref="N:Microsoft.Synchronization.Data" />, <see cref="N:Microsoft.Synchronization.Data.Server" />, and <see cref="N:Microsoft.Synchronization.Data.SqlServerCe" />.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.ChangeTrackingType">
+			<summary>Defines the type of change tracking that the server database uses.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Data.Server.ChangeTrackingType.CoupledChangeTracking">
+			<summary>The server database uses a custom change tracking system.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Data.Server.ChangeTrackingType.SqlServerChangeTracking">
+			<summary>The server database uses the change tracking feature in SQL Server 2008.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider">
+			<summary>Abstracts a generic server synchronization provider that communicates with the server database and shields the synchronization agent from the specific implementation of the database.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider" /> class.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ApplyChangeFailed">
+			<summary>Occurs after a row fails to be applied at the server.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ApplyingChanges">
+			<summary>Occurs before changes are applied at the server for a synchronization group.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ChangesApplied">
+			<summary>Occurs after all changes are applied at the server for a synchronization group.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ChangesSelected">
+			<summary>Occurs after all changes to be applied to the client for a synchronization group are selected from the server.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SelectingChanges">
+			<summary>Occurs before all changes to be applied to the client for a synchronization group are selected from the server.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SyncProgress">
+			<summary>Occurs during the selection and application of changes for a synchronization group at the server.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ApplyChanges(Microsoft.Synchronization.Data.SyncGroupMetadata,System.Data.DataSet,Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Applies inserts, updates, and deletes for a synchronization group to the server database.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains synchronization data and metadata.</returns>
+			<param name="groupMetadata">A <see cref="T:Microsoft.Synchronization.Data.SyncGroupMetadata" /> object that contains metadata about the synchronization group.</param>
+			<param name="dataSet">A <see cref="T:System.Data.DataSet" /> object that contains the changes to be applied to the server database for each table in the synchronization group.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains synchronization session variables, such as the ID of the client that is synchronizing.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.Dispose">
+			<summary>Releases all resources used by the <see cref="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.Dispose(System.Boolean)">
+			<summary>Releases the unmanaged resources used by the <see cref="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider" /> and optionally releases the managed resources.</summary>
+			<param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.GetChanges(Microsoft.Synchronization.Data.SyncGroupMetadata,Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Selects for a table in the server database the inserts, updates, and deletes to apply to the client database for a synchronization group.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains synchronization data and metadata.</returns>
+			<param name="groupMetadata">A <see cref="T:Microsoft.Synchronization.Data.SyncGroupMetadata" /> object that contains metadata about the synchronization group.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains synchronization session variables, such as the ID of the client that is synchronizing.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.GetSchema(System.Collections.ObjectModel.Collection{System.String},Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Returns a <see cref="T:Microsoft.Synchronization.Data.SyncSchema" /> object that contains the schema for each table specified.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncSchema" /> object that contains the schema for each table that is specified.</returns>
+			<param name="tableNames">A collection of table names for which the server provider should get the schema.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains synchronization session variables, such as the ID of the client that is synchronizing.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.GetServerInfo(Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Gets a <see cref="T:Microsoft.Synchronization.Data.SyncServerInfo" /> object when give a session parameter.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncServerInfo" /> object that contains server synchronization information.</returns>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains synchronization session variables, such as the ID of the client that is synchronizing.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnApplyChangeFailed(Microsoft.Synchronization.Data.ApplyChangeFailedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ApplyChangeFailed" /> event.</summary>
+			<param name="value">An <see cref="T:Microsoft.Synchronization.Data.ApplyChangeFailedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnApplyingChanges(Microsoft.Synchronization.Data.ApplyingChangesEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ApplyingChanges" /> event.</summary>
+			<param name="value">An <see cref="T:Microsoft.Synchronization.Data.ApplyingChangesEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnChangesApplied(Microsoft.Synchronization.Data.ChangesAppliedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ChangesApplied" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.ChangesAppliedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnChangesSelected(Microsoft.Synchronization.Data.ChangesSelectedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.ChangesSelected" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.ChangesSelectedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnSelectingChanges(Microsoft.Synchronization.Data.SelectingChangesEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SelectingChanges" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.SelectingChangesEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.OnSyncProgress(Microsoft.Synchronization.Data.SyncProgressEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SyncProgress" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.SyncProgressEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.BatchSize">
+			<summary>Gets or sets the batch size (in rows) that is used by commands that retrieve changes from the server database.</summary>
+			<returns>The batch size (in rows) that is used by commands that retrieve changes from the server database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.Connection">
+			<summary>Gets or sets an <see cref="T:System.Data.IDbConnection" /> object that is used to connect to the server database.</summary>
+			<returns>An <see cref="T:System.Data.IDbConnection" /> object that is used to connect to the server database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.Schema">
+			<summary>Gets or sets a <see cref="T:Microsoft.Synchronization.Data.SyncSchema" /> object that contains information about the table schema on the server.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncSchema" /> object that contains information about the table schema on the server.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SelectClientIdCommand">
+			<summary>Gets or sets an <see cref="T:System.Data.IDbCommand" /> object that contains the query or stored procedure that returns originator IDs from the server database.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SelectNewAnchorCommand">
+			<summary>Gets or sets an <see cref="T:System.Data.IDbCommand" /> object that contains the query or stored procedure that returns a new anchor value from the server database. The anchor defines the upper bound for the set of changes to be synchronized during the current session.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.DbServerSyncProvider.SyncAdapters">
+			<summary>Gets the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" /> that is associated with the <see cref="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider" />.</summary>
+			<returns>The <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" /> that is associated with this <see cref="T:Microsoft.Synchronization.Data.Server.DbServerSyncProvider" />.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection">
+			<summary>A collection of parameters that are used when you filter the data that is selected from the server.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.FilterParameterCollection.Add(System.Data.SqlClient.SqlParameter)">
+			<summary>Adds a filter parameter to the end of the collection.</summary>
+			<param name="filterParameter">The <see cref="T:System.Data.SqlClient.SqlParameter" /> object to add to the <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.FilterParameterCollection.AddRange(System.Data.SqlClient.SqlParameter[])">
+			<summary>Adds an array of filter parameters to the end of the collection.</summary>
+			<param name="filterParameters">An array of <see cref="T:System.Data.SqlClient.SqlParameter" /> objects to add to the <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.FilterParameterCollection.Clear">
+			<summary>Removes all filter parameters from the collection.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.FilterParameterCollection.GetEnumerator">
+			<summary>Returns an enumerator that iterates through the collection.</summary>
+			<returns>An <see cref="T:System.Collections.IEnumerator" /> object that can iterate through the <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" />.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.FilterParameterCollection.RemoveAt(System.Int32)">
+			<summary>Removes the filter parameter at the specified index in the collection.</summary>
+			<param name="index">The position of the <see cref="T:System.Data.SqlClient.SqlParameter" /> object that should be removed from the <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" />.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.FilterParameterCollection.Count">
+			<summary>Gets the number of filter parameters in the collection.</summary>
+			<returns>The number of filter parameters in the collection.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.FilterParameterCollection.Item(System.Int32)">
+			<summary>Gets or sets a filter parameter in the collection at the specified index.</summary>
+			<returns>A <see cref="T:System.Data.SqlClient.SqlParameter" /> object at the specified index in the collection.</returns>
+			<param name="index">The zero-based index of the <see cref="T:System.Data.SqlClient.SqlParameter" /> object to return from the <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" />.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder">
+			<summary>Creates a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> and the SQL commands that are required to synchronize a client with a SQL Server database.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder" /> class by using default values.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.#ctor(System.Data.SqlClient.SqlConnection)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder" /> class by using a connection parameter.</summary>
+			<param name="connection">A <see cref="T:System.Data.SqlClient.SqlConnection" /> object that is used to connect to the server database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.ToSyncAdapter">
+			<summary>Creates a synchronization adapter for the table specified in <see cref="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TableName" />.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.ToSyncAdapter(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+			<summary>Creates a synchronization adapter for the table specified in <see cref="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TableName" />, with the option of not downloading tracking columns to the client.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</returns>
+			<param name="includeCreationTrackingColumn">true to include the column in the client table; otherwise, false.</param>
+			<param name="includeUpdateTrackingColumn">true to include the column in the client table; otherwise, false.</param>
+			<param name="includeCreationOriginatorIdColumn">true to include the column in the client table; otherwise, false.</param>
+			<param name="includeUpdateOriginatorIdColumn">true to include the column in the client table; otherwise, false.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.ChangeTrackingType">
+			<summary>Specifies whether the server database uses the change tracking feature in SQL Server or a custom coupled change tracking system, with a default of <see cref="F:Microsoft.Synchronization.Data.Server.ChangeTrackingType.CoupledChangeTracking" />.</summary>
+			<returns>One of the <see cref="T:Microsoft.Synchronization.Data.Server.ChangeTrackingType" /> enumeration values.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.Connection">
+			<summary>Gets or sets the connection to the server database.</summary>
+			<returns>A <see cref="T:System.Data.SqlClient.SqlConnection" /> object that is used to connect to the server database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.CreationOriginatorIdColumn">
+			<summary>Gets or sets the column in the base table that is used to track who inserts a row.</summary>
+			<returns>The name of the column in the base table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.CreationTrackingColumn">
+			<summary>Gets or sets the column in the base table that is used to track when a row is inserted.</summary>
+			<returns>The name of the column in the base table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.DataColumns">
+			<summary>Gets a collection of data columns to be synchronized. This enables you to synchronize a subset of the columns in the table.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" /> of columns.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.DeletionOriginatorIdColumn">
+			<summary>Gets or sets the column in the tombstone table that is used to track who deletes a row.</summary>
+			<returns>The name of the column in the tombstone table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.DeletionTrackingColumn">
+			<summary>Gets or sets the column in the tombstone table that is used to track when a row is deleted.</summary>
+			<returns>The name of the column in the tombstone table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.FilterClause">
+			<summary>Specifies the SQL WHERE clause (without the WHERE keyword) that is used to filter the result set from the base table.</summary>
+			<returns>An SQL WHERE clause without the WHERE keyword.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.FilterParameters">
+			<summary>Gets a collection of filter parameters that are used in the <see cref="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.FilterClause" />.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" /> of <see cref="T:System.Data.SqlClient.SqlParameter" /> objects.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.QuotePrefix">
+			<summary>Specifies the left delimiter (such as a left square bracket) that is used for database object names, such as tables and columns.</summary>
+			<returns>The delimiter, such as a left square bracket.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.QuoteSuffix">
+			<summary>Specifies the right delimiter (such as a right square bracket) that is used for database object names, such as tables and columns.</summary>
+			<returns>The delimiter, such as a right square bracket.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.RowGuidColumn">
+			<summary>Gets or sets a column of uniqueidentifier data type that is used to identify rows in the base table and the tombstone table.</summary>
+			<returns>The name of the column in the base table and the tombstone table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.SyncDirection">
+			<summary>Specifies the direction of synchronization from the perspective of the client, with a default direction of <see cref="F:Microsoft.Synchronization.Data.SyncDirection.Bidirectional" />.</summary>
+			<returns>One of the <see cref="T:Microsoft.Synchronization.Data.SyncDirection" /> values.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TableName">
+			<summary>Gets or sets the name of the base table for which to create a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</summary>
+			<returns>The name of the base table for which to create a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TombstoneDataColumns">
+			<summary>Gets a collection of data columns to be synchronized. This enables you to synchronize a subset of the columns in the table.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" /> of columns.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TombstoneFilterClause">
+			<summary>Specifies the SQL WHERE clause (without the WHERE keyword) that is used to filter the result set from the tombstone table.</summary>
+			<returns>An SQL WHERE clause without the WHERE keyword.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TombstoneFilterParameters">
+			<summary>Gets a collection of filter parameters that are used in the <see cref="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TombstoneFilterClause" />.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.FilterParameterCollection" /> of <see cref="T:System.Data.SqlClient.SqlParameter" /> objects.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.TombstoneTableName">
+			<summary>Gets or sets the name of the tombstone table that is used to synchronize deletes.</summary>
+			<returns>The name of the tombstone table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.UpdateOriginatorIdColumn">
+			<summary>Gets or sets the column in the base table that is used to track who updates a row.</summary>
+			<returns>The name of the column in the base table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SqlSyncAdapterBuilder.UpdateTrackingColumn">
+			<summary>Gets or sets the column in the base table that is used to track when a row is updated.</summary>
+			<returns>The name of the column in the base table.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SyncAdapter">
+			<summary>Represents a set of data commands that are used to obtain schema information and to retrieve and apply changes at the server database.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapter.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> class by using default values.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapter.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> class by using a table name parameter.</summary>
+			<param name="tableName">The name of the table in the server database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapter.FillSchema(System.Data.DataTable,System.Data.IDbConnection)">
+			<summary>Populates the schema information for the table that is specified in <see cref="P:Microsoft.Synchronization.Data.Server.SyncAdapter.TableName" />.</summary>
+			<returns>A <see cref="T:System.Data.DataTable" /> that contains the schema information.</returns>
+			<param name="dataTable">The <see cref="T:System.Data.DataTable" /> to be populated with schema information.</param>
+			<param name="connection">An <see cref="T:System.Data.IDbConnection" /> object that is used to connect to the server database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapter.GetClientColumnFromServerColumn(System.String)">
+			<summary>Gets the client column name that corresponds to the specified server column name.</summary>
+			<param name="serverColumn">The server column name for which you want to get the corresponding client column name.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapter.ToString">
+			<summary>Returns a string that represents the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</summary>
+			<returns>A string that represents the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.ColumnMappings">
+			<summary>Gets a collection of <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> objects for the table. These objects map columns in a server table to the corresponding columns in a client table.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" /> object for the table. The <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> objects in the collection map columns in a server table to the corresponding columns in a client table.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.DeleteCommand">
+			<summary>Gets or sets the query or stored procedure that is used to delete data from the server database.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.Description">
+			<summary>Gets or sets a description for the synchronization adapter.</summary>
+			<returns>The description of the synchronization adapter.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.InsertCommand">
+			<summary>Gets or sets the query or stored procedure that is used to insert data into the server database.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.SelectConflictDeletedRowsCommand">
+			<summary>Gets or sets the query or stored procedure that is used to identify deleted rows that conflict with other changes.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.SelectConflictUpdatedRowsCommand">
+			<summary>Gets or sets the query or stored procedure that is used to identify updated rows that conflict with other changes.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.SelectIncrementalDeletesCommand">
+			<summary>Gets or sets the query or stored procedure that is used to retrieve deletes made in the server database since the last synchronization.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.SelectIncrementalInsertsCommand">
+			<summary>Gets or sets the query or stored procedure that is used to retrieve inserts made in the server database since the last synchronization.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.SelectIncrementalUpdatesCommand">
+			<summary>Gets or sets the query or stored procedure that is used to retrieve updates made in the server database since the last synchronization.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.TableName">
+			<summary>Gets or sets the name of the table at the server for which to create the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" />.</summary>
+			<returns>The name of the table at the server for which to create the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" />.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapter.UpdateCommand">
+			<summary>Gets or sets the query or stored procedure that is used to update data in the server database.</summary>
+			<returns>An <see cref="T:System.Data.IDbCommand" /> object that contains a query or stored procedure.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection">
+			<summary>A collection of <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> objects.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapterCollection.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapterCollection.Contains(System.String)">
+			<summary>Determines whether a specific <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object is in the collection when given a table name.</summary>
+			<returns>true if the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object exists; otherwise, false.</returns>
+			<param name="tableName">The name of the table. Specify the name to determine if the associated <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object is in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapterCollection.IndexOf(System.String)">
+			<summary>Searches for a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object when given a table name, and returns the zero-based index of the first occurrence within the entire collection.</summary>
+			<returns>The index position of tableName if that string is found; otherwise -1 if it is not.</returns>
+			<param name="tableName">The name of the table. Specify the name to get the index of the associated <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncAdapterCollection.Remove(System.String)">
+			<summary>Removes the first occurrence of a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object from the collection when given a table name.</summary>
+			<param name="tableName">The name of the table. Specify the name to get the associated <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> from the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" />.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncAdapterCollection.Item(System.String)">
+			<summary>Gets a <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object from the collection when given a table name.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> object for the specified table.</returns>
+			<param name="tableName">The name of the table. Specify the name to get the associated <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapter" /> from the <see cref="T:Microsoft.Synchronization.Data.Server.SyncAdapterCollection" />.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping">
+			<summary>Maps a column in a server table to the corresponding column in a client table.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMapping.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> class by using default values.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMapping.#ctor(System.String,System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> class by using server column and client column parameters.</summary>
+			<param name="serverColumn">The name of the column in the server database.</param>
+			<param name="clientColumn">The name of the column in the client database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMapping.ToString">
+			<summary>Returns a string that represents the column mapping in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</summary>
+			<returns>A string that represents the column mapping in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncColumnMapping.ClientColumn">
+			<summary>Gets or sets the name of the client column.</summary>
+			<returns>The name of the column in the client database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncColumnMapping.ServerColumn">
+			<summary>Gets or sets the name of the server column.</summary>
+			<returns>The name of the column in the server database.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection">
+			<summary>Contains a collection of <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> objects.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.Add(System.String,System.String)">
+			<summary>Adds a <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object to the end of the collection when given a server column name and a client column name.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object that represents the mapping between the columns specified in serverColumn and clientColumn.</returns>
+			<param name="serverColumn">The name of the column at the server to add to the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</param>
+			<param name="clientColumn">The name of the column at the client to add to the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.IndexOfClientColumn(System.String)">
+			<summary>Searches for a <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object when given a column name, and returns the zero-based index of the first occurrence within the entire collection.</summary>
+			<returns>The index position of clientColumn if that string is found; otherwise -1 if it is not.</returns>
+			<param name="clientColumn">The name of the column at the client for which to get the index in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.IndexOfServerColumn(System.String)">
+			<summary>Searches for a <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object when given a column name. Returns the zero-based index of the first occurrence within the entire collection.</summary>
+			<returns>The index position of serverColumn if that string is found. Returns -1 if the string is not found.</returns>
+			<param name="serverColumn">The name of the column at the server for which to get the index in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.InsertItem(System.Int32,Microsoft.Synchronization.Data.Server.SyncColumnMapping)">
+			<summary>Inserts a <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object into the collection at the specified index.</summary>
+			<param name="index">The position in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" /> at which to insert the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object.</param>
+			<param name="item">The <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object to insert.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection.SetItem(System.Int32,Microsoft.Synchronization.Data.Server.SyncColumnMapping)">
+			<summary>Replaces the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object at the specified index.</summary>
+			<param name="index">The position in the <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMappingCollection" /> at which to replace the existing <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object with a new one.</param>
+			<param name="item">The new <see cref="T:Microsoft.Synchronization.Data.Server.SyncColumnMapping" /> object to insert.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection">
+			<summary>A collection of the names of columns from tables in the server database.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.Add(System.String)">
+			<summary>Adds a column name to the end of the collection.</summary>
+			<param name="dataColumnName">The name of the column to add to the <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.AddRange(System.String[])">
+			<summary>Adds an array of column names to the end of the collection.</summary>
+			<param name="dataColumnNames">An array of column names to add to the <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.Clear">
+			<summary>Clears the collection of all column names.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.GetEnumerator">
+			<summary>Returns an enumerator that iterates through the column name collection.</summary>
+			<returns>An <see cref="T:System.Collections.IEnumerator" /> object that can iterate through the collection.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.RemoveAt(System.Int32)">
+			<summary>Removes the column name at the specified index in the collection.</summary>
+			<param name="index">The position of the column name that should be removed from the <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" />.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.Count">
+			<summary>Gets the number of column names in the collection.</summary>
+			<returns>The number of column names in the collection.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection.Item(System.Int32)">
+			<summary>Gets or sets a column name in the collection at the specified index.</summary>
+			<returns>The name of the column at the specified index in the collection; otherwise a null value if the column does not exist.</returns>
+			<param name="index">The zero-based index of the column name to return from the <see cref="T:Microsoft.Synchronization.Data.Server.SyncDataColumnCollection" />.</param>
+		</member>
+	</members>
+</doc>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Synchronization.Files</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Synchronization.Files">
+			<summary>Sync Services for File Systems is a component of Microsoft Sync Framework that implements a synchronization provider to help an application synchronize files, folders, and subfolders in NTFS, FAT, or SMB file systems. The directories to synchronize can be local or remote and do not have to be of the same file system. Static filters can be used to exclude or include files either by listing them explicitly or by using wildcard characters, such as *.txt; or filters can be set that exclude individual subfolders. Progress reports can be obtained by registering to receive notifications during synchronization.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.AppliedChangeEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.AppliedChange" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.AppliedChangeEventArgs.ChangeType">
+			<summary>Gets the type of change that was applied.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.ChangeType" /> that indicates the type of change that was applied.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.AppliedChangeEventArgs.NewFilePath">
+			<summary>Gets the new path for the file that was changed. The path is relative to the root directory.</summary>
+			<returns>The new path for the file that was changed. The path is relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.AppliedChangeEventArgs.OldFilePath">
+			<summary>Gets the previous path for the file that was changed. The path is relative to the root directory.</summary>
+			<returns>The previous path for the file that was changed. The path is relative to the root directory.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.ApplyingChangeEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.ApplyingChange" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.ApplyingChangeEventArgs.ChangeType">
+			<summary>Gets the type of change to be applied.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.ChangeType" /> that contains the type of change to be applied.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.ApplyingChangeEventArgs.CurrentFileData">
+			<summary>Gets the current file data for the file to be changed.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.FileData" /> that contains the current file data for the file to be changed.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.ApplyingChangeEventArgs.NewFileData">
+			<summary>Gets the new file data for the file to be changed.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.FileData" /> that contains the new file data for the file as it will be after the change is applied. </returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.ApplyingChangeEventArgs.SkipChange">
+			<summary>Gets or sets a value that indicates whether this change should be skipped.</summary>
+			<returns>true if the change should be skipped; otherwise, false. The default is false.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.ChangeType">
+			<summary>Represents the different types of changes that can be applied to a destination replica.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.ChangeType.Create">
+			<summary>A file or folder will be created.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.ChangeType.Delete">
+			<summary>A file or folder will be deleted.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.ChangeType.Rename">
+			<summary>A file or folder will be renamed.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.ChangeType.Update">
+			<summary>A file or folder will be updated.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.CopyingFileEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.CopyingFile" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.CopyingFileEventArgs.FilePath">
+			<summary>Gets the path of the file that is being copied. The path is relative to the root directory.</summary>
+			<returns>The path of the file that is being copied. The path is relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.CopyingFileEventArgs.PercentCopied">
+			<summary>Gets the progress of the copy operation. The value is returned as a percentage.</summary>
+			<returns>The progress of the copy operation. The value is returned as a percentage.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.DetectedChangesEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.DetectedChanges" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.DetectedChangesEventArgs.TotalDirectoriesFound">
+			<summary>Gets the total number of folders that are found during change detection.</summary>
+			<returns>The total number of folders that are found during change detection.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.DetectedChangesEventArgs.TotalFilesFound">
+			<summary>Gets the total number of files that are found during change detection.</summary>
+			<returns>The total number of files that are found during change detection.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.DetectedChangesEventArgs.TotalFileSize">
+			<summary>Gets the cumulative size of all files that are found during change detection.</summary>
+			<returns>The cumulative size of all files that are found during change detection.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.DetectingChangesEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.DetectingChanges" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.DetectingChangesEventArgs.DirectoryPath">
+			<summary>Gets the path of the folder that is about to be analyzed during change detection, relative to the root directory.</summary>
+			<returns>The path of the folder that is about to be analyzed during change detection, relative to the root directory.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.FileData">
+			<summary>Represents information about a file or directory. This is a loose wrapper of the WIN32_FIND_DATA structure that contains additional path information.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileData.#ctor(System.String,System.IO.FileAttributes,System.DateTime,System.DateTime,System.DateTime,System.Int64)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileData" /> class. </summary>
+			<param name="relativePath">The path of the file, relative to the root directory.</param>
+			<param name="attributes">The attributes of the file.  </param>
+			<param name="creationTime">The time the file was created.</param>
+			<param name="lastAccessTime">The time the file was last accessed.</param>
+			<param name="lastWriteTime">The time the file was last written to.</param>
+			<param name="fileSize">The size of the file, in bytes.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.Attributes">
+			<summary>Gets the file attributes. </summary>
+			<returns>The attributes of the file.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.CreationTime">
+			<summary>Gets the date and time when the file was created.</summary>
+			<returns>The date and time when the file was created.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.IsDirectory">
+			<summary>Gets a value that indicates whether this object represents a directory.</summary>
+			<returns>true if this object represents a directory; otherwise, false.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.LastAccessTime">
+			<summary>Gets the date and time when the file was last accessed.</summary>
+			<returns>The date and time when the file was last accessed.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.LastWriteTime">
+			<summary>Gets the date and time when the file was last written to.</summary>
+			<returns>The date and time when the file was last written to.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.Name">
+			<summary>Gets the name of the file, with no path information.</summary>
+			<returns>The name of the file.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.RelativePath">
+			<summary>Gets the path of file. The path is relative to the root directory.</summary>
+			<returns>The path of the file. The path is relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileData.Size">
+			<summary>Gets the size of the file, in bytes.</summary>
+			<returns>The size of the file in bytes.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.FileSyncInvalidOperationException">
+			<summary>The exception that is thrown when a method call is invalid for the current state of the object.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncInvalidOperationException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncInvalidOperationException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncInvalidOperationException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncInvalidOperationException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncInvalidOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncInvalidOperationException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncInvalidOperationException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncInvalidOperationException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The error message that states the reason for the exception.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.FileSyncOptions">
+			<summary>Provides options to configure the behavior of the file sync provider.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.CompareFileStreams">
+			<summary>If this value is set, the provider will compute a hash value for each file that is based on the contents of the whole file stream and use this value to compare files during change detection. This option is expensive and will slow synchronization, but provides more robust change detection. If this value is not set, an algorithm that compares modification times, file sizes, file names, and file attributes will be used to determine whether a file has changed.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.ExplicitDetectChanges">
+			<summary>If this value is set, the provider will perform change detection only when <see cref="M:Microsoft.Synchronization.Files.FileSyncProvider.DetectChanges" /> is called. If this value is not set, change detection is implicitly done on the first call to the provider's GetChangeBatch or ProcessChangeBatch method.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.None">
+			<summary>If this value is set, the provider will use its default configuration options. Setting any of the other flags overrides this setting. This is the default setting.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.RecycleConflictLoserFiles">
+			<summary>If this value is set, the provider will move files that are conflict losers to the recycle bin. If this value is not set, the provider will move the files to a specified location. Or, if no location is specified, the files will be permanently deleted.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.RecycleDeletedFiles">
+			<summary>If this value is set, the provider will move files deleted during change application to the recycle bin. If this value is not set, files will be permanently deleted.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.FileSyncOptions.RecyclePreviousFileOnUpdates">
+			<summary>If this value is set, the provider will move files overwritten during change application to the recycle bin. If this value is not set, files will be overwritten in place and any data in the old file will be lost.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.FileSyncProvider">
+			<summary>Is a synchronous synchronization provider that can be used to synchronize files, folders, and subfolders in NTFS, FAT, or SMB file systems.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.#ctor(System.Guid,System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" /> class based on the specified replica ID and root directory path.</summary>
+			<param name="replicaId">The ID of the replica.</param>
+			<param name="rootDirectoryPath">The absolute path to the local file store for this provider. This is the folder that contains the files and subfolders to be synchronized.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.#ctor(System.Guid,System.String,Microsoft.Synchronization.Files.FileSyncScopeFilter,Microsoft.Synchronization.Files.FileSyncOptions)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" /> class that is based on the specified replica ID, root directory path, scope filter, and configuration options.</summary>
+			<param name="replicaId">The ID of the replica.</param>
+			<param name="rootDirectoryPath">The absolute path to the local file store for this provider. This is the folder that contains the files and subfolders to be synchronized.</param>
+			<param name="scopeFilter">A static scope filter that specifies which files or directories in the local file store are included in the scope. Can be a null.</param>
+			<param name="fileSyncOptions">Flags that determine the behavior of the provider during synchronization. The default value is <see cref="F:Microsoft.Synchronization.Files.FileSyncOptions.None" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.#ctor(System.Guid,System.String,Microsoft.Synchronization.Files.FileSyncScopeFilter,Microsoft.Synchronization.Files.FileSyncOptions,System.String,System.String,System.String,System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" /> class that is based on the specified replica ID, root directory path, scope filter, configuration options, metadata storage file path, metadata storage file name, temporary file path, and path to store conflict loser files.</summary>
+			<param name="replicaId">The ID of the replica.</param>
+			<param name="rootDirectoryPath">The absolute path to the local file store for this provider. This is the folder that contains the files and subfolders to be synchronized.</param>
+			<param name="scopeFilter">A static scope filter that specifies which files or directories in the local file store are included in the scope. Can be a null.</param>
+			<param name="fileSyncOptions">Flags that determine the behavior of the provider during synchronization.</param>
+			<param name="metadataDirectoryPath">The absolute path to the metadata storage file. The directory must be created before calling this constructor. The application must ensure this directory is secured with the right level of security permissions to prevent information disclosure.</param>
+			<param name="metadataFileName">The name of the metadata storage file.</param>
+			<param name="tempDirectoryPath">The absolute path where temporary files will be stored. The directory must be created before calling this constructor. The application must ensure this directory is secured with the right level of security permissions to prevent information disclosure.</param>
+			<param name="pathToSaveConflictLoserFiles">The absolute path where files that are conflict losers will be stored. The directory must be created before calling this constructor. To help prevent information disclosure, the application must ensure that this directory is secured with the appropriate level of security permissions. Can be a null.</param>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.AppliedChange">
+			<summary>Occurs when a file change has been applied.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.ApplyingChange">
+			<summary>Occurs when a file change is about to be tried.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.CopyingFile">
+			<summary>Occurs periodically to show progress while a file is being copied.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.DetectedChanges">
+			<summary>Occurs when the change detection pass is complete.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.DetectingChanges">
+			<summary>Occurs when a directory is about to be analyzed during a change detection pass.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.SkippedChange">
+			<summary>Occurs when a change is skipped.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Files.FileSyncProvider.SkippedFileDetect">
+			<summary>Occurs when a file or folder is not analyzed during change detection.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.DetectChanges">
+			<summary>Triggers an enumeration of the local file system replica for changes, and updates the metadata appropriately.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.Dispose">
+			<summary>Releases the unmanaged resources that are used by <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" />. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.Dispose(System.Boolean)">
+			<summary>Releases the unmanaged resources that are used by <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" /> and optionally releases the managed resources. </summary>
+			<param name="finalizing">true to finalize without releasing unmanaged resources; false to release unmanaged resources.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncProvider.Finalize">
+			<summary>Finalizer for <see cref="T:Microsoft.Synchronization.Files.FileSyncProvider" />. Releases all resources.</summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.FileSyncOptions">
+			<summary>Gets the options that govern the behavior of the provider during synchronization.</summary>
+			<returns>The options that govern the behavior of the provider during synchronization. The default value is <see cref="F:Microsoft.Synchronization.Files.FileSyncOptions.None" />.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.IdFormats">
+			<summary>Gets the schema that defines the format of various IDs that are used by the provider.</summary>
+			<returns>The schema that defines the format of various IDs that are used by the provider.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.MetadataDirectoryPath">
+			<summary>Gets the absolute path to the metadata storage file.</summary>
+			<returns>The absolute path to the metadata storage file.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.MetadataFileName">
+			<summary>Gets the name of the metadata storage file.</summary>
+			<returns>The name of the metadata storage file.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.PreviewMode">
+			<summary>Gets or sets a value that indicates whether the provider is in preview mode.</summary>
+			<returns>true if the provider is in preview mode; otherwise, false. The default is false.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.ReplicaId">
+			<summary>Gets the ID for the replica.</summary>
+			<returns>The ID for the replica.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.RootDirectoryPath">
+			<summary>Gets the absolute path to the local file store for this provider. This is the folder that contains the files and subfolders to be synchronized.</summary>
+			<returns>The absolute path to the local file store for this provider.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.ScopeFilter">
+			<summary>Gets the static scope filter that specifies which files or directories in the local file store are included in the scope.</summary>
+			<returns>The static scope filter that specifies which files or directories in the local file store are included in the scope. The default value is a null.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncProvider.TempDirectoryPath">
+			<summary>Gets the absolute path where temporary files will be stored.</summary>
+			<returns>The absolute path where temporary files will be stored.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.FileSyncScopeFilter">
+			<summary>Defines filters that can be used to include or exclude files and folders from the static synchronization scope.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncScopeFilter.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncScopeFilter" /> class that has empty values for all filters.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Files.FileSyncScopeFilter.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.IO.FileAttributes,System.Collections.Generic.IEnumerable{System.String})">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Files.FileSyncScopeFilter" /> class that is based on a list of files to exclude, a list of subdirectories to exclude, an attribute mask to use to exclude files and folders, and a list of file names to explicitly include.</summary>
+			<param name="fileNameExcludes">A collection of file names to exclude from the scope. Wildcards (* and ?) can be used. Passing an empty collection for this value will exclude no files based on name.</param>
+			<param name="subdirectoryExcludes">A collection of relative paths of directories to exclude from the scope. Wildcards (* and ?) can be used. Excluding a directory excludes all files and subdirectories that are contained in that directory. Passing an empty collection for this value will exclude no subdirectories based on relative path.</param>
+			<param name="attributeExcludeMask">Attributes of files and folders to be excluded from the scope. If a folder is excluded, all its child files and folders are also excluded, even if the children do not have the attribute set directly on them. Passing 0 for this value indicates an empty mask. This will exclude no files based on attributes.</param>
+			<param name="fileNameIncludes">A collection of file names to explicitly include in the scope. Wildcards (* and ?) can be used. Passing an empty collection for this value will include all files and folders that are not otherwise excluded.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncScopeFilter.AttributeExcludeMask">
+			<summary>Gets or sets the attributes that are used to exclude files and folders from the scope.</summary>
+			<returns>The attributes that are used to exclude files and folders from the scope.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncScopeFilter.FileNameExcludes">
+			<summary>Gets the collection of file names to exclude from the scope.</summary>
+			<returns>The collection of file names to exclude from the scope. An empty collection means no files are excluded based on name.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncScopeFilter.FileNameIncludes">
+			<summary>Gets the collection of file names to explicitly include in the scope.</summary>
+			<returns>The collection of file names to explicitly include in the scope. An empty collection means all files are included based on name, unless otherwise excluded.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.FileSyncScopeFilter.SubdirectoryExcludes">
+			<summary>Gets the collection of relative paths of directories to exclude from the scope.</summary>
+			<returns>The collection of relative paths of directories to exclude from the scope. An empty collection means no directories are excluded based on relative path.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.SkippedChangeEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.SkippedChange" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedChangeEventArgs.ChangeType">
+			<summary>Gets the type of change that would have been applied.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.ChangeType" /> that indicates the type of change that would have been applied.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedChangeEventArgs.CurrentFilePath">
+			<summary>Gets the current path for the file. The path is relative to the root directory.</summary>
+			<returns>The current path for the file, relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedChangeEventArgs.Exception">
+			<summary>Gets an exception that is thrown during the attempt to apply the change to the file, if an exception was thrown.</summary>
+			<returns>An exception that is thrown during the attempt to apply the change to the file. The default a null.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedChangeEventArgs.NewFilePath">
+			<summary>Gets the new path the file would have if the change were applied. The path is relative to the root directory.</summary>
+			<returns>The new path the file would have if the change were applied. The path is relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedChangeEventArgs.SkipReason">
+			<summary>Gets the reason the change could not be applied to the file.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.SkipReason" /> that indicates the reason the change could not be applied to the file.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.SkippedFileDetectEventArgs">
+			<summary>Provides data for the <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.SkippedFileDetect" /> event. </summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedFileDetectEventArgs.Exception">
+			<summary>Gets an exception that is thrown during the attempt to analyze the file.</summary>
+			<returns>An exception that is thrown during the attempt to analyze the file. The default is null.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedFileDetectEventArgs.FilePath">
+			<summary>Gets the path of the file that could not be analyzed during change detection. The path is relative to the root directory.</summary>
+			<returns>The path of the file that could not be analyzed during change detection. The path is relative to the root directory.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Files.SkippedFileDetectEventArgs.SkipReason">
+			<summary>Gets the reason the file could not be analyzed during change detection.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Files.SkipReason" /> that indicates the reason the file could not be analyzed during change detection.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.Files.SkipReason">
+			<summary>Represents the reason why a file was skipped during change detection or change application.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.ApplicationRequest">
+			<summary>The application requested the skip. This occurs when the application sets the <see cref="P:Microsoft.Synchronization.Files.ApplyingChangeEventArgs.SkipChange" /> property to true in its <see cref="E:Microsoft.Synchronization.Files.FileSyncProvider.ApplyingChange" /> event handler.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.ConflictLoserWriteError">
+			<summary>The conflict loser file could not be written.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.DestinationModified">
+			<summary>The destination file has changed since the change was detected.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.ReadError">
+			<summary>The file could not be read.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.SourceModified">
+			<summary>The source file has changed since the change was detected.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.UnknownError">
+			<summary>The skip reason is not known.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.UnsupportedFileType">
+			<summary>The file type is not supported.</summary>
+		</member>
+		<member name="F:Microsoft.Synchronization.Files.SkipReason.WriteError">
+			<summary>The file could not be written.</summary>
+		</member>
+	</members>
+</doc>

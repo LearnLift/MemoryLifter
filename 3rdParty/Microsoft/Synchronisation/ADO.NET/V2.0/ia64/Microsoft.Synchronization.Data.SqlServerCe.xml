@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Synchronization.Data.SqlServerCe</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Synchronization.Data.SqlServerCe">
+			<summary>This namespace contains types that are used for client and server synchronization in Sync Services for ADO.NET. The following namespaces are used in client and server synchronization: <see cref="N:Microsoft.Synchronization" />, <see cref="N:Microsoft.Synchronization.Data" />, <see cref="N:Microsoft.Synchronization.Data.Server" />, and <see cref="N:Microsoft.Synchronization.Data.SqlServerCe" />.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider">
+			<summary>Abstracts a client synchronization provider for SQL Server Compact that communicates with the client and shields the synchronization agent from the specific implementation of the client database.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" /> class by using default values.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" /> class by using a connection string parameter.</summary>
+			<param name="connectionString">The string that is used to connect to a Microsoft SQL Server Compact database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.#ctor(System.String,System.Boolean)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" /> class by using connection string and database creation parameters.</summary>
+			<param name="connectionString">The string that is used to connect to a Microsoft SQL Server Compact database.</param>
+			<param name="createDatabaseIfNotExists">true to create the client database if it does not exist; false not to create it. The default is true.</param>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyChangeFailed">
+			<summary>Occurs after a row could not be applied at the client.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyingChanges">
+			<summary>Occurs before changes are applied at the client for a synchronization group.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ChangesApplied">
+			<summary>Occurs after all changes are applied at the client for a synchronization group.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ChangesSelected">
+			<summary>Occurs after all changes to be applied to the server for a synchronization group are selected from the client.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.CreatingSchema">
+			<summary>Occurs before the schema is created at the client for each table.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SchemaCreated">
+			<summary>Occurs after the schema is created at the client for each table.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SelectingChanges">
+			<summary>Occurs before all changes to be applied to the server for a synchronization group are selected from the client.</summary>
+		</member>
+		<member name="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SyncProgress">
+			<summary>Occurs during the selection and application of changes for a synchronization group at the client.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.Collections.Generic.IEnumerable{System.String})">
+			<summary>Updates tracking metadata for the specified tables so that pending changes for the specified tables are not uploaded during the next synchronization.</summary>
+			<param name="tableNames">A collection of tables in the client database for which to accept changes.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.String)">
+			<summary>Updates tracking metadata so that pending changes for the specified table are not uploaded during the next synchronization.</summary>
+			<param name="tableName">A table in the client database for which to accept changes.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.Collections.Generic.IEnumerable{System.String},Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Updates tracking metadata up to the specified anchor point so that pending changes for the specified tables at the client are not uploaded during the next synchronization.</summary>
+			<param name="tableNames">A collection of tables in the client database for which to accept changes.</param>
+			<param name="newAnchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that represents the point up to which changes should be accepted.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.String,Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Updates tracking metadata up to the specified anchor point so that pending changes for the specified table at the client are not uploaded during the next synchronization.</summary>
+			<param name="tableName">A table in the client database for which to accept changes.</param>
+			<param name="newAnchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that represents the point up to which changes should be accepted.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyChanges(System.Collections.Generic.IEnumerable{System.String},System.Data.DataSet,Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Applies inserts, updates, and deletes for a synchronization group to the client database when given table names, a data set, and server anchor parameters.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="tableNames">A collection of tables in the client database for which to apply changes.</param>
+			<param name="dataSet">A <see cref="T:System.Data.DataSet" /> object that contains the rows of data to be applied to the database.</param>
+			<param name="serverAnchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that represents the <see cref="P:Microsoft.Synchronization.Data.SyncContext.NewAnchor" /> value for this synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyChanges(System.String,System.Data.DataSet,Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Applies inserts, updates, and deletes for a synchronization group to the client database when given a table name, a data set, and server anchor parameters.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="tableName">A table in the client database for which to apply changes.</param>
+			<param name="dataSet">A <see cref="T:System.Data.DataSet" /> object that contains the rows of data to be applied to the database.</param>
+			<param name="serverAnchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that represents the <see cref="P:Microsoft.Synchronization.Data.SyncContext.NewAnchor" /> value for this synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyChanges(Microsoft.Synchronization.Data.SyncGroupMetadata,System.Data.DataSet,Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Applies inserts, updates, and deletes for a synchronization group to the client database when given group metadata, a data set, and synchronization session parameters.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="groupMetadata">A <see cref="T:Microsoft.Synchronization.Data.SyncGroupMetadata" /> object that contains metadata about the synchronization group.</param>
+			<param name="dataSet">A <see cref="T:System.Data.DataSet" /> object that contains the rows of data to be applied to the client database.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains metadata about the current synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.BeginTransaction(Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Called by the <see cref="T:Microsoft.Synchronization.SyncAgent" /> to begin a transaction. This allows the agent to commit a set of changes as an atomic unit.</summary>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains metadata about the current synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.CreateSchema(Microsoft.Synchronization.Data.SyncTable,Microsoft.Synchronization.Data.SyncSchema)">
+			<summary>Creates the table schema in the client database if the schema does not exist.</summary>
+			<param name="syncTable">A <see cref="T:Microsoft.Synchronization.Data.SyncTable" /> object that contains settings for the table that will be created, such as the direction of synchronization.</param>
+			<param name="syncSchema">A <see cref="T:Microsoft.Synchronization.Data.SyncSchema" /> object. This object is a <see cref="T:System.Data.DataSet" /> that contains schema information for the table that will be created.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.Dispose">
+			<summary>Releases all resources that are used by the <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.Dispose(System.Boolean)">
+			<summary>Releases the unmanaged resources that are used by the <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" /> and optionally releases the managed resources.</summary>
+			<param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.EndTransaction(System.Boolean,Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Called by the <see cref="T:Microsoft.Synchronization.SyncAgent" /> to end a transaction. This allows the agent to commit a set of changes as an atomic unit.</summary>
+			<param name="commit">true to commit the transaction; false to roll back the transaction.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains metadata about the current synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.Finalize">
+			<summary>Is the destructor for <see cref="T:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.GetChanges(System.Collections.Generic.IEnumerable{System.String})">
+			<summary>Gets inserts, updates, and deletes from the specified tables at the client that occurred since the last time <see cref="M:Microsoft.Synchronization.SyncAgent.Synchronize" /> or <see cref="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.String)" /> was called.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="tableNames">A collection of tables in the client database for which to get changes.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.GetChanges(System.String)">
+			<summary>Gets inserts, updates, and deletes from the specified table at the client that occurred since the last time <see cref="M:Microsoft.Synchronization.SyncAgent.Synchronize" /> or <see cref="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.String)" /> was called.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="tableName">A table in the client database for which to get changes.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.GetChanges(Microsoft.Synchronization.Data.SyncGroupMetadata,Microsoft.Synchronization.Data.SyncSession)">
+			<summary>Gets inserts, updates, and deletes for the specified synchronization group and session that occurred at the client since the last time <see cref="M:Microsoft.Synchronization.SyncAgent.Synchronize" /> or <see cref="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.AcceptChanges(System.String)" /> was called.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncContext" /> object that contains data changes and anchor values and other metadata for a synchronization session.</returns>
+			<param name="groupMetadata">A <see cref="T:Microsoft.Synchronization.Data.SyncGroupMetadata" /> object that contains metadata about the synchronization group.</param>
+			<param name="syncSession">A <see cref="T:Microsoft.Synchronization.Data.SyncSession" /> object that contains metadata about the current synchronization session.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.GetTableReceivedAnchor(System.String)">
+			<summary>Gets a <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time when the last change was received from the server.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time when the last change was received from the server.</returns>
+			<param name="tableName">The name of the table.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.GetTableSentAnchor(System.String)">
+			<summary>Gets a <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time when the last change was sent from the client.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time when the last change was sent from the client.</returns>
+			<param name="tableName">The name of the table.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnApplyChangeFailed(Microsoft.Synchronization.Data.ApplyChangeFailedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyChangeFailed" /> event.</summary>
+			<param name="value">An <see cref="T:Microsoft.Synchronization.Data.ApplyChangeFailedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnApplyingChanges(Microsoft.Synchronization.Data.ApplyingChangesEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ApplyingChanges" /> event.</summary>
+			<param name="value">An <see cref="T:Microsoft.Synchronization.Data.ApplyingChangesEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnChangesApplied(Microsoft.Synchronization.Data.ChangesAppliedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ChangesApplied" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.ChangesAppliedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnChangesSelected(Microsoft.Synchronization.Data.ChangesSelectedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ChangesSelected" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.ChangesSelectedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnCreatingSchema(Microsoft.Synchronization.Data.CreatingSchemaEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.CreatingSchema" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.CreatingSchemaEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnInitialized">
+			<summary>Raises the Initialized event.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnSchemaCreated(Microsoft.Synchronization.Data.SchemaCreatedEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SchemaCreated" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.SchemaCreatedEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnSelectingChanges(Microsoft.Synchronization.Data.SelectingChangesEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SelectingChanges" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.SelectingChangesEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.OnSyncProgress(Microsoft.Synchronization.Data.SyncProgressEventArgs)">
+			<summary>Raises the <see cref="E:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SyncProgress" /> event.</summary>
+			<param name="value">A <see cref="T:Microsoft.Synchronization.Data.SyncProgressEventArgs" /> object that contains event data.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SetTableReceivedAnchor(System.String,Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Sets a <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time that the last change was received from the server.</summary>
+			<param name="tableName">The name of the table.</param>
+			<param name="anchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object, with the anchor value to persist.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.SetTableSentAnchor(System.String,Microsoft.Synchronization.Data.SyncAnchor)">
+			<summary>Sets a <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object that contains the time when the last change was sent from the client.</summary>
+			<param name="tableName">The name of the table.</param>
+			<param name="anchor">A <see cref="T:Microsoft.Synchronization.Data.SyncAnchor" /> object, with the anchor value to persist.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ClientId">
+			<summary>Gets or sets the GUID that Sync Services uses to identify the client database.</summary>
+			<returns>A GUID that identifies the client database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ConflictResolver">
+			<summary>Gets a <see cref="T:Microsoft.Synchronization.Data.SyncConflictResolver" /> object for the client synchronization provider, which determines what action to take when a conflict occurs.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.Data.SyncConflictResolver" /> object that determines what action to take when a conflict occurs.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.Connection">
+			<summary>Gets the <see cref="T:System.Data.IDbConnection" /> object that is used to connect to the client database.</summary>
+			<returns>An <see cref="T:System.Data.IDbConnection" /> object that is used to connect to a Microsoft SQL Server Compact database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.ConnectionString">
+			<summary>Gets or sets the string that is used to connect to the client database.</summary>
+			<returns>The string that is used to connect to a Microsoft SQL Server Compact database.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.CreateDatabaseIfNotExists">
+			<summary>Gets or sets whether to create the client database if it does not exist.</summary>
+			<returns>true to create the client database if it does not exist; false not to create it.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.Data.SqlServerCe.SqlCeClientSyncProvider.RetentionInDays">
+			<summary>Gets or sets the number of days that change-tracking metadata is stored in a SQL Server Compact 3.5 database.</summary>
+			<returns>The number of days that change-tracking metadata should be stored in a SQL Server Compact 3.5 database.</returns>
+		</member>
+	</members>
+</doc>
