@@ -1,0 +1,344 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="toc">
+  <param name="Image Width" value="16">
+  <param name="Window Styles" value="0x800002">
+  <param name="ExWindow Styles" value="0x100">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="What is New">
+    <param name="Local" value="html\ML_WhatisNew.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Getting Started">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="First steps">
+      <param name="Local" value="html\memo7omr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Starting a new learning session">
+      <param name="Local" value="html\memo94fi.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About MemoryLifter">
+      <param name="Local" value="html\About_MemoryLifter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Features of MemoryLifter">
+      <param name="Local" value="html\memo3gkz.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="How To's">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Getting familiar with the main learning window">
+      <param name="Local" value="html\memo288n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Creating your own dictionary">
+      <param name="Local" value="html\Creating_your_own_dictionary.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Adding data (cards) to the dictionary">
+      <param name="Local" value="html\memo8nl0.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Adding an image, audio, or video">
+      <param name="Local" value="html\Add_an_image,_audio,_or_video.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Using chapters to organize cards into logical topics">
+      <param name="Local" value="html\memo9otv.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Specifying options for the dictionary">
+      <param name="Local" value="html\memo2cmr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Recording your own audio for the cards">
+      <param name="Local" value="html\Recording_audio.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Importing data from a file">
+      <param name="Local" value="html\memo6dis.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Exporting the dictionary">
+      <param name="Local" value="html\memo5ur8.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Printing cards">
+      <param name="Local" value="html\memo4f78.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Packing a dictionary to distribute for other people to use">
+      <param name="Local" value="html\memo7xyj.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Modifying cards">
+      <param name="Local" value="html\memo4p0u.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Opening an existing dictionary">
+      <param name="Local" value="html\memo3n72.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Restarting a learning session">
+      <param name="Local" value="html\memo37n8.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning cards from a certain box only">
+      <param name="Local" value="html\memo0wu0.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning in review mode: Answer is shown and you decide whether you know it or not">
+      <param name="Local" value="html\Learning_in_review_mode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning in slideshow mode: Answer is shown with question to allow you to study">
+      <param name="Local" value="html\Learn_-_Slideshow_mode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning in random question mode">
+      <param name="Local" value="html\Learning_in_random_question_mode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning in multiple choice, Image recognition, listening comprehension">
+      <param name="Local" value="html\Learning_in_multiple_choice_and_other_modes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning with a timer">
+      <param name="Local" value="html\memo2khe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning with the automated learning planner">
+      <param name="Local" value="html\Using_the_automated_learning_planner.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learning with Correct-on-the-fly option">
+      <param name="Local" value="html\Learning_with_Correct-on-the-fly_option.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Skipping cards you already know">
+      <param name="Local" value="html\Skipping_cards_you_know.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Customizing your learning session">
+      <param name="Local" value="html\memo1d9v.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Changing font style, font size, color, and more of the question/answer">
+      <param name="Local" value="html\Style_Editor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Using synonyms in question and answer">
+      <param name="Local" value="html\memo8y43.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Using MemoryLifter ready-to-use dictionaries">
+      <param name="Local" value="html\Using_MemoryLifter_pre-made_dictionaries.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Working with commentary sounds">
+      <param name="Local" value="html\Changing_the_commentary_sounds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Viewing your learning statistics">
+      <param name="Local" value="html\memo2koj.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Menu Items">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="File">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="New">
+        <param name="Local" value="html\memo9sqf.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Open">
+        <param name="Local" value="html\memo3n72.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Save As">
+        <param name="Local" value="html\memo8c6r.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Pack">
+        <param name="Local" value="html\memo7xyj.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Import">
+        <param name="Local" value="html\memo6dis.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Export">
+        <param name="Local" value="html\memo5ur8.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Print">
+        <param name="Local" value="html\memo4f78.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Properties">
+        <param name="Local" value="html\memo5qk3.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Exit">
+        <param name="Local" value="html\memo85ys.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Cards">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Add">
+        <param name="Local" value="html\memo8nl0.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Maintain">
+        <param name="Local" value="html\memo4p0u.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Manage chapters">
+        <param name="Local" value="html\memo9otv.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Learn">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Learning window">
+        <param name="Local" value="html\memo288n.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Learn box">
+        <param name="Local" value="html\memo0wu0.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Slideshow mode">
+        <param name="Local" value="html\Learn_-_Slideshow_mode.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Restart">
+        <param name="Local" value="html\memo37n8.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Specify chapters to learn">
+        <param name="Local" value="html\memo1cku.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Statistics">
+        <param name="Local" value="html\memo2koj.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Show / Edit Box sizes">
+        <param name="Local" value="html\memo1bub.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Tools">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Show character map">
+        <param name="Local" value="html\memo6l68.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Play Start/Exit Sound">
+        <param name="Local" value="html\memo8pd0.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Change Style">
+        <param name="Local" value="html\Change_Style.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Use Dictionary Stylesheets">
+        <param name="Local" value="html\memo8pd0.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Style Editor">
+        <param name="Local" value="html\Style_Editor.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Dictionary options">
+        <param name="Local" value="html\memo2cmr.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Learning Options">
+        <param name="Local" value="html\memo1d9v.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Specify dictionary folder">
+        <param name="Local" value="html\memo9tbm.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Snooze">
+        <param name="Local" value="html\memo0hyd.htm">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Learning">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About MemoryLifter">
+      <param name="Local" value="html\About_MemoryLifter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Basic concepts of MemoryLifter">
+      <param name="Local" value="html\memo5oft.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Flashcards and the box system">
+      <param name="Local" value="html\memo93u5.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Ideas for usage">
+      <param name="Local" value="html\memo35et.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Timer">
+      <param name="Local" value="html\memo2khe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Scoring">
+      <param name="Local" value="html\memo359j.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Advanced">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Sound recorder">
+      <param name="Local" value="html\memo4dyq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Field selector">
+      <param name="Local" value="html\memo6a0i.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Chapter selector">
+      <param name="Local" value="html\memo6vg2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Synonyms">
+      <param name="Local" value="html\memo8y43.htm">
+    </object>
+    </ul>
+</ul>
+</html>

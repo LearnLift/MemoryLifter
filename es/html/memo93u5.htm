@@ -1,0 +1,102 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)--> <!--(Document created with RoboEditor. )============================--> <!--(==============================================================)-->
+
+<head>
+
+<title>El sistema de ficheros</title>
+
+<!--(Meta)==========================================================-->
+
+<meta HTTP-EQUIV=Content-Type Content="text/html; charset=windows-1252">
+<meta NAME=MS-HKWD CONTENT="The box system">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=934>
+<meta name=layout-width content=1071>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="..\ML_Help.css">
+
+
+
+<!--(Style Sheet)===================================================-->
+
+<style>
+<!--
+
+body {
+	background-color: #ffffff;
+}
+
+-->
+</style>
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body style="color: #000000;">
+
+<h2 class=Topic><a NAME=flashcards_and_the_box_system></a>El<b> sistema de ficheros</b></h2>
+
+<p>MemoryLifter utiliza fichas did&aacute;cticas virtuales y el sistema de ficheros Leitner para aumentar su capacidad de aprendizaje.</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">El sistema de ficheros</b></p>
+
+<p>El sistema de ficheros, tambi&eacute;n denominado &quot;sistema Leitner&quot;, fue inicialmente concebido por el psic&oacute;logo del aprendizaje alem&aacute;n Sebastian Leitner en la d&eacute;cada de 1970. 
+ </p>
+
+<p>Su prop&oacute;sito era proporcionar una estructura para ayudar a las personas a aprender y retener informaci&oacute;n en la memoria a corto y largo plazo.</p>
+
+<p>&nbsp;</p>
+
+<p>En el sistema de ficheros, las fichas did&aacute;cticas se asignan a un conjunto de <i>x</i> ficheros (10 ficheros en el caso de MemoryLifter).</p>
+
+<p>Los tama&ntilde;os de fichero aumentan con el n&uacute;mero del fichero. </p>
+
+<p>Cuando una ficha se ha promocionado al fichero m&aacute;s alto, el material deber&iacute;a quedar fijado en la memoria a largo plazo.</p>
+
+<p>&nbsp;</p>
+
+<p>La cantidad de fichas did&aacute;cticas dentro de cada nivel de fichero proporciona una informaci&oacute;n r&aacute;pida sobre el estado actual de los conocimientos del usuario y su capacidad de retenci&oacute;n de datos (a corto y largo plazo).</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">Algoritmo del sistema de ficheros de MemoryLifter</b></p>
+
+<p>MemoryLifter emplea una versi&oacute;n ligeramente modificada del algoritmo original del sistema de ficheros para presentar y hacer un seguimiento de las fichas de aprendizaje.</p>
+
+<p>&nbsp;</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Inicialmente, todas las fichas se extraen del grupo que contiene todas las fichas disponibles.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter comprueba si alguno de los ficheros est&aacute; lleno. <br> De ser as&iacute;, pregunta una ficha de ese fichero. <br> Si ninguno de los ficheros est&aacute; lleno, MemoryLifter coloca una nueva ficha del grupo en el primer fichero y la pregunta.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si se responde correctamente a una ficha, MemoryLifter la promociona al siguiente fichero.<br> En caso contrario, se degrada al fichero 1.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Al situar una ficha en un fichero, MemoryLifter la coloca al final de &eacute;ste. <br> Cuando se pregunta una ficha de un fichero, se hace siguiendo el orden en el que se colocaron en dicho primero (siguiendo el principio de que la primera ficha que entra es la primera que sale).</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter contin&uacute;a con los pasos del 2 al 4 hasta que el grupo se vac&iacute;a.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si el grupo se vac&iacute;a, se preguntar&aacute; la ficha m&aacute;s antigua del m&oacute;dulo de aprendizaje. <br> En tal caso aparecer&aacute; un cuadro de mensaje para informarle de ello.</p></li>
+</ol>
+
+</body>
+
+</html>

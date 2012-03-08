@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ExWindow Styles" value="0x100">
+	<param name="Window Styles" value="0x800002">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Was ist neu">
+		<param name="Local" value="html\ML_WhatisNew.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Einstieg">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Erste Schritte">
+			<param name="Local" value="html\memo7omr.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Starten einer neuen Lernsitzung">
+			<param name="Local" value="html\memo94fi.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Uuml;ber MemoryLifter">
+			<param name="Local" value="html\About_MemoryLifter.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Leistungsmerkmale von MemoryLifter">
+			<param name="Local" value="html\memo3gkz.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Gewusst wie...">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Starten von MemoryLifter">
+			<param name="Local" value="html\Starting_Memory_Lifter.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Die Startseite von MemoryLifter">
+			<param name="Local" value="html\Getting_familiar_with_the_My_Learning_Modules_dialog_box.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Das Lernfenster von MemoryLifter">
+			<param name="Local" value="html\memo288n.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hinzuf&uuml;gen von Lernkarten in einem Lernmodul">
+			<param name="Local" value="html\memo8nl0.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hinzuf&uuml;gen eines Bildes oder einer Audio- oder Videodatei">
+			<param name="Local" value="html\Add_an_image,_audio,_or_video.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Organisieren von Lernkarten in Kapiteln">
+			<param name="Local" value="html\memo9otv.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Einstellen der Lernmodul-Optionen">
+			<param name="Local" value="html\memo5qk3.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Aufzeichnen von eigenen Audiodateien f&uuml;r Lernkarten">
+			<param name="Local" value="html\memo4dyq.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Importieren von Karten aus einer Datei">
+			<param name="Local" value="html\memo6dis.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Importieren von Karten aus der Zwischenablage">
+			<param name="Local" value="html\Collect.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Exportieren eines Lernmoduls in eine Textdatei">
+			<param name="Local" value="html\memo5ur8.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Ausdrucken von Lernkarten">
+			<param name="Local" value="html\memo4f78.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Bearbeiten von Lernkarten">
+			<param name="Local" value="html\memo4p0u.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ouml;ffnen eines bestehenden Lernmoduls">
+			<param name="Local" value="html\memo3n72.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Neustart einer Lernsitzung">
+			<param name="Local" value="html\memo37n8.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen">
+			<param name="Local" value="html\Learning.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen von Karten in einer bestimmten Box">
+			<param name="Local" value="html\memo0wu0.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit eigener Bewertung">
+			<param name="Local" value="html\Learning_in_review_mode.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen im Diashow-Modus">
+			<param name="Local" value="html\Learn_-_Slideshow_mode.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit zuf&auml;lliger Auswahl der Fragen">
+			<param name="Local" value="html\Learning_in_random_question_mode.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen im Multiple Choice-Modus">
+			<param name="Local" value="html\Learning_in_multiple_choice_and_other_modes.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit Timer">
+			<param name="Local" value="html\memo2khe.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit dem automatischen Lernplaner">
+			<param name="Local" value="html\Using_the_automated_learning_planner.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit Korrektur w&auml;hrend der Eingabe">
+			<param name="Local" value="html\Learning_with_Correct-on-the-fly_option.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Uuml;berspringen von Lernkarten, die Sie bereits wissen">
+			<param name="Local" value="html\Skipping_cards_you_know.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Anpassen der Lernsitzung">
+			<param name="Local" value="html\memo1d9v.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Auml;ndern von Schriftart, Schriftgr&ouml;&szlig;e, Farbe und anderer Eigenschaften f&uuml;r Frage/Antwort">
+			<param name="Local" value="html\Style_Editor.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Verwenden von Synonymen in Fragen und Antworten">
+			<param name="Local" value="html\memo8y43.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen mit Kommentart&ouml;nen">
+			<param name="Local" value="html\Changing_the_commentary_sounds.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Anzeigen der Lernstatistiken">
+			<param name="Local" value="html\memo2koj.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Einstellen des Ordners f&uuml;r Lernmodule">
+			<param name="Local" value="html\memo9tbm.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Men&uuml;punkte">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Datei">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Neu">
+				<param name="Local" value="html\memo9sqf.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ouml;ffnen">
+				<param name="Local" value="html\memo3n72.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Schlie&szlig;en">
+				<param name="Local" value="html\Close.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sicherungskopie erstellen">
+				<param name="Local" value="html\memo8c6r.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernkarten drucken">
+				<param name="Local" value="html\memo4f78.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Eigenschaften">
+				<param name="Local" value="html\memo5qk3.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Vorige Lernmodule">
+				<param name="Local" value="html\Recent_Learning_Modules.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Beenden">
+				<param name="Local" value="html\memo85ys.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Bearbeiten">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Karte hinzuf&uuml;gen">
+				<param name="Local" value="html\memo8nl0.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernkarten verwalten">
+				<param name="Local" value="html\memo4p0u.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Karten aus Datei importieren">
+				<param name="Local" value="html\memo6dis.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Karten aus Zwischenablage importieren">
+				<param name="Local" value="html\Collect.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernkarten exportieren">
+				<param name="Local" value="html\memo5ur8.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Kapitel bearbeiten">
+				<param name="Local" value="html\memo9otv.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernen">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Diashow">
+				<param name="Local" value="html\Learn_-_Slideshow_mode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Kapitel ausw&auml;hlen">
+				<param name="Local" value="html\memo1cku.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Box ausw&auml;hlen">
+				<param name="Local" value="html\memo0wu0.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Statistiken anzeigen">
+				<param name="Local" value="html\memo2koj.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernvorgang neu starten">
+				<param name="Local" value="html\memo37n8.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Boxengr&ouml;&szlig;e anzeigen / bearbeiten">
+				<param name="Local" value="html\memo1bub.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernoptionen">
+				<param name="Local" value="html\memo1d9v.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Werkzeuge">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Zeichentabelle">
+				<param name="Local" value="html\memo6l68.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Schlummermodus">
+				<param name="Local" value="html\memo0hyd.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Oberfl&auml;che wechseln">
+				<param name="Local" value="html\Change_Style.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Sprache wechseln">
+				<param name="Local" value="html\Change_Language.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Stileditor">
+				<param name="Local" value="html\Style_Editor.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lernmodulordner &auml;ndern">
+				<param name="Local" value="html\memo9tbm.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Lernen">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Uuml;ber MemoryLifter">
+			<param name="Local" value="html\About_MemoryLifter.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Begriffsdefinitionen f&uuml;r MemoryLifter">
+			<param name="Local" value="html\memo5oft.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernkarten und das Karteikartensystem">
+			<param name="Local" value="html\memo93u5.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="M&ouml;gliche Einsatzzwecke von MemoryLifter">
+			<param name="Local" value="html\memo35et.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Timer">
+			<param name="Local" value="html\memo2khe.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernfortschrittsbalken">
+			<param name="Local" value="html\memo359j.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Erweitert">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lernmodul-&Uuml;bersicht">
+			<param name="Local" value="html\Learning_Module_overview.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Kartenstileditor">
+			<param name="Local" value="html\Cardstyle_Editor.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Audiorecorder">
+			<param name="Local" value="html\memo4dyq.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Auswahlbereich f&uuml;r die Felder">
+			<param name="Local" value="html\memo6a0i.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Auswahlbereich f&uuml;r die Kapitel">
+			<param name="Local" value="html\memo6vg2.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Synonyme">
+			<param name="Local" value="html\memo8y43.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Distraktoren">
+			<param name="Local" value="html\Distractors.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Wissenswertes">
+			<param name="Local" value="html\Good_to_know.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Symbolleiste">
+			<param name="Local" value="html\Toolbar.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Lehrer">
+			<param name="Local" value="html\Teachers.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
