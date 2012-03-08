@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="SOUND_SIMPLE_RECORD_SAVE_TEXT">
+		<value>Aufgezeichnete Mediendatei speichern?</value>
+	</data>
+	<data name="IMPORTER_FILE_LOADED">
+		<value>Datei in {0} s geladen, Vorschau von {1} Reihen...</value>
+	</data>
+	<data name="ANSWER_TYPOS_TEXT">
+		<value>Zu viele Tippfehler</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_MAININSTRUCTION">
+		<value>Sie versuchen, eine Lernmodul-Datei im alten Format zu öffnen. Möchten Sie fortfahren?</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION">
+		<value>Lernmodul-Ordner überschreiben?</value>
+	</data>
+	<data name="IMPORT_FILE_IN_USE_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="REGISTRY_ERROR_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="LISTBOXFIELDS_ANSWER_TEXT">
+		<value>Antwort ({0})</value>
+	</data>
+	<data name="STATISTICS_DISTRIBUTION_CAPTION">
+		<value>Kartenverteilung</value>
+	</data>
+	<data name="REG_LATER_TEXT">
+		<value>Sie können sich später über die Registrierungsoption im Menü "Hilfe" registrieren.</value>
+	</data>
+	<data name="DIC_OVERWRITE_TEXT">
+		<value>Alte Datei überschreiben?</value>
+	</data>
+	<data name="MAINFORM_STICKREMOVED_CLOSEDIC">
+		<value>Schließen des Lernmoduls ohne Speichern
+Ihre Änderungen in dieser Sitzung gehen verloren.</value>
+	</data>
+	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2">
+		<value>{0} unten eingeben ({1} Synonyme)</value>
+	</data>
+	<data name="TOOLTIP_MAINTAIN_DELETE">
+		<value>Karte löschen</value>
+	</data>
+	<data name="LISTBOXFIELDS_QUESTION_TEXT">
+		<value>Frage ({0})</value>
+	</data>
+	<data name="INFO_HTML_SCORE">
+		<value>High Score:</value>
+	</data>
+	<data name="IMPORTER_IMPORTED">
+		<value>Karte {0} / {1} importiert...</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_TEXT">
+		<value>Das Lernmodul ist bereits vorhanden. Möchten Sie es ersetzen?</value>
+	</data>
+	<data name="DIC_NOT_VALID_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls</value>
+	</data>
+	<data name="DIC_SAVEDIALOG_FILTER_NEW">
+		<value>Lernmodul-Dateien (*.{0})|*.{0}</value>
+	</data>
+	<data name="MAINTAIN_SEARCHHELP">
+		<value>Suchen…</value>
+	</data>
+	<data name="DEMOTE_CONF_TEXT">
+		<value>Karte tieferstufen?
+[Ja] - tieferstufen, [Nein] - höherstufen</value>
+	</data>
+	<data name="TOOLTIP_SELF_ASSESSEMENT_YES">
+		<value>Karte höherstufen</value>
+	</data>
+	<data name="DIC_DAMAGED_CAPTION">
+		<value>Es wurden Inkonsistenzen im Lernmodul gefunden</value>
+	</data>
+	<data name="MAINFORM_SLIDESHOW_LBLQUESTION_TEXT">
+		<value>Diashow - {0}</value>
+	</data>
+	<data name="SAVE_REQUEST_TEXT">
+		<value>Möchten Sie das Lernmodul speichern?</value>
+	</data>
+	<data name="CONVERT_REQUEST_TEXT">
+		<value>Das Lernmodul besitzt ein altes Format und muss konvertiert werden. Möchten Sie fortfahren?</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_DONTSHOWAGAIN">
+		<value>Immer ohne Nachfrage öffnen</value>
+	</data>
+	<data name="MANAGECHAPTER_NEW_CHAPTER_DESC">
+		<value>Keine Beschreibung</value>
+	</data>
+	<data name="IMPORT_FILETYPE">
+		<value>Trennzeichen-getrennt (*.csv)|*.csv|Text (*.txt)|*.txt|Alle Dateien (*.*)|*.*</value>
+	</data>
+	<data name="FIRSTSTART_CAPTION">
+		<value>Erste Anwendung</value>
+	</data>
+	<data name="SELF_ASSESSEMENT_LBLCHAPTER_TEXT">
+		<value>Wussten Sie es? (Benutzen Sie die Auf- oder Ab-Pfeiltasten oder klicken Sie auf die Schaltflächen "Gewusst/Nicht gewusst")</value>
+	</data>
+	<data name="IMPORT_END_OF_FILE_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT">
+		<value>Beispiel-Audio für Antwort ({0})</value>
+	</data>
+	<data name="PERSONAL_FOLDER_CAPTION">
+		<value>Ordner auswählen</value>
+	</data>
+	<data name="COPY_MEDIA_TEXT">
+		<value>Die Mediendatei wird in den Medienordner des Lernmoduls kopiert.
+Vergessen Sie nicht, Änderungen an den Medien auch dort vorzunehmen.
+
+Diese Meldung erneut anzeigen?</value>
+	</data>
+	<data name="DIC_IMPORT_SUCCESSFUL_CAPTION">
+		<value>Importieren erfolgreich abgeschlossen</value>
+	</data>
+	<data name="MAINFORM_LEARNBOX_TEXT">
+		<value>Alle Boxen</value>
+	</data>
+	<data name="CONVERT_DIRDIALOG_DESCRIPTION">
+		<value>Wählen Sie einen Zielordner für das konvertierte Lernmodul.</value>
+	</data>
+	<data name="IMPORT_PATH_NOT_FOUND_TEXT">
+		<value>Pfad nicht gefunden.</value>
+	</data>
+	<data name="PACK_DIRDIALOG_DESCRIPTION">
+		<value>Wählen Sie einen Ordner für das entpackte Lernmodul.</value>
+	</data>
+	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_NAME">
+		<value>Kapitel 1</value>
+	</data>
+	<data name="APPLY_CHANGES_CAPTION">
+		<value>Karte ändern</value>
+	</data>
+	<data name="UNPACK_REPLACE_FILES_MBX_TEXT">
+		<value>Möchten Sie die vorhandenen Dateien überschreiben?</value>
+	</data>
+	<data name="SETUPBOXES_BOXLABELI_TEXT">
+		<value>Box</value>
+	</data>
+	<data name="FRMCARD_VIDEO">
+		<value>Video</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_FOOTER">
+		<value>Erstellen Sie eine Sicherungskopie des Lernmoduls bevor Sie dieses öffnen.</value>
+	</data>
+	<data name="TOOLTIP_FRMFIELDS_DELETEALL">
+		<value>Alle Kapitel aus Auswahl entfernen</value>
+	</data>
+	<data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK">
+		<value>Nicht mehr nach dieser Karte fragen.
+Karte kann unter "Karten - Verwalten" wiederhergestellt werden.</value>
+	</data>
+	<data name="DIC_IMPORT_SUCCESSFUL_TEXT">
+		<value>Alte Lernmodul-Datei {0}.odf
+wurde erfolgreich importiert und gespeichert unter {1}.</value>
+	</data>
+	<data name="RECORD_SAVEDIALOG_TITLE">
+		<value>Wave-Datei speichern unter</value>
+	</data>
+	<data name="REGISTRATION_LBLFREE_TEXT">
+		<value>MemoryLifter {0} ist völlig kostenlos!  Jetzt registrieren!</value>
+	</data>
+	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_CAPTION">
+		<value>Letztes Kapitel</value>
+	</data>
+	<data name="RECORD_DONE_TEXT2">
+		<value>Weiter</value>
+	</data>
+	<data name="UNPACK_REPLACE_FILES_MBX_CAPTION">
+		<value>Dateien überschreiben?</value>
+	</data>
+	<data name="IMPORT_PATH_NOT_FOUND_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="MAINFORM_LBLCHAPTER_TEXT">
+		<value>(Kapitel: {0})</value>
+	</data>
+	<data name="EMAIL_MLIFTER_SUPPORT_MAIL">
+		<value>mailto:support@memorylifter.com</value>
+	</data>
+	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1">
+		<value>{0} unten eingeben</value>
+	</data>
+	<data name="MAINTAIN_POOL">
+		<value>Pool</value>
+	</data>
+	<data name="PRINT_QUERYORDER_Box">
+		<value>Box</value>
+	</data>
+	<data name="CARD_NO_ANSWER_ERROR_TEXT">
+		<value>Karte enthält keine Antwort!</value>
+	</data>
+	<data name="LABEL_FRMCHAPTER_MDESCR">
+		<value>Mehrere Kapitel ausgewählt</value>
+	</data>
+	<data name="PRINT_BOXNO">
+		<value>Box ({0})</value>
+	</data>
+	<data name="IMPORTER_IMPORTED_END">
+		<value>{0} Karten importiert in {1} Sek.</value>
+	</data>
+	<data name="NO_CARDS_TEXT">
+		<value>Dieses Lernmodul enthält keine Karten. Es müssen Karten hinzugefügt werden.</value>
+	</data>
+	<data name="SNOOZE_CONEXTMENU_TIME_TEXT">
+		<value>Lernen ({0} Min.)</value>
+	</data>
+	<data name="EXPORT_STATUS_CAPTION">
+		<value>Lernmodul wird exportiert...</value>
+	</data>
+	<data name="DIC_IMPORT_OLD_TEXT">
+		<value>Altes Lernmodul wird importiert.</value>
+	</data>
+	<data name="PRINT_SELECT_CAPTION">
+		<value>Kapitel/Boxen auswählen</value>
+	</data>
+	<data name="MAINFORM_SOUND_AVAILABLE_TEXT">
+		<value>Audio</value>
+	</data>
+	<data name="STYLESHEET_CODE_ERROR_CAPTION">
+		<value>Fehler in Stylesheet</value>
+	</data>
+	<data name="UNPACK_TLOADMSG">
+		<value>Lernmodul wird entpackt...</value>
+	</data>
+	<data name="INITIALIZE_ENVIRONMENT_ERROR_CAPTION">
+		<value>Fehler beim Einrichten der Benutzerumgebung</value>
+	</data>
+	<data name="PERSONAL_FOLDER_2_TEXT">
+		<value>Der Standard-Lernmodulordner ist nicht angegeben. In diesem Fall wird der Ordner des zuletzt geöffneten Lernmoduls verwendet.</value>
+	</data>
+	<data name="NEW_DICT_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="DIC_MEDIA_ERROR_CAPTION">
+		<value>Fehler in Medienverzeichnis</value>
+	</data>
+	<data name="MAINFORM_STICKREMOVED_DESCRIPTION">
+		<value>{0}
+
+Um Ihre Daten und Änderungen zu speichern, stecken Sie den Memory Stick erneut ein und warten, bis dieses Fenster geschlossen wird.</value>
+	</data>
+	<data name="CONVERT_REPLACE_FILES_MBX_TEXT">
+		<value>Möchten Sie die vorhandenen Dateien überschreiben?</value>
+	</data>
+	<data name="IMPORT_END_OF_FILE_TEXT">
+		<value>Die Quelldatei enthält zu wenige Zeilen.</value>
+	</data>
+	<data name="MAINFORM_STICKREMOVED_CAPTION">
+		<value>Memory Stick wurde entfernt</value>
+	</data>
+	<data name="NEWDIC_CAPTION">
+		<value>Neues Lernmodul erzeugen</value>
+	</data>
+	<data name="SOUND_SIMPLE_RECORD_STOP_TEXT">
+		<value>Die Aufzeichnung wird durch Klicken auf [OK] gestoppt.
+Anschließend wird der Ton abgespielt.</value>
+	</data>
+	<data name="MAINFORM_SOUND_NOTAVAILABLE_TEXT">
+		<value>Audio (nicht verfügbar)</value>
+	</data>
+	<data name="PERSONAL_FOLDER_TEXT">
+		<value>Wählen Sie einen persönlichen Ordner für die Lernmodule.</value>
+	</data>
+	<data name="TOOLTIP_NEWDICT_ESOUNDDIR">
+		<value>Verzeichnis, in dem die aufgezeichneten Audiodateien gespeichert werden sollen</value>
+	</data>
+	<data name="EXPORT_SAVEDIALOG_TITLE">
+		<value>Exportdatei auswählen</value>
+	</data>
+	<data name="MAINTAIN_CHANGEALL">
+		<value>Alle Karten ändern</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_TEXT">
+		<value>In diesem Ordner gibt es bereits ein Lernmodul!</value>
+	</data>
+	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_CAPTION">
+		<value>Kapitel auswählen</value>
+	</data>
+	<data name="MAINFORM_LBLANSWER_SENTENCES_TEXT">
+		<value>Beispielsatz für {0} unten eingeben</value>
+	</data>
+	<data name="RECORD_PATH_TEXT">
+		<value>Pfad:</value>
+	</data>
+	<data name="DIC_DIR_MISSING_TEXT">
+		<value>Verwenden Sie den Befehl 'Werkzeuge -&gt; Lernmodul-Ordner auswählen', um einen Ordner zu wählen.</value>
+	</data>
+	<data name="DIC_ERROR_OPEN_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls.</value>
+	</data>
+	<data name="MAINFORM_SLIDESHOW_MODE_TEXT">
+		<value>Diashow -</value>
+	</data>
+	<data name="RESTART_WARNING_CAPTION">
+		<value>Alle Boxen löschen</value>
+	</data>
+	<data name="SAVE_REQUEST_CAPTION">
+		<value>Speichern</value>
+	</data>
+	<data name="IMPORT_OUT_OF_MEMORY_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="EXPORTER_NOTHING_SELECTED_CAPTION">
+		<value>Nichts ausgewählt</value>
+	</data>
+	<data name="MAINFORM_MULTIPLECHOICE1_TEXT">
+		<value>&amp;1.</value>
+	</data>
+	<data name="HINT_TEXT3">
+		<value>Fast!</value>
+	</data>
+	<data name="CONVERT_TMOVEMSG">
+		<value>Lernmodul wird verschoben...</value>
+	</data>
+	<data name="DIP_NOT_SUPPORTED_CAPTION">
+		<value>Fehler beim Öffnen des Lernmoduls</value>
+	</data>
+	<data name="NO_CHAPTERS_CAPTION">
+		<value>Keine Kapitel</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_CONTENT">
+		<value>Sie haben versucht, ein Lernmodul zu öffnen, welches mit einer älteren Version von MemoryLifter erzeugt wurde. Das Öffnen des Moduls mit dieser Version führt möglicherweise zu Inkompatibilitäten mit älteren MemoryLifter-Versionen.</value>
+	</data>
+	<data name="ADD_CARD_TEXT">
+		<value>Diese Karte hinzufügen?</value>
+	</data>
+	<data name="URL_MLIFTER_FAQ">
+		<value>http://www.memorylifter.com/de/about-memorylifter/faq.html</value>
+	</data>
+	<data name="STATISTICS_TIMESPAN_FORMAT_STRING">
+		<value>{0:# d ;;#}{1} h {2} m {3} s</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION">
+		<value>Lernmodul-Ordner überschreiben?</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT">
+		<value>Es befindet sich bereits eine Version dieses Lernmoduls in diesem Ordner. Wenn Sie fortfahren, werden möglicherweise vorhandene Dateien ersetzt. Dies kann zu Konflikten in Verweisen auf Mediendateien und Ressourcen führen. Möchten Sie trotzdem fortfahren?</value>
+	</data>
+	<data name="FILETYPE_TAB">
+		<value>Trennung durch Tabulator (Tab)</value>
+	</data>
+	<data name="IMPORT_ERROR_FIELDSNUM">
+		<value>Nicht genügend Elemente in Datei.</value>
+	</data>
+	<data name="DIC_ERROR_CREATENEW_TEXT">
+		<value>Neues Lernmodul konnte nicht erzeugt werden.</value>
+	</data>
+	<data name="RESTART_WARNING_TEXT">
+		<value>Diese Operation setzt den Lernfortschritt durch Löschen des Inhalts aller Boxen zurück!
+Möchten Sie wirklich fortfahren?</value>
+	</data>
+	<data name="TOOLTIP_FRMFIELDS_ADD">
+		<value>Feld zur Auswahl hinzufügen</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_TEXT">
+		<value>In diesem Ordner gibt es bereits ein Lernmodul!</value>
+	</data>
+	<data name="MISTAKE_CAPTION">
+		<value>Tippfehler bewerten</value>
+	</data>
+	<data name="TOOLTIP_NEWDICT_EQUESTION">
+		<value>Sprache für Fragen, z.B. Spanisch</value>
+	</data>
+	<data name="TOOLTIP_NEWDICT_EANSWER">
+		<value>Sprache für Antworten, z.B. Englisch</value>
+	</data>
+	<data name="DIC_ERROR_NEWERVERSION_CAPTION">
+		<value>Neue Version</value>
+	</data>
+	<data name="STATISTICS_PERCENT">
+		<value>0 %</value>
+	</data>
+	<data name="PRINT_SELECTED">
+		<value>{0} von {1} Karten ausgewählt</value>
+	</data>
+	<data name="PRINT_QUERYORDER_Question">
+		<value>Frage</value>
+	</data>
+	<data name="CARD_NO_ANSWER_ERROR_CAPTION">
+		<value>Kein Text</value>
+	</data>
+	<data name="IMPORTER_MEDIA_WARNING_TITLE">
+		<value>Mediendateien werden importiert</value>
+	</data>
+	<data name="COMMON_NUMBER_FORMAT">
+		<value>0.0</value>
+	</data>
+	<data name="NO_WORDS_TEXT">
+		<value>Keine abzufragenden Karten mehr vorhanden! Verwenden Sie den Befehl "Kapitel zum Lernen auswählen" im Menü "Lernen".</value>
+	</data>
+	<data name="IMPORTER_MEDIA_WARNING_TEXT">
+		<value>Wo finde ich die Mediendateien?</value>
+	</data>
+	<data name="NO_CARDS_CAPTION">
+		<value>Keine Karten</value>
+	</data>
+	<data name="INT_OVERFLOW_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="STATISTICS_OTHER_TAB_POOL_SIZE_STRING">
+		<value>Pool: {0}</value>
+	</data>
+	<data name="DIC_DIR_MISSING_CAPTION">
+		<value>Kein gültiger Lernmodul-Ordner!</value>
+	</data>
+	<data name="LEARNSTAT_TIME_FORMAT">
+		<value>{0} h {1} m {2} s</value>
+	</data>
+	<data name="NO_CHAPTERS_TEXT">
+		<value>Keine Kapitelinformationen verfügbar. Fügen Sie zuerst Kapitel hinzu bevor Sie Lernkarten einfügen!</value>
+	</data>
+	<data name="EDIT_FIELD_FLY_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="RECORD_SAVEDIALOG_FILTER">
+		<value>Wave-Datei ({0})|{0}</value>
+	</data>
+	<data name="EXPORT_FILETYPE">
+		<value>Trennzeichen-getrennt (*.csv)|*.csv|Text (*.txt)|*.txt|Alle Dateien (*.*)|*.*</value>
+	</data>
+	<data name="ABOUT_HTML_DISCLAIMER_TEXT">
+		<value>Die Software wird ohne Gewähr für jedwede Mängel zur Verfügung gestellt. Die Autoren haften in keinerlei Form für Schäden, die durch direkte or indirekte Verwendung oder Missbrauch dieser Software entstehen.</value>
+	</data>
+	<data name="EXPORTER_NOTHING_SELECTED_TEXT">
+		<value>Wählen Sie mindestens ein Kapitel/Feld!</value>
+	</data>
+	<data name="REG_DONE_TEXT">
+		<value>Sie sind bereits registriert. Möchten Sie sich unter einem anderen Namen registrieren?</value>
+	</data>
+	<data name="DIC_INVALID_FORMAT_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls</value>
+	</data>
+	<data name="REGISTRY_ERROR_2_TEXT">
+		<value>Es konnte nicht in die Windows-Registrierung geschrieben werden.
+
+Setzen Sie sich mit dem MemoryLifter Support unter http://www.memorylifter.com in Verbindung.</value>
+	</data>
+	<data name="SOUND_SAVEDIALOG_FILTER">
+		<value>Wave-Datei {0})|{0}</value>
+	</data>
+	<data name="DIC_ERROR_CREATENEW_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="TOOLTIP_SELF_ASSESSEMENT_NO">
+		<value>Karte tieferstufen</value>
+	</data>
+	<data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT">
+		<value>Audio für Frage ({0})</value>
+	</data>
+	<data name="UNPACK_TMOVEMSG">
+		<value>Lernmodul wird verschoben...</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_PROCEED">
+		<value>Konvertieren und öffnen
+Datei in neues Format konvertieren</value>
+	</data>
+	<data name="PRINT_BOXNO_0">
+		<value>Pool</value>
+	</data>
+	<data name="STATISTICS_NO_STATS_MSGBOX_DESC">
+		<value>Es sind noch keine Statistiken verfügbar.</value>
+	</data>
+	<data name="INT_OVERFLOW_TEXT">
+		<value>Max. Anzahl von Elementen erreicht.</value>
+	</data>
+	<data name="DIC_ERROR_SAVING_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="MAINTAIN_SELECTEDCARD">
+		<value>1 Karte ausgewählt.</value>
+	</data>
+	<data name="PRINT_QUERYORDER_Answer">
+		<value>Antwort</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_CANCEL">
+		<value>Nicht öffnen
+Belässt die Datei wie sie ist.</value>
+	</data>
+	<data name="OVERWRITE_TEXT">
+		<value>Datei existiert bereits. Überschreiben?</value>
+	</data>
+	<data name="STATISTICS_CLOSING_COUNTDOWN">
+		<value>Schließen in {0:0} Sek....</value>
+	</data>
+	<data name="ABOUT_HTML_DISCLAIMER_CAPTION">
+		<value>Verzichtserklärung</value>
+	</data>
+	<data name="MAINFORM_IMAGE_AVAILABLE_TEXT">
+		<value>Bild</value>
+	</data>
+	<data name="STATISTICS_KNOWLEDGE_TAB_KNOWN_CARDS_STRING">
+		<value>Gewusst</value>
+	</data>
+	<data name="DIC_MODIFIED_TEXT">
+		<value>{0} wurde außerhalb des Programms geändert. Möglicherweise wird das Lernmodul derzeit von einer anderen Anwendung verwendet. Das Speichern kann zu Konflikten führen! Klicken Sie auf
+
+* [Ja], um die Datei zu überschreiben
+* [Nein], um die Daten in eine andere Datei zu speichern
+* [Abbrechen], um den Vorgang abzubrechen.</value>
+	</data>
+	<data name="STYLESHEET_NOT_AVAILABLE_CAPTION">
+		<value>Fehler beim Laden des Stylesheets</value>
+	</data>
+	<data name="ADD_CARD_CAPTION">
+		<value>Karte hinzufügen</value>
+	</data>
+	<data name="BAD_FILENAME_CAPTION">
+		<value>Fehler beim Hinzufügen der Datei in den Medienordner</value>
+	</data>
+	<data name="UNPACK_ALREADY_EXISTS_CAPTION">
+		<value>Datei existiert bereits</value>
+	</data>
+	<data name="URL_MLIFTER_REFERPAGE">
+		<value>http://www.memorylifter.com/de/info/contact/recommend-to-a-friend.html</value>
+	</data>
+	<data name="STATISTICS_XAXIS">
+		<value>Zeit</value>
+	</data>
+	<data name="DIC_SAVEDIALOG_TITLE_IMPORTED">
+		<value>Importiertes Lernmodul {0} speichern unter</value>
+	</data>
+	<data name="INFO_HTML_LANGUAGE">
+		<value>Lernmodul-Sprache:</value>
+	</data>
+	<data name="MAINFORM_STICKREMOVED_MAININSTRUCTION">
+		<value>Sie haben den Memory Stick entfernt während folgendes Lernmodul geöffnet war.</value>
+	</data>
+	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_TEXT">
+		<value>Dieses Kapitel kann nicht gelöscht werden, da es das letzte vorhandene Kapitel ist.</value>
+	</data>
+	<data name="DIC_MEDIA_ERROR_TEXT">
+		<value>Das Medienverzeichnis konnte nicht ordnungsgemäß gespeichert werden. Bitte stellen Sie sicher, dass dieses gültig ist.</value>
+	</data>
+	<data name="IMPORT_FILE_NOT_FOUND_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="STYLESHEET_CODE_ERROR_TEXT">
+		<value>Ihr Stylesheet enthält einen Fehler. Korrigieren Sie diesen oder verwenden Sie "Wiederherstellen", um das Standard-Stylesheet wiederherzustellen.</value>
+	</data>
+	<data name="STATISTICS_KNOWLEDGE_CAPTION">
+		<value>Wissensstand für Lernmodul</value>
+	</data>
+	<data name="NEW_DICT_TEXT">
+		<value>Fehler beim Einrichten des Lernmoduls</value>
+	</data>
+	<data name="ABBREVIATION_SECONDS">
+		<value>Sek.</value>
+	</data>
+	<data name="DIR_NOT_FOUND_TEXT">
+		<value>Das Lernmodul ist nicht vorhanden oder der Pfad ist ungültig.</value>
+	</data>
+	<data name="CHAPTERS_ONE_CAPTION">
+		<value>Ausgewähltes Kapitel</value>
+	</data>
+	<data name="TOOLTIP_FRMCARD_CHARACTER">
+		<value>Zeichentabelle</value>
+	</data>
+	<data name="INITIALIZE_ENVIRONMENT_ERROR_TEXT">
+		<value>Beim Einrichten der Benutzerumgebung ist ein Fehler aufgetreten. Prüfen Sie den Ordner mit den Lernmodulen.</value>
+	</data>
+	<data name="CARDS_GB_QUESTION_TEXT">
+		<value>Frage ({0}):</value>
+	</data>
+	<data name="DIC_MODIFIED_CAPTION">
+		<value>Lernmodul wurde geändert</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_TEXT">
+		<value>Das Lernmodul ist bereits vorhanden. Möchten Sie es ersetzen?</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_YES">
+		<value>Ja, Lernmodul ersetzen.</value>
+	</data>
+	<data name="PRINT_QUERYORDER_Chapter">
+		<value>Kapitel</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CONTENT">
+		<value>Es befindet sich bereits eine Kopie dieses Lernmoduls im Ordner. Wenn Sie fortfahren, werden alle vorhandenen Dateien ersetzt.</value>
+	</data>
+	<data name="PACKDIC_SAVEDIALOG_TITLE">
+		<value>Speichern unter</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CONTENT">
+		<value>Es befindet sich bereits eine Kopie dieses Lernmoduls im Ordner. Wenn Sie fortfahren, werden alle vorhandenen Dateien ersetzt.</value>
+	</data>
+	<data name="APPLY_CHANGES_TEXT">
+		<value>Änderungen für diese Karte übernehmen?</value>
+	</data>
+	<data name="STATISTICS_YAXIS">
+		<value>Karten</value>
+	</data>
+	<data name="MAINFORM_MULTIPLECHOICE2_TEXT">
+		<value>&amp;2.</value>
+	</data>
+	<data name="CONVERT_REQUEST_CAPTION">
+		<value>Altes Lernmodulformat konvertieren?</value>
+	</data>
+	<data name="TOOLTIP_FRMFIELDS_DELETE">
+		<value>Feld aus Auswahl entfernen</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT">
+		<value>Es befindet sich bereits ein Lernmodul in diesem Ordner. Wenn Sie fortfahren, werden möglicherweise vorhandene Dateien ersetzt. Dies kann zu Konflikten in Verweisen auf Mediendateien und Ressourcen führen. Möchten Sie dennoch fortfahren?</value>
+	</data>
+	<data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT">
+		<value>Audio für Antwort ({0})</value>
+	</data>
+	<data name="POOL_EMPTY_TEXT">
+		<value>Der Kartenpool ist leer. Dies ist Ihr aktueller Punktestand.
+Fügen Sie entweder mit dem Befehl "Kapitel zum Lernen auswählen" im Menü "Lernen" neue Karten hinzu oder fügen Sie neue Karten in das bestehende Kapitel ein.</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_NO">
+		<value>Nein, Lernmodul nicht ersetzen.</value>
+	</data>
+	<data name="DIC_ERROR_OPEN_TEXT">
+		<value>{0} konnte nicht geöffnet werden.</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_TEXT">
+		<value>Kapitel und alle Karten löschen?</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO">
+		<value>Nein, abbrechen.</value>
+	</data>
+	<data name="SOUND_SIMPLE_RECORD_START_CAPTION">
+		<value>Wave-Rekorder</value>
+	</data>
+	<data name="MAINTAIN_NONE">
+		<value>Keine</value>
+	</data>
+	<data name="IMPORT_ERROR_ONCLICK_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_DESC">
+		<value>Sie müssen mindestens ein Kapitel mit aktiven Karten auswählen, um mit dem Lernen zu beginnen.</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_NO">
+		<value>Nein, Lernmodul nicht ersetzen.</value>
+	</data>
+	<data name="DIC_ERROR_SAVING_TEXT">
+		<value>Fehler beim Speichern des Lernmoduls. Überprüfen Sie, ob der Datenträger voll oder schreibgeschützt ist. Wiederholen Sie den Vorgang.</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CAPTION">
+		<value>Lernmodul überschreiben?</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_CANCEL">
+		<value>Wählen Sie einen anderen Ort.</value>
+	</data>
+	<data name="TOOLTIP_FRMCHAPTER_SBDEL">
+		<value>Kapitel aus Auswahl entfernen</value>
+	</data>
+	<data name="NO_WORDS_CAPTION">
+		<value>Keine weiteren Worte</value>
+	</data>
+	<data name="IMPORT_ERROR_ONCLICK_TEXT">
+		<value>Datei konnte nicht geöffnet werden. Versuchen Sie es erneut.</value>
+	</data>
+	<data name="NOTHING">
+		<value>&lt;Nothing&gt;</value>
+	</data>
+	<data name="IMPORT_HEADERLINE_ERROR_TEXT">
+		<value>Keine Kopfzeile in den ersten acht Reihen gefunden.</value>
+	</data>
+	<data name="CARDS_BUTTON_ADD_TEXT">
+		<value>Ändern</value>
+	</data>
+	<data name="CARDS_OPENDIALOG_FILTER">
+		<value>Alle unterstützten Medientypen|{0};{1};{2}|Bilddateien ({0})|{0}|Audiodateien ({1})|{1}|Videodateien ({2})|{2}</value>
+	</data>
+	<data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT">
+		<value>Video für Antwort ({0})</value>
+	</data>
+	<data name="XSL_STYLE">
+		<value>Stileinstellungen</value>
+	</data>
+	<data name="MAINTAIN_DELETE_TEXT">
+		<value>Möchten Sie wirklich die ausgewählte(n) Karte(n) löschen?</value>
+	</data>
+	<data name="REGISTRY_ERROR_TEXT">
+		<value>Die Windows-Registrierung konnte nicht geöffnet werden.
+
+Setzen Sie sich mit dem MemoryLifter Support unter http://www.memorylifter.com in Verbindung.</value>
+	</data>
+	<data name="STATISTICS_OTHER">
+		<value>Aktuelle Verteilung</value>
+	</data>
+	<data name="DIC_SAVEDIALOG_TITLE_NEW">
+		<value>Neues Lernmodul</value>
+	</data>
+	<data name="MSGBOX_LABEL_NEWDICT_REQUIRED_FIELDS_EMPTY">
+		<value>Felder für Frage und Antwort dürfen nicht leer sein!</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_CANCEL">
+		<value>Wählen Sie einen anderen Ort.</value>
+	</data>
+	<data name="INFO_HTML_CATEGORY">
+		<value>Kategorie:</value>
+	</data>
+	<data name="SETUP_STICKMODE_DRIVELETTERREPLACEMENT">
+		<value>MEMSTICK:\</value>
+	</data>
+	<data name="DIC_HEADER_ODFFILE_TEXT">
+		<value>OMICRON Lernmodul-Datei</value>
+	</data>
+	<data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT">
+		<value>Video für Frage ({0})</value>
+	</data>
+	<data name="LISTBOXFIELDS_EXQUESTION_TEXT">
+		<value>Beispiel für Frage ({0})</value>
+	</data>
+	<data name="BAD_FILENAME_TEXT">
+		<value>Dateiname existiert bereits. Benennen Sie die Datei um.</value>
+	</data>
+	<data name="STATISTICS_KNOWLEDGE_TAB_BOX_STRING">
+		<value>Box ({0})</value>
+	</data>
+	<data name="PRINT_WIZARD_TITLE">
+		<value>Karten drucken</value>
+	</data>
+	<data name="TOOLTIP_SELF_ASSESSEMENT_CARDS">
+		<value>Füllstatus der aktuellen Box</value>
+	</data>
+	<data name="DIC_ERROR_LOADING_TEXT">
+		<value>Fehler beim Laden des Lernmoduls {0}.</value>
+	</data>
+	<data name="DIC_DAMAGED_TEXT">
+		<value>Sind direkt nach dieser Fehlermeldungen weitere Fehlermeldungen
+ vorhanden, so sind möglicherweise einige Teile
+Ihres Lernmoduls beschädigt. Setzen Sie sich
+in diesem Fall mit dem MemoryLifter Support unter
+http://www.memorylifter.com in Verbindung.</value>
+	</data>
+	<data name="MAINFORM_IMAGE_NOTAVAILABE_TEXT">
+		<value>Bild (nicht vorhanden)</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL">
+		<value>Wählen Sie einen anderen Ort.</value>
+	</data>
+	<data name="TOOLTIP_FRMFIELDS_ADDALL">
+		<value>Alle Felder zur Auswahl hinzufügen</value>
+	</data>
+	<data name="MAINTAIN_DELETE_CAPTION">
+		<value>Karten löschen</value>
+	</data>
+	<data name="SOUND_ERROR_TEXT">
+		<value>Audiowiedergabe nicht möglich. Fehlende Datei {0}</value>
+	</data>
+	<data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT">
+		<value>Bild für Frage ({0})</value>
+	</data>
+	<data name="PACK_SAVEDIALOG_FILTER">
+		<value>Gepackte Lernmodul-Dateien ({0})|{0}</value>
+	</data>
+	<data name="UNPACK_NOT_ORIGINAL_CAPTION">
+		<value>Es handelt sich nicht um eine Original-MemoryLifter-Datei.</value>
+	</data>
+	<data name="TOOLTIP_NEWDICT_SBRECORD">
+		<value>Kommentar aufzeichnen</value>
+	</data>
+	<data name="UNPACK_NOT_ORIGINAL_TEXT">
+		<value>Die Datei ist keine original MemoryLifter Lernmodul-Datei. Möchten Sie trotzdem fortfahren?</value>
+	</data>
+	<data name="SETUPBOXES_BOXLABEL0_TEXT">
+		<value>Pool</value>
+	</data>
+	<data name="TOOLTIP_FRMCHAPTER_SBDELALL">
+		<value>Alle Kapitel aus Auswahl entfernen</value>
+	</data>
+	<data name="PRINT_BOX_TOOLTIP">
+		<value>Enthält {0} Karten.</value>
+	</data>
+	<data name="FILETYPE_COMMA">
+		<value>Trennung durch Komma (,)</value>
+	</data>
+	<data name="DIC_OVERWRITE_CAPTION">
+		<value>Lernmodul wurde geändert</value>
+	</data>
+	<data name="PRINT_SELECT_TEXT">
+		<value>Sie müssen mindestens ein Kapitel und eine Box zum Drucken auswählen.</value>
+	</data>
+	<data name="HINT_TEXT2">
+		<value>Die Karte wurde leider in Box 1 heruntergestuft.</value>
+	</data>
+	<data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT">
+		<value>Beispiel-Audio für Frage ({0})</value>
+	</data>
+	<data name="SOUND_ERROR_CAPTION">
+		<value>Fehlende Datei</value>
+	</data>
+	<data name="IMPORT_OUT_OF_MEMORY_TEXT">
+		<value>Datei ist zu klein.</value>
+	</data>
+	<data name="URL_MLIFTER_HOMEPAGE">
+		<value>http://www.memorylifter.com/de/home.html</value>
+	</data>
+	<data name="SOUND_SIMPLE_RECORD_START_TEXT">
+		<value>Die Aufzeichnung wird durch Klicken auf [OK] gestartet.</value>
+	</data>
+	<data name="REG_LATER_CAPTION">
+		<value>Kostenlose Registrierung</value>
+	</data>
+	<data name="TIMESTAMPS_TEXT">
+		<value>Die Zeitstempel im Lernmodul sind aktueller als die Systemzeit Ihres Rechners.
+Bitte überprüfen Sie die Systemzeit. Bis das Problem
+behoben ist, wird MemoryLifter mit relativen Zeitstempeln fortgesetzt.</value>
+	</data>
+	<data name="STATISTICS_KNOWLEDGE_TAB_TARGET_CARDS_STRING">
+		<value>Ziel</value>
+	</data>
+	<data name="ABBREVIATION_PERCENT">
+		<value>%</value>
+	</data>
+	<data name="CONVERT_REPLACE_FILES_MBX_CAPTION">
+		<value>Dateien überschreiben?</value>
+	</data>
+	<data name="DIC_NOT_SUPPORTED_TEXT">
+		<value>Die Lernmodul-Datei ist zu alt. Diese Version wird nicht vollständig unterstützt und kann möglicherweise fehlerhaft sein.</value>
+	</data>
+	<data name="TOOLTIP_FRMCHAPTER_SBADDALL">
+		<value>Alle Kapitel zur Auswahl hinzufügen</value>
+	</data>
+	<data name="SOUND_SIMPLE_RECORD_SAVE_QUESTION">
+		<value>Wave-Rekorder</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_CAPTION">
+		<value>Bestätigung</value>
+	</data>
+	<data name="FILETYPE_SEMICOLON">
+		<value>Trennung durch Strichpunkt (;)</value>
+	</data>
+	<data name="STATISTICS_NO_STATS_MSGBOX_CAPT">
+		<value>Nicht verfügbar</value>
+	</data>
+	<data name="REG_DONE_CAPTION">
+		<value>Kostenlose Registrierung</value>
+	</data>
+	<data name="EDIT_FIELD_FLY_TEXT">
+		<value>Dies ist ein spezielles Eingabefeld, in welches nur
+korrekte Zeichen eingegeben werden können. Sie können in diesem Feld KEINE Zeichen
+ löschen, ausschneiden, einfügen, Zeilen ändern
+oder die Rücktaste verwenden.
+Wenn Sie Standardeditierfunktionen wünschen,
+wählen Sie "Lernen - Lernoptionen" und deaktivieren
+die Option "Während der Eingabe korrigieren".</value>
+	</data>
+	<data name="MANAGECHAPTER_NEW_CHAPTER_NAME">
+		<value>Neues Kapitel</value>
+	</data>
+	<data name="ABOUT_VERSION">
+		<value>Version {0}</value>
+	</data>
+	<data name="MAINTAIN_UNCHANGED">
+		<value>(unverändert)</value>
+	</data>
+	<data name="ABOUT_COPYRIGHT">
+		<value>Copyright © 2012 OMICRON electronics GmbH</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CAPTION">
+		<value>Lernmodul überschreiben?</value>
+	</data>
+	<data name="TOOLTIP_MAINTAIN_ADD">
+		<value>Neue Karte hinzufügen</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES">
+		<value>Ja, fortfahren.</value>
+	</data>
+	<data name="DIC_INVALID_FORMAT_TEXT">
+		<value>Ungültiges Dateiformat {0} oder Datei zu alt.</value>
+	</data>
+	<data name="DIC_ERROR_LOADING_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls</value>
+	</data>
+	<data name="IMPORT_HEADERLINE_ERROR_CAPTION">
+		<value>Fehler</value>
+	</data>
+	<data name="COPY_MEDIA_CAPTION">
+		<value>Mediendateien in Medienordner kopieren</value>
+	</data>
+	<data name="REGISTRATION_TEXT">
+		<value>Um Ihnen den bestmöglichen Support zu bieten, teilen Sie uns bitte folgendes mit. Besonders interessieren uns Ihre Anforderungen und Ihr geplanter Einsatzzweck von MemoryLifter. Die Informationen werden nur intern verwendet.  Sie werden nicht an dritte Personen weitergegeben oder verkauft. Vielen Dank.
+{0}dloadver: {1}
+{0}Vorname:
+{0}Nachname:
+{0}E-Mail:
+{0}Beschreiben Sie kurz den Einsatzzweck für MemoryLifter:
+{0}Möchten Sie per E-Mail über Neuigkeiten zu MemoryLifter informiert werden? (J/N):</value>
+	</data>
+	<data name="DIC_SAVEDIALOG_FILTER_IMPORTED">
+		<value>Lernmodul-Dateien (*.{0})|*.{0}</value>
+	</data>
+	<data name="DIP_NOT_SUPPORTED_TEXT">
+		<value>Diese Version von MemoryLifter unterstützt keine gepackten Lernmodule mit der Erweiterung .dip.
+Verwenden Sie .dzp oder .zip Dateien oder setzen Sie sich mit dem Support von MemoryLifter (support@memorylifter.com) in Verbindung.</value>
+	</data>
+	<data name="RECORD_LWORD_TEXT">
+		<value>Wählen Sie unten die Felder aus, für die Sie die Aufzeichnung durchführen möchten und starten Sie die Aufzeichnung für die Liste. Um nur eine einzelne Datei aufzuzeichnen, klicken Sie auf "Aufzeichnen".</value>
+	</data>
+	<data name="FRMCARD_IMAGE">
+		<value>Bild</value>
+	</data>
+	<data name="MAINFORM_MULTIPLECHOICE3_TEXT">
+		<value>&amp;3.</value>
+	</data>
+	<data name="STATISTICS_OTHER_TAB_BOX_SIZE_STRING">
+		<value>Box {0}: {1}</value>
+	</data>
+	<data name="INFO_HTML_AUTHOR">
+		<value>Autor:</value>
+	</data>
+	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_DESC">
+		<value>Standardkapitel</value>
+	</data>
+	<data name="MAIN_LOADREG_CAPTION">
+		<value>Alte Einstellungen laden?</value>
+	</data>
+	<data name="LISTBOXFIELDS_EXANSWER_TEXT">
+		<value>Beispiel für Antwort ({0})</value>
+	</data>
+	<data name="HINT_TEXT1">
+		<value>Klasse! Die Karte wurde in die nächste Box hochgestuft!</value>
+	</data>
+	<data name="MAIN_LOADREG_TEXT">
+		<value>Möchten Sie die Einstellungen aus Version 2.0 laden?</value>
+	</data>
+	<data name="TOOLTIP_FRMCHAPTER_SBADD">
+		<value>Kapitel zur Auswahl hinzufügen</value>
+	</data>
+	<data name="MAINFORM_LBLBOXNO_TEXT">
+		<value>Pool</value>
+	</data>
+	<data name="DEMOTE_CONF_CAPTION">
+		<value>Tieferstufen bestätigen</value>
+	</data>
+	<data name="DIC_NOT_VALID_TEXT">
+		<value>{0} ist keine gültige MemoryLifter Lernmodul-Datei.</value>
+	</data>
+	<data name="FRMCARD_AUDIO">
+		<value>Audio</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES">
+		<value>Ja, fortfahren.</value>
+	</data>
+	<data name="MAINTAIN_SELECTEDCARDS">
+		<value>{0} Karten ausgewählt.</value>
+	</data>
+	<data name="IMPORT_FILE_IN_USE_TEXT">
+		<value>Diese Datei wird von einem anderen Programm verwendet. Schließen Sie das Programm und wiederholen Sie den Vorgang.</value>
+	</data>
+	<data name="SPLASH_VERSION_TEXT">
+		<value>Version {0}</value>
+	</data>
+	<data name="MAINTAIN_DICTOVERVIEW_TEXT">
+		<value>Alle Karten</value>
+	</data>
+	<data name="MSGBOX_CAPTION_NEWDICT_REQUIRED_FIELDS_EMPTY">
+		<value>Fehler</value>
+	</data>
+	<data name="TIMESTAMPS_CAPTION">
+		<value>Achtung</value>
+	</data>
+	<data name="SOUND_SAVEDIALOG_TITLE">
+		<value>Wave-Datei speichern unter</value>
+	</data>
+	<data name="CARDS_BUTTON_ADD_TEXT2">
+		<value>Karte hinzufügen</value>
+	</data>
+	<data name="XSL_DEFAULT">
+		<value>Globale Einstellungen</value>
+	</data>
+	<data name="OVERWRITE_CAPTION">
+		<value>Bestätigung gefordert</value>
+	</data>
+	<data name="DIALOG_NEWDICT_SOUND_DIRECTORY">
+		<value>Wählen Sie das Verzeichnis für die Medien:</value>
+	</data>
+	<data name="IMPORT_FILE_NOT_FOUND_TEXT">
+		<value>Datei nicht gefunden.</value>
+	</data>
+	<data name="DIC_ERROR_NEWERVERSION_TEXT">
+		<value>Sie haben versucht, ein Lernmodul zu öffnen, welches mit einer neueren Version von MemoryLifter erzeugt wurde.
+Laden Sie von der MemoryLifter Website die aktuelle Version herunter.</value>
+	</data>
+	<data name="INFO_HTML_DESCRIPTION">
+		<value>Beschreibung:</value>
+	</data>
+	<data name="DIC_ERROR_OLDERVERSION_TITLE">
+		<value>Alte Lernmodul-Version</value>
+	</data>
+	<data name="PACK_TLOADMSG">
+		<value>Lernmodul wird gepackt...</value>
+	</data>
+	<data name="UNPACK_ALREADY_EXISTS_TEXT">
+		<value>Datei {0} existiert bereits. Überschreiben?</value>
+	</data>
+	<data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT">
+		<value>Bild für Antwort ({0})</value>
+	</data>
+	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_YES">
+		<value>Ja, Lernmodul ersetzen.</value>
+	</data>
+	<data name="STYLESHEET_NOT_AVAILABLE_TEXT">
+		<value>Aktuelles Stylesheet ist nicht verfügbar. Deaktivieren Sie die Option "Lernmodul-Stil verwenden"
+oder setzen Sie sich mit dem MemoryLifter Support unter http://www.memorylifter.com in Verbindung.</value>
+	</data>
+	<data name="CARDS_GB_ANSWER_TEXT">
+		<value>Antwort ({0}):</value>
+	</data>
+	<data name="PACK_SAVEDIALOG_TITLE">
+		<value>Speichern unter</value>
+	</data>
+	<data name="URL_MLIFTER_FEEDBACK">
+		<value>http://www.memorylifter.com/de/info/contact.html</value>
+	</data>
+	<data name="MAINFORM_LBLANSWER_MULTI_TEXT">
+		<value>{0} unten auswählen</value>
+	</data>
+	<data name="REGISTRATION_HEAD_TEXT">
+		<value>Willkommen zu MemoryLifter {0}</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO">
+		<value>Nein, abbrechen.</value>
+	</data>
+	<data name="DIC_SYNONYM_DELIMITER_TEXT">
+		<value>;</value>
+	</data>
+	<data name="POOL_EMPTY_CAPTION">
+		<value>Pool ist leer</value>
+	</data>
+	<data name="SOUND_SIMPLE_RECORD_STOP_CAPTION">
+		<value>Wave-Rekorder</value>
+	</data>
+	<data name="CARDS_OPENDIALOG_TITLE">
+		<value>Mediendatei hinzufügen</value>
+	</data>
+	<data name="DIC_NOT_SUPPORTED_CAPTION">
+		<value>Lernmodul wird nicht vollständig unterstützt</value>
+	</data>
+	<data name="SETUP_STICKMODE_CONFIGFILE">
+		<value>{0}.user</value>
+	</data>
+	<data name="DIR_NOT_FOUND_CAPTION">
+		<value>Lernmodul konnte nicht gefunden werden</value>
+	</data>
+	<data name="IMPORT_OPENDIALOG_TITLE">
+		<value>Importdatei auswählen</value>
+	</data>
+	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL">
+		<value>Wählen Sie einen anderen Ort.</value>
+	</data>
+	<data name="MISTAKE_TEXT">
+		<value>Ihre Eingabe enthält Tippfehler. Möchten Sie das Wort dennoch als richtig übernehmen?</value>
+	</data>
+	<data name="MAINTAIN_NA">
+		<value>n/v</value>
+	</data>
+	<data name="RECORD_DONE_TEXT">
+		<value>Fertig</value>
+	</data>
+	<data name="CHAPTERS_ONE_TEXT">
+		<value>Dieses Lernmodul enthält nur das automatisch zum Lernen ausgewählte Kapitel!</value>
+	</data>
+	<data name="MAINTAIN_ACTIVATE">
+		<value>Aktivieren</value>
+	</data>
+	<data name="MAINTAIN_DEACTIVATE">
+		<value>Deaktivieren</value>
+	</data>
+	<data name="LEARN_OPTIONS_NOTEACHERSFOUND">
+		<value>Es wurden keine Lehrereinträge gefunden.</value>
+	</data>
+	<data name="LEARN_OPTIONS_TEACHERSNOTLOADED">
+		<value>Die Datei mit den Lehrereinstellungen konnte nicht ordnungsgemäß geladen werden.
+
+{0}
+{1}</value>
+	</data>
+	<data name="PRINT_QUERYORDER_None">
+		<value>Nicht sortieren</value>
+	</data>
+	<data name="UNPACK_DEFAULT_MBX_CAPTION">
+		<value>Lernmodul entpacken</value>
+	</data>
+	<data name="UNPACK_DEFAULT_MBX_CONTENT">
+		<value>Der Standardpfad ist {0}.</value>
+	</data>
+	<data name="UNPACK_DEFAULT_MBX_OPTION_CANCEL">
+		<value>Abbrechen.</value>
+	</data>
+	<data name="UNPACK_DEFAULT_MBX_OPTION_NO">
+		<value>Nein, anderen Ordner wählen.</value>
+	</data>
+	<data name="UNPACK_DEFAULT_MBX_TEXT">
+		<value>Soll MemoryLifter dieses Lernmodul im Standardordner entpacken?</value>
+	</data>
+	<data name="UNPACK_DEFAULT_OPTION_YES">
+		<value>Ja, Standardordner verwenden.</value>
+	</data>
+	<data name="PRINT_STYLE_PRINTALL">
+		<value>Alles drucken</value>
+	</data>
+	<data name="PRINT_STYLE_WITHOUTMEDIA">
+		<value>Drucken ohne Medien</value>
+	</data>
+	<data name="STYLE_DEFAULT_STYLENAME">
+		<value>Default</value>
+	</data>
+	<data name="STYLE_STYLE_EXTENSION">
+		<value>.style</value>
+	</data>
+	<data name="PRINT_STATUS_FETCHINGCARDS">
+		<value>Karten werden abgerufen...</value>
+	</data>
+	<data name="PRINT_STATUS_MEDIA">
+		<value>Medien werden vorbereitet...</value>
+	</data>
+	<data name="PRINT_STATUS_PAGES">
+		<value>Seiten werden vorbereitet...</value>
+	</data>
+	<data name="PRINT_STATUS_RENDERING">
+		<value>Seiten werden berechnet...</value>
+	</data>
+	<data name="LISTBOXFIELDS_CHAPTER">
+		<value>Kapitel</value>
+	</data>
+	<data name="MAINTAIN_TOOLTIP_IMPORTED">
+		<value>Diese Karte ist hervorgehoben, da sie beim letzten Import erzeugt wurde.</value>
+	</data>
+	<data name="UNPACK_NOT_ORIGINAL_OPTION_YES">
+		<value>Ja, fortfahren.</value>
+	</data>
+	<data name="UNPACK_NOT_ORIGINAL_OPTION_NO">
+		<value>Nein, abbrechen.</value>
+	</data>
+	<data name="UNPACK_NOT_ORIGINAL_CONTENT">
+		<value>Sie haben versucht, eine gepackte Datei zu öffnen, welche nicht mit MemoryLifter erzeugt wurde.</value>
+	</data>
+	<data name="MAINTAIN_DELETE_TEXT_OPTION_YES">
+		<value>Ja, löschen.</value>
+	</data>
+	<data name="MAINTAIN_DELETE_TEXT_OPTION_NO">
+		<value>Nein, nicht löschen.</value>
+	</data>
+	<data name="MAINTAIN_DELETE_WARNING">
+		<value>Achtung, diese Aktion kann nicht rückgängig gemacht werden!</value>
+	</data>
+	<data name="MAINTAIN_DELETE_CONTENT">
+		<value>Sie haben {0} Karte(n) zum Löschen ausgewählt.</value>
+	</data>
+	<data name="CONVERT_REQUEST_OPTION_YES">
+		<value>Ja, konvertieren.</value>
+	</data>
+	<data name="CONVERT_REQUEST_OPTION_NO">
+		<value>Nein, nicht konvertieren.</value>
+	</data>
+	<data name="CONVERT_REQUEST_CONTENT">
+		<value>Dieses Lernmodul wurde mit einer früheren Version von MemoryLifter erzeugt. Um es verwenden zu können, muss MemoryLifter das Modul in das neue Format konvertieren.  Möchten Sie fortfahren?</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONTENT">
+		<value>Diese Operation löscht Kapitel '{0}' und die enthaltene(n) Karte(n) {1}.</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_NO">
+		<value>Nein, nicht löschen.</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_YES">
+		<value>Ja, löschen.</value>
+	</data>
+	<data name="MANAGECHAPTER_DELETE_CHAPTER_WARNING">
+		<value>Achtung, diese Aktion kann nicht rückgängig gemacht werden!</value>
+	</data>
+	<data name="IMPORTER_MEDIA_WARNING_COMMANDS">
+		<value>Import mit Importdateipfad.
+{0}.|Import mit Lernmodulpfad.
+{1}.|Import abbrechen.</value>
+	</data>
+	<data name="IMPORTER_MEDIA_WARNING_CONTENT">
+		<value>Sie möchten Mediendateien importieren. Wählen Sie den Ordner, in welchem die Dateien gespeichert sind.</value>
+	</data>
+	<data name="IMPORT_CHARSET_FORMAT">
+		<value>{0} (CP {1})</value>
+	</data>
+	<data name="PACK_IOEXCEPTION_CAPTION">
+		<value>Datei konnte nicht geöffnet werden!</value>
+	</data>
+	<data name="PACK_IOEXCEPTION_TEXT">
+		<value>Datei konnte nicht zum Schreiben geöffnet werden! Die Datei wird möglicherweise verwendet oder ist schreibgeschützt.</value>
+	</data>
+	<data name="PROGRESS_MESSAGE_SAVE_AS">
+		<value>Lernmodul wird gespeichert...</value>
+	</data>
+	<data name="IMPORT_FAILURE_CAPTION">
+		<value>Importieren fehlgeschlagen</value>
+	</data>
+	<data name="IMPORT_FAILURE_TEXT">
+		<value>MemoryLifter konnte Ihre Karten nicht importieren.</value>
+	</data>
+	<data name="IMPORT_SUCCESS_CAPTION">
+		<value>Importieren erfolgreich abgeschlossen</value>
+	</data>
+	<data name="IMPORT_SUCCESS_TEXT">
+		<value>Es wurden {0} Karten von MemoryLifter erfolgreich importiert.</value>
+	</data>
+	<data name="INITIALIZE_SETTINGS_CAPTION">
+		<value>MemoryLifter wird initialisiert</value>
+	</data>
+	<data name="INITIALIZE_SETTINGS_ERROR">
+		<value>Einstellungen wurden aktualisiert. Starten Sie das Programm neu...</value>
+	</data>
+	<data name="DICPATH_DEFAULTNAME">
+		<value>LearningModules</value>
+	</data>
+	<data name="DICPATH_DEFAULTNAME_OLD">
+		<value>MLDictionaries</value>
+	</data>
+	<data name="EXAMPLE_CARD_ANSWER">
+		<value>Antwort</value>
+	</data>
+	<data name="EXAMPLE_CARD_ANSWER_EXAMPLE">
+		<value>Beispiel für Antwort</value>
+	</data>
+	<data name="EXAMPLE_CARD_QUESTION">
+		<value>Frage</value>
+	</data>
+	<data name="EXAMPLE_CARD_QUESTION_EXAMPLE">
+		<value>Beispiel für Frage</value>
+	</data>
+	<data name="HELP_FILEPATH">
+		<value>Resources\de\help_de.chm</value>
+	</data>
+	<data name="AUDIOPLAYER_CRASHED_CAPTION">
+		<value>Audio deaktiviert</value>
+	</data>
+	<data name="AUDIOPLAYER_CRASHED_TEXT">
+		<value>Aufgrund eines Fehlers wurde die Audio-Ausgabe deaktiviert. Starten Sie MemoryLifter neu, um das Problem zu beheben.</value>
+	</data>
+	<data name="MANAGECHAPTER_EMPTY_TITLE">
+		<value>Der Titel des Kapitels darf nicht leer sein.</value>
+	</data>
+	<data name="DIC_SAVEASDIALOG_TITLE">
+		<value>Speichern unter</value>
+	</data>
+	<data name="DIC_ERROR_LOADING_LOCKED_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls</value>
+	</data>
+	<data name="DIC_ERROR_LOADING_LOCKED_TEXT">
+		<value>Fehler beim Laden des Lernmoduls {0}.
+Die Datei wird möglicherweise bereits von einer anderen Anwendung verwendet. Bitte schließen Sie die Datei und versuchen Sie es erneut.</value>
+	</data>
+	<data name="EXPORTER_COPY_MEDIA_COMMANDS">
+		<value>Ja, Mediendateien exportieren.
+|Nein, Mediendateien nicht exportieren.</value>
+	</data>
+	<data name="EXPORTER_COPY_MEDIA_CONTENT">
+		<value>Um Mediendateien zu exportieren, muss MemoryLifter die Dateien in den Exportordner kopieren. Dies kann etwas dauern. Möchten Sie die Mediendateien trotzdem exportieren?</value>
+	</data>
+	<data name="EXPORTER_COPY_MEDIA_TEXT">
+		<value>Möchten Sie Mediendateien exportieren?</value>
+	</data>
+	<data name="EXPORTER_COPY_MEDIA_TITLE">
+		<value>Mediendateien exportieren</value>
+	</data>
+	<data name="DIC_ERROR_NOT_DECRYPTED_CAPTION">
+		<value>Fehler beim Laden des Lernmoduls</value>
+	</data>
+	<data name="DIC_ERROR_NOT_DECRYPTED_TEXT">
+		<value>Sie haben versucht, ein Lernmodul zu öffnen, welches den mitgelieferten Memory Stick benötigt.
+Bitte stecken Sie den Original-Memory Stick ein und öffnen Sie es von dort.</value>
+	</data>
+	<data name="SESSION_INVALID_DETAIL">
+		<value>Ihre MemoryLifter-Sitzung wurde durch einen anderen Benutzer beendet, der mit denselben Zugangsdaten angemeldet war.</value>
+	</data>
+	<data name="SESSION_INVALID_MAIN">
+		<value>Ihre Sitzung wurde durch einen anderen Benutzer beendet!</value>
+	</data>
+	<data name="SESSION_INVALID_TITLE">
+		<value>Sitzung beendet</value>
+	</data>
+	<data name="DEFAULT_CONNECTION_FILE">
+		<value>defaultConnection.mlcfg</value>
+	</data>
+	<data name="DEFAULT_CONNECTION_NAME">
+		<value>Meine Lernmodule</value>
+	</data>
+	<data name="SETUP_STARTUP_FOLDERS">
+		<value>Resources\StartupFolders.zip</value>
+	</data>
+	<data name="RECENT_LEARNINGMODULES_MENUFORMAT">
+		<value>&amp;{0} {1} ({2})</value>
+	</data>
+	<data name="NEW_DIC_NO_CONNECTION_CAPTION">
+		<value>Keine Verbindung zum Schreiben verfügbar.</value>
+	</data>
+	<data name="NEW_DIC_NO_CONNECTION_TEXT">
+		<value>Es steht keine Verbindung zum Speichern eines neuen Lernmoduls zur Verfügung!</value>
+	</data>
+	<data name="RECENT_LEARNING_MODULES_FILE">
+		<value>Config\RecentLMs.index</value>
+	</data>
+	<data name="DRAG_COPY_ERROR_MAININTRODUCTION">
+		<value>Fehler beim Kopieren Ihres Lernmoduls.</value>
+	</data>
+	<data name="DRAG_COPY_ERROR_TITLE">
+		<value>Fehler beim Kopieren</value>
+	</data>
+	<data name="DRAG_FILE_EXISTS_CONTENT">
+		<value>Es ist bereits ein Lernmodul mit demselben Namen im Standard-Lernmodulordner vorhanden. Sie können das Lernmodul entweder aus dem Standardordner löschen oder oder eines davon umbenennen.</value>
+	</data>
+	<data name="DRAG_FILE_EXISTS_MAININTRODUCTION">
+		<value>Das Lernmodul existiert bereits</value>
+	</data>
+	<data name="DRAG_FILE_EXISTS_TITLE">
+		<value>Das Lernmodul existiert bereits</value>
+	</data>
+	<data name="DRAG_MOVE_ERROR_MAININTRODUCTION">
+		<value>Fehler beim Verschieben Ihres Lernmoduls</value>
+	</data>
+	<data name="DRAG_MOVE_ERROR_TITLE">
+		<value>Fehler beim Verschieben</value>
+	</data>
+	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_CONTENT">
+		<value>Es ist kein Lernmodul-Ordner eingerichtet, MemoryLifter kann das Lernmodul nicht ohne einen Standardordner kopieren.</value>
+	</data>
+	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_MAININTRODUCTION">
+		<value>Es ist kein Standard-Lernmodulordner vorhanden.</value>
+	</data>
+	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_TITLE">
+		<value>Es ist kein Lernmodulordner vorhanden</value>
+	</data>
+	<data name="DRAG_DIALOG_BUTTONS">
+		<value>Lernmodul kopieren
+Kopiert das Lernmodul in den Standard-Lernmodulordner.|Lernmodul verschieben
+Verschiebt das Lernmodul in den Standard-Lernmodulordner.|Einfach lernen
+Öffnet das Lernmodul zum Lernen, ohne es zu kopieren oder zu verschieben.|Abbrechen
+Nichts weiter tun.</value>
+	</data>
+	<data name="DRAG_DIALOG_MAININTRODUCTION">
+		<value>Was möchten Sie mit diesem Lernmodul tun?</value>
+	</data>
+	<data name="DRAG_DIALOG_TITLE">
+		<value>Aktion?</value>
+	</data>
+	<data name="DRAG_LM_EXISTS_DIALOG_BUTTONS">
+		<value>Lernmodul ersetzen
+Es existiert bereits ein Lernmodul mit demselben Namen im Standard-Lernmodulordner. Es wird hierdurch ersetzt.|Einfach lernen
+Öffnet das Lernmodul, ohne es zu kopieren oder zu verschieben.|Abbrechen
+Nichts weiter tun.</value>
+	</data>
+	<data name="DRAG_LM_EXISTS_DIALOG_MAININTRODUCTION">
+		<value>Was möchten Sie mit diesem Lernmodul tun?</value>
+	</data>
+	<data name="DRAG_LM_EXISTS_DIALOG_TITLE">
+		<value>Aktion?</value>
+	</data>
+	<data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION">
+		<value>Fehler beim Laden der MemoryLifter-Konfigurationsdatei.</value>
+	</data>
+	<data name="DRAG_CFG_GENERAL_ERROR_TITLE">
+		<value>Fehler beim Laden der Konfigurationsdatei</value>
+	</data>
+	<data name="DRAG_CFG_SUCCESS_CONTENT_PLUR">
+		<value>Es wurden {0} Verbindungen erfolgreich von MemoryLifter importiert.</value>
+	</data>
+	<data name="DRAG_CFG_SUCCESS_CONTENT_SING">
+		<value>Es wurde 1 Verbindung erfolgreich von MemoryLifter importiert.</value>
+	</data>
+	<data name="DRAG_CFG_SUCCESS_MAIN">
+		<value>MemoryLifter-Konfigurationsdatei wurde erfolgreich importiert.</value>
+	</data>
+	<data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED">
+		<value>Es gab nichts zu importieren.</value>
+	</data>
+	<data name="DRAG_CFG_SUCCESS_TITLE">
+		<value>Importieren der Konfiguration erfolgreich</value>
+	</data>
+	<data name="DRAG_INVALID_CFG_FILE_CONTENT">
+		<value>Die MemoryLifter-Konfigurationsdatei war ungültig. Setzen Sie sich bitte mit Ihrem Systemadministrator in Verbindung.</value>
+	</data>
+	<data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION">
+		<value>Ungültige MemoryLifter-Konfigurationsdatei.</value>
+	</data>
+	<data name="DRAG_INVALID_CFG_FILE_TITLE">
+		<value>Ungültige MemoryLifter-Konfigurationsdatei</value>
+	</data>
+	<data name="COPYTO_STATUS_MESSAGE">
+		<value>Lade...</value>
+	</data>
+	<data name="IMPORTING">
+		<value>Import...</value>
+	</data>
+	<data name="HELP_FIRSTSTEPS">
+		<value>/html/memo7omr.htm</value>
+	</data>
+	<data name="DRAG_CFG_DIALOG_BUTTONS">
+		<value>Importieren
+Diese MemoryLifter-Konfigurationsdatei zur aktuellen Konfiguration hinzufügen.|Abbrechen
+Nichts weiter tun.</value>
+	</data>
+	<data name="DRAG_CFG_DIALOG_CONTENT">
+		<value>Diese MemoryLifter-Konfigurationsdatei erweitert die verfügbaren Verbindungen auf der Startseite.</value>
+	</data>
+	<data name="DRAG_CFG_DIALOG_MAIN">
+		<value>Möchten Sie diese MemoryLifter-Konfigurationsdatei importieren?</value>
+	</data>
+	<data name="DRAG_CFG_DIALOG_TITLE">
+		<value>Konfigurationsdatei importieren?</value>
+	</data>
+	<data name="RETURN_TO_LEARNING_MODE">
+		<value>Zum Lernmodus zurückkehren</value>
+	</data>
+	<data name="SWITCH_TO_SLIDESHOW_MODE">
+		<value>Zum Diashow-Modus wechseln</value>
+	</data>
+	<data name="SYNCHRONIZATION_FAILED_CONTENT">
+		<value>Ihre Änderungen werden auf den Server hochgeladen, wenn Sie dieses Lernmodul das nächste Mal öffnen.</value>
+	</data>
+	<data name="SYNCHRONIZATION_FAILED_TITLE">
+		<value>Hochladen nicht möglich</value>
+	</data>
+	<data name="SYNCHRONIZATION_SYNC_FAILED_MAIN">
+		<value>Hochladen der Änderungen auf den Server fehlgeschlagen.</value>
+	</data>
+	<data name="MAINTAIN_CARDS_LOAD_CARDS">
+		<value>Karten werden geladen...</value>
+	</data>
+	<data name="MAINFORM_CREATE_BACKUP_DIALOG_BUTTONS">
+		<value>Fortfahren
+Fortfahren mit dem Erstellen der Sicherungskopie.|Abbrechen
+Vorgang abbrechen und keine Sicherungskopie erstellen.</value>
+	</data>
+	<data name="MAINFORM_CREATE_BACKUP_DIALOG_MAIN">
+		<value>Hinweis: Um das Lernmodul zu kopieren, muss es geschlossen und neu geöffnet werden. Fortfahren?</value>
+	</data>
+	<data name="MAINFORM_CREATE_BACKUP_DIALOG_TITLE">
+		<value>Sicherungskopie erstellen</value>
+	</data>
+	<data name="MAINFORM_CREATE_BACKUP_DIALOG_VERIFICATION">
+		<value>Diese Nachricht nicht wieder anzeigen.</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_CAPTION">
+		<value>Lernmodulversion wird nicht unterstützt!</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_CONTENT">
+		<value>MemoryLifter versucht nun, Ihr Lernmodul zu aktualisieren.</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_MAIN">
+		<value>Die Datenbankversion Ihres Lernmoduls wird nicht unterstützt.</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION">
+		<value>Aktualisierung des Lernmoduls gescheitert!</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT">
+		<value>Setzen Sie sich mit Ihrem Systemadministrator oder dem MemoryLifter Support-Team in Verbindung.</value>
+	</data>
+	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN">
+		<value>MemoryLifter konnte das Lernmodul nicht aktualisieren.</value>
+	</data>
+	<data name="TASK_DIALOG_DISK_FULL_CAPTION">
+		<value>Nicht genügend freier Speicherplatz!</value>
+	</data>
+	<data name="TASK_DIALOG_DISK_FULL_TEXT">
+		<value>Die zum Lernen verwendete Festplatte ist voll. Bitte machen Sie Speicherplatz frei und versuchen Sie es erneut.</value>
+	</data>
+	<data name="TASK_DIALOG_DISK_FULL_TITLE">
+		<value>Nicht genügend Speicherplatz</value>
+	</data>
+	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT">
+		<value>Ihr Lernerfolg bis zu diesem Punkt wurde gespeichert.</value>
+	</data>
+	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN">
+		<value>MemoryLifter muss diese Lernsitzung beenden.</value>
+	</data>
+	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE">
+		<value>Serververbindungsfehler</value>
+	</data>
+	<data name="DIC_LOADING_ERROR_OFFLINE">
+		<value>Zugriff auf den Server mit dem gewählten Lernmodul nicht möglich.</value>
+	</data>
+	<data name="MAINFORM_CREATE_BACKUP_DIALOG_FILTER">
+		<value>MemoryLifter Lernmodul (*{0})|*{0}</value>
+	</data>
+	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CAPTION">
+		<value>Online-Aktivierung nicht verfügbar</value>
+	</data>
+	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CONTENT">
+		<value>Falls Ihre Firewall die angeforderte Verbindung sperrt, erlauben Sie MemoryLifter den Zugriff auf das Internet.</value>
+	</data>
+	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_MAIN">
+		<value>Der Service für die Online-Aktivierung ist nicht verfügbar. Überprüfen Sie Ihre Netzwerkverbindung oder versuchen Sie die Aktivierung des Lernmoduls auf einem Computer mit Internetzugang.</value>
+	</data>
+	<data name="SPLASHSCREEN_PREPARING">
+		<value>Starten wird vorbereitet</value>
+	</data>
+	<data name="TEACHER_DEFAULT">
+		<value>Default</value>
+	</data>
+	<data name="TEACHER_NICEGUY">
+		<value>Freundlich</value>
+	</data>
+	<data name="TEACHER_OCCASIONAL">
+		<value>Gelegenheitslerner</value>
+	</data>
+	<data name="TEACHER_STRICT">
+		<value>Streng</value>
+	</data>
+	<data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT">
+		<value>Antwort Distraktoren ({0})</value>
+	</data>
+	<data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT">
+		<value>Frage Distraktoren ({0})</value>
+	</data>
+	<data name="INSTALLED_EXTENSIONS_FILE">
+		<value>Config\InstalledExtensions.index</value>
+	</data>
+	<data name="EXTENSION_INFORMUSER_CAPTION">
+		<value>Erweiterung installiert</value>
+	</data>
+	<data name="EXTENSION_INFORMUSER_MESSAGE_INSTALLED">
+		<value>Die {0}-Erweiterung '{1}' wurde installiert.</value>
+	</data>
+	<data name="EXTENSION_INFORMUSER_MESSAGE_SELECTED">
+		<value>Die {0}-Erweiterung '{1}' wurde installiert und ausgewählt.</value>
+	</data>
+	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_SKIN">
+		<value>Design</value>
+	</data>
+	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_UNKNOWN">
+		<value>Unbekannt</value>
+	</data>
+	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Title">
+		<value>Inkompatible Datenbankversion</value>
+	</data>
+	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Caption">
+		<value>Die Version der gewählten Datenbank ist nicht kompatibel.</value>
+	</data>
+	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Text">
+		<value>Bitte setzen Sie sich mit Ihrem Administrator in Verbindung, um Ihre Datenbankversion zu aktualisieren.</value>
+	</data>
+	<data name="TASK_DIALOG_MemoryLifterTooOld_Title">
+		<value>MemoryLifter zu alt</value>
+	</data>
+	<data name="TASK_DIALOG_MemoryLifterTooOld_Caption">
+		<value>Ihre installierte MemoryLifter-Version ist zu alt!</value>
+	</data>
+	<data name="TASK_DIALOG_MemoryLifterTooOld_Text">
+		<value>Gehen Sie auf www.memorylifter.com und aktualisieren Sie Ihre MemoryLifter-Version.</value>
+	</data>
+	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION">
+		<value>Fehler beim Starten der externen Anwendung</value>
+	</data>
+	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT">
+		<value>MemoryLifter konnte eine externe Anwendung nicht starten.</value>
+	</data>
+	<data name="MLIFTER_ERROR_HANDLER">
+		<value>MLifterErrorHandler.exe</value>
+	</data>
+	<data name="TASK_DIALOG_NoNewVersionFound_Title">
+		<value>Keine neue Version gefunden</value>
+	</data>
+	<data name="TASK_DIALOG_NoNewVersionFound_Caption">
+		<value>Es wurde keine neue Version gefunden!</value>
+	</data>
+	<data name="TASK_DIALOG_NoNewVersionFound_Text">
+		<value>Sehen Sie bitte in einigen Tagen noch einmal nach oder aktivieren Sie die automatische Suche, damit MemoryLifter bei jedem Starten selbst nach Updates suchen kann.</value>
+	</data>
+	<data name="ACTIVE_CARDS">
+		<value>Aktive Karten</value>
+	</data>
+	<data name="INACTIVE_CARDS">
+		<value>Inaktive Karten</value>
+	</data>
+</root>

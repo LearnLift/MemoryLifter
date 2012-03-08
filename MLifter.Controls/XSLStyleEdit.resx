@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="stylePreview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="stylePreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 0</value>
+  </data>
+  <data name="stylePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 500</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="stylePreview.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Name" xml:space="preserve">
+    <value>stylePreview</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="columnModelXSL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 16</value>
+  </metadata>
+  <data name="tableXSL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableXSL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="tableXSL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 465</value>
+  </data>
+  <data name="tableXSL.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="tableModelXSL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 17</value>
+  </metadata>
+  <data name="&gt;&gt;tableXSL.Name" xml:space="preserve">
+    <value>tableXSL</value>
+  </data>
+  <data name="&gt;&gt;tableXSL.Type" xml:space="preserve">
+    <value>XPTable.Models.Table, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;tableXSL.Parent" xml:space="preserve">
+    <value>tabPageTable</value>
+  </data>
+  <data name="&gt;&gt;tableXSL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControlMode.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="tabPageTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tabPageTable.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 471</value>
+  </data>
+  <data name="tabPageTable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageTable.Text" xml:space="preserve">
+    <value>Table - View</value>
+  </data>
+  <data name="&gt;&gt;tabPageTable.Name" xml:space="preserve">
+    <value>tabPageTable</value>
+  </data>
+  <data name="&gt;&gt;tabPageTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageTable.Parent" xml:space="preserve">
+    <value>tabControlMode</value>
+  </data>
+  <data name="&gt;&gt;tabPageTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxFile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBoxFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="textBoxFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 465</value>
+  </data>
+  <data name="textBoxFile.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Name" xml:space="preserve">
+    <value>textBoxFile</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Type" xml:space="preserve">
+    <value>MLifter.Controls.SyntaxHighlightingTextBox.SyntaxHighlightingTextBox, MLifterControls, Version=2.1.176.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Parent" xml:space="preserve">
+    <value>tabPageText</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tabPageText.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 471</value>
+  </data>
+  <data name="tabPageText.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageText.Text" xml:space="preserve">
+    <value>Text - View</value>
+  </data>
+  <data name="&gt;&gt;tabPageText.Name" xml:space="preserve">
+    <value>tabPageText</value>
+  </data>
+  <data name="&gt;&gt;tabPageText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageText.Parent" xml:space="preserve">
+    <value>tabControlMode</value>
+  </data>
+  <data name="&gt;&gt;tabPageText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControlMode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="tabControlMode.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>225, 21</value>
+  </data>
+  <data name="tabControlMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControlMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 500</value>
+  </data>
+  <data name="tabControlMode.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabControlMode.Name" xml:space="preserve">
+    <value>tabControlMode</value>
+  </data>
+  <data name="&gt;&gt;tabControlMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlMode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="timerTextChanged.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>264, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 500</value>
+  </data>
+  <data name="&gt;&gt;columnModelXSL.Name" xml:space="preserve">
+    <value>columnModelXSL</value>
+  </data>
+  <data name="&gt;&gt;columnModelXSL.Type" xml:space="preserve">
+    <value>XPTable.Models.ColumnModel, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;textColumnElementName.Name" xml:space="preserve">
+    <value>textColumnElementName</value>
+  </data>
+  <data name="&gt;&gt;textColumnElementName.Type" xml:space="preserve">
+    <value>XPTable.Models.TextColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;colorColumnColor.Name" xml:space="preserve">
+    <value>colorColumnColor</value>
+  </data>
+  <data name="&gt;&gt;colorColumnColor.Type" xml:space="preserve">
+    <value>XPTable.Models.ColorColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;colorColumnBackColor.Name" xml:space="preserve">
+    <value>colorColumnBackColor</value>
+  </data>
+  <data name="&gt;&gt;colorColumnBackColor.Type" xml:space="preserve">
+    <value>XPTable.Models.ColorColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;buttonColumnFont.Name" xml:space="preserve">
+    <value>buttonColumnFont</value>
+  </data>
+  <data name="&gt;&gt;buttonColumnFont.Type" xml:space="preserve">
+    <value>XPTable.Models.ButtonColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColumnHAlign.Name" xml:space="preserve">
+    <value>comboBoxColumnHAlign</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColumnHAlign.Type" xml:space="preserve">
+    <value>XPTable.Models.ComboBoxColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColumnVAlign.Name" xml:space="preserve">
+    <value>comboBoxColumnVAlign</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColumnVAlign.Type" xml:space="preserve">
+    <value>XPTable.Models.ComboBoxColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;tableModelXSL.Name" xml:space="preserve">
+    <value>tableModelXSL</value>
+  </data>
+  <data name="&gt;&gt;tableModelXSL.Type" xml:space="preserve">
+    <value>XPTable.Models.TableModel, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;timerTextChanged.Name" xml:space="preserve">
+    <value>timerTextChanged</value>
+  </data>
+  <data name="&gt;&gt;timerTextChanged.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>XSLStyleEdit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

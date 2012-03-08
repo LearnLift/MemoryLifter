@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GBLearning.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LModeImageRecognition.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LModeImageRecognition.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LModeImageRecognition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 188</value>
+  </data>
+  <data name="LModeImageRecognition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LModeImageRecognition.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LModeImageRecognition.Text" xml:space="preserve">
+    <value>Image recognition</value>
+  </data>
+  <data name="&gt;&gt;LModeImageRecognition.Name" xml:space="preserve">
+    <value>LModeImageRecognition</value>
+  </data>
+  <data name="&gt;&gt;LModeImageRecognition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LModeImageRecognition.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LModeImageRecognition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LModeListeningComprehension.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LModeListeningComprehension.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LModeListeningComprehension.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 165</value>
+  </data>
+  <data name="LModeListeningComprehension.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="LModeListeningComprehension.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LModeListeningComprehension.Text" xml:space="preserve">
+    <value>Listening comprehension</value>
+  </data>
+  <data name="&gt;&gt;LModeListeningComprehension.Name" xml:space="preserve">
+    <value>LModeListeningComprehension</value>
+  </data>
+  <data name="&gt;&gt;LModeListeningComprehension.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LModeListeningComprehension.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LModeListeningComprehension.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LModeSentences.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LModeSentences.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LModeSentences.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 142</value>
+  </data>
+  <data name="LModeSentences.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="LModeSentences.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="LModeSentences.Text" xml:space="preserve">
+    <value>Sentences</value>
+  </data>
+  <data name="&gt;&gt;LModeSentences.Name" xml:space="preserve">
+    <value>LModeSentences</value>
+  </data>
+  <data name="&gt;&gt;LModeSentences.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LModeSentences.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LModeSentences.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LModeMultipleChoice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LModeMultipleChoice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LModeMultipleChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 119</value>
+  </data>
+  <data name="LModeMultipleChoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="LModeMultipleChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LModeMultipleChoice.Text" xml:space="preserve">
+    <value>Multiple choice</value>
+  </data>
+  <data name="&gt;&gt;LModeMultipleChoice.Name" xml:space="preserve">
+    <value>LModeMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;LModeMultipleChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LModeMultipleChoice.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LModeMultipleChoice.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LModeStandard.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LModeStandard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LModeStandard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 94</value>
+  </data>
+  <data name="LModeStandard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="LModeStandard.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LModeStandard.Text" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="&gt;&gt;LModeStandard.Name" xml:space="preserve">
+    <value>LModeStandard</value>
+  </data>
+  <data name="&gt;&gt;LModeStandard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LModeStandard.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LModeStandard.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LblModes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LblModes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="LblModes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblModes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 16</value>
+  </data>
+  <data name="LblModes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 68</value>
+  </data>
+  <data name="LblModes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LblModes.Text" xml:space="preserve">
+    <value>How should MemoryLifter ask you questions? If you check more than one mode, the mode used for each card is chosen randomly.</value>
+  </data>
+  <data name="LblModes.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;LblModes.Name" xml:space="preserve">
+    <value>LblModes</value>
+  </data>
+  <data name="&gt;&gt;LblModes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblModes.Parent" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;LblModes.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GBLearning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 1</value>
+  </data>
+  <data name="GBLearning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 220</value>
+  </data>
+  <data name="GBLearning.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GBLearning.Text" xml:space="preserve">
+    <value>Learning modes</value>
+  </data>
+  <data name="&gt;&gt;GBLearning.Name" xml:space="preserve">
+    <value>GBLearning</value>
+  </data>
+  <data name="&gt;&gt;GBLearning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBLearning.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GBLearning.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RGDirection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RBDirectionMixed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RBDirectionMixed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RBDirectionMixed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 59</value>
+  </data>
+  <data name="RBDirectionMixed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="RBDirectionMixed.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="RBDirectionMixed.Text" xml:space="preserve">
+    <value>Mixed</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionMixed.Name" xml:space="preserve">
+    <value>RBDirectionMixed</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionMixed.Type" xml:space="preserve">
+    <value>MLifter.Controls.RadioCheckbox, MLifterControls, Version=2.2.402.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionMixed.Parent" xml:space="preserve">
+    <value>RGDirection</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionMixed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RBDirectionAnswerQuestion.Text" xml:space="preserve">
+    <value>RadioCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionAnswerQuestion.Name" xml:space="preserve">
+    <value>RBDirectionAnswerQuestion</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionAnswerQuestion.Type" xml:space="preserve">
+    <value>MLifter.Controls.RadioCheckbox, MLifterControls, Version=2.2.402.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionAnswerQuestion.Parent" xml:space="preserve">
+    <value>RGDirection</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionAnswerQuestion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RBDirectionQuestionAnswer.Text" xml:space="preserve">
+    <value>RadioCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionQuestionAnswer.Name" xml:space="preserve">
+    <value>RBDirectionQuestionAnswer</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionQuestionAnswer.Type" xml:space="preserve">
+    <value>MLifter.Controls.RadioCheckbox, MLifterControls, Version=2.2.402.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionQuestionAnswer.Parent" xml:space="preserve">
+    <value>RGDirection</value>
+  </data>
+  <data name="&gt;&gt;RBDirectionQuestionAnswer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RGDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 1</value>
+  </data>
+  <data name="RGDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 84</value>
+  </data>
+  <data name="RGDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RGDirection.Text" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="&gt;&gt;RGDirection.Name" xml:space="preserve">
+    <value>RGDirection</value>
+  </data>
+  <data name="&gt;&gt;RGDirection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RGDirection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RGDirection.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxMultipleChoice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="numericUpDownMaxNumberOfCorrectAnswers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="numericUpDownMaxNumberOfCorrectAnswers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 103</value>
+  </data>
+  <data name="numericUpDownMaxNumberOfCorrectAnswers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="numericUpDownMaxNumberOfCorrectAnswers.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="numericUpDownMaxNumberOfCorrectAnswers.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownMaxNumberOfCorrectAnswers.Name" xml:space="preserve">
+    <value>numericUpDownMaxNumberOfCorrectAnswers</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownMaxNumberOfCorrectAnswers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownMaxNumberOfCorrectAnswers.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownMaxNumberOfCorrectAnswers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDownNumberOfChoices.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="numericUpDownNumberOfChoices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 75</value>
+  </data>
+  <data name="numericUpDownNumberOfChoices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="numericUpDownNumberOfChoices.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="numericUpDownNumberOfChoices.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNumberOfChoices.Name" xml:space="preserve">
+    <value>numericUpDownNumberOfChoices</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNumberOfChoices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNumberOfChoices.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNumberOfChoices.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 98</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 30</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.Text" xml:space="preserve">
+    <value>Max. number of correct answers </value>
+  </data>
+  <data name="labelMaxNumberOfCorrectAnswers.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelMaxNumberOfCorrectAnswers.Name" xml:space="preserve">
+    <value>labelMaxNumberOfCorrectAnswers</value>
+  </data>
+  <data name="&gt;&gt;labelMaxNumberOfCorrectAnswers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMaxNumberOfCorrectAnswers.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;labelMaxNumberOfCorrectAnswers.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 30</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkBoxAllowRandomDistractors.Text" xml:space="preserve">
+    <value>Allow random distractors</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowRandomDistractors.Name" xml:space="preserve">
+    <value>checkBoxAllowRandomDistractors</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowRandomDistractors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowRandomDistractors.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowRandomDistractors.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 30</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="checkBoxAllowMultipleCorrectAnswers.Text" xml:space="preserve">
+    <value>Allow multiple correct answers</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowMultipleCorrectAnswers.Name" xml:space="preserve">
+    <value>checkBoxAllowMultipleCorrectAnswers</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowMultipleCorrectAnswers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowMultipleCorrectAnswers.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAllowMultipleCorrectAnswers.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelNumberOfChoices.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelNumberOfChoices.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelNumberOfChoices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 70</value>
+  </data>
+  <data name="labelNumberOfChoices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 30</value>
+  </data>
+  <data name="labelNumberOfChoices.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labelNumberOfChoices.Text" xml:space="preserve">
+    <value>Number of choices</value>
+  </data>
+  <data name="labelNumberOfChoices.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelNumberOfChoices.Name" xml:space="preserve">
+    <value>labelNumberOfChoices</value>
+  </data>
+  <data name="&gt;&gt;labelNumberOfChoices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNumberOfChoices.Parent" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;labelNumberOfChoices.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBoxMultipleChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 91</value>
+  </data>
+  <data name="groupBoxMultipleChoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 130</value>
+  </data>
+  <data name="groupBoxMultipleChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBoxMultipleChoice.Text" xml:space="preserve">
+    <value>Multiple choice options</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMultipleChoice.Name" xml:space="preserve">
+    <value>groupBoxMultipleChoice</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMultipleChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMultipleChoice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxMultipleChoice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>513, 229</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LearnModes</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

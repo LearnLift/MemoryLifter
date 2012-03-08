@@ -1,0 +1,22 @@
+﻿<Window x:Class="MLifterSettingsManager.PublisherForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Publish Learning Module" Height="98" Width="300" WindowStartupLocation="CenterOwner">
+    <Grid Height="60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="23" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="5,0,5,0" Grid.Row="0" Grid.ColumnSpan="3" x:Name="labelStatus" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" />
+
+        <Button Margin="5,5,5,5" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" x:Name="buttonCancel" Click="buttonCancel_Click">Cancel</Button>
+        <Button Margin="5,5,5,5" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="buttonPublish" Click="buttonPublish_Click">Publish</Button>
+
+    </Grid>
+</Window>

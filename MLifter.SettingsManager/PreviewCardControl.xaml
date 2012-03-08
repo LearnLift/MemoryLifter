@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="MLifterSettingsManager.PreviewCardControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="previewCardControl" HorizontalAlignment="Stretch"
+    xmlns:MLifterSettingsManager="clr-namespace:MLifterSettingsManager">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Question Side -->
+        <Border Grid.Column="0" Margin="5,5,5,0" BorderBrush="Black" BorderThickness="2">
+            <Grid x:Name="gridQuestion">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="{Binding Question}" FontSize="12" Margin="2" HorizontalAlignment="Center" TextWrapping="Wrap" />
+                <Image Grid.Row="1" Source="{Binding QuestionImage}" Stretch="Uniform" />
+                <TextBlock Grid.Row="2" Text="{Binding QuestionExample}" FontSize="12" Margin="2" HorizontalAlignment="Center" TextWrapping="Wrap" />
+               
+            </Grid>
+        </Border>
+
+        <!-- Answer Side -->
+        <Border Grid.Column="1" Margin="5,5,5,0" BorderBrush="Black" BorderThickness="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="{Binding Answer}" FontSize="12" Margin="2" HorizontalAlignment="Center" TextWrapping="Wrap" />
+                <Image Grid.Row="1" Source="{Binding AnswerImage}" Stretch="Uniform" />
+                <TextBlock Grid.Row="2" Text="{Binding AnswerExample}" FontSize="12" Margin="2" HorizontalAlignment="Center" TextWrapping="Wrap" />
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

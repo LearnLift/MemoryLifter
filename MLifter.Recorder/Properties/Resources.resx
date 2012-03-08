@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MULTIPLE_KEY_ASSIGNMENT_ERROR_CAPTION" xml:space="preserve">
+    <value>Multiple selection detected</value>
+  </data>
+  <data name="CLOSE_TEXT" xml:space="preserve">
+    <value>Do you really want to close?</value>
+  </data>
+  <data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
+    <value>Answer ({0})</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="keyboard_layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard_layout.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spacer_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacer_grey.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="long_green_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_green_vertical.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spacer_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacer_green.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="long_grey_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_grey_vertical.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STATUS_STRIP_STOP_MESSAGE" xml:space="preserve">
+    <value>Press {0} or {1} to stop recording.</value>
+  </data>
+  <data name="numpad_layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numpad_layout.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CLOSE_CAPTION" xml:space="preserve">
+    <value>Really close?</value>
+  </data>
+  <data name="small_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small_grey.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JUMP_TO_END_TEXT" xml:space="preserve">
+    <value>First Card reached. Jump to the end?</value>
+  </data>
+  <data name="small_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small_green.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MULTIPLE_KEY_ASSIGNMENT_ERROR_TEXT" xml:space="preserve">
+    <value> is selected more than one Time:
+</value>
+  </data>
+  <data name="NO_ITEM_TO_RECORD_CAPTION" xml:space="preserve">
+    <value>Nothing selected</value>
+  </data>
+  <data name="NO_TEXT_MESSAGE" xml:space="preserve">
+    <value> (No Text!)</value>
+  </data>
+  <data name="JUMP_TO_OTHER_END_CAPTION" xml:space="preserve">
+    <value>End reached</value>
+  </data>
+  <data name="long_green_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_green_horizontal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
+    <value>Ex. Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="JUMP_TO_OTHER_END_TEXT" xml:space="preserve">
+    <value>Last Card reached. Jump to the beginning?</value>
+  </data>
+  <data name="long_grey_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_grey_horizontal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
+    <value>Ex. Answer ({0})</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
+    <value>Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="STATUS_STRIP_RECORD_MESSAGE" xml:space="preserve">
+    <value>Press {0} or {1} to start recording.</value>
+  </data>
+  <data name="NO_ITEM_TO_RECORD_TEXT" xml:space="preserve">
+    <value>No item to record selected!
+
+Select at least one!</value>
+  </data>
+  <data name="stop_inactive_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop_inactive_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backward_active_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backward_active_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backward_inactive_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backward_inactive_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward_active_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward_active_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forward_inactive_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forward_inactive_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_active_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_active_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_inactive_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_inactive_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rec_inactive_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rec_active_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rec_active_simplemode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rec_active_simplemode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rec_active_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rec_inactive_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop_active_expertmode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop_active_expertmode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop_active_simplemode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop_active_simplemode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="simplemode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\simplemode.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="long_orange_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_orange_horizontal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="long_orange_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long_orange_vertical.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small_orange.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spacer_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacer_orange.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DELAY_DESCRIPTION" xml:space="preserve">
+    <value>This delays are cutted from the end and the beginning of the recording to minimize gaps and remove noise...</value>
+  </data>
+  <data name="ENCODING_AVAILABLE_CHANNELS" xml:space="preserve">
+    <value>1|2</value>
+    <comment>Do not localize!</comment>
+  </data>
+  <data name="ENCODING_AVAILABLE_SAMPLING_RATES" xml:space="preserve">
+    <value>22050|44100|48000</value>
+    <comment>Do not localize!</comment>
+  </data>
+  <data name="ENCODING_SAMPLINGRATE_TOSTRINGFORMAT" xml:space="preserve">
+    <value>{0:#0.000} kHz</value>
+    <comment>Do not localize!</comment>
+  </data>
+  <data name="WAV_EXTENSION" xml:space="preserve">
+    <value>.wav</value>
+  </data>
+  <data name="ENCODING_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="MP3_EXTENSION" xml:space="preserve">
+    <value>.mp3</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
+    <value>Error loading Learning Module {0}.
+The file may be in use by another application, e.g. MemoryLifter. Please close it and try again.</value>
+    <comment>{0} = name of Learning Module</comment>
+  </data>
+  <data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
+    <value>Error loading Learning Module {0}.</value>
+    <comment>{0} = name of Learning Module</comment>
+  </data>
+  <data name="HOWTO_URL" xml:space="preserve">
+    <value>http://memorylifter.codeplex.com/wikipage?title=Recorder</value>
+  </data>
+  <data name="NO_WAVEIN_DEVICE_CAPTION" xml:space="preserve">
+    <value>No audio device</value>
+  </data>
+  <data name="NO_WAVEIN_DEVICE_TEXT" xml:space="preserve">
+    <value>No recording audio device found! Please verify that the audio equipment is set up properly.</value>
+  </data>
+  <data name="NO_WAVEOUT_DEVICE_CAPTION" xml:space="preserve">
+    <value>No audio device</value>
+  </data>
+  <data name="NO_WAVEOUT_DEVICE_TEXT" xml:space="preserve">
+    <value>No playback audio device found! Please verify that the audio equipment is set up properly.</value>
+  </data>
+  <data name="RELOAD_LAST_DIC_CAPTION" xml:space="preserve">
+    <value>Open last Learning Module</value>
+  </data>
+  <data name="RELOAD_LAST_DIC_TEXT" xml:space="preserve">
+    <value>Do you want to continue recording of the last used Learning Module?</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_PROTECTED_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_PROTECTED_TEXT" xml:space="preserve">
+    <value>The Learning Module is content protected.</value>
+  </data>
+  <data name="RELOAD_LAST_DIC_COMMANDS" xml:space="preserve">
+    <value>Continue|Select other Learning Module</value>
+  </data>
+</root>

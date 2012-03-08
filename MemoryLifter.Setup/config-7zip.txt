@@ -1,0 +1,4 @@
+;!@Install@!UTF-8!
+Title="MemoryLifter"
+RunProgram="setup.exe"
+;!@InstallEnd@!

@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MLifter.BusinessLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PgConnectionProtocol" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="PgConnectionPooling" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PgConnectionMinPoolSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="PgConnectionMaxPoolSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="PgConnectionEncoding" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UNICODE</Value>
+    </Setting>
+    <Setting Name="PgConnectionTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="LMIndexCacheFilename" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LMIndex.cache</Value>
+    </Setting>
+    <Setting Name="LMIndexCacheCleanupDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="MLifterBusinessLayer_MLifterLearningModulesService_MLifterLearningModulesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MLifterSyncService/MLifterLearningModulesService.asmx</Value>
+    </Setting>
+    <Setting Name="MLifterBusinessLayer_SyncWebService_PgSyncService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/MLifterSyncService/PgSyncService.asmx</Value>
+    </Setting>
+    <Setting Name="RecentFilesListMaximum" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="LMKeyFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LMKeys.dat</Value>
+    </Setting>
+    <Setting Name="StickLMFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LearningModules</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

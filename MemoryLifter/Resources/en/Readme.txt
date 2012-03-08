@@ -1,0 +1,1 @@
+Please see http://memorylifter.codeplex.com/wikipage?title=MemoryLifter

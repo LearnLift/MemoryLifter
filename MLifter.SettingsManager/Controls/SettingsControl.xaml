@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="MLifterSettingsManager.SettingsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MLifterSettingsManager"
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+             Width="Auto" MinWidth="250" x:Name="settingsControl">
+    <UserControl.Resources>
+        <local:BoolToVisibleOrCollapsedConverter x:Key="boolToVis" />
+    </UserControl.Resources>
+    <StackPanel Margin="5">
+        <GroupBox Header="Learning Modes" Margin="10 5 10 5">
+            <StackPanel Margin="5">
+                <CheckBox x:Name="checkBoxLearnModeStandard" Content="Standard" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearnModeMultipleChoice" Content="Multiple Choice" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearnModeSentence" Content="Sentence" Click="checkBox_Click" IsChecked="{x:Null}" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearnModeListeningComprehension" Content="Listening comprehension" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearnModeImageRecognition" Content="Image recognition" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Multiple Choice Options" Margin="10 5 10 5">
+            <StackPanel Margin="5">
+                <CheckBox x:Name="checkBoxMultipleChoiceOptionsAllowRandomDistractors" Content="Allow random distractors" IsChecked="{x:Null}" 
+                          Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxMultipleChoiceOptionsAllowMultipleCorrectAnswers" Content="Allow multiple correct answers" IsChecked="{x:Null}" 
+                          Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <CheckBox x:Name="checkBoxNumberOfChoices" Grid.Column="0" Grid.Row="0" Content="Number of choices:" Margin="5" />
+                    <Label Grid.Column="1" Grid.Row="0" x:Name="labelNumberOfChoices" />
+                    <WindowsFormsHost Grid.Column="1" Grid.Row="0" Visibility="{Binding ElementName=settingsControl, Path=PreviewMode, Converter={StaticResource boolToVis}}">
+                        <wf:NumericUpDown x:Name="numericUpDownControlNumberOfChoices" TextAlign="Right" ValueChanged="numericUpDownControlNumberOfChoices_ValueChanged" />
+                    </WindowsFormsHost>
+                    <CheckBox x:Name="checkBoxNumberOfCorrectAnswers" Grid.Column="0" Grid.Row="1" Content="Max. Number of correct answers:" Margin="5" />
+                    <Label Grid.Column="1" Grid.Row="1" x:Name="labelNumberOfCorrectAnswers" />
+                    <WindowsFormsHost Grid.Column="1" Grid.Row="1" Visibility="{Binding ElementName=settingsControl, Path=PreviewMode, Converter={StaticResource boolToVis}}">
+                        <wf:NumericUpDown x:Name="numericUpDownControlNumberOfCorrectAnswers" TextAlign="Right" ValueChanged="numericUpDownControlNumberOfCorrectAnswers_ValueChanged" />
+                    </WindowsFormsHost>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Learning Directions" Margin="10 5 10 5">
+            <StackPanel Margin="5">
+                <CheckBox x:Name="checkBoxLearningDirectionQuestion2Answer" Content="Question => Answer" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearningDirectionAnswer2Question" Content="Answer => Question" IsChecked="{x:Null}" Click="checkBox_Click" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+                <CheckBox x:Name="checkBoxLearningDirectionMixed" Content="Mixed" Click="checkBox_Click" IsChecked="{x:Null}" MouseRightButtonUp="checkBox_MouseRightButtonUp" />
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="Apply" Content="Apply" Margin="10 5 10 5" Click="Apply_Click" Visibility="{Binding ElementName=settingsControl, Path=PreviewMode, Converter={StaticResource boolToVis}}" />
+    </StackPanel>
+</UserControl>

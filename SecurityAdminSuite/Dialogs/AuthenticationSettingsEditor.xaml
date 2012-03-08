@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="SecurityAdminSuite.Dialogs.AuthenticationSettingsEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="650" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Name="authenticationSettingsControl">
+    <Grid HorizontalAlignment="Stretch">
+        <GroupBox Header="Authentication Settings">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="182*" />
+                        <ColumnDefinition Width="306*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Database version:</Label>
+                    <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">List authentication:</Label>
+                    <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Forms authentication:</Label>
+                    <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Local directory authentication:</Label>
+
+                    <TextBlock x:Name="textBlockDBVersion" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" 
+                             Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.Version}"/>
+                    <CheckBox x:Name="checkBoxListAuthentication" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" 
+                              IsChecked="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.ListAuthentication}">Enabled</CheckBox>
+                    <CheckBox x:Name="checkBoxFormsAuthentication" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
+                              IsChecked="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.FormsAuthentication}">Enabled</CheckBox>
+
+                    <ComboBox x:Name="comboBoxLdapAuthenticationMode" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"
+                              ItemsSource="{Binding LdapModes}"  
+                              SelectedItem="{Binding SelectedLdapMode}"/>
+                </Grid>
+                <Expander Header="Local directory settings" x:Name="expanderLdapSettings">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="181*" />
+                            <ColumnDefinition Width="305*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Server:</Label>
+                        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Port:</Label>
+                        <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Context:</Label>
+                        <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">User:</Label>
+                        <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Password:</Label>
+                        <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center">Use SSL:</Label>
+
+                        <TextBox x:Name="textBoxServer" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"
+                                 Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapServer}"></TextBox>
+                        <TextBox x:Name="textBoxPort" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"
+                                 Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapPort}"></TextBox>
+                        <TextBox x:Name="textBoxContext" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
+                                 Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapContext}"></TextBox>
+                        <TextBox x:Name="textBoxUser" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"
+                                 Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapUser}"></TextBox>
+                        <TextBox x:Name="textBoxPassword" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"
+                                 Text="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapPassword}"></TextBox>
+                        <CheckBox x:Name="checkBoxSSL" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"
+                                  IsChecked="{Binding Facade.SecurityFramework.DataAdapter.DatabaseInformations.LdapUseSsl}">Enabled</CheckBox>
+                    </Grid>
+                </Expander>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

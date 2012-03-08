@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="SecurityAdminSuite.Dialogs.Sessions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="650" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Name="sessionsControl">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        <GroupBox Header="User Sessions" Grid.Column="0">
+            <StackPanel Grid.Column="0">
+                <TextBlock>The following users currently have open sessions:</TextBlock>
+                <ListBox x:Name="listBoxOpenSessions" ItemsSource="{Binding OpenSessions}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding UserName}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Name="buttonRefreshList" Click="buttonRefreshList_Click">Refresh List</Button>
+                <Button Name="buttonEndAllSessions" Click="buttonEndAllSessions_Click">End All User Sessions</Button>
+            </StackPanel>
+            </GroupBox>
+	</Grid>
+</UserControl>
