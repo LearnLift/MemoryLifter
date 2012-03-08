@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MLifter.DAL.XML.XmlAudio" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlAudio.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAgBACIAIEAAAAAAABAgAAAAIAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlWords" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWords.cs</FileName>
+      <HashCode>CAACAAgAQAEAAQAUAgAAAAAAAQAAAAAAAAgAAAAgAAM=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlQuestion" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlQuestionExample" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlAnswer" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlAnswerExample" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlCard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlCard.cs</FileName>
+      <HashCode>AABGZIBAQgAAAcAmIEACIAAQoAKAxAQkHgEEQgRMIEI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlCards" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlCards.cs</FileName>
+      <HashCode>AEIAkAQAQEAgAVBAAAEAIAQIQAEBIAAAAAAEkAAIAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlCardStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlCardStyle.cs</FileName>
+      <HashCode>AAAAMAAAEAAAAAIGAAAAAAAGAABEAQAEECgAw0AEAhA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlTextStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlCardStyle.cs</FileName>
+      <HashCode>EBAAARATAAAJAgAGCAIAAgQCCABEAAAAAAAIgQAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlChapter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlChapter.cs</FileName>
+      <HashCode>AEAGBABgQgEggUAGAAVAIAAAQAAAgAAABgEAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlChapters" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlChapters.cs</FileName>
+      <HashCode>AABABAAAQMAIAVBAAAEAIAQAQAEAIQAAAAAEkAAAAQA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlConfigHelper" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlConfigHelper.cs</FileName>
+      <HashCode>AAABAAgAAAAABAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlDictionary" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlDictionary.cs</FileName>
+      <HashCode>OADHjYTAAsIowwunqIYiqCkcNQIABGEABBEBCwBiDIg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlHelper" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlHelper.cs</FileName>
+      <HashCode>AAAAAAAAgAAAAAAAAQAAAEAAAACAAAAAEAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlImage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlImage.cs</FileName>
+      <HashCode>AAAAAAAABAAAQAgBAAAAAEAAAAAAABCgAAAAIAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlQueryOptions" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlQueryOptions.cs</FileName>
+      <HashCode>AAEBIAgAAAAABAYAQAAAIDAIiIgAABAECAAGAA4GAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlQueryType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlQueryType.cs</FileName>
+      <HashCode>AgEBAAkAAAAABAAAAAAAIAAAAAABAIAAAAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlSnoozeOptions" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlSnoozeOptions.cs</FileName>
+      <HashCode>AwAEAIkAAAASgAAAAQggMAgBAAAIMICAAIAAAEhAABM=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlStatistic" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlStatistic.cs</FileName>
+      <HashCode>AAACIIAgQAAIAgAEABAgIACEQAACACAAABiCAAAgABA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlStatistics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlStatistics.cs</FileName>
+      <HashCode>AAAAAIAAQEAAAVBGCAAAIAQAQAAAAAAAAAAAkAAgAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlVideo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlVideo.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAgAAAAAAEAAAAAAABAgAAAAIAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MLifter.DAL.XML.XmlWord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>XML\XmlWord.cs</FileName>
+      <HashCode>AIEAIAAAAAAAAAABAAAAIAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+</ClassDiagram>

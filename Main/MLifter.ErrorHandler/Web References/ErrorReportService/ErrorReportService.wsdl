@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://www.memorylifter.com/ErrorReportService/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="ErrorReportService" targetNamespace="http://www.memorylifter.com/ErrorReportService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.memorylifter.com/ErrorReportService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="TransferStart">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="filename" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="filesize" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="chunksize" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="sender" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="senderMessage" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="stackTrace" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferStartResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="TransferStartResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferChunk">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="filename" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="content" type="xs:base64Binary" />
+            <xs:element minOccurs="1" maxOccurs="1" name="partcount" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferChunkResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="TransferChunkResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferFinish">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="filename" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="partcount" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferFinishResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="TransferFinishResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="boolean" type="xs:boolean" />
+    </xs:schema>
+  </types>
+  <message name="TransferStartSoapIn">
+    <part name="parameters" element="s0:TransferStart" />
+  </message>
+  <message name="TransferStartSoapOut">
+    <part name="parameters" element="s0:TransferStartResponse" />
+  </message>
+  <message name="TransferChunkSoapIn">
+    <part name="parameters" element="s0:TransferChunk" />
+  </message>
+  <message name="TransferChunkSoapOut">
+    <part name="parameters" element="s0:TransferChunkResponse" />
+  </message>
+  <message name="TransferFinishSoapIn">
+    <part name="parameters" element="s0:TransferFinish" />
+  </message>
+  <message name="TransferFinishSoapOut">
+    <part name="parameters" element="s0:TransferFinishResponse" />
+  </message>
+  <message name="TransferStartHttpGetIn">
+    <part name="filename" type="s:string" />
+    <part name="filesize" type="s:int" />
+    <part name="chunksize" type="s:int" />
+    <part name="sender" type="s:string" />
+    <part name="senderMessage" type="s:string" />
+    <part name="stackTrace" type="s:string" />
+  </message>
+  <message name="TransferStartHttpGetOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="TransferChunkHttpGetIn">
+    <part name="filename" type="s:string" />
+    <part name="content" type="s:base64Binary" />
+    <part name="partcount" type="s:int" />
+  </message>
+  <message name="TransferChunkHttpGetOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="TransferFinishHttpGetIn">
+    <part name="filename" type="s:string" />
+    <part name="partcount" type="s:int" />
+  </message>
+  <message name="TransferFinishHttpGetOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="TransferStartHttpPostIn">
+    <part name="filename" type="s:string" />
+    <part name="filesize" type="s:int" />
+    <part name="chunksize" type="s:int" />
+    <part name="sender" type="s:string" />
+    <part name="senderMessage" type="s:string" />
+    <part name="stackTrace" type="s:string" />
+  </message>
+  <message name="TransferStartHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="TransferChunkHttpPostIn">
+    <part name="filename" type="s:string" />
+    <part name="content" type="s:base64Binary" />
+    <part name="partcount" type="s:int" />
+  </message>
+  <message name="TransferChunkHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <message name="TransferFinishHttpPostIn">
+    <part name="filename" type="s:string" />
+    <part name="partcount" type="s:int" />
+  </message>
+  <message name="TransferFinishHttpPostOut">
+    <part name="Body" element="s0:boolean" />
+  </message>
+  <portType name="ErrorReportServiceSoap">
+    <operation name="TransferStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Starts a new Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferStartSoapIn" />
+      <output message="s0:TransferStartSoapOut" />
+    </operation>
+    <operation name="TransferChunk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfers a Data Chunk to the server</wsdl:documentation>
+      <input message="s0:TransferChunkSoapIn" />
+      <output message="s0:TransferChunkSoapOut" />
+    </operation>
+    <operation name="TransferFinish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finishes an Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferFinishSoapIn" />
+      <output message="s0:TransferFinishSoapOut" />
+    </operation>
+  </portType>
+  <portType name="ErrorReportServiceSoap12">
+    <operation name="TransferStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Starts a new Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferStartSoapIn" />
+      <output message="s0:TransferStartSoapOut" />
+    </operation>
+    <operation name="TransferChunk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfers a Data Chunk to the server</wsdl:documentation>
+      <input message="s0:TransferChunkSoapIn" />
+      <output message="s0:TransferChunkSoapOut" />
+    </operation>
+    <operation name="TransferFinish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finishes an Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferFinishSoapIn" />
+      <output message="s0:TransferFinishSoapOut" />
+    </operation>
+  </portType>
+  <portType name="ErrorReportServiceHttpGet">
+    <operation name="TransferStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Starts a new Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferStartHttpGetIn" />
+      <output message="s0:TransferStartHttpGetOut" />
+    </operation>
+    <operation name="TransferChunk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfers a Data Chunk to the server</wsdl:documentation>
+      <input message="s0:TransferChunkHttpGetIn" />
+      <output message="s0:TransferChunkHttpGetOut" />
+    </operation>
+    <operation name="TransferFinish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finishes an Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferFinishHttpGetIn" />
+      <output message="s0:TransferFinishHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="ErrorReportServiceHttpPost">
+    <operation name="TransferStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Starts a new Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferStartHttpPostIn" />
+      <output message="s0:TransferStartHttpPostOut" />
+    </operation>
+    <operation name="TransferChunk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfers a Data Chunk to the server</wsdl:documentation>
+      <input message="s0:TransferChunkHttpPostIn" />
+      <output message="s0:TransferChunkHttpPostOut" />
+    </operation>
+    <operation name="TransferFinish">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finishes an Error Report Transfer</wsdl:documentation>
+      <input message="s0:TransferFinishHttpPostIn" />
+      <output message="s0:TransferFinishHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="ErrorReportServiceSoap" type="s0:ErrorReportServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="TransferStart">
+      <soap:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferStart" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="TransferChunk">
+      <soap:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferChunk" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="TransferFinish">
+      <soap:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferFinish" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ErrorReportServiceSoap12" type="s0:ErrorReportServiceSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="TransferStart">
+      <soap12:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferStart" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="TransferChunk">
+      <soap12:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferChunk" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="TransferFinish">
+      <soap12:operation soapAction="http://www.memorylifter.com/ErrorReportService/TransferFinish" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ErrorReportServiceHttpGet" type="s0:ErrorReportServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="TransferStart">
+      <http:operation location="/TransferStart" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="TransferChunk">
+      <http:operation location="/TransferChunk" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="TransferFinish">
+      <http:operation location="/TransferFinish" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ErrorReportServiceHttpPost" type="s0:ErrorReportServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="TransferStart">
+      <http:operation location="/TransferStart" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="TransferChunk">
+      <http:operation location="/TransferChunk" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="TransferFinish">
+      <http:operation location="/TransferFinish" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ErrorReportService">
+    <port name="ErrorReportServiceSoap" binding="s0:ErrorReportServiceSoap">
+      <soap:address location="http://services.memorylifter.com/error/ErrorReportService.asmx" />
+    </port>
+    <port name="ErrorReportServiceSoap12" binding="s0:ErrorReportServiceSoap12">
+      <soap12:address location="http://services.memorylifter.com/error/ErrorReportService.asmx" />
+    </port>
+    <port name="ErrorReportServiceHttpGet" binding="s0:ErrorReportServiceHttpGet">
+      <http:address location="http://services.memorylifter.com/error/ErrorReportService.asmx" />
+    </port>
+    <port name="ErrorReportServiceHttpPost" binding="s0:ErrorReportServiceHttpPost">
+      <http:address location="http://services.memorylifter.com/error/ErrorReportService.asmx" />
+    </port>
+  </service>
+</definitions>

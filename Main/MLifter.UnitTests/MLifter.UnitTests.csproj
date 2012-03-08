@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7FB4E1E5-70FA-4E86-9D29-9883E7C189AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MLifterTest</RootNamespace>
+    <AssemblyName>MLifter.UnitTests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\SharpZipLib\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\NpgSQL\bin\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\NpgSQL\bin\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\Microsoft\SQLCE\System.Data.SqlServerCe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\CardTests.cs" />
+    <Compile Include="BusinessLayer\CopyToTest.cs" />
+    <Compile Include="BusinessLayer\DictionaryTest.cs" />
+    <Compile Include="BusinessLayer\LearnLogicTest.cs" />
+    <Compile Include="BusinessLayer\CardStackTest.cs" />
+    <Compile Include="BusinessLayer\OfflineModulesTest.cs" />
+    <Compile Include="BusinessLayer\RecentLearningModulesTest.cs" />
+    <Compile Include="BusinessLayer\StatisticsTest.cs" />
+    <Compile Include="BusinessLayer\TestInfrastructure.cs" />
+    <Compile Include="BusinessLayer\ConnectionStringHandlerTest.cs" />
+    <Compile Include="DAL\ExporterTests.cs" />
+    <Compile Include="DAL\ICardMediaTests.cs" />
+    <Compile Include="DAL\ICardStyleTest.cs" />
+    <Compile Include="DAL\IDictionariesTests.cs" />
+    <Compile Include="DAL\IExtensionTest.cs" />
+    <Compile Include="DAL\ISettingsTest.cs" />
+    <Compile Include="DAL\MediaServerTest.cs" />
+    <Compile Include="DAL\ICardTests.cs" />
+    <Compile Include="DAL\ICardsTests.cs" />
+    <Compile Include="DAL\IChapterTests.cs" />
+    <Compile Include="DAL\IChaptersTests.cs" />
+    <Compile Include="DAL\IDictionaryTests.cs" />
+    <Compile Include="DAL\IWordTests.cs" />
+    <Compile Include="DAL\IWordsTests.cs" />
+    <Compile Include="DAL\OpenUserProfileTests.cs" />
+    <Compile Include="DAL\PerformanceMediaTests.cs" />
+    <Compile Include="DAL\TestInfrastructure.cs" />
+    <Compile Include="DAL\UniCodeTest.cs" />
+    <Compile Include="DAL\IStatisticsTest.cs" />
+    <Compile Include="BusinessLayer\LearningModulesIndexTest.cs" />
+    <Compile Include="Generics\MethodsTest.cs" />
+    <Compile Include="Generics\PasswordGeneratorTests.cs" />
+    <Compile Include="Generics\TestInfrastructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Generics\RSATest.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Exceptions.cs" />
+    <Compile Include="Tools\TestStopWatch.cs" />
+    <Compile Include="DAL\XMLTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthoringTests.txt" />
+    <Content Include="DAL\UniCodeTestData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\homer.avi" />
+    <Content Include="Resources\homer.jpg" />
+    <Content Include="Resources\homer.wav" />
+    <Content Include="Resources\homer2.jpg" />
+    <Content Include="Resources\homer2.wav" />
+    <Content Include="Resources\big_audio.wav" />
+    <None Include="TestSources.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLifter.AudioTools\MLifter.AudioTools.csproj">
+      <Project>{7DF80582-C238-4DB3-A9CF-578653BFA377}</Project>
+      <Name>MLifter.AudioTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.BusinessLayer\MLifter.BusinessLayer.csproj">
+      <Project>{D629D585-8591-4D70-9A41-C0D8AC954818}</Project>
+      <Name>MLifter.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Components\MLifter.Components.csproj">
+      <Project>{A8A07573-B1AE-411F-B298-941D84865D82}</Project>
+      <Name>MLifter.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Controls\MLifter.Controls.csproj">
+      <Project>{09C4C0AD-3464-41B5-8426-4BA1B950B5C4}</Project>
+      <Name>MLifter.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.DAL\MLifter.DAL.csproj">
+      <Project>{981C08C1-FF99-4814-8BC9-E6F46432F806}</Project>
+      <Name>MLifter.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Generics\MLifter.Generics.csproj">
+      <Project>{BC74924A-F4EB-4EAB-88EB-CDBADC0F246F}</Project>
+      <Name>MLifter.Generics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\startupfolders.zip" />
+    <None Include="Resources\UnitTests-DB.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>rem xcopy /S /C /R /Y $(ProjectDir)Resources\*.* $(TargetDir)</PreBuildEvent>
+  </PropertyGroup>
+</Project>

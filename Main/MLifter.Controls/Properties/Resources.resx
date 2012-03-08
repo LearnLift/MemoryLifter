@@ -1,0 +1,1764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mediaPlaybackStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\media-playback-stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SYNONYM_GRADING_OPTION_NO" xml:space="preserve">
+    <value>No, do not promote card.</value>
+  </data>
+  <data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
+    <value>Delete Card</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONVIDEO" xml:space="preserve">
+    <value>Question Video</value>
+  </data>
+  <data name="BUTTON_TEXT_OK" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="setup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setup.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_OPTION_NO" xml:space="preserve">
+    <value>No, just open it.</value>
+  </data>
+  <data name="STYLEEDIT_TOOLTIP_DELETE" xml:space="preserve">
+    <value>Delete Element</value>
+  </data>
+  <data name="SyncStateApplyingDeletes" xml:space="preserve">
+    <value>Applying deletes.</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_CAPTION" xml:space="preserve">
+    <value>Error Saving Learning Module</value>
+  </data>
+  <data name="CHAPTER_FRAME_TOOLTIP" xml:space="preserve">
+    <value>{0} Cards
+{1}</value>
+    <comment>{0} = amount of cards, {1} = chapter description</comment>
+  </data>
+  <data name="EDITCARD_DELETE" xml:space="preserve">
+    <value>Delete Card</value>
+  </data>
+  <data name="AUDIO_STOP" xml:space="preserve">
+    <value>&amp;Stop</value>
+  </data>
+  <data name="mediaPlaybackStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\media-playback-start1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_LISTBOXFIELDS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="learning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\learning_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="folderUp16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folderUp16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="View2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\View2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resizeL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resizeL.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PRINT_STATUS_PAGES" xml:space="preserve">
+    <value>Preparing pages...</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
+    <value>Enter {0} below ({1} Synonyms)</value>
+    <comment>{0} = Title of Answer, {1} = a number</comment>
+  </data>
+  <data name="SyncStateApplyingInserts" xml:space="preserve">
+    <value>Applying inserts.</value>
+  </data>
+  <data name="VIDEO_FILE_FILTER" xml:space="preserve">
+    <value>Video-File|*.avi;*.mpg;*.wmv;*.mpeg</value>
+  </data>
+  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agt_action_success.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
+    <value>Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="LOGIN_WIZARD_WRONG_USERNAME_OR_PASSWORD_CAPTION" xml:space="preserve">
+    <value>Authentication failure</value>
+  </data>
+  <data name="NEWDIC_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_AverageTime" xml:space="preserve">
+    <value>{0:0.##}s</value>
+  </data>
+  <data name="goUpSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-up1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="charactermap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\character-map.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="applications_system" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\applications-system.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_MAIN" xml:space="preserve">
+    <value>The given password did not match the given username!</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
+    <value>Promote card</value>
+    <comment>promote means to put card to the next box</comment>
+  </data>
+  <data name="processStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process-stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDEDIT_SAVE_CAPION" xml:space="preserve">
+    <value>Save Changes?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_PERMISSION_MBX_TEXT" xml:space="preserve">
+    <value>You are not allowed to add Learning Modules for this connection.</value>
+  </data>
+  <data name="TASKDIALOG_MAININSTRUCTION" xml:space="preserve">
+    <value>Main Instruction</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_MAIN" xml:space="preserve">
+    <value>Could not log in with the given credentials!</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_BOX" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="ALMOST_OPTION_NO" xml:space="preserve">
+    <value>No, do not promote card.</value>
+  </data>
+  <data name="PRINT_QUERYORDER_None" xml:space="preserve">
+    <value>None</value>
+    <comment>Do not sort printouts</comment>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SPECIALGROUPEXPANDHOT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHFJREFUOE/tlDEO
+        QCEIQ/Xm3BztgOEbTED5i5GExeFZqqUyc0kvQLNbgJ17XEOchm4rJiIougwqJmtbrLMSHV9DTCC8jEKh
+        Upf5mDtQAS9/RwT6PB0p+SRm3hURT92xvQCKEU7a2lJu/zwLPRUmF/4CbdSJE2LKCgPCAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONAUDIO" xml:space="preserve">
+    <value>Question Audio</value>
+  </data>
+  <data name="NEWDIC_NEW" xml:space="preserve">
+    <value>New Learning Module</value>
+  </data>
+  <data name="SYNONYM_GRADING_EXPANDEDINFO" xml:space="preserve">
+    <value>You selected to be prompted on how to grade synonyms. 
+To change this, go to Tools - Learning options - Synoynms.</value>
+  </data>
+  <data name="goDownSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-down1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_CORRECT" xml:space="preserve">
+    <value>Card has been promoted to the next box.</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_BACKCOLOR" xml:space="preserve">
+    <value>Back-Color</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
+    <value>Ex. Sound Answer ({0})</value>
+    <comment>{0} = Title of Answer (Ex. = example)</comment>
+  </data>
+  <data name="TASKDIALOG_HIDEDETAILS" xml:space="preserve">
+    <value>Hide details</value>
+  </data>
+  <data name="DICPATH_INVALIDINPUT_TEXT" xml:space="preserve">
+    <value>A valid path is required, please correct your input.</value>
+  </data>
+  <data name="folderUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folderUp.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_COMMANDS" xml:space="preserve">
+    <value>Retry.|Cancel.|Close program without saving.
+Warning, this may lead to data loss!</value>
+  </data>
+  <data name="LOGIN_WIZARD_WRONG_USERNAME_OR_PASSWORD_TEXT" xml:space="preserve">
+    <value>Failed to authenicate user. Wrong username or password.</value>
+  </data>
+  <data name="resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="View" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\View.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAINTAIN_MODIFICATION_CAPTION" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_export.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_RIGHT" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="edit_paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-paste.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteCaptionSingle" xml:space="preserve">
+    <value>Delete {0}?</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_CENTER" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="NEWS_UNAVAILABLE" xml:space="preserve">
+    <value>News not available.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_TITLE" xml:space="preserve">
+    <value>Old Learning Module</value>
+  </data>
+  <data name="NO_CATEGORY" xml:space="preserve">
+    <value>Unknown Category</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_MAIN_MULTIPLE" xml:space="preserve">
+    <value>Could not connect to the servers:
+{0}</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_TEXT" xml:space="preserve">
+    <value>Would you like the image to be resized?</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
+    <value>Remove All Fields from Selection</value>
+  </data>
+  <data name="VERTICALALIGNMENT_TOP" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_ALMOST" xml:space="preserve">
+    <value>Almost!</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
+    <value>Don't Ask Card Again,
+Card is restorable in "Cards - Maintain"</value>
+    <comment>"Cards - Maintain" = Cross-reference to menu</comment>
+  </data>
+  <data name="LEARN_OPTIONS_DIRECTION_FORMAT" xml:space="preserve">
+    <value>{0} =&gt; {1}</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_TITLE" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_HALIGN" xml:space="preserve">
+    <value>H-Align</value>
+    <comment>Horizontal align</comment>
+  </data>
+  <data name="LOGIN_SHOW_OPTIONS" xml:space="preserve">
+    <value>Show Options</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_CONTENT" xml:space="preserve">
+    <value>One or more servers are either offline or your network connection is lost, but you are still able to learn your synchronized modules. Please contact your service provider.</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_CHECKBOX" xml:space="preserve">
+    <value>Use for both sides</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_MEDIA" xml:space="preserve">
+    <value>Downloading media content...</value>
+  </data>
+  <data name="newDoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_FAILED_MBX_TEXT" xml:space="preserve">
+    <value>An error occured while copying the Learning Module. The copy process has been stopped.</value>
+  </data>
+  <data name="arrow_down_color_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_down_color_pressed.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteLM_Multiple" xml:space="preserve">
+    <value>Are you sure you want to delete the {0} selected Learning Modules?</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
+    <value>Fetching cards...</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_INCORRECT" xml:space="preserve">
+    <value>Card has been demoted to Box 1.</value>
+  </data>
+  <data name="systemFileManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\system-file-manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editFind" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-find.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_ELEMENT" xml:space="preserve">
+    <value>Element</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="listAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list-add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POOL" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_MAIN" xml:space="preserve">
+    <value>This is a depricated Learning Module format and cannot be imported to this connection.</value>
+  </data>
+  <data name="PRINT_STATUS_RENDERING" xml:space="preserve">
+    <value>Rendering pages...</value>
+  </data>
+  <data name="learning_16_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\learning_16_grey.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NO_CONNECTION_NAME" xml:space="preserve">
+    <value>UNKNOWN</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONEXAMPLEAUDIO" xml:space="preserve">
+    <value>Question Example Audio</value>
+  </data>
+  <data name="failed16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\failed16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
+    <value>MemoryLifter imported {0} connections successfully.</value>
+  </data>
+  <data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
+    <value>Are you sure you want to delete the selected card(s)?</value>
+  </data>
+  <data name="ALMOST_EXPANDEDINFO" xml:space="preserve">
+    <value>You selected to be prompted on how to grade typing mistakes. 
+To change this, open Tools/Learning options/Typing.</value>
+  </data>
+  <data name="NEWS_NEWNEWS" xml:space="preserve">
+    <value>News ({0} new)</value>
+    <comment>Reference to News expando pane, {0}= count of new news</comment>
+  </data>
+  <data name="NEWDIC_CAPTION" xml:space="preserve">
+    <value>Create New Learning Module</value>
+  </data>
+  <data name="texteditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text-editor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NORMALGROUPEXPAND" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFtJREFUOE9j/P//
+        PwPVAchQamOqGwj2ObVdOUwMBaYIULIA+gYRkdjEsAUf3jBFNoRYA4kKU5hh6K7GF8FExT4pBuJ16WiY
+        wsObamFKSfYlKvZJtWDU0CFS8gMAN+K6f6dfTvsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="arrow_up_bw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_up_bw.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documentProperties" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-properties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SPECIALGROUPEXPAND" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF5JREFUOE9j/P//
+        PwPVAchQamOqGwj2ObVdOXwMBfoEDJCDCJsYRhASClNkQ4gykNgwhRmG7mqcDiLkUpg80QYSculomMKT
+        E9XClNhIJDmdkmUwWZoIFUKjhlK/OgEAZ68CRhxKzDoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="LOGIN_WIZARD_STATUS_TEXT" xml:space="preserve">
+    <value>Trying to login automatically...</value>
+  </data>
+  <data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
+    <value>Answer example</value>
+  </data>
+  <data name="SyncStateGettingDeletes" xml:space="preserve">
+    <value>Selecting deletes from the client or server store. </value>
+  </data>
+  <data name="MAINTAIN_CHANGEALL" xml:space="preserve">
+    <value>Change selected cards</value>
+  </data>
+  <data name="goPrevious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-previous.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SYNONYM_GRADING_OPTION_YES" xml:space="preserve">
+    <value>Yes, promote card.</value>
+  </data>
+  <data name="PRINT_BOXSELECTION_ERROR_TEXT" xml:space="preserve">
+    <value>Please enter some valid box-numbers!</value>
+  </data>
+  <data name="FONTSIZEUNIT_PERCENT" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_OPTION_NO" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="SyncStateGettingUpdates" xml:space="preserve">
+    <value>Selecting updates from the client or server store. </value>
+  </data>
+  <data name="picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERAUDIO" xml:space="preserve">
+    <value>Answer Audio</value>
+  </data>
+  <data name="processStopBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process-stop2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FOLDER_AMOUNT_LEARNINGMODULES" xml:space="preserve">
+    <value>{0} Learning Modules</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CPM" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="NO_AUTHOR" xml:space="preserve">
+    <value>Unknown Author</value>
+  </data>
+  <data name="TASKDIALOG_KICK_BUTTONS" xml:space="preserve">
+    <value>Close open Session
+Logs out other sessions and starts a new session.|Cancel
+Cancel and select another user.</value>
+  </data>
+  <data name="VERTICALALIGNMENT_BOTTOM" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="CREATE_LM_PERMISSION_MBX_CAPTION" xml:space="preserve">
+    <value>Insufficient permission</value>
+  </data>
+  <data name="usbDrive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usbDrive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_MEDIA_STEP" xml:space="preserve">
+    <value>Downloading item {0} of {1}.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_SELECTION" xml:space="preserve">
+    <value>Please select a Learning Module...</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Browse_Filter" xml:space="preserve">
+    <value>Learning Modules (*{0};*{1};*{2};*{3})|*{0};*{1};*{2};*{3}</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
+    <value>Invalid MemoryLifter configuration file</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_OK" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="EDITCARD_OPENPICTURE" xml:space="preserve">
+    <value>Click to browse for an image or drop an image file here.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_CONTENT" xml:space="preserve">
+    <value>This is probably due to a server or network problem. Please check network connection or contact your service provider.</value>
+  </data>
+  <data name="Folder_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder_16x16.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_FOOTER" xml:space="preserve">
+    <value>WARNING: This method is irreversible!</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_CONTENT" xml:space="preserve">
+    <value>If you continue the Learning Module will be imported to '{0}'.</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="STATUSBAR_SELFASSESSMENT" xml:space="preserve">
+    <value>Did you know it?</value>
+  </data>
+  <data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
+    <value>Image Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="goNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-next.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
+    <value>MemoryLifter imported 1 connection successfully.</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="folder_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_closed.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VideoAvailable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-video_Yellow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
+    <value>Answer ({0})</value>
+    <comment>{0} = Title of Answer eg state/capital</comment>
+  </data>
+  <data name="LOGIN_WIZARD_CONNECTION_FAILURE" xml:space="preserve">
+    <value>Failed to connect.</value>
+  </data>
+  <data name="LEARNMODULES_MAINNODE" xml:space="preserve">
+    <value>All Learning Modules</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteLM_Single" xml:space="preserve">
+    <value>Are you sure you want to delete the Learning Module "{0}"?</value>
+  </data>
+  <data name="DIC_ERROR_CONTENTPROTECTED_TEXT" xml:space="preserve">
+    <value>Error loading Learning Module {0}.
+The Learning Module cannot be imported because it is content protected.</value>
+    <comment>{0} = name of Learning Module</comment>
+  </data>
+  <data name="dialogInformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dialog-information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NO_WORDS_TEXT" xml:space="preserve">
+    <value>No cards to ask left! Use "Select chapters" in the "Learn" menu.</value>
+    <comment>"Learn", "Specify Chapters to learn" = Cross-References to menu</comment>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_FAILED_MBX_CAPTION" xml:space="preserve">
+    <value>Failed to copy the Learning Module</value>
+  </data>
+  <data name="resizeM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resizeM.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONIMAGE" xml:space="preserve">
+    <value>Question Image</value>
+  </data>
+  <data name="world_16_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_16_grey.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SELECTED_LEARNMODE_NOT_ALLOWED" xml:space="preserve">
+    <value>You selected the "{0}" learning mode, but the current card cannot be learned in this mode.</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="VERTICALALIGNMENT_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="synonym_mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\synonym-mode.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documentPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USB_Network_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USB_Network.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NEWDIC_INVALIDINPUT_CAPTION" xml:space="preserve">
+    <value>Invalid Input</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_CAPTION" xml:space="preserve">
+    <value>Import the Learning Module?</value>
+  </data>
+  <data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
+    <value>You tried to open a Learning Module which requires the memory stick it came with.
+Please insert the original memory stick and open it from there.</value>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_SYNONYMMODE" xml:space="preserve">
+    <value>Switches Between Word and Synonym Mode</value>
+  </data>
+  <data name="USB_drive_dark_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USB drive - dark.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDEDIT_SAVE_TEXT" xml:space="preserve">
+    <value>Would you like to save the changes?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_PERMISSION_MBX_CAPTION" xml:space="preserve">
+    <value>Insufficient permission</value>
+  </data>
+  <data name="INACTIVE" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="Network_drive_dark_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Network drive - dark.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_CONTENT" xml:space="preserve">
+    <value>Please enter a valid username.</value>
+  </data>
+  <data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="FOLDER_AMOUNT_SUBFOLDERS" xml:space="preserve">
+    <value>{0} Sub-Folders</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_LBCHAPTERS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTART_BACKUP_CAPTION" xml:space="preserve">
+    <value>Backup Created</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_CLOSE" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="promoteCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\promotecard1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDEDIT_STATUS_SAVING" xml:space="preserve">
+    <value>Changing {0} cards...</value>
+    <comment>{0} = amount of cards</comment>
+  </data>
+  <data name="PLEASE_TRY_AGAIN_OR_SWITCH" xml:space="preserve">
+    <value>Please try again or choose another location.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_DESCRIPTION" xml:space="preserve">
+    <value>Please wait while the preview loads...</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_COLOR" xml:space="preserve">
+    <value>Text-Color</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
+    <value>Ex. Answer ({0})</value>
+    <comment>{0} = Title of Answer (Ex. = example)</comment>
+  </data>
+  <data name="resizeS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resizeS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brainy32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brainy32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
+    <value>Video Answer ({0})</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_CHARACTERMAP" xml:space="preserve">
+    <value>Displays/Hides Character Map</value>
+  </data>
+  <data name="STARTPAGE_LOADING" xml:space="preserve">
+    <value>Please wait. Loading details...</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_DESCRIPTION" xml:space="preserve">
+    <value>The image will be resized to the selected size, you can use this option to make the overall file size of the learning module smaller and/or make the images fit better to the size of the learning window.
+
+To deactivate or modify resizing for cards added later, click the resize button again and select the desired sizing.</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
+    <value>Demote Card</value>
+    <comment>demote means to put card to the previous box</comment>
+  </data>
+  <data name="USB_drive_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USB drive - dark.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SPECIALGROUPCOLLAPSE" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUOE9j/P//
+        PwPVAchQamOqGwj2ObVdOeCGAh1AfNgT432QgTBAjHqCYYpsGNEG47MZmyFEGUyUd6AmEauWoPdBBo2G
+        KfFpdMBzFNExP+pSohI/SeFJszAFALpqAkbwJ7qjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
+    <value>Sound Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
+    <value>Error loading configuration file</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
+    <value>Configuration import successful</value>
+  </data>
+  <data name="MAINTAIN_TLOADMSG" xml:space="preserve">
+    <value>Loading database...</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_LEFT" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Organize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Organize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_TITLE" xml:space="preserve">
+    <value>Synchronization Failure</value>
+  </data>
+  <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
+    <value>Keep me informed (Reactivate using "Help - MemoryLifter News")</value>
+    <comment>"Help - MemoryLifter News" = Cross-reference to interface</comment>
+  </data>
+  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
+    <value>A valid e-mail address is required, please correct your input.</value>
+  </data>
+  <data name="IMPORTING" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="Video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-video.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
+    <value>Do you want to import this MemoryLifter configuration file?</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
+    <value>Invalid MemoryLifter configuration file.</value>
+  </data>
+  <data name="TASKDIALOG_KICK_CONTENT" xml:space="preserve">
+    <value>You have selected a user that already has an open learning session on "{0}". Please select how to proceed:</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="SyncStateApplyingUpdates" xml:space="preserve">
+    <value>Applying updates.</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_TEXT" xml:space="preserve">
+    <value>Learning Module couldn't be saved. Close without saving?</value>
+  </data>
+  <data name="DICPATH_INVALIDINPUT_CAPTION" xml:space="preserve">
+    <value>Invalid Input</value>
+  </data>
+  <data name="SYNONYM_GRADING_TEXT" xml:space="preserve">
+    <value>You didn't know all the synonyms. Still promote card?</value>
+  </data>
+  <data name="STATUSBAR_CURRENTCHAPTER" xml:space="preserve">
+    <value>(Chapter: {0})</value>
+    <comment>{0} = name of chapter</comment>
+  </data>
+  <data name="SYNONYM_PROMPT_FLY_TEXT" xml:space="preserve">
+    <value>This question has multiple correct answers. The total number of synonyms or answers is shown in parentheses next to the answer window caption. The program will automatically switch lines after a correct synonym is entered.</value>
+  </data>
+  <data name="GROUP_FOLDER_NAME" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="FONTSIZEUNIT_PIXEL" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="network" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\network.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDEDIT_BITMAPERROR_CAPTION" xml:space="preserve">
+    <value>Cannot Paste Content Here</value>
+  </data>
+  <data name="POOL_EMPTY_TEXT" xml:space="preserve">
+    <value>The pool of cards is empty. Select addtional chapters to learn or add new cards to any of the selected chapters.</value>
+    <comment>"Specify Capter to Learn", "Learn" = cross-references to menu</comment>
+  </data>
+  <data name="PRINT_BOXSELECTION_ERROR_CAPTION" xml:space="preserve">
+    <value>Invalid Input</value>
+  </data>
+  <data name="WIZARD_FINISH" xml:space="preserve">
+    <value>&amp;Finish</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE" xml:space="preserve">
+    <value>Click to Auto-Resize Images</value>
+  </data>
+  <data name="SyncStateDeletingMetadata" xml:space="preserve">
+    <value>Removing metadata from one or more tables at the client. </value>
+  </data>
+  <data name="edit_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-cut.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list-remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_MAIN" xml:space="preserve">
+    <value>MemoryLifter failed to download the Learning Module.</value>
+  </data>
+  <data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
+    <value>Character Map</value>
+    <comment>Map with special characters eg Ñ</comment>
+  </data>
+  <data name="XSLEDIT_FILEERROR_TEXT" xml:space="preserve">
+    <value>The file could not be loaded into table-view. Text view has been loaded...</value>
+  </data>
+  <data name="learning_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\learning_48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_TITLE" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="arrow_up_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_up_color.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_KICK_TITLE" xml:space="preserve">
+    <value>Already logged in</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWER" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="MULTIPLE_CHOICE_TEXT" xml:space="preserve">
+    <value>Multiple choice is not possible with less than {0} cards in  the chapter / distractors on card. Add some cards or change settings in "Learning options". Query will continue in standard mode.</value>
+    <comment>"Learning options" = Cross-Reference to Interface</comment>
+  </data>
+  <data name="Network_drive_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Network drive - dark.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WIZARD_NEXT" xml:space="preserve">
+    <value>&amp;Next </value>
+  </data>
+  <data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="LOGIN_WIZARD_DATABASE_VERSION_NOT_SUPPORTED_TEXT" xml:space="preserve">
+    <value>This database version is not supported. Contact your system administrator.</value>
+  </data>
+  <data name="SyncStateCreatingMetadata" xml:space="preserve">
+    <value>Creating metadata tables at the client. </value>
+  </data>
+  <data name="packageGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package-x-generic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_up_color_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_up_color_pressed.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
+    <value>Recorded Sounds Directory Should Be Saved</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_TITLE" xml:space="preserve">
+    <value>Confirm Demote</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
+    <value>Sound Answer ({0})</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONEXAMPLE" xml:space="preserve">
+    <value>Question Example</value>
+  </data>
+  <data name="NEWS_CBSTARTUP_TEXT1" xml:space="preserve">
+    <value>Keep me informed</value>
+  </data>
+  <data name="LAST_LEARNED_NEVER" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
+    <value>This MemoryLifter configuration file will extend the available connections on the startpage.</value>
+  </data>
+  <data name="World_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\World_16x15.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_YES" xml:space="preserve">
+    <value>&amp;Yes</value>
+  </data>
+  <data name="SPECIALGROUPCOLLAPSEHOT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAG9JREFUOE/t1OEK
+        wCAIBOB6c9/c5sBhcQSaQYyCoF9fx7VZmbmkL0Gzt4KPu7y+cBYNJyYiSXQG2iUZ3yCS1JYNK/KiCgpm
+        zx3uQRECYQ9q09xO3487tdPp3xZ9qL+j0svKRlMqPPbQgE/F9IItaAMnUxNiyELADgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="BUTTON_TEXT_CLOSE" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="SYNONYM_GRADING_CAPTION" xml:space="preserve">
+    <value>Grade Synonyms</value>
+  </data>
+  <data name="goUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
+    <value>Saving Learning Module...</value>
+  </data>
+  <data name="MAINTAIN_MODIFICATION_TEXT" xml:space="preserve">
+    <value>Modification of multiple cards at once is not yet supported, but deletion is.</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_TITLE" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="document_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
+    <value>Remove Chapter from Selection</value>
+  </data>
+  <data name="NO_WORDS_CAPTION" xml:space="preserve">
+    <value>No More Words</value>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_DISTRACTOR" xml:space="preserve">
+    <value>This line is highlighted because it is marked as a Distractor. Right click for further information.</value>
+  </data>
+  <data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
+    <value>Question example</value>
+  </data>
+  <data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
+    <value>Audio disabled</value>
+  </data>
+  <data name="LOGIN_HEADER_TEXT" xml:space="preserve">
+    <value>Please sign in "{0}":</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_CONTENT" xml:space="preserve">
+    <value>Make sure that the Learning Module file is not opened in another program and that it is writeable, then try again.
+</value>
+  </data>
+  <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
+    <value>Invalid input</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
+    <value>If you think that you know this card you can still move it into a higher box.</value>
+  </data>
+  <data name="NEWDIC_INVALIDINPUT_TEXT" xml:space="preserve">
+    <value>A valid name and path for the Learning Module are required, correct your input.</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_STYLENAME" xml:space="preserve">
+    <value>Style Name</value>
+  </data>
+  <data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
+    <value>Error while loading the MemoryLifter configuration file.</value>
+  </data>
+  <data name="information_success" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\information_success.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demoteCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demotecard1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
+    <value>Import of the MemoryLifter configuration file was successful.</value>
+  </data>
+  <data name="AUDIO_FILE_FILTER" xml:space="preserve">
+    <value>Audio-File|*.mp3;*.wma;*.wav;*.mid</value>
+  </data>
+  <data name="Generic_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Generic - dark.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_down_bw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_down_bw.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_KICK_MAIN" xml:space="preserve">
+    <value>The user "{0}" is already logged in!</value>
+  </data>
+  <data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
+    <value>Media Directory Error</value>
+  </data>
+  <data name="DIC_ERROR_CONTENTPROTECTED_CAPTION" xml:space="preserve">
+    <value>Error Loading Learning Module</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_CONTENT" xml:space="preserve">
+    <value>Please enter valid login information.</value>
+  </data>
+  <data name="SyncStateCreatingSchema" xml:space="preserve">
+    <value>Creating tables at the client. </value>
+  </data>
+  <data name="editundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-undo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-find1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
+    <value>Video Question ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="STYLEEDIT_NOITEMSTEXT" xml:space="preserve">
+    <value>There are no items in this view.</value>
+  </data>
+  <data name="computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_NO" xml:space="preserve">
+    <value>&amp;No</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
+    <value>Add Field to Selection</value>
+  </data>
+  <data name="process_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process-stop1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_LM_PERMISSION_MBX_TEXT" xml:space="preserve">
+    <value>You are not allowed to add Learning Modules for this connection.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_TITLE" xml:space="preserve">
+    <value>Learning Modules Connection Error</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
+    <value>Error loading Learning Module {0}.</value>
+    <comment>{0} = name of Learning Module</comment>
+  </data>
+  <data name="TASKDIALOG_SHOWDETAILS" xml:space="preserve">
+    <value>Show details</value>
+  </data>
+  <data name="NEWDIC_ANSWER" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="CARDEDIT_LOADING_MEDIA_TO_DB" xml:space="preserve">
+    <value>Loading media file to database...</value>
+  </data>
+  <data name="goDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AudioAvailable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio-volume-high_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VERTICALALIGNMENT_MIDDLE" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="documentOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-open1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAINTAIN_LOADING" xml:space="preserve">
+    <value>Loading cards...\t\t\tLoaded: {0} / {1}</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWEREXAMPLEAUDIO" xml:space="preserve">
+    <value>Answer Example Audio</value>
+  </data>
+  <data name="MOVECONNECTION_ERROR" xml:space="preserve">
+    <value>Learning Module couldn't be moved to the chosen location.</value>
+  </data>
+  <data name="MAINTAIN_DISCARD_CAPTION" xml:space="preserve">
+    <value>Discard Changes?</value>
+  </data>
+  <data name="SyncStateReadingMetadata" xml:space="preserve">
+    <value>Reading metadata tables at the client.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_ITEM_TOOLTIP" xml:space="preserve">
+    <value>Category: {0} - Cards: {1}</value>
+  </data>
+  <data name="PRINT_STATUS_MEDIA" xml:space="preserve">
+    <value>Preparing media...</value>
+  </data>
+  <data name="AUDIO_PLAY" xml:space="preserve">
+    <value>&amp;Play</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_TEXT" xml:space="preserve">
+    <value>Do you want to import the the Learning Module?</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_BUTTON_PROMOTE" xml:space="preserve">
+    <value>Promote
+Move the card into Box {0}.</value>
+  </data>
+  <data name="MAINTAIN_DISCARD_TEXT" xml:space="preserve">
+    <value>Changes not saved!
+Would you like to discard the changes?</value>
+  </data>
+  <data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
+    <value>Import
+Add this MemoryLifter configuration file to the current configuration.|Cancel
+Do nothing at all.</value>
+  </data>
+  <data name="applications_internet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\applications-internet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SyncStateUploadingChanges" xml:space="preserve">
+    <value>Sending changes to the server. </value>
+  </data>
+  <data name="BUTTON_TEXT_YES" xml:space="preserve">
+    <value>&amp;Yes</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_FONT" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
+    <value>Due to an error with the audio player, sound has been disabled. Restart MemoryLifter to enable sound.</value>
+  </data>
+  <data name="placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\placeholder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dialog_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
+    <value>Remove All Chapters from Selection</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_CHAPTER" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="USB_drive_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USB_drive_16x16.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XSLEDIT_FILERROR_CAPTION" xml:space="preserve">
+    <value>No Supported File</value>
+  </data>
+  <data name="edit_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NORMALGROUPCOLLAPSE" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9j/P//
+        PwPVAchQamOqGwj2ObVdObCGAiMS6ADiw56g90EGwjCxBuM1FNkwUgzGaSg2Q4g1mKD3oZljNEzBZQQ4
+        JRBKBUSFKSFD0OVHDSU+TxMbtiM8TAGSXbp/Dk2Y/AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CardsCount" xml:space="preserve">
+    <value>{0} / {1} / {2}</value>
+  </data>
+  <data name="ALMOST_CAPTION" xml:space="preserve">
+    <value>Almost Correct</value>
+  </data>
+  <data name="SyncStateReadingSchema" xml:space="preserve">
+    <value>Reading schema information from the server. </value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
+    <value>Ex. Sound Question ({0})</value>
+    <comment>{0} = Title of Question (Ex. = example)</comment>
+  </data>
+  <data name="system_log_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\system-log-out.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agt_stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CHAPTER_FRAME_NODESCRIPTION" xml:space="preserve">
+    <value>No description</value>
+  </data>
+  <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_import.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUTTON_TEXT_NO" xml:space="preserve">
+    <value>&amp;No</value>
+  </data>
+  <data name="mediaRecord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\media-record.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ALMOST_TEXT" xml:space="preserve">
+    <value>There were a few typing mistakes in your answer. Still count it as correct?</value>
+  </data>
+  <data name="SyncStateDownloadingChanges" xml:space="preserve">
+    <value>Receiving changes from the server. </value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_MAIN" xml:space="preserve">
+    <value>Could not get Learning Modules for '{0}'.</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
+    <value>Ex. Question ({0})</value>
+    <comment>{0} = Title of Question (Ex. = example)</comment>
+  </data>
+  <data name="STYLEEDIT_COLUMN_STYLEVALUE" xml:space="preserve">
+    <value>Style Value</value>
+  </data>
+  <data name="preferencesSystemWindows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preferences-system-windows.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_BUTTON_DEMOTE" xml:space="preserve">
+    <value>Demote
+The card will be moved back into Box 1.</value>
+  </data>
+  <data name="SyncStateWritingMetadata" xml:space="preserve">
+    <value>Updating metadata tables at the client.</value>
+  </data>
+  <data name="bubble_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubble_error.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
+    <value>Add All Chapters to Selection</value>
+  </data>
+  <data name="bubble_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubble_information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_LISTBOXSELFIELDS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
+    <value>Enter {0} sentence below</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_CONTENT" xml:space="preserve">
+    <value>MemoryLifter failed to get all Learning Modules in the selected folder.</value>
+  </data>
+  <data name="Audio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio-volume-high.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMAGE_FILE_FILTER" xml:space="preserve">
+    <value>Image|*.jpg;*.jpeg;*.gif;*.png;*.bmp</value>
+  </data>
+  <data name="RssFeedTransformer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rssfeedtransformer.xsl;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_CONTENT" xml:space="preserve">
+    <value>Please enter a valid username - password combination.</value>
+  </data>
+  <data name="NORMALGROUPEXPANDHOT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHlJREFUOE/tlMEO
+        wCAIQ7c/58+ZXYZjhBhRvJiZcPHwKLVyMvORfgDNLgEW7vSp4jR0WDERQdFO0JIIxOI7lnOHsUPja7DX
+        RHwMQZ8M34qtav0wYaiAW1nuhv6evj/ERMv62+1pZMlsAMUIM+VtqeG153mfCpMGS6AXpLzLm3lLreIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="XSLEDIT_USERANSWER" xml:space="preserve">
+    <value>&lt;User CurrentAnswer&gt;</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_MAIN" xml:space="preserve">
+    <value>The given username is not valid!</value>
+  </data>
+  <data name="LEARN_OPTIONS_NO_MODE_TEXT" xml:space="preserve">
+    <value>You have to check at least one learning mode and one query direction!</value>
+  </data>
+  <data name="NORMALGROUPCOLLAPSEHOT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHRJREFUOE/t1NEK
+        wCAIBdD25/65yzFHhTVTgxgLfD2764YHIqbwQ2j0MJhd93nClag5MQBQog3QXGSVpO1gOimBPL1Cp9AS
+        G8FqVEJ6sBqt2vzv9N4R10twPynNXjAV9QZ/AKVf8Iy0pcxrT7rvUIw/sAQ9Af83y5vPNhRpAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="cameraPhoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-photo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAINTAIN_UNCHANGED" xml:space="preserve">
+    <value>(unchanged)</value>
+  </data>
+  <data name="EDITCARD_NEW" xml:space="preserve">
+    <value>Add Card</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_LOADING" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
+    <value>Error loading Learning Module {0}.
+The file may be in use by another application. Please close it and try again.</value>
+    <comment>{0} = name of Learning Module</comment>
+  </data>
+  <data name="SyncStateGettingInserts" xml:space="preserve">
+    <value>Selecting inserts from the client or server store. </value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
+    <value>Add All Fields to Selection</value>
+  </data>
+  <data name="banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RESTART_BACKUP_TEXT" xml:space="preserve">
+    <value>A backup of the current Learning Module has been created: "{0}". Use this if you want to return to your the current card set and learning progress.</value>
+    <comment>{0} = filename or path</comment>
+  </data>
+  <data name="world_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CARDEDIT_BITMAPERROR_TEXT" xml:space="preserve">
+    <value>The feature to directly paste a bitmap is not yet implemented.
+Save the picture to a file and then drag &amp; drop the file here.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_TITLE" xml:space="preserve">
+    <value>Server Connection Error</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERIMAGE" xml:space="preserve">
+    <value>Answer Image</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
+    <value>Import config file?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_OPTION_YES" xml:space="preserve">
+    <value>Yes, import the Learning module.</value>
+  </data>
+  <data name="LEARN_OPTIONS_NO_MODE_CAPTION" xml:space="preserve">
+    <value>Check Learning Mode and Query Direction</value>
+  </data>
+  <data name="world_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documentPrintPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-print-preview.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="View3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\View3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_down_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_down_color.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGIN_WIZARD_DATABASE_VERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+    <value>Database version not supported</value>
+  </data>
+  <data name="login_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_OPTION_YES" xml:space="preserve">
+    <value>Yes, convert the Learning Module.</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_VALIGN" xml:space="preserve">
+    <value>V-Align</value>
+    <comment>Vertical align</comment>
+  </data>
+  <data name="LEARNING_MODULE_NOT_ACCESSIBLE" xml:space="preserve">
+    <value>NOT AVAILABLE</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
+    <value>Add Chapter to Selection</value>
+  </data>
+  <data name="CHARACTERMAP_CHARS" xml:space="preserve">
+    <value>€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•˜™š›œžŸ¡¢£¤¥¦§¨©«¬­®¯°±²³´µ·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåāǎæçèéêëēěìíîïīǐðñòóôõöōǒ÷øùúûüūǔýþÿ</value>
+  </data>
+  <data name="PRINT_NOCARDS_TEXT" xml:space="preserve">
+    <value>Your print selection does not contain any cards. Go back and alter your selection.</value>
+  </data>
+  <data name="mediaplayback_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\media-playback-start.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Ratio" xml:space="preserve">
+    <value>{0:0.##}%</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_MAIN_SINGLE" xml:space="preserve">
+    <value>Could not connect to the server '{0}'!</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_CONTENT" xml:space="preserve">
+    <value>Would you like to open and convert the file instead?</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_TEXT" xml:space="preserve">
+    <value>Your answer was not fully correct.</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
+    <value>Enter {0} below</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="STYLEEDIT_SELECTFONTBUTTON" xml:space="preserve">
+    <value>Font...</value>
+  </data>
+  <data name="learning_48_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\learning_48_grey.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_ANSWER" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
+    <value>All cards</value>
+    <comment>Listbox entry</comment>
+  </data>
+  <data name="LEARNING_MODULE_SERVER_OFFLINE" xml:space="preserve">
+    <value>SERVER OFFLINE</value>
+  </data>
+  <data name="ERROR_LEARNINGMODULE_NONAME" xml:space="preserve">
+    <value>Learning Module (no name available)</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_BUTTONS" xml:space="preserve">
+    <value>Small
+This will resize the image to {0}x{1} pixels.|Medium
+This will resize the image to {2}x{3} pixels.|Large
+This will resize the image to {4}x{5} pixels.|No resizing
+Resizing will be disabled.
+The image will be saved in its original size.</value>
+  </data>
+  <data name="NEWS_LOADING" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
+    <value>There was nothing to import.</value>
+  </data>
+  <data name="EXPORTING" xml:space="preserve">
+    <value>Exporting...</value>
+  </data>
+  <data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
+    <value>Select the media directory:</value>
+  </data>
+  <data name="NoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_CANCEL" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWEREXAMPLE" xml:space="preserve">
+    <value>Answer Example</value>
+  </data>
+  <data name="SEARCHHELP" xml:space="preserve">
+    <value>Type to search...</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_TITLE" xml:space="preserve">
+    <value>Resize Image?</value>
+  </data>
+  <data name="helpBrowser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help-browser.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDITCARD_EDIT" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
+    <value>Image Answer ({0})</value>
+    <comment>{0} = Title of Answer</comment>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Last_Session_Time" xml:space="preserve">
+    <value>{0}h {1}m {2:0.##}s</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
+    <value>Select {0} below</value>
+    <comment>{0} = Title of Answer eg: "Select state/capital below"</comment>
+  </data>
+  <data name="AUDIO_RECORD" xml:space="preserve">
+    <value>&amp;Record</value>
+  </data>
+  <data name="world_48_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_48_grey.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteCaptionMultiple" xml:space="preserve">
+    <value>Delete {0} Learning Modules?</value>
+  </data>
+  <data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
+    <value>The media directory could not be saved properly. Please check that it is valid.</value>
+  </data>
+  <data name="SYNONYM_PROMPT_TEXT" xml:space="preserve">
+    <value>This question has multiple correct answers. The total number of synonyms or answers is shown in parentheses next to the answer window caption. Press ENTER to proceed to the next synonym until all answers are given.</value>
+  </data>
+  <data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
+    <value>Multiple chapters selected</value>
+  </data>
+  <data name="LOGIN_HIDE_OPTIONS" xml:space="preserve">
+    <value>Hide Options</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
+    <value>Remove Field from Selection</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
+    <value>The MemoryLifter configuration file was invalid. Please contact your system administator.</value>
+  </data>
+  <data name="PRINT_NOCARDS_CAPTION" xml:space="preserve">
+    <value>No Cards Selected</value>
+  </data>
+  <data name="MAINTAIN_NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="ALMOST_OPTION_YES" xml:space="preserve">
+    <value>Yes, promote card.</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERVIDEO" xml:space="preserve">
+    <value>Answer Video</value>
+  </data>
+  <data name="BOX_TEXT" xml:space="preserve">
+    <value>{0}   ({1} of {2})</value>
+  </data>
+  <data name="cards_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cards_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chapters_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chapters_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="face_sad_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\face-sad_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="face_smile_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\face-smile_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BOX_NAME" xml:space="preserve">
+    <value>Box {0}</value>
+  </data>
+  <data name="star_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_grey.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_half" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_half.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trophy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trophy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STACK_CHECKBOX_HIDE" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="STACK_CHECKBOX_SHOW" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="MLIFTER_TEXTBOX_WELCOME_TIPP" xml:space="preserve">
+    <value>Type your answer here...</value>
+  </data>
+  <data name="DOCKING_BUTTON_STACK_HIDE" xml:space="preserve">
+    <value>Hide Card Stack</value>
+  </data>
+  <data name="DOCKING_BUTTON_STACK_SHOW" xml:space="preserve">
+    <value>Show Card Stack</value>
+  </data>
+  <data name="BOX_TEXT2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="stop_watch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player_time.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defaultBackGroundImageAnswerPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defaultBackGroundImageAnswerPanel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
+    <value>Your learning success up to now has been saved.</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
+    <value>MemoryLifter needs to close this learning session.</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
+    <value>Server Connection Error</value>
+  </data>
+  <data name="SyncStateCheckingDataIntegrity" xml:space="preserve">
+    <value>Checking data integrity...</value>
+  </data>
+  <data name="LMPageUser" xml:space="preserve">
+    <value>User: {0}</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="NEWS_MESSAGE_ENVELOPE" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body style="font-family: Arial, Verdana, sans-serif; font-size: 12pt;font-weight:bold;color:silver;"&gt;{0}&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>--&gt; do not translate!</comment>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DELETING" xml:space="preserve">
+    <value>Deleting '{0}'...</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_CONTENT_OFFLINE" xml:space="preserve">
+    <value>One or more servers are either offline or your network connection is lost. Please contact your service provider.</value>
+  </data>
+  <data name="FailedActivationHelpText" xml:space="preserve">
+    <value>If you need help activating your learning module you can contact us by e-Mail {0}) or phone ({1}).</value>
+  </data>
+  <data name="SESSION_INVALID_DETAIL" xml:space="preserve">
+    <value>Your Memorylifter Session was closed by another user logging in with the same credentials.</value>
+  </data>
+  <data name="SESSION_INVALID_MAIN" xml:space="preserve">
+    <value>Your session was closed by another user!</value>
+  </data>
+  <data name="SESSION_INVALID_TITLE" xml:space="preserve">
+    <value>Session closed</value>
+  </data>
+  <data name="TASK_DIALOG_UNKNOWN_ERROR" xml:space="preserve">
+    <value>Unknown Error!</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_CONTENT" xml:space="preserve">
+    <value>Check if the folder is accessible and you have the necessary permissions.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_MAIN" xml:space="preserve">
+    <value>The folder '{0}' could not be scanned for Learning Modules.</value>
+    <comment>{0} = folder path</comment>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_TITLE" xml:space="preserve">
+    <value>Folder Scanning Failure</value>
+  </data>
+  <data name="flag16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flag.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="systemFileManager16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\systemFileManager16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RssFeedBrainyTransformer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\rssfeedbrainytransformer.xsl;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
+    <value>Not enough free disk space!</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
+    <value>The disk you are trying to learn from is full. Please free some space and try again.</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
+    <value>Not enough disk space</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_INFO" xml:space="preserve">
+    <value>No Information available...</value>
+  </data>
+  <data name="LEARNING_MODULE_KNOWLEDGE" xml:space="preserve">
+    <value>Learning module knowledge</value>
+  </data>
+  <data name="ONE_LEVEL_UP" xml:space="preserve">
+    <value>One level up</value>
+  </data>
+  <data name="LEARNING_MODE_IMAGERECOGNITION" xml:space="preserve">
+    <value>Image recognition</value>
+  </data>
+  <data name="LEARNING_MODE_LISTENINGCOMPREHENSION" xml:space="preserve">
+    <value>Listening comprehension</value>
+  </data>
+  <data name="LEARNING_MODE_MULTIPLECHOICE" xml:space="preserve">
+    <value>Multiple choice</value>
+  </data>
+  <data name="LEARNING_MODE_SENTENCE" xml:space="preserve">
+    <value>Sentence</value>
+  </data>
+  <data name="LEARNING_MODE_WORD" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
+    <value>Answer Distractors ({0})</value>
+    <comment>{0} = Title of Answer eg state/capital</comment>
+  </data>
+  <data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
+    <value>Question Distractors ({0})</value>
+    <comment>{0} = Title of Question</comment>
+  </data>
+  <data name="CATEGORIES" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUBNODE_CATEGORIES" xml:space="preserve">
+    <value>{0} Categories</value>
+  </data>
+  <data name="SUBNODE_MODULES" xml:space="preserve">
+    <value>{0} Modules</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_EXTENSIONS" xml:space="preserve">
+    <value>Downloading extensions...</value>
+  </data>
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
+    <value>Failed to Launch External Application</value>
+  </data>
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
+    <value>MemoryLifter failed to launch an external application.</value>
+  </data>
+  <data name="ERROR_DIALOG_DELETE_LM_CAPTION" xml:space="preserve">
+    <value>Failed to delete the Learning Module</value>
+  </data>
+  <data name="ERROR_DIALOG_DELETE_LM_TEXT" xml:space="preserve">
+    <value>An error occurred while deleting the Learning Module. The process has been stopped.</value>
+  </data>
+  <data name="LEARNING_MODULE_NOT_SUPPORTED" xml:space="preserve">
+    <value>NOT SUPPORTED ANYMORE</value>
+  </data>
+  <data name="LEARNING_MODULE_NOT_SUPPORTED_DETAIL" xml:space="preserve">
+    <value>Protected Learning Modules are not supported anymore. Please use MemoryLifter 2.3 to open such modules.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_PROGRESS" xml:space="preserve">
+    <value>Downloading ({0}/{1})...</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_START" xml:space="preserve">
+    <value>Download is being prepared...</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_CAPTION" xml:space="preserve">
+    <value>Learning Module already exists</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_HEADER" xml:space="preserve">
+    <value>The selected Learning Module already exists!</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_OPEN" xml:space="preserve">
+    <value>Open the existing module.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_OVERWRITE" xml:space="preserve">
+    <value>Overwrite the existing module.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_RENAME" xml:space="preserve">
+    <value>Rename the downloaded module.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DOWNLOAD_EXISTS_TEXT" xml:space="preserve">
+    <value>A Learning Module with the same name already exists in you Learning Modules folder.</value>
+  </data>
+  <data name="document_open_big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-open-big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-save-as.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_cut_big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-cut1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED_DETAIL" xml:space="preserve">
+    <value>Either there were no connections in the file or they have been imported already.</value>
+  </data>
+</root>

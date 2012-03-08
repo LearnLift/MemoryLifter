@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SYNONYM_GRADING_OPTION_NO" xml:space="preserve">
+    <value>Non, ne pas promouvoir la carte.</value>
+  </data>
+  <data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
+    <value>Supprimer la carte</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONVIDEO" xml:space="preserve">
+    <value>Question vidéo</value>
+  </data>
+  <data name="BUTTON_TEXT_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_OPTION_NO" xml:space="preserve">
+    <value>Non, ouvrez-le tout simplement.</value>
+  </data>
+  <data name="STYLEEDIT_TOOLTIP_DELETE" xml:space="preserve">
+    <value>Supprimer l'élément</value>
+  </data>
+  <data name="SyncStateApplyingDeletes" xml:space="preserve">
+    <value>Application des suppressions.</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_CAPTION" xml:space="preserve">
+    <value>Erreur à l'enregistrement du module d'apprentissage</value>
+  </data>
+  <data name="CHAPTER_FRAME_TOOLTIP" xml:space="preserve">
+    <value>{0} Cartes
+{1}</value>
+  </data>
+  <data name="EDITCARD_DELETE" xml:space="preserve">
+    <value>Supprimer la carte</value>
+  </data>
+  <data name="AUDIO_STOP" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="PRINT_STATUS_PAGES" xml:space="preserve">
+    <value>Préparation des pages...</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
+    <value>Entrer {0} ci-dessous ({1} Synonymes)</value>
+  </data>
+  <data name="SyncStateApplyingInserts" xml:space="preserve">
+    <value>Application des insertions.</value>
+  </data>
+  <data name="VIDEO_FILE_FILTER" xml:space="preserve">
+    <value>Fichiers vidéo |*.avi;*.mpg;*.wmv;*.mpeg</value>
+  </data>
+  <data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
+    <value>question ({0})</value>
+  </data>
+  <data name="LOGIN_WIZARD_WRONG_USERNAME_OR_PASSWORD_CAPTION" xml:space="preserve">
+    <value>Echec d'authentification</value>
+  </data>
+  <data name="NEWDIC_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_AverageTime" xml:space="preserve">
+    <value>{0:0.##}s</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_MAIN" xml:space="preserve">
+    <value>Le mot de passe ne correspond pas au nom utilisateur donné !</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
+    <value>Promouvoir la carte</value>
+  </data>
+  <data name="CARDEDIT_SAVE_CAPION" xml:space="preserve">
+    <value>Enregistrer les modifications ?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_PERMISSION_MBX_TEXT" xml:space="preserve">
+    <value>Avec cette connexion, vous n'êtes pas autorisé à ajouter des modules d'apprentissage.</value>
+  </data>
+  <data name="TASKDIALOG_MAININSTRUCTION" xml:space="preserve">
+    <value>Instruction principale</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_MAIN" xml:space="preserve">
+    <value>Impossible de se connecter avec l'authentifiant donné !</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_BOX" xml:space="preserve">
+    <value>Boîte</value>
+  </data>
+  <data name="ALMOST_OPTION_NO" xml:space="preserve">
+    <value>Non, ne pas promouvoir la carte.</value>
+  </data>
+  <data name="PRINT_QUERYORDER_None" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONAUDIO" xml:space="preserve">
+    <value>Question audio</value>
+  </data>
+  <data name="NEWDIC_NEW" xml:space="preserve">
+    <value>Nouveau module d'apprentissage</value>
+  </data>
+  <data name="SYNONYM_GRADING_EXPANDEDINFO" xml:space="preserve">
+    <value>Vous avez choisi d'être invité à définir l'évaluation des synonymes. 
+Pour modifier ce paramètre, accédez à Outils - Options d'apprentissage - Synonymes.</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_CORRECT" xml:space="preserve">
+    <value>La carte a été surclassée dans la boîte suivante !</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_BACKCOLOR" xml:space="preserve">
+    <value>Couleur de fond</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
+    <value>Exemple de réponse audio ({0})</value>
+  </data>
+  <data name="TASKDIALOG_HIDEDETAILS" xml:space="preserve">
+    <value>Masquer les détails</value>
+  </data>
+  <data name="DICPATH_INVALIDINPUT_TEXT" xml:space="preserve">
+    <value>Le chemin d'accès doit être valide. Corrigez les informations saisies.</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_COMMANDS" xml:space="preserve">
+    <value>Réessayer.|Annuler.|Fermer le programme sans sauvegarder.
+Avertissement, vous pouvez perdre des données !</value>
+  </data>
+  <data name="LOGIN_WIZARD_WRONG_USERNAME_OR_PASSWORD_TEXT" xml:space="preserve">
+    <value>L'authentification de l'utilisateur a échoué. Nom utilisateur ou mot de passe erroné.</value>
+  </data>
+  <data name="MAINTAIN_MODIFICATION_CAPTION" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_RIGHT" xml:space="preserve">
+    <value>Droite</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteCaptionSingle" xml:space="preserve">
+    <value>Supprimer {0} ?</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_CENTER" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="NEWS_UNAVAILABLE" xml:space="preserve">
+    <value>Nouveautés non disponibles.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_TITLE" xml:space="preserve">
+    <value>Ancien module d'apprentissage</value>
+  </data>
+  <data name="NO_CATEGORY" xml:space="preserve">
+    <value>Catégorie inconnue</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_MAIN_MULTIPLE" xml:space="preserve">
+    <value>Impossible de se connecter aux serveurs :
+{0}</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_TEXT" xml:space="preserve">
+    <value>Souhaitez-vous redimensionner l'image ?</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
+    <value>Supprimer tous les champs de la sélection</value>
+  </data>
+  <data name="VERTICALALIGNMENT_TOP" xml:space="preserve">
+    <value>Haut</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_ALMOST" xml:space="preserve">
+    <value>Presque !</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
+    <value>Ne plus redemander la carte à l'avenir,
+la carte est restaurable via "Cartes - Maintenir"</value>
+  </data>
+  <data name="LEARN_OPTIONS_DIRECTION_FORMAT" xml:space="preserve">
+    <value>{0} =&gt; {1}</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_TITLE" xml:space="preserve">
+    <value>Paramètres d'accès non valides</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_HALIGN" xml:space="preserve">
+    <value>Alignement H</value>
+  </data>
+  <data name="LOGIN_SHOW_OPTIONS" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_CONTENT" xml:space="preserve">
+    <value>Un ou plusieurs serveurs sont hors ligne ou votre connexion réseau est perdue, mais vous pouvez toujours apprendre vos modules synchronisés. Veuillez contacter votre fournisseur de services.</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_CHECKBOX" xml:space="preserve">
+    <value>Utiliser pour les deux faces</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_MEDIA" xml:space="preserve">
+    <value>Téléchargement du contenu média...</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_FAILED_MBX_TEXT" xml:space="preserve">
+    <value>Une erreur s'est produite lors de la copie du module d'apprentissage. Le processus de copie s'est arrêté.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteLM_Multiple" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer le(s) {0} module(s) d'apprentissage sélectionné(s) ?</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Box" xml:space="preserve">
+    <value>Boîte</value>
+  </data>
+  <data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
+    <value>Extraction des cartes…</value>
+  </data>
+  <data name="STATUSBAR_RESPONSE_INCORRECT" xml:space="preserve">
+    <value>La carte a été déclassée dans la boîte 1.</value>
+  </data>
+  <data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
+    <value>Chapitre</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_ELEMENT" xml:space="preserve">
+    <value>Elément</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="POOL" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_MAIN" xml:space="preserve">
+    <value>Il s'agit d'un ancien format de module d'apprentissage qu'il est impossible d'importer pour cette connexion.</value>
+  </data>
+  <data name="PRINT_STATUS_RENDERING" xml:space="preserve">
+    <value>Validation des pages...</value>
+  </data>
+  <data name="NO_CONNECTION_NAME" xml:space="preserve">
+    <value>UNKNOWN</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONEXAMPLEAUDIO" xml:space="preserve">
+    <value>Exemple de question audio</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
+    <value>MemoryLifter a réussi à importer {0} connexions.</value>
+  </data>
+  <data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer les cartes sélectionnées ?</value>
+  </data>
+  <data name="ALMOST_EXPANDEDINFO" xml:space="preserve">
+    <value>Vous avez choisi d'être invité à définir l'évaluation des erreurs typographiques. 
+Pour modifier ce paramètre, accédez à Outils/Options d'apprentissage/Saisie.</value>
+  </data>
+  <data name="NEWS_NEWNEWS" xml:space="preserve">
+    <value>Nouveautés ({0} nouveau)</value>
+  </data>
+  <data name="NEWDIC_CAPTION" xml:space="preserve">
+    <value>Créer un nouveau module d'apprentissage</value>
+  </data>
+  <data name="LOGIN_WIZARD_STATUS_TEXT" xml:space="preserve">
+    <value>Tentative de connexion automatique...</value>
+  </data>
+  <data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
+    <value>Exemple de réponse</value>
+  </data>
+  <data name="SyncStateGettingDeletes" xml:space="preserve">
+    <value>Sélection des suppressions à partir de l'emplacement dans le client ou le serveur.</value>
+  </data>
+  <data name="MAINTAIN_CHANGEALL" xml:space="preserve">
+    <value>Modifier cartes selectionées</value>
+  </data>
+  <data name="SYNONYM_GRADING_OPTION_YES" xml:space="preserve">
+    <value>Oui, promouvoir la carte.</value>
+  </data>
+  <data name="PRINT_BOXSELECTION_ERROR_TEXT" xml:space="preserve">
+    <value>Renseignez correctement les boîtes !</value>
+  </data>
+  <data name="FONTSIZEUNIT_PERCENT" xml:space="preserve">
+    <value>Pourcentage</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_OPTION_NO" xml:space="preserve">
+    <value>Non.</value>
+  </data>
+  <data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
+    <value>Erreur au chargement du module d'apprentissage</value>
+  </data>
+  <data name="SyncStateGettingUpdates" xml:space="preserve">
+    <value>Sélection des mises à jour à partir de l'emplacement dans le client ou le serveur.</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERAUDIO" xml:space="preserve">
+    <value>Réponse audio</value>
+  </data>
+  <data name="FOLDER_AMOUNT_LEARNINGMODULES" xml:space="preserve">
+    <value>{0} modules d'apprentissage</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CPM" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
+  <data name="NO_AUTHOR" xml:space="preserve">
+    <value>Auteur inconnu</value>
+  </data>
+  <data name="TASKDIALOG_KICK_BUTTONS" xml:space="preserve">
+    <value>Fermer session ouverte
+Ferme les autres sessions et démarre une nouvelle session.|Annuler
+Annule et sélectionne un autre utilisateur.</value>
+  </data>
+  <data name="VERTICALALIGNMENT_BOTTOM" xml:space="preserve">
+    <value>Bas</value>
+  </data>
+  <data name="CREATE_LM_PERMISSION_MBX_CAPTION" xml:space="preserve">
+    <value>Autorisation insuffisante</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_MEDIA_STEP" xml:space="preserve">
+    <value>Téléchargement de {0} sur {1} en cours.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_SELECTION" xml:space="preserve">
+    <value>Veuillez sélectionner un module d'apprentissage...</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Browse_Filter" xml:space="preserve">
+    <value>Modules d'apprentissage (*{0};*{1};*{2};*{3})|*{0};*{1};*{2};*{3}</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
+    <value>Fichier de configuration de MemoryLifter non valide</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="EDITCARD_OPENPICTURE" xml:space="preserve">
+    <value>Cliquez pour parcourir ou charger un fichier image ici.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_CONTENT" xml:space="preserve">
+    <value>Il s'agit probablement d'un problème de serveur ou de réseau. Veuillez vérifier la connexion réseau ou contacter votre fournisseur de services.</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_FOOTER" xml:space="preserve">
+    <value>AVERTISSEMENT : cette méthode est irréversible !</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_CONTENT" xml:space="preserve">
+    <value>Si vous continuez, le module d'apprentissage sera importé vers '{0}'.</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_NONE" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="STATUSBAR_SELFASSESSMENT" xml:space="preserve">
+    <value>Le saviez-vous ?</value>
+  </data>
+  <data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
+    <value>Question en image ({0})</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
+    <value>MemoryLifter a réussi à importer 1 connexion.</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
+    <value>Erreur au chargement du module d'apprentissage</value>
+  </data>
+  <data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
+    <value>Réponse ({0})</value>
+  </data>
+  <data name="LOGIN_WIZARD_CONNECTION_FAILURE" xml:space="preserve">
+    <value>Connexion a échoué.</value>
+  </data>
+  <data name="LEARNMODULES_MAINNODE" xml:space="preserve">
+    <value>Tous les modules d'apprentissage</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteLM_Single" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer le module d'apprentissage "{0}" ?</value>
+  </data>
+  <data name="DIC_ERROR_CONTENTPROTECTED_TEXT" xml:space="preserve">
+    <value>Erreur de chargement du module d'apprentissage {0}.
+Le module d'apprentissage ne peut pas être importé car son contenu est protégé.</value>
+  </data>
+  <data name="NO_WORDS_TEXT" xml:space="preserve">
+    <value>Plus de carte à demander ! Utilisez "Spécifier les chapitres à apprendre" dans le menu "Apprendre".</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_FAILED_MBX_CAPTION" xml:space="preserve">
+    <value>Echec de la copie du module d'apprentissage</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONIMAGE" xml:space="preserve">
+    <value>Question en image</value>
+  </data>
+  <data name="SELECTED_LEARNMODE_NOT_ALLOWED" xml:space="preserve">
+    <value>Vous avez sélectionné le mode d'apprentissage "{0}", mais la carte actuelle ne peut pas être apprise dans ce mode.</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="VERTICALALIGNMENT_NONE" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="NEWDIC_INVALIDINPUT_CAPTION" xml:space="preserve">
+    <value>Entrée non valide</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_CAPTION" xml:space="preserve">
+    <value>Importer le module d'apprentissage ?</value>
+  </data>
+  <data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
+    <value>Vous tentez d'ouvrir un module d'apprentissage qui nécessite la clé USB livrée avec le module.
+Veuillez insérer la clé USB d'origine et ouvrir le module à partir de la clé.</value>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_SYNONYMMODE" xml:space="preserve">
+    <value>Bascule entre les modes mot et synonyme</value>
+  </data>
+  <data name="CARDEDIT_SAVE_TEXT" xml:space="preserve">
+    <value>Souhaitez-vous enregistrer les modifications ?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_PERMISSION_MBX_CAPTION" xml:space="preserve">
+    <value>Autorisation insuffisante</value>
+  </data>
+  <data name="INACTIVE" xml:space="preserve">
+    <value>Inactif</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_CONTENT" xml:space="preserve">
+    <value>Veuillez saisir un nom utilisateur valide.</value>
+  </data>
+  <data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
+    <value>Chargement ...</value>
+  </data>
+  <data name="FOLDER_AMOUNT_SUBFOLDERS" xml:space="preserve">
+    <value>{0} Sous-dossiers</value>
+  </data>
+  <data name="RESTART_BACKUP_CAPTION" xml:space="preserve">
+    <value>Sauvegarde créée</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_CLOSE" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="CARDEDIT_STATUS_SAVING" xml:space="preserve">
+    <value>Modification de {0} cartes...</value>
+  </data>
+  <data name="PLEASE_TRY_AGAIN_OR_SWITCH" xml:space="preserve">
+    <value>Réessayez ou choisissez un autre emplacement.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_DESCRIPTION" xml:space="preserve">
+    <value>Veuillez attendre le chargement de l'aperçu...</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_COLOR" xml:space="preserve">
+    <value>Texte - Couleur</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
+    <value>Exemple de réponse ({0})</value>
+  </data>
+  <data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
+    <value>Réponse vidéo ({0})</value>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_CHARACTERMAP" xml:space="preserve">
+    <value>Affiche/Masque la mappe de caractères</value>
+  </data>
+  <data name="STARTPAGE_LOADING" xml:space="preserve">
+    <value>Veuillez patienter. Chargement des détails...</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_DESCRIPTION" xml:space="preserve">
+    <value>L'image sera redimensionnée à la taille sélectionnée. Vous pouvez utiliser cette option pour réduire la taille globale du fichier du module d'apprentissage et/ou mieux ajuster les images à la taille de la fenêtre d'apprentissage.
+
+Pour désactiver ou modifier les cartes ajoutées par la suite, cliquez sur le bouton de redimensionnement et sélectionnez la taille souhaitée.</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
+    <value>Rétrograder la carte</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
+    <value>question audio ({0})</value>
+  </data>
+  <data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
+    <value>Erreur au chargement du fichier de configuration</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
+    <value>Importation réussie de la configuration</value>
+  </data>
+  <data name="MAINTAIN_TLOADMSG" xml:space="preserve">
+    <value>Chargement de la base de données...</value>
+  </data>
+  <data name="HORIZONTALALIGNMENT_LEFT" xml:space="preserve">
+    <value>Gauche</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_TITLE" xml:space="preserve">
+    <value>Echec de synchronisation</value>
+  </data>
+  <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
+    <value>Continuez à m'informer</value>
+  </data>
+  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
+    <value>Une adresse e-mail valable est requise. Corrigez votre entrée, s'il vous plaît.</value>
+  </data>
+  <data name="IMPORTING" xml:space="preserve">
+    <value>Importation en cours</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
+    <value>Souhaitez-vous importer ce fichier de configuration de MemoryLifter ?</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
+    <value>Fichier de configuration de MemoryLifter non valide.</value>
+  </data>
+  <data name="TASKDIALOG_KICK_CONTENT" xml:space="preserve">
+    <value>Vous avez sélectionné un utilisateur qui a déjà ouvert une session d'apprentissage sur "{0}". Veuillez choisir comment poursuivre :</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="SyncStateApplyingUpdates" xml:space="preserve">
+    <value>Application des mises à jour.</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_TEXT" xml:space="preserve">
+    <value>Impossible d'enregistrer le module d'apprentissage. Fermer sans enregistrer ?</value>
+  </data>
+  <data name="DICPATH_INVALIDINPUT_CAPTION" xml:space="preserve">
+    <value>Entrée non valide</value>
+  </data>
+  <data name="SYNONYM_GRADING_TEXT" xml:space="preserve">
+    <value>Vous ne connaissez pas tous les synonymes. Faut-il malgré tout promouvoir la carte ?</value>
+  </data>
+  <data name="STATUSBAR_CURRENTCHAPTER" xml:space="preserve">
+    <value>(Chapitre : {0})</value>
+  </data>
+  <data name="SYNONYM_PROMPT_FLY_TEXT" xml:space="preserve">
+    <value>Cette question possède plusieurs bonnes réponses. Le nombre total de synonymes ou de réponses est indiqué entre parenthèses à côté de la légende de la fenêtre de réponse. Le programme passera automatiquement à une nouvelle ligne après la saisie d'un synonyme correct.</value>
+  </data>
+  <data name="GROUP_FOLDER_NAME" xml:space="preserve">
+    <value>Dossiers</value>
+  </data>
+  <data name="FONTSIZEUNIT_PIXEL" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="CARDEDIT_BITMAPERROR_CAPTION" xml:space="preserve">
+    <value>Impossible de coller le contenu ici</value>
+  </data>
+  <data name="POOL_EMPTY_TEXT" xml:space="preserve">
+    <value>Le pool de cartes est vide. Voici votre score actuel.
+Ajoutez de nouvelles cartes en sélectionnant "Spécifier les chapitres à apprendre" dans l'élément de menu "Apprendre" ou ajoutez de nouvelles cartes au chapitre existant.</value>
+  </data>
+  <data name="PRINT_BOXSELECTION_ERROR_CAPTION" xml:space="preserve">
+    <value>Aucune entrée valide</value>
+  </data>
+  <data name="WIZARD_FINISH" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE" xml:space="preserve">
+    <value>Cliquez pour redimensionner automatiquement les images</value>
+  </data>
+  <data name="SyncStateDeletingMetadata" xml:space="preserve">
+    <value>Suppression des métadonnées d'une ou de plusieurs tables au niveau du client.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SYNC_FAILED_MAIN" xml:space="preserve">
+    <value>MemoryLifter n'est pas parvenu à télécharger le module d'apprentissage.</value>
+  </data>
+  <data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
+    <value>Mappe de caractères</value>
+  </data>
+  <data name="XSLEDIT_FILEERROR_TEXT" xml:space="preserve">
+    <value>Impossible de charger le fichier dans la vue table. La vue texte a été chargée...</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_TITLE" xml:space="preserve">
+    <value>Paramètres d'accès non valides</value>
+  </data>
+  <data name="TASKDIALOG_KICK_TITLE" xml:space="preserve">
+    <value>Déjà connecté</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
+    <value>Erreur au chargement du module d'apprentissage</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWER" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="MULTIPLE_CHOICE_TEXT" xml:space="preserve">
+    <value>Un choix multiple est proposé s'il reste moins de {0} cartes dans le chapitre / de distracteurs sur la carte. Ajouter des cartes ou modifier les paramètres dans "Options d'apprentissage". L'interrogation se poursuivra en mode standard.</value>
+  </data>
+  <data name="WIZARD_NEXT" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
+    <value>Chapitre</value>
+  </data>
+  <data name="LOGIN_WIZARD_DATABASE_VERSION_NOT_SUPPORTED_TEXT" xml:space="preserve">
+    <value>Cette version de base de données n'est pas prise en charge. Contactez votre administrateur système.</value>
+  </data>
+  <data name="SyncStateCreatingMetadata" xml:space="preserve">
+    <value>Création de tables de métadonnées au niveau du client.</value>
+  </data>
+  <data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
+    <value>Il faut sauvegarder le répertoire des sons enregistrés</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_TITLE" xml:space="preserve">
+    <value>Valider la rétrogradation</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
+    <value>réponse audio ({0})</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_QUESTIONEXAMPLE" xml:space="preserve">
+    <value>Exemple de question</value>
+  </data>
+  <data name="NEWS_CBSTARTUP_TEXT1" xml:space="preserve">
+    <value>M'informer</value>
+  </data>
+  <data name="LAST_LEARNED_NEVER" xml:space="preserve">
+    <value>Jamais</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
+    <value>Ce fichier de configuration de MemoryLifter ajoutera des connexions disponibles à la Start Page.</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_YES" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="BUTTON_TEXT_CLOSE" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="PRINT_QUERYORDER_Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="SYNONYM_GRADING_CAPTION" xml:space="preserve">
+    <value>Tri des synonymes</value>
+  </data>
+  <data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
+    <value>Enregistrement du module d'apprentissage...</value>
+  </data>
+  <data name="MAINTAIN_MODIFICATION_TEXT" xml:space="preserve">
+    <value>Vous pouvez supprimer mais pas modifier plusieurs cartes en même temps.</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_TITLE" xml:space="preserve">
+    <value>Paramètres d'accès non valides</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
+    <value>Supprimer le chapitre de la sélection</value>
+  </data>
+  <data name="NO_WORDS_CAPTION" xml:space="preserve">
+    <value>Plus de mots</value>
+  </data>
+  <data name="CARDEDIT_TOOLTIP_DISTRACTOR" xml:space="preserve">
+    <value>Cette ligne est signalée car elle porte un distracteur. Faites un clic droit pour obtenir de plus amples informations.</value>
+  </data>
+  <data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
+    <value>Exemple de question</value>
+  </data>
+  <data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
+    <value>Son/Audio arrêté</value>
+  </data>
+  <data name="LOGIN_HEADER_TEXT" xml:space="preserve">
+    <value>Veuillez vous identifier auprès de "{0}":</value>
+  </data>
+  <data name="MAIN_CLOSEWITHOUTSAVE_CONTENT" xml:space="preserve">
+    <value>Vérifiez que le fichier du module d'apprentissage n'est pas ouvert dans un autre programme et qu'il n'est pas protégé en écriture, puis réessayez.</value>
+  </data>
+  <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
+    <value>Entrée non valide</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
+    <value>Si vous pensez maîtriser cette carte vous pouvez toujours la basculer dans une boîte supérieure.</value>
+  </data>
+  <data name="NEWDIC_INVALIDINPUT_TEXT" xml:space="preserve">
+    <value>Le nom du module d'apprentissage et son chemin d'accès doivent être valides. Corrigez les informations saisies.</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_STYLENAME" xml:space="preserve">
+    <value>Nom du style</value>
+  </data>
+  <data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
+    <value>Erreur au chargement du fichier de configuration de MemoryLifter.</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
+    <value>Importation du fichier de configuration de MemoryLifter a réussi.</value>
+  </data>
+  <data name="AUDIO_FILE_FILTER" xml:space="preserve">
+    <value>Fichiers audio|*.mp3;*.wma;*.wav;*.mid</value>
+  </data>
+  <data name="TASKDIALOG_KICK_MAIN" xml:space="preserve">
+    <value>L'utilisateur "{0}" est déjà connecté !</value>
+  </data>
+  <data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
+    <value>Erreur du répertoire média</value>
+  </data>
+  <data name="DIC_ERROR_CONTENTPROTECTED_CAPTION" xml:space="preserve">
+    <value>Erreur au chargement du module d'apprentissage</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_AUTHENTIFICATION_CONTENT" xml:space="preserve">
+    <value>Veuillez saisir des informations de connexion valides.</value>
+  </data>
+  <data name="SyncStateCreatingSchema" xml:space="preserve">
+    <value>Création de tables au niveau du client.</value>
+  </data>
+  <data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
+    <value>Question vidéo ({0})</value>
+  </data>
+  <data name="STYLEEDIT_NOITEMSTEXT" xml:space="preserve">
+    <value>Cette vue ne comprend aucun élément.</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_NO" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
+    <value>Ajouter le champ à la sélection</value>
+  </data>
+  <data name="CREATE_LM_PERMISSION_MBX_TEXT" xml:space="preserve">
+    <value>Avec cette connexion, vous n'êtes pas autorisé à ajouter des modules d'apprentissage.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_TITLE" xml:space="preserve">
+    <value>Erreur de connexion aux modules d'apprentissage</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
+    <value>Erreur au chargement du module d'apprentissage {0}.</value>
+  </data>
+  <data name="TASKDIALOG_SHOWDETAILS" xml:space="preserve">
+    <value>Afficher les détails</value>
+  </data>
+  <data name="NEWDIC_ANSWER" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="CARDEDIT_LOADING_MEDIA_TO_DB" xml:space="preserve">
+    <value>Chargement de fichier média vers la base de données...</value>
+  </data>
+  <data name="VERTICALALIGNMENT_MIDDLE" xml:space="preserve">
+    <value>Moyen</value>
+  </data>
+  <data name="MAINTAIN_LOADING" xml:space="preserve">
+    <value>Chargement des cartes...\t\t\tChargées : {0} / {1}</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWEREXAMPLEAUDIO" xml:space="preserve">
+    <value>Exemple de réponse audio</value>
+  </data>
+  <data name="MOVECONNECTION_ERROR" xml:space="preserve">
+    <value>Impossible de déplacer le module d'apprentissage à l'emplacement choisi.</value>
+  </data>
+  <data name="MAINTAIN_DISCARD_CAPTION" xml:space="preserve">
+    <value>Ignorer les modifications ?</value>
+  </data>
+  <data name="SyncStateReadingMetadata" xml:space="preserve">
+    <value>Lecture de tables de métadonnées au niveau du client.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_ITEM_TOOLTIP" xml:space="preserve">
+    <value>Catégorie : {0} - Cartes : {1}</value>
+  </data>
+  <data name="PRINT_STATUS_MEDIA" xml:space="preserve">
+    <value>Préparation du média...</value>
+  </data>
+  <data name="AUDIO_PLAY" xml:space="preserve">
+    <value>Ecouter</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_TEXT" xml:space="preserve">
+    <value>Souhaitez-vous importer le module d'apprentissage ?</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_BUTTON_PROMOTE" xml:space="preserve">
+    <value>Promouvoir
+Déplacer la carte vers la boîte {0}.</value>
+  </data>
+  <data name="MAINTAIN_DISCARD_TEXT" xml:space="preserve">
+    <value>Les modifications n'ont pas été enregistrées !
+Souhaitez-vous ignorer les modifications ?</value>
+  </data>
+  <data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
+    <value>Importer
+Ajoute ce fichier de configuration de MemoryLifter à la configuration actuelle.|Annuler
+Aucune action.</value>
+  </data>
+  <data name="SyncStateUploadingChanges" xml:space="preserve">
+    <value>Envoi des modifications au serveur.</value>
+  </data>
+  <data name="BUTTON_TEXT_YES" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_FONT" xml:space="preserve">
+    <value>Police</value>
+  </data>
+  <data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
+    <value>A cause d'une erreur du lecteur audio le son a été arrêté. Redémarrez MemoryLifter pour mettre en marche le son.</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
+    <value>Supprimer tous les chapitres de la sélection</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_CHAPTER" xml:space="preserve">
+    <value>Chapitre</value>
+  </data>
+  <data name="XSLEDIT_FILERROR_CAPTION" xml:space="preserve">
+    <value>Aucun fichier pris en charge</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CardsCount" xml:space="preserve">
+    <value>{0} / {1} / {2}</value>
+  </data>
+  <data name="ALMOST_CAPTION" xml:space="preserve">
+    <value>Presque correct</value>
+  </data>
+  <data name="SyncStateReadingSchema" xml:space="preserve">
+    <value>Lecture des informations sur le schéma depuis le serveur.</value>
+  </data>
+  <data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
+    <value>Exemple de question audio ({0})</value>
+  </data>
+  <data name="CHAPTER_FRAME_NODESCRIPTION" xml:space="preserve">
+    <value>Aucune description</value>
+  </data>
+  <data name="BUTTON_TEXT_NO" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="ALMOST_TEXT" xml:space="preserve">
+    <value>Votre réponse comprend quelques erreurs typographiques. Voulez-vous la valider malgré tout ?</value>
+  </data>
+  <data name="SyncStateDownloadingChanges" xml:space="preserve">
+    <value>Réception des modifications depuis le serveur.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_MAIN" xml:space="preserve">
+    <value>Impossible d'obtenir les modules d'apprentissage pour '{0}'.</value>
+  </data>
+  <data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
+    <value>Exemple de question ({0})</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_STYLEVALUE" xml:space="preserve">
+    <value>Valeur du style</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_BUTTON_DEMOTE" xml:space="preserve">
+    <value>Rétrograder
+La carte a été déplacée vers la boîte 1.</value>
+  </data>
+  <data name="SyncStateWritingMetadata" xml:space="preserve">
+    <value>Mise à jour des tables de métadonnées au niveau du client.</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
+    <value>Ajouter tous les chapitres à la sélection</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
+    <value>Entrer la phrase {0} ci-dessous</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_VALID_USER_CONTENT" xml:space="preserve">
+    <value>MemoryLifter n'est pas parvenu à obtenir tous les modules d'apprentissage du dossier sélectionné.</value>
+  </data>
+  <data name="IMAGE_FILE_FILTER" xml:space="preserve">
+    <value>Image|*.jpg;*.jpeg;*.gif;*.png;*.bmp</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_PASSWORD_CONTENT" xml:space="preserve">
+    <value>Veuillez saisir une combinaison nom utilisateur / mot de passe valide.</value>
+  </data>
+  <data name="XSLEDIT_USERANSWER" xml:space="preserve">
+    <value>&lt;User CurrentAnswer&gt;</value>
+  </data>
+  <data name="TASKDIALOG_WRONG_USER_MAIN" xml:space="preserve">
+    <value>Le nom utilisateur donné n'est pas valide !</value>
+  </data>
+  <data name="LEARN_OPTIONS_NO_MODE_TEXT" xml:space="preserve">
+    <value>Vous devez sélectionner au moins un mode d'apprentissage et un sens de questions !</value>
+  </data>
+  <data name="MAINTAIN_UNCHANGED" xml:space="preserve">
+    <value>(inchangé)</value>
+  </data>
+  <data name="EDITCARD_NEW" xml:space="preserve">
+    <value>Ajouter la carte</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_LOADING" xml:space="preserve">
+    <value>Chargement ...</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
+    <value>Erreur de chargement du module d'apprentissage {0}.
+Le fichier est peut-être utilisé par une autre application. Veuillez le fermer et réessayez.</value>
+  </data>
+  <data name="SyncStateGettingInserts" xml:space="preserve">
+    <value>Sélection des insertions à partir de l'emplacement dans le client ou le serveur.</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
+    <value>Ajouter tous les champs à la sélection</value>
+  </data>
+  <data name="RESTART_BACKUP_TEXT" xml:space="preserve">
+    <value>Une sauvegarde du module d'apprentissage actuel a été créée : "{0}". Utilisez-la si vous souhaitez revenir à votre jeu de cartes actuel et à la progression que vous avez atteinte dans votre apprentissage.</value>
+  </data>
+  <data name="CARDEDIT_BITMAPERROR_TEXT" xml:space="preserve">
+    <value>La fonction de collage direct d'un bitmap n'a pas encore été implémentée.
+Enregistrez l'image dans un fichier, puis chargez le fichier ici.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_TITLE" xml:space="preserve">
+    <value>Erreur de connexion au serveur</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERIMAGE" xml:space="preserve">
+    <value>Réponse en image</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
+    <value>Importer fichier config. ?</value>
+  </data>
+  <data name="STARTUP_IMPORT_LEARNING_MODULE_MBX_OPTION_YES" xml:space="preserve">
+    <value>Oui, importez le module d'apprentissage.</value>
+  </data>
+  <data name="LEARN_OPTIONS_NO_MODE_CAPTION" xml:space="preserve">
+    <value>Sélectionner un mode d'apprentissage et un sens de questions</value>
+  </data>
+  <data name="LOGIN_WIZARD_DATABASE_VERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+    <value>Version de base de données non prise en charge</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_OPTION_YES" xml:space="preserve">
+    <value>Oui, convertir le module d'apprentissage.</value>
+  </data>
+  <data name="STYLEEDIT_COLUMN_VALIGN" xml:space="preserve">
+    <value>Alignement V</value>
+  </data>
+  <data name="LEARNING_MODULE_NOT_ACCESSIBLE" xml:space="preserve">
+    <value>NON DISPONIBLE</value>
+  </data>
+  <data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
+    <value>Ajouter le chapitre à la sélection</value>
+  </data>
+  <data name="CHARACTERMAP_CHARS" xml:space="preserve">
+    <value>€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•˜™š›œžŸ¡¢£¤¥¦§¨©«¬­®¯°±²³´µ·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåāǎæçèéêëēěìíîïīǐðñòóôõöōǒ÷øùúûüūǔýþÿ</value>
+  </data>
+  <data name="PRINT_NOCARDS_TEXT" xml:space="preserve">
+    <value>Vous n'avez pas sélectionné des cartes à imprimer. Modifiez votre sélection.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Ratio" xml:space="preserve">
+    <value>{0:0.##}%</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_MAIN_SINGLE" xml:space="preserve">
+    <value>Impossible de se connecter au serveur '{0}' !</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_CONVERT_CONTENT" xml:space="preserve">
+    <value>Souhaitez-vous ouvrir et convertir le fichier à la place ?</value>
+  </data>
+  <data name="CONFIRM_DEMOTE_TEXT" xml:space="preserve">
+    <value>Votre réponse était partiellement correcte.</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
+    <value>Entrer {0} ci-dessous</value>
+  </data>
+  <data name="STYLEEDIT_SELECTFONTBUTTON" xml:space="preserve">
+    <value>Police...</value>
+  </data>
+  <data name="PRINT_INDIVIDUALSELECTION_ANSWER" xml:space="preserve">
+    <value>Réponse</value>
+  </data>
+  <data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
+    <value>Toutes les cartes</value>
+  </data>
+  <data name="LEARNING_MODULE_SERVER_OFFLINE" xml:space="preserve">
+    <value>SERVEUR HORS LIGNE</value>
+  </data>
+  <data name="ERROR_LEARNINGMODULE_NONAME" xml:space="preserve">
+    <value>Module d'apprentissage (pas de nom disponible)</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_BUTTONS" xml:space="preserve">
+    <value>Petite
+L'image est redimensionnée au format {0}x{1} pixels.|Moyenne
+L'image est redimensionnée au format {2}x{3} pixels.|Grande
+L'image est redimensionnée au format {4}x{5} pixels.|Aucun redimensionnement
+Le redimensionnement est désactivé.
+L'image est enregistrée dans son format d'origine.</value>
+  </data>
+  <data name="NEWS_LOADING" xml:space="preserve">
+    <value>Chargement en cours...</value>
+  </data>
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
+    <value>Aucun élément à importer.</value>
+  </data>
+  <data name="EXPORTING" xml:space="preserve">
+    <value>Exportation en cours</value>
+  </data>
+  <data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
+    <value>Sélectionner le répertoire média :</value>
+  </data>
+  <data name="TASKDIALOG_BUTTON_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWEREXAMPLE" xml:space="preserve">
+    <value>Exemple de réponse</value>
+  </data>
+  <data name="SEARCHHELP" xml:space="preserve">
+    <value>Cherchez...</value>
+  </data>
+  <data name="CARD_EDIT_RESIZE_TITLE" xml:space="preserve">
+    <value>Redimensionner l'image ?</value>
+  </data>
+  <data name="EDITCARD_EDIT" xml:space="preserve">
+    <value>Enregistrer les modifications</value>
+  </data>
+  <data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
+    <value>Réponse en image ({0})</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_Last_Session_Time" xml:space="preserve">
+    <value>{0}h {1}m {2:0.##}s</value>
+  </data>
+  <data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
+    <value>Sélectionner {0} ci-dessous</value>
+  </data>
+  <data name="AUDIO_RECORD" xml:space="preserve">
+    <value>Enregistrement</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DeleteCaptionMultiple" xml:space="preserve">
+    <value>Supprimer {0} modules d'apprentissage ?</value>
+  </data>
+  <data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
+    <value>Impossible d'enregistrer correctement le répertoire média. Veuillez vérifier qu'il est valide.</value>
+  </data>
+  <data name="SYNONYM_PROMPT_TEXT" xml:space="preserve">
+    <value>Cette question possède plusieurs bonnes réponses. Le nombre total de synonymes ou de réponses est indiqué entre parenthèses à côté de la légende de la fenêtre de réponse. Appuyez sur ENTER pour passer au synonyme suivant jusqu'à ce que toutes les réponses soient données.</value>
+  </data>
+  <data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
+    <value>Plusieurs chapitres sélectionnés</value>
+  </data>
+  <data name="LOGIN_HIDE_OPTIONS" xml:space="preserve">
+    <value>Masquer options</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
+    <value>Supprimer le champ de la sélection</value>
+  </data>
+  <data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
+    <value>Le fichier de configuration de MemoryLifter n'était pas valide. Veuillez contacter votre administrateur système.</value>
+  </data>
+  <data name="PRINT_NOCARDS_CAPTION" xml:space="preserve">
+    <value>Aucune carte sélectionnée</value>
+  </data>
+  <data name="MAINTAIN_NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="ALMOST_OPTION_YES" xml:space="preserve">
+    <value>Oui, promouvoir la carte.</value>
+  </data>
+  <data name="CARDCOLLECTOR_COLUMN_ANSWERVIDEO" xml:space="preserve">
+    <value>Réponse vidéo</value>
+  </data>
+  <data name="BOX_TEXT" xml:space="preserve">
+    <value>{0}   ({1} sur {2})</value>
+  </data>
+  <data name="BOX_NAME" xml:space="preserve">
+    <value>Boîte {0}</value>
+  </data>
+  <data name="STACK_CHECKBOX_HIDE" xml:space="preserve">
+    <value>Masquer</value>
+  </data>
+  <data name="STACK_CHECKBOX_SHOW" xml:space="preserve">
+    <value>Afficher</value>
+  </data>
+  <data name="MLIFTER_TEXTBOX_WELCOME_TIPP" xml:space="preserve">
+    <value>Saisissez votre réponse ici...</value>
+  </data>
+  <data name="DOCKING_BUTTON_STACK_HIDE" xml:space="preserve">
+    <value>Masquer pile de cartes</value>
+  </data>
+  <data name="DOCKING_BUTTON_STACK_SHOW" xml:space="preserve">
+    <value>Afficher pile de cartes</value>
+  </data>
+  <data name="BOX_TEXT2" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
+    <value>Toutes les réponses justes que vous avez données jusqu'à présent ont été enregistrées.</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
+    <value>MemoryLifter doit fermer cette session d'apprentissage.</value>
+  </data>
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
+    <value>Erreur de connexion au serveur</value>
+  </data>
+  <data name="SyncStateCheckingDataIntegrity" xml:space="preserve">
+    <value>Vérification de l'intégrité des données...</value>
+  </data>
+  <data name="LMPageUser" xml:space="preserve">
+    <value>Utilisateur : {0}</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="NEWS_MESSAGE_ENVELOPE" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body style="font-family: Arial, Verdana, sans-serif; font-size: 12pt;font-weight:bold;color:silver;"&gt;{0}&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_DELETING" xml:space="preserve">
+    <value>Suppression de '{0}' en cours</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_SERVER_OFFLINE_CONTENT_OFFLINE" xml:space="preserve">
+    <value>Un ou plusieurs serveurs sont hors ligne ou votre connexion réseau est perdue. Veuillez contacter votre fournisseur de services.</value>
+  </data>
+  <data name="FailedActivationHelpText" xml:space="preserve">
+    <value>Si vous avez besoin d'aide pour activer votre module d'apprentissage, vous pouvez nous contacter par e-mail {0}) ou par téléphone ({1}).</value>
+  </data>
+  <data name="SESSION_INVALID_DETAIL" xml:space="preserve">
+    <value>Votre session Memorylifter a été fermée par un autre utilisateur qui s'est connecté avec le même authentifiant.</value>
+  </data>
+  <data name="SESSION_INVALID_MAIN" xml:space="preserve">
+    <value>Votre session a été fermée par un autre utilisateur !</value>
+  </data>
+  <data name="SESSION_INVALID_TITLE" xml:space="preserve">
+    <value>Session fermée</value>
+  </data>
+  <data name="TASK_DIALOG_UNKNOWN_ERROR" xml:space="preserve">
+    <value>Erreur inconnue !</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_CONTENT" xml:space="preserve">
+    <value>Vérifiez que le dossier est accessible et que vous avez les autorisations nécessaires.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_MAIN" xml:space="preserve">
+    <value>Impossible d'analyser le dossier '{0}' à la recherche de modules d'apprentissage.</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_FOLDERFAILED_TITLE" xml:space="preserve">
+    <value>Echec de l'analyse du dossier</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
+    <value>Espace disque libre insuffisant !</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
+    <value>Le disque à partir duquel vous tentez d'apprendre est plein. Veuillez libérer de l'espace et renouvelez la tentative.</value>
+  </data>
+  <data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
+    <value>Espace disque insuffisant</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_INFO" xml:space="preserve">
+    <value>Pas d'information disponible...</value>
+  </data>
+  <data name="LEARNING_MODULE_KNOWLEDGE" xml:space="preserve">
+    <value>Connaissances du module d'apprentissage</value>
+  </data>
+  <data name="ONE_LEVEL_UP" xml:space="preserve">
+    <value>Un niveau plus haut</value>
+  </data>
+  <data name="LEARNING_MODE_IMAGERECOGNITION" xml:space="preserve">
+    <value>Reconnaissance des images</value>
+  </data>
+  <data name="LEARNING_MODE_LISTENINGCOMPREHENSION" xml:space="preserve">
+    <value>Compréhension auditive</value>
+  </data>
+  <data name="LEARNING_MODE_MULTIPLECHOICE" xml:space="preserve">
+    <value>Choix multiple</value>
+  </data>
+  <data name="LEARNING_MODE_SENTENCE" xml:space="preserve">
+    <value>Phrase</value>
+  </data>
+  <data name="LEARNING_MODE_WORD" xml:space="preserve">
+    <value>Norme</value>
+  </data>
+  <data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
+    <value>Distracteur réponse ({0})</value>
+  </data>
+  <data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
+    <value>Distracteur question ({0})</value>
+  </data>
+  <data name="CATEGORIES" xml:space="preserve">
+    <value>Catégories</value>
+  </data>
+  <data name="SUBNODE_CATEGORIES" xml:space="preserve">
+    <value>{0} Catégories</value>
+  </data>
+  <data name="SYNC_DOWNLOAD_EXTENSIONS" xml:space="preserve">
+    <value>Téléchargement d'extensions en cours</value>
+  </data>
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
+    <value>Echec de lancement d'une application externe</value>
+  </data>
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
+    <value>MemoryLifter n'a pas pu lancer une application externe.</value>
+  </data>
+  <data name="ERROR_DIALOG_DELETE_LM_CAPTION" xml:space="preserve">
+    <value>Echec de la suppression du module d'apprentissage</value>
+  </data>
+  <data name="ERROR_DIALOG_DELETE_LM_TEXT" xml:space="preserve">
+    <value>Une erreur s'est produite lors de la suppression du module d'apprentissage. Le processus s'est arrêté.</value>
+  </data>
+</root>

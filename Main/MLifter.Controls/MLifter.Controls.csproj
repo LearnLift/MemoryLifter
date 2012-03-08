@@ -1,0 +1,2180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09C4C0AD-3464-41B5-8426-4BA1B950B5C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MLifter.Controls</RootNamespace>
+    <AssemblyName>MLifter.Controls</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.SqlServerCe, Version=2.0.0.0" />
+    <Reference Include="OfficePickers, Version=1.1.2860.30243, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\OfficePickers\OfficePickers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198">
+      <HintPath>..\..\3rdParty\XPTable\XPTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AudioDialog.Designer.cs">
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardEdit.Designer.cs">
+      <DependentUpon>CardEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardMultiEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardMultiEdit.Designer.cs">
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardPreview.Designer.cs">
+      <DependentUpon>CardPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardStyleEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardStyleEdit.Designer.cs">
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardStyleEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardStyleEditor.Designer.cs">
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChapterFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CharacterMapComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CharacterMapComponent.Designer.cs">
+      <DependentUpon>CharacterMapComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Copy.cs" />
+    <Compile Include="DictionaryCaptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DictionaryCaptions.Designer.cs">
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DictionaryProperties.Designer.cs">
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldsFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\Enums.cs" />
+    <Compile Include="LearningModulesPage\FolderListViewItem.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="HighlightingTextBox\AutoCompleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighlightingTextBox\HighlightDescriptor.cs" />
+    <Compile Include="HighlightingTextBox\HighlightDescriptorCollection.cs" />
+    <Compile Include="HighlightingTextBox\SeperaratorCollection.cs" />
+    <Compile Include="HighlightingTextBox\SyntaxHighlightingTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HighlightingTextBox\Win32.cs" />
+    <Compile Include="ImageLinkLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageLinkLabel.Designer.cs">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModuleListViewItem.cs" />
+    <Compile Include="LearningModulesPage\LearningModulePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulePreviewControl.Designer.cs">
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModuleSelectedEvent.cs" />
+    <Compile Include="LearningModulesPage\LearningModulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesForm.Designer.cs">
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesPage.Designer.cs">
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesPage.Persistency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesTreeViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningModulesPage\LearningModulesTreeViewControl.Designer.cs">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningModulesPage\SearchParameter.cs" />
+    <Compile Include="LearningWindow\AnswerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\AnswerPanel.Designer.cs">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\AudioPlayerComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\AudioPlayerComponent.Designer.cs">
+      <DependentUpon>AudioPlayerComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\ButtonsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\ButtonsPanel.Designer.cs">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\ILearnUserControl.cs" />
+    <Compile Include="LearningWindow\LearningWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\LearningWindow.Designer.cs">
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\QuestionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\QuestionPanel.Designer.cs">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\ScoreControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\ScoreControl.Designer.cs">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\StackFlow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\StackFlow.Designer.cs">
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\StatisticsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\StatisticsPanel.Designer.cs">
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\StatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\StatusBar.Designer.cs">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningWindow\UserDialogComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LearningWindow\UserDialogComponent.Designer.cs">
+      <DependentUpon>UserDialogComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearnModes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LearnModes.Designer.cs">
+      <DependentUpon>LearnModes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinklabelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinklabelButton.Designer.cs">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultipleChoice.Designer.cs">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="News.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesForm.Designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RadioCheckbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadioCheckbox.designer.cs">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchTextbox.Designer.cs">
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDialog\TaskDialog.cs" />
+    <Compile Include="TaskDialog\EmulatedTaskDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskDialog\EmulatedTaskDialog.designer.cs">
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDialog\VistaActiveTaskDialog.cs" />
+    <Compile Include="TaskDialog\VistaTaskDialog.cs" />
+    <Compile Include="TaskDialog\VistaTaskDialogCommonDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TaskDialog\VistaTaskDialogNotificationArgs.cs" />
+    <Compile Include="TaskDialog\VistaUnsafeNativeMethods.cs" />
+    <Compile Include="TextStyleEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextStyleEdit.Designer.cs">
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAuthControl.Designer.cs">
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\CardCollector\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\CardCollector\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\InfoPage.Designer.cs">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\SideSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\SideSettingsPage.Designer.cs">
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\SourceSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\SourceSelectionPage.Designer.cs">
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\DictionaryCreator\WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Print\BoxSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Print\BoxSelectionPage.Designer.cs">
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Print\ChapterSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Print\ChapterSelectionPage.Designer.cs">
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Print\IndividualSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Print\IndividualSelectionPage.Designer.cs">
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Print\PrintPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Print\PrintPage.Designer.cs">
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Print\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Print\WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\ServerConnector\LMSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ServerConnector\LMSelectionPage.Designer.cs">
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\ServerConnector\ServerConnectorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ServerConnector\ServerConnectorPage.Designer.cs">
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Startup\DictionaryPathPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Startup\DictionaryPathPage.Designer.cs">
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Startup\RegisterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Startup\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Startup\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\Startup\WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\WizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\WizardPage.Designer.cs">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Wizard.Designer.cs">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XPExplorerBar\Expando.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPExplorerBar\ExplorerBarInfo.cs" />
+    <Compile Include="XPExplorerBar\NativeMethods.cs" />
+    <Compile Include="XPExplorerBar\TaskItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPExplorerBar\TaskPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPExplorerBar\ThemeManager.cs" />
+    <Compile Include="XPExplorerBar\XPControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPTableRenderers.cs" />
+    <Compile Include="XSLStyleEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XSLStyleEdit.Designer.cs">
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AudioDialog.de.resx">
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioDialog.es.resx">
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioDialog.fr.resx">
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioDialog.pt.resx">
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AudioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEdit.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEdit.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEdit.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEdit.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardEdit.resx">
+      <DependentUpon>CardEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardMultiEdit.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardMultiEdit.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardMultiEdit.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardMultiEdit.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardMultiEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardMultiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPreview.de.resx">
+      <DependentUpon>CardPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPreview.es.resx">
+      <DependentUpon>CardPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPreview.fr.resx">
+      <DependentUpon>CardPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPreview.pt.resx">
+      <DependentUpon>CardPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardPreview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEdit.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEdit.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEdit.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEdit.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEditor.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEditor.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEditor.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEditor.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardStyleEditor.resx">
+      <DependentUpon>CardStyleEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterMap.de.resx">
+      <DependentUpon>CharacterMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterMap.es.resx">
+      <DependentUpon>CharacterMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterMap.fr.resx">
+      <DependentUpon>CharacterMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterMap.pt.resx">
+      <DependentUpon>CharacterMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterMap.resx">
+      <DependentUpon>CharacterMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterFrame.de.resx">
+      <DependentUpon>ChapterFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterFrame.es.resx">
+      <DependentUpon>ChapterFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterFrame.fr.resx">
+      <DependentUpon>ChapterFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterFrame.pt.resx">
+      <DependentUpon>ChapterFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterFrame.resx">
+      <DependentUpon>ChapterFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCaptions.de.resx">
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCaptions.es.resx">
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCaptions.fr.resx">
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCaptions.pt.resx">
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCaptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryCaptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryProperties.de.resx">
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryProperties.es.resx">
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryProperties.fr.resx">
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryProperties.pt.resx">
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsFrame.de.resx">
+      <DependentUpon>FieldsFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsFrame.es.resx">
+      <DependentUpon>FieldsFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsFrame.fr.resx">
+      <DependentUpon>FieldsFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsFrame.pt.resx">
+      <DependentUpon>FieldsFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsFrame.resx">
+      <DependentUpon>FieldsFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighlightingTextBox\AutoCompleteForm.resx">
+      <DependentUpon>AutoCompleteForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighlightingTextBox\SyntaxHighlightingTextBox.resx">
+      <DependentUpon>SyntaxHighlightingTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLinkLabel.de.resx">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLinkLabel.es.resx">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLinkLabel.fr.resx">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLinkLabel.pt.resx">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLinkLabel.resx">
+      <DependentUpon>ImageLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulePreviewControl.de.resx">
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulePreviewControl.es.resx">
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulePreviewControl.fr.resx">
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulePreviewControl.pt.resx">
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulePreviewControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearningModulePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesForm.de.resx">
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesForm.es.resx">
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesForm.fr.resx">
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesForm.pt.resx">
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearningModulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesPage.de.resx">
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesPage.es.resx">
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesPage.fr.resx">
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesPage.pt.resx">
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearningModulesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesTreeViewControl.de.resx">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesTreeViewControl.es.resx">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesTreeViewControl.fr.resx">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesTreeViewControl.pt.resx">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningModulesPage\LearningModulesTreeViewControl.resx">
+      <DependentUpon>LearningModulesTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\AnswerPanel.de.resx">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\AnswerPanel.es.resx">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\AnswerPanel.fr.resx">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\AnswerPanel.pt.resx">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\AnswerPanel.resx">
+      <DependentUpon>AnswerPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ButtonsPanel.de.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ButtonsPanel.es.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ButtonsPanel.fr.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ButtonsPanel.pt.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ButtonsPanel.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\LearningWindow.de.resx">
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\LearningWindow.es.resx">
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\LearningWindow.fr.resx">
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\LearningWindow.pt.resx">
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\LearningWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearningWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\QuestionPanel.de.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\QuestionPanel.es.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\QuestionPanel.fr.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\QuestionPanel.pt.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\QuestionPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ScoreControl.de.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ScoreControl.es.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ScoreControl.fr.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ScoreControl.pt.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\ScoreControl.resx">
+      <DependentUpon>ScoreControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StackFlow.de.resx">
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StackFlow.es.resx">
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StackFlow.fr.resx">
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StackFlow.pt.resx">
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StackFlow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StackFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatisticsPanel.de.resx">
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatisticsPanel.es.resx">
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatisticsPanel.fr.resx">
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatisticsPanel.pt.resx">
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatisticsPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatisticsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatusBar.de.resx">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatusBar.es.resx">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatusBar.fr.resx">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatusBar.pt.resx">
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningWindow\StatusBar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearnModes.de.resx">
+      <DependentUpon>LearnModes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearnModes.es.resx">
+      <DependentUpon>LearnModes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearnModes.fr.resx">
+      <DependentUpon>LearnModes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearnModes.pt.resx">
+      <DependentUpon>LearnModes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearnModes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearnModes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinklabelButton.de.resx">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinklabelButton.es.resx">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinklabelButton.fr.resx">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinklabelButton.pt.resx">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinklabelButton.resx">
+      <DependentUpon>LinklabelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsg.de.resx">
+      <DependentUpon>LoadMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsg.es.resx">
+      <DependentUpon>LoadMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsg.fr.resx">
+      <DependentUpon>LoadMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsg.pt.resx">
+      <DependentUpon>LoadMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMsg.resx">
+      <DependentUpon>LoadMsg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.de.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.es.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.fr.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.pt.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.de.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.es.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.fr.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.pt.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoice.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.de.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.es.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.fr.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.pt.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.de.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.es.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.fr.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.pt.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioCheckbox.de.resx">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioCheckbox.es.resx">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioCheckbox.fr.resx">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioCheckbox.pt.resx">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioCheckbox.resx">
+      <DependentUpon>RadioCheckbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextbox.de.resx">
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextbox.es.resx">
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextbox.fr.resx">
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextbox.pt.resx">
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextbox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog\EmulatedTaskDialog.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog\EmulatedTaskDialog.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog\EmulatedTaskDialog.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog\EmulatedTaskDialog.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskDialog\EmulatedTaskDialog.resx">
+      <DependentUpon>EmulatedTaskDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStyleEdit.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStyleEdit.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStyleEdit.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStyleEdit.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextStyleEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthControl.de.resx">
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthControl.es.resx">
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthControl.fr.resx">
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthControl.pt.resx">
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserAuthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\CardCollector\SettingsPage.de.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\CardCollector\SettingsPage.es.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\CardCollector\SettingsPage.fr.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\CardCollector\SettingsPage.pt.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\CardCollector\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\InfoPage.de.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\InfoPage.es.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\InfoPage.fr.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\InfoPage.pt.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\InfoPage.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SideSettingsPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SideSettingsPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SideSettingsPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SideSettingsPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SideSettingsPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SideSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SourceSelectionPage.de.resx">
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SourceSelectionPage.es.resx">
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SourceSelectionPage.fr.resx">
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SourceSelectionPage.pt.resx">
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\SourceSelectionPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SourceSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\WelcomePage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\WelcomePage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\WelcomePage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\WelcomePage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\DictionaryCreator\WelcomePage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\BoxSelectionPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\BoxSelectionPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\BoxSelectionPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\BoxSelectionPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\BoxSelectionPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\ChapterSelectionPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\ChapterSelectionPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\ChapterSelectionPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\ChapterSelectionPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\ChapterSelectionPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChapterSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\IndividualSelectionPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\IndividualSelectionPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\IndividualSelectionPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\IndividualSelectionPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\IndividualSelectionPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndividualSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\PrintPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\PrintPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\PrintPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\PrintPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\PrintPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\WelcomePage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\WelcomePage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\WelcomePage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\WelcomePage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Print\WelcomePage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\LMSelectionPage.de.resx">
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\LMSelectionPage.es.resx">
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\LMSelectionPage.fr.resx">
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\LMSelectionPage.pt.resx">
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\LMSelectionPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LMSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\ServerConnectorPage.de.resx">
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\ServerConnectorPage.es.resx">
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\ServerConnectorPage.fr.resx">
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\ServerConnectorPage.pt.resx">
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ServerConnector\ServerConnectorPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerConnectorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DictionaryPathPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\RegisterPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\RegisterPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\RegisterPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\RegisterPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\RegisterPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\WelcomePage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\WelcomePage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\WelcomePage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\WelcomePage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Startup\WelcomePage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\WizardPage.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\WizardPage.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\WizardPage.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\WizardPage.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\WizardPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Wizard.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Wizard.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Wizard.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Wizard.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\Wizard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPExplorerBar\Expando.resx">
+      <DependentUpon>Expando.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPExplorerBar\TaskItem.resx">
+      <DependentUpon>TaskItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPExplorerBar\TaskPane.resx">
+      <DependentUpon>TaskPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSLStyleEdit.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSLStyleEdit.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSLStyleEdit.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSLStyleEdit.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSLStyleEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XSLStyleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLifter.AudioTools\MLifter.AudioTools.csproj">
+      <Project>{7DF80582-C238-4DB3-A9CF-578653BFA377}</Project>
+      <Name>MLifter.AudioTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.BusinessLayer\MLifter.BusinessLayer.csproj">
+      <Project>{D629D585-8591-4D70-9A41-C0D8AC954818}</Project>
+      <Name>MLifter.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Components\MLifter.Components.csproj">
+      <Project>{A8A07573-B1AE-411F-B298-941D84865D82}</Project>
+      <Name>MLifter.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.DAL\MLifter.DAL.csproj">
+      <Project>{981C08C1-FF99-4814-8BC9-E6F46432F806}</Project>
+      <Name>MLifter.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Generics\MLifter.Generics.csproj">
+      <Project>{BC74924A-F4EB-4EAB-88EB-CDBADC0F246F}</Project>
+      <Name>MLifter.Generics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AudioAvailable.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-playback-start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VideoAvailable.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio-volume-high.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio-volume-high_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-video_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resizeS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resizeL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\resizeM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-playback-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-playback-start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rssfeedtransformer.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-file-manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-system-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-x-generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synonym-mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\promotecard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demotecard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demotecard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\promotecard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_arrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_bw.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_color_pressed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_bw.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_color_pressed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_import.png" />
+    <None Include="XPExplorerBar\XPExplorerBar.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLSplashScreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brainy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brainy32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLSplashScreen_34.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic - dark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network drive - dark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USB drive - dark.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic - dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network drive - dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USB drive - dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_2_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_2_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_16x16.ico" />
+    <None Include="Resources\World_16x15.ico" />
+    <None Include="Resources\USB_drive_16x16.ico" />
+    <None Include="Resources\USB_Network.ico" />
+    <None Include="Resources\Usb_network16x16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderUp16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_48_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning_16_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_48_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_16_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLSplashScreen_200x46.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLSplashScreen_144x33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_closed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLSplashScreen_144_33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\failed32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\failed16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bubble_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bubble_information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usbDrive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-sad_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-sad_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-desktop-locale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chapters_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chapters_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-sad_32_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-smile_32_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jabber_protocol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jabber_protocol_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultBackGroundImageAnswerPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemFileManager16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RssFeedBrainyTransformer.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-cut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open-big.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <!-- Set this number to the number of items you want in a batch. 
+      *  Keep cranking this number down until you can build. 
+      *  Bigger numbers yield faster performance. 
+      *  If the number is too big, then command line will be too long, and the build will fail. -->
+    <ResourceBatchSize>100</ResourceBatchSize>
+  </PropertyGroup>
+  <!-- This inline task adds BucketNumber metadata in groups as specified by ResourceBatchSize -->
+  <UsingTask TaskName="BucketizeResources" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <ResourceBatchSize ParameterType="System.UInt32" Required="true" />
+      <InputItems ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <OutputItems ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System" />
+      <Code Type="Fragment" Language="cs"><![CDATA[ 
+        Log.LogMessage(string.Format("ResourceBatchsize: {0}", ResourceBatchSize)); 
+        uint bucketSize = Math.Max(1, ResourceBatchSize); 
+        uint bucket = 0; 
+        uint count = 0; 
+        Log.LogMessage(string.Format("Batching items into buckets of size: {0}", bucketSize)); 
+        foreach (ITaskItem item in InputItems) 
+        { 
+            item.SetMetadata("BucketNumber", bucket.ToString()); 
+            count++; 
+            if (count >= bucketSize) 
+            { 
+                count = 0; 
+                bucket++; 
+            } 
+        } 
+        Log.LogMessage(string.Format("Created {0} batches", bucket + 1)); 
+        OutputItems = InputItems; 
+        ]]></Code>
+    </Task>
+  </UsingTask>
+  <!--     Override the entire CoreResGen target: verbatim, except that we modified the condition on GenerateResource so that it batches on the value of "ResourceBucketSize". Note, if and when you install the next version of MSBuild, this will become out of date, so you'll need to copy the content again from microsoft.common.targets. But I should hope the bug is fixed then, so you can delete all of this workaround! -->
+  <Target Name="CoreResGen" DependsOnTargets="$(CoreResGenDependsOn)">
+    <ItemGroup>
+      <_Temporary Remove="@(_Temporary)" />
+    </ItemGroup>
+    <PropertyGroup>
+      <MinimalRebuildFromTracking Condition="'$(MinimalRebuildFromTracking)' == ''">true</MinimalRebuildFromTracking>
+      <TrackFileAccess Condition="'$(TrackFileAccess)' == ''">true</TrackFileAccess>
+      <TrackerLogDirectory Condition="'$(TrackerLogDirectory)' == ''">$(IntermediateOutputPath)</TrackerLogDirectory>
+    </PropertyGroup>
+    <!-- Add bucket number appropriately -->
+    <BucketizeResources ResourceBatchSize="$(ResourceBatchSize)" InputItems="@(EmbeddedResource)">
+      <Output TaskParameter="OutputItems" ItemName="_Temp" />
+    </BucketizeResources>
+    <ItemGroup>
+      <EmbeddedResource Remove="@(EmbeddedResource)" />
+      <EmbeddedResource Include="@(_Temp)" />
+      <_Temp Remove="@(_Temp)" />
+    </ItemGroup>
+    <GenerateResource Sources="@(EmbeddedResource)" UseSourcePath="$(UseSourcePath)" References="@(ReferencePath)" AdditionalInputs="$(MSBuildAllProjects)" NeverLockTypeAssemblies="$(GenerateResourceNeverLockTypeAssemblies)" StronglyTypedClassName="%(EmbeddedResource.StronglyTypedClassName)" StronglyTypedFileName="%(EmbeddedResource.StronglyTypedFileName)" StronglyTypedLanguage="%(EmbeddedResource.StronglyTypedLanguage)" StronglyTypedNamespace="%(EmbeddedResource.StronglyTypedNamespace)" StronglyTypedManifestPrefix="%(EmbeddedResource.StronglyTypedManifestPrefix)" PublicClass="%(EmbeddedResource.PublicClass)" OutputResources="@(EmbeddedResource->'$(IntermediateOutputPath)%(ManifestResourceName).resources')" Condition="'%(EmbeddedResource.Type)' == 'Resx' and '%(EmbeddedResource.GenerateResource)' != 'false' and '%(EmbeddedResource.BucketNumber)' != '' " SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" ExecuteAsTool="$(ResGenExecuteAsTool)" EnvironmentVariables="$(ResGenEnvironment)" MinimalRebuildFromTracking="$(MinimalRebuildFromTracking)" TrackFileAccess="$(TrackFileAccess)" TrackerLogDirectory="$(TrackerLogDirectory)" ToolArchitecture="$(ResGenToolArchitecture)" TrackerFrameworkPath="$(ResGenTrackerFrameworkPath)" TrackerSdkPath="$(ResGenTrackerSdkPath)">
+      <Output TaskParameter="FilesWritten" ItemName="FileWrites" />
+      <Output TaskParameter="StronglyTypedFileName" ItemName="Compile" />
+      <!-- Gather Sources as an output since it will contain OutputResource metadata indicating the final output resource that it was compiled into -->
+      <Output TaskParameter="Sources" ItemName="_Temporary" />
+    </GenerateResource>
+    <ItemGroup>
+      <EmbeddedResource Remove="@(_Temporary)" />
+      <!-- Add back the Sources list (with OutputResource metadata) that we output from GenerateResource into EmbeddedResource -->
+      <EmbeddedResource Include="@(_Temporary)" />
+      <_Temporary Remove="@(_Temporary)" />
+      <!-- EMITTED FOR COMPATIBILITY REASONS ONLY. CONSUME EMBEDDEDRESOURCE INSTEAD -->
+      <ManifestResourceWithNoCulture Include="@(EmbeddedResource->'%(OutputResource)')" Condition="'%(EmbeddedResource.WithCulture)'=='false' and '%(EmbeddedResource.Type)' == 'Resx'">
+        <EmittedForCompatibilityOnly>true</EmittedForCompatibilityOnly>
+      </ManifestResourceWithNoCulture>
+      <ManifestNonResxWithNoCultureOnDisk Include="@(EmbeddedResource)" Condition="'%(EmbeddedResource.WithCulture)'=='false' and '%(EmbeddedResource.Type)' == 'Non-Resx'">
+        <EmittedForCompatibilityOnly>true</EmittedForCompatibilityOnly>
+      </ManifestNonResxWithNoCultureOnDisk>
+      <!-- EMITTED FOR COMPATIBILITY REASONS ONLY. CONSUME EMBEDDEDRESOURCE INSTEAD -->
+      <ManifestResourceWithCulture Include="@(EmbeddedResource->'%(OutputResource)')" Condition="'%(EmbeddedResource.WithCulture)'=='true' and '%(EmbeddedResource.Type)' == 'Resx'">
+        <EmittedForCompatibilityOnly>true</EmittedForCompatibilityOnly>
+      </ManifestResourceWithCulture>
+      <ManifestNonResxWithCultureOnDisk Include="@(EmbeddedResource)" Condition="'%(EmbeddedResource.WithCulture)'=='true' and '%(EmbeddedResource.Type)' == 'Non-Resx'">
+        <EmittedForCompatibilityOnly>true</EmittedForCompatibilityOnly>
+      </ManifestNonResxWithCultureOnDisk>
+    </ItemGroup>
+  </Target>
+</Project>

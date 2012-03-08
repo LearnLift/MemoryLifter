@@ -1,0 +1,117 @@
+﻿<Adapter>
+  <Groups>
+    <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" name="Administrator" />
+    <Group roleId="000a57c7-892a-4c5b-a89a-12e8b6327f02" name="Teacher" />
+    <Group roleId="10460252-bc26-46a5-a59d-c3033760df03" name="Student" />
+  </Groups>
+  <Users>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="alex">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="38567b8f-c2be-4467-a2c7-2b73c6a1ba55" account="testuser">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df03" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="christoph">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="christian">
+      <Groups>
+        <Group roleId="000a57c7-892a-4c5b-a89a-12e8b6327f02" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="fabian">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="OMICRON\AleAbe00">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="OMICRON\ChrFin00">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="OMICRON\FabThe00">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="OMICRON\DanAch30">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+    <User roleId="4e5f9fa7-325e-445d-9662-95f1e4c9e8ce" account="OMICRON\MatBre00">
+      <Groups>
+        <Group roleId="10460252-bc26-46a5-a59d-c3033760df01" />
+      </Groups>
+    </User>
+  </Users>
+  <Types>
+    <TypeInfo name="MLifter.DAL.DB.DbDictionaries">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanModify" access="False" />
+      </Permissions>
+    </TypeInfo>
+    <TypeInfo name="MLifter.DAL.DB.DbDictionary" parent="MLifter.DAL.DB.DbDictionaries">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanPrint" access="True" />
+        <Permission name="CanExport" access="True" />
+        <Permission name="CanModify" access="False" />
+        <Permission name="CanModifyMedia" access="False" />
+        <Permission name="CanModifySettings" access="False" />
+        <Permission name="CanModifyStyles" access="False" />
+        <Permission name="CanModifyProperties" access="False" />
+      </Permissions>
+    </TypeInfo>
+    <TypeInfo name="MLifter.DAL.DB.DbChapters" parent="MLifter.DAL.DB.DbDictionary">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanModify" access="False" />
+      </Permissions>
+    </TypeInfo>
+    <TypeInfo name="MLifter.DAL.DB.DbChapter" parent="MLifter.DAL.DB.DbChapters">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanModify" access="False" />
+      </Permissions>
+    </TypeInfo>
+    <TypeInfo name="MLifter.DAL.DB.DbCards" parent="MLifter.DAL.DB.DbChapter">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanModify" access="False" />
+      </Permissions>
+    </TypeInfo>
+    <TypeInfo name="MLifter.DAL.DB.DbCard" parent="MLifter.DAL.DB.DbCards">
+      <Permissions>
+        <Permission name="Visible" access="True" />
+        <Permission name="CanModify" access="False" />
+      </Permissions>
+    </TypeInfo>
+  </Types>
+  <GroupTypePermissionList>
+    <TypePermissionEntry roleId="000a57c7-892a-4c5b-a89a-12e8b6327f02" type="MLifter.DAL.DB.DbDictionaries">
+      <Permission name="CanModify" access="True" />
+    </TypePermissionEntry>
+    <TypePermissionEntry roleId="000a57c7-892a-4c5b-a89a-12e8b6327f02" type="MLifter.DAL.DB.DbDictionary">
+      <Permission name="CanModify" access="True" />
+      <Permission name="CanModifyMedia" access="True" />
+      <Permission name="CanModifySettings" access="True" />
+      <Permission name="CanModifyStyles" access="True" />
+    </TypePermissionEntry>
+  </GroupTypePermissionList>
+  <UserTypePermissionList />
+  <GroupObjectPermissionList />
+  <UserObjectPermissionList />
+</Adapter>

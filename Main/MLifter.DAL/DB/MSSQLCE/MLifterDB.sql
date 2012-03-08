@@ -1,0 +1,1 @@
+﻿--Could be found in the Ressources under MsSqlCeDbCreateScript

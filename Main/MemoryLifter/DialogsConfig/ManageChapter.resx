@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GBChapters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="DBChapters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DBChapters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 61</value>
+  </data>
+  <metadata name="MainHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>238, 17</value>
+  </metadata>
+  <data name="DBChapters.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DBChapters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 186</value>
+  </data>
+  <data name="DBChapters.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;DBChapters.Name" xml:space="preserve">
+    <value>DBChapters</value>
+  </data>
+  <data name="&gt;&gt;DBChapters.Type" xml:space="preserve">
+    <value>DragNDrop.DragAndDropListView, MLifterComponents, Version=2.2.467.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DBChapters.Parent" xml:space="preserve">
+    <value>GBChapters</value>
+  </data>
+  <data name="&gt;&gt;DBChapters.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDelChapter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnDelChapter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDelChapter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 253</value>
+  </data>
+  <data name="btnDelChapter.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDelChapter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="btnDelChapter.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnDelChapter.Text" xml:space="preserve">
+    <value>&amp;Delete</value>
+  </data>
+  <data name="&gt;&gt;btnDelChapter.Name" xml:space="preserve">
+    <value>btnDelChapter</value>
+  </data>
+  <data name="&gt;&gt;btnDelChapter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelChapter.Parent" xml:space="preserve">
+    <value>GBChapters</value>
+  </data>
+  <data name="&gt;&gt;btnDelChapter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddChapter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnAddChapter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddChapter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 253</value>
+  </data>
+  <data name="btnAddChapter.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnAddChapter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="btnAddChapter.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnAddChapter.Text" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
+  <data name="&gt;&gt;btnAddChapter.Name" xml:space="preserve">
+    <value>btnAddChapter</value>
+  </data>
+  <data name="&gt;&gt;btnAddChapter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddChapter.Parent" xml:space="preserve">
+    <value>GBChapters</value>
+  </data>
+  <data name="&gt;&gt;btnAddChapter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LDescr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LDescr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LDescr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 12</value>
+  </data>
+  <data name="LDescr.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LDescr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 41</value>
+  </data>
+  <data name="LDescr.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LDescr.Text" xml:space="preserve">
+    <value>Chapters can be used to organize the cards into logical sections. Use this screen to setup the chapters you need.</value>
+  </data>
+  <data name="&gt;&gt;LDescr.Name" xml:space="preserve">
+    <value>LDescr</value>
+  </data>
+  <data name="&gt;&gt;LDescr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LDescr.Parent" xml:space="preserve">
+    <value>GBChapters</value>
+  </data>
+  <data name="&gt;&gt;LDescr.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GBChapters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 0</value>
+  </data>
+  <data name="GBChapters.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GBChapters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 285</value>
+  </data>
+  <data name="GBChapters.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GBChapters.Name" xml:space="preserve">
+    <value>GBChapters</value>
+  </data>
+  <data name="&gt;&gt;GBChapters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBChapters.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GBChapters.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GBSetting.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonStyle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="buttonStyle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 127</value>
+  </data>
+  <data name="buttonStyle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 23</value>
+  </data>
+  <data name="buttonStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonStyle.Text" xml:space="preserve">
+    <value>Add/Edit &amp;Style</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Name" xml:space="preserve">
+    <value>buttonStyle</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MDescr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="MDescr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 71</value>
+  </data>
+  <data name="MDescr.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MDescr.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="MDescr.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MDescr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 48</value>
+  </data>
+  <data name="MDescr.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;MDescr.Name" xml:space="preserve">
+    <value>MDescr</value>
+  </data>
+  <data name="&gt;&gt;MDescr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MDescr.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;MDescr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EdtChapter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="EdtChapter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="EdtChapter.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="EdtChapter.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="EdtChapter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 21</value>
+  </data>
+  <data name="EdtChapter.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;EdtChapter.Name" xml:space="preserve">
+    <value>EdtChapter</value>
+  </data>
+  <data name="&gt;&gt;EdtChapter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EdtChapter.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;EdtChapter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LblDesc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LblDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 55</value>
+  </data>
+  <data name="LblDesc.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LblDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 13</value>
+  </data>
+  <data name="LblDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LblDesc.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;LblDesc.Name" xml:space="preserve">
+    <value>LblDesc</value>
+  </data>
+  <data name="&gt;&gt;LblDesc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LblDesc.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;LblDesc.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 15</value>
+  </data>
+  <data name="lblTitle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 13</value>
+  </data>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnApply.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnApply.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnApply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 127</value>
+  </data>
+  <data name="btnApply.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnApply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 23</value>
+  </data>
+  <data name="btnApply.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnApply.Text" xml:space="preserve">
+    <value>&amp;Apply</value>
+  </data>
+  <data name="&gt;&gt;btnApply.Name" xml:space="preserve">
+    <value>btnApply</value>
+  </data>
+  <data name="&gt;&gt;btnApply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnApply.Parent" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;btnApply.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GBSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 287</value>
+  </data>
+  <data name="GBSetting.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GBSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 156</value>
+  </data>
+  <data name="GBSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GBSetting.Name" xml:space="preserve">
+    <value>GBSetting</value>
+  </data>
+  <data name="&gt;&gt;GBSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GBSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnOkay.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnOkay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOkay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 449</value>
+  </data>
+  <data name="btnOkay.ShowHelp" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOkay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="btnOkay.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnOkay.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;btnOkay.Name" xml:space="preserve">
+    <value>btnOkay</value>
+  </data>
+  <data name="&gt;&gt;btnOkay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOkay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnOkay.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="ToolTipControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>5, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>345, 477</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="$this.HelpKeyword" xml:space="preserve">
+    <value>/html/memo9otv.htm</value>
+  </data>
+  <data name="$this.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>Topic</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEALy8AAAAAAAAQHAAAFgAAACgAAAAvAAAAXgAAAAEAGAAAAAAAcBoAAAAAAAAAAAAAAAAAAAAA
+        AAD////1+fKx0peeyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6e
+        yH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6e
+        yH6eyH6eyH6eyH6eyH6x0pf1+fL///8AAAD7/PpnqDRAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBnqDT7/PoAAADN4rxAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgDN4rwAAACv0ZRAkgBAkgA6gh8pTYkmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wm
+        Q5wmQ5wmQ5wmQ5wmQ5wmQ5wmQ5wmRJsrUYE7gxxAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgA8iBMsVXgpTIozaVBAkgBAkgBAkgCv0ZQAAACgyYFAkgBAkgAiN7UdJdodJdodJdod
+        JdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdomXJIzpjMzpjMz
+        pjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMoaIMdJdodJdodJtY+jQlAkgBAkgCgyYEA
+        AACeyH5AkgA+jQgdJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdod
+        JdodJdodJdodJdodJdoRdOgA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8R
+        d+gdJdodJdodJdo6gSBAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdodJdodJdodJdodJdodJdod
+        JdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdoaON0It/QA9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8RdegdJdodJdodJdo6gh9AkgBAkgCfyH8AAACeyH5AkgA+jQgd
+        JdodJdodJdoVXeQB7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0B7f0A7v0A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8Sc+gdJdodJdodJdo7
+        gx1AkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8Sc+cdJdodJdodJdo7gxxAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8ScucdJdodJdodJdo7gxxAkgBAkgCfyH8A
+        AACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8S
+        cecdJdodJdodJdo7hBtAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8Sb+cdJdodJdodJdo7hRlAkgBAkgCfyH8AAACeyH5AkgA+jQgd
+        JdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8SbucdJdodJdodJdo8
+        hRhAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8SbucdJdodJdodJdo8hhdAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8SbeYdJdodJdodJdo8hhZAkgBAkgCfyH8A
+        AACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8T
+        a+YdJdodJdodJdo8hxVAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8C5f0C
+        4PwA9f8A9f8A9f8A9f8B6P0D2vsA9f8A9f8A9f8A9f8B7P4D2foA9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8TauYdJdodJdodJdo8hxRAkgBAkgCfyH8AAACeyH5AkgA+jQgd
+        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
+        9f8A9f8A9f8A9f8UXuQdJdodJdodJdo+jgdAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA
+        9f8A9f8LofAdJdodJdocJdsdJdoYRuAA9f8A9f8A9f8A9f8PhuwdJdocJdsdJdodJdoVXOQA9f8A9f8D
+        2fodJdodJdobLdwA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8VXeQdJdodJdodJdo+jgZAkgBAkgCfyH8A
+        AACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8KrPIdJdodJdodJdodJdoOjO0A9f8A9f8A9f8A9f8F
+        0PkdJdodJdodJdodJdoTZ+YA9f8A9f8D3fsdJdodJdobMd0A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8V
+        XeMdJdodJdodJdo/jwVAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8D2vscK9wd
+        JdodJdocKtsC4PwA9f8A9f8A9f8A9f8A9f8WV+MdJdodJdodJdoMnPAA9f8A9f8A9f8YReAdJdoTaOYA
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8VW+MdJdodJdodJdo/jwVAkgBAkgCfyH8AAACeyH5AkgA+jQgd
+        JdodJdodJdoUX+QA9f8A9f8A9f8D3/sIu/UHvfUB6f0A9f8A9f8A9f8A9f8A9f8A9f8B7P4HvvYIuPUF
+        zfgA9f8A9f8A9f8A9f8C5f0HwPYB7P4A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8VWuMdJdodJdodJdo/
+        kANAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8VWeMdJdodJdodJdo/kAJAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8VWeMdJdodJdodJdo/kQFAkgBAkgCfyH8A
+        AACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8V
+        V+IdJdodJdodJdpAkgBAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8WVuIdJdodJdodJthAkgBAkgBAkgCfyH8AAACeyH5AkgA+jQgd
+        JdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8WVeIdJdodJdodJthA
+        kgBAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8WVOIdJdodJdodJ9dAkgBAkgBAkgCfyH8AAACeyH5AkgA+jQgdJdodJdodJdoUX+QA
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A//8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8WU+IdJdodJdodJ9ZAkgBAkgBAkgCfyH8A
+        AACeyH5AkgA+jQgdJdodJdodJdoUX+QA9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8KpvAVXeQWUuIWVOIWVeIWVeIVV+IVWeMVWeMVWuMVXOMVXOMb
+        MdwdJdodJdodKNVAkgBAkgBAkgCfyH8AAACeyH5AkgA/jwUdJdkdJdodJdoUYuQA9f8A9f8A9f8A9f8A
+        9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8A9f8bL9sdJdodJdodJdod
+        JdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodKdRAkgBAkgBAkgCfyH8AAACgyYFAkgBAkgAh
+        NLsdJdodJdonYI0zpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMzpjMz
+        pjMzpjMzpjMypDQdKdQdJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJdodJtggMsBA
+        kgBAkgBAkgCgyYEAAACv0ZRAkgBAkgA7gx0xZlczak8+jQhAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgAsVnYgL8QeKNMdJ9QdJtYdJdgdJdodJdod
+        JdodJdodJdodJdodJdodJdofLMs1cUFAkgBAkgBAkgCv0ZQAAADN4rxAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgA/kAI/jwQ/jwQ/jwU+jgc+jQk+jAs/kAJAkgBAkgBAkgBAkgDN4rwA
+        AAD7/PpnqDRAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBAkgBA
+        kgBAkgBAkgBAkgBAkgBAkgBnqDT7/PoAAAD////1+fKx0peeyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6e
+        yH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6e
+        yH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6eyH6x0pf1+fL///8AAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA
+</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 482</value>
+  </data>
+  <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Manage Chapters</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolTipControl.Name" xml:space="preserve">
+    <value>ToolTipControl</value>
+  </data>
+  <data name="&gt;&gt;ToolTipControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainHelp.Name" xml:space="preserve">
+    <value>MainHelp</value>
+  </data>
+  <data name="&gt;&gt;MainHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SetupChaptersForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

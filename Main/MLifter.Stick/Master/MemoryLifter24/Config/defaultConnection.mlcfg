@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Connections>
+    <UncConnection>
+      <Name>My MemoryLifter Stick</Name>
+      <UncPath>MEMSTICK:\LearningModules</UncPath>
+      <IsDefault>true</IsDefault>
+    </UncConnection>
+  </Connections>
+</Configuration>

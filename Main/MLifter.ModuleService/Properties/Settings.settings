@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MLifter.ModuleService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ModulesFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">modules</Value>
+    </Setting>
+    <Setting Name="ScreenshotFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">screenshots</Value>
+    </Setting>
+    <Setting Name="InfoFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">info</Value>
+    </Setting>
+    <Setting Name="ModuleFeedId" Type="System.Guid" Scope="Application">
+      <Value Profile="(Default)">9a01b567-d41a-42d8-a7bc-af795da36357</Value>
+    </Setting>
+    <Setting Name="CategoriesFeedId" Type="System.Guid" Scope="Application">
+      <Value Profile="(Default)">f46b233c-0d6f-47e8-ad76-f87831d532d4</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

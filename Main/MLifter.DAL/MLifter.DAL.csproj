@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{981C08C1-FF99-4814-8BC9-E6F46432F806}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MLifter.DAL</RootNamespace>
+    <AssemblyName>MLifter.DAL</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\MLifterDAL.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\SharpZipLib\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\NpgSQL\bin\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\3rdParty\NpgSQL\bin\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSV\CachedCsvReader.cs" />
+    <Compile Include="CSV\CachedCsvReader.CsvBindingList.cs" />
+    <Compile Include="CSV\CachedCsvReader.CsvPropertyDescriptor.cs" />
+    <Compile Include="CSV\CachedCsvReader.CsvRecordComparer.cs" />
+    <Compile Include="CSV\CsvReader.cs" />
+    <Compile Include="CSV\CsvReader.DataReaderValidations.cs" />
+    <Compile Include="CSV\CsvReader.RecordEnumerator.cs" />
+    <Compile Include="CSV\Events\ParseErrorEventArgs.cs" />
+    <Compile Include="CSV\Exceptions\MalformedCsvException.cs" />
+    <Compile Include="CSV\Exceptions\MissingFieldCsvException.cs" />
+    <Compile Include="CSV\MissingFieldAction.cs" />
+    <Compile Include="CSV\ParseErrorAction.cs" />
+    <Compile Include="CSV\Resources\ExceptionMessage.Designer.cs" />
+    <Compile Include="DB\DbCardStyle.cs" />
+    <Compile Include="DB\DbDatabase.cs" />
+    <Compile Include="DB\DbExtension.cs" />
+    <Compile Include="DB\DbGradeSynonyms.cs" />
+    <Compile Include="DB\DbGradeTyping.cs" />
+    <Compile Include="DB\DbImage.cs" />
+    <Compile Include="DB\DbAudio.cs" />
+    <Compile Include="DB\DbMedia.cs" />
+    <Compile Include="DB\DbMediaServer\CsHTTPRequest.cs" />
+    <Compile Include="DB\DbMediaServer\CsHTTPServer.cs" />
+    <Compile Include="DB\DbMediaServer\DbMediaServer.cs" />
+    <Compile Include="DB\DbQueryDirections.cs" />
+    <Compile Include="DB\DbBox.cs" />
+    <Compile Include="DB\DbBoxes.cs" />
+    <Compile Include="DB\DbCard.cs" />
+    <Compile Include="DB\DbCards.cs" />
+    <Compile Include="DB\DbChapter.cs" />
+    <Compile Include="DB\DbChapters.cs" />
+    <Compile Include="DB\DbDictionaries.cs" />
+    <Compile Include="DB\DbDictionary.cs" />
+    <Compile Include="DB\DbQueryMultipleChoiceOptions.cs" />
+    <Compile Include="DB\DbQueryTypes.cs" />
+    <Compile Include="DB\DbSettings.cs" />
+    <Compile Include="DB\DbSnoozeOptions.cs" />
+    <Compile Include="DB\DbStatistic.cs" />
+    <Compile Include="DB\DbStatistics.cs" />
+    <Compile Include="DB\DbUser.cs" />
+    <Compile Include="DB\DbVideo.cs" />
+    <Compile Include="DB\DbWord.cs" />
+    <Compile Include="DB\DbWords.cs" />
+    <None Include="DB\MSSQLCE\MLifterDB.sql" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeBoxConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeCardConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeCardMediaConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeCardsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeCardStyleConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeChapterConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeChaptersConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MSSQLCEConn.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeDatabaseConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeDictionariesConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeDictionaryConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeExtensionConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeGradeSynonymsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeGradeTypingConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeLearnLoggingConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeMediaConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeQueryDirectionsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeQueryMultipleChoiceOptionsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeQueryTypesConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeSessionConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeSettingsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeSnoozeOptionsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeStatisticConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeStatisticsConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeUserConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeWordConnector.cs" />
+    <Compile Include="DB\MSSQLCE\MsSqlCeWordsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlBoxConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlCardConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlCardMediaConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlCardsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlCardStyleConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlChapterConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlChaptersConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlDatabaseConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlDictionariesConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlDictionaryConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlExtensionConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlGradeSynonymsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlGradeTypingConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlLearnLoggingConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlMediaConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlQueryDirectionsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlQueryMultipleChoiceOptionsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlQueryTypesConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlSessionConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlSettingsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlSnoozeOptionsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlStatisticConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlStatisticsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlUserConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlWordConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PgSqlWordsConnector.cs" />
+    <Compile Include="DB\PostgreSQL\PostgreSQLConn.cs" />
+    <Compile Include="ImportExport\ImportHelper.cs" />
+    <Compile Include="Interfaces\Category.cs" />
+    <Compile Include="Interfaces\DB\IDbBoxConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbCardConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbCardMediaConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbCardsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbCardStyleConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbChapterConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbChaptersConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbDictionariesConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbDictionaryConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbDatabaseConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbExtensionConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbGradeSynonymsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbGradeTypingConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbLearnLoggingConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbMediaConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbQueryMultipleChoiceOptionsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbQueryDirectionsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbQueryTypesConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbSessionConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbSettingsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbSnoozeOptionsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbStatisticConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbStatisticsConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbUserConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbWordConnector.cs" />
+    <Compile Include="Interfaces\DB\IDbWordsConnector.cs" />
+    <Compile Include="Interfaces\IDatabase.cs" />
+    <Compile Include="Interfaces\IExtension.cs" />
+    <Compile Include="Interfaces\IGradeSynonyms.cs" />
+    <Compile Include="Interfaces\IBox.cs" />
+    <Compile Include="Interfaces\IBoxes.cs" />
+    <Compile Include="Interfaces\ICardStyle.cs" />
+    <Compile Include="Interfaces\IDictionaries.cs" />
+    <Compile Include="Interfaces\IGradeTyping.cs" />
+    <Compile Include="Interfaces\IPreset.cs" />
+    <Compile Include="Interfaces\IPresets.cs" />
+    <Compile Include="Interfaces\IQueryDirection.cs" />
+    <Compile Include="Interfaces\IQueryMultipleChoiceOptions.cs" />
+    <Compile Include="Interfaces\ISettings.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Preview\PreviewCard.cs" />
+    <Compile Include="Preview\PreviewCards.cs" />
+    <Compile Include="Preview\PreviewDictionary.cs" />
+    <Compile Include="Preview\PreviewMedia.cs" />
+    <Compile Include="Preview\PreviewSettings.cs" />
+    <Compile Include="Preview\PreviewStatistic.cs" />
+    <Compile Include="Preview\PreviewStatistics.cs" />
+    <Compile Include="Preview\PreviewWord.cs" />
+    <Compile Include="Preview\PreviewWords.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Exceptions.cs" />
+    <Compile Include="Security\ISecurity.cs" />
+    <Compile Include="Security\MSSQLCE\RawAdapters.cs" />
+    <Compile Include="Security\PermissionTypes.cs" />
+    <Compile Include="Security\MSSQLCE\SqlCeSecurityDataAdapter.cs" />
+    <Compile Include="Tools\AssemblyData.cs" />
+    <Compile Include="Tools\Cache.cs" />
+    <Compile Include="Tools\CachingStream.cs" />
+    <Compile Include="Tools\Copy.cs" />
+    <Compile Include="Tools\Exception.cs" />
+    <Compile Include="Tools\ExtensionFile.cs" />
+    <Compile Include="Tools\FileCleanupQueue.cs" />
+    <Compile Include="Tools\Helper.cs" />
+    <Compile Include="Interfaces\ICard.cs" />
+    <Compile Include="Interfaces\ICards.cs" />
+    <Compile Include="Interfaces\IChapter.cs" />
+    <Compile Include="Interfaces\IChapters.cs" />
+    <Compile Include="Interfaces\IDictionary.cs" />
+    <Compile Include="Interfaces\IMedia.cs" />
+    <Compile Include="ImportExport\Exporter.cs">
+    </Compile>
+    <Compile Include="ImportExport\Importer.cs" />
+    <Compile Include="Interfaces\IQueryOptions.cs" />
+    <Compile Include="Interfaces\IStatistic.cs" />
+    <Compile Include="Interfaces\IStatistics.cs" />
+    <Compile Include="Interfaces\IWord.cs" />
+    <Compile Include="Interfaces\IWords.cs" />
+    <Compile Include="Pack\Pack.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IQueryType.cs" />
+    <Compile Include="Interfaces\ISnoozeOptions.cs" />
+    <Compile Include="Tools\Log.cs" />
+    <Compile Include="Tools\Parent.cs" />
+    <Compile Include="Tools\PresetFactory.cs" />
+    <Compile Include="Security\SecurityFramework.cs" />
+    <Compile Include="Tools\SerializableDictionary.cs" />
+    <Compile Include="Tools\StatusMessage.cs" />
+    <Compile Include="Tools\UncDictionaries.cs" />
+    <Compile Include="Tools\UncUser.cs" />
+    <Compile Include="Tools\User.cs" />
+    <Compile Include="Tools\UserFactory.cs" />
+    <Compile Include="Tools\WebDictionaries.cs" />
+    <Compile Include="Tools\WebUser.cs" />
+    <Compile Include="Tools\ZipHelper.cs" />
+    <Compile Include="Transformer\V17\Converter.cs" />
+    <Compile Include="Transformer\V17\Tools.cs" />
+    <Compile Include="Tools\WordList.cs" />
+    <Compile Include="Web References\LearningModulesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XML\XmlAllowedQueryTypes.cs" />
+    <Compile Include="XML\XmlAudio.cs" />
+    <Compile Include="XML\XmlBox.cs" />
+    <Compile Include="XML\XmlBoxes.cs" />
+    <Compile Include="XML\XmlCard.cs" />
+    <Compile Include="XML\XmlCards.cs" />
+    <Compile Include="XML\XmlCardStyle.cs" />
+    <Compile Include="XML\XmlChapter.cs" />
+    <Compile Include="XML\XmlChapters.cs" />
+    <Compile Include="XML\XmlConfigHelper.cs" />
+    <Compile Include="XML\XmlDictionaries.cs" />
+    <Compile Include="XML\XmlDictionary.cs" />
+    <Compile Include="XML\XmlDistractor.cs" />
+    <Compile Include="XML\XmlDistractors.cs" />
+    <Compile Include="XML\XmlGradeSynonyms.cs" />
+    <Compile Include="XML\XmlGradeTyping.cs" />
+    <Compile Include="XML\XmlHelper.cs" />
+    <Compile Include="XML\XmlImage.cs" />
+    <Compile Include="XML\XmlAllowedQueryDirections.cs" />
+    <Compile Include="XML\XmlMedia.cs" />
+    <Compile Include="XML\XmlPreset.cs" />
+    <Compile Include="XML\XmlPresetGradeSynonyms.cs" />
+    <Compile Include="XML\XmlPresetGradeTyping.cs" />
+    <Compile Include="XML\XmlPresetMultipleChoiceOptions.cs" />
+    <Compile Include="XML\XmlPresetQueryDirections.cs" />
+    <Compile Include="XML\XmlPresetSnoozeOptions.cs" />
+    <Compile Include="XML\XmlPresetQueryType.cs" />
+    <Compile Include="XML\XmlPresets.cs" />
+    <Compile Include="XML\XmlPresetSettings.cs" />
+    <Compile Include="XML\XmlQueryDirections.cs" />
+    <Compile Include="XML\XmlQueryMultipleChoiceOptions.cs" />
+    <Compile Include="XML\XmlQueryOptions.cs" />
+    <Compile Include="XML\XmlQueryType.cs" />
+    <Compile Include="XML\XmlSettings.cs" />
+    <Compile Include="XML\XmlSnoozeOptions.cs" />
+    <Compile Include="XML\XmlStatistic.cs" />
+    <Compile Include="XML\XmlStatistics.cs" />
+    <Compile Include="XML\XmlUser.cs" />
+    <Compile Include="XML\XmlVideo.cs" />
+    <Compile Include="XML\XmlWord.cs" />
+    <Compile Include="XML\XmlWords.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSV\Resources\ExceptionMessage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DB\PostgreSQL\MLifterDB.sql">
+    </None>
+    <None Include="DB\PostgreSQL\MLifterDBUpgrade.sql" />
+    <None Include="Interfaces\bitmasks.txt" />
+    <Content Include="Resources\MsSqlCeDbCreateScript.sql" />
+    <None Include="Resources\MsSqlCeDbCreateIdxScript.sql" />
+    <None Include="Resources\XmlSecurityFramework.xml">
+    </None>
+    <Content Include="Resources\XML\BlankDictionaryV2_0.xml" />
+    <None Include="Web References\LearningModulesService\MLifterLearningModulesService.disco" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MLifter.DAL.Interfaces.cd" />
+    <None Include="MLifter.DAL.XML.cd" />
+    <None Include="Resources\XSLT\MergeDictionaryV2_0.xslt" />
+    <None Include="Web References\LearningModulesService\MLifterLearningModulesService.wsdl" />
+    <None Include="Web References\LearningModulesService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Component Include="calwin32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Component>
+    <Component Include="netwin32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Component>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLifter.Generics\MLifter.Generics.csproj">
+      <Project>{BC74924A-F4EB-4EAB-88EB-CDBADC0F246F}</Project>
+      <Name>MLifter.Generics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security.Framework.Base\Security.Framework.Base.csproj">
+      <Project>{0AD933C6-B0C9-4B00-A626-9F060375A0DE}</Project>
+      <Name>Security.Framework.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security.PgSqlAdapter\Security.PgSqlAdapter.csproj">
+      <Project>{63034166-E12F-469D-9675-FF66DD102377}</Project>
+      <Name>Security.PgSqlAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/MLifterSyncService/MLifterLearningModulesService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LearningModulesService\</RelPath>
+      <UpdateFromURL>http://localhost/MLifterSyncService/MLifterLearningModulesService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MLifterDAL_LearningModulesService_MLifterLearningModulesService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\NpgSQL\" />
+    <Folder Include="XML\V20\" />
+    <Folder Include="XML\V21\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

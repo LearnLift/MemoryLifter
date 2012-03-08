@@ -1,0 +1,1621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B93BBD55-3BB5-48D0-ADF5-4C007D3D52C0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MemoryLifter</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MLifter</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ManifestCertificateThumbprint>C376AD521E9635EEDC7903CE138A4C2126A8C959</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <Win32Resource>
+    </Win32Resource>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>\\localhost\MemoryLifter\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\localhost\MemoryLifter\</InstallUrl>
+    <SupportUrl>http://aleabe10.omicron.at/BugNET/</SupportUrl>
+    <ProductName>MemoryLifter 2.2 Beta</ProductName>
+    <PublisherName>LearnLift</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\3rdParty\SharpZipLib\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\3rdParty\ZedGraph\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Convert.cs" />
+    <Compile Include="Classes\ErrorReportGenerator.cs" />
+    <Compile Include="Classes\GlobalDictionaryLoader.cs" />
+    <Compile Include="Classes\Help.cs" />
+    <Compile Include="Classes\Setup.cs" />
+    <Compile Include="Classes\SplashManager.cs" />
+    <Compile Include="DialogsInfo\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsInfo\LearnStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DialogsConfig\BoxSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsConfig\Chapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsImportExport\ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsImportExport\ExportForm.Designer.cs">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogsImportExport\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsImportExport\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Pack.cs">
+    </Compile>
+    <Compile Include="DialogsOutput\Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsConfig\LearnOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsConfig\MaintainCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsConfig\ManageChapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DialogsInfo\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsInfo\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsOutput\StyleEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogsOutput\StyleEditor.Designer.cs">
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DialogsImportExport\ExportForm.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ExportForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ExportForm.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ExportForm.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ImportForm.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ImportForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ImportForm.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ImportForm.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\AboutBox.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\AboutBox.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\AboutBox.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\AboutBox.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\BoxSize.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\BoxSize.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\BoxSize.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\BoxSize.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoxSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\BoxSize.resx">
+      <DependentUpon>BoxSize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\Chapter.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\Chapter.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\Chapter.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\Chapter.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\Chapter.resx">
+      <DependentUpon>Chapter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ExportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsImportExport\ImportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\LearnOptions.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearnOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\LearnOptions.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearnOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\LearnOptions.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearnOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\LearnOptions.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LearnOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\MaintainCard.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaintainCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\MaintainCard.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaintainCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\MaintainCard.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaintainCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\MaintainCard.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaintainCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\ManageChapter.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\ManageChapter.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\ManageChapter.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\ManageChapter.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\Print.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\Print.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\Print.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\Print.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\LearnOptions.resx">
+      <DependentUpon>LearnOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\MaintainCard.resx">
+      <DependentUpon>MaintainCard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsConfig\ManageChapter.resx">
+      <DependentUpon>ManageChapter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Splash.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Splash.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Splash.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Splash.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Statistics.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Statistics.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Statistics.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Statistics.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\StyleEditor.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\StyleEditor.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\StyleEditor.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\StyleEditor.pt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsOutput\StyleEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Config\MemoryLifterFeed.mlcfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.config" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="Designs\Classic\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\play.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\playClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\playHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\playVideo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\playVideoClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\playVideoHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids.style">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\play.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\playClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\playHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\playVideo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\playVideoClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\playVideoHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Designs\System\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\answerLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\blockLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\ErrorHandler\default.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\Export\default.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\imagemodeLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\listeningmodeLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\Print\default.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\Print\withoutMedia.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\questionLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\scripts.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\sentencemodeLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\wordmodeLogic.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Audio.gif" />
+    <None Include="Resources\AudioAvailable.GIF" />
+    <None Include="Resources\document-open.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\character-map.png" />
+    <None Include="Resources\delete1.png" />
+    <EmbeddedResource Include="DialogsInfo\LearnStats.de.resx">
+      <DependentUpon>LearnStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\LearnStats.es.resx">
+      <DependentUpon>LearnStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\LearnStats.fr.resx">
+      <DependentUpon>LearnStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\LearnStats.pt.resx">
+      <DependentUpon>LearnStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogsInfo\LearnStats.resx">
+      <DependentUpon>LearnStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\document-new.png" />
+    <None Include="Resources\document-open1.png" />
+    <None Include="Resources\document-print.png" />
+    <None Include="Resources\document-properties.png" />
+    <None Include="Resources\accessories-text-editor.png" />
+    <None Include="Resources\accessories-character-map.png" />
+    <None Include="Resources\dialog-information.png" />
+    <None Include="Resources\edit-undo.png" />
+    <Content Include="Resources\en\license.rtf">
+    </Content>
+    <Content Include="Media\Audio\start.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Media\Audio\stop.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DisclaimerText.txt" />
+    <Content Include="Resources\en\help_en.chm">
+    </Content>
+    <Content Include="Resources\en\Readme.txt">
+    </Content>
+    <None Include="Resources\en\ReadMe.url" />
+    <None Include="Resources\go-up.png" />
+    <None Include="Resources\go-down.png" />
+    <None Include="Resources\go-next.png" />
+    <None Include="Resources\x-office-address-book1.png" />
+    <None Include="Resources\MLIcon.png" />
+    <None Include="Resources\help-browser.png" />
+    <None Include="Resources\preferences-desktop-screensaver.png" />
+    <None Include="Resources\preferences-system.png" />
+    <None Include="Resources\system-file-manager.png" />
+    <None Include="Resources\x-office-spreadsheet.png" />
+    <None Include="Resources\x-office-address-book.png" />
+    <None Include="Resources\folder-saved-search.png" />
+    <None Include="Resources\package-x-generic.png" />
+    <None Include="Resources\new1.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\text-editor.png" />
+    <None Include="Resources\VideoAvailable.gif" />
+    <None Include="Resources\Video.gif" />
+    <None Include="Resources\media-playback-start.png" />
+    <None Include="Resources\InfoText.txt" />
+    <None Include="Resources\Icons\readme.txt" />
+    <None Include="Resources\Icons\help.ico">
+    </None>
+    <None Include="Resources\Icons\ML.ico">
+    </None>
+    <None Include="Resources\Icons\RUL.ico">
+    </None>
+    <None Include="Resources\Icons\TRASH.ico">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLifter.BusinessLayer\MLifter.BusinessLayer.csproj">
+      <Project>{D629D585-8591-4D70-9A41-C0D8AC954818}</Project>
+      <Name>MLifter.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.CardCollector\MLifter.CardCollector.csproj">
+      <Project>{1A440E1E-5BC8-4BC8-8D10-45B5D57C1108}</Project>
+      <Name>MLifter.CardCollector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Components\MLifter.Components.csproj">
+      <Project>{A8A07573-B1AE-411F-B298-941D84865D82}</Project>
+      <Name>MLifter.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Controls\MLifter.Controls.csproj">
+      <Project>{09C4C0AD-3464-41B5-8426-4BA1B950B5C4}</Project>
+      <Name>MLifter.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.DAL\MLifter.DAL.csproj">
+      <Project>{981C08C1-FF99-4814-8BC9-E6F46432F806}</Project>
+      <Name>MLifter.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.ErrorHandler\MLifter.ErrorHandler.csproj">
+      <Project>{69CF94DF-FB51-46D4-BC62-02882C04E2D3}</Project>
+      <Name>MLifter.ErrorHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.Generics\MLifter.Generics.csproj">
+      <Project>{BC74924A-F4EB-4EAB-88EB-CDBADC0F246F}</Project>
+      <Name>MLifter.Generics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLifter.UpdateHandler\MLifter.UpdateHandler.csproj">
+      <Project>{95668CB5-662E-4CCA-A205-54745E440DF6}</Project>
+      <Name>MLifter.UpdateHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\MLifter.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\MLifterBusinessLayer.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\MLifterCardCollector.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\MLifterComponents.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\MLifterControls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\MLifterDAL.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\ZedGraph.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\MLifter.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\MLifterCardCollector.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\MLifterComponents.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\MLifterControls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\ZedGraph.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\MLifter.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\MLifterCardCollector.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\MLifterComponents.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\MLifterControls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\ZedGraph.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Synchronization.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Synchronization.Data.SqlServerCe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\MLifter.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\MLifterCardCollector.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\MLifterComponents.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\MLifterControls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\ZedGraph.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Teachers.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.SqlServerCe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Designs\BumbleBee\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\Arrow_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\Arrow_Left_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\Arrow_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\Arrow_Right_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\checkmarkRound.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\closeButton.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\closeButtonHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\face-crying.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\face-crying_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\face-grin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\face-grin_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\feedbackCorrect.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\feedbackCorrectSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\feedbackWrong.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\feedbackWrongSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\OK_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\OK_inactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\play.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\playClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\playHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\playVideo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\playVideoClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\playVideoHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\checkmark20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\feedbackCorrectSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\feedbackWrongSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Arrow_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Arrow_Left_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Arrow_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Arrow_Right_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\checkmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\closeButton.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\closeButtonHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\defaultBackGroundImageAnswerPanel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\feedbackCorrect.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\feedbackCorrectSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\feedbackWrong.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\feedbackWrongSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\OK_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\OK_inactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\play.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\playClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\playHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\playVideo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\playVideoClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\playVideoHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Thumb-Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Thumb-Down_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Thumb-Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Default\Thumb-Up_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\answer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Arrow_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Arrow_Left_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Arrow_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Arrow_Right_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\checkmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\closeButton.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\closeButtonHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\defaultBackGroundImageAnswerPanel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\feedbackCorrect.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\feedbackCorrectSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\feedbackWrong.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\feedbackWrongSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\OK_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\OK_inactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\play.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\playClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\playHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\playVideo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\playVideoClick.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\playVideoHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\question.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\synapsen_portrait.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Thumb-Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Thumb-Down_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Thumb-Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter\Thumb-Up_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Arrow_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Arrow_Left_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Arrow_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Arrow_Right_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\checkmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\closeButton.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\closeButtonHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\defaultBackGroundImageAnswerPanel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\feedbackCorrect.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\LightBulb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\LightBulbOff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\LightBulbOn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\style.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic.style">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Config\default.mlcfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Designs\Classic\Thumb-Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Thumb-Down_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Thumb-Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\Thumb-Up_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Arrow_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Arrow_Left_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Arrow_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Arrow_Right_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Checkmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\closeButton.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\closeButtonHover.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\feedbackCorrect.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\feedbackCorrectSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\feedbackWrong.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\feedbackWrongSmall.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\OK_active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\OK_inactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\stack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Thumb-Down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Thumb-Down_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Thumb-Up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Kids\Thumb-Up_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\animatedFeedback.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\jquery-timer.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\jquery-ui.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\System\jquery.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\BumbleBee.style">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\Classic\feedbackWrong.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Designs\iLifter.style">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Designs\Default.style">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Application.res" />
+    <None Include="Resources\en\SQL Server Compact 3.5 redist license %28English%29 111907.rtf" />
+    <None Include="Resources\folder16.png" />
+    <None Include="Resources\folder22.png" />
+    <None Include="Resources\view-refresh.png" />
+    <Content Include="Designs\System\Transformer\versionTransform10_11.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\applications-system.png" />
+    <None Include="Media\learning.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Media\world.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\demoteCard.png" />
+    <Content Include="Resources\de\license.rtf">
+    </Content>
+    <Content Include="Resources\de\help_de.chm">
+    </Content>
+    <None Include="Resources\document-open2.png" />
+    <None Include="Resources\icon32.png" />
+    <None Include="Resources\icon48.png" />
+    <None Include="Resources\icon22.png" />
+    <None Include="Resources\menu_statistics.png" />
+    <None Include="Resources\menu_characterMap.png" />
+    <None Include="Resources\menu_addEditCards.png" />
+    <None Include="Resources\menu_editStyle.png" />
+    <None Include="Resources\menu_new.png" />
+    <None Include="Resources\menu_open.png" />
+    <None Include="Resources\menu_print.png" />
+    <None Include="Resources\menu_saveAs.png" />
+    <None Include="Resources\menu_clearStats.png" />
+    <None Include="Resources\menu_import.png" />
+    <None Include="Resources\menu_export.png" />
+    <None Include="Resources\menu_help.png" />
+    <None Include="Resources\menu_homepage.png" />
+    <None Include="Resources\menu_chapters.png" />
+    <None Include="Resources\menu_snooze.png" />
+    <None Include="Resources\menu_preferences.png" />
+    <None Include="Resources\menu_boxsetup.png" />
+    <None Include="Resources\menu_exit.png" />
+    <None Include="Resources\menu_slideshow.png" />
+    <None Include="Resources\menu_collect.png" />
+    <None Include="Resources\menu_mlicon.png" />
+    <None Include="Resources\menu_add.png" />
+    <None Include="Resources\menu_pack.png" />
+    <None Include="Resources\list-add.png" />
+    <None Include="Resources\MLSplashScreen.gif" />
+    <None Include="Resources\edit-copy.png" />
+    <None Include="Resources\edit-cut.png" />
+    <None Include="Resources\process-stop.png" />
+    <None Include="Resources\edit-find-replace.png" />
+    <None Include="Resources\learning_16.png" />
+    <None Include="Resources\gadu_grau.png" />
+    <None Include="Resources\gPurple.png" />
+    <None Include="Resources\gYellow.png" />
+    <None Include="Resources\gBlue.png" />
+    <None Include="Resources\gGreen.png" />
+    <None Include="Resources\gOrange.png" />
+    <Content Include="Resources\en\CPOL.html" />
+    <Content Include="Resources\en\gpl-2_0.txt" />
+    <Content Include="Resources\en\lgpl-3_0.txt" />
+    <Content Include="Resources\prepare-stick-config.vbs" />
+    <Content Include="Resources\promoteCard.png" />
+    <Content Include="Resources\es\license.rtf">
+    </Content>
+    <Content Include="Resources\es\help_es.chm">
+    </Content>
+    <Content Include="Resources\fr\license.rtf">
+    </Content>
+    <Content Include="Resources\fr\help_fr.chm">
+    </Content>
+    <None Include="Resources\media-record.png" />
+    <None Include="Resources\media-playback-start1.png" />
+    <None Include="Resources\media-playback-stop.png" />
+    <Content Include="Resources\pt\license.rtf">
+    </Content>
+    <Content Include="Resources\pt\help_pt.chm">
+    </Content>
+    <None Include="Resources\Search.ico" />
+    <None Include="Resources\search.png" />
+    <Content Include="Resources\Teachers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\world_16.png" />
+    <None Include="Resources\toolbar_slideshow.png" />
+    <None Include="Resources\StartupFolders.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(TeamBuildConstants)' == ''">
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+			if not exist "$(TargetDir)Libraries\" md "$(TargetDir)Libraries\"
+			move "$(TargetDir)*.dll" "$(TargetDir)Libraries\"
+			if exist "$(TargetDir)Languages\" rmdir /S /Q "$(TargetDir)Languages\"
+			if not exist "$(TargetDir)Languages\" md "$(TargetDir)Languages\"
+			move "$(TargetDir)de" "$(TargetDir)Languages"
+			move "$(TargetDir)es" "$(TargetDir)Languages"
+			move "$(TargetDir)fi" "$(TargetDir)Languages"
+			move "$(TargetDir)fr" "$(TargetDir)Languages"
+			move "$(TargetDir)ja" "$(TargetDir)Languages"
+			move "$(TargetDir)de" "$(TargetDir)Languages"
+			move "$(TargetDir)pt" "$(TargetDir)Languages"
+			move "$(TargetDir)zh-CN" "$(TargetDir)Languages"
+		</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TeamBuildConstants)' == '_TEAM_BUILD_'">
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TeamBuildConstants)' == ''">
+    <PostBuildEvent>if not exist "$(TargetDir)Libraries\" md "$(TargetDir)Libraries\"
+move "$(TargetDir)*.dll" "$(TargetDir)Libraries\"
+if exist "$(TargetDir)Languages\" rmdir /S /Q "$(TargetDir)Languages\"
+if not exist "$(TargetDir)Languages\" md "$(TargetDir)Languages\"
+move "$(TargetDir)de" "$(TargetDir)Languages"
+move "$(TargetDir)es" "$(TargetDir)Languages"
+move "$(TargetDir)fi" "$(TargetDir)Languages"
+move "$(TargetDir)fr" "$(TargetDir)Languages"
+move "$(TargetDir)ja" "$(TargetDir)Languages"
+move "$(TargetDir)de" "$(TargetDir)Languages"
+move "$(TargetDir)pt" "$(TargetDir)Languages"
+move "$(TargetDir)zh-CN" "$(TargetDir)Languages"		</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Debug" goto :end
+if not exist "$(TargetDir)Libraries\" md "$(TargetDir)Libraries\"
+move "$(TargetDir)*.dll" "$(TargetDir)Libraries\"
+if exist "$(TargetDir)Languages\" rmdir /S /Q "$(TargetDir)Languages\"
+if not exist "$(TargetDir)Languages\" md "$(TargetDir)Languages\"
+move "$(TargetDir)de" "$(TargetDir)Languages"
+move "$(TargetDir)es" "$(TargetDir)Languages"
+move "$(TargetDir)fi" "$(TargetDir)Languages"
+move "$(TargetDir)fr" "$(TargetDir)Languages"
+move "$(TargetDir)ja" "$(TargetDir)Languages"
+move "$(TargetDir)de" "$(TargetDir)Languages"
+move "$(TargetDir)pt" "$(TargetDir)Languages"
+move "$(TargetDir)zh-CN" "$(TargetDir)Languages"
+:end</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<automation>
+  <connectionString>
+    <add name="conn1" value="Server=aleabe10;Port=5432;Userid=postgres;password=postgres;Protocol=3;SSL=false;Pooling=true;MinPoolSize=1;MaxPoolSize=20;Encoding=UNICODE;Timeout=15;SslMode=Disable;database=memorylifter;SSL=false;">
+      <learningModules>
+        <add id="" name="" />
+        <create path="" />
+      </learningModules>
+      <users>
+        <add name="" password="" sessions="" cards="" />
+      </users>
+    </add>
+  </connectionString>
+</automation>

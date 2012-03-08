@@ -1,0 +1,109 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:clr="clr-namespace:System;assembly=mscorlib">
+
+  
+
+
+ 
+    
+ 
+
+    <!-- Schriften-->
+    <FontFamily x:Key="FontFamilyNameLabel" >Arial</FontFamily>
+    <clr:Double x:Key="FontSizeValueLabel">11</clr:Double>
+    <FontFamily x:Key="FontFamilyNameText" >Arial</FontFamily>
+    <clr:Double x:Key="FontSizeValueText">12</clr:Double>
+    <clr:Double x:Key="FontSizeValueBold">15</clr:Double>
+    
+    <!-- Farbe für Windows Background-->
+    <SolidColorBrush x:Key="WindowBackground" Color="#d2f1fd"/>
+    <SolidColorBrush x:Key="DialogBackground" Color="#d2f1fd"/>
+
+    <!-- Farben für Menu-->
+    <SolidColorBrush x:Key="MenuBackground" Color="White"/>
+    <SolidColorBrush x:Key="MenuItemBackground" Color="#339999"/>
+    <SolidColorBrush x:Key="MenuItemForeground" Color="Black"/>
+    <SolidColorBrush x:Key="MenuItemForegroundInverse" Color="Black"/>
+    <SolidColorBrush x:Key="MenuItemForegroundDisabled" Color="LightGray"/>
+    <LinearGradientBrush x:Key="MenuItemHighLighted" EndPoint="1,0.5" StartPoint="0,0.5">
+        <GradientStop Color="#FF339999" Offset="0"/>
+        <GradientStop Color="#FF006666" Offset="1"/>
+        <GradientStop Color="#FF336699" Offset="0.265"/>
+        <GradientStop Color="#FF336666" Offset="0.67"/>
+    </LinearGradientBrush>
+
+    <!-- Farben für Buttons-->
+    <SolidColorBrush x:Key="ButtonBackground" Color="#4389a3"/>
+    <LinearGradientBrush x:Key="ButtonBackgroundHover"    EndPoint="1,0.5" StartPoint="0,0.5">
+        <GradientStop Color="#FF339999" Offset="0"/>
+        <GradientStop Color="#FF006666" Offset="1"/>
+        <GradientStop Color="#FF336699" Offset="0.265"/>
+        <GradientStop Color="#FF336666" Offset="0.67"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+    <SolidColorBrush x:Key="ButtonForegroundInverse" Color="White"/>
+
+    <!--Farben für ListBoxen-->
+    <SolidColorBrush x:Key="ListBoxItem" Color="#006666"/>
+    <LinearGradientBrush x:Key="ListBoxItemSelected" EndPoint="1,0.5" StartPoint="0,0.5">
+    	<GradientStop Color="#FF339999" Offset="0"/>
+    	<GradientStop Color="#FF006666" Offset="1"/>
+    	<GradientStop Color="#FF336699" Offset="0.265"/>
+    	<GradientStop Color="#FF336666" Offset="0.67"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ListBoxItemHover" EndPoint="1,0.5" StartPoint="0,0.5">
+        <GradientStop Color="#FF339999" Offset="0"/>
+        <GradientStop Color="#FF006666" Offset="1"/>
+        <GradientStop Color="#FF336699" Offset="0.265"/>
+        <GradientStop Color="#FF336666" Offset="0.67"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ListBoxItemBackground" Color="#438CAC"/>
+    <SolidColorBrush x:Key="ListBoxBackground" Color="White"/>
+    <SolidColorBrush x:Key="ListBoxBorderBrush" Color="Black"/>
+    <SolidColorBrush x:Key="ListBoxItemForeground" Color="White"/>
+    <SolidColorBrush x:Key="ListBoxItemForegroundInverse" Color="Black"/>
+    
+    <!-- Farben für Expander -->
+    <SolidColorBrush x:Key="ExpanderBackground" Color="#404040"/>
+
+    <!-- Farben für Label -->
+    <SolidColorBrush x:Key="LabelForeground" Color="White"/>
+    <SolidColorBrush x:Key="LabelBackground" Color="LightGray"/>
+
+    <!-- Farben für TExtBox -->
+    <SolidColorBrush x:Key="TextBoxBackground" Color="#FF339999"/>
+    <SolidColorBrush x:Key="TextBoxForeground" Color="Black"/>
+    <SolidColorBrush x:Key="TextBlockForeground" Color="White"/>
+
+
+    <SolidColorBrush x:Key="BorderBrush" Color="LightGray"/>
+
+    <!-- Farben für TabControl und TabITem -->
+    <LinearGradientBrush x:Key="TabItemSelectedBackground" EndPoint="1,0.5" StartPoint="0,0.5">
+        <GradientStop Color="#FF156B8E" Offset="0"/>
+        <GradientStop Color="#FF156B8E" Offset="1"/>
+        <GradientStop Color="#FF156B8E" Offset="0.265"/>
+        <GradientStop Color="#FF156B8E" Offset="0.67"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="TabItemBackground" Color="#135f7f"/>
+
+    <SolidColorBrush x:Key="TabControlBackground" Color="#156B8E"/>
+    <Style x:Key="LabelControlStyle" TargetType="{x:Type Control}">
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamilyNameLabel}"/>
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeValueLabel}"/>
+    </Style>
+
+    <!-- Farben für Sonstiges -->
+    <Style x:Key="TextControlStyle" TargetType="{x:Type Control}">
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamilyNameText}"/>
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeValueText}"/>
+    </Style>
+    <Style x:Key="TextBoldControlStyle" TargetType="{x:Type Control}">
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamilyNameText}"/>
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeValueBold}"/>
+    </Style>
+    
+</ResourceDictionary>
+

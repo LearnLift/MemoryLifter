@@ -1,0 +1,47 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:clr="clr-namespace:System;assembly=mscorlib">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="MainTheme.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+ 
+    <Style TargetType="{x:Type TreeViewItem}" >
+        <Setter Property="HorizontalContentAlignment" Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorLevel=1, AncestorType={x:Type ItemsControl}, Mode=FindAncestor}}"/>
+        <Setter Property="VerticalContentAlignment" Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorLevel=1, AncestorType={x:Type ItemsControl}, Mode=FindAncestor}}"/>
+        <Setter Property="Margin" Value="2,2,2,2" />
+        <Setter Property="Foreground" Value="{DynamicResource ListBoxItemForeground}"/>
+        <Setter Property="Background" Value="{DynamicResource ListBoxItemBackground}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ResourceKey=ListBoxItemHover}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=ListBoxItemHover}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ListBoxItemForegroundInverse}"/>
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ResourceKey=ListBoxItemSelected}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=ListBoxItemSelected}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ListBoxItemForegroundInverse}"/>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="True"/>
+                    <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{DynamicResource ResourceKey=ListBoxItemSelected}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ResourceKey=ListBoxItemSelected}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ResourceKey=ListBoxItemForegroundInverse}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style TargetType="{x:Type TreeView}">
+        <Setter Property="Background" Value="{DynamicResource ListBoxBackground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+
+    </Style>
+   
+
+</ResourceDictionary>

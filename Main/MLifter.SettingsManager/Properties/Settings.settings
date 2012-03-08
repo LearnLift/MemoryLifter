@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MLifterSettingsManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConfigurationFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MemoryLifter\2.4\Config</Value>
+    </Setting>
+    <Setting Name="ConfigPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Config</Value>
+    </Setting>
+    <Setting Name="AppDataFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MemoryLifter\2.4</Value>
+    </Setting>
+    <Setting Name="SyncedLMFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SyncedLearningModules</Value>
+    </Setting>
+    <Setting Name="VBRFixApplication" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Codecs\Lame\lame.exe</Value>
+    </Setting>
+    <Setting Name="VBRFixCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-b 128 --cbr -a "{0}" "{1}"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

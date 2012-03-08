@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OpenDialog.Filter">
+    <value>Módulos de aprendizaje (odx, odf, dzp, zip)|*.odx;*.odf;*.dzp;*.zip</value>
+  </data>
+  <data name="OpenDialog.Title">
+    <value>Abrir módulo de aprendizaje</value>
+  </data>
+  <data name="SaveDialog.Filter">
+    <value>Archivos del módulo de aprendizaje (*.odx)|*.odx</value>
+  </data>
+  <data name="SaveDialog.Title">
+    <value>Nuevo módulo de formación</value>
+  </data>
+  <data name="toolStripButtonNew.Text">
+    <value>Nuevo...</value>
+  </data>
+  <data name="toolStripButtonNew.ToolTipText">
+    <value>Crear nuevo módulo de aprendizaje...</value>
+  </data>
+  <data name="toolStripButtonOpen.Text">
+    <value>Abrir...</value>
+  </data>
+  <data name="toolStripButtonOpen.ToolTipText">
+    <value>Abrir un módulo de aprendizaje existente...</value>
+  </data>
+  <data name="toolStripButtonPrint.Text">
+    <value>Imprimir...</value>
+  </data>
+  <data name="toolStripButtonPrint.ToolTipText">
+    <value>Imprimir fichas didácticas...</value>
+  </data>
+  <data name="toolStripButtonNewCard.Text">
+    <value>Añadir ficha...</value>
+  </data>
+  <data name="toolStripButtonNewCard.ToolTipText">
+    <value>Añadir nueva ficha...</value>
+  </data>
+  <data name="toolStripButtonMaintain.Text">
+    <value>Mantener fichas...</value>
+  </data>
+  <data name="toolStripButtonMaintain.ToolTipText">
+    <value>Mantener fichas...</value>
+  </data>
+  <data name="slideShowToolStripButton.Text">
+    <value>Cambiar al modo presentación</value>
+  </data>
+  <data name="toolStripButtonStatistics.Text">
+    <value>Estadísticas</value>
+  </data>
+  <data name="toolStripButtonStatistics.ToolTipText">
+    <value>Mostrar estadísticas</value>
+  </data>
+  <data name="toolStripButtonBoxSize.Text">
+    <value>Tamaño de fichero:</value>
+  </data>
+  <data name="toolStripButtonBoxSize.ToolTipText">
+    <value>Mostrar/editar tamaño de fichero</value>
+  </data>
+  <data name="toolStripButtonOptions.Text">
+    <value>Opciones de aprendizaje</value>
+  </data>
+  <data name="toolStripButtonOptions.ToolTipText">
+    <value>Mostrar opciones de aprendizaje</value>
+  </data>
+  <data name="toolStripButtonCharMap.Text">
+    <value>Mapa de caracteres</value>
+  </data>
+  <data name="toolStripButtonCharMap.ToolTipText">
+    <value>Mostrar mapa de caracteres</value>
+  </data>
+  <data name="toolStripButtonHelp.Text">
+    <value>Ayuda</value>
+  </data>
+  <data name="toolStripMenuItemStandard.Text">
+    <value>Norma</value>
+  </data>
+  <data name="toolStripMenuItemMultipleChoice.Text">
+    <value>Selección múltiple</value>
+  </data>
+  <data name="toolStripMenuItemSentences.Text">
+    <value>Frases</value>
+  </data>
+  <data name="toolStripMenuItemListeningComprehension.Text">
+    <value>Comprensión de idioma hablado</value>
+  </data>
+  <data name="toolStripMenuItemImageRecognition.Text">
+    <value>Reconocimiento de imagen</value>
+  </data>
+  <data name="toolStripMenuItemCustom.Text">
+    <value>Personalizado...</value>
+  </data>
+  <data name="toolStripDropDownButtonChangeLearnModus.Text">
+    <value>Seleccionar modo(s) de aprendizaje</value>
+  </data>
+  <data name="newToolStripMenuItem.Text">
+    <value>Nuevo...</value>
+  </data>
+  <data name="openToolStripMenuItem.Text">
+    <value>Abrir...</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text">
+    <value>Cerrar</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Text">
+    <value>Crear copia de seguridad...</value>
+  </data>
+  <data name="printToolStripMenuItem.Text">
+    <value>Imprimir fichas didácticas...</value>
+  </data>
+  <data name="propertiesToolStripMenuItem.Text">
+    <value>Propiedades...</value>
+  </data>
+  <data name="recentToolStripMenuItem.Text">
+    <value>Módulos de aprendizaje recientes</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text">
+    <value>Salir</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text">
+    <value>Archivo</value>
+  </data>
+  <data name="addCardToolStripMenuItem.Text">
+    <value>Añadir ficha...</value>
+  </data>
+  <data name="maintainCardsToolStripMenuItem.Text">
+    <value>Mantener fichas...</value>
+  </data>
+  <data name="fileImportToolStripMenuItem.Text">
+    <value>Desde archivo...</value>
+  </data>
+  <data name="clipboardImportToolStripMenuItem.Text">
+    <value>Desde portapapeles...</value>
+  </data>
+  <data name="importToolStripMenuItem.Text">
+    <value>Importar fichas</value>
+  </data>
+  <data name="exportToolStripMenuItem.Text">
+    <value>Exportar fichas...</value>
+  </data>
+  <data name="editChaptersToolStripMenuItem.Text">
+    <value>Editar capítulos...</value>
+  </data>
+  <data name="editToolStripMenuItem.Text">
+    <value>Edición</value>
+  </data>
+  <data name="slideShowModeToolStripMenuItem.Text">
+    <value>Modo de presentación en diapositivas</value>
+  </data>
+  <data name="selectChaptersToolStripMenuItem.Text">
+    <value>Seleccionar capítulos...</value>
+  </data>
+  <data name="selectBoxToolStripMenuItem.Text">
+    <value>Seleccionar fichero</value>
+  </data>
+  <data name="showStatisticsToolStripMenuItem.Text">
+    <value>Mostrar estadísticas...</value>
+  </data>
+  <data name="restartLearningToolStripMenuItem.Text">
+    <value>Reiniciar aprendizaje</value>
+  </data>
+  <data name="showBoxSizeToolStripMenuItem.Text">
+    <value>Mostrar/editar tamaños de fichero...</value>
+  </data>
+  <data name="learningOptionsToolStripMenuItem.Text">
+    <value>Opciones de aprendizaje...</value>
+  </data>
+  <data name="learnToolStripMenuItem.Text">
+    <value>Aprender</value>
+  </data>
+  <data name="characterMapToolStripMenuItem.Text">
+    <value>Mapa de caracteres</value>
+  </data>
+  <data name="snoozeModeMemorylifterToolStripMenuItem.Text">
+    <value>Modo sueño</value>
+  </data>
+  <data name="switchSkinToolStripMenuItem.Text">
+    <value>Cambiar piel</value>
+  </data>
+  <data name="switchLanguageToolStripMenuItem.Text">
+    <value>Cambiar idioma</value>
+  </data>
+  <data name="styleEditorToolStripMenuItem.Text">
+    <value>Editor de estilos...</value>
+  </data>
+  <data name="changeLMFolderToolStripMenuItem.Text">
+    <value>Cambiar la carpeta del módulo de aprendizaje</value>
+  </data>
+  <data name="toolStripMenuItemCheckForUpdates.Text">
+    <value>Buscar actualizaciones ahora</value>
+  </data>
+  <data name="toolStripMenuItemCheckForBetaUpdates.Text">
+    <value>Buscar actualizaciones beta</value>
+  </data>
+  <data name="updatesToolStripMenuItem.Text">
+    <value>Actualizaciones</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text">
+    <value>Herramientas</value>
+  </data>
+  <data name="firstStepsToolStripMenuItem.Text">
+    <value>Primeros pasos...</value>
+  </data>
+  <data name="helpIndexToolStripMenuItem.Text">
+    <value>Índice...</value>
+  </data>
+  <data name="helpSearchToolStripMenuItem.Text">
+    <value>Buscar...</value>
+  </data>
+  <data name="homepageToolStripMenuItem.Text">
+    <value>Sitio web...</value>
+  </data>
+  <data name="fAQToolStripMenuItem.Text">
+    <value>Preguntas frecuentes en línea...</value>
+  </data>
+  <data name="downloadLMToolStripMenuItem.Text">
+    <value>Descargar más módulos de aprendizaje...</value>
+  </data>
+  <data name="recommendToAFriendToolStripMenuItem.Text">
+    <value>Recomendar a un amigo...</value>
+  </data>
+  <data name="aboutMemoryLifterToolStripMenuItem.Text">
+    <value>Acerca de...</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text">
+    <value>Ayuda</value>
+  </data>
+  <data name="menuStripMain.Text">
+    <value>menuStripMain</value>
+  </data>
+  <data name="continueToolStripMenuItem.Text">
+    <value>Continuar</value>
+  </data>
+  <data name="exitToolStripMenuItem1.Text">
+    <value>Salir</value>
+  </data>
+  <data name="testToolStripMenuItem.Text">
+    <value>test</value>
+  </data>
+  <data name="TrayIcon.Text">
+    <value>MemoryLifter</value>
+  </data>
+  <data name="$this.HelpKeyword">
+    <value>/html/memo288n.htm</value>
+  </data>
+</root>

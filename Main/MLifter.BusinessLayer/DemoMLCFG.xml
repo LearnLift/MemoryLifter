@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Connections>
+    <UncConnection>
+      <Name>My Computer</Name>
+      <UncPath>%MLMyDocuments%\LearningModules</UncPath>
+    </UncConnection>
+    <!--<UncConnection>
+      <Name>My Computer (Old)</Name>
+      <UncPath>%MLMyDocuments%\MLDictionaries</UncPath>
+    </UncConnection>-->
+    <PostgreConnection>
+      <Name>Andi's DB</Name>
+      <Server>andwen10</Server>
+      <Port>5432</Port>
+      <UserId>postgres</UserId>
+      <Password>mlifter</Password>
+      <Ssl>false</Ssl>
+      <Database>memorylifter</Database>
+      <SyncType>NotSynchronized</SyncType>
+      <SyncURI>http://andwen10:5433/PgSyncService.asmx</SyncURI>
+      <MediaURI>http://andwen10:5433/MediaFileHandler.ashx</MediaURI>
+      <OtherProperties />
+    </PostgreConnection>
+    <!--<PostgreConnection>
+    	<Name>Fink's DB</Name>
+    	<Server>stedeb10</Server>
+    	<Port>5432</Port>
+    	<UserId>postgre</UserId>
+    	<Password>mlifter</Password>
+    	<Ssl>false</Ssl>
+    	<Database>memorylifter</Database>
+		  <SyncType>HalfSynchronizedWithDbAccess</SyncType>
+		  <SyncURI>http://stedeb10:5433/PgSyncService.asmx</SyncURI>
+		  <MediaURI>http://stedeb10:5433/MediaFileHandler.ashx</MediaURI>
+    	<OtherProperties />
+    </PostgreConnection>-->
+    <WebConnection>
+      <Name>cfi-dev.at WebService</Name>
+      <LearningModulesURI>http://www.cfi-dev.at/MLifter/MLifterLearningModulesService.asmx</LearningModulesURI>
+      <SyncType>HalfSynchronizedWithoutDbAccess</SyncType>
+      <SyncURI>http://www.cfi-dev.at/MLifter/PgSyncService.asmx</SyncURI>
+      <MediaURI>http://www.cfi-dev.at/MLifter/MediaFileHandler.ashx</MediaURI>
+    </WebConnection>
+  </Connections>
+</Configuration>

@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MLifterErrorHandler.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppDataFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MemoryLifter\2.4</Value>
+    </Setting>
+    <Setting Name="MLifterErrorHandler_ErrorReportService_ErrorReportService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.memorylifter.com/error/ErrorReportService.asmx</Value>
+    </Setting>
+    <Setting Name="AppDataFolderErrorReportsUnsent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ErrorReports\Unsent</Value>
+    </Setting>
+    <Setting Name="AppDataFolderErrorReportsNew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ErrorReports\New</Value>
+    </Setting>
+    <Setting Name="AppDataFolderErrorReportsArchive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ErrorReports\Archive</Value>
+    </Setting>
+    <Setting Name="NotifyIcon_FillColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">255, 217, 19</Value>
+    </Setting>
+    <Setting Name="Transfer_Chunksize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4096</Value>
+    </Setting>
+    <Setting Name="Transfer_TryDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
