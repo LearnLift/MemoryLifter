@@ -1,0 +1,101 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)--> <!--(Document created with RoboEditor. )============================--> <!--(==============================================================)-->
+
+<head>
+
+<title>Syst&egrave;me de bo&icirc;tes</title>
+
+<!--(Meta)==========================================================-->
+
+<meta HTTP-EQUIV=Content-Type Content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=934>
+<meta name=layout-width content=1071>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="..\ML_Help.css">
+
+
+
+<!--(Style Sheet)===================================================-->
+
+<style>
+<!--
+
+body {
+	background-color: #ffffff;
+}
+
+-->
+</style>
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body style="color: #000000;">
+
+<h2 class=Topic><a NAME=flashcards_and_the_box_system></a><b>Syst&egrave;me de bo&icirc;tes</b></h2>
+
+<p>MemoryLifter utilise des cartes m&eacute;moire virtuelles et le syst&egrave;me de bo&icirc;tes de Leitner pour maximiser votre capacit&eacute; d'apprentissage.</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">Syst&egrave;me de bo&icirc;tes</b></p>
+
+<p>Le syst&egrave;me de bo&icirc;tes (ou &quot;syst&egrave;me de Leitner&quot;) a &eacute;t&eacute; con&ccedil;u par le psychologue allemand Sebastian Leitner dans les ann&eacute;es 1970. 
+ </p>
+
+<p>Son objectif est d'offrir aux utilisateurs une structure d'apprentissage et de r&eacute;tention d'informations dans la m&eacute;moire &agrave; court et &agrave; long terme.</p>
+
+<p>&nbsp;</p>
+
+<p>Dans un syst&egrave;me de bo&icirc;tes, des cartes m&eacute;moire sont attribu&eacute;es &agrave; un ensemble de <i>x</i> bo&icirc;tes (10 dans le cas de MemoryLifter).</p>
+
+<p>La taille des bo&icirc;tes augmente de fa&ccedil;on croissante avec le num&eacute;ro correspondant. </p>
+
+<p>Lorsqu'une carte atteint la bo&icirc;te la plus haute, la notion est normalement acquise dans la m&eacute;moire &agrave; long terme.</p>
+
+<p>&nbsp;</p>
+
+<p>La quantit&eacute; de cartes m&eacute;moire dans chaque bo&icirc;te offre un bref aper&ccedil;u de l'&eacute;tat actuel des connaissances et de la r&eacute;tention d'informations de l'utilisateur (m&eacute;moire &agrave; court et/ou long terme).</p>
+
+<p>&nbsp;</p>
+
+<p class=SubTopic1><b style="font-weight: bold;">Algorithme du syst&egrave;me de bo&icirc;tes de MemoryLifter</b></p>
+
+<p>MemoryLifter utilise une version l&eacute;g&egrave;rement modifi&eacute;e de l'algorithme initial du syst&egrave;me de bo&icirc;tes pour pr&eacute;senter et suivre les cartes pendant l'apprentissage.</p>
+
+<p>&nbsp;</p>
+
+<ol style="list-style: decimal;"
+	type=1>
+	
+	<li class=kadov-p-CNumList><p class=NumList>A l'origine, les cartes sont tir&eacute;es dans le pool, lequel contient toutes les cartes disponibles.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter v&eacute;rifie si l'une des bo&icirc;tes est pleine. <br> Le cas &eacute;ch&eacute;ant, il appelle une carte de cette bo&icirc;te. <br> Si aucune bo&icirc;te n'est pleine, MemoryLifter place une nouvelle carte du pool dans la premi&egrave;re bo&icirc;te et pose &agrave; l'utilisateur la question qu'elle contient.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si l'utilisateur r&eacute;pond correctement, MemoryLifter bascule la carte vers la bo&icirc;te suivante.<br> Dans le cas contraire, la carte est renvoy&eacute;e dans la bo&icirc;te 1.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Lorsque MemoryLifter ins&egrave;re une carte dans une bo&icirc;te, il la place &agrave; la fin. <br> MemoryLifter appelle les cartes contenues dans une bo&icirc;te en fonction de l'ordre dans lequel elles y ont &eacute;t&eacute; plac&eacute;es (premi&egrave;re entr&eacute;e/premi&egrave;re sortie).</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>MemoryLifter applique ensuite les &eacute;tapes 2 &agrave; 4 jusqu'&agrave; ce que le pool soit vide.</p></li>
+	
+	<li class=kadov-p-CNumList><p class=NumList>Si le pool est vide, la question contenue sur la carte la plus ancienne du module d'apprentissage est propos&eacute;e. <br> Un message appara&icirc;t &agrave; l'&eacute;cran pour vous pr&eacute;venir.</p></li>
+</ol>
+
+</body>
+
+</html>

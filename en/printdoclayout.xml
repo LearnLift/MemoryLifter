@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!--Printed Documentation Layout-->
+<printdoclayout>
+  <temphistory/>
+ <stylemapping>
+   <templatefile type="msword" filename=""/>
+  <maps>
+    <item org="a.glossterm" new="\0"/>
+    <item org="span.glosstext" new="\0"/>
+    <item org="p.subtopic2" new="\0"/>
+    <item org="a.expandspot" new="\0"/>
+    <item org="a.popupspot" new="\0"/>
+    <item org="a:link" new="\0"/>
+    <item org="p" new="\0"/>
+    <item org="p.numlist" new="\0"/>
+    <item org="div" new="\0"/>
+    <item org="a.dropspot" new="\0"/>
+    <item org="div.droptext" new="\0"/>
+    <item org="span.expandtext" new="\0"/>
+    <item org="p.subtopic1" new="\0"/>
+  </maps>
+ </stylemapping>
+ <tocstructure>
+   <page name="What is New" topic="html\ML_WhatisNew.htm" flags="0" topicid="59"/>
+  <chapter name="Getting Started">
+    <page name="First steps" topic="html\memo7omr.htm" flags="0" topicid="56"/>
+    <page name="Starting a new learning session" topic="html\memo94fi.htm" flags="0" topicid="21"/>
+    <page name="About MemoryLifter" topic="html\About_MemoryLifter.htm" flags="0" topicid="60"/>
+    <page name="Features" topic="html\memo3gkz.htm" flags="0" topicid="54"/>
+  </chapter>
+  <chapter name="How To's">
+    <page name="Learning window" topic="html\memo288n.htm" flags="0" topicid="31"/>
+    <page name="Creating your own dictionary" topic="html\Creating_your_own_dictionary.htm" flags="0" topicid="98"/>
+    <page name="Add" topic="html\memo8nl0.htm" flags="0" topicid="12"/>
+    <page name="Add an image, audio, or video" topic="html\Add_an_image,_audio,_or_video.htm" flags="0" topicid="24"/>
+    <page name="Manage chapters" topic="html\memo9otv.htm" flags="0" topicid="14"/>
+    <page name="Dictionary options" topic="html\memo2cmr.htm" flags="0" topicid="8"/>
+    <page name="Recording audio" topic="html\Recording_audio.htm" flags="0" topicid="26"/>
+    <page name="Import" topic="html\memo6dis.htm" flags="0" topicid="13"/>
+    <page name="Export" topic="html\memo5ur8.htm" flags="0" topicid="19"/>
+    <page name="Print" topic="html\memo4f78.htm" flags="0" topicid="20"/>
+    <page name="Pack" topic="html\memo7xyj.htm" flags="0" topicid="64"/>
+    <page name="Maintain" topic="html\memo4p0u.htm" flags="0" topicid="25"/>
+    <page name="Open" topic="html\memo3n72.htm" flags="0" topicid="41"/>
+    <page name="Restart" topic="html\memo37n8.htm" flags="0" topicid="68"/>
+    <page name="Learn box" topic="html\memo0wu0.htm" flags="0" topicid="52"/>
+    <page name="Learning in review mode" topic="html\Learning_in_review_mode.htm" flags="0" topicid="91"/>
+    <page name="Learn - Slideshow mode" topic="html\Learn_-_Slideshow_mode.htm" flags="0" topicid="92"/>
+    <page name="Learning in random question mode" topic="html\Learning_in_random_question_mode.htm" flags="0" topicid="89"/>
+    <page name="Learning in multiple choice and other modes" topic="html\Learning_in_multiple_choice_and_other_modes.htm" flags="0" topicid="90"/>
+    <page name="Learning Timer" topic="html\memo2khe.htm" flags="0" topicid="87"/>
+    <page name="Using the automated learning planner" topic="html\Using_the_automated_learning_planner.htm" flags="0" topicid="94"/>
+    <page name="Learning with Correct-on-the-fly option" topic="html\Learning_with_Correct-on-the-fly_option.htm" flags="0" topicid="93"/>
+    <page name="Skipping cards you know" topic="html\Skipping_cards_you_know.htm" flags="0" topicid="95"/>
+    <page name="Learning Options" topic="html\memo1d9v.htm" flags="0" topicid="11"/>
+    <page name="Style Editor" topic="html\Style_Editor.htm" flags="0" topicid="5"/>
+    <page name="Synonyms" topic="html\memo8y43.htm" flags="0" topicid="27"/>
+    <page name="Using MemoryLifter ready-to-use dictionaries" topic="html\Using_MemoryLifter_pre-made_dictionaries.htm" flags="0" topicid="101"/>
+    <page name="Working with commentary sounds" topic="html\Changing_the_commentary_sounds.htm" flags="0" topicid="102"/>
+    <page name="Statistics" topic="html\memo2koj.htm" flags="0" topicid="32"/>
+  </chapter>
+  <chapter name="Menu Items">
+   <chapter name="File">
+     <page name="New" topic="html\memo9sqf.htm" flags="0" topicid="58"/>
+     <page name="Open" topic="html\memo3n72.htm" flags="0" topicid="41"/>
+     <page name="Save As" topic="html\memo8c6r.htm" flags="0" topicid="72"/>
+     <page name="Pack" topic="html\memo7xyj.htm" flags="0" topicid="64"/>
+     <page name="Import" topic="html\memo6dis.htm" flags="0" topicid="13"/>
+     <page name="Export" topic="html\memo5ur8.htm" flags="0" topicid="19"/>
+     <page name="Print" topic="html\memo4f78.htm" flags="0" topicid="20"/>
+     <page name="Properties" topic="html\memo5qk3.htm" flags="0" topicid="70"/>
+     <page name="Exit" topic="html\memo85ys.htm" flags="0" topicid="15"/>
+   </chapter>
+   <chapter name="Cards">
+     <page name="Add" topic="html\memo8nl0.htm" flags="0" topicid="12"/>
+     <page name="Maintain" topic="html\memo4p0u.htm" flags="0" topicid="25"/>
+     <page name="Manage chapters" topic="html\memo9otv.htm" flags="0" topicid="14"/>
+   </chapter>
+   <chapter name="Learn">
+     <page name="Learning window" topic="html\memo288n.htm" flags="0" topicid="31"/>
+     <page name="Learn box" topic="html\memo0wu0.htm" flags="0" topicid="52"/>
+     <page name="Learn - Slideshow mode" topic="html\Learn_-_Slideshow_mode.htm" flags="0" topicid="92"/>
+     <page name="Restart" topic="html\memo37n8.htm" flags="0" topicid="68"/>
+     <page name="Specifying chapters to learn" topic="html\memo1cku.htm" flags="0" topicid="48"/>
+     <page name="Statistics" topic="html\memo2koj.htm" flags="0" topicid="32"/>
+     <page name="Show / Edit Box sizes" topic="html\memo1bub.htm" flags="0" topicid="28"/>
+   </chapter>
+   <chapter name="Tools">
+     <page name="Show Character map" topic="html\memo6l68.htm" flags="0" topicid="23"/>
+     <page name="Play Start/Exit Sound" topic="html\memo8pd0.htm" flags="0" topicid="78"/>
+     <page name="Change Style" topic="html\Change_Style.htm" flags="0" topicid="96"/>
+     <page name="Play Start/Exit Sound" topic="html\memo8pd0.htm" flags="0" topicid="78"/>
+     <page name="Style Editor" topic="html\Style_Editor.htm" flags="0" topicid="5"/>
+     <page name="Dictionary options" topic="html\memo2cmr.htm" flags="0" topicid="8"/>
+     <page name="Learning Options" topic="html\memo1d9v.htm" flags="0" topicid="11"/>
+     <page name="Specify dictionary folder" topic="html\memo9tbm.htm" flags="0" topicid="6"/>
+     <page name="Snooze" topic="html\memo0hyd.htm" flags="0" topicid="76"/>
+   </chapter>
+  </chapter>
+  <chapter name="Learning">
+    <page name="About MemoryLifter" topic="html\About_MemoryLifter.htm" flags="0" topicid="60"/>
+    <page name="Basic concepts of MemoryLifter" topic="html\memo5oft.htm" flags="0" topicid="45"/>
+    <page name="The box system" topic="html\memo93u5.htm" flags="0" topicid="30"/>
+    <page name="Ideas" topic="html\memo35et.htm" flags="0" topicid="49"/>
+    <page name="Learning Timer" topic="html\memo2khe.htm" flags="0" topicid="87"/>
+    <page name="Scoring" topic="html\memo359j.htm" flags="0" topicid="84"/>
+  </chapter>
+  <chapter name="Advanced">
+    <page name="Sound recorder" topic="html\memo4dyq.htm" flags="0" topicid="10"/>
+    <page name="Field selector" topic="html\memo6a0i.htm" flags="0" topicid="40"/>
+    <page name="Chapter selector" topic="html\memo6vg2.htm" flags="0" topicid="17"/>
+    <page name="Synonyms" topic="html\memo8y43.htm" flags="0" topicid="27"/>
+  </chapter>
+ </tocstructure>
+</printdoclayout>
