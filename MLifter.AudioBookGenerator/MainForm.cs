@@ -14,6 +14,7 @@ using MLifter.AudioTools.Codecs;
 using MLifter.DAL;
 using MLifter.DAL.Interfaces;
 using MLifter.Generics;
+using MLifter.AudioBookGenerator.Properties;
 
 namespace MLifterAudioBookGenerator
 {
@@ -31,19 +32,19 @@ namespace MLifterAudioBookGenerator
 			InitializeComponent();
 
 			//upgrade settings
-			if (!Properties.Settings.Default.Upgraded)
+			if (!Settings.Default.Upgraded)
 			{
 				try
 				{
-					Properties.Settings.Default.Upgrade();
+					Settings.Default.Upgrade();
 				}
 				catch { }
-				Properties.Settings.Default.Upgraded = true;
-				Properties.Settings.Default.Save();
+				Settings.Default.Upgraded = true;
+				Settings.Default.Save();
 			}
 
 			//load recent window size from settings
-			Size windowsize = Properties.Settings.Default.WindowSize;
+			Size windowsize = Settings.Default.WindowSize;
 			if (!windowsize.IsEmpty)
 				this.Size = windowsize;
 
@@ -86,16 +87,16 @@ namespace MLifterAudioBookGenerator
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			//load codecs
-			codecs.XMLString = Properties.Settings.Default.CodecSettings;
+			codecs.XMLString = Settings.Default.CodecSettings;
 
 			//load recent LearningModule from settings
-			if (!string.IsNullOrEmpty(Properties.Settings.Default.RecentLearningModule) && File.Exists(Properties.Settings.Default.RecentLearningModule))
-				textBoxLearningModule.Text = Properties.Settings.Default.RecentLearningModule;
+			if (!string.IsNullOrEmpty(Settings.Default.RecentLearningModule) && File.Exists(Settings.Default.RecentLearningModule))
+				textBoxLearningModule.Text = Settings.Default.RecentLearningModule;
 
 			//load recent AudioBook Path from settings
-			if (!string.IsNullOrEmpty(Properties.Settings.Default.RecentAudioBook))
+			if (!string.IsNullOrEmpty(Settings.Default.RecentAudioBook))
 			{
-				FileInfo recentaudiobook = new FileInfo(Properties.Settings.Default.RecentAudioBook);
+				FileInfo recentaudiobook = new FileInfo(Settings.Default.RecentAudioBook);
 
 				textBoxAudiobook.Text = recentaudiobook.FullName;
 			}
@@ -110,8 +111,8 @@ namespace MLifterAudioBookGenerator
 
 			//the following line is required for the login form to work
 			MLifter.BusinessLayer.LearningModulesIndex learningModules = new MLifter.BusinessLayer.LearningModulesIndex(
-				Path.Combine(Application.StartupPath, Properties.Settings.Default.ConfigPath),
-				Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Settings.Default.ConfigurationFolder),
+				Path.Combine(Application.StartupPath, Settings.Default.ConfigPath),
+				Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Settings.Default.ConfigurationFolder),
 				(MLifter.DAL.GetLoginInformation)MLifter.Controls.LoginForm.OpenLoginForm,
 				(MLifter.DAL.DataAccessErrorDelegate)delegate { return; }, String.Empty);
 		}
@@ -162,7 +163,7 @@ namespace MLifterAudioBookGenerator
 			OpenFileDialog filedialog = new OpenFileDialog();
 			if (File.Exists(textBoxLearningModule.Text))
 				filedialog.FileName = textBoxLearningModule.Text;
-			filedialog.Filter = Properties.Resources.SOURCE_FILEFILTER;
+			filedialog.Filter = Resources.SOURCE_FILEFILTER;
 			if (filedialog.ShowDialog() == DialogResult.OK)
 			{
 				textBoxLearningModule.Text = filedialog.FileName;
@@ -192,8 +193,8 @@ namespace MLifterAudioBookGenerator
 
 			//prepare filter list
 			List<string> extensions = new List<string>();
-			string filter = string.Format("{0} (*{1})|*{1}", Properties.Resources.AUDIO_WAVE_NAME, Properties.Resources.AUDIO_WAVE_EXTENSION);
-			extensions.Add(Properties.Resources.AUDIO_WAVE_EXTENSION);
+			string filter = string.Format("{0} (*{1})|*{1}", Resources.AUDIO_WAVE_NAME, Resources.AUDIO_WAVE_EXTENSION);
+			extensions.Add(Resources.AUDIO_WAVE_EXTENSION);
 
 			foreach (Codec codec in codecs)
 			{
@@ -282,9 +283,9 @@ namespace MLifterAudioBookGenerator
 				}
 
 				//save file paths to settings as recent files
-				Properties.Settings.Default.RecentLearningModule = dictionaryfile.FullName;
-				Properties.Settings.Default.RecentAudioBook = audiobook.FullName;
-				Properties.Settings.Default.Save();
+				Settings.Default.RecentLearningModule = dictionaryfile.FullName;
+				Settings.Default.RecentAudioBook = audiobook.FullName;
+				Settings.Default.Save();
 
 				//open learning module and start audio book generation
 				try
@@ -580,11 +581,11 @@ namespace MLifterAudioBookGenerator
 		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			//save the current window size
-			Properties.Settings.Default.WindowSize = this.Size;
+			Settings.Default.WindowSize = this.Size;
 
 			//save the codec list
-			Properties.Settings.Default.CodecSettings = codecs.XMLString;
-			Properties.Settings.Default.Save();
+			Settings.Default.CodecSettings = codecs.XMLString;
+			Settings.Default.Save();
 		}
 
 		/// <summary>
@@ -627,17 +628,17 @@ namespace MLifterAudioBookGenerator
 		{
 			CodecSettings settingsForm = new CodecSettings();
 			settingsForm.Codecs = codecs;
-			settingsForm.ShowEncoder = Properties.Settings.Default.ShowEncodingWindow;
-			settingsForm.ShowDecoder = Properties.Settings.Default.ShowDecodingWindow;
-			settingsForm.MinimizeWindows = Properties.Settings.Default.MimimizeWindows;
+			settingsForm.ShowEncoder = Settings.Default.ShowEncodingWindow;
+			settingsForm.ShowDecoder = Settings.Default.ShowDecodingWindow;
+			settingsForm.MinimizeWindows = Settings.Default.MimimizeWindows;
 
 			if (settingsForm.ShowDialog() == DialogResult.OK)
 			{
 				codecs = settingsForm.Codecs;
-				Properties.Settings.Default.ShowEncodingWindow = settingsForm.ShowEncoder;
-				Properties.Settings.Default.ShowDecodingWindow = settingsForm.ShowDecoder;
-				Properties.Settings.Default.MimimizeWindows = settingsForm.MinimizeWindows;
-				Properties.Settings.Default.Save();
+				Settings.Default.ShowEncodingWindow = settingsForm.ShowEncoder;
+				Settings.Default.ShowDecodingWindow = settingsForm.ShowDecoder;
+				Settings.Default.MimimizeWindows = settingsForm.MinimizeWindows;
+				Settings.Default.Save();
 			}
 		}
 
@@ -676,7 +677,7 @@ namespace MLifterAudioBookGenerator
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(MLifterAudioBookGenerator.Properties.Resources.HOWTO_URL);
+				System.Diagnostics.Process.Start(Resources.HOWTO_URL);
 			}
 			catch (Exception exp)
 			{

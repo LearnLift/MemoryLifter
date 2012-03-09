@@ -10,6 +10,7 @@ using System.Threading;
 using MLifterAudioBookGenerator.Audio;
 using System.Xml.Serialization;
 using MLifter.AudioTools.Codecs;
+using MLifter.AudioBookGenerator.Properties;
 
 namespace MLifterAudioBookGenerator
 {
@@ -44,7 +45,7 @@ namespace MLifterAudioBookGenerator
                     Dictionary<string, Codec> encodeCodecs = codecs.encodeCodecs;
                     Dictionary<string, Codec> decodeCodecs = codecs.decodeCodecs;
 
-                    if (audiobook.Extension.ToLowerInvariant() != Properties.Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant()
+                    if (audiobook.Extension.ToLowerInvariant() != Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant()
                         && !encodeCodecs.ContainsKey(audiobook.Extension.ToLowerInvariant()))
                     {
                         AddLog(string.Format("Specified extension ({0}) is not available => Check encoder settings", audiobook.Extension.ToLowerInvariant()));
@@ -70,7 +71,7 @@ namespace MLifterAudioBookGenerator
                     int tempfolderindex = 0;
                     do
                     {
-                        tempfolder = new DirectoryInfo(Path.Combine(Path.GetTempPath(), Properties.Settings.Default.TempFolderPath + tempfolderindex.ToString()));
+                        tempfolder = new DirectoryInfo(Path.Combine(Path.GetTempPath(), Settings.Default.TempFolderPath + tempfolderindex.ToString()));
                         tempfolderindex++;
                     } while (tempfolder.Exists);
                     tempfolder.Create();
@@ -88,13 +89,14 @@ namespace MLifterAudioBookGenerator
                             {
                                 //decode file
                                 string filename = sourcefiles[i].file.Name;
-                                sourcefiles[i].file = decodeCodecs[sourcefiles[i].Extension].Decode(sourcefiles[i].file, tempfolder, Properties.Settings.Default.ShowDecodingWindow, Properties.Settings.Default.MimimizeWindows);
+                                sourcefiles[i].file = decodeCodecs[sourcefiles[i].Extension].Decode(sourcefiles[i].file, tempfolder, 
+									Settings.Default.ShowDecodingWindow, Settings.Default.MimimizeWindows);
                                 if (sourcefiles[i].ContainsFile)
                                     foundfile = true;
                                 else
                                     AddLog(string.Format("Decoding ({0}) did not produce a file => Check decoder settings", filename));
                             }
-                            else if (sourcefiles[i].ContainsFile && sourcefiles[i].Extension == Properties.Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
+                            else if (sourcefiles[i].ContainsFile && sourcefiles[i].Extension == Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
                                 foundfile = true;
                             else if (sourcefiles[i].ContainsFile)
                                 AddLog(string.Format("Extension {0} not supported ({1}) => Check decoder settings", sourcefiles[i].Extension, sourcefiles[i].file.Name));
@@ -110,7 +112,7 @@ namespace MLifterAudioBookGenerator
                         {
                             //concatenate all wave files
                             AddLog("Joining audio files");
-                            FileInfo audiobookwave = new FileInfo(Path.Combine(tempfolder.FullName, Properties.Resources.AUDIOBOOK_DEFAULTNAME + Properties.Resources.AUDIO_WAVE_EXTENSION));
+                            FileInfo audiobookwave = new FileInfo(Path.Combine(tempfolder.FullName, Resources.AUDIOBOOK_DEFAULTNAME + Resources.AUDIO_WAVE_EXTENSION));
                             ABWaveCat wavecat = new ABWaveCat();
                             wavecat.Concatenate(sourcefiles, audiobookwave, options.Stereo);
 
@@ -118,13 +120,14 @@ namespace MLifterAudioBookGenerator
 
                             bool changeToWaveExtension = true; //fix for [MLA-1272] error message for file path without extension
 
-                            if (audiobook.Extension.ToLowerInvariant() != Properties.Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
+                            if (audiobook.Extension.ToLowerInvariant() != Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
                             {
                                 if (encodeCodecs.ContainsKey(audiobook.Extension.ToLowerInvariant()))
                                 {
                                     //convert audiobook to specified format
                                     AddLog("Converting audiobook");
-                                    FileInfo encodedfile = encodeCodecs[audiobook.Extension.ToLowerInvariant()].Encode(audiobookwave, tempfolder, Properties.Settings.Default.ShowEncodingWindow, Properties.Settings.Default.MimimizeWindows);
+                                    FileInfo encodedfile = encodeCodecs[audiobook.Extension.ToLowerInvariant()].Encode(audiobookwave, tempfolder, 
+										Settings.Default.ShowEncodingWindow, Settings.Default.MimimizeWindows);
                                     if (encodedfile != null)
                                     {
                                         try
@@ -148,9 +151,9 @@ namespace MLifterAudioBookGenerator
                             }
 
                             if (changeToWaveExtension) //change file to wave extension and force wave generation
-                                audiobook = new FileInfo(Path.ChangeExtension(audiobook.FullName, Properties.Resources.AUDIO_WAVE_EXTENSION));
+                                audiobook = new FileInfo(Path.ChangeExtension(audiobook.FullName, Resources.AUDIO_WAVE_EXTENSION));
 
-                            if (audiobook.Extension.ToLowerInvariant() == Properties.Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
+                            if (audiobook.Extension.ToLowerInvariant() == Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant())
                             {
                                 try
                                 {

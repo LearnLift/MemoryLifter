@@ -8,8 +8,8 @@
     <ProjectGuid>{D1E335F4-DF8A-4D15-AE78-EB2DEEAED488}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MLifterUnbind</RootNamespace>
-    <AssemblyName>MLifterUnbind</AssemblyName>
+    <RootNamespace>MLifter.Unbind</RootNamespace>
+    <AssemblyName>MLifter.Unbind</AssemblyName>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>

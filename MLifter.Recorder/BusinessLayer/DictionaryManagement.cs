@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.IO;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
-
 using MLifter;
+using MLifter.AudioTools.Codecs;
+using MLifter.Controls;
 using MLifter.DAL;
 using MLifter.DAL.Interfaces;
-using System.Diagnostics;
-using MLifter.AudioTools.Codecs;
 using MLifter.Generics;
-using MLifter.Controls;
+using MLifter.Recorder.Properties;
 
 namespace MLifter.AudioTools
 {
@@ -130,21 +130,21 @@ namespace MLifter.AudioTools
             }
             catch (IOException)
             {
-                TaskDialog.MessageBox(Properties.Resources.DIC_ERROR_LOADING_LOCKED_CAPTION, Properties.Resources.DIC_ERROR_LOADING_LOCKED_CAPTION,
-                    String.Format(Properties.Resources.DIC_ERROR_LOADING_LOCKED_TEXT, filename), TaskDialogButtons.OK, TaskDialogIcons.Error);
+                TaskDialog.MessageBox(Resources.DIC_ERROR_LOADING_LOCKED_CAPTION, Resources.DIC_ERROR_LOADING_LOCKED_CAPTION,
+                    String.Format(Resources.DIC_ERROR_LOADING_LOCKED_TEXT, filename), TaskDialogButtons.OK, TaskDialogIcons.Error);
                 throw;
             }
             catch (ProtectedLearningModuleException)
             {
-                TaskDialog.MessageBox(Properties.Resources.DIC_ERROR_LOADING_PROTECTED_CAPTION, Properties.Resources.DIC_ERROR_LOADING_PROTECTED_CAPTION,
-                    Properties.Resources.DIC_ERROR_LOADING_PROTECTED_TEXT, TaskDialogButtons.OK, TaskDialogIcons.Error);
+                TaskDialog.MessageBox(Resources.DIC_ERROR_LOADING_PROTECTED_CAPTION, Resources.DIC_ERROR_LOADING_PROTECTED_CAPTION,
+                    Resources.DIC_ERROR_LOADING_PROTECTED_TEXT, TaskDialogButtons.OK, TaskDialogIcons.Error);
                 throw;
             }
             catch (Exception exp)
             {
                 Trace.WriteLine("Exception in LoadDictionary: " + exp.ToString());
-                TaskDialog.MessageBox(Properties.Resources.DIC_ERROR_LOADING_CAPTION, Properties.Resources.DIC_ERROR_LOADING_CAPTION,
-                    String.Format(Properties.Resources.DIC_ERROR_LOADING_TEXT, filename), TaskDialogButtons.OK, TaskDialogIcons.Error);
+                TaskDialog.MessageBox(Resources.DIC_ERROR_LOADING_CAPTION, Resources.DIC_ERROR_LOADING_CAPTION,
+                    String.Format(Resources.DIC_ERROR_LOADING_TEXT, filename), TaskDialogButtons.OK, TaskDialogIcons.Error);
                 throw; //rethrow exception to notify the caller
             }
         }

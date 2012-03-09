@@ -1,7 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data.SqlServerCe;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -9,20 +15,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
-using MLifter.DAL.Interfaces;
-using System.IO;
-using System.Collections.ObjectModel;
-using MLifter.DAL.DB;
-using MLifter.DAL;
-using MLifter.Controls;
-using System.Data.SqlServerCe;
-using MLifter.DAL.DB.MsSqlCe;
-using System.Windows;
 using MLifter.BusinessLayer;
+using MLifter.Controls;
+using MLifter.DAL;
+using MLifter.DAL.DB;
+using MLifter.DAL.DB.MsSqlCe;
+using MLifter.DAL.Interfaces;
 using MLifter.DAL.Tools;
 using MLifter.Generics;
-using System.ComponentModel;
-using System.Diagnostics;
 
 namespace MLifterSettingsManager
 {
@@ -144,7 +144,7 @@ namespace MLifterSettingsManager
 		/// <remarks>Documented by Dev02, 2009-07-09</remarks>
 		private void ButtonLoadExtension_Click(object sender, RoutedEventArgs e)
 		{
-			string file = getFilePath(Properties.Resources.EXTENSION_FILEFILTER);
+			string file = getFilePath(MLifter.SettingsManager.Properties.Resources.EXTENSION_FILEFILTER);
 			if (!String.IsNullOrEmpty(file))
 				OpenExtensionFile(file);
 		}
@@ -157,7 +157,7 @@ namespace MLifterSettingsManager
 		/// <remarks>Documented by Dev02, 2009-07-09</remarks>
 		private void ButtonBrowseDataFile_Click(object sender, RoutedEventArgs e)
 		{
-			string file = getFilePath(Properties.Resources.EXTENSION_DATAFILEFILTER);
+			string file = getFilePath(MLifter.SettingsManager.Properties.Resources.EXTENSION_DATAFILEFILTER);
 			if (!String.IsNullOrEmpty(file))
 			{
 				using (FileStream ExtensionDataFileStream = new FileStream(file, FileMode.Open))
@@ -234,7 +234,7 @@ namespace MLifterSettingsManager
 			Clear();
 			System.Windows.Forms.SaveFileDialog DialogSave = new System.Windows.Forms.SaveFileDialog();
 			DialogSave.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			DialogSave.Filter = Properties.Resources.EXTENSION_FILEFILTER;
+			DialogSave.Filter = MLifter.SettingsManager.Properties.Resources.EXTENSION_FILEFILTER;
 			DialogSave.FilterIndex = 1;
 			DialogSave.RestoreDirectory = true;
 			if (DialogSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)

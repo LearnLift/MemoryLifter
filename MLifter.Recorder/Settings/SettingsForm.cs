@@ -9,6 +9,7 @@ using System.IO;
 using System.Threading;
 using System.Globalization;
 using MLifter.AudioTools.Codecs;
+using MLifter.Recorder.Properties;
 
 namespace MLifter.AudioTools
 {
@@ -39,7 +40,7 @@ namespace MLifter.AudioTools
             InitializeComponent();
 
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(groupBoxDelays, Properties.Resources.DELAY_DESCRIPTION);
+            toolTip.SetToolTip(groupBoxDelays, Resources.DELAY_DESCRIPTION);
 
             this.settings = settings;
 
@@ -144,19 +145,19 @@ namespace MLifter.AudioTools
 
             listViewElementsToRecord.Items.Clear();
 
-            questionItem = new ListViewItem(string.Format(Properties.Resources.LISTBOXFIELDS_QUESTION_TEXT, dictionaryManager.QuestionCaption));
+            questionItem = new ListViewItem(string.Format(Resources.LISTBOXFIELDS_QUESTION_TEXT, dictionaryManager.QuestionCaption));
             questionItem.Checked = settings.RecordQuestion;
             questionItem.Tag = MediaItemType.Question;
 
-            questionExampleItem = new ListViewItem(string.Format(Properties.Resources.LISTBOXFIELDS_EXQUESTION_TEXT, dictionaryManager.QuestionCaption));
+            questionExampleItem = new ListViewItem(string.Format(Resources.LISTBOXFIELDS_EXQUESTION_TEXT, dictionaryManager.QuestionCaption));
             questionExampleItem.Checked = settings.RecordQuestionExample;
             questionExampleItem.Tag = MediaItemType.QuestionExample;
 
-            answerItem = new ListViewItem(string.Format(Properties.Resources.LISTBOXFIELDS_ANSWER_TEXT, dictionaryManager.AnswerCaption));
+            answerItem = new ListViewItem(string.Format(Resources.LISTBOXFIELDS_ANSWER_TEXT, dictionaryManager.AnswerCaption));
             answerItem.Checked = settings.RecordAnswer;
             answerItem.Tag = MediaItemType.Answer;
 
-            answerExampleItem = new ListViewItem(string.Format(Properties.Resources.LISTBOXFIELDS_EXANSWER_TEXT, dictionaryManager.AnswerCaption));
+            answerExampleItem = new ListViewItem(string.Format(Resources.LISTBOXFIELDS_EXANSWER_TEXT, dictionaryManager.AnswerCaption));
             answerExampleItem.Checked = settings.RecordAnswerExample;
             answerExampleItem.Tag = MediaItemType.AnswerExample;
 
@@ -204,7 +205,7 @@ namespace MLifter.AudioTools
 
             //fill samplingrates combobox and select current setting
             comboBoxSamplingRate.Items.Clear();
-            foreach (string samplingRateString in Properties.Resources.ENCODING_AVAILABLE_SAMPLING_RATES.Split('|'))
+            foreach (string samplingRateString in Resources.ENCODING_AVAILABLE_SAMPLING_RATES.Split('|'))
             {
                 SamplingRate samplingRate = new SamplingRate(samplingRateString);
                 comboBoxSamplingRate.Items.Add(samplingRate);
@@ -215,7 +216,7 @@ namespace MLifter.AudioTools
 
             //fill channels combobox and select current setting
             comboBoxChannels.Items.Clear();
-            foreach (string channelString in Properties.Resources.ENCODING_AVAILABLE_CHANNELS.Split('|'))
+            foreach (string channelString in Resources.ENCODING_AVAILABLE_CHANNELS.Split('|'))
                 comboBoxChannels.Items.Add(int.Parse(channelString));
             comboBoxChannels.SelectedItem = settings.Channels;
 
@@ -232,7 +233,7 @@ namespace MLifter.AudioTools
         {
             //fill combobox
             comboBoxEncoder.Items.Clear();
-            comboBoxEncoder.Items.Add(Properties.Resources.ENCODING_NONE);
+            comboBoxEncoder.Items.Add(Resources.ENCODING_NONE);
             comboBoxEncoder.SelectedIndex = 0;
             Codecs.Codecs codecs = new MLifter.AudioTools.Codecs.Codecs();
             codecs.XMLString = settings.CodecSettings;
@@ -317,7 +318,7 @@ namespace MLifter.AudioTools
         {
             if (listViewElementsToRecord.CheckedIndices.Count < 1)
             {
-                MessageBox.Show(Properties.Resources.NO_ITEM_TO_RECORD_TEXT, Properties.Resources.NO_ITEM_TO_RECORD_CAPTION,
+                MessageBox.Show(Resources.NO_ITEM_TO_RECORD_TEXT, Resources.NO_ITEM_TO_RECORD_CAPTION,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -477,12 +478,12 @@ namespace MLifter.AudioTools
                         }
 
                     string text = (settings.KeyFunctions.ContainsKey(key) ? settings.KeyFunctions[key] : settings.KeyboardFunctions[key])
-                        + Properties.Resources.MULTIPLE_KEY_ASSIGNMENT_ERROR_TEXT + "\n\r";
+                        + Resources.MULTIPLE_KEY_ASSIGNMENT_ERROR_TEXT + "\n\r";
 
                     foreach (Keys assignetKey in assignetKeys)
                         text += "  * " + assignetKey + "\n\r";
 
-                    MessageBox.Show(text, Properties.Resources.MULTIPLE_KEY_ASSIGNMENT_ERROR_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(text, Resources.MULTIPLE_KEY_ASSIGNMENT_ERROR_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     checkBoxMultipleAssignment.Checked = true;
                 }
             }
@@ -871,7 +872,7 @@ namespace MLifter.AudioTools
         /// <remarks>Documented by Dev02, 2007-12-21</remarks>
         public override string ToString()
         {
-            string samplingrate = string.Format(Properties.Resources.ENCODING_SAMPLINGRATE_TOSTRINGFORMAT, 1.0 * frequency / 1000);
+            string samplingrate = string.Format(Resources.ENCODING_SAMPLINGRATE_TOSTRINGFORMAT, 1.0 * frequency / 1000);
             return samplingrate;
         }
     }

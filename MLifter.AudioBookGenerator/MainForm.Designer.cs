@@ -145,7 +145,7 @@ namespace MLifterAudioBookGenerator
 			// buttonAdd
 			// 
 			this.buttonAdd.Enabled = false;
-			this.buttonAdd.Image = global::MLifterAudioBookGenerator.Properties.Resources.goNext;
+			this.buttonAdd.Image = global::MLifter.AudioBookGenerator.Properties.Resources.goNext;
 			this.buttonAdd.Location = new System.Drawing.Point(356, 231);
 			this.buttonAdd.Name = "buttonAdd";
 			this.buttonAdd.Size = new System.Drawing.Size(50, 50);
@@ -170,7 +170,7 @@ namespace MLifterAudioBookGenerator
 			// 
 			this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonDelete.Enabled = false;
-			this.buttonDelete.Image = global::MLifterAudioBookGenerator.Properties.Resources.delete;
+			this.buttonDelete.Image = global::MLifter.AudioBookGenerator.Properties.Resources.delete;
 			this.buttonDelete.Location = new System.Drawing.Point(288, 200);
 			this.buttonDelete.Name = "buttonDelete";
 			this.buttonDelete.Size = new System.Drawing.Size(25, 25);
@@ -248,7 +248,7 @@ namespace MLifterAudioBookGenerator
 			// buttonBrowseAudiobook
 			// 
 			this.buttonBrowseAudiobook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonBrowseAudiobook.Image = global::MLifterAudioBookGenerator.Properties.Resources.document_open;
+			this.buttonBrowseAudiobook.Image = global::MLifter.AudioBookGenerator.Properties.Resources.document_open;
 			this.buttonBrowseAudiobook.Location = new System.Drawing.Point(658, 58);
 			this.buttonBrowseAudiobook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.buttonBrowseAudiobook.Name = "buttonBrowseAudiobook";
@@ -281,7 +281,7 @@ namespace MLifterAudioBookGenerator
 			// buttonBrowseLearningModule
 			// 
 			this.buttonBrowseLearningModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonBrowseLearningModule.Image = global::MLifterAudioBookGenerator.Properties.Resources.document_open;
+			this.buttonBrowseLearningModule.Image = global::MLifter.AudioBookGenerator.Properties.Resources.document_open;
 			this.buttonBrowseLearningModule.Location = new System.Drawing.Point(658, 16);
 			this.buttonBrowseLearningModule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.buttonBrowseLearningModule.Name = "buttonBrowseLearningModule";

@@ -664,7 +664,6 @@ Global
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Debug|x86.ActiveCfg = Debug
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Debug|x86.Build.0 = Debug
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Any CPU.ActiveCfg = Release
-		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Any CPU.Build.0 = Release
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Mixed Platforms.ActiveCfg = Release
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Mixed Platforms.Build.0 = Release
 		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Win32.ActiveCfg = Release

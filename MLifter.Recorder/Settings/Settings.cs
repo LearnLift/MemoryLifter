@@ -151,6 +151,9 @@ namespace MLifter.AudioTools
 		/// <remarks>Documented by Dev05, 2007-08-03</remarks>
 		public void Save(string filename)
 		{
+			string dir = Path.GetDirectoryName(filename);
+			if (!Directory.Exists(dir))
+				Directory.CreateDirectory(dir);
 			Stream outputStream = File.Create(filename);
 			XmlSerializer serializer = new XmlSerializer(typeof(Settings));
 			serializer.Serialize(outputStream, this);

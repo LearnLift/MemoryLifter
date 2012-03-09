@@ -42,7 +42,7 @@ namespace MLifter.AudioTools
             // 
             // pictureBoxNumPad
             // 
-            this.pictureBoxNumPad.Image = global::MLifter.AudioTools.Properties.Resources.numpad_layout;
+            this.pictureBoxNumPad.Image = global::MLifter.Recorder.Properties.Resources.numpad_layout;
             this.pictureBoxNumPad.Location = new System.Drawing.Point(12, 51);
             this.pictureBoxNumPad.Name = "pictureBoxNumPad";
             this.pictureBoxNumPad.Size = new System.Drawing.Size(250, 295);
@@ -52,7 +52,7 @@ namespace MLifter.AudioTools
             // 
             // pictureBoxKeyboard
             // 
-            this.pictureBoxKeyboard.Image = global::MLifter.AudioTools.Properties.Resources.keyboard_layout;
+            this.pictureBoxKeyboard.Image = global::MLifter.Recorder.Properties.Resources.keyboard_layout;
             this.pictureBoxKeyboard.Location = new System.Drawing.Point(268, 184);
             this.pictureBoxKeyboard.Name = "pictureBoxKeyboard";
             this.pictureBoxKeyboard.Size = new System.Drawing.Size(533, 162);

@@ -6,6 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using MLifter.Recorder.Properties;
 
 namespace MLifter.AudioTools
 {
@@ -262,17 +263,17 @@ namespace MLifter.AudioTools
 
                             if (key == Keys.Enter || key == Keys.Add)
                             {
-                                g.DrawImage(Properties.Resources.long_green_vertical, 0, 0, background.Width, background.Height);
+                                g.DrawImage(Resources.long_green_vertical, 0, 0, background.Width, background.Height);
                                 g.DrawImage(button.BackgroundImage, 0, background.Height / 2 - background.Width / 2, background.Width, background.Width);
                             }
                             else if (key == Keys.NumPad0)
                             {
-                                g.DrawImage(Properties.Resources.long_green_horizontal, 0, 0, background.Width, background.Height);
+                                g.DrawImage(Resources.long_green_horizontal, 0, 0, background.Width, background.Height);
                                 g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                             }
                             else
                             {
-                                g.DrawImage(Properties.Resources.small_green, 0, 0, background.Width, background.Height);
+                                g.DrawImage(Resources.small_green, 0, 0, background.Width, background.Height);
                                 g.DrawImage(button.BackgroundImage, 0, 0, background.Width, background.Height);
                             }
                             button.BackgroundImage = background;
@@ -289,11 +290,11 @@ namespace MLifter.AudioTools
                         else
                         {
                             if (key == Keys.Enter || key == Keys.Add)
-                                button.BackgroundImage = Properties.Resources.long_grey_vertical;
+                                button.BackgroundImage = Resources.long_grey_vertical;
                             else if (key == Keys.NumPad0)
-                                button.BackgroundImage = Properties.Resources.long_grey_horizontal;
+                                button.BackgroundImage = Resources.long_grey_horizontal;
                             else
-                                button.BackgroundImage = Properties.Resources.small_grey;
+                                button.BackgroundImage = Resources.small_grey;
 
                             button.Enabled = false;
                             button.Text = button.Name.Replace("button", "").Replace("Divide", "�").Replace("Plus", "+").Replace("Minus", "-").Replace("Multiply", "*");
@@ -309,7 +310,7 @@ namespace MLifter.AudioTools
                         g.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
                         g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
                         g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                        g.DrawImage(Properties.Resources.small_green, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.small_green, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, 0, 0, background.Width, background.Height);
                         button.BackgroundImage = background;
 
@@ -335,12 +336,12 @@ namespace MLifter.AudioTools
 
                             if (key == Keys.Space)
                             {
-                                g.DrawImage(Properties.Resources.spacer_green, 0, 0, background.Width, background.Height);
+                                g.DrawImage(Resources.spacer_green, 0, 0, background.Width, background.Height);
                                 g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                             }
                             else
                             {
-                                g.DrawImage(Properties.Resources.small_green, 0, 0, background.Width, background.Height);
+                                g.DrawImage(Resources.small_green, 0, 0, background.Width, background.Height);
                                 g.DrawImage(button.BackgroundImage, 0, 0, background.Width, background.Height);
                             }
                             button.BackgroundImage = background;
@@ -357,9 +358,9 @@ namespace MLifter.AudioTools
                         else
                         {
                             if (key == Keys.Space)
-                                button.BackgroundImage = Properties.Resources.spacer_grey;
+                                button.BackgroundImage = Resources.spacer_grey;
                             else
-                                button.BackgroundImage = Properties.Resources.small_grey;
+                                button.BackgroundImage = Resources.small_grey;
 
                             button.Enabled = false;
                             button.Text = button.Name.Replace("button", "").Replace("Space", "");
@@ -725,22 +726,22 @@ namespace MLifter.AudioTools
 
                     if (key == Keys.Enter || key == Keys.Add)
                     {
-                        g.DrawImage(Properties.Resources.long_orange_vertical, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.long_orange_vertical, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, 0, background.Height / 2 - background.Width / 2, background.Width, background.Width);
                     }
                     else if (key == Keys.NumPad0)
                     {
-                        g.DrawImage(Properties.Resources.long_orange_horizontal, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.long_orange_horizontal, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                     }
                     else if (key == Keys.Space)
                     {
-                        g.DrawImage(Properties.Resources.spacer_orange, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.spacer_orange, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                     }
                     else
                     {
-                        g.DrawImage(Properties.Resources.small_orange, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.small_orange, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, 0, 0, background.Width, background.Height);
                     }
                     button.BackgroundImage = background;
@@ -786,22 +787,22 @@ namespace MLifter.AudioTools
 
                     if (key == Keys.Enter || key == Keys.Add)
                     {
-                        g.DrawImage(Properties.Resources.long_green_vertical, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.long_green_vertical, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, 0, background.Height / 2 - background.Width / 2, background.Width, background.Width);
                     }
                     else if (key == Keys.NumPad0)
                     {
-                        g.DrawImage(Properties.Resources.long_green_horizontal, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.long_green_horizontal, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                     }
                     else if (key == Keys.Space)
                     {
-                        g.DrawImage(Properties.Resources.spacer_green, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.spacer_green, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, background.Width / 2 - background.Height / 2, 0, background.Height, background.Height);
                     }
                     else
                     {
-                        g.DrawImage(Properties.Resources.small_green, 0, 0, background.Width, background.Height);
+                        g.DrawImage(Resources.small_green, 0, 0, background.Width, background.Height);
                         g.DrawImage(button.BackgroundImage, 0, 0, background.Width, background.Height);
                     }
                     button.BackgroundImage = background;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.ComponentModel;
+using MLifter.AudioBookGenerator.Properties;
 
 namespace MLifterAudioBookGenerator.Audio
 {
@@ -36,7 +37,7 @@ namespace MLifterAudioBookGenerator.Audio
             int index = 0;
             foreach (MediaFieldFile file in files)
             {
-                if (file.mediafield.Type == MediaField.TypeEnum.AudioField && file.ContainsFile && file.Extension.ToLowerInvariant() == Properties.Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant()) //fix for [MLA-1271]: only able to concatenate wave files
+                if (file.mediafield.Type == MediaField.TypeEnum.AudioField && file.ContainsFile && file.Extension.ToLowerInvariant() == Resources.AUDIO_WAVE_EXTENSION.ToLowerInvariant()) //fix for [MLA-1271]: only able to concatenate wave files
                 {
                     wa_IN.WaveHeaderIN(file.file.FullName);
 
