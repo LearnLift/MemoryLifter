@@ -1,0 +1,12 @@
+[autorun]
+OPEN=autorun.exe
+ICON=.\MemoryLifter24\MLifter.exe,0
+LABEL=MemoryLifter Stick
+action=Start MemoryLifter 2.4
+shell\open\command=autorun.exe
+shell\ML22=Start MemoryLifter 2.4
+shell\ML22\command=autorun.exe
+shell\ML22I=Install MemoryLifter 2.4
+shell\ML22I\command=.\Install\MemoryLifter-Setup.exe
+shell\ML22BR=Browse Stick
+shell\ML22BR\command=autorun.exe .\

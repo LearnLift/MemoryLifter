@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Connections>
+    <PostgreConnection>
+      <Name>Local DB</Name>
+      <Server>aleabe10</Server>
+      <Port>5432</Port>
+      <UserId>postgres</UserId>
+      <Password>mlifter</Password>
+      <Ssl>false</Ssl>
+      <Database>memorylifter</Database>
+      <OtherProperties />
+    </PostgreConnection>
+  </Connections>
+</Configuration>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AUDIOPLAYER_CRASHED_CAPTION">
+    <value>Sonido apagado</value>
+  </data>
+  <data name="AUDIOPLAYER_CRASHED_TEXT">
+    <value>Debido a un error del reproductor de audio, el sonido está apagado. Reinicie MemoryLifter para arreglar el sonido.</value>
+  </data>
+  <data name="CSH_CONNECTION_NAME">
+    <value>Memoria USB de MemoryLifter en {0}</value>
+  </data>
+  <data name="ERROR_PAGE">
+    <value>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;{0}&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {1}
+    &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EXCEPTION_POOL_EMPTY">
+    <value>El grupo está vacío.</value>
+  </data>
+  <data name="ExtensionURI_Suffix">
+    <value>?guid={0}</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_EMPTY_LM">
+    <value>¡Módulo vacío!</value>
+  </data>
+  <data name="LEARNING_MODULES_PAGE_NO_IMAGES">
+    <value>No hay ninguna imagen,</value>
+  </data>
+  <data name="LOCAL_MODULE">
+    <value>localhost</value>
+  </data>
+  <data name="MediaURI_Suffix">
+    <value>?id={0}</value>
+  </data>
+  <data name="STICK_KEY_EXTENSION">
+    <value>.key</value>
+  </data>
+  <data name="STICK_KEY_FOLDER">
+    <value>LMKeys</value>
+  </data>
+  <data name="TEACHER_DEFAULT">
+    <value>Predeterminado</value>
+  </data>
+  <data name="TEACHER_NICEGUY">
+    <value>Flexible</value>
+  </data>
+  <data name="TEACHER_OCCASIONAL">
+    <value>Alumno esporádico</value>
+  </data>
+  <data name="TEACHER_STRICT">
+    <value>Estricto</value>
+  </data>
+  <data name="XSL_CLICKFORE">
+    <value>Haga clic en el botón para ver un ejemplo:</value>
+  </data>
+  <data name="XSL_CLICKFORQ">
+    <value>Haga clic en el botón para ver la pregunta:</value>
+  </data>
+  <data name="XSL_CORRECT">
+    <value>La respuesta correcta es:</value>
+  </data>
+  <data name="XSL_DEMOTE_MESSAGE">
+    <value>La ficha se ha relegado al fichero 1.</value>
+  </data>
+  <data name="XSL_ERROR_CAPTION">
+    <value>Error de la hoja de estilos</value>
+  </data>
+  <data name="XSL_ERROR_TEXT">
+    <value>Se ha producido un error al compilar {0}.&lt;br /&gt;
+Es posible que la hoja de estilos o los elementos vinculados contengan errores.&lt;br /&gt;
+En caso de duda, restaure el archivo original en "Herramientas - Editor de estilos".</value>
+  </data>
+  <data name="XSL_FEEDBACK_CORRECT">
+    <value>Su respuesta es correcta.</value>
+  </data>
+  <data name="XSL_FEEDBACK_WRONG">
+    <value>Su respuesta es incorrecta.</value>
+  </data>
+  <data name="XSL_LISTENING_MODE_IMAGE_BUTTON_TEXT">
+    <value>Haga clic aquí para mostrar la imagen.</value>
+  </data>
+  <data name="XSL_PROMOTE_HIGHEST_MESSAGE">
+    <value>Esta ficha ha alcanzado el fichero más alto.</value>
+  </data>
+  <data name="XSL_PROMOTE_MESSAGE">
+    <value>Las fichas no se han promocionado al fichero {box_number}.</value>
+  </data>
+  <data name="XSL_RESIZE_PICTURE">
+    <value>Haga clic en la imagen para verla en el tamaño original.</value>
+  </data>
+  <data name="XSL_RESTORE_PICTURE">
+    <value>Haga clic en la imagen para verla en tamaño reducido.</value>
+  </data>
+  <data name="XSL_SELFASSESMENT_DEMOTE_MESSAGE">
+    <value>¿Desea relegar la ficha?</value>
+  </data>
+  <data name="XSL_SELFASSESMENT_PROMOTE_MESSAGE">
+    <value>¿Desea promocionar la ficha?</value>
+  </data>
+  <data name="XSL_YOUENTERED">
+    <value>Ha introducido:</value>
+  </data>
+</root>

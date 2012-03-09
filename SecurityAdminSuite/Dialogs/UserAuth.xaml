@@ -1,0 +1,58 @@
+﻿<Window x:Class="SecurityAdminSuite.UserAuth"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
+    Icon="/SecurityAdminSuite;component/Images/App.png" ShowInTaskbar="False"
+    BorderThickness="0"
+    WindowStartupLocation="CenterOwner"
+    Height="160" Width="468"
+    Background="White" >
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="User Authentication" FontWeight="Bold" Margin="5"/>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <RadioButton  x:Name="radioButtonListUser"
+                                 Content="List" Click="radioButtonListUser_Click" />
+                <RadioButton  x:Name="radioButtonFormUser" IsChecked="True"
+                                 Content="Form" Click="radioButtonFormUser_Click" />
+                <RadioButton  x:Name="radioButtonActiveDirectoryUser"
+                                 Content="Active Directory" Click="radioButtonActiveDirectoryUser_Click" />
+            </StackPanel>
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold" Foreground="Black" x:Name="textBlockPassword" Content="Password" VerticalAlignment="Center" Margin="5"/>
+            <TextBox Grid.Row="1" Grid.Column="1"  x:Name="tbString" Foreground="Black"   Text="{Binding Path=TextItem,Mode=TwoWay}" VerticalAlignment="Center"/>
+            <DockPanel Grid.Row="2" Grid.Column="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button  Grid.Row="0" Grid.Column="0"  IsDefault="True" Click="OK_Click" Margin="5" VerticalAlignment="Center">
+                    <Button.Content>
+                        <TextBlock Text="Ok" TextAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="0" Grid.Column="1" IsCancel="True" Margin="5" VerticalAlignment="Center">
+                    <Button.Content>
+                        <TextBlock Text="Cancel" TextAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+               </Grid>
+            </DockPanel>                
+        </Grid>
+
+
+    </StackPanel>
+</Window>

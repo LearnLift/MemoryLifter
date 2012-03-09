@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Connections>
+    <PostgreConnection>
+    	<Name>MemoryLifter Server</Name>
+    	<Server>127.0.0.1</Server>
+    	<Port>5432</Port>
+    	<UserId>postgres</UserId>
+    	<Password>mlifter</Password>
+    	<Ssl>false</Ssl>
+    	<Database>memorylifter</Database>
+		<SyncType>NotSynchronized</SyncType>
+		<SyncURI>http://localhost/MLifterSyncService/PgSyncService.asmx</SyncURI>
+		<MediaURI>http://localhost/MLifterSyncService/MediaFileHandler.ashx</MediaURI>
+    </PostgreConnection>
+  </Connections>
+</Configuration>

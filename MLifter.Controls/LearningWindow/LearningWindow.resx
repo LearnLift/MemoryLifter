@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerHorizontal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerHorizontal.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanelMainContent.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="statisticsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="statisticsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="statisticsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="statisticsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 28</value>
+  </data>
+  <data name="statisticsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;statisticsPanel.Name" xml:space="preserve">
+    <value>statisticsPanel</value>
+  </data>
+  <data name="&gt;&gt;statisticsPanel.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.StatisticsPanel, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;statisticsPanel.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMainContent</value>
+  </data>
+  <data name="&gt;&gt;statisticsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="statusBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="statusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 508</value>
+  </data>
+  <data name="statusBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="statusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 1</value>
+  </data>
+  <data name="statusBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="statusBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Name" xml:space="preserve">
+    <value>statusBar</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.StatusBar, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;statusBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMainContent</value>
+  </data>
+  <data name="&gt;&gt;statusBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="splitContainerVertical.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerVertical.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="questionPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="questionPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="questionPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 430</value>
+  </data>
+  <data name="questionPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;questionPanel.Name" xml:space="preserve">
+    <value>questionPanel</value>
+  </data>
+  <data name="&gt;&gt;questionPanel.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.QuestionPanel, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;questionPanel.Parent" xml:space="preserve">
+    <value>splitContainerVertical.Panel1</value>
+  </data>
+  <data name="&gt;&gt;questionPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel1.Name" xml:space="preserve">
+    <value>splitContainerVertical.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerVertical</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="answerPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="answerPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="answerPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="answerPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 430</value>
+  </data>
+  <data name="answerPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;answerPanel.Name" xml:space="preserve">
+    <value>answerPanel</value>
+  </data>
+  <data name="&gt;&gt;answerPanel.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.AnswerPanel, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;answerPanel.Parent" xml:space="preserve">
+    <value>splitContainerVertical.Panel2</value>
+  </data>
+  <data name="&gt;&gt;answerPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel2.Name" xml:space="preserve">
+    <value>splitContainerVertical.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerVertical</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 430</value>
+  </data>
+  <data name="splitContainerVertical.SplitterDistance" type="System.Int32, mscorlib">
+    <value>424</value>
+  </data>
+  <data name="splitContainerVertical.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Name" xml:space="preserve">
+    <value>splitContainerVertical</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.Parent" xml:space="preserve">
+    <value>tableLayoutPanelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;splitContainerVertical.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonsPanelMainControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="buttonsPanelMainControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 430</value>
+  </data>
+  <data name="buttonsPanelMainControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="buttonsPanelMainControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 50</value>
+  </data>
+  <data name="buttonsPanelMainControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonsPanelMainControl.Name" xml:space="preserve">
+    <value>buttonsPanelMainControl</value>
+  </data>
+  <data name="&gt;&gt;buttonsPanelMainControl.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.ButtonsPanel, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonsPanelMainControl.Parent" xml:space="preserve">
+    <value>tableLayoutPanelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;buttonsPanelMainControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 480</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelLearningWindowMiddle.Name" xml:space="preserve">
+    <value>tableLayoutPanelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelLearningWindowMiddle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelLearningWindowMiddle.Parent" xml:space="preserve">
+    <value>gradientPanelMain</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelLearningWindowMiddle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelLearningWindowMiddle.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="splitContainerVertical" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="buttonsPanelMainControl" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="Percent,100,Absolute,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gradientPanelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gradientPanelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gradientPanelMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="gradientPanelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 480</value>
+  </data>
+  <data name="gradientPanelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gradientPanelMain.Name" xml:space="preserve">
+    <value>gradientPanelMain</value>
+  </data>
+  <data name="&gt;&gt;gradientPanelMain.Type" xml:space="preserve">
+    <value>MLifter.Components.GradientPanel, MLifterComponents, Version=2.2.452.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gradientPanelMain.Parent" xml:space="preserve">
+    <value>panelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;gradientPanelMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dockingButtonStack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 460</value>
+  </data>
+  <data name="dockingButtonStack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="dockingButtonStack.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dockingButtonStack.Text" xml:space="preserve">
+    <value>Hide Stack</value>
+  </data>
+  <data name="&gt;&gt;dockingButtonStack.Name" xml:space="preserve">
+    <value>dockingButtonStack</value>
+  </data>
+  <data name="&gt;&gt;dockingButtonStack.Type" xml:space="preserve">
+    <value>MLifter.Components.DockingButton, MLifterComponents, Version=2.2.452.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dockingButtonStack.Parent" xml:space="preserve">
+    <value>panelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;dockingButtonStack.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelLearningWindowMiddle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelLearningWindowMiddle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="panelLearningWindowMiddle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panelLearningWindowMiddle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 480</value>
+  </data>
+  <data name="panelLearningWindowMiddle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelLearningWindowMiddle.Name" xml:space="preserve">
+    <value>panelLearningWindowMiddle</value>
+  </data>
+  <data name="&gt;&gt;panelLearningWindowMiddle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelLearningWindowMiddle.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMainContent</value>
+  </data>
+  <data name="&gt;&gt;panelLearningWindowMiddle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 508</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMainContent.Name" xml:space="preserve">
+    <value>tableLayoutPanelMainContent</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMainContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMainContent.Parent" xml:space="preserve">
+    <value>splitContainerHorizontal.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMainContent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelMainContent.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="statisticsPanel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="statusBar" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelLearningWindowMiddle" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,28,Percent,100,Absolute,0,Absolute,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel1.Name" xml:space="preserve">
+    <value>splitContainerHorizontal.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerHorizontal</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="stackFlow.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="stackFlow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="stackFlow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 144</value>
+  </data>
+  <data name="stackFlow.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;stackFlow.Name" xml:space="preserve">
+    <value>stackFlow</value>
+  </data>
+  <data name="&gt;&gt;stackFlow.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.StackFlow, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;stackFlow.Parent" xml:space="preserve">
+    <value>splitContainerHorizontal.Panel2</value>
+  </data>
+  <data name="&gt;&gt;stackFlow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel2.Name" xml:space="preserve">
+    <value>splitContainerHorizontal.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerHorizontal</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 656</value>
+  </data>
+  <data name="splitContainerHorizontal.SplitterDistance" type="System.Int32, mscorlib">
+    <value>508</value>
+  </data>
+  <data name="splitContainerHorizontal.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Name" xml:space="preserve">
+    <value>splitContainerHorizontal</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerHorizontal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="audioPlayerComponent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="userDialogComponent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>839, 656</value>
+  </data>
+  <data name="&gt;&gt;audioPlayerComponent.Name" xml:space="preserve">
+    <value>audioPlayerComponent</value>
+  </data>
+  <data name="&gt;&gt;audioPlayerComponent.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.AudioPlayerComponent, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;userDialogComponent.Name" xml:space="preserve">
+    <value>userDialogComponent</value>
+  </data>
+  <data name="&gt;&gt;userDialogComponent.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.UserDialogComponent, MLifterControls, Version=2.2.464.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LearningWindow</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

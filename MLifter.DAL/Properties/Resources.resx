@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BlankDictionaryV2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\xml\blankdictionaryv2_0.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="BOX_NAME_POOL" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="CARDS_COPYTO_STATUS" xml:space="preserve">
+    <value>Copying card {0} of {1}...</value>
+  </data>
+  <data name="CATEGORYNAMES0" xml:space="preserve">
+    <value>Arts (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES1" xml:space="preserve">
+    <value>Earth Sciences (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES10" xml:space="preserve">
+    <value>Social Science (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES11" xml:space="preserve">
+    <value>Technology (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES2" xml:space="preserve">
+    <value>History (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES3" xml:space="preserve">
+    <value>Humanities (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES4" xml:space="preserve">
+    <value>Languages (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES5" xml:space="preserve">
+    <value>Leisure (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES6" xml:space="preserve">
+    <value>Medical Sciences (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES7" xml:space="preserve">
+    <value>Miscellaneous (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES8" xml:space="preserve">
+    <value>Politics (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CATEGORYNAMES9" xml:space="preserve">
+    <value>Pure Sciences (old category)</value>
+    <comment>Old category names (for backward compatibility).</comment>
+  </data>
+  <data name="CHAPTER_FORMAT_STRING" xml:space="preserve">
+    <value>Chapter {0} - {1}</value>
+  </data>
+  <data name="CONFIGURATION_FILE_EXTENSION" xml:space="preserve">
+    <value>.mlcfg</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_ARCHIVE_EXTENSION" xml:space="preserve">
+    <value>.dzp</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_DB_POSTGRES_CONNECTION_PREFIX" xml:space="preserve">
+    <value>pgsql://</value>
+  </data>
+  <data name="DICTIONARY_DIP_EXTENSION" xml:space="preserve">
+    <value>.dip</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_ODF_EXTENSION" xml:space="preserve">
+    <value>.odf</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_ODX_CONNECTION_PREFIX" xml:space="preserve">
+    <value>xml://</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_ODX_EXTENSION" xml:space="preserve">
+    <value>.odx</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="DICTIONARY_ZIP_EXTENSION" xml:space="preserve">
+    <value>.zip</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_FORMAT_NOT_SUPPORTED" xml:space="preserve">
+    <value>This Learning Module format is not supported! ({0})</value>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_FORMAT_OLD_VERSION" xml:space="preserve">
+    <value>This Learning Module has been generated by an old version! ({0})</value>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_PATH_EXISTS" xml:space="preserve">
+    <value>This Learning Module path already exists! ({0})</value>
+  </data>
+  <data name="EXCEPTION_ID_ACCESS" xml:space="preserve">
+    <value>Index access exception, cannot access card/chapter {0}.</value>
+  </data>
+  <data name="EXCEPTION_ID_EXISTS" xml:space="preserve">
+    <value>The ID for this card is already used! ({0})</value>
+  </data>
+  <data name="EXCEPTION_ID_OVERFLOW" xml:space="preserve">
+    <value>Index overflow, cannot add more than {0} cards/chapters.</value>
+  </data>
+  <data name="EXCEPTION_INVALID_BOX" xml:space="preserve">
+    <value>This box does not exist! ({0})</value>
+  </data>
+  <data name="EXCEPTION_INVALID_DICTIONARY" xml:space="preserve">
+    <value>Invalid Learning Module!</value>
+  </data>
+  <data name="EXCEPTION_INVALID_IMPORT_FORMAT" xml:space="preserve">
+    <value>The attempt to import {0} failed!</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_ARCHIVE" xml:space="preserve">
+    <value>This is not a valid MemoryLifter Learning Module archive!</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_ARCHIVE_HEADER" xml:space="preserve">
+    <value>The MemoryLifter archive header is invalid!</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_MEDIA_FILENAME" xml:space="preserve">
+    <value>Could not get a valid media filename! ({0})</value>
+  </data>
+  <data name="EXCEPTION_NOT_DECRYPTED" xml:space="preserve">
+    <value>The Learning Module could not be decrypted successfully.</value>
+  </data>
+  <data name="EXCEPTION_UNKNOWN_CONNECTIONPREFIX" xml:space="preserve">
+    <value>Unknown connection prefix. ({0})</value>
+  </data>
+  <data name="EXCEPTION_UNKNOWN_MEDIA" xml:space="preserve">
+    <value>Unknown media file extension! ({0})</value>
+  </data>
+  <data name="EXCEPTION_UNSUPPORTED_DATABASETYPE" xml:space="preserve">
+    <value>Unsupported database type! ({0})</value>
+  </data>
+  <data name="EXCEPTION_WORD_IS_NULL" xml:space="preserve">
+    <value>Cannot add null value for a word.</value>
+  </data>
+  <data name="EXCEPTION_WORD_LIST_IS_NULL" xml:space="preserve">
+    <value>Cannot add null value to list of words.</value>
+  </data>
+  <data name="MergeDictionaryV2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\xslt\mergedictionaryv2_0.xslt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="NEWCATEGORYNAMES0" xml:space="preserve">
+    <value>Applied Sciences</value>
+  </data>
+  <data name="NEWCATEGORYNAMES1" xml:space="preserve">
+    <value>Arts</value>
+  </data>
+  <data name="NEWCATEGORYNAMES2" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="NEWCATEGORYNAMES3" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="NEWCATEGORYNAMES4" xml:space="preserve">
+    <value>Natural Sciences</value>
+  </data>
+  <data name="NEWCATEGORYNAMES5" xml:space="preserve">
+    <value>Social Sciences</value>
+  </data>
+  <data name="PACKER_ARCHIVE_HEADER_COMMENT_PACK" xml:space="preserve">
+    <value>MemoryLifter Packed Dictionary, Category {0}</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="PACKER_ARCHIVE_HEADER_COMMENT_UNPACK" xml:space="preserve">
+    <value>MemoryLifter Packed Dictionary</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="XML_BACKUP_FILENAME" xml:space="preserve">
+    <value>Backup ({0}) of {1}</value>
+  </data>
+  <data name="DICTIONARY_EDB_EXTENSION" xml:space="preserve">
+    <value>.mlm</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="MsSqlCeDbCreateScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MsSqlCeDbCreateScript.sql;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="CREATE_NEW_USER" xml:space="preserve">
+    <value>Create new User...</value>
+  </data>
+  <data name="DICTIONARY_SYNCED_EDB_EXTENSION1" xml:space="preserve">
+    <value>.smlm</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="MsSqlCeDbCreateIdxScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MsSqlCeDbCreateIdxScript.sql;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="StickUserName" xml:space="preserve">
+    <value>MemoryLifter Stick</value>
+    <comment>do not translate!</comment>
+  </data>
+  <data name="EXTENSION_FILE_EXTENSION" xml:space="preserve">
+    <value>.mlx</value>
+    <comment>do not translate!</comment>
+  </data>
+</root>

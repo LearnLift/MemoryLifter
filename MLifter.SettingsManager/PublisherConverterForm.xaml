@@ -1,0 +1,66 @@
+﻿<Window x:Class="MLifterSettingsManager.PublisherConverterForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Auto Convertion + Publishing of Learning Modules" Height="535" Width="832" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="23" />
+            <RowDefinition Height="auto" MinHeight="23" />
+            <RowDefinition Height="auto" MinHeight="13" />
+            <RowDefinition Height="auto" MinHeight="13" />
+            <RowDefinition Height="auto" MinHeight="31" />
+            <RowDefinition Height="auto" MinHeight="31" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" MinHeight="23" />
+                    <RowDefinition Height="auto" MinHeight="23" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Name="labelSourceFilesAre" VerticalAlignment="Top" FontWeight="Bold" Content="Select which kind of files you would like to publish:" />
+                <RadioButton Grid.Row="0" Grid.Column="1" Margin="10,10,0,10" Grid.ColumnSpan="3" IsChecked="False" 
+                     x:Name="radioButtonSourceIsMlm" Content="*.mlm" />
+                <RadioButton Grid.Row="1" Grid.Column="1"  Margin="10,10,0,10" Grid.ColumnSpan="3" IsChecked="True" 
+                     x:Name="radioButtonSourceIsDzp" Content="*.dzp" />
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="23" />
+                <RowDefinition Height="auto" MinHeight="23" />
+                <RowDefinition Height="auto" MinHeight="13" />
+                <RowDefinition Height="auto" MinHeight="13" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Name="labelSourceFolder" VerticalAlignment="Top" FontWeight="Bold" Content="Choose Source Folder:" />
+                <TextBox Margin="5,5,5,5" IsEnabled="True" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" x:Name="textBoxSourceFolder">
+                    C:\Documents and Settings\ChrFin00\Desktop\DZP
+                </TextBox>
+                <Button Margin="5,5,5,5" IsEnabled="True" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" x:Name="buttonBrowseSource" Click="buttonBrowseSource_Click" >Browse...</Button>
+                <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Name="labelDestinationFolder" VerticalAlignment="Top" FontWeight="Bold" Content="Choose Destination Folder:" />
+                <TextBox Margin="5,5,5,5" IsEnabled="True" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" x:Name="textBoxDestinationFolder">
+                    C:\Documents and Settings\ChrFin00\Desktop\MLM
+                </TextBox>
+                <Button Margin="5,5,5,5" IsEnabled="True" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" x:Name="buttonBrowseDestination" Click="buttonBrowseDestination_Click" >Browse...</Button>
+            </Grid>
+        </DockPanel>
+        <Button Margin="5,9.362,5,-5.298" Grid.Column="2" Grid.Row="3" x:Name="buttonCancel" Click="buttonCancel_Click">Cancel</Button>
+        <Button Margin="5,9.362,5,-5.298" IsEnabled="True" Grid.Column="1" Grid.Row="3" x:Name="buttonPublish" Click="buttonPublish_Click">Publish</Button>
+        <ListBox Margin="5,11,5,0" Grid.ColumnSpan="3" Grid.Row="4" Name="listBoxLog" VerticalAlignment="Top" Height="246" Grid.RowSpan="2" />
+    </Grid>
+</Window>

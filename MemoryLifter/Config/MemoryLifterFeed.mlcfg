@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<Feeds>
+		<ModuleFeed>
+			<Name>MemoryLifter.com Modules</Name>
+			<CategoriesUri>http://services.memorylifter.com/lms/Categories</CategoriesUri>
+			<ModulesUri>http://services.memorylifter.com/lms/Modules</ModulesUri>
+		</ModuleFeed>
+	</Feeds>
+</Configuration>

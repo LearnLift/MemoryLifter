@@ -1,0 +1,15 @@
+﻿<Window x:Class="MLifterSettingsManager.OptimizeAudioProgress"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Optimizing Audio" Height="400" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ProgressBar Margin="12,12,12,0" Name="progressBar" Height="22" VerticalAlignment="Top" />
+        <ListBox Margin="12,40,12,12" Name="listBox" />
+    </Grid>
+</Window>

@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MLifter.DAL.Category" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\Category.cs</FileName>
+      <HashCode>AAACAAAAQBAgBAAUgCAAAAAAAQAAAIYAAAAQAABAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.Interfaces.SettingsHelper" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.Interfaces.QueryDirectionsHelper" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryDirection.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.Interfaces.QueryTypeHelper" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.Interfaces.QueryMultipleChoiceOptionsHelper" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryMultipleChoiceOptions.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLifter.DAL.Interfaces.GradeSynonymsHelper" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IGradeSynonyms.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MLifter.DAL.Interfaces.QueryStruct" Collapsed="true">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICards.cs</FileName>
+      <HashCode>ABAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MLifter.DAL.Interfaces.ConnectionStringStruct" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IUser.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAIQAAACAAAACIIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MLifter.DAL.Interfaces.CompiledTransform" Collapsed="true">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MLifter.DAL.Interfaces.CommentarySoundIdentifier" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MLifter.DAL.Interfaces.DataLayerVersionInfo" Collapsed="true">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDatabase.cs</FileName>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MLifter.DAL.Interfaces.IWords" Collapsed="true">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IWords.cs</FileName>
+      <HashCode>CAAAAAAAAAEAAAAAAgAAAAAAAQAAAAAAABAAAAAgAAE=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ICard" Collapsed="true">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICard.cs</FileName>
+      <HashCode>AABCJAAAAAAAAIAAAAQCAAAAAAIAAAAkkgAEAgBFEAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ICards" Collapsed="true">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICards.cs</FileName>
+      <HashCode>AAIAgAAAAEAAAABAAAAAAAQIAAEFAEAAAAAAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IChapter" Collapsed="true">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IChapter.cs</FileName>
+      <HashCode>AAACAAAAAAEggEAAAAQAAAAAAAAAAAAAggAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IChapters" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IChapters.cs</FileName>
+      <HashCode>AABAAAAAAMAAAABAAAAAAAQAAAEIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IDictionary" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDictionary.cs</FileName>
+      <HashCode>YABKjICAAIQgAE0kkCQiAACIAEACBhAAABAECgALCAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IMedia" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IMedia.cs</FileName>
+      <HashCode>AAACAAAAAAAAQAwAAAIAIACAAAAIAQAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IAudio" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IMedia.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IImage" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IMedia.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IQueryOptions" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryOptions.cs</FileName>
+      <HashCode>AAEAIAgAAAAAAAYAAAAAABAACIgBAAAECAAGAAYGAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IQueryType" Collapsed="true">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryType.cs</FileName>
+      <HashCode>AgEAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ISnoozeOptions" Collapsed="true">
+    <Position X="8.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISnoozeOptions.cs</FileName>
+      <HashCode>AgAEAIgAAAACgAAAAQggAAgAAAAIIAAAAIAAAEAAABI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IStatistic" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IStatistic.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAABAAAACAAAACAAAAAACAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IStatistics" Collapsed="true">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IStatistics.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IWord" Collapsed="true">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IWord.cs</FileName>
+      <HashCode>AAECAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IBox" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IBox.cs</FileName>
+      <HashCode>AEACAAAAAAAAgAAAAAAAAAAAAAAAAgAACAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ICardStyle" Collapsed="true">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>AAAAKAAAAAAAAAAEAAAAAAAAAAAAAAAEEAAAAgAEAhA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ITextStyle" Collapsed="true">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>ABAAARAAAAAJAgAGAAAAAgAACAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IUser">
+    <Position X="3.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IUser.cs</FileName>
+      <HashCode>AAASAAAgAAAAIAAAAAIAAAAAAAACAAACQSAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.ISettings" Collapsed="true">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISettings.cs</FileName>
+      <HashCode>AAEAIQgAAAAQAAYBEgAAABAQKIgJQACGDAAGAAYGAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IQueryDirections" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryDirection.cs</FileName>
+      <HashCode>CAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IQueryMultipleChoiceOptions" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryMultipleChoiceOptions.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAEAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IPreset" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IPreset.cs</FileName>
+      <HashCode>AAAAAAAAAAABgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IPresets" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IPresets.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IGradeSynonyms" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IGradeSynonyms.cs</FileName>
+      <HashCode>AAAAAAAACCAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IDictionaries" Collapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDictionaries.cs</FileName>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAQAAAEAAgAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MLifter.DAL.Interfaces.IDatabase" Collapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDatabase.cs</FileName>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAQAAAAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MLifter.DAL.Interfaces.Side" Collapsed="true">
+    <Position X="5.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICard.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.QueryOrder" Collapsed="true">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICards.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAAAAAIABAAEAgAAAgEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.QueryOrderDir" Collapsed="true">
+    <Position X="12.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICards.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.QueryCardState" Collapsed="true">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICards.cs</FileName>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAIAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.ETeacherSounds" Collapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDictionary.cs</FileName>
+      <HashCode>AAUAAAABAgAAAQAAAEAAAAAAAAAAAEBCAAAAAIAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EMedia" Collapsed="true">
+    <Position X="12.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IMedia.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAABg=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EGradeSynonyms" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryOptions.cs</FileName>
+      <HashCode>AAAAAAAACCAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EGradeTyping" Collapsed="true">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryOptions.cs</FileName>
+      <HashCode>AAAAAAIAAAAAAAAAAAQAACAAAAAAAAAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EQueryType" Collapsed="true">
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryType.cs</FileName>
+      <HashCode>AgEAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.ESnoozeMode" Collapsed="true">
+    <Position X="10.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISnoozeOptions.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAQCAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.WordType" Collapsed="true">
+    <Position X="10.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IWord.cs</FileName>
+      <HashCode>AgEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.VerticalAlignment" Collapsed="true">
+    <Position X="8.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAQAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.HorizontalAlignment" Collapsed="true">
+    <Position X="7" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAEIAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.CSSFontStyle" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>AAAAACAAAAAAACAAAIAAAAAAEAAAAAAAAAAAAAEAAAE=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.FontSizeUnit" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ICardStyle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EQueryOption" Collapsed="true">
+    <Position X="7" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryOptions.cs</FileName>
+      <HashCode>ABAAAAgAAAAAAAAAABARAAAACAAAABAADAAAAAAIEAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.EQueryDirection" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IQueryDirection.cs</FileName>
+      <HashCode>CAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.ECommentarySoundType" Collapsed="true">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISettings.cs</FileName>
+      <HashCode>AAAAAAAACAAAQAACABAAAAABAAAAAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MLifter.DAL.Interfaces.VersionType" Collapsed="true">
+    <Position X="7" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\IDatabase.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAABgAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

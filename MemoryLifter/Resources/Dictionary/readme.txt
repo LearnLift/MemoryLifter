@@ -1,0 +1,1 @@
+This example dictionary is part of the installation package.

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Connections">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UncConnection">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="UncPath" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PostgreConnection">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Server" type="xs:string" />
+                    <xs:element name="Port" type="xs:unsignedShort" />
+                    <xs:element name="UserId" type="xs:string" />
+                    <xs:element name="Password" type="xs:string" />
+                    <xs:element name="Ssl" type="xs:boolean" />
+                    <xs:element name="Database" type="xs:string" />
+                    <xs:element name="SyncType" type="xs:string" />
+                    <xs:element name="SyncURI" type="xs:string" />
+                    <xs:element name="MediaURI" type="xs:string" />
+                    <xs:element name="OtherProperties" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WebConnection">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="LearningModulesURI" type="xs:string" />
+                    <xs:element name="SyncType" type="xs:string" />
+                    <xs:element name="SyncURI" type="xs:string" />
+                    <xs:element name="MediaURI" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

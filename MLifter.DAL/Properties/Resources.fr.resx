@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BOX_NAME_POOL">
+    <value>Pool</value>
+  </data>
+  <data name="CARDS_COPYTO_STATUS">
+    <value>Copie de la carte {0} sur {1}...</value>
+  </data>
+  <data name="CATEGORYNAMES0">
+    <value>Arts (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES1">
+    <value>Sciences de la terre (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES10">
+    <value>Sciences sociales (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES11">
+    <value>Technologie (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES2">
+    <value>Histoire (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES3">
+    <value>Sciences humaines (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES4">
+    <value>Langues (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES5">
+    <value>Loisirs (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES6">
+    <value>Sciences médicales (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES7">
+    <value>Divers (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES8">
+    <value>Sciences politiques (ancienne catégorie)</value>
+  </data>
+  <data name="CATEGORYNAMES9">
+    <value>Sciences pures (ancienne catégorie)</value>
+  </data>
+  <data name="CHAPTER_FORMAT_STRING">
+    <value>Chapitre {0} - {1}</value>
+  </data>
+  <data name="CONFIGURATION_FILE_EXTENSION">
+    <value>.mlcfg</value>
+  </data>
+  <data name="DICTIONARY_ARCHIVE_EXTENSION">
+    <value>.dzp</value>
+  </data>
+  <data name="DICTIONARY_DB_POSTGRES_CONNECTION_PREFIX">
+    <value>pgsql://</value>
+  </data>
+  <data name="DICTIONARY_DIP_EXTENSION">
+    <value>.dip</value>
+  </data>
+  <data name="DICTIONARY_ODF_EXTENSION">
+    <value>.odf</value>
+  </data>
+  <data name="DICTIONARY_ODX_CONNECTION_PREFIX">
+    <value>xml://</value>
+  </data>
+  <data name="DICTIONARY_ODX_EXTENSION">
+    <value>.odx</value>
+  </data>
+  <data name="DICTIONARY_ZIP_EXTENSION">
+    <value>.zip</value>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_FORMAT_NOT_SUPPORTED">
+    <value>Ce format de module d'apprentissage n'est pas pris en charge ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_FORMAT_OLD_VERSION">
+    <value>Ce module d'apprentissage a été généré par une ancienne version ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_DICTIONARY_PATH_EXISTS">
+    <value>Ce chemin d'accès du module d'apprentissage existe déjà ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_ID_ACCESS">
+    <value>Exception d'accès à l'index, accès à la carte/au chapitre {0} impossible.</value>
+  </data>
+  <data name="EXCEPTION_ID_EXISTS">
+    <value>L'identificateur ou cette carte est déjà utilisé ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_ID_OVERFLOW">
+    <value>Dépassement de la capacité de l'index, impossible d'ajouter plus de {0} cartes/chapitres.</value>
+  </data>
+  <data name="EXCEPTION_INVALID_BOX">
+    <value>Cette boîte n'existe pas ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_INVALID_DICTIONARY">
+    <value>Module d'apprentissage non valide !</value>
+  </data>
+  <data name="EXCEPTION_INVALID_IMPORT_FORMAT">
+    <value>Echec de la tentative d'importation de {0} !</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_ARCHIVE">
+    <value>Ce n'est pas une archive de module d'apprentissage MemoryLifter valide.</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_ARCHIVE_HEADER">
+    <value>L'en-tête de l'archive MemoryLifter n'est pas valide !</value>
+  </data>
+  <data name="EXCEPTION_NO_VALID_MEDIA_FILENAME">
+    <value>Impossible d'obtenir un nom de fichier média valide ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_NOT_DECRYPTED">
+    <value>Impossible de décrypter correctement le module d'apprentissage.</value>
+  </data>
+  <data name="EXCEPTION_UNKNOWN_CONNECTIONPREFIX">
+    <value>Préfixe de connexion inconnu. ({0})</value>
+  </data>
+  <data name="EXCEPTION_UNKNOWN_MEDIA">
+    <value>Extension de fichier média inconnu ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_UNSUPPORTED_DATABASETYPE">
+    <value>Type de base de données non pris en charge ! ({0})</value>
+  </data>
+  <data name="EXCEPTION_WORD_IS_NULL">
+    <value>Impossible d'utiliser un zéro à la place d'un mot.</value>
+  </data>
+  <data name="EXCEPTION_WORD_LIST_IS_NULL">
+    <value>Impossible d'ajouter un zéro à une liste de mots.</value>
+  </data>
+  <data name="NEWCATEGORYNAMES0">
+    <value>Sciences appliquées</value>
+  </data>
+  <data name="NEWCATEGORYNAMES1">
+    <value>Arts</value>
+  </data>
+  <data name="NEWCATEGORYNAMES2">
+    <value>Langues</value>
+  </data>
+  <data name="NEWCATEGORYNAMES3">
+    <value>Divers</value>
+  </data>
+  <data name="NEWCATEGORYNAMES4">
+    <value>Sciences naturelles</value>
+  </data>
+  <data name="NEWCATEGORYNAMES5">
+    <value>Sciences sociales</value>
+  </data>
+  <data name="PACKER_ARCHIVE_HEADER_COMMENT_PACK">
+    <value>MemoryLifter Packed Dictionary, Category {0}</value>
+  </data>
+  <data name="PACKER_ARCHIVE_HEADER_COMMENT_UNPACK">
+    <value>MemoryLifter Packed Dictionary</value>
+  </data>
+  <data name="XML_BACKUP_FILENAME">
+    <value>Sauvegarde de ({0}) sur {1}</value>
+  </data>
+  <data name="DICTIONARY_EDB_EXTENSION">
+    <value>.mlm</value>
+  </data>
+  <data name="CREATE_NEW_USER">
+    <value>Créer nouvel utilisateur...</value>
+  </data>
+  <data name="DICTIONARY_SYNCED_EDB_EXTENSION1">
+    <value>.smlm</value>
+  </data>
+  <data name="StickUserName">
+    <value>MemoryLifter Stick</value>
+  </data>
+  <data name="EXTENSION_FILE_EXTENSION">
+    <value>.mlx</value>
+  </data>
+</root>
