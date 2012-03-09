@@ -146,7 +146,7 @@ namespace MLifterSettingsManager
         {
             System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            saveFileDialog.Filter = Properties.Resources.ODX_FILEFILTER;
+            saveFileDialog.Filter = MLifter.SettingsManager.Properties.Resources.ODX_FILEFILTER;
             saveFileDialog.FileName = SettingsManagerLogic.LearningModule.Title.Replace(':', '_').Replace('\\', '_').Replace('/', '_').Replace('?', '_').Replace('*', '_').Replace('|', '_').Replace('<', '_').Replace('>', '_');
             saveFileDialog.FilterIndex = 1;
             saveFileDialog.RestoreDirectory = true;
@@ -516,14 +516,16 @@ namespace MLifterSettingsManager
         private void buttonAddExtension_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = Properties.Resources.EXTENSION_FILEFILTER;
+			ofd.Filter = MLifter.SettingsManager.Properties.Resources.EXTENSION_FILEFILTER;
             if (ofd.ShowDialog().Value)
             {
                 ExtensionFile extFile = new ExtensionFile(ofd.FileName);
                 extFile.Open(LoginForm.OpenLoginForm);
                 Guid extensionId = extFile.Extension.Id;
 
-                if (SettingsManagerLogic.LearningModule.Extensions.Any(ext => ext.Id == extensionId) && MessageBox.Show(String.Format(Properties.Resources.EXTENSION_REPLACE_TEXT, extFile.Extension.Name), Properties.Resources.EXTENSION_REPLACE_CAPTION, MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+				if (SettingsManagerLogic.LearningModule.Extensions.Any(ext => ext.Id == extensionId) && 
+					MessageBox.Show(String.Format(MLifter.SettingsManager.Properties.Resources.EXTENSION_REPLACE_TEXT, extFile.Extension.Name), 
+					MLifter.SettingsManager.Properties.Resources.EXTENSION_REPLACE_CAPTION, MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                     return;
 
                 IExtension newExt = SettingsManagerLogic.LearningModule.ExtensionFactory(extFile.Extension.Id);
@@ -569,17 +571,17 @@ namespace MLifterSettingsManager
             {
                 if (!exp.SilentUpgrade)
                 {
-                    TaskDialog.MessageBox(MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CAPTION,
-                        MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_MAIN,
-                        MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CONTENT, TaskDialogButtons.OK, TaskDialogIcons.Warning);
+                    TaskDialog.MessageBox(MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CAPTION,
+                        MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_MAIN,
+                        MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CONTENT, TaskDialogButtons.OK, TaskDialogIcons.Warning);
 
                     // Update??? yes or no???
                 }
                 else
                 {
-                    System.Windows.Forms.DialogResult dr = TaskDialog.MessageBox(MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CAPTION,
-                                                               MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_MAIN,
-                                                               MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE,
+                    System.Windows.Forms.DialogResult dr = TaskDialog.MessageBox(MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_CAPTION,
+                                                               MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_MAIN,
+                                                               MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE,
                                                                TaskDialogButtons.YesNo, TaskDialogIcons.Warning);
 
                     if (dr == System.Windows.Forms.DialogResult.Yes)
@@ -588,18 +590,18 @@ namespace MLifterSettingsManager
                         {
                             if (!SettingsManagerLogic.UpdateLearningModule(exp.DatabaseVersion))
                             {
-                                TaskDialog.MessageBox(MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION,
-                                    MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN,
-                                    MLifterSettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT, TaskDialogButtons.OK, TaskDialogIcons.Error);
+                                TaskDialog.MessageBox(MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION,
+                                    MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN,
+                                    MLifter.SettingsManager.Properties.Resources.DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT, TaskDialogButtons.OK, TaskDialogIcons.Error);
 
                                 return;
                             }
                         }
                         catch (Exception exp2)
                         {
-                            TaskDialog.MessageBox(MLifterSettingsManager.Properties.Resources.DIC_ERROR_LOADING_CAPTION,
-                                MLifterSettingsManager.Properties.Resources.DIC_ERROR_LOADING_CAPTION,
-                                string.Format(MLifterSettingsManager.Properties.Resources.DIC_ERROR_LOADING_TEXT, e.LearningModuleFileName),
+                            TaskDialog.MessageBox(MLifter.SettingsManager.Properties.Resources.DIC_ERROR_LOADING_CAPTION,
+                                MLifter.SettingsManager.Properties.Resources.DIC_ERROR_LOADING_CAPTION,
+                                string.Format(MLifter.SettingsManager.Properties.Resources.DIC_ERROR_LOADING_TEXT, e.LearningModuleFileName),
                                 exp2.ToString(), string.Empty, string.Empty, TaskDialogButtons.OK, TaskDialogIcons.Error, TaskDialogIcons.Error);
 
                             return;
@@ -611,8 +613,8 @@ namespace MLifterSettingsManager
             }
             catch (ProtectedLearningModuleException exp)
             {
-                TaskDialog.MessageBox(MLifterSettingsManager.Properties.Resources.LM_IS_PROTECTED_CAPTION,
-                    MLifterSettingsManager.Properties.Resources.LM_IS_PROTECTED_CONTENT, exp.Message.ToString(),
+                TaskDialog.MessageBox(MLifter.SettingsManager.Properties.Resources.LM_IS_PROTECTED_CAPTION,
+                    MLifter.SettingsManager.Properties.Resources.LM_IS_PROTECTED_CONTENT, exp.Message.ToString(),
                     TaskDialogButtons.OK, TaskDialogIcons.Error);
 
                 return;

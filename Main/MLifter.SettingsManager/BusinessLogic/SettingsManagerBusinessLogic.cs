@@ -10,6 +10,7 @@ using System.Threading;
 using System.IO;
 using MLifter.DAL.XML;
 using System.Windows.Documents;
+using MLifter.SettingsManager.Properties;
 
 namespace MLifterSettingsManager
 {
@@ -61,9 +62,10 @@ namespace MLifterSettingsManager
         /// <remarks>Documented by Dev08, 2009-07-18</remarks>
         public void OpenLearningModule(string filename)
         {
-            string globalConfig = System.IO.Path.Combine(Application.Current.StartupUri.AbsolutePath, Properties.Settings.Default.ConfigPath);
-            string userConfig = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Settings.Default.ConfigurationFolder);
-            string syncedModulesPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), System.IO.Path.Combine(Properties.Settings.Default.AppDataFolder, Properties.Settings.Default.SyncedLMFolder));
+            string globalConfig = System.IO.Path.Combine(Application.Current.StartupUri.AbsolutePath, Settings.Default.ConfigPath);
+            string userConfig = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Settings.Default.ConfigurationFolder);
+            string syncedModulesPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
+				System.IO.Path.Combine(Settings.Default.AppDataFolder, Settings.Default.SyncedLMFolder));
 
             ThreadStart threadStart = new ThreadStart(delegate()
             {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MLifter.AudioTools.Properties {
+namespace MLifter.Recorder.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -38,6 +38,18 @@ namespace MLifter.AudioTools.Properties {
         public string ConfigPath {
             get {
                 return ((string)(this["ConfigPath"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MemoryLifter\\2.4\\Recorder")]
+        public string SettingsPath {
+            get {
+                return ((string)(this["SettingsPath"]));
+            }
+            set {
+                this["SettingsPath"] = value;
             }
         }
     }

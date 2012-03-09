@@ -2,17 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
-using System.Threading;
-using System.Diagnostics;
-using MLifter.AudioTools.Codecs;
 using System.Reflection;
-using MLifter.Controls;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using MLifter.AudioTools.Codecs;
 using MLifter.BusinessLayer.Helper;
+using MLifter.Controls;
+using MLifter.Recorder.Properties;
 
 namespace MLifter.AudioTools
 {
@@ -64,8 +65,8 @@ namespace MLifter.AudioTools
 		{
 			//the following line is required for the login form to work
 			MLifter.BusinessLayer.LearningModulesIndex learningModules = new MLifter.BusinessLayer.LearningModulesIndex(
-				Path.Combine(Application.StartupPath, Properties.Settings.Default.ConfigPath),
-				Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Settings.Default.ConfigurationFolder),
+				Path.Combine(Application.StartupPath, MLifter.Recorder.Properties.Settings.Default.ConfigPath),
+				Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), MLifter.Recorder.Properties.Settings.Default.ConfigurationFolder),
 				(MLifter.DAL.GetLoginInformation)MLifter.Controls.LoginForm.OpenLoginForm,
 				(MLifter.DAL.DataAccessErrorDelegate)delegate { return; }, String.Empty);
 
@@ -81,7 +82,9 @@ namespace MLifter.AudioTools
 			{
 				LoadSettings();
 
-				if (File.Exists(settings.Dictionary) && TaskDialog.ShowCommandBox(Properties.Resources.RELOAD_LAST_DIC_CAPTION, Properties.Resources.RELOAD_LAST_DIC_TEXT, settings.Dictionary, Properties.Resources.RELOAD_LAST_DIC_COMMANDS, false) == 0)
+				if (File.Exists(settings.Dictionary) && TaskDialog.ShowCommandBox(MLifter.Recorder.Properties.Resources.RELOAD_LAST_DIC_CAPTION,
+					MLifter.Recorder.Properties.Resources.RELOAD_LAST_DIC_TEXT, settings.Dictionary, 
+					MLifter.Recorder.Properties.Resources.RELOAD_LAST_DIC_COMMANDS, false) == 0)
 				{
 					try
 					{
@@ -430,7 +433,8 @@ namespace MLifter.AudioTools
 		/// <remarks>Documented by Dev05, 2007-08-03</remarks>
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (MessageBox.Show(Properties.Resources.CLOSE_TEXT, Properties.Resources.CLOSE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+			if (MessageBox.Show(Resources.CLOSE_TEXT, Resources.CLOSE_CAPTION, 
+				MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				Visible = false;
 
@@ -527,9 +531,9 @@ namespace MLifter.AudioTools
 			groupBoxFontSize.Visible = numPadControl.AdvancedView;
 
 			if (numPadControl.CurrentState == Function.Nothing)
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 			else
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 
 			settings.AdvancedView = numPadControl.AdvancedView;
 			settings.Save(CONSTANTS.SETTINGS_FILENAME);
@@ -593,7 +597,7 @@ namespace MLifter.AudioTools
 		{
 			if (!SoundDevicesAvailable.SoundInDeviceAvailable())
 			{
-				MessageBox.Show(Properties.Resources.NO_WAVEIN_DEVICE_TEXT, Properties.Resources.NO_WAVEIN_DEVICE_CAPTION);
+				MessageBox.Show(Resources.NO_WAVEIN_DEVICE_TEXT, Resources.NO_WAVEIN_DEVICE_CAPTION);
 				Stop();
 				return;
 			}
@@ -629,16 +633,16 @@ namespace MLifter.AudioTools
 			//fetch temporary filename
 			do
 			{
-				actualFilename = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName().Split('.')[0] + (enableMP3 ? Properties.Resources.MP3_EXTENSION : Properties.Resources.WAV_EXTENSION));
+				actualFilename = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName().Split('.')[0] + (enableMP3 ? Resources.MP3_EXTENSION : Resources.WAV_EXTENSION));
 			}
 			while (File.Exists(actualFilename));
 
 			recorder.StartRecording(actualFilename, 0, (settings.DelaysActive ? settings.StartDelay : 0), (settings.DelaysActive ? settings.StopDelay : 0));
 
 			if (numPadControl.CurrentState == Function.Nothing)
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 			else
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 		}
 
 		/// <summary>
@@ -660,7 +664,7 @@ namespace MLifter.AudioTools
 		{
 			if (!SoundDevicesAvailable.SoundOutDeviceAvailable())
 			{
-				MessageBox.Show(Properties.Resources.NO_WAVEOUT_DEVICE_TEXT, Properties.Resources.NO_WAVEOUT_DEVICE_CAPTION);
+				MessageBox.Show(Resources.NO_WAVEOUT_DEVICE_TEXT, Resources.NO_WAVEOUT_DEVICE_CAPTION);
 				Stop();
 				return;
 			}
@@ -742,9 +746,9 @@ namespace MLifter.AudioTools
 			Invoke((EmtyDelegate)numPadControl.Refresh);
 
 			if (numPadControl.CurrentState == Function.Nothing)
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_RECORD_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 			else
-				toolStripStatusLabelAction.Text = string.Format(Properties.Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
+				toolStripStatusLabelAction.Text = string.Format(Resources.STATUS_STRIP_STOP_MESSAGE, STANDART_KEYS.RECORD1.ToString(), STANDART_KEYS.RECORD2.ToString());
 		}
 
 		/// <summary>
@@ -768,7 +772,7 @@ namespace MLifter.AudioTools
 
 			if (settings.ActualCard == dictionaryManager.CardCount - 1 && settings.ActualStep == settings.RecordingOrder.Length - 1)
 			{
-				if (!multiselecting && MessageBox.Show(Properties.Resources.JUMP_TO_OTHER_END_TEXT, Properties.Resources.JUMP_TO_OTHER_END_CAPTION,
+				if (!multiselecting && MessageBox.Show(Resources.JUMP_TO_OTHER_END_TEXT, Resources.JUMP_TO_OTHER_END_CAPTION,
 					MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
 					settings.ActualStep = -1;
@@ -825,7 +829,7 @@ namespace MLifter.AudioTools
 
 			if (settings.ActualStep == 0 && settings.ActualCard == 0)
 			{
-				if (!multiselecting && MessageBox.Show(Properties.Resources.JUMP_TO_END_TEXT, Properties.Resources.JUMP_TO_OTHER_END_CAPTION,
+				if (!multiselecting && MessageBox.Show(Resources.JUMP_TO_END_TEXT, Resources.JUMP_TO_OTHER_END_CAPTION,
 					MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
 					settings.ActualStep = 4;
@@ -1093,22 +1097,22 @@ namespace MLifter.AudioTools
 			switch (mediaItemType)
 			{
 				case MediaItemType.Answer:
-					node = new TreeNode(Properties.Resources.LISTBOXFIELDS_ANSWER_TEXT.Remove(Properties.Resources.LISTBOXFIELDS_ANSWER_TEXT.LastIndexOf(' ')));
+					node = new TreeNode(Resources.LISTBOXFIELDS_ANSWER_TEXT.Remove(Resources.LISTBOXFIELDS_ANSWER_TEXT.LastIndexOf(' ')));
 					node.Checked = settings.RecordAnswer;
 					node.Tag = dictionaryManager.GetWord(settings.ActualCard, MLifter.DAL.Interfaces.Side.Answer);
 					break;
 				case MediaItemType.AnswerExample:
-					node = new TreeNode(Properties.Resources.LISTBOXFIELDS_EXANSWER_TEXT.Remove(Properties.Resources.LISTBOXFIELDS_EXANSWER_TEXT.LastIndexOf(' ')));
+					node = new TreeNode(Resources.LISTBOXFIELDS_EXANSWER_TEXT.Remove(Resources.LISTBOXFIELDS_EXANSWER_TEXT.LastIndexOf(' ')));
 					node.Checked = settings.RecordAnswerExample;
 					node.Tag = dictionaryManager.GetSentence(settings.ActualCard, MLifter.DAL.Interfaces.Side.Answer);
 					break;
 				case MediaItemType.Question:
-					node = new TreeNode(Properties.Resources.LISTBOXFIELDS_QUESTION_TEXT.Remove(Properties.Resources.LISTBOXFIELDS_QUESTION_TEXT.LastIndexOf(' ')));
+					node = new TreeNode(Resources.LISTBOXFIELDS_QUESTION_TEXT.Remove(Resources.LISTBOXFIELDS_QUESTION_TEXT.LastIndexOf(' ')));
 					node.Checked = settings.RecordQuestion;
 					node.Tag = dictionaryManager.GetWord(settings.ActualCard, MLifter.DAL.Interfaces.Side.Question);
 					break;
 				case MediaItemType.QuestionExample:
-					node = new TreeNode(Properties.Resources.LISTBOXFIELDS_EXQUESTION_TEXT.Remove(Properties.Resources.LISTBOXFIELDS_EXQUESTION_TEXT.LastIndexOf(' ')));
+					node = new TreeNode(Resources.LISTBOXFIELDS_EXQUESTION_TEXT.Remove(Resources.LISTBOXFIELDS_EXQUESTION_TEXT.LastIndexOf(' ')));
 					node.Checked = settings.RecordQuestionExample;
 					node.Tag = dictionaryManager.GetSentence(settings.ActualCard, MLifter.DAL.Interfaces.Side.Question);
 					break;
@@ -1116,7 +1120,7 @@ namespace MLifter.AudioTools
 
 			if (node.Tag is string && (node.Tag as string) == "")
 			{
-				node.Text += Properties.Resources.NO_TEXT_MESSAGE;
+				node.Text += Resources.NO_TEXT_MESSAGE;
 				node.Checked = false;
 			}
 
@@ -1496,7 +1500,7 @@ namespace MLifter.AudioTools
 			}
 			else
 			{
-				SolidBrush textBrush = new SolidBrush(e.Node.Text.Contains(Properties.Resources.NO_TEXT_MESSAGE) ? STANDARD_APPEARANCE.COLOR_CARD_NOTSELECTED : Color.Black);
+				SolidBrush textBrush = new SolidBrush(e.Node.Text.Contains(Resources.NO_TEXT_MESSAGE) ? STANDARD_APPEARANCE.COLOR_CARD_NOTSELECTED : Color.Black);
 				e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
 				e.Graphics.DrawString(e.Node.Text, new Font(treeViewCards.Font.FontFamily, treeViewCards.Font.Size, (e.Node.IsSelected ? FontStyle.Bold : FontStyle.Regular)),
 					textBrush, Math.Abs(e.Bounds.X) + 25, e.Bounds.Y + 2);
@@ -1612,7 +1616,7 @@ namespace MLifter.AudioTools
 		{
 			try
 			{
-				System.Diagnostics.Process.Start(MLifter.AudioTools.Properties.Resources.HOWTO_URL);
+				System.Diagnostics.Process.Start(Resources.HOWTO_URL);
 			}
 			catch (Exception exp)
 			{

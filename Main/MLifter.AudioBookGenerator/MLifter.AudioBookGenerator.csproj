@@ -8,8 +8,8 @@
     <ProjectGuid>{77FFB27E-E9B9-4BC1-8016-5D9FF1487108}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MLifterAudioBookGenerator</RootNamespace>
-    <AssemblyName>MemoryLifter Audiobook Generator</AssemblyName>
+    <RootNamespace>MLifter.AudioBookGenerator</RootNamespace>
+    <AssemblyName>MLifter.AudioBookGenerator</AssemblyName>
     <ApplicationIcon>Media\App.ico</ApplicationIcon>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>

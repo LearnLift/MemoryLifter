@@ -6,6 +6,7 @@ using System.IO;
 using System.Diagnostics;
 using MLifter.DAL.Interfaces;
 using System.Threading;
+using MLifter.SettingsManager.Properties;
 
 namespace MLifterSettingsManager.DAL
 {
@@ -118,8 +119,8 @@ namespace MLifterSettingsManager.DAL
                     targetFile = GetTempFile(media.Extension);
 
                     //convert to cbr
-                    string command = String.Format(Properties.Settings.Default.VBRFixCommand, sourceFile, targetFile);
-                    StartExternalExe(Properties.Settings.Default.VBRFixApplication, command, false, false, progress);
+                    string command = String.Format(Settings.Default.VBRFixCommand, sourceFile, targetFile);
+                    StartExternalExe(Settings.Default.VBRFixApplication, command, false, false, progress);
 
                     //write temp file back
                     media.Filename = targetFile;

@@ -8,5 +8,8 @@
     <Setting Name="ConfigPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Config</Value>
     </Setting>
+    <Setting Name="SettingsPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MemoryLifter\2.4\Recorder</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

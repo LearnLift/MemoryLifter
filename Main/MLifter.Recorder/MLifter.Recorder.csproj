@@ -8,8 +8,8 @@
     <ProjectGuid>{5444BE8F-5127-4C3F-938F-C32B252617E3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MLifter.AudioTools</RootNamespace>
-    <AssemblyName>MLifter-Recorder</AssemblyName>
+    <RootNamespace>MLifter.Recorder</RootNamespace>
+    <AssemblyName>MLifter.Recorder</AssemblyName>
     <ApplicationIcon>Media\App.ico</ApplicationIcon>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
