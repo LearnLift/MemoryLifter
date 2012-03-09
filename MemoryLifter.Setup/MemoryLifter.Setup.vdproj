@@ -10080,7 +10080,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MemoryLifter"
         "ProductCode" = "8:{A2327DAC-1220-49A5-A9EF-0C745CC60503}"
-        "PackageCode" = "8:{8F9D49A7-4B8D-407C-97C7-1F13E73D1A20}"
+        "PackageCode" = "8:{8395EA1B-5FE8-4E13-9F20-D6F2824824D9}"
         "UpgradeCode" = "8:{673DE9D9-2058-4C44-8175-EEB5B018CC53}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -10691,7 +10691,7 @@
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:MemoryLifter offers some additional tools which can be installe along with MemoryLifter:"
+                            "Value" = "8:MemoryLifter offers some additional tools which can be installed along with MemoryLifter:"
                             "DefaultValue" = "8:#1215"
                             "UsePlugInResources" = "11:TRUE"
                             }
