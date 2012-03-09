@@ -1,0 +1,8 @@
+/* used to clear a LM from all user information */
+DELETE FROM UserProfiles_UserGroups;
+DELETE FROM UserProfiles_AccessControlList;
+DELETE FROM LearnLog;
+DELETE FROM LearningSessions;
+DELETE FROM UserCardState;
+DELETE FROM UserProfilesLearningModulesSettings;
+DELETE FROM UserProfiles;

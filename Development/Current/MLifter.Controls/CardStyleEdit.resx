@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="stylePreview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="stylePreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 0</value>
+  </data>
+  <data name="stylePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 465</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="stylePreview.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Name" xml:space="preserve">
+    <value>stylePreview</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;stylePreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textStyleEditQuestion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditQuestion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestion.Name" xml:space="preserve">
+    <value>textStyleEditQuestion</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestion.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestion.Parent" xml:space="preserve">
+    <value>tabPageQuestion</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageQuestion.Text" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestion.Name" xml:space="preserve">
+    <value>tabPageQuestion</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestion.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textStyleEditQuestionExample.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditQuestionExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditQuestionExample.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditQuestionExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditQuestionExample.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestionExample.Name" xml:space="preserve">
+    <value>textStyleEditQuestionExample</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestionExample.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestionExample.Parent" xml:space="preserve">
+    <value>tabPageQuestionExample</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditQuestionExample.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageQuestionExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageQuestionExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageQuestionExample.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageQuestionExample.Text" xml:space="preserve">
+    <value>Question Example</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestionExample.Name" xml:space="preserve">
+    <value>tabPageQuestionExample</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestionExample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestionExample.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageQuestionExample.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textStyleEditAnswer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditAnswer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswer.Name" xml:space="preserve">
+    <value>textStyleEditAnswer</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswer.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswer.Parent" xml:space="preserve">
+    <value>tabPageAnswer</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageAnswer.Text" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswer.Name" xml:space="preserve">
+    <value>tabPageAnswer</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswer.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textStyleEditAnswerExample.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditAnswerExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditAnswerExample.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditAnswerExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditAnswerExample.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswerExample.Name" xml:space="preserve">
+    <value>textStyleEditAnswerExample</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswerExample.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswerExample.Parent" xml:space="preserve">
+    <value>tabPageAnswerExample</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditAnswerExample.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageAnswerExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageAnswerExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageAnswerExample.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPageAnswerExample.Text" xml:space="preserve">
+    <value>Answer Example</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswerExample.Name" xml:space="preserve">
+    <value>tabPageAnswerExample</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswerExample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswerExample.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageAnswerExample.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textStyleEditCorrect.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditCorrect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditCorrect.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditCorrect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditCorrect.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditCorrect.Name" xml:space="preserve">
+    <value>textStyleEditCorrect</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditCorrect.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditCorrect.Parent" xml:space="preserve">
+    <value>tabPageCorrect</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditCorrect.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageCorrect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageCorrect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageCorrect.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPageCorrect.Text" xml:space="preserve">
+    <value>Answer Correct</value>
+  </data>
+  <data name="&gt;&gt;tabPageCorrect.Name" xml:space="preserve">
+    <value>tabPageCorrect</value>
+  </data>
+  <data name="&gt;&gt;tabPageCorrect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageCorrect.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageCorrect.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textStyleEditWrong.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textStyleEditWrong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textStyleEditWrong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textStyleEditWrong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="textStyleEditWrong.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditWrong.Name" xml:space="preserve">
+    <value>textStyleEditWrong</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditWrong.Type" xml:space="preserve">
+    <value>MLifter.Controls.TextStyleEdit, MLifterControls, Version=2.1.148.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditWrong.Parent" xml:space="preserve">
+    <value>tabPageWrong</value>
+  </data>
+  <data name="&gt;&gt;textStyleEditWrong.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageWrong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabPageWrong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="tabPageWrong.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabPageWrong.Text" xml:space="preserve">
+    <value>Answer Wrong</value>
+  </data>
+  <data name="&gt;&gt;tabPageWrong.Name" xml:space="preserve">
+    <value>tabPageWrong</value>
+  </data>
+  <data name="&gt;&gt;tabPageWrong.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageWrong.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageWrong.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControlMain.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>461, 465</value>
+  </data>
+  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 465</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CardStyleEdit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

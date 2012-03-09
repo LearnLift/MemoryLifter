@@ -1,0 +1,91 @@
+[OPTIONS]
+Compiled File=memorylifter.chm
+Title=MemoryLifter 2.0 Help
+Contents File=memorylifter.hhc
+Index File=memorylifter.hhk
+Default topic=html\ML_WhatisNew.htm
+Default Window=NewWindow
+Error log file=
+Display compile progress=No
+Display compile notes=No
+Full-text search=Yes
+Binary Index=Yes
+Auto Index=No
+Enhanced decompilation=No
+Binary TOC=No
+Flat=No
+
+[WINDOWS]
+NewWindow="MemoryLifter 2.0 Help","memorylifter.hhc","memorylifter.hhk","","",,,,,0x420,0,0x200e,[0,0,500,400],0x0,0x0,,0,0,0
+
+[FILES]
+html\memo6dis.htm
+html\memo1d9v.htm
+html\memo4dyq.htm
+html\memo9otv.htm
+html\memo7ag5.htm
+html\memo9tbm.htm
+html\memo87l0.htm
+html\memo2cmr.htm
+html\memo85ys.htm
+html\memo8nl0.htm
+html\Style_Editor.htm
+html\memo288n.htm
+html\memo6vg2.htm
+html\memo1bub.htm
+html\memo6l68.htm
+html\memo5ur8.htm
+html\memo4p0u.htm
+html\Add_an_image,_audio,_or_video.htm
+html\memo94fi.htm
+html\Recording_audio.htm
+html\memo4f78.htm
+html\memo93u5.htm
+html\memo8y43.htm
+html\memo3n72.htm
+html\memo6a0i.htm
+html\memo5oft.htm
+html\memo2koj.htm
+html\memo35et.htm
+html\memo3gkz.htm
+html\memo0wu0.htm
+html\About_MemoryLifter.htm
+html\ML_WhatisNew.htm
+html\memo1cku.htm
+html\memo9sqf.htm
+html\memo7omr.htm
+html\memo37n8.htm
+html\memo5qk3.htm
+html\memo0hyd.htm
+html\memo8pd0.htm
+html\memo8c6r.htm
+html\memo7xyj.htm
+html\Using_the_automated_learning_planner.htm
+html\Learning_in_multiple_choice_and_other_modes.htm
+html\Learning_in_random_question_mode.htm
+html\Learning_with_Correct-on-the-fly_option.htm
+html\Learning_in_review_mode.htm
+html\Learn_-_Slideshow_mode.htm
+html\Skipping_cards_you_know.htm
+html\memo2khe.htm
+html\memo359j.htm
+html\Changing_the_commentary_sounds.htm
+html\Using_MemoryLifter_pre-made_dictionaries.htm
+html\Creating_your_own_dictionary.htm
+html\view_image_or_playback_an_audio_or_video.htm
+html\Change_Style.htm
+eHelp.xml
+ehlpdhtm.js
+
+memorylifter.glo
+memorylifter.brs
+[ALIAS]
+#include memorylifter.ali
+
+[MAP]
+#include BSSCDefault.h
+
+[TEXT POPUPS]
+BSSCDefault.h
+
+

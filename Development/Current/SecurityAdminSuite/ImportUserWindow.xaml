@@ -1,0 +1,161 @@
+﻿<Window x:Class="SecurityAdminSuite.ImportUserWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    WindowStyle="SingleBorderWindow" ResizeMode="NoResize" ShowInTaskbar="False"
+    Icon="/Images/App.png"
+    Title="Import Users" Height="700" Width="650" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" MaxHeight="400" VerticalAlignment="Top">
+            <Grid  DockPanel.Dock="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Please Choose Your Directory: " FontWeight="Bold"
+                           Grid.Column="0" Grid.Row="0"/>
+                <RadioButton x:Name="radioButtonActiveDirectory" 
+                             Grid.Column="1" Grid.Row="0"      
+                             Margin="3"
+                             IsChecked="True"
+                             Content="Microsoft Active Directory"  Click="radioButtonActiveDirectory_Click" />
+                <RadioButton x:Name="radioButtonEDirectory"
+                             Grid.Column="1" Grid.Row="1"
+                             Margin="3"
+                             Content="Novell eDirectory" Click="radioButtonEDirectory_Click"/>
+            </Grid>
+            <Grid Background="LightGray" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Search Information:" 
+                           FontWeight="Bold"
+                           Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
+                   Content="Server:"/>
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"
+                   Content="Port:"/>
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"
+                    Content="Context:"/>
+                <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"
+                   Content="User:"/>
+                <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"
+                   Content="Password:"/>
+                <Label Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"
+                   Content="Domain (AD only):" />
+
+                <TextBox x:Name="textBoxServer" 
+                     Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center"
+                     Text="172.22.100.10"/>
+                <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"          
+                     x:Name="textBoxPort" Text="389" />
+                <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"
+                      x:Name="textBoxON" Text="OU=AT,O=ON"/>
+                <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"
+                     x:Name="textBoxUser" />
+                <PasswordBox Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"
+                     x:Name="textBoxPassword" />
+                <TextBox Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"
+                     x:Name="textBoxDomain" IsEnabled="true" />
+
+                <Button x:Name="buttonSearch" 
+                        Grid.Row="7" Grid.Column="1" VerticalAlignment="Center"
+                        Content="Search Users" Click="buttonSearch_Click" />
+            </Grid>
+        </DockPanel>
+        <DockPanel>
+            <Grid Background="LightGray" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Existing User In Directory:" Margin="5,0,0,0" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="1" Text="(double-click or drag and drop a user)" Margin="5,0,0,0" />
+                        <Label Grid.Row="2" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="0" Padding="0">
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0"
+                                            Content="Filter: " />
+                                <TextBox x:Name="textBoxFilterUserList" 
+                                         Grid.Row="0" Grid.Column="1"
+                                         HorizontalAlignment="Stretch"
+                                         TextChanged="TextBox_TextChanged" />
+                            </Grid>
+                        </Label>
+
+                    </Grid>
+                </Label>
+                <ListBox x:Name="listBoxFoundUsers" 
+                         Grid.Row="1" Grid.Column="0"
+                         Margin="5,0,5,0"
+                         MouseLeftButtonDown="listBoxFoundUsers_MouseLeftButtonDown" 
+                         SelectionMode="Extended"
+                         PreviewMouseLeftButtonDown="listBoxFoundUsers_MouseLeftButtonDown" 
+                         PreviewMouseDoubleClick="ListBoxItem_MouseDoubleClick" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Padding="0" Margin="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold"
+                            Content="New Users:" />
+                        <Label Grid.Row="1" Grid.Column="0" 
+                            Content="(double click a user to remove user)" />
+                    </Grid>
+                </Label>
+                <ListBox x:Name="listBoxImportUsers" 
+                         Grid.Row="1" Grid.Column="1"
+                         DragEnter="listBoxImportUsers_DragEnter" 
+                         Drop="listBoxImportUsers_Drop" AllowDrop="True" 
+                         PreviewMouseDoubleClick="listBoxImportUsers_PreviewMouseDoubleClick"/>
+
+                <Button Grid.Column="0" Grid.Row="3" 
+                                VerticalAlignment="Center" Margin="5"
+                                x:Name="buttonImport" Content="Import" Click="buttonImport_Click" />
+                <Button Grid.Column="1" Grid.Row="3" 
+                                VerticalAlignment="Center" Margin="5"
+                                x:Name="buttonCancel" Content="Cancel" Click="buttonCancel_Click" />
+
+            </Grid>
+        </DockPanel>
+
+    </DockPanel>
+</Window>

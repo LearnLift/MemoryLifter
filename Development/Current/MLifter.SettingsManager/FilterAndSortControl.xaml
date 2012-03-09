@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="MLifterSettingsManager.FilterAndSortControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:MLifterSettingsManager="clr-namespace:MLifterSettingsManager"
+    xmlns:winform="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+    x:Name="userControlFilter">
+
+    <UserControl.Resources>
+        <MLifterSettingsManager:InvertBooleanToEnabledConverter x:Key="invertBooleanToEnabledConverter" />
+        <MLifterSettingsManager:CheckedToOnOffConverter x:Key="checkedToOnOffConverter" />
+    </UserControl.Resources>
+
+    <GroupBox Margin="0,0,0,5" BorderThickness="2">
+        <GroupBox.HeaderTemplate>
+            <DataTemplate>
+                <TextBlock FontWeight="Bold">Filter and Sort</TextBlock>
+            </DataTemplate>
+        </GroupBox.HeaderTemplate>
+        <StackPanel Orientation="Vertical">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Left" Margin="5,7,5,5">Full-text search:</TextBlock>
+                <Button x:Name="buttonClearText" DockPanel.Dock="Right" Margin="5" Width="45" Click="buttonClearText_Click" Height="20">Clear</Button>
+                <TextBox x:Name="textBoxCardFullTextSearch" DockPanel.Dock="Right" Margin="5" Text="{Binding ElementName=userControlFilter, Path=CardFilter, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Filter for LearningMode and LearningDirection -->
+                <Expander x:Name="expanderLearningModeDirection" Grid.Row="0" IsExpanded="False" Margin="5,0,0,0">
+                    <Expander.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="DarkBlue">Filter on LearningMode / LearningDirection</TextBlock>
+                        </DataTemplate>
+                    </Expander.HeaderTemplate>
+                    <Expander.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="_Clear Filter" Click="buttonLearningModeDirectionClear_Click" />
+                        </ContextMenu>
+                    </Expander.ContextMenu>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="23,0,0,0">
+                            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                                <CheckBox x:Name="checkBoxFilterStandard" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Standard</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterMC" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Multiple Choice</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterSentence" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Sentence</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterImage" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Image Recognition</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterListening" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Listening Comprehension</CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="0,0,10,0" x:Name="stackPanelDirection">
+                                <CheckBox x:Name="checkBoxFilterQA" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Question to Answer</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterAQ" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Answer to Question</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterMix" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Mixed</CheckBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <Button DockPanel.Dock="Right" x:Name="buttonLearningModeDirectionClear" Margin="5" Width="45" Height="20" VerticalAlignment="Top"
+                                Click="buttonLearningModeDirectionClear_Click">Clear</Button>
+                        <StackPanel>
+                            <!-- Place holder -->
+                        </StackPanel>
+                    </DockPanel>
+                </Expander>
+
+                <!-- Filter for MultipleChoice Options -->
+                <Expander x:Name="expanderMcOptions" Grid.Row="1" IsExpanded="False" Margin="5,0,0,0">
+                    <Expander.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="DarkBlue">Multiple Choice Options</TextBlock>
+                        </DataTemplate>
+                    </Expander.HeaderTemplate>
+                    <Expander.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="_Clear Filter" Click="buttonMCOptionsClear_Click" />
+                        </ContextMenu>
+                    </Expander.ContextMenu>
+                    <Grid Margin="20,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                    IsEnabled="{Binding ElementName=toggleButtonNumberChoices, Path=IsChecked, Converter={StaticResource invertBooleanToEnabledConverter}}">
+                            <Label Margin="0,0,5,0" Width="175">Number of choices:</Label>
+                            <WindowsFormsHost>
+                                <winform:NumericUpDown Value="4" x:Name="numericUpDownNumberOfChoices" ValueChanged="numericUpDownMaxNumberCorrectAnswers_ValueChanged" />
+                            </WindowsFormsHost>
+                        </StackPanel>
+                        <ToggleButton x:Name="toggleButtonNumberChoices" IsChecked="False" Grid.Row="0" Grid.Column="1" Margin="2" Height="20" Width="30" Click="toggleButton_Click"
+                                      Content="{Binding ElementName=toggleButtonNumberChoices, Path=IsChecked, Converter={StaticResource checkedToOnOffConverter}}" />
+
+                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                    IsEnabled="{Binding ElementName=toggleButtonMaxNumber, Path=IsChecked, Converter={StaticResource invertBooleanToEnabledConverter}}">
+                            <Label Margin="0,0,5,0" Width="175">Max. number of correct answers:</Label>
+                            <WindowsFormsHost>
+                                <winform:NumericUpDown Value="1" x:Name="numericUpDownMaxNumberCorrectAnswers" ValueChanged="numericUpDownMaxNumberCorrectAnswers_ValueChanged" />
+                            </WindowsFormsHost>
+                        </StackPanel>
+                        <ToggleButton x:Name="toggleButtonMaxNumber" IsChecked="False" Grid.Row="1" Grid.Column="1" Margin="2" Height="20" Width="30" Click="toggleButton_Click"
+                                      Content="{Binding ElementName=toggleButtonMaxNumber, Path=IsChecked, Converter={StaticResource checkedToOnOffConverter}}" />
+
+                        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                    IsEnabled="{Binding ElementName=toggleButtonAllowRandDistractors, Path=IsChecked, Converter={StaticResource invertBooleanToEnabledConverter}}">
+                            <CheckBox Margin="3,0,5,2" x:Name="checkboxFilterAllowRandomDistractors" Click="checkBoxFilter_Click">Allow random distractors</CheckBox>
+                        </StackPanel>
+                        <ToggleButton x:Name="toggleButtonAllowRandDistractors" IsChecked="False" Grid.Row="2" Grid.Column="1" Margin="2" Height="20" Width="30" Click="toggleButton_Click"
+                                      Content="{Binding ElementName=toggleButtonAllowRandDistractors, Path=IsChecked, Converter={StaticResource checkedToOnOffConverter}}" />
+
+                        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                    IsEnabled="{Binding ElementName=toggleButtonAllowMultipleAnswers, Path=IsChecked, Converter={StaticResource invertBooleanToEnabledConverter}}">
+                            <CheckBox Margin="3,0,5,2" x:Name="checkBoxFilterAllowMultipleCorrectAnswers" Click="checkBoxFilter_Click">Allow multiple correct answers</CheckBox>
+                        </StackPanel>
+                        <ToggleButton x:Name="toggleButtonAllowMultipleAnswers" IsChecked="False" Grid.Row="3" Grid.Column="1" Margin="2" Height="20" Width="30" Click="toggleButton_Click"
+                                      Content="{Binding ElementName=toggleButtonAllowMultipleAnswers, Path=IsChecked, Converter={StaticResource checkedToOnOffConverter}}" />
+
+                        <Button Grid.Row="0" Grid.Column="4" x:Name="buttonMCOptionsClear" Margin="5" Width="45" Height="20" VerticalAlignment="Top"
+                                Click="buttonMCOptionsClear_Click">Clear</Button>
+
+                    </Grid>
+                </Expander>
+
+                <!-- Filter for other Properties like Media, Examples... -->
+                <Expander x:Name="expanderMedia" Grid.Row="2" IsExpanded="False" Margin="5,0,0,0">
+                    <Expander.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="DarkBlue">Others (Media/Example)</TextBlock>
+                        </DataTemplate>
+                    </Expander.HeaderTemplate>
+                    <Expander.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="_Clear Filter" Click="buttonOthersClear_Click" />
+                        </ContextMenu>
+                    </Expander.ContextMenu>
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="23,0,0,0">
+                            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                                <CheckBox x:Name="checkBoxFilterPicture" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Image</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterAudio" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Audio</CheckBox>
+                                <CheckBox x:Name="checkBoxFilterVideo" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Video</CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                                <CheckBox x:Name="checkBoxFilterExampleSentence" Margin="1" IsChecked="False" Click="checkBoxFilter_Click">Example Sentence</CheckBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <Button DockPanel.Dock="Right" x:Name="buttonOthersClear" Margin="5" Width="45" Height="20" VerticalAlignment="Top"
+                                Click="buttonOthersClear_Click">Clear</Button>
+                        <StackPanel>
+                            <!-- Place holder -->
+                        </StackPanel>
+                    </DockPanel>
+                </Expander>
+
+                <!-- Sort by -->
+                <StackPanel Grid.Row="3" Margin="5,0,0,0" Orientation="Horizontal">
+                    <Image Source="Resources\sort_asc_16.png" Width="16" Height="16" Margin="0,0,5,0" />
+                    <TextBlock Margin="5">Sort cards by: </TextBlock>
+                    <ComboBox x:Name="comboBoxSort"  SelectedIndex="0" Width="200" SelectionChanged="comboBoxSort_SelectionChanged">
+                        <ComboBoxItem x:Name="comboBoxItemSortId">by Id</ComboBoxItem>
+                        <ComboBoxItem x:Name="comboBoxItemSortQuestion">by Question</ComboBoxItem>
+                        <ComboBoxItem x:Name="comboBoxItemSortAnswer">by Answer</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </GroupBox>
+</UserControl>

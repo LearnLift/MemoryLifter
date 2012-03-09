@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Synchronization.MetadataStorage</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Synchronization.MetadataStorage">
+			<summary>Metadata Storage Service provides support for storing and handling synchronization metadata.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ChangeUnitMetadata">
+			<summary>Represents the metadata that is associated with a change unit contained in an item in the synchronization scope.</summary>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ChangeUnitMetadata.ChangeUnitId">
+			<summary>Gets the ID of the change unit.</summary>
+			<returns>The ID of the change unit.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ChangeUnitMetadata.ChangeUnitVersion">
+			<summary>Gets the current version of the change unit.</summary>
+			<returns>The current version of the change unit.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.DeleteDetector">
+			<summary>When implemented by a derived class, <see cref="T:Microsoft.Synchronization.MetadataStorage.DeleteDetector" /> determines which items were deleted from a replica. These items must be marked as deleted in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.DeleteDetector" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.FindUnreportedItems">
+			<summary>When overridden in a derived class, returns a list of items that are not currently marked as active in the metadata store and that are not already marked as deleted.</summary>
+			<returns>A list of items that are not currently marked as active in the metadata store and that are not already marked as deleted. When no items exist, an empty collection is returned.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.FindUnreportedItemsByIndexedField(System.String,System.Object)">
+			<summary>When overridden in a derived class, returns a list of items that have the specified indexed field value and are not currently marked as active in the metadata store and that are not already marked as deleted.</summary>
+			<returns>A list of items that have the specified indexed field value and are not currently marked as active in the metadata store and that are not already marked as deleted. When no items exist, an empty collection is returned.</returns>
+			<param name="fieldName">The name of the indexed field.</param>
+			<param name="value">The value of the indexed field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.FindUnreportedItemsByIndexedFields(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+			<summary>When overridden in a derived class, returns a list of items that have the specified set of indexed field values and are not currently marked as active in the metadata store and that are not already marked as deleted.</summary>
+			<returns>A list of items that have the specified set of indexed field values and are not currently marked as active in the metadata store and that are not already marked as deleted. When no items exist, an empty collection is returned.</returns>
+			<param name="fields">The set of indexed field name and value pairs that define the items for which to search.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.MarkAllItemsUnreported">
+			<summary>When overridden in a derived class, resets <see cref="T:Microsoft.Synchronization.MetadataStorage.DeleteDetector" /> by marking all items as unreported.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.ReportLiveItemById(Microsoft.Synchronization.SyncId)">
+			<summary>When overridden in a derived class, reports that the specified item is active and should not be considered deleted.</summary>
+			<param name="globalId">The ID of the item to report as active.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.ReportLiveItemByIndexedField(System.String,System.Object)">
+			<summary>When overridden in a derived class, reports that the item that is identified by the indexed field value is active and should not be considered deleted.</summary>
+			<param name="fieldName">The name of the indexed field.</param>
+			<param name="fieldValue">The value of the indexed field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.DeleteDetector.ReportLiveItemByIndexedFields(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+			<summary>When overridden in a derived class, reports that the item identified by the specified set of indexed field values is active and should not be considered deleted.</summary>
+			<param name="fields">The set of indexed field name and value pairs that define the item to report as active.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException">
+			<summary>The exception that is thrown when a method is called that requires an explicit transaction to have been started on the metadata store. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ExplicitTransactionRequiredException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The error message that states the reason for the exception.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.FieldSchema">
+			<summary>Contains schema information that defines a custom field of an item in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.FieldSchema.#ctor(System.String,System.Type)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.FieldSchema" /> class that is based on the specified name and data type.</summary>
+			<param name="n ame">The name of the custom field.</param>
+			<param name="dataType">The data type of the field. Must be a valid value type.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.FieldSchema.#ctor(System.String,System.Type,System.UInt32)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.FieldSchema" /> class that is based on the specified name, data type, and the maximum length of the field.</summary>
+			<param name="n ame">The name of the custom field.</param>
+			<param name="dataType">The data type of the field.</param>
+			<param name="maxLength">The maximum length of the field, in bytes when the field is an array of bytes or in characters when the field is a string. This value is ignored for other types of fields.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.FieldSchema.DataType">
+			<summary>Gets the data type of the field.</summary>
+			<returns>The data type of the field.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.FieldSchema.MaxLength">
+			<summary>Gets the maximum length of the field.</summary>
+			<returns>The maximum length of the field.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.FieldSchema.Name">
+			<summary>Gets the name of the custom field.</summary>
+			<returns>The name of the custom field.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.IndexSchema">
+			<summary>Represents a single or multicolumn index that can be used to more efficiently find items that are in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.IndexSchema.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.IndexSchema" /> class that contains the specified list of indexed field names and a value that indicates whether the index schema uniquely defines an item.</summary>
+			<param name="fieldNames">The list of indexed field names.</param>
+			<param name="isUnique">true if this index schema uniquely identifies an item; otherwise, false. </param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.IndexSchema.#ctor(System.String,System.Boolean)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.IndexSchema" /> class that has the specified indexed field name and a value that indicates whether this index schema uniquely defines an item.</summary>
+			<param name="fieldName">The indexed field name.</param>
+			<param name="isUnique">true if this index schema uniquely identifies an item; otherwise, false.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.IndexSchema.FieldNames">
+			<summary>Gets the list of field names that defines this index.</summary>
+			<returns>The list of field names that defines this index.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.IndexSchema.IsUnique">
+			<summary>Gets a value that indicates whether this index schema uniquely identifies an item.</summary>
+			<returns>true if this index schema uniquely identifies an item; otherwise, false. </returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ItemMetadata">
+			<summary>When overridden, represents the metadata that is associated with an item in the synchronization scope.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ItemMetadata" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetByteField(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetBytesField(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetChangeUnitEnumerator">
+			<summary>When overridden in a derived class, returns an object that can be used to enumerate the change units that are contained in this item.</summary>
+			<returns>An object that can be used to enumerate the change units that are contained in this item. Returns an empty enumerator when the item contains no change units.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetChangeUnitVersion(Microsoft.Synchronization.SyncId)">
+			<summary>When overridden in a derived class, gets the version of a change unit that is contained in the item.</summary>
+			<returns>The version of a change unit that is contained in this item.</returns>
+			<param name="changeUnitId">The ID of the change unit.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetGuidField(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetStringField(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetUInt16Field(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetUInt32Field(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GetUInt64Field(System.String)">
+			<summary>When overridden in a derived class, gets the value of the specified custom field.</summary>
+			<returns>The value of the specified custom field. Returns a null when the field value has not been set.</returns>
+			<param name="fieldName">The name of the custom field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.MarkAsDeleted(Microsoft.Synchronization.SyncVersion)">
+			<summary>When overridden in a derived class, marks an item as deleted from the item store.</summary>
+			<param name="changeVersion">The change version that is associated with the deletion of the item.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.ResurrectDeletedItem">
+			<summary>When overridden in a derived class, restores an item that was previously marked as deleted in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetChangeUnitVersion(Microsoft.Synchronization.SyncId,Microsoft.Synchronization.SyncVersion)">
+			<summary>When overridden in a derived class, sets the version of a change unit that is contained in this item.</summary>
+			<param name="changeUnitId">The ID of the change unit.</param>
+			<param name="changeUnitVersion">The version of the change unit.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.Byte)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.Byte[])">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.Guid)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.String)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.UInt16)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.UInt32)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadata.SetCustomField(System.String,System.UInt64)">
+			<summary>When overridden in a derived class, sets the value of the specified custom field.</summary>
+			<param name="fieldName">The name of the custom field.</param>
+			<param name="value">The value of the field.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ItemMetadata.ChangeVersion">
+			<summary>When overridden in a derived class, gets or sets the version of the most recent change made to the item.</summary>
+			<returns>The version of the most recent change made to the item. Returns a null when the change version has not been set.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ItemMetadata.CreationVersion">
+			<summary>When overridden in a derived class, gets or sets the creation version for the item.</summary>
+			<returns>The creation version for the item.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ItemMetadata.GlobalId">
+			<summary>When overridden in a derived class, gets the global ID of the item.</summary>
+			<returns>The global ID of the item.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ItemMetadata.IsDeleted">
+			<summary>When overridden in a derived class, gets or sets a value that indicates whether the item has been deleted from the item store.</summary>
+			<returns>true if the item has been deleted; otherwise, false.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException">
+			<summary>The exception that is thrown when an item that has the specified ID or custom field value could not be found in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException" /> class that contains a specified error message.</summary>
+			<param name="m essage">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException" /> class by using serialized data.</summary>
+			<param name="i nfo">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ItemMetadataNotFoundException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The error message that states the reason for the exception.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException">
+			<summary>The exception that is thrown when an attempt is made to save an item that has an invalid or duplicate ID.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.KeyUniquenessException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="m essage">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException">
+			<summary>The exception that is thrown when the named custom field does not exist.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataFieldNotFoundException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException">
+			<summary>The exception that is thrown when an operation on the metadata storage engine fails.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStorageEngineException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.MetadataStore">
+			<summary>When overridden, represents a metadata store and provides methods to obtain a replica metadata object. The replica metadata object is used to access the metadata for a specific replica. This is the abstract base class for all metadata stores that use the Metadata Storage Service API.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStore" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.BeginTransaction(System.Data.IsolationLevel)">
+			<summary>When overridden in a derived class, starts an explicit transaction on the metadata store that has the specified isolation level.</summary>
+			<param name="isolationLevel">The isolation level for the transaction.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.CommitTransaction">
+			<summary>When overridden in a derived class, commits an explicit transaction that has already started on the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.GetReplicaMetadata(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId)">
+			<summary>When overridden in a derived class, gets the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> object that represents the metadata for a particular replica.</summary>
+			<returns>The <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> object that represents the metadata for a particular replica.</returns>
+			<param name="idFormats">The ID format schema for the provider.</param>
+			<param name="replicaId">The replica ID for which replica metadata will be retrieved.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.InitializeReplicaMetadata(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId,System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.FieldSchema},System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.IndexSchema})">
+			<summary>When overridden in a derived class, creates, initializes, and saves new metadata for a replica.</summary>
+			<returns>A <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> object that represents the newly created replica metadata.</returns>
+			<param name="idFormats">The ID format schema for the provider.</param>
+			<param name="replicaId">The replica ID for the replica that is represented by the metadata that is being created and initialized.</param>
+			<param name="customItemFieldSchemas">The schema information that describes the custom metadata fields that are associated with the metadata items. Can be a null if no custom metadata fields exist.</param>
+			<param name="customIndexedFieldSchemas">The list of index schemas that can be used to more efficiently find items in the metadata store. Can be a null if no index schemas exist.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.IsTransactionActive(System.Data.IsolationLevel@)">
+			<summary>When overridden in a derived class, indicates whether an active transaction exists on the metadata store.</summary>
+			<returns>true if an active transaction exists on the metadata store; otherwise, false.</returns>
+			<param name="isolationLevel">Returns the isolation level of the currently active transaction, or Unspecified if no active transaction exists.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.RollbackTransaction">
+			<summary>Cancels the current explicit transaction and rolls the metadata store back to the state it was in before the transaction was started.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreException">
+			<summary>The base class for all metadata storage exceptions.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreException" /> class by using serialized data. </summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException">
+			<summary>The exception that is thrown when a method call is invalid for the current state of the object.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.MetadataStoreInvalidOperationException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The error message that states the reason for the exception.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata">
+			<summary>When overridden, provides access to the replica metadata and item metadata in the metadata store. <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> also provides services for delete detection and helpers for implementing synchronization provider methods.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.#ctor(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> class that contains the specified ID format schema and replica ID.</summary>
+			<param name="idFormats">The ID format schema for the provider.</param>
+			<param name="replicaId">The ID of the replica that is associated with this metadata.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.CleanupDeletedItems(System.TimeSpan)">
+			<summary>When overridden in a derived class, removes items that are marked as deleted and that are older than the last successful cleanup time.</summary>
+			<returns>true if cleanup was performed; otherwise, false. </returns>
+			<param name="timeInterval">The minimum age of deleted items to keep in the metadata store. A value of 0 means all deleted items are cleaned up immediately.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.CreateItemMetadata(Microsoft.Synchronization.SyncId,Microsoft.Synchronization.SyncVersion)">
+			<summary>When overridden in a derived class, creates a new item metadata object that can be used to add a new item metadata entry to the metadata store.</summary>
+			<returns>The newly created item metadata object.</returns>
+			<param name="globalId">The global ID of the item to create. The global ID must be unique.</param>
+			<param name="creationVersion">The creation version to associate with this item.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.FindItemMetadataById(Microsoft.Synchronization.SyncId)">
+			<summary>When overridden in a derived class, gets item metadata for the item that has the specified global ID.</summary>
+			<returns>The item metadata for the item that has the specified ID. A null when no item exists.</returns>
+			<param name="globalId">The global ID of the item.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.FindItemMetadataByIndexedField(System.String,System.Object)">
+			<summary>When overridden in a derived class, returns a list of item metadata entries that have the specified value for the indexed field.</summary>
+			<returns>A list of item metadata entries that have the specified value for the indexed field. An empty collection is returned when no items exist.</returns>
+			<param name="fieldName">The name of the indexed field. The field must be a valid field and an index field. </param>
+			<param name="fieldValue">The value of the indexed field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.FindItemMetadataByIndexedFields(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+			<summary>When overridden in a derived class, returns a list of item metadata entries that have the specified values for the set of indexed fields.</summary>
+			<returns>A list of item metadata entries that have the specified values for the set of indexed fields. When no items exist, an empty collection is returned.</returns>
+			<param name="fields">The set of indexed fields that identifies the items for which to search. The fields must be valid fields and represent an index.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.FindItemMetadataByUniqueIndexedField(System.String,System.Object)">
+			<summary>When overridden in a derived class, returns the unique item metadata entry that has the specified value for the indexed field.</summary>
+			<returns>The unique metadata entry that has the specified value for the indexed field. A null is returned when no item exists.</returns>
+			<param name="fieldName">The name of the unique indexed field. The field must be a valid field and a unique index field.</param>
+			<param name="fieldValue">The value of the unique indexed field.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.FindItemMetadataByUniqueIndexedFields(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+			<summary>When overridden in a derived class, returns the unique item metadata entry that has the specified values for the indexed fields.</summary>
+			<returns>The unique item metadata entry that has the specified values for the indexed fields. A null is returned when no item exists.</returns>
+			<param name="fields">The set of unique indexed fields that identifies the item for which to search. The fields must be valid fields and represent a unique index. These fields must be in the same order as that used to specify the index when <see cref="M:Microsoft.Synchronization.MetadataStorage.MetadataStore.InitializeReplicaMetadata(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId,System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.FieldSchema},System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.IndexSchema})" /> was called.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetChangeBatch(System.UInt32,Microsoft.Synchronization.SyncKnowledge)">
+			<summary>When overridden in a derived class, gets a change batch that contains item metadata for items that are not contained in the specified knowledge from the destination provider.</summary>
+			<returns>A change batch that contains item metadata for items that are not contained in the specified knowledge from the destination provider.</returns>
+			<param name="batchSize">The size of the batch to be created.</param>
+			<param name="destinationKnowledge">The knowledge from the destination provider.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetFilteredChangeBatch(System.UInt32,Microsoft.Synchronization.SyncKnowledge,Microsoft.Synchronization.FilterInfo,Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.ItemFilterCallback)">
+			<summary>When overridden in a derived class, gets a change batch that contains item metadata for items that are not contained in the specified knowledge from the destination provider and that are accepted by the specified filter.</summary>
+			<returns>A change batch that contains item metadata for items that are not contained in the specified knowledge from the destination provider and that are accepted by the specified static or dynamic filter.</returns>
+			<param name="batchSize">The size of the batch to be created.</param>
+			<param name="destinationKnowledge">The knowledge from the destination provider.</param>
+			<param name="filterInfo">Information about the filter that controls which items are included in the change batch.</param>
+			<param name="filterCallback">The delegate that is called to determine whether the item should be added to the batch.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetForgottenKnowledge">
+			<summary>When overridden in a derived class, gets the forgotten knowledge for this replica.</summary>
+			<returns>The forgotten knowledge for this replica. If no forgotten knowledge is associated with this replica, getting this property returns ForgottenKnowledge.Empty.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetFullEnumerationChangeBatch(System.UInt32,Microsoft.Synchronization.SyncId,Microsoft.Synchronization.SyncKnowledge)">
+			<summary>When overridden in a derived class, gets a change batch that contains item metadata for items that have IDs equal to or greater than the specified lower bound, as part of a full enumeration.</summary>
+			<returns>A change batch that contains item metadata for items that have IDs equal to or greater than the specified lower bound.</returns>
+			<param name="batchSize">The size of the change batch to return.</param>
+			<param name="lowerEnumerationBound">The lower bound for item IDs. This method should return changes that have IDs greater than or equal to this ID value.</param>
+			<param name="destinationKnowledge">The knowledge of the destination provider.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetFullEnumerationLocalVersions(Microsoft.Synchronization.FullEnumerationChangeBatch)">
+			<summary>When overridden in a derived class, gets a change batch that contains the versions of items and change units stored in this replica that correspond to the items and change units referred to in a batch of changes that are sent from some other provider, as part of a full enumeration.</summary>
+			<returns>A change batch that contains the versions of items and change units stored in this replica that correspond to the items and change units referred to in a batch of changes that are sent from some other provider, as part of a full enumeration.</returns>
+			<param name="sourceChanges">The batch of source changes about to be applied.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetItemCount(System.UInt32@,System.UInt32@)">
+			<summary>When overridden in a derived class, gets the total number of items in the metadata store and the number of deleted items in the metadata store.</summary>
+			<param name="totalItemCount">Returns the total number of items in the metadata store, including deleted items.</param>
+			<param name="deletedItemCount">Returns the number of deleted items in the metadata store.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetKnowledge">
+			<summary>When overridden in a derived class, gets the current knowledge for this replica.</summary>
+			<returns>The current knowledge for this replica. If no knowledge exists, a new knowledge object is created.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetLocalVersions(Microsoft.Synchronization.ChangeBatch)">
+			<summary>When overridden in a derived class, gets a batch of changes that contains the versions of items and change units that are stored in this replica. These items and change units correspond to the items and change units referred to in a batch of changes that is sent from some other provider.</summary>
+			<returns>A batch of changes that contains the versions of items and change units that are stored in this replica that correspond to the items and change units referred to in a batch of changes that is sent from some other provider.</returns>
+			<param name="sourceChanges">The batch of changes sent from another provider that is about to be applied to the item store that is associated with this replica.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.GetNextTickCount">
+			<summary>When overridden in a derived class, increments the previously saved tick count for this replica, saves the new value to the store, and returns the new value.</summary>
+			<returns>The new tick count value for this replica.</returns>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.RemoveItemMetadata(System.Collections.Generic.IEnumerable{Microsoft.Synchronization.SyncId})">
+			<summary>When overridden in a derived class, removes item metadata from the metadata store.</summary>
+			<param name="globalIds">The collection of global IDs for items to remove.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.SaveItemMetadata(Microsoft.Synchronization.MetadataStorage.ItemMetadata)">
+			<summary>When overridden in a derived class, saves item metadata property changes to the metadata store.</summary>
+			<param name="itemMetadata">The item metadata to save to the metadata store.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.SaveReplicaMetadata">
+			<summary>When overridden in a derived class, saves replica metadata property changes to the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.SetForgottenKnowledge(Microsoft.Synchronization.ForgottenKnowledge)">
+			<summary>When overridden in a derived class, sets the forgotten knowledge for this replica.</summary>
+			<param name="forgottenKnowledge">The forgotten knowledge to set for this replica.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.SetKnowledge(Microsoft.Synchronization.SyncKnowledge)">
+			<summary>When overridden in a derived class, sets the current knowledge for this replica.</summary>
+			<param name="knowledge">The knowledge to set as the current knowledge for this replica.</param>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.CustomReplicaMetadata">
+			<summary>When overridden in a derived class, gets or sets the custom metadata field that is associated with this replica.</summary>
+			<returns>The custom metadata field that is associated with this replica. A null when no custom field has been set.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.DeleteDetector">
+			<summary>When overridden in a derived class, an object that represents the delete detection service.</summary>
+			<returns>The object that represents the delete detection service.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.IdFormats">
+			<summary>Gets the ID format schema for the replica.</summary>
+			<returns>The ID format schema for the replica.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.LastDeletedItemsCleanupTime">
+			<summary>When overridden in a derived class, gets the time when deleted items were last cleaned up by <see cref="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.CleanupDeletedItems(System.TimeSpan)" />.</summary>
+			<returns>The time when deleted items were last cleaned up by <see cref="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.CleanupDeletedItems(System.TimeSpan)" />. If deleted items have not previously been cleaned up, <see cref="F:System.DateTime.MinValue" /> will be returned.</returns>
+		</member>
+		<member name="P:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.ReplicaId">
+			<summary>Gets the ID of the replica that is associated with this metadata.</summary>
+			<returns>The ID of the replica that is associated with this metadata.</returns>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata.ItemFilterCallback">
+			<summary>Represents the method that will determine whether an item change should be included in a change batch. </summary>
+			<returns>true to include the item change in the change batch; otherwise, false. </returns>
+			<param name="itemMetadata">Metadata for the item change.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException">
+			<summary>The exception that is thrown when an attempt is made to create new replica metadata in a metadata store when metadata for that replica already exists in the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataAlreadyExistsException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException">
+			<summary>The exception that is thrown when an attempt is made to create more than one active <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadata" /> instance for a particular replica ID.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataInUseException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException">
+			<summary>The exception that is thrown when no replica metadata exists in the metadata store for the specified replica ID. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException" /> class.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException" /> class that contains a specified error message.</summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.ReplicaMetadataNotFoundException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The message that states the error.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore">
+			<summary>Represents a metadata store that is implemented by using a lightweight database to store the metadata.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.BeginTransaction">
+			<summary>Starts an explicit transaction on the metadata store that has an isolation level of <see cref="F:System.Data.IsolationLevel.ReadCommitted" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.BeginTransaction(System.Data.IsolationLevel)">
+			<summary>Starts an explicit transaction on the metadata store that has the specified isolation level.</summary>
+			<param name="isolationLevel">The isolation level for the transaction. This must be one of the following values from the <see cref="T:System.Data.IsolationLevel" /> enumeration: <see cref="F:System.Data.IsolationLevel.ReadCommitted" />,<see cref="F:System.Data.IsolationLevel.RepeatableRead" />, or<see cref="F:System.Data.IsolationLevel.Serializable" />.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.CommitTransaction">
+			<summary>Commits an explicit transaction that has already started on the metadata store.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.CreateStore(System.String)">
+			<summary>Creates a metadata store file that has the specified name and location, and returns a metadata store object that represents it.</summary>
+			<returns>The metadata store object that represents the database.</returns>
+			<param name="fileName">The file path and file name for the database file. The file path must exist before this method is called. The file path can be a relative path. In this case, it is relative to the current directory.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.CreateStore(System.String,System.Globalization.CultureInfo)">
+			<summary>Creates a metadata store file that has the specified name, location, and locale; and returns a metadata store object that represents it.</summary>
+			<returns>The metadata store object that represents the database.</returns>
+			<param name="fileName">The file path and file name for the database file. The file path must exist before this method is called. The file path can be a relative path. In this case, it is relative to the current directory.</param>
+			<param name="locale">The locale to use to create the database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.Dispose">
+			<summary>Releases the resources that are used by <see cref="T:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.Finalize">
+			<summary>Finalizer for <see cref="T:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore" />.</summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.GetReplicaMetadata(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId)">
+			<summary>Gets a replica metadata object that is used to access replica metadata in the metadata store.</summary>
+			<returns>A replica metadata object that is used to access replica metadata in the metadata store.</returns>
+			<param name="idFormats">The ID format schema for the provider.</param>
+			<param name="replicaId">The ID of the replica that is associated with this metadata.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.InitializeReplicaMetadata(Microsoft.Synchronization.SyncIdFormatGroup,Microsoft.Synchronization.SyncId,System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.FieldSchema},System.Collections.Generic.IEnumerable{Microsoft.Synchronization.MetadataStorage.IndexSchema})">
+			<summary>Creates and initializes metadata for a replica in the metadata store, and returns a replica metadata object that is used to access the replica metadata.</summary>
+			<returns>The replica metadata object that is used to access the replica metadata in the metadata store.</returns>
+			<param name="idFormats">The ID format schema for the provider.</param>
+			<param name="replicaId">The replica ID that is associated with this metadata.</param>
+			<param name="customItemFieldSchemas">The collection of schema information for the custom metadata fields for each metadata item. Can be a null when there are no custom metadata fields.</param>
+			<param name="customIndexedFieldSchemas">The list of index schemas that can be used to more efficiently find items in the metadata store. Can be a null when there are no custom indexes.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.IsTransactionActive(System.Data.IsolationLevel@)">
+			<summary>Indicates whether an active transaction exists on the metadata store.</summary>
+			<returns>true if an active transaction exists on the metadata store; otherwise, false.</returns>
+			<param name="isolationLevel">Returns the isolation level of the currently active transaction, or <see cref="F:System.Data.IsolationLevel.Unspecified" /> if no active transaction exists.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.OpenStore(System.String)">
+			<summary>Opens an existing metadata store file that has the specified name and location, and returns a metadata store object that represents it.</summary>
+			<returns>The metadata store object that represents the database.</returns>
+			<param name="fileName">The file path and file name for the database file. The file path can be a relative path. In this case, it is relative to the current directory.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.OpenStore(System.String,System.Globalization.CultureInfo)">
+			<summary>Opens an existing metadata store file that has the specified name, location, and locale; and returns a metadata store object that represents it.</summary>
+			<returns>The metadata store object that represents the database.</returns>
+			<param name="fileName">The file path and file name for the database file. The file path can be a relative path. In this case, it is relative to the current directory.</param>
+			<param name="locale">The locale for the database.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.SqlMetadataStore.RollbackTransaction">
+			<summary>Cancels the current explicit transaction and rolls the metadata store back to the state it was in before the transaction was started.</summary>
+		</member>
+		<member name="T:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException">
+			<summary>The exception that is thrown when an attempt is made to get replica metadata from a metadata store, but the version of the metadata is not supported by the implementation of the metadata store. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException.#ctor">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException" /> class. </summary>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException.#ctor(System.String)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException" /> class that contains a specified error message. </summary>
+			<param name="message">The message that states the error.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException" /> class by using serialized data.</summary>
+			<param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object that holds the serialized object data about the exception that is being thrown.</param>
+			<param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that contains contextual information about the source or destination.</param>
+		</member>
+		<member name="M:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException.#ctor(System.String,System.Exception)">
+			<summary>Initializes a new instance of the <see cref="T:Microsoft.Synchronization.MetadataStorage.VersionNotSupportedException" /> class that contains a specified error message and a reference to the inner exception that caused this exception.</summary>
+			<param name="message">The error message that states the reason for the exception.</param>
+			<param name="innerException">The exception that caused the current exception, or a null when no inner exception is specified.</param>
+		</member>
+	</members>
+</doc>

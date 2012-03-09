@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<Style xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StyleName>BumbleBee</StyleName>
+  <StylePath>BumbleBee</StylePath>
+  <StyleVersion>1.1</StyleVersion>
+  <QuestionStylesheetPath>BumbleBee\question.xsl</QuestionStylesheetPath>
+  <AnswerStylesheetPath>BumbleBee\answer.xsl</AnswerStylesheetPath>
+  <StyledControls>
+    <!-- Statistics Control = Toolbar-->
+    <item>
+      <key>gradientPanelStatisticsPanel</key>
+      <value>
+        <ControlSettings>
+          <BackColor>96,82,37</BackColor>
+          <Gradient Type="Gradient">
+            <PanelGradient>
+              <Colors>
+                <Color>96,82,37</Color>
+                <Color>96,82,37</Color>
+              </Colors>
+              <Positions>
+                <Position>0</Position>
+                <Position>1</Position>
+              </Positions>
+              <Direction>Horizontal</Direction>
+            </PanelGradient>
+          </Gradient>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>statisticsPanel</key>
+      <value>
+        <ControlSettings>
+          <BackColor>96,82,37</BackColor>
+          <ForeColorTitle Type="Color">255,255,255</ForeColorTitle>
+          <ForeColorValue Type="Color">255,255,255</ForeColorValue>
+          <FontTitle Type="Font">Tahoma, 8.25pt, style=Bold</FontTitle>
+          <FontValue Type="Font">Tahoma, 9.75pt, style=Bold</FontValue>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Statistics Control = Toolbar END-->
+    <!-- Answer Control -->
+    <item>
+      <key>answerPanel</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>panelMultiPane</key>
+      <value>
+        <ControlSettings>
+          <BackColor>255,255,255</BackColor>
+          <BorderStyle Type="BorderStyle">None</BorderStyle>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>gradientPanelAnswer</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>labelAnswer</key>
+      <value>
+        <ControlSettings>
+          <ForeColor>255,255,255</ForeColor>
+          <BackColor>Transparent</BackColor>
+          <Font>Tahoma, 9.75pt, style=Bold</Font>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>mLifterTextBox</key>
+      <value>
+        <ControlSettings>
+          <ForeColor>Black</ForeColor>
+          <TippForeColor Type="Color">Silver</TippForeColor>
+          <Font>Tahoma, 16pt, style=Bold</Font>
+          <BorderStyle Type ="BorderStyle">FixedSingle</BorderStyle>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Answer Control END-->
+    <!-- Question Control -->
+    <item>
+      <key>questionPanel</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>gradientPanelQuestion</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>labelQuestion</key>
+      <value>
+        <ControlSettings>
+          <ForeColor>255,255,255</ForeColor>
+          <BackColor>Transparent</BackColor>
+          <Font>Tahoma, 9.75pt, style=Bold</Font>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Question Control END-->
+    <!-- Answer/Question Container-->
+    <item>
+      <key>splitContainerVertical</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>panelLearningWindowMiddle</key>
+      <value>
+        <ControlSettings>
+          <BackColor>247,204,29</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>gradientPanelMain</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+          <Gradient Type="Gradient">
+            <PanelGradient>
+              <Colors>
+                <Color>247,204,29</Color>
+                <Color>247,204,29</Color>
+              </Colors>
+              <Positions>
+                <Position>0</Position>
+                <Position>1</Position>
+              </Positions>
+              <Direction>Horizontal</Direction>
+            </PanelGradient>
+          </Gradient>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Answer/Question Container END-->
+    <!-- Multiple Choice-->
+    <item>
+      <key>multipleChoice</key>
+      <value>
+        <ControlSettings>
+          <ForeColor>Black</ForeColor>
+          <BackColor>White</BackColor>
+          <Font>Arial, 14.25pt, style=Bold</Font>
+          <ImageChecked Type="Image">checkmarkRound.png</ImageChecked>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>checkButtonNumber</key>
+      <value>
+        <ControlSettings>
+          <ImageChecked Type="Image">checkmarkRound.png</ImageChecked>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Multiple Choice END-->
+    <!-- Don't aks again-->
+    <item>
+      <key>dockingButtonDontAskAgain</key>
+      <value>
+        <ControlSettings>
+          <BackColor>250,246,234</BackColor>
+          <ForeColor>Black</ForeColor>
+            <BorderStyle Type="BorderStyle">None</BorderStyle>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Don't ask again END-->
+    <!-- Button Control-->
+    <item>
+      <key>buttonsPanelMainControl</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>   
+    <item>
+      <key>glassButtonPreviousCard</key>
+      <value>
+        <ControlSettings>
+          <AnimateGlow Type ="Boolean">false</AnimateGlow>
+          <GlowColor Type="Color">255,156,0</GlowColor>
+          <ForeColor Type="Color">Black</ForeColor>
+          <ShineColor Type="Color">White</ShineColor>
+          <FocusColor Type="Color">255,210,0</FocusColor>
+		  <ShowSpecialSymbol Type="Boolean">false</ShowSpecialSymbol>
+		  <Image Type="Image">Arrow_Left_grey.png</Image>
+		  <ImageEnabled Type="Image">Arrow_Left.png</ImageEnabled>
+		  <ImageDisabled Type="Image">Arrow_Left_grey.png</ImageDisabled>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>glassButtonNextCard</key>
+      <value>
+        <ControlSettings>
+          <AnimateGlow Type ="Boolean">false</AnimateGlow>
+          <GlowColor Type="Color">255,156,0</GlowColor>
+          <ForeColor Type="Color">Black</ForeColor>
+          <ShineColor Type="Color">White</ShineColor>
+          <FocusColor Type="Color">255,210,0</FocusColor>
+		  <ShowSpecialSymbol Type="Boolean">false</ShowSpecialSymbol>
+		  <Image Type="Image">Arrow_Right_grey.png</Image>
+		  <ImageEnabled Type="Image">Arrow_Right.png</ImageEnabled>
+		  <ImageDisabled Type="Image">Arrow_Right_grey.png</ImageDisabled>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>glassButtonQuestion</key>
+      <value>
+        <ControlSettings>
+          <AnimateGlow Type ="Boolean">false</AnimateGlow>
+          <GlowColor Type="Color">255,156,0</GlowColor>
+          <ForeColor Type="Color">Black</ForeColor>
+          <ShineColor Type="Color">White</ShineColor>
+          <FocusColor Type="Color">255,210,0</FocusColor>
+          <ShowSpecialSymbol Type="Boolean">false</ShowSpecialSymbol>
+          <Image Type="Image">OK_inactive.png</Image>
+          <ImageEnabled Type="Image">OK_active.png</ImageEnabled>
+          <ImageDisabled Type="Image">OK_inactive.png</ImageDisabled>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>glassButtonSelfAssesmentDontKnow</key>
+      <value>
+        <ControlSettings>
+          <AnimateGlow Type ="Boolean">false</AnimateGlow>
+          <GlowColor Type="Color">255,156,0</GlowColor>
+          <ForeColor Type="Color">Black</ForeColor>
+          <ShineColor Type="Color">White</ShineColor>
+          <FocusColor Type="Color">255,210,0</FocusColor>
+          <ShowSpecialSymbol Type="Boolean">false</ShowSpecialSymbol>
+          <Image Type="Image">face-crying_grey.png</Image>
+          <ImageEnabled Type="Image">face-crying.png</ImageEnabled>
+          <ImageDisabled Type="Image">face-crying_grey.png</ImageDisabled>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>glassButtonSelfAssesmentDoKnow</key>
+      <value>
+        <ControlSettings>
+          <AnimateGlow Type ="Boolean">false</AnimateGlow>
+          <GlowColor Type="Color">255,156,0</GlowColor>
+          <ForeColor Type="Color">Black</ForeColor>
+          <ShineColor Type="Color">White</ShineColor>
+          <FocusColor Type="Color">255,210,0</FocusColor>
+          <ShowSpecialSymbol Type="Boolean">false</ShowSpecialSymbol>
+          <Image Type="Image">face-grin_grey.png</Image>
+          <ImageEnabled Type="Image">face-grin.png</ImageEnabled>
+          <ImageDisabled Type="Image">face-grin_grey.png</ImageDisabled>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>gradientPanelButtonControlBackground</key>
+      <value>
+        <ControlSettings>
+          <BackColor>96,82,37</BackColor>
+          <Gradient Type="Gradient">
+            <PanelGradient>
+              <Colors>
+                <Color>96,82,37</Color>
+                <Color>255,255,255</Color>
+                <Color>96,82,37</Color>
+              </Colors>
+              <Positions>
+                <Position>0</Position>
+                <Position>0.5</Position>
+                <Position>1</Position>
+              </Positions>
+              <Direction>Horizontal</Direction>
+            </PanelGradient>
+          </Gradient>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Button Control END-->
+    <!-- Card Stack -->
+    <item>
+      <key>dockingButtonStack</key>
+      <value>
+        <ControlSettings>
+          <BackColor>250,246,234</BackColor>
+          <ForeColor>Black</ForeColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>stackFlow</key>
+      <value>
+        <ControlSettings>
+          <BackColor>255,255,255</BackColor>
+          <ForeColor>0,0,0</ForeColor>
+          <Font>Tahoma, 9pt, style=Bold</Font>
+          <BackgroundImage Type="Image">stack.png</BackgroundImage>
+          <BackgroundImageLayout Type="ImageLayout">Tile</BackgroundImageLayout>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>stackFlow_Wrong</key>
+      <value>
+        <ControlSettings>
+          <BackColor>255,255,255</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <item>
+      <key>tableLayoutPanel</key>
+      <value>
+        <ControlSettings>
+          <BackColor>Transparent</BackColor>
+        </ControlSettings>
+      </value>
+    </item>
+    <!-- Card Stack END-->
+  </StyledControls>
+  <PrintStyles>
+    <!-- DEFAULT -->
+    <StyleInfo>
+      <Path>System\Print\default.xsl</Path>
+      <Name>Print All</Name>
+      <ResourceID>PRINT_STYLE_PRINTALL</ResourceID>
+    </StyleInfo>
+    <!-- WITHOUT MEDIA -->
+    <StyleInfo>
+      <Path>System\Print\withoutMedia.xsl</Path>
+      <Name>Print without Media</Name>
+      <ResourceID>PRINT_STYLE_WITHOUTMEDIA</ResourceID>
+    </StyleInfo>
+  </PrintStyles>
+</Style>

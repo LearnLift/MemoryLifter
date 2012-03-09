@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxCharacterMapAnswer.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxCharacterMapAnswer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxCharacterMapAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 40</value>
+  </data>
+  <data name="checkBoxCharacterMapAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxCharacterMapAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapAnswer.Name" xml:space="preserve">
+    <value>checkBoxCharacterMapAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapAnswer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxSynonymAnswer.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxSynonymAnswer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxSynonymAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 40</value>
+  </data>
+  <data name="checkBoxSynonymAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="checkBoxSynonymAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymAnswer.Name" xml:space="preserve">
+    <value>checkBoxSynonymAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymAnswer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>246</value>
+  </data>
+  <metadata name="contextMenuStripSynonyms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>361, 17</value>
+  </metadata>
+  <data name="cutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="cutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="pasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 6</value>
+  </data>
+  <data name="distractorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="distractorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Distractor</value>
+  </data>
+  <data name="whatsThisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="whatsThisToolStripMenuItem.Text" xml:space="preserve">
+    <value>What's this?</value>
+  </data>
+  <data name="contextMenuStripSynonyms.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 142</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripSynonyms.Name" xml:space="preserve">
+    <value>contextMenuStripSynonyms</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripSynonyms.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewAnswer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="listViewAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="listViewAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 70</value>
+  </data>
+  <data name="listViewAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listViewAnswer.Name" xml:space="preserve">
+    <value>listViewAnswer</value>
+  </data>
+  <data name="&gt;&gt;listViewAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;listViewAnswer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxResizeAnswer.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxResizeAnswer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxResizeAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 347</value>
+  </data>
+  <data name="checkBoxResizeAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 42</value>
+  </data>
+  <data name="checkBoxResizeAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeAnswer.Name" xml:space="preserve">
+    <value>checkBoxResizeAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeAnswer.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonAnswerImage.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonAnswerImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAnswerImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 90</value>
+  </data>
+  <data name="buttonAnswerImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonAnswerImage.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="buttonAnswerImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="buttonAnswerImage.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerImage.Name" xml:space="preserve">
+    <value>buttonAnswerImage</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerImage.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerImage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxSamePicture.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxSamePicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxSamePicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 395</value>
+  </data>
+  <data name="checkBoxSamePicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 17</value>
+  </data>
+  <data name="checkBoxSamePicture.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="checkBoxSamePicture.Text" xml:space="preserve">
+    <value>use question-image</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSamePicture.Name" xml:space="preserve">
+    <value>checkBoxSamePicture</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSamePicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSamePicture.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSamePicture.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonAnswerVideo.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonAnswerVideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAnswerVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 90</value>
+  </data>
+  <data name="buttonAnswerVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonAnswerVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonAnswerVideo.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="buttonAnswerVideo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerVideo.Name" xml:space="preserve">
+    <value>buttonAnswerVideo</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerVideo.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerVideo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonAnswerAudio.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonAnswerAudio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAnswerAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 90</value>
+  </data>
+  <data name="buttonAnswerAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonAnswerAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="buttonAnswerAudio.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="buttonAnswerAudio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerAudio.Name" xml:space="preserve">
+    <value>buttonAnswerAudio</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerAudio.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerAudio.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBoxAnswer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 201</value>
+  </data>
+  <data name="pictureBoxAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 188</value>
+  </data>
+  <data name="pictureBoxAnswer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBoxAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAnswer.Name" xml:space="preserve">
+    <value>pictureBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAnswer.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 173</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="buttonAnswerExampleAudio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerExampleAudio.Name" xml:space="preserve">
+    <value>buttonAnswerExampleAudio</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerExampleAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerExampleAudio.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;buttonAnswerExampleAudio.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxAnswerExample.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="textBoxAnswerExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 119</value>
+  </data>
+  <data name="textBoxAnswerExample.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxAnswerExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 50</value>
+  </data>
+  <data name="textBoxAnswerExample.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswerExample.Name" xml:space="preserve">
+    <value>textBoxAnswerExample</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswerExample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswerExample.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswerExample.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textBoxAnswer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="textBoxAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="textBoxAnswer.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxAnswer.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textBoxAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 70</value>
+  </data>
+  <data name="textBoxAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="textBoxAnswer.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswer.Name" xml:space="preserve">
+    <value>textBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswer.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;textBoxAnswer.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 72</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Answer:</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 122</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 47</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Example:</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 201</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 190</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Image:</value>
+  </data>
+  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="groupBoxAnswer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 56</value>
+  </data>
+  <data name="groupBoxAnswer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 418</value>
+  </data>
+  <data name="groupBoxAnswer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBoxAnswer.Text" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAnswer.Name" xml:space="preserve">
+    <value>groupBoxAnswer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAnswer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAnswer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAnswer.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBoxCharacterMapQuestion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxCharacterMapQuestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxCharacterMapQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 40</value>
+  </data>
+  <data name="checkBoxCharacterMapQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="checkBoxCharacterMapQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapQuestion.Name" xml:space="preserve">
+    <value>checkBoxCharacterMapQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxCharacterMapQuestion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxSynonymQuestion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxSynonymQuestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxSynonymQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 40</value>
+  </data>
+  <data name="checkBoxSynonymQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 27</value>
+  </data>
+  <data name="checkBoxSynonymQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymQuestion.Name" xml:space="preserve">
+    <value>checkBoxSynonymQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSynonymQuestion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Main.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Main.Width" type="System.Int32, mscorlib">
+    <value>246</value>
+  </data>
+  <data name="listViewQuestion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="listViewQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 16</value>
+  </data>
+  <data name="listViewQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 70</value>
+  </data>
+  <data name="listViewQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listViewQuestion.Name" xml:space="preserve">
+    <value>listViewQuestion</value>
+  </data>
+  <data name="&gt;&gt;listViewQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;listViewQuestion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonQuestionImage.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonQuestionImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonQuestionImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 90</value>
+  </data>
+  <data name="buttonQuestionImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonQuestionImage.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonQuestionImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="buttonQuestionImage.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionImage.Name" xml:space="preserve">
+    <value>buttonQuestionImage</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionImage.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionImage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxResizeQuestion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxResizeQuestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxResizeQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 347</value>
+  </data>
+  <data name="checkBoxResizeQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 42</value>
+  </data>
+  <data name="checkBoxResizeQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeQuestion.Name" xml:space="preserve">
+    <value>checkBoxResizeQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;checkBoxResizeQuestion.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonQuestionVideo.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonQuestionVideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonQuestionVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 90</value>
+  </data>
+  <data name="buttonQuestionVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonQuestionVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonQuestionVideo.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="buttonQuestionVideo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionVideo.Name" xml:space="preserve">
+    <value>buttonQuestionVideo</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionVideo.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionVideo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonQuestionAudio.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonQuestionAudio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonQuestionAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 90</value>
+  </data>
+  <data name="buttonQuestionAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonQuestionAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonQuestionAudio.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="buttonQuestionAudio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionAudio.Name" xml:space="preserve">
+    <value>buttonQuestionAudio</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionAudio.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionAudio.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pictureBoxQuestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 201</value>
+  </data>
+  <data name="pictureBoxQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 188</value>
+  </data>
+  <data name="pictureBoxQuestion.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBoxQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxQuestion.Name" xml:space="preserve">
+    <value>pictureBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxQuestion.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 173</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.Text" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="buttonQuestionExampleAudio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionExampleAudio.Name" xml:space="preserve">
+    <value>buttonQuestionExampleAudio</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionExampleAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionExampleAudio.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;buttonQuestionExampleAudio.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBoxQuestionExample.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="textBoxQuestionExample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 119</value>
+  </data>
+  <data name="textBoxQuestionExample.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxQuestionExample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 50</value>
+  </data>
+  <data name="textBoxQuestionExample.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestionExample.Name" xml:space="preserve">
+    <value>textBoxQuestionExample</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestionExample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestionExample.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestionExample.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxQuestion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="textBoxQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 16</value>
+  </data>
+  <data name="textBoxQuestion.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxQuestion.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textBoxQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 70</value>
+  </data>
+  <data name="textBoxQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestion.Name" xml:space="preserve">
+    <value>textBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestion.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;textBoxQuestion.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 72</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Question:</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 122</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 47</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Example:</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 201</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 190</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Image:</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBoxQuestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 56</value>
+  </data>
+  <data name="groupBoxQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 418</value>
+  </data>
+  <data name="groupBoxQuestion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBoxQuestion.Text" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="&gt;&gt;groupBoxQuestion.Name" xml:space="preserve">
+    <value>groupBoxQuestion</value>
+  </data>
+  <data name="&gt;&gt;groupBoxQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxQuestion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxQuestion.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="contextMenuStripMedia.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>193, 17</value>
+  </metadata>
+  <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="playToolStripMenuItem.Text" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="removeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="browseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAN1QAA
+        DdUBPdZY8QAAAYlJREFUOE+Vk01LAkEcxu1b+EE61yH6BBImIiq2pa6adRCKoCKKrE6Rq65vFLIhldWl
+        Q0FJkGXsriGVQhRBl6BrHtrL08yGmm/oDjwMM/P8f/9nZ9iBMaNhUa/XL+lahqIo6o7yozhTyd1o63l9
+        7Z1mIctyR+XzN3AwdpAmpq4At8eJXO4KXDikio9HsJ9J9xQX3V5RoVMuBoVCAYIgqKLF/QzqUwF2h7Up
+        QQ1QrX6jm2iDOsBiNXdMQItF8b5NdL8N8P8ONCcwmY19JahUyvVPakpAnki9A/s8j0EmrUkjbAI6CqCv
+        QIvzlS9clj77EvXSGhVAE9BF9vYDW6eVngpmnyFcvzcAtQRHBLB5UlYBdN44LmOdmFcPn7CcecSCUEJg
+        7wGzqSLiF6/NCcYDMcTIpj8pw58owpeQ4YvL8BJ5YjLYmAQ3L8MVleAk2jl7aQAyBxkESTdqYnlqlP6M
+        EQmTEREMmZmwiAlOhCMkgj9/g2GGw6hlLqUbsgVzWm+f+odta3ddfzAtB79W6oKXv6zEYQAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="browseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="browseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="contextMenuStripMedia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 70</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripMedia.Name" xml:space="preserve">
+    <value>contextMenuStripMedia</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStripMedia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBoxCardBox.Items" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="comboBoxCardBox.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxCardBox.Items2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxCardBox.Items3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboBoxCardBox.Items4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxCardBox.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="comboBoxCardBox.Items6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="comboBoxCardBox.Items7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBoxCardBox.Items8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="comboBoxCardBox.Items9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="comboBoxCardBox.Items10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="comboBoxCardBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>660, 15</value>
+  </data>
+  <data name="comboBoxCardBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 21</value>
+  </data>
+  <data name="comboBoxCardBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="comboBoxCardBox.Text" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="&gt;&gt;comboBoxCardBox.Name" xml:space="preserve">
+    <value>comboBoxCardBox</value>
+  </data>
+  <data name="&gt;&gt;comboBoxCardBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxCardBox.Parent" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;comboBoxCardBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxActive.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxActive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 17</value>
+  </data>
+  <data name="checkBoxActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 17</value>
+  </data>
+  <data name="checkBoxActive.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="checkBoxActive.Text" xml:space="preserve">
+    <value>Card is active</value>
+  </data>
+  <data name="&gt;&gt;checkBoxActive.Name" xml:space="preserve">
+    <value>checkBoxActive</value>
+  </data>
+  <data name="&gt;&gt;checkBoxActive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxActive.Parent" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;checkBoxActive.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxChapter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 15</value>
+  </data>
+  <data name="comboBoxChapter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 21</value>
+  </data>
+  <data name="comboBoxChapter.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;comboBoxChapter.Name" xml:space="preserve">
+    <value>comboBoxChapter</value>
+  </data>
+  <data name="&gt;&gt;comboBoxChapter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxChapter.Parent" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;comboBoxChapter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 18</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 19</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Box:</value>
+  </data>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 19</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Chapter:</value>
+  </data>
+  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBoxGeneral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBoxGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>748, 47</value>
+  </data>
+  <data name="groupBoxGeneral.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBoxGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;groupBoxGeneral.Name" xml:space="preserve">
+    <value>groupBoxGeneral</value>
+  </data>
+  <data name="&gt;&gt;groupBoxGeneral.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxGeneral.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxGeneral.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonAddEdit.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonAddEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAddEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>571, 482</value>
+  </data>
+  <data name="buttonAddEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="buttonAddEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonAddEdit.Text" xml:space="preserve">
+    <value>Add Card</value>
+  </data>
+  <data name="buttonAddEdit.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;buttonAddEdit.Name" xml:space="preserve">
+    <value>buttonAddEdit</value>
+  </data>
+  <data name="&gt;&gt;buttonAddEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonAddEdit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="panelVideoParker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 480</value>
+  </data>
+  <data name="panelVideoParker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 27</value>
+  </data>
+  <data name="panelVideoParker.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="panelVideoParker.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelVideoParker.Name" xml:space="preserve">
+    <value>panelVideoParker</value>
+  </data>
+  <data name="&gt;&gt;panelVideoParker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelVideoParker.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelVideoParker.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonStyle.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonStyle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 482</value>
+  </data>
+  <data name="buttonStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="buttonStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="buttonStyle.Text" xml:space="preserve">
+    <value>Add/Edit Cardstyle</value>
+  </data>
+  <data name="buttonStyle.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Name" xml:space="preserve">
+    <value>buttonStyle</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStyle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 482</value>
+  </data>
+  <data name="buttonPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="buttonPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="buttonPreview.Text" xml:space="preserve">
+    <value>Preview Card</value>
+  </data>
+  <data name="buttonPreview.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonPreview.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;buttonPreview.Name" xml:space="preserve">
+    <value>buttonPreview</value>
+  </data>
+  <data name="&gt;&gt;buttonPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPreview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonPreview.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="characterMapComponent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>550, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 512</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cutToolStripMenuItem.Name" xml:space="preserve">
+    <value>cutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyToolStripMenuItem.Name" xml:space="preserve">
+    <value>copyToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;copyToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pasteToolStripMenuItem.Name" xml:space="preserve">
+    <value>pasteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pasteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;distractorToolStripMenuItem.Name" xml:space="preserve">
+    <value>distractorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;distractorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whatsThisToolStripMenuItem.Name" xml:space="preserve">
+    <value>whatsThisToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;whatsThisToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textColumnQuestion.Name" xml:space="preserve">
+    <value>textColumnQuestion</value>
+  </data>
+  <data name="&gt;&gt;textColumnQuestion.Type" xml:space="preserve">
+    <value>XPTable.Models.TextColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;Main.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playToolStripMenuItem.Name" xml:space="preserve">
+    <value>playToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;playToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeToolStripMenuItem.Name" xml:space="preserve">
+    <value>removeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;removeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;browseToolStripMenuItem.Name" xml:space="preserve">
+    <value>browseToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;browseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;characterMapComponent.Name" xml:space="preserve">
+    <value>characterMapComponent</value>
+  </data>
+  <data name="&gt;&gt;characterMapComponent.Type" xml:space="preserve">
+    <value>MLifter.Controls.LearningWindow.CharacterMapComponent, MLifterControls, Version=2.2.442.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CardEdit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

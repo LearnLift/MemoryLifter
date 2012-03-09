@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://www.memorylifter.com/UpdateService/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="UpdateService" targetNamespace="http://www.memorylifter.com/UpdateService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.memorylifter.com/UpdateService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ServeLatestMLVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="version" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="onstick" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ServeLatestMLVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="ServeLatestMLVersionResult" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+    </xs:schema>
+  </types>
+  <message name="ServeLatestMLVersionSoapIn">
+    <part name="parameters" element="s0:ServeLatestMLVersion" />
+  </message>
+  <message name="ServeLatestMLVersionSoapOut">
+    <part name="parameters" element="s0:ServeLatestMLVersionResponse" />
+  </message>
+  <message name="ServeLatestMLVersionHttpGetIn">
+    <part name="version" type="s:string" />
+    <part name="onstick" type="s:boolean" />
+  </message>
+  <message name="ServeLatestMLVersionHttpGetOut">
+    <part name="Body" element="s0:base64Binary" />
+  </message>
+  <message name="ServeLatestMLVersionHttpPostIn">
+    <part name="version" type="s:string" />
+    <part name="onstick" type="s:boolean" />
+  </message>
+  <message name="ServeLatestMLVersionHttpPostOut">
+    <part name="Body" element="s0:base64Binary" />
+  </message>
+  <portType name="UpdateServiceSoap">
+    <operation name="ServeLatestMLVersion">
+      <input message="s0:ServeLatestMLVersionSoapIn" />
+      <output message="s0:ServeLatestMLVersionSoapOut" />
+    </operation>
+  </portType>
+  <portType name="UpdateServiceSoap12">
+    <operation name="ServeLatestMLVersion">
+      <input message="s0:ServeLatestMLVersionSoapIn" />
+      <output message="s0:ServeLatestMLVersionSoapOut" />
+    </operation>
+  </portType>
+  <portType name="UpdateServiceHttpGet">
+    <operation name="ServeLatestMLVersion">
+      <input message="s0:ServeLatestMLVersionHttpGetIn" />
+      <output message="s0:ServeLatestMLVersionHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="UpdateServiceHttpPost">
+    <operation name="ServeLatestMLVersion">
+      <input message="s0:ServeLatestMLVersionHttpPostIn" />
+      <output message="s0:ServeLatestMLVersionHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="UpdateServiceSoap" type="s0:UpdateServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ServeLatestMLVersion">
+      <soap:operation soapAction="http://www.memorylifter.com/UpdateService/ServeLatestMLVersion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateServiceSoap12" type="s0:UpdateServiceSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ServeLatestMLVersion">
+      <soap12:operation soapAction="http://www.memorylifter.com/UpdateService/ServeLatestMLVersion" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateServiceHttpGet" type="s0:UpdateServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="ServeLatestMLVersion">
+      <http:operation location="/ServeLatestMLVersion" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateServiceHttpPost" type="s0:UpdateServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="ServeLatestMLVersion">
+      <http:operation location="/ServeLatestMLVersion" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UpdateService">
+    <port name="UpdateServiceSoap" binding="s0:UpdateServiceSoap">
+      <soap:address location="http://services.memorylifter.com/update/UpdateService.asmx" />
+    </port>
+    <port name="UpdateServiceSoap12" binding="s0:UpdateServiceSoap12">
+      <soap12:address location="http://services.memorylifter.com/update/UpdateService.asmx" />
+    </port>
+    <port name="UpdateServiceHttpGet" binding="s0:UpdateServiceHttpGet">
+      <http:address location="http://services.memorylifter.com/update/UpdateService.asmx" />
+    </port>
+    <port name="UpdateServiceHttpPost" binding="s0:UpdateServiceHttpPost">
+      <http:address location="http://services.memorylifter.com/update/UpdateService.asmx" />
+    </port>
+  </service>
+</definitions>

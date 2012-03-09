@@ -1,0 +1,13 @@
+<HTML>
+<HEAD>
+<style type="text/css">
+body {{color: {0}; background-color: {1}; font-family: Arial, Helvetica; font-size: 10px; text-align: center;}}
+.hidden {{color: {1};}}
+</style>
+</HEAD>
+<BODY>
+<U>{2}</U>
+<BR>{3}
+<BR><FONT class="hidden">programmed by the MemoryLifter team.</FONT>
+</BODY>
+</HTML>

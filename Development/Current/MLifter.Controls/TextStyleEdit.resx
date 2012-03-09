@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxForeColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxForeColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 11</value>
+  </data>
+  <data name="checkBoxForeColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
+  </data>
+  <data name="checkBoxForeColor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkBoxForeColor.Text" xml:space="preserve">
+    <value>Foreground Color:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxForeColor.Name" xml:space="preserve">
+    <value>checkBoxForeColor</value>
+  </data>
+  <data name="&gt;&gt;checkBoxForeColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxForeColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxForeColor.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="checkBoxBackColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxBackColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 37</value>
+  </data>
+  <data name="checkBoxBackColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 17</value>
+  </data>
+  <data name="checkBoxBackColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkBoxBackColor.Text" xml:space="preserve">
+    <value>Background Color:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxBackColor.Name" xml:space="preserve">
+    <value>checkBoxBackColor</value>
+  </data>
+  <data name="&gt;&gt;checkBoxBackColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxBackColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxBackColor.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="checkBoxFontStyleNone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleNone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 22</value>
+  </data>
+  <data name="checkBoxFontStyleNone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="checkBoxFontStyleNone.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBoxFontStyleNone.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleNone.Name" xml:space="preserve">
+    <value>checkBoxFontStyleNone</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleNone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleNone.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleNone.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBoxFontStyleRegular.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleRegular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 48</value>
+  </data>
+  <data name="checkBoxFontStyleRegular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="checkBoxFontStyleRegular.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="checkBoxFontStyleRegular.Text" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleRegular.Name" xml:space="preserve">
+    <value>checkBoxFontStyleRegular</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleRegular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleRegular.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleRegular.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxFontStyleStrikeout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleStrikeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 22</value>
+  </data>
+  <data name="checkBoxFontStyleStrikeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="checkBoxFontStyleStrikeout.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="checkBoxFontStyleStrikeout.Text" xml:space="preserve">
+    <value>Strikeout</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleStrikeout.Name" xml:space="preserve">
+    <value>checkBoxFontStyleStrikeout</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleStrikeout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleStrikeout.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleStrikeout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxFontStyleItalic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleItalic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 48</value>
+  </data>
+  <data name="checkBoxFontStyleItalic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="checkBoxFontStyleItalic.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="checkBoxFontStyleItalic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleItalic.Name" xml:space="preserve">
+    <value>checkBoxFontStyleItalic</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleItalic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleItalic.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleItalic.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxFontStyleUnderline.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleUnderline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 48</value>
+  </data>
+  <data name="checkBoxFontStyleUnderline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="checkBoxFontStyleUnderline.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="checkBoxFontStyleUnderline.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleUnderline.Name" xml:space="preserve">
+    <value>checkBoxFontStyleUnderline</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleUnderline.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleUnderline.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleUnderline.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxFontStyleBold.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontStyleBold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="checkBoxFontStyleBold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="checkBoxFontStyleBold.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="checkBoxFontStyleBold.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleBold.Name" xml:space="preserve">
+    <value>checkBoxFontStyleBold</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleBold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleBold.Parent" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontStyleBold.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBoxFontStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 96</value>
+  </data>
+  <data name="groupBoxFontStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 78</value>
+  </data>
+  <data name="groupBoxFontStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBoxFontStyle.Text" xml:space="preserve">
+    <value>Font Style</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFontStyle.Name" xml:space="preserve">
+    <value>groupBoxFontStyle</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFontStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFontStyle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFontStyle.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="checkBoxFontFamily.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontFamily.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 63</value>
+  </data>
+  <data name="checkBoxFontFamily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="checkBoxFontFamily.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="checkBoxFontFamily.Text" xml:space="preserve">
+    <value>Font-Family:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontFamily.Name" xml:space="preserve">
+    <value>checkBoxFontFamily</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontFamily.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontFamily.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontFamily.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="comboBoxFontFamily.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 61</value>
+  </data>
+  <data name="comboBoxFontFamily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="comboBoxFontFamily.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontFamily.Name" xml:space="preserve">
+    <value>comboBoxFontFamily</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontFamily.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontFamily.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontFamily.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="comboBoxFontSizeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 194</value>
+  </data>
+  <data name="comboBoxFontSizeUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 21</value>
+  </data>
+  <data name="comboBoxFontSizeUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontSizeUnit.Name" xml:space="preserve">
+    <value>comboBoxFontSizeUnit</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontSizeUnit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontSizeUnit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxFontSizeUnit.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="checkBoxFontSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFontSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 196</value>
+  </data>
+  <data name="checkBoxFontSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="checkBoxFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="checkBoxFontSize.Text" xml:space="preserve">
+    <value>Font-Size:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontSize.Name" xml:space="preserve">
+    <value>checkBoxFontSize</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFontSize.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="numericUpDownFontSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 194</value>
+  </data>
+  <data name="numericUpDownFontSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="numericUpDownFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numericUpDownFontSize.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Name" xml:space="preserve">
+    <value>numericUpDownFontSize</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="comboBoxVAlign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 250</value>
+  </data>
+  <data name="comboBoxVAlign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="comboBoxVAlign.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVAlign.Name" xml:space="preserve">
+    <value>comboBoxVAlign</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVAlign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVAlign.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVAlign.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxVAlign.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxVAlign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 254</value>
+  </data>
+  <data name="checkBoxVAlign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 17</value>
+  </data>
+  <data name="checkBoxVAlign.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="checkBoxVAlign.Text" xml:space="preserve">
+    <value>Vertical-Alignment:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVAlign.Name" xml:space="preserve">
+    <value>checkBoxVAlign</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVAlign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVAlign.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxVAlign.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxHAlign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 222</value>
+  </data>
+  <data name="comboBoxHAlign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 21</value>
+  </data>
+  <data name="comboBoxHAlign.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHAlign.Name" xml:space="preserve">
+    <value>comboBoxHAlign</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHAlign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHAlign.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxHAlign.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxHAlign.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxHAlign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 226</value>
+  </data>
+  <data name="checkBoxHAlign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="checkBoxHAlign.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="checkBoxHAlign.Text" xml:space="preserve">
+    <value>Horizontal-Alignment:</value>
+  </data>
+  <data name="&gt;&gt;checkBoxHAlign.Name" xml:space="preserve">
+    <value>checkBoxHAlign</value>
+  </data>
+  <data name="&gt;&gt;checkBoxHAlign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxHAlign.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxHAlign.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboBoxColorPickerBack.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBoxColorPickerBack.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items1" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items2" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items3" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items4" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items5" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items6" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items7" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items8" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items9" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items10" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items11" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items12" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items13" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items14" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items15" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items16" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items17" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items18" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items19" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items20" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Items21" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 35</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="comboBoxColorPickerBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="comboBoxColorPickerBack.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerBack.Name" xml:space="preserve">
+    <value>comboBoxColorPickerBack</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerBack.Type" xml:space="preserve">
+    <value>OfficePickers.ColorPicker.ComboBoxColorPicker, OfficePickers, Version=1.1.2860.30243, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerBack.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerBack.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="comboBoxColorPickerFore.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBoxColorPickerFore.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items1" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items2" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items3" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items4" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items5" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items6" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items7" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items8" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items9" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items10" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items11" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items12" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items13" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items14" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items15" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items16" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items17" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items18" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items19" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Items20" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 9</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="comboBoxColorPickerFore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="comboBoxColorPickerFore.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerFore.Name" xml:space="preserve">
+    <value>comboBoxColorPickerFore</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerFore.Type" xml:space="preserve">
+    <value>OfficePickers.ColorPicker.ComboBoxColorPicker, OfficePickers, Version=1.1.2860.30243, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerFore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxColorPickerFore.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tableOtherElements.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="columnModelOtherElements.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="tableOtherElements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 18</value>
+  </data>
+  <data name="tableOtherElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 93</value>
+  </data>
+  <data name="tableOtherElements.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="tableModelOtherElemets.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>208, 17</value>
+  </metadata>
+  <data name="tableOtherElements.Text" xml:space="preserve">
+    <value>table1</value>
+  </data>
+  <data name="&gt;&gt;tableOtherElements.Name" xml:space="preserve">
+    <value>tableOtherElements</value>
+  </data>
+  <data name="&gt;&gt;tableOtherElements.Type" xml:space="preserve">
+    <value>XPTable.Models.Table, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;tableOtherElements.Parent" xml:space="preserve">
+    <value>groupBoxOther</value>
+  </data>
+  <data name="&gt;&gt;tableOtherElements.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxOther.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 282</value>
+  </data>
+  <data name="groupBoxOther.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 120</value>
+  </data>
+  <data name="groupBoxOther.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBoxOther.Text" xml:space="preserve">
+    <value>Other Elements</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOther.Name" xml:space="preserve">
+    <value>groupBoxOther</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOther.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOther.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOther.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 405</value>
+  </data>
+  <data name="&gt;&gt;columnModelOtherElements.Name" xml:space="preserve">
+    <value>columnModelOtherElements</value>
+  </data>
+  <data name="&gt;&gt;columnModelOtherElements.Type" xml:space="preserve">
+    <value>XPTable.Models.ColumnModel, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;buttonColumnDelete.Name" xml:space="preserve">
+    <value>buttonColumnDelete</value>
+  </data>
+  <data name="&gt;&gt;buttonColumnDelete.Type" xml:space="preserve">
+    <value>XPTable.Models.ButtonColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;textColumnName.Name" xml:space="preserve">
+    <value>textColumnName</value>
+  </data>
+  <data name="&gt;&gt;textColumnName.Type" xml:space="preserve">
+    <value>XPTable.Models.TextColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;textColumnValue.Name" xml:space="preserve">
+    <value>textColumnValue</value>
+  </data>
+  <data name="&gt;&gt;textColumnValue.Type" xml:space="preserve">
+    <value>XPTable.Models.TextColumn, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;tableModelOtherElemets.Name" xml:space="preserve">
+    <value>tableModelOtherElemets</value>
+  </data>
+  <data name="&gt;&gt;tableModelOtherElemets.Type" xml:space="preserve">
+    <value>XPTable.Models.TableModel, XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TextStyleEdit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

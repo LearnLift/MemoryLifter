@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="PgSyncService.asmx.cs" Class="MLifterSyncService.PgSyncService" %>

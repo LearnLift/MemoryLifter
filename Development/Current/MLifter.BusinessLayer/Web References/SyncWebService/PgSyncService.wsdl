@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.memorylifter.com/sync/service/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.memorylifter.com/sync/service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.memorylifter.com/sync/service/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetServerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SyncSession">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OriginatorId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClientId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomParameters" type="tns:SyncParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncServerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TablesInfo" type="tns:ArrayOfSyncTableInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSyncTableInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SyncTableInfo" nillable="true" type="tns:SyncTableInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncTableInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetServerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerInfoResult" type="tns:SyncServerInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableNames" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncSchema">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SchemaDataSet">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchemaResult" type="tns:SyncSchema" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupMetadata" type="tns:SyncGroupMetadata" />
+            <s:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SyncGroupMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewAnchor" type="tns:SyncAnchor" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxAnchor" type="tns:SyncAnchor" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatchCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TablesMetadata" type="tns:ArrayOfSyncTableMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncAnchor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Anchor" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSyncTableMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SyncTableMetadata" nillable="true" type="tns:SyncTableMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncTableMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncDirection" type="tns:SyncDirection" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastSentAnchor" type="tns:SyncAnchor" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastReceivedAnchor" type="tns:SyncAnchor" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SyncDirection">
+        <s:restriction base="s:string">
+          <s:enumeration value="DownloadOnly" />
+          <s:enumeration value="UploadOnly" />
+          <s:enumeration value="Bidirectional" />
+          <s:enumeration value="Snapshot" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="SyncContext">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupProgress" type="tns:SyncGroupProgress" />
+          <s:element minOccurs="1" maxOccurs="1" name="OriginatorId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewAnchor" type="tns:SyncAnchor" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxAnchor" type="tns:SyncAnchor" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatchCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataSet">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncGroupProgress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TablesProgress" type="tns:ArrayOfSyncTableProgress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSyncTableProgress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SyncTableProgress" nillable="true" type="tns:SyncTableProgress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncTableProgress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Inserts" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updates" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deletes" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangesApplied" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChangesFailed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conflicts" type="tns:ArrayOfSyncConflict" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSyncConflict">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SyncConflict" nillable="true" type="tns:SyncConflict" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SyncConflict">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ConflictType" type="tns:ConflictType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SyncStage" type="tns:SyncStage" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerChange">
+            <s:complexType>
+              <s:sequence>
+                <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientChange">
+            <s:complexType>
+              <s:sequence>
+                <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ConflictType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="ErrorsOccurred" />
+          <s:enumeration value="ClientUpdateServerUpdate" />
+          <s:enumeration value="ClientUpdateServerDelete" />
+          <s:enumeration value="ClientDeleteServerUpdate" />
+          <s:enumeration value="ClientInsertServerInsert" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SyncStage">
+        <s:restriction base="s:string">
+          <s:enumeration value="ReadingSchema" />
+          <s:enumeration value="CreatingSchema" />
+          <s:enumeration value="ReadingMetadata" />
+          <s:enumeration value="CreatingMetadata" />
+          <s:enumeration value="DeletingMetadata" />
+          <s:enumeration value="WritingMetadata" />
+          <s:enumeration value="UploadingChanges" />
+          <s:enumeration value="DownloadingChanges" />
+          <s:enumeration value="ApplyingInserts" />
+          <s:enumeration value="ApplyingUpdates" />
+          <s:enumeration value="ApplyingDeletes" />
+          <s:enumeration value="GettingInserts" />
+          <s:enumeration value="GettingUpdates" />
+          <s:enumeration value="GettingDeletes" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChangesResult" type="tns:SyncContext" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupMetadata" type="tns:SyncGroupMetadata" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="syncSession" type="tns:SyncSession" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplyChangesResult" type="tns:SyncContext" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetServerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchema" />
+  </wsdl:message>
+  <wsdl:message name="GetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChanges" />
+  </wsdl:message>
+  <wsdl:message name="GetChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyChanges" />
+  </wsdl:message>
+  <wsdl:message name="ApplyChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyChangesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PgSyncServiceSoap">
+    <wsdl:operation name="GetServerInfo">
+      <wsdl:input message="tns:GetServerInfoSoapIn" />
+      <wsdl:output message="tns:GetServerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <wsdl:input message="tns:GetSchemaSoapIn" />
+      <wsdl:output message="tns:GetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <wsdl:input message="tns:GetChangesSoapIn" />
+      <wsdl:output message="tns:GetChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyChanges">
+      <wsdl:input message="tns:ApplyChangesSoapIn" />
+      <wsdl:output message="tns:ApplyChangesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PgSyncServiceSoap" type="tns:PgSyncServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerInfo">
+      <soap:operation soapAction="http://www.memorylifter.com/sync/service/GetServerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <soap:operation soapAction="http://www.memorylifter.com/sync/service/GetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <soap:operation soapAction="http://www.memorylifter.com/sync/service/GetChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyChanges">
+      <soap:operation soapAction="http://www.memorylifter.com/sync/service/ApplyChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PgSyncServiceSoap12" type="tns:PgSyncServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerInfo">
+      <soap12:operation soapAction="http://www.memorylifter.com/sync/service/GetServerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <soap12:operation soapAction="http://www.memorylifter.com/sync/service/GetSchema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <soap12:operation soapAction="http://www.memorylifter.com/sync/service/GetChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyChanges">
+      <soap12:operation soapAction="http://www.memorylifter.com/sync/service/ApplyChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PgSyncService">
+    <wsdl:port name="PgSyncServiceSoap" binding="tns:PgSyncServiceSoap">
+      <soap:address location="http://localhost/MLifterSyncService/PgSyncService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PgSyncServiceSoap12" binding="tns:PgSyncServiceSoap12">
+      <soap12:address location="http://localhost/MLifterSyncService/PgSyncService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
