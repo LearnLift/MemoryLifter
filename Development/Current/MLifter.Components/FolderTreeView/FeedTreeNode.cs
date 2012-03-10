@@ -230,28 +230,47 @@ namespace MLifter.Components
 
 				#region read images
 
-				WebClient webClient = new WebClient();
-				foreach (ModuleInfo basicInfo in modules)
+				using (PersistentMemoryCache<ModuleInfoCacheItem> cache = new PersistentMemoryCache<ModuleInfoCacheItem>("Feed_" + moduleFeed.Id))
 				{
-					try
+					WebClient webClient = new WebClient();
+					foreach (ModuleInfo basicInfo in modules)
 					{
-						ModuleInfo info = basicInfo;
-						foreach (SyndicationLink link in items[basicInfo.Id].Links)
+						try
 						{
-							if (link.RelationshipType == AtomLinkRelationshipType.IconSmall.ToString())
-								info.IconSmall = webClient.DownloadData(link.Uri);
-							if (link.RelationshipType == AtomLinkRelationshipType.IconBig.ToString())
-								info.IconBig = webClient.DownloadData(link.Uri);
-							if (link.RelationshipType == AtomLinkRelationshipType.Preview.ToString())
-								info.Preview = webClient.DownloadData(link.Uri);
-						}
+							ModuleInfo info = basicInfo;
+							SyndicationItem item = items[basicInfo.Id];
+							string cacheKey = String.Format("{0}##{1}##{2}", moduleFeed.Id, item.Id, item.LastUpdatedTime);
 
-						if (TreeView.InvokeRequired)
-							TreeView.Invoke((MethodInvoker)delegate { LoadDetails(info); });
-						else
-							LoadDetails(info);
+							if (cache.Contains(cacheKey))
+							{
+								ModuleInfoCacheItem cacheItem = (ModuleInfoCacheItem)cache[cacheKey];
+								info.IconSmall = Convert.FromBase64String(cacheItem.IconSmall);
+								info.IconBig = Convert.FromBase64String(cacheItem.IconBig);
+								info.Preview = Convert.FromBase64String(cacheItem.Preview);
+							}
+							else
+							{
+								ModuleInfoCacheItem cacheItem = new ModuleInfoCacheItem(info.Id);
+								foreach (SyndicationLink link in item.Links)
+								{
+									if (link.RelationshipType == AtomLinkRelationshipType.IconSmall.ToString())
+										cacheItem.IconSmall = Convert.ToBase64String(info.IconSmall = webClient.DownloadData(link.Uri));
+									if (link.RelationshipType == AtomLinkRelationshipType.IconBig.ToString())
+										cacheItem.IconBig = Convert.ToBase64String(info.IconBig = webClient.DownloadData(link.Uri));
+									if (link.RelationshipType == AtomLinkRelationshipType.Preview.ToString())
+										cacheItem.Preview = Convert.ToBase64String(info.Preview = webClient.DownloadData(link.Uri));
+								}
+								cache.Set(cacheKey, cacheItem, DateTime.Now.AddDays(1));
+							}
+
+							if (TreeView.InvokeRequired)
+								TreeView.Invoke((MethodInvoker)delegate { LoadDetails(info); });
+							else
+								LoadDetails(info);
+						}
+						catch (Exception exp) { Trace.WriteLine(exp.ToString()); }
 					}
-					catch (Exception exp) { Trace.WriteLine(exp.ToString()); }
+					cache.Dispose();
 				}
 
 				#endregion

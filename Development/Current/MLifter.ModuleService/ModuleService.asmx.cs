@@ -178,7 +178,7 @@ namespace MLifter.ModuleService
 				}
 				else // use the information you can get from the file - no SQL CE access on Mono --> if running on IIS/.net you could read it form the file
 				{
-					item.Id = Guid.NewGuid().ToString();
+					item.Id = file.GetHashCode().ToString();
 					item.Title = new TextSyndicationContent(filename, TextSyndicationContentKind.Plaintext);
 					item.LastUpdatedTime = new DateTimeOffset((new FileInfo(file)).LastWriteTime);
 				}
