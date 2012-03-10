@@ -46,6 +46,31 @@ namespace MLifter.Generics
 	}
 
 	/// <summary>
+	/// This struct stores the cached information about a module.
+	/// </summary>
+	/// <remarks>Documented by Dev05, 2012-02-07</remarks>
+	[Serializable]
+	public struct ModuleInfoCacheItem
+	{
+		public string Id;
+
+		public string IconBig;
+		public string IconSmall;
+		public string Preview;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ModuleInfoCacheItem"/> struct.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <remarks>CFI, 2012-03-10</remarks>
+		public ModuleInfoCacheItem(string id)
+		{ 
+			Id = id;
+			IconBig = IconSmall = Preview = null;
+		}
+	}
+
+	/// <summary>
 	/// The category of a module.
 	/// </summary>
 	/// <remarks>Documented by Dev05, 2012-02-07</remarks>
