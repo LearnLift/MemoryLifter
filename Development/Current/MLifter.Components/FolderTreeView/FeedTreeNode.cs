@@ -260,7 +260,7 @@ namespace MLifter.Components
 									if (link.RelationshipType == AtomLinkRelationshipType.Preview.ToString())
 										cacheItem.Preview = Convert.ToBase64String(info.Preview = webClient.DownloadData(link.Uri));
 								}
-								cache.Set(cacheKey, cacheItem, DateTime.Now.AddDays(1));
+								cache.Set(cacheKey, cacheItem, DateTime.Now.AddYears(1));
 							}
 
 							if (TreeView.InvokeRequired)
