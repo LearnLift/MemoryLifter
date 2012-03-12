@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DESCRIPTION" xml:space="preserve">
-    <value>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
-{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\f0\fs20 The next version of MemoryLifter is available with several bug fixes!\par
+    <value>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\f0\fs20 The next version of MemoryLifter is available with several bug fixes!\par
 \par
+\ul Version 2.4.1:\ulnone\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li426 Preview images from learning module feeds are cached\par
+\pard\par
 \ul Version 2.4:\par
-\ulnone * uses the new MemoryLifter Learning Modules Feed\par
-  * direct download of modules from the feed\ul\par
-\ulnone * problem with loading learning modules on Windows 7 x64 fixed\par
-* fixed several smaller bugs\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li426\ulnone uses the new MemoryLifter Learning Modules Feed\ul\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li852\ulnone direct download of modules from the feed\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li426 problem with loading learning modules on Windows 7 x64 fixed\par
+{\pntext\f1\'B7\tab}fixed several smaller bugs\par
 }</value>
   </data>
   <data name="HEADER" xml:space="preserve">
