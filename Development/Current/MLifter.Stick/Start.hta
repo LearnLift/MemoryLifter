@@ -4,7 +4,7 @@
 	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Welcome to the ML Pocket Suite</title>
+	<title>Welcome to the MemoryLifter Pocket Suite</title>
 	<hta:application applicationname="MemoryLifter" icon="Images/App.ico" border="thin"
 		borderstyle="normal" caption="yes" maximizebutton="no" minimizebutton="yes" showintaskbar="yes"
 		singleinstance="yes" sysmenu="yes" version="1.0" windowstate="normal" scroll="no" />
@@ -20,28 +20,22 @@
 		var DOTNETFRAMEWORK_IDENTIFIER = ".NET CLR";
 		var majorVersion = 0;
 		var autorun = false;
-		var rssFeedUri = "http://www.memorylifter.com/news-publications/rss.xml";
-		var curVersionUri = "http://www.memorylifter.com/fileadmin/program/curMLver.xml";
-		var allowStartML = true;
+		var rssFeedUri = "http://www.memorylifter.com/news/rss.xml";
 		var maxNews = 3;
 		var maxRecentFiles = 4;
 		var showRecentFiles = true;
 		var maxLearningModulesWithoutScroll = 9;
 		var MEDIA_PLAYER_INSTALLER = "http://www.microsoft.com/windows/windowsmedia/";
-		var MLIFTER_EXE = "MemoryLifter22\\MLifter.exe";
-		var MLIFTER_CONFIG = "MemoryLifter22\\MLifter.exe.config.user";
-		var DOTNETFRAMEWORK_INSTALLER = "Install\\dotnetfx.exe";
-		var MLIFTER_INSTALLER = "Install\\MLifter22Setup.exe";
-		var MLIFTER_INSTALLER_FULL = "Install\\MLifter22Setup_withDotNet.exe";
+		var MLIFTER_EXE = "MemoryLifter\\MemoryLifter.exe";
+		var MLIFTER_CONFIG = "MemoryLifter\\MemoryLifter.exe.config.user";
+		var DOTNETFRAMEWORK_INSTALLER = "http://www.microsoft.com/download/en/details.aspx?id=17851";
+		var MLIFTER_INSTALLER = "Install\\MemoryLifter-Setup.exe";
 		var MLIFTER_LEARNING_MODULES = "LearningModules\\";
 		var MLIFTER_LICENSE = "Data\\license.html";
-		var MLIFTER_VIDEO = "Data\\presentation_en.mpg";
-		var MLIFTER_VIDEO_DE = "Data\\presentation_de.mpg";
-		var MLIFTER_VERSION_FILE = "MemoryLifter22\\MLifter.exe.version";
 		var MLIFTER_LM_ICON = "Images/learning.gif";
 		var basePath = "";
-		var windowWidth = 660;
-		var windowHeight = 580;
+		var windowWidth = 668;
+		var windowHeight = 615;
 
 		var isMatch = document.URL.match(/^(.*\\)start\.hta/gi);
 		if (isMatch)
@@ -67,17 +61,16 @@
 		}
 
 		//Check Framework Version
-		var frameworkVersions = window.navigator.userAgent.match(/\.NET CLR [\d\.]+/g);
+		var frameworkVersions = window.navigator.userAgent.match(/\.NET[\d\.]+E/g);
 		if (frameworkVersions.length > 0)
 		{
 			for (var i = 0; i < frameworkVersions.length; ++i)
 			{
-				var thisMatch = frameworkVersions[i].match(/\.NET CLR ([\d]+)\./g);
+				var thisMatch = frameworkVersions[i].match(/\.NET([\d]+)\./g);
 				var thisVersion = parseInt(RegExp.$1);
 				if ((thisVersion != NaN) && (majorVersion < thisVersion))
 					majorVersion = thisVersion;
 			}
-			//majorVersion = 1;
 		}
 
 		//Check WindowsMediaPlayer version and return an error message if required version not available
@@ -97,14 +90,14 @@
 		{
 			if (majorVersion == 0)      //no Framework detected
 			{
-				document.getElementById('errors').innerHTML = "<div>The .NET Framework was not detected. You cannot install this product until you install the .NET Framework 2.0. <a href='" + basePath + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
+				document.getElementById('errors').innerHTML = "<div>The .NET Framework was not detected. You cannot install this product until you install the .NET Framework 4.0 Full Profile. <a href='" + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
 				document.getElementById('errors').style.display = 'block';
 
 				reSizeContent();
 			}
-			else if (majorVersion < 2)  //Framework has not the required Version 
+			else if (majorVersion < 4)  //Framework has not the required Version 
 			{
-				document.getElementById('errors').innerHTML = "<div>The required version of the .NET Framework was not detected. You cannot install this product until you install the .NET Framework 2.0. <a href='" + basePath + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
+				document.getElementById('errors').innerHTML = "<div>The required version of the .NET Framework was not detected. You cannot install this product until you install the .NET Framework 4.0 Full Profile. <a href='" + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
 				document.getElementById('errors').style.display = 'block';
 
 				reSizeContent();
@@ -114,13 +107,10 @@
 		//Starts the MemoryLifter with/without Paramters
 		function startML(closeWindow, cmdLineParam)
 		{
-			if (!allowStartML)
-				return;
-
 			var cmdLine = basePath + MLIFTER_EXE;
 			if (cmdLineParam)
 				cmdLine += ' ' + cmdLineParam + '';
-			if (majorVersion < 2)
+			if (majorVersion < 4)
 				return;
 
 			var objShell = new ActiveXObject("WScript.Shell");
@@ -132,37 +122,8 @@
 		//Starts the installer of MemoryLifter
 		function installML()
 		{
-			if (majorVersion < 2)
-			{
-				var objShell = new ActiveXObject("WScript.Shell");
-				var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER_FULL, 1, 0);
-			}
-			else
-			{
-				var objShell = new ActiveXObject("WScript.Shell");
-				var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER, 1, 0);
-			}
-		}
-
-		//Plays the video 
-		function playVideo(videoPath)
-		{
 			var objShell = new ActiveXObject("WScript.Shell");
-			try
-			{
-				var lngReturn = objShell.Run('wmplayer "' + basePath + videoPath + '"', 1, 0);
-			}
-			catch (e)
-			{
-				try
-				{
-					var lngReturn = objShell.Run('mplayer2 "' + basePath + videoPath + '"', 1, 0);
-				}
-				catch (e)
-				{
-					alert("Could not start media player!");
-				}
-			}
+			var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER, 1, 0);
 		}
 
 		//This function returns all folders in Stick:\MLIFTER_LEARNING_MODULES\
@@ -291,7 +252,7 @@
 				img.align = "absmiddle";
 
 				a.href = "#";
-				var onClick = "startML(false, '" + lmPath.replace(/\\/g, "\\\\") + "'); return false;";
+				var onClick = "startML(true, '" + lmPath.replace(/\\/g, "\\\\") + "'); return false;";
 				a.onclick = new Function(onClick);
 
 				a.appendChild(img);
@@ -451,7 +412,7 @@
 						elImg.src = MLIFTER_LM_ICON;
 						elImg.align = "absmiddle";
 						elLink.href = "#";
-						var onClick = "startML(false, '" + link.replace(/\\/g, "\\\\") + "'); return false;";
+						var onClick = "startML(true, '" + link.replace(/\\/g, "\\\\") + "'); return false;";
 						elLink.onclick = new Function(onClick);
 						elLink.appendChild(elImg);
 						elLink.innerHTML += name;
@@ -478,21 +439,12 @@
 
 		function disableAllTabPages()
 		{
-			document.getElementById("GetStarted").style.display = "none";
-			document.getElementById('tabButtonGetStarted').style.backgroundColor = "#FFFFFF";
-			document.getElementById('tabButtonGetStarted').style.borderTop = '1px solid silver';
 			document.getElementById("NewsFeed").style.display = "none";
 			document.getElementById('tabButtonNewsFeed').style.backgroundColor = "#FFFFFF";
 			document.getElementById('tabButtonNewsFeed').style.borderTop = '1px solid silver';
 			document.getElementById("GoodToKnow").style.display = "none";
 			document.getElementById('tabButtonGoodToKnow').style.backgroundColor = "#FFFFFF";
 			document.getElementById('tabButtonGoodToKnow').style.borderTop = '1px solid silver';
-			document.getElementById("BonusMaterial").style.display = "none";
-			document.getElementById('tabButtonBonusMaterial').style.backgroundColor = "#FFFFFF";
-			document.getElementById('tabButtonBonusMaterial').style.borderTop = '1px solid silver';
-			document.getElementById("Update").style.display = "none";
-			document.getElementById('tabButtonUpdate').style.backgroundColor = "#FFFFFF";
-			document.getElementById('tabButtonUpdate').style.borderTop = '1px solid silver';
 		}
 
 		//Accept license
@@ -518,19 +470,6 @@
 			catch (e) { }
 
 			window.onload();
-		}
-
-		/////////////////////////////////////////////////////////////////////////////////
-		//returns the current build number (saved in a text file)
-		function getCurrentBuildNumber()
-		{
-			var fso = new ActiveXObject("Scripting.FileSystemObject");
-
-			if (!fso.FileExists(MLIFTER_VERSION_FILE))
-				return 0;
-
-			file = fso.OpenTextFile(MLIFTER_VERSION_FILE, 1);
-			return file.ReadAll();
 		}
 
 		/////////////////////////////////////////////////////////////////////////////////
@@ -578,51 +517,6 @@
 		}
 
 		//////////////////////////////////////////////////////////////////////////
-		//Checks if a newer version on ML is available
-		function updateAvailable()
-		{
-			loadXMLDoc(curVersionUri, showUpdateRequest);
-		}
-
-		//////////////////////////////////////////////////////////////////////////
-		//Gets the current and new version number and comparse them. If an update 
-		//is available, it activates the overlay div with the update message!
-		function showUpdateRequest(request)
-		{
-			try
-			{
-				var currentVersion = request.selectNodes('//CurrentVersion');
-				var currentVersionSubItems = currentVersion.item(0);
-				var buildNumber = currentVersionSubItems.selectSingleNode('BuildNumber').text;
-				var description = currentVersionSubItems.selectSingleNode('Description').text;
-				var url = currentVersionSubItems.selectSingleNode('URL').text;
-
-				var newBuildNumberInt = parseInt(buildNumber);
-				var curBuildNumberInt = parseInt(getCurrentBuildNumber());
-
-				if (isNaN(newBuildNumberInt) || isNaN(curBuildNumberInt))
-					return;
-
-				if (newBuildNumberInt > curBuildNumberInt)
-				{
-					allowStartML = false;
-					document.getElementById('updateLayer').style.display = "";
-					document.getElementById('updateLink').href = url;
-					document.getElementById('updateDescription').innerHTML = description;
-				}
-			}
-			catch (e) { }
-		}
-
-		//////////////////////////////////////////////////////////////////
-		//Hides the Update request in case of, the user clicked on the close button
-		function hideUpdateRequest()
-		{
-			allowStartML = true;
-			document.getElementById('updateLayer').style.display = "none";
-		}
-
-		//////////////////////////////////////////////////////////////////////////
 		//Window OnLoad Event
 		function window.onload()
 		{
@@ -638,8 +532,7 @@
 			loadNewsFeed();
 			loadRecentFiles();
 			loadAvailableLMs();
-			activateTabPage("NewsFeed");
-			updateAvailable();
+			activateTabPage("GoodToKnow");
 		}
 	</script>
 
@@ -884,7 +777,7 @@
 		{
 			border: 1px solid silver;
 			width: 630px;
-			height: 164px;
+			height: 200px;
 		}
 		.tabButtons
 		{
@@ -912,23 +805,6 @@
 			font-family: Arial,Helvetica,sans-serif;
 			cursor: pointer;
 		}
-		#GetStarted
-		{
-			scrollbar-face-color: #DDDDDD;
-			scrollbar-arrow-color: #000000;
-			scrollbar-shadow-color: #AAAAAA;
-			scrollbar-dark-shadow-color: #888888;
-		}
-		#GetStarted p
-		{
-			margin: 5px;
-			margin-top: 10px;
-			text-align: justify;
-		}
-		#GetStarted img
-		{
-			margin-top: 10px;
-		}
 		#GoodToKnow
 		{
 			scrollbar-face-color: #DDDDDD;
@@ -947,28 +823,6 @@
 			padding: 0px;
 		}
 		#GoodToKnow ol li
-		{
-			margin: 0px 0px 5px 0px;
-			padding: 0px;
-		}
-		#BonusMaterial
-		{
-			scrollbar-face-color: #DDDDDD;
-			scrollbar-arrow-color: #000000;
-			scrollbar-shadow-color: #AAAAAA;
-			scrollbar-dark-shadow-color: #888888;
-		}
-		#BonusMaterial p
-		{
-			margin: 5px;
-			font-weight: bold;
-		}
-		#BonusMaterial ol
-		{
-			margin: 8px 0px 0px 33px;
-			padding: 0px;
-		}
-		#BonusMaterial ol li
 		{
 			margin: 0px 0px 5px 0px;
 			padding: 0px;
@@ -1008,7 +862,7 @@
 		#licenseText
 		{
 			width: 630px;
-			height: 150px;
+			height: 225px;
 			border: 1px solid silver;
 			overflow: auto;
 			text-align: left;
@@ -1020,7 +874,7 @@
 			padding: 5px;
 			text-align: justify;
 			font-size: 9pt;
-			margin-bottom: 3px;
+			margin-bottom: 8px;
 		}
 		#licenseText h1
 		{
@@ -1046,7 +900,7 @@
 		{
 			border: 0px solid silver;
 			width: 630px;
-			height: 215px;
+			height: 170px;
 			text-align: left;
 			padding: 5px;
 			overflow: auto;
@@ -1079,36 +933,6 @@
 			margin-bottom: 0px;
 			margin-left: 22px;
 		}
-		#GetStarted .picture
-		{
-			background-color: #F9F9F9;
-			border: 1px solid #CCCCCC;
-			padding: 3px;
-			font: 11px/1.4em Arial, sans-serif;
-			margin-top: -3px;
-		}
-		#GetStarted .picture img
-		{
-			border: 1px solid #CCCCCC;
-			vertical-align: middle;
-			margin-bottom: 3px;
-			margin: 0px;
-		}
-		#BonusMaterial .picture
-		{
-			background-color: #F9F9F9;
-			border: 1px solid #CCCCCC;
-			padding: 3px;
-			font: 11px/1.4em Arial, sans-serif;
-			margin-top: 5px;
-		}
-		#BonusMaterial .picture img
-		{
-			border: 1px solid #CCCCCC;
-			vertical-align: middle;
-			margin-bottom: 3px;
-			margin: 0px;
-		}
 		.right
 		{
 			margin: 0.5em 0.5em 0.5em 0.8em;
@@ -1136,11 +960,10 @@
 						<td class="search" align="left">
 						</td>
 						<td class="links" align="right">
-							<a href="http://www.memorylifter.com/get-flashcards.html" target="_blank" title="Search for more Learning Modules.">
-								Learning Modules</a> | <a href="http://www.memorylifter.com/about-memorylifter/faq.html"
+							<a href="http://www.memorylifter.com/modules" target="_blank" title="Search for more Learning Modules.">
+								Learning Modules</a> | <a href="http://www.memorylifter.com/faq"
 									target="_blank" title="You need help? Our Frequently asked questions will help you!">
-									FAQ</a> | <a href="http://www.memorylifter.com/tools/newsletter.html" target="_blank"
-										title="Stay informed and subscribe our newsletter!">Newsletter</a>
+									FAQ</a>
 						</td>
 					</tr>
 				</tbody>
@@ -1160,16 +983,11 @@
 					So get started and experience MemoryLifter: The fastest way to memorize.
 				</p>
 				<ul>
-					<!--<li>Please note that the Flashcard Learning Modules which you bought with this USB Stick are <b>encrypted</b>. You can only learn these Modules from this USB Stick.</li>-->
-					<li>Please note that the right of use of these Flashcard Learning Modules is limited
-						to the owner of this USB Stick.</li>
 					<li>Be aware that in order to display the simplified Chinese characters in your Learning
 						Modules, the font files for East Asian languages have to be installed on the PC
 						you are learning.</li>
-					<li>In order to protect your Flashcard Learning Modules, in case of power or hardware
+					<li>In order to protect your Learning Modules, in case of power loss or hardware
 						failures, we strongly suggest that you create <b>regular backups</b>.</li>
-					<!--<li>Click <a href="Data/warranty.html" target="_blank">here for information about our
-						warranty</a>.</li>-->
 				</ul>
 			</div>
 			<div id="licenseText">
@@ -1198,107 +1016,42 @@
 				</div>
 				&nbsp;
 				<div id="startMlContainer">
-					<button id="StartMlButton" onclick="startML()">
+					<button id="StartMlButton" onclick="startML(true)">
 						&nbsp;</button>
 				</div>
 			</div>
 			<!-- Tabs started -->
 			<div class="tabButtons">
-				<!--<button class="tabButton" id="tabButtonGetStarted" onclick="activateTabPage('GetStarted');">
-					Get Started</button>-->
 				<button class="tabButton" id="tabButtonGoodToKnow" onclick="activateTabPage('GoodToKnow');">
 					Good to know</button>
 				<button class="tabButton" id="tabButtonNewsFeed" onclick="activateTabPage('NewsFeed');">
 					News</button>
-				<!--<button class="tabButton" id="tabButtonBonusMaterial" onclick="activateTabPage('BonusMaterial');">
-					Bonus Material</button>-->
-				<button class="tabButton" style="display: none" id="tabButtonUpdate" onclick="activateTabPage('Update');">
-					Update</button>
-			</div>
-			<div id="GetStarted" class="tab" style="display: none">
-				<p>
-					<div class="picture left" style="width: 162px;">
-						<a href="#" onclick="playVideo(MLIFTER_VIDEO); return false;" title="Introduction Video (en)">
-							<img width="160" height="120" src="Images/introVideo.jpg" alt="Introduction Video (en)"></a><br />
-						English introduction video.</div>
-					Familiarize yourself with some of the most important features of MemoryLifter by
-					watching our short introductory video and then get started by choosing one of our
-					multimedia Learning Modules. Remember, MemoryLifter runs off the USB stick, which
-					means that your learning progress is saved wherever you go.
-				</p>
 			</div>
 			<div id="NewsFeed" class="tab" style="display: none;">
 				<div id="newsFeedContent">
 					Loading News from www.memorylifter.com</div>
 			</div>
 			<div id="GoodToKnow" class="tab" style="display: none; overflow: auto">
-				<p>
-					Good to know...</p>
 				<ol>
-					<li><u>Install ML on your computer:</u> This memory stick also contains an installation
-						package of MemoryLifter if you wish to install MemoryLifter on a PC. Please keep
-						in mind that the learning modules that you bought with this memory stick are bound
-						to be used only with this stick.<br />
-						<a href="#" onclick="installML(false); return false;">Click here</a> if you want
+					<li><u>Install MemoryLifter on your computer:</u> This memory stick also contains an installation
+						package if you wish to install MemoryLifter on a PC. <a href="#" onclick="installML(false); return false;">Click here</a> 
 						to install MemoryLifter on this PC. </li>
-					<li>For additional Learning Modules visit our website <a href="http://www.memorylifter.com/get-flashcards.html">
-						www.memorylifter.com</a>. </li>
-					<li><u>Backup:</u> In order to protect your Flashcard Learning Modules, in case of power
+					<li>For additional Learning Modules visit our website <a href="http://www.memorylifter.com/modules">
+						www.memorylifter.com</a>.</li>
+					<li>Add a new Learning Module to this memory stick by copying it to <a href="LearningModules">
+						this folder</a>.</li>
+					<li><u>Backup:</u> In order to protect your Learning Modules, in case of power loss
 						or hardware failures, we strongly suggest that you create <b>regular backups</b>.
-						To create a backup either copy the folder <b>Learning Modules</b> from your memory
-						stick to your PC, or use <b>Pack...</b> from the MemoryLifter <b>File</b> menu to
-						create a backup archive of your Learning Module.</li>
+						To create a backup copy the folder <b>Learning Modules</b> from your memory
+						stick to your PC to	create a backup of your Learning Modules.</li>
 					<li>Click <a href="Data/license.html" target="_blank">here for license and warranty
 						information</a>. </li>
 					<li>Be aware that in order to display the simplified Chinese characters in your Learning
 						Modules, the font files for East Asian languages have to be installed on the PC
 						you are learning. </li>
-					<li>Add a new Learning Module to this stick by copying it to <a href="LearningModules">
-						this folder</a>.</li>
 				</ol>
-			</div>
-			<div id="BonusMaterial" class="tab" style="display: none; overflow: auto">
-				<div class="picture right" style="width: 162px;">
-					<a href="#" onclick="playVideo(MLIFTER_VIDEO_DE); return false;" title="Introduction Video (de)">
-						<img width="160" height="120" src="Images/introVideo.jpg" alt="Introduction Video (de)"></a><br />
-					International Engineering booklet.</div>
-				<p>
-					Booklets for the International Engineering Learning Module</p>
-				<ul>
-					<li>English language booklet for International Engineering.</li>
-					<li>German language booklet for International Engineering.</li>
-				</ul>
-			</div>
-			<div id="Update" class="tab" style="display: none; overflow: auto">
-				Update!
 			</div>
 			<!-- Tab end -->
-		</div>
-		<div id="updateLayer" style="position: absolute; width: 500px; left: 80px; top: 170px;
-			min-height: 230px; text-align: center; border: 2px solid black; background-color: #EEE;
-			display: none;">
-			<div style="margin: 10px 10px 10px 10px; padding: 3px 6px 3px 6px; float: right;
-				cursor: pointer;">
-				<a onclick="hideUpdateRequest()">
-					<img src="Images/close.png" alt="Close" /></a></div>
-			<div style="margin: 10px 10px 10px 10px; padding: 3px 6px 3px 6px; float: left; cursor: pointer;">
-				&nbsp;</div>
-			<br />
-			A new MemoryLifter update is available.<br />
-			<br />
-			<b><a style="text-decoration: underline" id="updateLink" href="#" onclick="window.close()"
-				style="font-size: 36px">Update now!</a></b><br />
-			<br />
-			<div style="width: 90%; border: 1px solid silver; text-align: left" id="updateDescription">
-				<b>&nbsp;&nbsp;How to update:</b>
-				<ol>
-					<li>Click on "Update now" and download the installer to your PC.</li>
-					<li>Close all programs before running the installer.</li>
-					<li>If the download fails, visit our homepage: <a href="http://www.memorylifter.com">
-						www.memorylifter.com</a></li>
-				</ol>
-			</div>
-			<br />
 		</div>
 	</div>
 	</div>

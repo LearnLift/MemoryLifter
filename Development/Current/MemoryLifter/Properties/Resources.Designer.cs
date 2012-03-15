@@ -3992,6 +3992,15 @@ namespace MLifter.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (Stick Mode).
+        /// </summary>
+        internal static string RUNNING_FROM_STICK {
+            get {
+                return ResourceManager.GetString("RUNNING_FROM_STICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string SAVE_REQUEST_CAPTION {

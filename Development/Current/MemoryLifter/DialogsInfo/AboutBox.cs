@@ -242,6 +242,8 @@ namespace MLifter
 		private void AboutBox_Load(object sender, System.EventArgs e)
 		{
 			Version.Text = String.Format(Resources.ABOUT_VERSION, Application.ProductVersion);
+			if (Setup.RunningFromStick())
+				Version.Text += " " + Resources.RUNNING_FROM_STICK;
 			lblCopyright.Text = Resources.ABOUT_COPYRIGHT;
 
 			string sBackGroundColor = ColorTranslator.ToHtml(Color.FromKnownColor(KnownColor.Control));
