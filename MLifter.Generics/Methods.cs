@@ -989,7 +989,7 @@ namespace MLifter.Generics
 			if (isRunningFromStick.HasValue)
 				return isRunningFromStick.Value;
 
-			DirectoryInfo appPath = new DirectoryInfo(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location));
+			DirectoryInfo appPath = new DirectoryInfo(System.Windows.Forms.Application.StartupPath);
 
 			//check if the app directory is writeable
 			string testfileName = Path.Combine(appPath.FullName, Path.GetRandomFileName());

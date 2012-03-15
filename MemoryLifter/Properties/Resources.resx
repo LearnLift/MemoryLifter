@@ -1998,4 +1998,7 @@ Please use MemoryLifter 2.3 to open this Learning Module.</value>
   <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED_DETAIL" xml:space="preserve">
     <value>Either there were no connections in the file or they have been imported already.</value>
   </data>
+  <data name="RUNNING_FROM_STICK" xml:space="preserve">
+    <value>(Stick Mode)</value>
+  </data>
 </root>
