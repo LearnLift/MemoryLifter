@@ -209,7 +209,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Registration.cs" />
     <Compile Include="ScrollListView.cs">
       <SubType>Component</SubType>
     </Compile>

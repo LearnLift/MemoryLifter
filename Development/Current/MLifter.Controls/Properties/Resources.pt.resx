@@ -573,9 +573,6 @@ Para desativar ou modificar a alteração de tamanho dos cartões adicionados po
   <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
     <value>Mantenha-me informado</value>
   </data>
-  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
-    <value>O endereço de e-mail não esta correto. Por farvor corrige os dados.</value>
-  </data>
   <data name="IMPORTING" xml:space="preserve">
     <value>Importando...</value>
   </data>
@@ -735,9 +732,6 @@ Adicione novos cartões selecionando "Especificar capítulos a aprender" no item
   </data>
   <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
     <value>Cancelar</value>
-  </data>
-  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
-    <value>Entrada inválida</value>
   </data>
   <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
     <value>Se achar que já sabe este cartão, você pode movê-lo para uma caixa superior.</value>

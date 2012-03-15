@@ -3931,39 +3931,6 @@ namespace MLifter.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome to MemoryLifter {0}.
-        /// </summary>
-        internal static string REGISTRATION_HEAD_TEXT {
-            get {
-                return ResourceManager.GetString("REGISTRATION_HEAD_TEXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to MemoryLifter {0} is absolutely Free!  Register now!.
-        /// </summary>
-        internal static string REGISTRATION_LBLFREE_TEXT {
-            get {
-                return ResourceManager.GetString("REGISTRATION_LBLFREE_TEXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to In order to assist you best, please provide us with the following information. We are particularly interested in your needs and planned use of MemoryLifter . The information will only be used internally.  We do not rent or sell this information to anyone. Thank you.
-        ///{0}dloadver: {1}
-        ///{0}First name:
-        ///{0}Last name:
-        ///{0}Email:
-        ///{0}Briefly describe your planned usage of MemoryLifter:
-        ///{0}Do you want to receive news by e-mail on what&apos;s new with MemoryLifter? (Y/N):.
-        /// </summary>
-        internal static string REGISTRATION_TEXT {
-            get {
-                return ResourceManager.GetString("REGISTRATION_TEXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Unable to write to the Windows Registry.
         ///
         ///Please contact the MemoryLifter Support at

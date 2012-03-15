@@ -573,9 +573,6 @@ Um das Ändern der Größe von später hinzugefügten Karten zu deaktivieren ode
   <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
     <value>Informieren Sie mich (wird über "Hilfe - Neuigkeiten zu Memory Lifter" reaktiviert)</value>
   </data>
-  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
-    <value>Eine gültige Emailadresse ist erforderlich. Bitte korrigieren Sie Ihre Eingabe.</value>
-  </data>
   <data name="IMPORTING" xml:space="preserve">
     <value>Import...</value>
   </data>
@@ -735,9 +732,6 @@ Fügen Sie entweder mit dem Befehl "Kapitel zum Lernen auswählen" im Menü "Ler
   </data>
   <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
     <value>Abbrechen</value>
-  </data>
-  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
-    <value>Ungültige Eingabe</value>
   </data>
   <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
     <value>Wenn Sie glauben, diese Karte zu kennen, können Sie diese in eine höhere Box verschieben.</value>

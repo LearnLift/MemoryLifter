@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,1629 +59,1614 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="SOUND_SIMPLE_RECORD_SAVE_TEXT" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SOUND_SIMPLE_RECORD_SAVE_TEXT" xml:space="preserve">
     <value>¿Desea guardar el archivo multimedia grabado?</value>
   </data>
-	<data name="IMPORTER_FILE_LOADED" xml:space="preserve">
+  <data name="IMPORTER_FILE_LOADED" xml:space="preserve">
     <value>Archivo cargado en {0}s, visualizando previamente {1} filas...</value>
   </data>
-	<data name="ANSWER_TYPOS_TEXT" xml:space="preserve">
+  <data name="ANSWER_TYPOS_TEXT" xml:space="preserve">
     <value>Demasiados errores tipográficos</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_MAININSTRUCTION" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_MAININSTRUCTION" xml:space="preserve">
     <value>Está intentando abrir un formato de archivo antiguo del módulo de aprendizaje. ¿Desea continuar?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir la carpeta del módulo de aprendizaje?</value>
   </data>
-	<data name="IMPORT_FILE_IN_USE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FILE_IN_USE_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="REGISTRY_ERROR_CAPTION" xml:space="preserve">
+  <data name="REGISTRY_ERROR_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
     <value>Respuesta ({0})</value>
   </data>
-	<data name="STATISTICS_DISTRIBUTION_CAPTION" xml:space="preserve">
+  <data name="STATISTICS_DISTRIBUTION_CAPTION" xml:space="preserve">
     <value>Distribución de memoria</value>
   </data>
-	<data name="REG_LATER_TEXT" xml:space="preserve">
+  <data name="REG_LATER_TEXT" xml:space="preserve">
     <value>Puede registrarse más tarde a través de nuestra opción de registro del menú "Ayuda".</value>
   </data>
-	<data name="DIC_OVERWRITE_TEXT" xml:space="preserve">
+  <data name="DIC_OVERWRITE_TEXT" xml:space="preserve">
     <value>¿Desea sobrescribir el archivo anterior?</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_CLOSEDIC" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_CLOSEDIC" xml:space="preserve">
     <value>Cerrar el módulo de aprendizaje sin guardar
 Perderá su trabajo y los cambios de esta sesión.</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
     <value>Introduzca {0} a continuación ({1} Sinónimos)</value>
   </data>
-	<data name="TOOLTIP_MAINTAIN_DELETE" xml:space="preserve">
+  <data name="TOOLTIP_MAINTAIN_DELETE" xml:space="preserve">
     <value>Eliminar ficha</value>
   </data>
-	<data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
     <value>Pregunta ({0})</value>
   </data>
-	<data name="INFO_HTML_SCORE" xml:space="preserve">
+  <data name="INFO_HTML_SCORE" xml:space="preserve">
     <value>Máxima puntuación:</value>
   </data>
-	<data name="IMPORTER_IMPORTED" xml:space="preserve">
+  <data name="IMPORTER_IMPORTED" xml:space="preserve">
     <value>Ficha {0}/{1} importada...</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>El módulo de aprendizaje ya existe. ¿Desea sustituirlo?</value>
   </data>
-	<data name="DIC_NOT_VALID_CAPTION" xml:space="preserve">
+  <data name="DIC_NOT_VALID_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje</value>
   </data>
-	<data name="DIC_SAVEDIALOG_FILTER_NEW" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_FILTER_NEW" xml:space="preserve">
     <value>Archivos del módulo de aprendizaje (*.{0})|*.{0}</value>
   </data>
-	<data name="MAINTAIN_SEARCHHELP" xml:space="preserve">
+  <data name="MAINTAIN_SEARCHHELP" xml:space="preserve">
     <value>Escriba para buscar…</value>
   </data>
-	<data name="DEMOTE_CONF_TEXT" xml:space="preserve">
+  <data name="DEMOTE_CONF_TEXT" xml:space="preserve">
     <value>¿Desea degradar la ficha?
 [Sí]: degradar, [No]: promocionar</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
     <value>Promocionar ficha</value>
   </data>
-	<data name="DIC_DAMAGED_CAPTION" xml:space="preserve">
+  <data name="DIC_DAMAGED_CAPTION" xml:space="preserve">
     <value>Se ha detectado una incoherencia en el módulo de aprendizaje</value>
   </data>
-	<data name="MAINFORM_SLIDESHOW_LBLQUESTION_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SLIDESHOW_LBLQUESTION_TEXT" xml:space="preserve">
     <value>Modo de presentación en diapositivas - {0}</value>
   </data>
-	<data name="SAVE_REQUEST_TEXT" xml:space="preserve">
+  <data name="SAVE_REQUEST_TEXT" xml:space="preserve">
     <value>¿Desea guardar el módulo de aprendizaje?</value>
   </data>
-	<data name="CONVERT_REQUEST_TEXT" xml:space="preserve">
+  <data name="CONVERT_REQUEST_TEXT" xml:space="preserve">
     <value>El módulo de aprendizaje tiene un formato antiguo y debe convertirse. ¿Desea continuar?</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_DONTSHOWAGAIN" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_DONTSHOWAGAIN" xml:space="preserve">
     <value>Abrir siempre sin preguntar</value>
   </data>
-	<data name="MANAGECHAPTER_NEW_CHAPTER_DESC" xml:space="preserve">
+  <data name="MANAGECHAPTER_NEW_CHAPTER_DESC" xml:space="preserve">
     <value>No hay descripción</value>
   </data>
-	<data name="IMPORT_FILETYPE" xml:space="preserve">
+  <data name="IMPORT_FILETYPE" xml:space="preserve">
     <value>Valores separados por comas (*.csv)|*.csv|Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*</value>
   </data>
-	<data name="FIRSTSTART_CAPTION" xml:space="preserve">
+  <data name="FIRSTSTART_CAPTION" xml:space="preserve">
     <value>Primer inicio</value>
   </data>
-	<data name="SELF_ASSESSEMENT_LBLCHAPTER_TEXT" xml:space="preserve">
+  <data name="SELF_ASSESSEMENT_LBLCHAPTER_TEXT" xml:space="preserve">
     <value>¿Conocía la respuesta? (Utilice las teclas de flecha arriba/abajo o haga clic en los botones "Ya lo sé/No lo sé")</value>
   </data>
-	<data name="IMPORT_END_OF_FILE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_END_OF_FILE_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
     <value>Ejemplo de respuesta sonora ({0})</value>
   </data>
-	<data name="PERSONAL_FOLDER_CAPTION" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_CAPTION" xml:space="preserve">
     <value>Especificar una carpeta</value>
   </data>
-	<data name="COPY_MEDIA_TEXT" xml:space="preserve">
+  <data name="COPY_MEDIA_TEXT" xml:space="preserve">
     <value>El archivo multimedia se copiará en la carpeta de archivos multimedia del módulo de aprendizaje.
 Si hace algún cambio en dicho archivo, recuerde actualizarlo en dicha ubicación también.
 
 ¿Desea volver a ver esta información?</value>
   </data>
-	<data name="DIC_IMPORT_SUCCESSFUL_CAPTION" xml:space="preserve">
+  <data name="DIC_IMPORT_SUCCESSFUL_CAPTION" xml:space="preserve">
     <value>Importación realizada correctamente</value>
   </data>
-	<data name="MAINFORM_LEARNBOX_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LEARNBOX_TEXT" xml:space="preserve">
     <value>Todos los ficheros</value>
   </data>
-	<data name="CONVERT_DIRDIALOG_DESCRIPTION" xml:space="preserve">
+  <data name="CONVERT_DIRDIALOG_DESCRIPTION" xml:space="preserve">
     <value>Seleccione una carpeta de destino para el módulo de aprendizaje convertido.</value>
   </data>
-	<data name="IMPORT_PATH_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="IMPORT_PATH_NOT_FOUND_TEXT" xml:space="preserve">
     <value>Ruta no encontrada.</value>
   </data>
-	<data name="PACK_DIRDIALOG_DESCRIPTION" xml:space="preserve">
+  <data name="PACK_DIRDIALOG_DESCRIPTION" xml:space="preserve">
     <value>Seleccione una carpeta para el módulo de aprendizaje desempaquetado.</value>
   </data>
-	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_NAME" xml:space="preserve">
+  <data name="MANAGECHAPTER_DEFAULT_CHAPTER_NAME" xml:space="preserve">
     <value>Capítulo 1</value>
   </data>
-	<data name="APPLY_CHANGES_CAPTION" xml:space="preserve">
+  <data name="APPLY_CHANGES_CAPTION" xml:space="preserve">
     <value>Cambiar ficha</value>
   </data>
-	<data name="UNPACK_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
     <value>¿Desea sobrescribir los archivos existentes?</value>
   </data>
-	<data name="SETUPBOXES_BOXLABELI_TEXT" xml:space="preserve">
+  <data name="SETUPBOXES_BOXLABELI_TEXT" xml:space="preserve">
     <value>Fichero</value>
   </data>
-	<data name="FRMCARD_VIDEO" xml:space="preserve">
+  <data name="FRMCARD_VIDEO" xml:space="preserve">
     <value>Vídeo</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_FOOTER" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_FOOTER" xml:space="preserve">
     <value>Haga una copia de seguridad del módulo de aprendizaje ante de abrirlo.</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
     <value>Eliminar todos los capítulos de la selección</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
     <value>No volver a preguntar la ficha,
 La ficha puede restaurarse en "Fichas - Mantener"</value>
   </data>
-	<data name="DIC_IMPORT_SUCCESSFUL_TEXT" xml:space="preserve">
+  <data name="DIC_IMPORT_SUCCESSFUL_TEXT" xml:space="preserve">
     <value>Archivo anterior del módulo de aprendizaje {0}.odf
 importado correctamente y guardado como {1}.</value>
   </data>
-	<data name="RECORD_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="RECORD_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Guardar archivo Wave como</value>
   </data>
-	<data name="REGISTRATION_LBLFREE_TEXT" xml:space="preserve">
-    <value>MemoryLifter {0} es totalmente gratuito.  Regístrese ahora.</value>
-  </data>
-	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_CAPTION" xml:space="preserve">
+  <data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_CAPTION" xml:space="preserve">
     <value>Último capítulo</value>
   </data>
-	<data name="RECORD_DONE_TEXT2" xml:space="preserve">
+  <data name="RECORD_DONE_TEXT2" xml:space="preserve">
     <value>Siguiente</value>
   </data>
-	<data name="UNPACK_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir los archivos?</value>
   </data>
-	<data name="IMPORT_PATH_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="IMPORT_PATH_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="MAINFORM_LBLCHAPTER_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLCHAPTER_TEXT" xml:space="preserve">
     <value>(Capítulo: {0})</value>
   </data>
-	<data name="EMAIL_MLIFTER_SUPPORT_MAIL" xml:space="preserve">
+  <data name="EMAIL_MLIFTER_SUPPORT_MAIL" xml:space="preserve">
     <value>mailto:support@memorylifter.com</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
     <value>Introduzca {0} a continuación</value>
   </data>
-	<data name="MAINTAIN_POOL" xml:space="preserve">
+  <data name="MAINTAIN_POOL" xml:space="preserve">
     <value>Grupo</value>
   </data>
-	<data name="PRINT_QUERYORDER_Box" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Box" xml:space="preserve">
     <value>Fichero</value>
   </data>
-	<data name="CARD_NO_ANSWER_ERROR_TEXT" xml:space="preserve">
+  <data name="CARD_NO_ANSWER_ERROR_TEXT" xml:space="preserve">
     <value>La ficha no tiene ninguna respuesta.</value>
   </data>
-	<data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
+  <data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
     <value>Varios capítulos seleccionados</value>
   </data>
-	<data name="PRINT_BOXNO" xml:space="preserve">
+  <data name="PRINT_BOXNO" xml:space="preserve">
     <value>Fichero {0}</value>
   </data>
-	<data name="IMPORTER_IMPORTED_END" xml:space="preserve">
+  <data name="IMPORTER_IMPORTED_END" xml:space="preserve">
     <value>Se han importado {0} fichas en {1} segundos.</value>
   </data>
-	<data name="NO_CARDS_TEXT" xml:space="preserve">
+  <data name="NO_CARDS_TEXT" xml:space="preserve">
     <value>No hay fichas en el módulo de aprendizaje. Añada varias fichas.</value>
   </data>
-	<data name="SNOOZE_CONEXTMENU_TIME_TEXT" xml:space="preserve">
+  <data name="SNOOZE_CONEXTMENU_TIME_TEXT" xml:space="preserve">
     <value>Aprender ({0} min.)</value>
   </data>
-	<data name="EXPORT_STATUS_CAPTION" xml:space="preserve">
+  <data name="EXPORT_STATUS_CAPTION" xml:space="preserve">
     <value>Exportando módulo de aprendizaje...</value>
   </data>
-	<data name="DIC_IMPORT_OLD_TEXT" xml:space="preserve">
+  <data name="DIC_IMPORT_OLD_TEXT" xml:space="preserve">
     <value>Importando módulo de aprendizaje anterior.</value>
   </data>
-	<data name="PRINT_SELECT_CAPTION" xml:space="preserve">
+  <data name="PRINT_SELECT_CAPTION" xml:space="preserve">
     <value>Seleccionar capítulos/ficheros</value>
   </data>
-	<data name="MAINFORM_SOUND_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SOUND_AVAILABLE_TEXT" xml:space="preserve">
     <value>Sonido</value>
   </data>
-	<data name="STYLESHEET_CODE_ERROR_CAPTION" xml:space="preserve">
+  <data name="STYLESHEET_CODE_ERROR_CAPTION" xml:space="preserve">
     <value>Error en la hoja de estilos</value>
   </data>
-	<data name="UNPACK_TLOADMSG" xml:space="preserve">
+  <data name="UNPACK_TLOADMSG" xml:space="preserve">
     <value>Desempaquetando módulo de aprendizaje...</value>
   </data>
-	<data name="INITIALIZE_ENVIRONMENT_ERROR_CAPTION" xml:space="preserve">
+  <data name="INITIALIZE_ENVIRONMENT_ERROR_CAPTION" xml:space="preserve">
     <value>Error al configurar el entorno de usuario</value>
   </data>
-	<data name="PERSONAL_FOLDER_2_TEXT" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_2_TEXT" xml:space="preserve">
     <value>No se ha especificado ninguna carpeta predeterminada para los módulos de aprendizaje, se utilizará la carpeta del último módulo de aprendizaje abierto.</value>
   </data>
-	<data name="NEW_DICT_CAPTION" xml:space="preserve">
+  <data name="NEW_DICT_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
+  <data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
     <value>Error del directorio multimedia</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_DESCRIPTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_DESCRIPTION" xml:space="preserve">
     <value>{0}
 
 Si desea guardar su trabajo y los cambios realizados, vuelva a introducir la memoria USB y espere a que desaparezca la ventana.</value>
   </data>
-	<data name="CONVERT_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
     <value>¿Desea sobrescribir los archivos existentes?</value>
   </data>
-	<data name="IMPORT_END_OF_FILE_TEXT" xml:space="preserve">
+  <data name="IMPORT_END_OF_FILE_TEXT" xml:space="preserve">
     <value>No se han encontrado suficientes líneas en el archivo de origen.</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_CAPTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_CAPTION" xml:space="preserve">
     <value>Se ha extraído la memoria USB</value>
   </data>
-	<data name="NEWDIC_CAPTION" xml:space="preserve">
+  <data name="NEWDIC_CAPTION" xml:space="preserve">
     <value>Crear nuevo módulo de aprendizaje</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_STOP_TEXT" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_STOP_TEXT" xml:space="preserve">
     <value>La grabación se detiene cuando se hace clic en [Aceptar].
 A continuación se reproducirá.</value>
   </data>
-	<data name="MAINFORM_SOUND_NOTAVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SOUND_NOTAVAILABLE_TEXT" xml:space="preserve">
     <value>Sonido (no disponible)</value>
   </data>
-	<data name="PERSONAL_FOLDER_TEXT" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_TEXT" xml:space="preserve">
     <value>Especificar una carpeta personal para los módulos de aprendizaje</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
     <value>Directorio en el que deben guardarse los sonidos grabados</value>
   </data>
-	<data name="EXPORT_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="EXPORT_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Seleccionar archivo para exportar</value>
   </data>
-	<data name="MAINTAIN_CHANGEALL" xml:space="preserve">
+  <data name="MAINTAIN_CHANGEALL" xml:space="preserve">
     <value>Cambiar todas las fichas</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>Ya existe un módulo de aprendizaje para esta carpeta.</value>
   </data>
-	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_CAPTION" xml:space="preserve">
+  <data name="CHAPTER_NO_CARDS_SELECTED_ERROR_CAPTION" xml:space="preserve">
     <value>Seleccionar capítulo</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
     <value>Introduzca la frase {0} a continuación</value>
   </data>
-	<data name="RECORD_PATH_TEXT" xml:space="preserve">
+  <data name="RECORD_PATH_TEXT" xml:space="preserve">
     <value>Ruta:</value>
   </data>
-	<data name="DIC_DIR_MISSING_TEXT" xml:space="preserve">
+  <data name="DIC_DIR_MISSING_TEXT" xml:space="preserve">
     <value>Utilice "Herramientas -&gt; Especificar carpeta del módulo de aprendizaje" para seleccionar una carpeta.</value>
   </data>
-	<data name="DIC_ERROR_OPEN_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_OPEN_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje.</value>
   </data>
-	<data name="MAINFORM_SLIDESHOW_MODE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SLIDESHOW_MODE_TEXT" xml:space="preserve">
     <value>Modo de presentación en diapositivas -</value>
   </data>
-	<data name="RESTART_WARNING_CAPTION" xml:space="preserve">
+  <data name="RESTART_WARNING_CAPTION" xml:space="preserve">
     <value>Borrar todos los ficheros</value>
   </data>
-	<data name="SAVE_REQUEST_CAPTION" xml:space="preserve">
+  <data name="SAVE_REQUEST_CAPTION" xml:space="preserve">
     <value>Guardar</value>
   </data>
-	<data name="IMPORT_OUT_OF_MEMORY_CAPTION" xml:space="preserve">
+  <data name="IMPORT_OUT_OF_MEMORY_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="EXPORTER_NOTHING_SELECTED_CAPTION" xml:space="preserve">
+  <data name="EXPORTER_NOTHING_SELECTED_CAPTION" xml:space="preserve">
     <value>No se ha seleccionado nada</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE1_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE1_TEXT" xml:space="preserve">
     <value>&amp;1.</value>
   </data>
-	<data name="HINT_TEXT3" xml:space="preserve">
+  <data name="HINT_TEXT3" xml:space="preserve">
     <value>¡Casi!</value>
   </data>
-	<data name="CONVERT_TMOVEMSG" xml:space="preserve">
+  <data name="CONVERT_TMOVEMSG" xml:space="preserve">
     <value>Moviendo módulo de formación...</value>
   </data>
-	<data name="DIP_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DIP_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>Error al abrir el módulo de aprendizaje</value>
   </data>
-	<data name="NO_CHAPTERS_CAPTION" xml:space="preserve">
+  <data name="NO_CHAPTERS_CAPTION" xml:space="preserve">
     <value>No hay capítulos</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_CONTENT" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_CONTENT" xml:space="preserve">
     <value>Ha intentado abrir un módulo de aprendizaje que se ha creado con una versión más antigua de MemoryLifter. Si lo abre con esta versión, podrían producirse incompatibilidades con las versiones anteriores de MemoryLifter.</value>
   </data>
-	<data name="ADD_CARD_TEXT" xml:space="preserve">
+  <data name="ADD_CARD_TEXT" xml:space="preserve">
     <value>¿Desea añadir esta ficha?</value>
   </data>
-	<data name="URL_MLIFTER_FAQ" xml:space="preserve">
+  <data name="URL_MLIFTER_FAQ" xml:space="preserve">
     <value>http://www.memorylifter.com/es/about-memorylifter/faq.html</value>
   </data>
-	<data name="STATISTICS_TIMESPAN_FORMAT_STRING" xml:space="preserve">
+  <data name="STATISTICS_TIMESPAN_FORMAT_STRING" xml:space="preserve">
     <value>{0:# d ;;#}{1} h {2} m {3} s</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir la carpeta del módulo de aprendizaje?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter ha encontrado una versión existente de este módulo de aprendizaje en esta carpeta. Si continúa, se podrían sustituir los archivos existentes. Esto podría generar conflictos en los archivos multimedia y las referencias a los recursos. ¿Desea continuar de todos modos?</value>
   </data>
-	<data name="FILETYPE_TAB" xml:space="preserve">
+  <data name="FILETYPE_TAB" xml:space="preserve">
     <value>Separación con tabulación</value>
   </data>
-	<data name="IMPORT_ERROR_FIELDSNUM" xml:space="preserve">
+  <data name="IMPORT_ERROR_FIELDSNUM" xml:space="preserve">
     <value>No hay suficientes elementos en el archivo.</value>
   </data>
-	<data name="DIC_ERROR_CREATENEW_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_CREATENEW_TEXT" xml:space="preserve">
     <value>No se ha podido crear un nuevo módulo de aprendizaje.</value>
   </data>
-	<data name="RESTART_WARNING_TEXT" xml:space="preserve">
+  <data name="RESTART_WARNING_TEXT" xml:space="preserve">
     <value>Con esta opción se restablecerá sul estado de aprendizaje mediante la eliminación del contenido de todos los ficheros.
 ¿Seguro que desea continuar?</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
     <value>Añadir campo a la selección</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>Ya existe un módulo de aprendizaje para esta carpeta.</value>
   </data>
-	<data name="MISTAKE_CAPTION" xml:space="preserve">
+  <data name="MISTAKE_CAPTION" xml:space="preserve">
     <value>Calificar escritura</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_EQUESTION" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_EQUESTION" xml:space="preserve">
     <value>Idioma de las preguntas, como por ejemplo, español</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_EANSWER" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_EANSWER" xml:space="preserve">
     <value>Idioma de las respuestas, como por ejemplo, inglés</value>
   </data>
-	<data name="DIC_ERROR_NEWERVERSION_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_NEWERVERSION_CAPTION" xml:space="preserve">
     <value>Nueva versión</value>
   </data>
-	<data name="STATISTICS_PERCENT" xml:space="preserve">
+  <data name="STATISTICS_PERCENT" xml:space="preserve">
     <value>0 %</value>
   </data>
-	<data name="PRINT_SELECTED" xml:space="preserve">
+  <data name="PRINT_SELECTED" xml:space="preserve">
     <value>Se han seleccionado {0} fichas de {1}.</value>
   </data>
-	<data name="PRINT_QUERYORDER_Question" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Question" xml:space="preserve">
     <value>Pregunta</value>
   </data>
-	<data name="CARD_NO_ANSWER_ERROR_CAPTION" xml:space="preserve">
+  <data name="CARD_NO_ANSWER_ERROR_CAPTION" xml:space="preserve">
     <value>No hay texto</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_TITLE" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_TITLE" xml:space="preserve">
     <value>Importando archivos multimedia</value>
   </data>
-	<data name="COMMON_NUMBER_FORMAT" xml:space="preserve">
+  <data name="COMMON_NUMBER_FORMAT" xml:space="preserve">
     <value>0.0</value>
   </data>
-	<data name="NO_WORDS_TEXT" xml:space="preserve">
+  <data name="NO_WORDS_TEXT" xml:space="preserve">
     <value>No quedan fichas que preguntar. Utilice "Especificar capítulos que aprender" en el menú "Aprender".</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_TEXT" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_TEXT" xml:space="preserve">
     <value>¿Dónde se encuentran los archivos multimedia?</value>
   </data>
-	<data name="NO_CARDS_CAPTION" xml:space="preserve">
+  <data name="NO_CARDS_CAPTION" xml:space="preserve">
     <value>Sin fichas</value>
   </data>
-	<data name="INT_OVERFLOW_CAPTION" xml:space="preserve">
+  <data name="INT_OVERFLOW_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="STATISTICS_OTHER_TAB_POOL_SIZE_STRING" xml:space="preserve">
+  <data name="STATISTICS_OTHER_TAB_POOL_SIZE_STRING" xml:space="preserve">
     <value>Grupo: {0}</value>
   </data>
-	<data name="DIC_DIR_MISSING_CAPTION" xml:space="preserve">
+  <data name="DIC_DIR_MISSING_CAPTION" xml:space="preserve">
     <value>No hay ninguna carpeta de módulo de formación válida.</value>
   </data>
-	<data name="LEARNSTAT_TIME_FORMAT" xml:space="preserve">
+  <data name="LEARNSTAT_TIME_FORMAT" xml:space="preserve">
     <value>{0} h {1} m {2} s</value>
   </data>
-	<data name="NO_CHAPTERS_TEXT" xml:space="preserve">
+  <data name="NO_CHAPTERS_TEXT" xml:space="preserve">
     <value>No hay información del capítulo disponible. Añada capítulos antes de añadir fichas.</value>
   </data>
-	<data name="EDIT_FIELD_FLY_CAPTION" xml:space="preserve">
+  <data name="EDIT_FIELD_FLY_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="RECORD_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="RECORD_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Archivo Wave ({0})|{0}</value>
   </data>
-	<data name="EXPORT_FILETYPE" xml:space="preserve">
+  <data name="EXPORT_FILETYPE" xml:space="preserve">
     <value>Valores separados por comas (*.csv)|*.csv|Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*</value>
   </data>
-	<data name="ABOUT_HTML_DISCLAIMER_TEXT" xml:space="preserve">
+  <data name="ABOUT_HTML_DISCLAIMER_TEXT" xml:space="preserve">
     <value>Este software se proporciona "tal cual", por lo que sus autores declinan cualquier tipo de responsabilidad derivada de daños por el uso normal o anormal de este software ya sea de forma directa o indirecta.</value>
   </data>
-	<data name="EXPORTER_NOTHING_SELECTED_TEXT" xml:space="preserve">
+  <data name="EXPORTER_NOTHING_SELECTED_TEXT" xml:space="preserve">
     <value>Seleccione al menos un capítulo/campo.</value>
   </data>
-	<data name="REG_DONE_TEXT" xml:space="preserve">
+  <data name="REG_DONE_TEXT" xml:space="preserve">
     <value>Ya está registrado. ¿Desea registrarse como un usuario distinto?</value>
   </data>
-	<data name="DIC_INVALID_FORMAT_CAPTION" xml:space="preserve">
+  <data name="DIC_INVALID_FORMAT_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje</value>
   </data>
-	<data name="REGISTRY_ERROR_2_TEXT" xml:space="preserve">
+  <data name="REGISTRY_ERROR_2_TEXT" xml:space="preserve">
     <value>No se puede escribir en el Registro de Windows.
 
 Póngase en contacto con el servicio de soporte técnico de MemoryLifter en 
 http://www.memorylifter.com</value>
   </data>
-	<data name="SOUND_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="SOUND_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Archivo Wave {0})|{0}</value>
   </data>
-	<data name="DIC_ERROR_CREATENEW_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_CREATENEW_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
     <value>Degradar ficha</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
     <value>Pregunta sonora ({0})</value>
   </data>
-	<data name="UNPACK_TMOVEMSG" xml:space="preserve">
+  <data name="UNPACK_TMOVEMSG" xml:space="preserve">
     <value>Moviendo módulo de formación...</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_PROCEED" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_PROCEED" xml:space="preserve">
     <value>Convertir y abrir
 El archivo se convertirá al nuevo formato.</value>
   </data>
-	<data name="PRINT_BOXNO_0" xml:space="preserve">
+  <data name="PRINT_BOXNO_0" xml:space="preserve">
     <value>Grupo</value>
   </data>
-	<data name="STATISTICS_NO_STATS_MSGBOX_DESC" xml:space="preserve">
+  <data name="STATISTICS_NO_STATS_MSGBOX_DESC" xml:space="preserve">
     <value>No hay estadísticas disponibles todavía.</value>
   </data>
-	<data name="INT_OVERFLOW_TEXT" xml:space="preserve">
+  <data name="INT_OVERFLOW_TEXT" xml:space="preserve">
     <value>Se ha alcanzado el número máximo de elementos.</value>
   </data>
-	<data name="DIC_ERROR_SAVING_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_SAVING_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="MAINTAIN_SELECTEDCARD" xml:space="preserve">
+  <data name="MAINTAIN_SELECTEDCARD" xml:space="preserve">
     <value>Se ha seleccionado 1 ficha.</value>
   </data>
-	<data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
     <value>Respuesta</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_CANCEL" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_CANCEL" xml:space="preserve">
     <value>No abrir
 El archivo se quedará tal como está.</value>
   </data>
-	<data name="OVERWRITE_TEXT" xml:space="preserve">
+  <data name="OVERWRITE_TEXT" xml:space="preserve">
     <value>El archivo ya existe. ¿Desea sobrescribirlo?</value>
   </data>
-	<data name="STATISTICS_CLOSING_COUNTDOWN" xml:space="preserve">
+  <data name="STATISTICS_CLOSING_COUNTDOWN" xml:space="preserve">
     <value>Se cerrará en {0:0} segundos...</value>
   </data>
-	<data name="ABOUT_HTML_DISCLAIMER_CAPTION" xml:space="preserve">
+  <data name="ABOUT_HTML_DISCLAIMER_CAPTION" xml:space="preserve">
     <value>Renuncias</value>
   </data>
-	<data name="MAINFORM_IMAGE_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_IMAGE_AVAILABLE_TEXT" xml:space="preserve">
     <value>Imagen</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_KNOWN_CARDS_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_KNOWN_CARDS_STRING" xml:space="preserve">
     <value>Conocido</value>
   </data>
-	<data name="DIC_MODIFIED_TEXT" xml:space="preserve">
+  <data name="DIC_MODIFIED_TEXT" xml:space="preserve">
     <value>{0} se ha modificado fuera del programa. Probablemente hay otra persona utilizando el módulo de aprendizaje en este momento. Al guardar, podrían generarse problemas. Haga clic en
 
 * [Sí] para sobrescribir el archivo
 * [No] para guardar el trabajo realizado en otro archivo
 * [Cancelar] para interrumpir el proceso.</value>
   </data>
-	<data name="STYLESHEET_NOT_AVAILABLE_CAPTION" xml:space="preserve">
+  <data name="STYLESHEET_NOT_AVAILABLE_CAPTION" xml:space="preserve">
     <value>Error al cargar la hoja de estilos</value>
   </data>
-	<data name="ADD_CARD_CAPTION" xml:space="preserve">
+  <data name="ADD_CARD_CAPTION" xml:space="preserve">
     <value>Añadir ficha</value>
   </data>
-	<data name="BAD_FILENAME_CAPTION" xml:space="preserve">
+  <data name="BAD_FILENAME_CAPTION" xml:space="preserve">
     <value>Error al añadir archivo multimedia a la carpeta de archivos multimedia</value>
   </data>
-	<data name="UNPACK_ALREADY_EXISTS_CAPTION" xml:space="preserve">
+  <data name="UNPACK_ALREADY_EXISTS_CAPTION" xml:space="preserve">
     <value>El archivo ya existe</value>
   </data>
-	<data name="URL_MLIFTER_REFERPAGE" xml:space="preserve">
+  <data name="URL_MLIFTER_REFERPAGE" xml:space="preserve">
     <value>http://www.memorylifter.com/es/info/contact/recommend-to-a-friend.html</value>
   </data>
-	<data name="STATISTICS_XAXIS" xml:space="preserve">
+  <data name="STATISTICS_XAXIS" xml:space="preserve">
     <value>Tiempo</value>
   </data>
-	<data name="DIC_SAVEDIALOG_TITLE_IMPORTED" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_TITLE_IMPORTED" xml:space="preserve">
     <value>Guardar el módulo de aprendizaje {0} importado como</value>
   </data>
-	<data name="INFO_HTML_LANGUAGE" xml:space="preserve">
+  <data name="INFO_HTML_LANGUAGE" xml:space="preserve">
     <value>Idioma del módulo de aprendizaje:</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_MAININSTRUCTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_MAININSTRUCTION" xml:space="preserve">
     <value>Ha retirado la memoria USB con el siguiente módulo de aprendizaje todavía abierto.</value>
   </data>
-	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_TEXT" xml:space="preserve">
+  <data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_TEXT" xml:space="preserve">
     <value>Este capítulo no puede eliminarse porque es el último capítulo que queda.</value>
   </data>
-	<data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
+  <data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
     <value>El directorio multimedia no se pudo guardar correctamente. Compruebe que sea válido.</value>
   </data>
-	<data name="IMPORT_FILE_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FILE_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="STYLESHEET_CODE_ERROR_TEXT" xml:space="preserve">
+  <data name="STYLESHEET_CODE_ERROR_TEXT" xml:space="preserve">
     <value>Hay un error en el código de la hoja de estilo. Corríjalo o utilice "Restaurar" para volver a cargar la hoja de estilo predeterminada.</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_CAPTION" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_CAPTION" xml:space="preserve">
     <value>Conocimientos del módulo de aprendizaje</value>
   </data>
-	<data name="NEW_DICT_TEXT" xml:space="preserve">
+  <data name="NEW_DICT_TEXT" xml:space="preserve">
     <value>Error al configurar el módulo de aprendizaje</value>
   </data>
-	<data name="ABBREVIATION_SECONDS" xml:space="preserve">
+  <data name="ABBREVIATION_SECONDS" xml:space="preserve">
     <value>seg.</value>
   </data>
-	<data name="DIR_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="DIR_NOT_FOUND_TEXT" xml:space="preserve">
     <value>El módulo de aprendizaje no existe o la ruta no es válida.</value>
   </data>
-	<data name="CHAPTERS_ONE_CAPTION" xml:space="preserve">
+  <data name="CHAPTERS_ONE_CAPTION" xml:space="preserve">
     <value>Capítulo seleccionado</value>
   </data>
-	<data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
+  <data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
     <value>Mapa de caracteres</value>
   </data>
-	<data name="INITIALIZE_ENVIRONMENT_ERROR_TEXT" xml:space="preserve">
+  <data name="INITIALIZE_ENVIRONMENT_ERROR_TEXT" xml:space="preserve">
     <value>Se ha producido un error durante la configuración del entorno del usuario. Compruebe la carpeta del módulo de aprendizaje.</value>
   </data>
-	<data name="CARDS_GB_QUESTION_TEXT" xml:space="preserve">
+  <data name="CARDS_GB_QUESTION_TEXT" xml:space="preserve">
     <value>Pregunta ({0}):</value>
   </data>
-	<data name="DIC_MODIFIED_CAPTION" xml:space="preserve">
+  <data name="DIC_MODIFIED_CAPTION" xml:space="preserve">
     <value>Módulo de aprendizaje modificado</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>El módulo de aprendizaje ya existe. ¿Desea sustituirlo?</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Sí, sustituir el módulo de aprendizaje.</value>
   </data>
-	<data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
     <value>Capítulo</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter ha encontrado una copia existente de este módulo de aprendizaje en la carpeta. Si continúa, se sustituirán todos los archivos existentes.</value>
   </data>
-	<data name="PACKDIC_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="PACKDIC_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Guardar como</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter ha encontrado una copia existente de este módulo de aprendizaje en la carpeta. Si continúa, se sustituirán todos los archivos existentes.</value>
   </data>
-	<data name="APPLY_CHANGES_TEXT" xml:space="preserve">
+  <data name="APPLY_CHANGES_TEXT" xml:space="preserve">
     <value>¿Desea aplicar los cambios a esta ficha?</value>
   </data>
-	<data name="STATISTICS_YAXIS" xml:space="preserve">
+  <data name="STATISTICS_YAXIS" xml:space="preserve">
     <value>Fichas</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE2_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE2_TEXT" xml:space="preserve">
     <value>&amp;2.</value>
   </data>
-	<data name="CONVERT_REQUEST_CAPTION" xml:space="preserve">
+  <data name="CONVERT_REQUEST_CAPTION" xml:space="preserve">
     <value>¿Desea convertir el formato anterior del módulo de aprendizaje?</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
     <value>Eliminar campo de la selección</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter ha encontrado un módulo de aprendizaje existente en esta carpeta. Si continúa, se podrían sustituir los archivos existentes por otros. Esto podría generar conflictos en los archivos multimedia y las referencias a los recursos. ¿Desea continuar de todos modos?</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
     <value>Respuesta sonora ({0})</value>
   </data>
-	<data name="POOL_EMPTY_TEXT" xml:space="preserve">
+  <data name="POOL_EMPTY_TEXT" xml:space="preserve">
     <value>El grupo de fichas está vacío y ésta es su puntuación actual.
 Para añadir nuevas fichas seleccione "Especificar capítulos de aprendizaje" en la opción de menú "Aprender", o bien añada nuevas fichas al capítulo existente.</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, no sustituir el módulo de aprendizaje.</value>
   </data>
-	<data name="DIC_ERROR_OPEN_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_OPEN_TEXT" xml:space="preserve">
     <value>No se puede abrir {0}.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_TEXT" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_TEXT" xml:space="preserve">
     <value>¿Desea eliminar el capítulo con todas las fichas que contiene?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, cancelar.</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_START_CAPTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_START_CAPTION" xml:space="preserve">
     <value>Grabador de Wave</value>
   </data>
-	<data name="MAINTAIN_NONE" xml:space="preserve">
+  <data name="MAINTAIN_NONE" xml:space="preserve">
     <value>Ninguna</value>
   </data>
-	<data name="IMPORT_ERROR_ONCLICK_CAPTION" xml:space="preserve">
+  <data name="IMPORT_ERROR_ONCLICK_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_DESC" xml:space="preserve">
+  <data name="CHAPTER_NO_CARDS_SELECTED_ERROR_DESC" xml:space="preserve">
     <value>Debe seleccionar al menos un capítulo con fichas activas para empezar el aprendizaje.</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, no sustituir el módulo de aprendizaje.</value>
   </data>
-	<data name="DIC_ERROR_SAVING_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_SAVING_TEXT" xml:space="preserve">
     <value>Error al guardar el módulo de aprendizaje. Compruebe si el disco está lleno o protegido contra escritura y, a continuación, vuelva a intentarlo.</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir el módulo de aprendizaje?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Elija una ubicación distinta.</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
     <value>Eliminar capítulo de la selección</value>
   </data>
-	<data name="NO_WORDS_CAPTION" xml:space="preserve">
+  <data name="NO_WORDS_CAPTION" xml:space="preserve">
     <value>No hay más palabras</value>
   </data>
-	<data name="IMPORT_ERROR_ONCLICK_TEXT" xml:space="preserve">
+  <data name="IMPORT_ERROR_ONCLICK_TEXT" xml:space="preserve">
     <value>No se ha podido abrir el archivo. Vuelva a intentarlo.</value>
   </data>
-	<data name="NOTHING" xml:space="preserve">
+  <data name="NOTHING" xml:space="preserve">
     <value>&lt;Nothing&gt;</value>
   </data>
-	<data name="IMPORT_HEADERLINE_ERROR_TEXT" xml:space="preserve">
+  <data name="IMPORT_HEADERLINE_ERROR_TEXT" xml:space="preserve">
     <value>No se ha encontrado ninguna línea de encabezado en las primeras ocho filas.</value>
   </data>
-	<data name="CARDS_BUTTON_ADD_TEXT" xml:space="preserve">
+  <data name="CARDS_BUTTON_ADD_TEXT" xml:space="preserve">
     <value>Cambiar</value>
   </data>
-	<data name="CARDS_OPENDIALOG_FILTER" xml:space="preserve">
+  <data name="CARDS_OPENDIALOG_FILTER" xml:space="preserve">
     <value>Todos los tipos de soportes compatibles|{0};{1};{2}|Imagen ({0})|{0}|Audio ({1})|{1}|Vídeo ({2})|{2}</value>
   </data>
-	<data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
     <value>Respuesta de vídeo ({0})</value>
   </data>
-	<data name="XSL_STYLE" xml:space="preserve">
+  <data name="XSL_STYLE" xml:space="preserve">
     <value>Configuración de estilo</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
     <value>¿Seguro que desea eliminar las fichas seleccionadas?</value>
   </data>
-	<data name="REGISTRY_ERROR_TEXT" xml:space="preserve">
+  <data name="REGISTRY_ERROR_TEXT" xml:space="preserve">
     <value>No se puede abrir el Registro de Windows.
 
 Póngase en contacto con el servicio de soporte técnico de MemoryLifter en 
 http://www.memorylifter.com</value>
   </data>
-	<data name="STATISTICS_OTHER" xml:space="preserve">
+  <data name="STATISTICS_OTHER" xml:space="preserve">
     <value>Distribución actual</value>
   </data>
-	<data name="DIC_SAVEDIALOG_TITLE_NEW" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_TITLE_NEW" xml:space="preserve">
     <value>Nuevo módulo de formación</value>
   </data>
-	<data name="MSGBOX_LABEL_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
+  <data name="MSGBOX_LABEL_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
     <value>Los campos de pregunta y respuesta no pueden estar vacíos.</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Elija una ubicación distinta.</value>
   </data>
-	<data name="INFO_HTML_CATEGORY" xml:space="preserve">
+  <data name="INFO_HTML_CATEGORY" xml:space="preserve">
     <value>Categoría:</value>
   </data>
-	<data name="SETUP_STICKMODE_DRIVELETTERREPLACEMENT" xml:space="preserve">
+  <data name="SETUP_STICKMODE_DRIVELETTERREPLACEMENT" xml:space="preserve">
     <value>MEMSTICK:\</value>
   </data>
-	<data name="DIC_HEADER_ODFFILE_TEXT" xml:space="preserve">
+  <data name="DIC_HEADER_ODFFILE_TEXT" xml:space="preserve">
     <value>Archivo del módulo de aprendizaje de OMICRON</value>
   </data>
-	<data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
     <value>Pregunta de vídeo ({0})</value>
   </data>
-	<data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
     <value>Ejemplo de pregunta ({0})</value>
   </data>
-	<data name="BAD_FILENAME_TEXT" xml:space="preserve">
+  <data name="BAD_FILENAME_TEXT" xml:space="preserve">
     <value>El nombre de archivo ya existe. Cambie el nombre del archivo.</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_BOX_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_BOX_STRING" xml:space="preserve">
     <value>Fichero {0}</value>
   </data>
-	<data name="PRINT_WIZARD_TITLE" xml:space="preserve">
+  <data name="PRINT_WIZARD_TITLE" xml:space="preserve">
     <value>Imprimir fichas</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_CARDS" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_CARDS" xml:space="preserve">
     <value>Rellenar estado del fichero actual</value>
   </data>
-	<data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje {0}</value>
   </data>
-	<data name="DIC_DAMAGED_TEXT" xml:space="preserve">
+  <data name="DIC_DAMAGED_TEXT" xml:space="preserve">
     <value>Algunas partes del módulo de aprendizaje pueden estar dañadas
 en caso de que se muestren mensajes de error inmediatamente después de éste.
 Si lo desea, póngase en contacto con el servicio de asistencia de MemoryLifter
 (http://www.memorylifter.com).</value>
   </data>
-	<data name="MAINFORM_IMAGE_NOTAVAILABE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_IMAGE_NOTAVAILABE_TEXT" xml:space="preserve">
     <value>Imagen (no disponible)</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Elija una ubicación distinta.</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
     <value>Añadir todos los campos a la selección</value>
   </data>
-	<data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
     <value>Eliminar fichas</value>
   </data>
-	<data name="SOUND_ERROR_TEXT" xml:space="preserve">
+  <data name="SOUND_ERROR_TEXT" xml:space="preserve">
     <value>No se puede reproducir sonido. Falta el archivo {0}</value>
   </data>
-	<data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
     <value>Pregunta de imagen ({0})</value>
   </data>
-	<data name="PACK_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="PACK_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Archivos del módulo de aprendizaje empaquetados ({0})|{0}</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_CAPTION" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_CAPTION" xml:space="preserve">
     <value>No es un archivo de MemoryLifter original.</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_SBRECORD" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_SBRECORD" xml:space="preserve">
     <value>Registrar comentario</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_TEXT" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_TEXT" xml:space="preserve">
     <value>El archivo no es un módulo de aprendizaje original de MemoryLifter. ¿Desea continuar igualmente?</value>
   </data>
-	<data name="SETUPBOXES_BOXLABEL0_TEXT" xml:space="preserve">
+  <data name="SETUPBOXES_BOXLABEL0_TEXT" xml:space="preserve">
     <value>Grupo</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
     <value>Eliminar todos los capítulos de la selección</value>
   </data>
-	<data name="PRINT_BOX_TOOLTIP" xml:space="preserve">
+  <data name="PRINT_BOX_TOOLTIP" xml:space="preserve">
     <value>Contiene {0} fichas.</value>
   </data>
-	<data name="FILETYPE_COMMA" xml:space="preserve">
+  <data name="FILETYPE_COMMA" xml:space="preserve">
     <value>Separación con coma (,)</value>
   </data>
-	<data name="DIC_OVERWRITE_CAPTION" xml:space="preserve">
+  <data name="DIC_OVERWRITE_CAPTION" xml:space="preserve">
     <value>Módulo de aprendizaje modificado</value>
   </data>
-	<data name="PRINT_SELECT_TEXT" xml:space="preserve">
+  <data name="PRINT_SELECT_TEXT" xml:space="preserve">
     <value>Debe seleccionar al menos un capítulo y un fichero para imprimir.</value>
   </data>
-	<data name="HINT_TEXT2" xml:space="preserve">
+  <data name="HINT_TEXT2" xml:space="preserve">
     <value>Lo sentimos, la ficha se ha degradado al fichero número uno.</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
     <value>Ejemplo de pregunta sonora ({0})</value>
   </data>
-	<data name="SOUND_ERROR_CAPTION" xml:space="preserve">
+  <data name="SOUND_ERROR_CAPTION" xml:space="preserve">
     <value>Falta archivo</value>
   </data>
-	<data name="IMPORT_OUT_OF_MEMORY_TEXT" xml:space="preserve">
+  <data name="IMPORT_OUT_OF_MEMORY_TEXT" xml:space="preserve">
     <value>El archivo es demasiado corto.</value>
   </data>
-	<data name="URL_MLIFTER_HOMEPAGE" xml:space="preserve">
+  <data name="URL_MLIFTER_HOMEPAGE" xml:space="preserve">
     <value>http://www.memorylifter.com/es/home.html</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_START_TEXT" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_START_TEXT" xml:space="preserve">
     <value>La grabación empieza en cuanto se hace clic en [Aceptar].</value>
   </data>
-	<data name="REG_LATER_CAPTION" xml:space="preserve">
+  <data name="REG_LATER_CAPTION" xml:space="preserve">
     <value>Registro gratuito</value>
   </data>
-	<data name="TIMESTAMPS_TEXT" xml:space="preserve">
+  <data name="TIMESTAMPS_TEXT" xml:space="preserve">
     <value>Las marcas de fecha y hora del módulo de aprendizaje son más recientes que la fecha y hora del sistema.
 Compruebe la hora del sistema, MemoryLifter seguirá
 funcionando con marcas de fecha y hora relativas hasta que corrija el problema.</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_TARGET_CARDS_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_TARGET_CARDS_STRING" xml:space="preserve">
     <value>Destino</value>
   </data>
-	<data name="ABBREVIATION_PERCENT" xml:space="preserve">
+  <data name="ABBREVIATION_PERCENT" xml:space="preserve">
     <value>%</value>
   </data>
-	<data name="CONVERT_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir los archivos?</value>
   </data>
-	<data name="DIC_NOT_SUPPORTED_TEXT" xml:space="preserve">
+  <data name="DIC_NOT_SUPPORTED_TEXT" xml:space="preserve">
     <value>El archivo del módulo de aprendizaje es demasiado antiguo. Esta versión no es totalmente compatible y puede contener errores.</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
     <value>Añadir todos los capítulos a la selección</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_SAVE_QUESTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_SAVE_QUESTION" xml:space="preserve">
     <value>Grabador de Wave</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_CAPTION" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_CAPTION" xml:space="preserve">
     <value>Confirmación</value>
   </data>
-	<data name="FILETYPE_SEMICOLON" xml:space="preserve">
+  <data name="FILETYPE_SEMICOLON" xml:space="preserve">
     <value>Separación con punto y coma (;)</value>
   </data>
-	<data name="STATISTICS_NO_STATS_MSGBOX_CAPT" xml:space="preserve">
+  <data name="STATISTICS_NO_STATS_MSGBOX_CAPT" xml:space="preserve">
     <value>No disponible</value>
   </data>
-	<data name="REG_DONE_CAPTION" xml:space="preserve">
+  <data name="REG_DONE_CAPTION" xml:space="preserve">
     <value>Registro gratuito</value>
   </data>
-	<data name="EDIT_FIELD_FLY_TEXT" xml:space="preserve">
+  <data name="EDIT_FIELD_FLY_TEXT" xml:space="preserve">
     <value>Éste es un campo de entrada especial que sólo permite escribir
 caracteres correctos. En este campo NO se pueden eliminar caracteres ni utilizar la tecla de retroceso,
 como tampoco se puede cortar, pegar ni cambiar líneas.
 Si prefiere un modo de introducción estándar, vaya a "Aprender – 
 Opciones de aprendizaje" y desmarque "Corregir sobre la marcha".</value>
   </data>
-	<data name="MANAGECHAPTER_NEW_CHAPTER_NAME" xml:space="preserve">
+  <data name="MANAGECHAPTER_NEW_CHAPTER_NAME" xml:space="preserve">
     <value>Nuevo capítulo</value>
   </data>
-	<data name="ABOUT_VERSION" xml:space="preserve">
+  <data name="ABOUT_VERSION" xml:space="preserve">
     <value>Versión {0}</value>
   </data>
-	<data name="MAINTAIN_UNCHANGED" xml:space="preserve">
+  <data name="MAINTAIN_UNCHANGED" xml:space="preserve">
     <value>(sin cambios)</value>
   </data>
-	<data name="ABOUT_COPYRIGHT" xml:space="preserve">
+  <data name="ABOUT_COPYRIGHT" xml:space="preserve">
     <value>Copyright © 2012 OMICRON electronics GmbH</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>¿Desea sobrescribir el módulo de aprendizaje?</value>
   </data>
-	<data name="TOOLTIP_MAINTAIN_ADD" xml:space="preserve">
+  <data name="TOOLTIP_MAINTAIN_ADD" xml:space="preserve">
     <value>Añadir nueva ficha</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Sí, continuar.</value>
   </data>
-	<data name="DIC_INVALID_FORMAT_TEXT" xml:space="preserve">
+  <data name="DIC_INVALID_FORMAT_TEXT" xml:space="preserve">
     <value>El formato del archivo {0} no es válido o es demasiado antiguo.</value>
   </data>
-	<data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje</value>
   </data>
-	<data name="IMPORT_HEADERLINE_ERROR_CAPTION" xml:space="preserve">
+  <data name="IMPORT_HEADERLINE_ERROR_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="COPY_MEDIA_CAPTION" xml:space="preserve">
+  <data name="COPY_MEDIA_CAPTION" xml:space="preserve">
     <value>Copar archivos multimedia en la carpeta de archivos multimedia</value>
   </data>
-	<data name="REGISTRATION_TEXT" xml:space="preserve">
-    <value>Facilítenos la siguiente información para que podamos ayudarle mejor. Nos interesan particularmente sus necesidades y el uso previsto de MemoryLifter. Esta información se utilizará únicamente con fines internos.  No alquilamos ni vendemos esta información a terceros. Gracias.
-{0}dloadver: {1}
-{0}Nombre:
-{0}Apellido:
-{0}Correo electrónico:
-{0}Describa brevemente cómo tiene previsto usar MemoryLifter:
-{0}¿Desea recibir noticias por correo electrónico sobre las novedades de MemoryLifter? (S/N):</value>
-  </data>
-	<data name="DIC_SAVEDIALOG_FILTER_IMPORTED" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_FILTER_IMPORTED" xml:space="preserve">
     <value>Archivos del módulo de aprendizaje (*.{0})|*.{0}</value>
   </data>
-	<data name="DIP_NOT_SUPPORTED_TEXT" xml:space="preserve">
+  <data name="DIP_NOT_SUPPORTED_TEXT" xml:space="preserve">
     <value>Esta versión de MemoryLifter no admite módulos de aprendizaje empaquetados con la extensión .dip.
 Utilice archivos .dzp o .zip, o bien póngase en contacto con el servicio de asistencia de MemoryLifter (support@memorylifter.com) para obtener ayuda.</value>
   </data>
-	<data name="RECORD_LWORD_TEXT" xml:space="preserve">
+  <data name="RECORD_LWORD_TEXT" xml:space="preserve">
     <value>Seleccione los campos para la grabación e inicie la grabación de pistas. También puede grabar un único archivo si pulsa el botón de grabación.</value>
   </data>
-	<data name="FRMCARD_IMAGE" xml:space="preserve">
+  <data name="FRMCARD_IMAGE" xml:space="preserve">
     <value>Imagen</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE3_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE3_TEXT" xml:space="preserve">
     <value>&amp;3.</value>
   </data>
-	<data name="STATISTICS_OTHER_TAB_BOX_SIZE_STRING" xml:space="preserve">
+  <data name="STATISTICS_OTHER_TAB_BOX_SIZE_STRING" xml:space="preserve">
     <value>Fichero {0}: {1}</value>
   </data>
-	<data name="INFO_HTML_AUTHOR" xml:space="preserve">
+  <data name="INFO_HTML_AUTHOR" xml:space="preserve">
     <value>Autor:</value>
   </data>
-	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_DESC" xml:space="preserve">
+  <data name="MANAGECHAPTER_DEFAULT_CHAPTER_DESC" xml:space="preserve">
     <value>Capítulo predeterminado</value>
   </data>
-	<data name="MAIN_LOADREG_CAPTION" xml:space="preserve">
+  <data name="MAIN_LOADREG_CAPTION" xml:space="preserve">
     <value>¿Desea cargar la configuración anterior?</value>
   </data>
-	<data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
     <value>Ejemplo de respuesta ({0})</value>
   </data>
-	<data name="HINT_TEXT1" xml:space="preserve">
+  <data name="HINT_TEXT1" xml:space="preserve">
     <value>¡Muy bien! La ficha se ha promocionado al siguiente fichero.</value>
   </data>
-	<data name="MAIN_LOADREG_TEXT" xml:space="preserve">
+  <data name="MAIN_LOADREG_TEXT" xml:space="preserve">
     <value>¿Desea cargar la configuración anterior de la versión 2.0?</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
     <value>Añadir capítulo a la selección</value>
   </data>
-	<data name="MAINFORM_LBLBOXNO_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLBOXNO_TEXT" xml:space="preserve">
     <value>Grupo</value>
   </data>
-	<data name="DEMOTE_CONF_CAPTION" xml:space="preserve">
+  <data name="DEMOTE_CONF_CAPTION" xml:space="preserve">
     <value>Confirmar degradación</value>
   </data>
-	<data name="DIC_NOT_VALID_TEXT" xml:space="preserve">
+  <data name="DIC_NOT_VALID_TEXT" xml:space="preserve">
     <value>{0} no es un archivo válido del módulo de aprendizaje MemoryLifter.</value>
   </data>
-	<data name="FRMCARD_AUDIO" xml:space="preserve">
+  <data name="FRMCARD_AUDIO" xml:space="preserve">
     <value>Audio</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Sí, continuar.</value>
   </data>
-	<data name="MAINTAIN_SELECTEDCARDS" xml:space="preserve">
+  <data name="MAINTAIN_SELECTEDCARDS" xml:space="preserve">
     <value>Se han seleccionado {0} fichas.</value>
   </data>
-	<data name="IMPORT_FILE_IN_USE_TEXT" xml:space="preserve">
+  <data name="IMPORT_FILE_IN_USE_TEXT" xml:space="preserve">
     <value>Otro programa está usando este archivo. Cierre este programa y vuelva a intentarlo.</value>
   </data>
-	<data name="SPLASH_VERSION_TEXT" xml:space="preserve">
+  <data name="SPLASH_VERSION_TEXT" xml:space="preserve">
     <value>Versión {0}</value>
   </data>
-	<data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
+  <data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
     <value>Todas las fichas</value>
   </data>
-	<data name="MSGBOX_CAPTION_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
+  <data name="MSGBOX_CAPTION_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="TIMESTAMPS_CAPTION" xml:space="preserve">
+  <data name="TIMESTAMPS_CAPTION" xml:space="preserve">
     <value>Aviso</value>
   </data>
-	<data name="SOUND_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="SOUND_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Guardar archivo Wave como</value>
   </data>
-	<data name="CARDS_BUTTON_ADD_TEXT2" xml:space="preserve">
+  <data name="CARDS_BUTTON_ADD_TEXT2" xml:space="preserve">
     <value>Añadir ficha</value>
   </data>
-	<data name="XSL_DEFAULT" xml:space="preserve">
+  <data name="XSL_DEFAULT" xml:space="preserve">
     <value>Configuración global</value>
   </data>
-	<data name="OVERWRITE_CAPTION" xml:space="preserve">
+  <data name="OVERWRITE_CAPTION" xml:space="preserve">
     <value>Confirmación solicitada</value>
   </data>
-	<data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
+  <data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
     <value>Seleccione el directorio de archivos multimedia:</value>
   </data>
-	<data name="IMPORT_FILE_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="IMPORT_FILE_NOT_FOUND_TEXT" xml:space="preserve">
     <value>Archivo no encontrado.</value>
   </data>
-	<data name="DIC_ERROR_NEWERVERSION_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_NEWERVERSION_TEXT" xml:space="preserve">
     <value>Ha intentado abrir un módulo de aprendizaje que se ha creado con una versión más reciente de MemoryLifter.
 Visite el sitio web de MemoryLifter para descargar la versión actual.</value>
   </data>
-	<data name="INFO_HTML_DESCRIPTION" xml:space="preserve">
+  <data name="INFO_HTML_DESCRIPTION" xml:space="preserve">
     <value>Descripción:</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_TITLE" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_TITLE" xml:space="preserve">
     <value>Versión anterior del módulo de aprendizaje</value>
   </data>
-	<data name="PACK_TLOADMSG" xml:space="preserve">
+  <data name="PACK_TLOADMSG" xml:space="preserve">
     <value>Empaquetando el módulo de aprendizaje...</value>
   </data>
-	<data name="UNPACK_ALREADY_EXISTS_TEXT" xml:space="preserve">
+  <data name="UNPACK_ALREADY_EXISTS_TEXT" xml:space="preserve">
     <value>El archivo {0} ya existe. ¿Desea sobrescribirlo?</value>
   </data>
-	<data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
     <value>Respuesta de imagen ({0})</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Sí, sustituir el módulo de aprendizaje.</value>
   </data>
-	<data name="STYLESHEET_NOT_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="STYLESHEET_NOT_AVAILABLE_TEXT" xml:space="preserve">
     <value>La hoja de estilos actual no está disponible. Desmarque la opción "Usar estilo de módulo de aprendizaje"
 o póngase en contacto con el servicio de asistencia de MemoryLifter (http://www.memorylifter.com)</value>
   </data>
-	<data name="CARDS_GB_ANSWER_TEXT" xml:space="preserve">
+  <data name="CARDS_GB_ANSWER_TEXT" xml:space="preserve">
     <value>Respuesta ({0}):</value>
   </data>
-	<data name="PACK_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="PACK_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Guardar como</value>
   </data>
-	<data name="URL_MLIFTER_FEEDBACK" xml:space="preserve">
+  <data name="URL_MLIFTER_FEEDBACK" xml:space="preserve">
     <value>http://www.memorylifter.com/es/info/contact.html</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
     <value>Seleccione {0} a continuación.</value>
   </data>
-	<data name="REGISTRATION_HEAD_TEXT" xml:space="preserve">
-    <value>Bienvenido a MemoryLifter {0}</value>
-  </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, cancelar.</value>
   </data>
-	<data name="DIC_SYNONYM_DELIMITER_TEXT" xml:space="preserve">
+  <data name="DIC_SYNONYM_DELIMITER_TEXT" xml:space="preserve">
     <value>;</value>
   </data>
-	<data name="POOL_EMPTY_CAPTION" xml:space="preserve">
+  <data name="POOL_EMPTY_CAPTION" xml:space="preserve">
     <value>Grupo vacío</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_STOP_CAPTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_STOP_CAPTION" xml:space="preserve">
     <value>Grabador de Wave</value>
   </data>
-	<data name="CARDS_OPENDIALOG_TITLE" xml:space="preserve">
+  <data name="CARDS_OPENDIALOG_TITLE" xml:space="preserve">
     <value>Añadir archivo multimedia</value>
   </data>
-	<data name="DIC_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DIC_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>El módulo de aprendizaje no es totalmente compatible</value>
   </data>
-	<data name="SETUP_STICKMODE_CONFIGFILE" xml:space="preserve">
+  <data name="SETUP_STICKMODE_CONFIGFILE" xml:space="preserve">
     <value>{0}.user</value>
   </data>
-	<data name="DIR_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="DIR_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>No se encuentra el módulo de aprendizaje</value>
   </data>
-	<data name="IMPORT_OPENDIALOG_TITLE" xml:space="preserve">
+  <data name="IMPORT_OPENDIALOG_TITLE" xml:space="preserve">
     <value>Seleccionar archivo para importar</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Elija una ubicación distinta.</value>
   </data>
-	<data name="MISTAKE_TEXT" xml:space="preserve">
+  <data name="MISTAKE_TEXT" xml:space="preserve">
     <value>Ha cometido algunos errores tipográficos. ¿Desea contar la palabra como correcta igualmente?</value>
   </data>
-	<data name="MAINTAIN_NA" xml:space="preserve">
+  <data name="MAINTAIN_NA" xml:space="preserve">
     <value>N/D</value>
   </data>
-	<data name="RECORD_DONE_TEXT" xml:space="preserve">
+  <data name="RECORD_DONE_TEXT" xml:space="preserve">
     <value>Hecho</value>
   </data>
-	<data name="CHAPTERS_ONE_TEXT" xml:space="preserve">
+  <data name="CHAPTERS_ONE_TEXT" xml:space="preserve">
     <value>Este módulo de aprendizaje contiene sólo un capítulo que se seleccionó para el aprendizaje automático.</value>
   </data>
-	<data name="MAINTAIN_ACTIVATE" xml:space="preserve">
+  <data name="MAINTAIN_ACTIVATE" xml:space="preserve">
     <value>Activar</value>
   </data>
-	<data name="MAINTAIN_DEACTIVATE" xml:space="preserve">
+  <data name="MAINTAIN_DEACTIVATE" xml:space="preserve">
     <value>Desactivar</value>
   </data>
-	<data name="LEARN_OPTIONS_NOTEACHERSFOUND" xml:space="preserve">
+  <data name="LEARN_OPTIONS_NOTEACHERSFOUND" xml:space="preserve">
     <value>No se encuentran entradas del profesor.</value>
   </data>
-	<data name="LEARN_OPTIONS_TEACHERSNOTLOADED" xml:space="preserve">
+  <data name="LEARN_OPTIONS_TEACHERSNOTLOADED" xml:space="preserve">
     <value>El archivo de profesor no se ha podido cargar correctamente.
 
 {0}
 {1}</value>
   </data>
-	<data name="PRINT_QUERYORDER_None" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_None" xml:space="preserve">
     <value>Ninguna</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_CAPTION" xml:space="preserve">
     <value>Desempaquetar módulo de aprendizaje</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_CONTENT" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_CONTENT" xml:space="preserve">
     <value>La ruta predeterminada es {0}.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Cancelar.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_OPTION_NO" xml:space="preserve">
     <value>No, elija una carpeta distinta.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_TEXT" xml:space="preserve">
     <value>¿Debe MemoryLifter utilizar la carpeta predeterminada para desempaquetar este módulo de aprendizaje?</value>
   </data>
-	<data name="UNPACK_DEFAULT_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_OPTION_YES" xml:space="preserve">
     <value>Sí, utilizar la carpeta predeterminada.</value>
   </data>
-	<data name="PRINT_STYLE_PRINTALL" xml:space="preserve">
+  <data name="PRINT_STYLE_PRINTALL" xml:space="preserve">
     <value>Imprimir todo</value>
   </data>
-	<data name="PRINT_STYLE_WITHOUTMEDIA" xml:space="preserve">
+  <data name="PRINT_STYLE_WITHOUTMEDIA" xml:space="preserve">
     <value>Imprimir sin multimedia</value>
   </data>
-	<data name="STYLE_DEFAULT_STYLENAME" xml:space="preserve">
+  <data name="STYLE_DEFAULT_STYLENAME" xml:space="preserve">
     <value>Default</value>
   </data>
-	<data name="STYLE_STYLE_EXTENSION" xml:space="preserve">
+  <data name="STYLE_STYLE_EXTENSION" xml:space="preserve">
     <value>.style</value>
   </data>
-	<data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
+  <data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
     <value>Obteniendo fichas...</value>
   </data>
-	<data name="PRINT_STATUS_MEDIA" xml:space="preserve">
+  <data name="PRINT_STATUS_MEDIA" xml:space="preserve">
     <value>Preparando archivos multimedia...</value>
   </data>
-	<data name="PRINT_STATUS_PAGES" xml:space="preserve">
+  <data name="PRINT_STATUS_PAGES" xml:space="preserve">
     <value>Preparando páginas...</value>
   </data>
-	<data name="PRINT_STATUS_RENDERING" xml:space="preserve">
+  <data name="PRINT_STATUS_RENDERING" xml:space="preserve">
     <value>Generando páginas...</value>
   </data>
-	<data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
+  <data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
     <value>Capítulo</value>
   </data>
-	<data name="MAINTAIN_TOOLTIP_IMPORTED" xml:space="preserve">
+  <data name="MAINTAIN_TOOLTIP_IMPORTED" xml:space="preserve">
     <value>Esta ficha está resaltada porque se creó con la última importación.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_OPTION_YES" xml:space="preserve">
     <value>Sí, continuar.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_OPTION_NO" xml:space="preserve">
     <value>No, cancelar.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_CONTENT" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_CONTENT" xml:space="preserve">
     <value>Ha intentado abrir un archivo empaquetado que no se ha creado específicamente con MemoryLifter.</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT_OPTION_YES" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT_OPTION_YES" xml:space="preserve">
     <value>Sí, eliminar.</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT_OPTION_NO" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT_OPTION_NO" xml:space="preserve">
     <value>No, no eliminar.</value>
   </data>
-	<data name="MAINTAIN_DELETE_WARNING" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_WARNING" xml:space="preserve">
     <value>Advertencia: esta acción no se puede deshacer.</value>
   </data>
-	<data name="MAINTAIN_DELETE_CONTENT" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_CONTENT" xml:space="preserve">
     <value>Ha seleccionado {0} fichas para su eliminación.</value>
   </data>
-	<data name="CONVERT_REQUEST_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_REQUEST_OPTION_YES" xml:space="preserve">
     <value>Sí, convertir.</value>
   </data>
-	<data name="CONVERT_REQUEST_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_REQUEST_OPTION_NO" xml:space="preserve">
     <value>No, no convertir.</value>
   </data>
-	<data name="CONVERT_REQUEST_CONTENT" xml:space="preserve">
+  <data name="CONVERT_REQUEST_CONTENT" xml:space="preserve">
     <value>Este módulo de aprendizaje se ha creado con una versión anterior de MemoryLifter. MemoryLifter debe convertirse al nuevo formato para poder usarlo.  ¿Desea continuar?</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONTENT" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONTENT" xml:space="preserve">
     <value>Con esta opción se eliminará el capítulo '{0}' y {1} fichas que hay en dicho capítulo.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_NO" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_NO" xml:space="preserve">
     <value>No, no eliminar.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_YES" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_YES" xml:space="preserve">
     <value>Sí, eliminar.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_WARNING" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_WARNING" xml:space="preserve">
     <value>Advertencia: esta acción no se puede deshacer.</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_COMMANDS" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_COMMANDS" xml:space="preserve">
     <value>Importar mediante la ruta del archivo de importación.
 {0}.|Importar mediante la ruta del módulo de aprendizaje.
 {1}.|Cancelar importación.</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_CONTENT" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_CONTENT" xml:space="preserve">
     <value>Ha seleccionado la importación de archivos multimedia. Especifique la carpeta en la que se encuentran.</value>
   </data>
-	<data name="IMPORT_CHARSET_FORMAT" xml:space="preserve">
+  <data name="IMPORT_CHARSET_FORMAT" xml:space="preserve">
     <value>{0} (CP {1})</value>
   </data>
-	<data name="PACK_IOEXCEPTION_CAPTION" xml:space="preserve">
+  <data name="PACK_IOEXCEPTION_CAPTION" xml:space="preserve">
     <value>No es posible abrir el archivo.</value>
   </data>
-	<data name="PACK_IOEXCEPTION_TEXT" xml:space="preserve">
+  <data name="PACK_IOEXCEPTION_TEXT" xml:space="preserve">
     <value>No se puede abrir el archivo para escribir en él. Es posible que alguien esté usando el archivo o que esté protegido contra escritura.</value>
   </data>
-	<data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
+  <data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
     <value>Guardando módulo de aprendizaje...</value>
   </data>
-	<data name="IMPORT_FAILURE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FAILURE_CAPTION" xml:space="preserve">
     <value>Error de importación</value>
   </data>
-	<data name="IMPORT_FAILURE_TEXT" xml:space="preserve">
+  <data name="IMPORT_FAILURE_TEXT" xml:space="preserve">
     <value>Error de MemoryLifter al importar las fichas.</value>
   </data>
-	<data name="IMPORT_SUCCESS_CAPTION" xml:space="preserve">
+  <data name="IMPORT_SUCCESS_CAPTION" xml:space="preserve">
     <value>Importación correcta</value>
   </data>
-	<data name="IMPORT_SUCCESS_TEXT" xml:space="preserve">
+  <data name="IMPORT_SUCCESS_TEXT" xml:space="preserve">
     <value>MemoryLifter ha importado correctamente {0} fichas.</value>
   </data>
-	<data name="INITIALIZE_SETTINGS_CAPTION" xml:space="preserve">
+  <data name="INITIALIZE_SETTINGS_CAPTION" xml:space="preserve">
     <value>Inicialización de MemoryLifter</value>
   </data>
-	<data name="INITIALIZE_SETTINGS_ERROR" xml:space="preserve">
+  <data name="INITIALIZE_SETTINGS_ERROR" xml:space="preserve">
     <value>Configuración actualizada, reinicie el programa...</value>
   </data>
-	<data name="DICPATH_DEFAULTNAME" xml:space="preserve">
+  <data name="DICPATH_DEFAULTNAME" xml:space="preserve">
     <value>LearningModules</value>
   </data>
-	<data name="DICPATH_DEFAULTNAME_OLD" xml:space="preserve">
+  <data name="DICPATH_DEFAULTNAME_OLD" xml:space="preserve">
     <value>MLDictionaries</value>
   </data>
-	<data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
+  <data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
     <value>Respuesta</value>
   </data>
-	<data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
+  <data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
     <value>Ejemplo de respuesta</value>
   </data>
-	<data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
+  <data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
     <value>Pregunta</value>
   </data>
-	<data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
+  <data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
     <value>Ejemplo de pregunta</value>
   </data>
-	<data name="HELP_FILEPATH" xml:space="preserve">
+  <data name="HELP_FILEPATH" xml:space="preserve">
     <value>Resources\es\help_es.chm</value>
   </data>
-	<data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
+  <data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
     <value>Sonido apagado</value>
   </data>
-	<data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
+  <data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
     <value>Debido a un error del reproductor de audio, el sonido está apagado. Reinicie MemoryLifter para arreglar el sonido.</value>
   </data>
-	<data name="MANAGECHAPTER_EMPTY_TITLE" xml:space="preserve">
+  <data name="MANAGECHAPTER_EMPTY_TITLE" xml:space="preserve">
     <value>El título del capítulo no debe estar vacío.</value>
   </data>
-	<data name="DIC_SAVEASDIALOG_TITLE" xml:space="preserve">
+  <data name="DIC_SAVEASDIALOG_TITLE" xml:space="preserve">
     <value>Guardar como</value>
   </data>
-	<data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje</value>
   </data>
-	<data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje {0}.
 El archivo puede estar en uso por otra aplicación. Ciérrelo e inténtelo de nuevo.</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_COMMANDS" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_COMMANDS" xml:space="preserve">
     <value>Sí, exportar archivos multimedia.
 |No, no exportar archivos multimedia.</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_CONTENT" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_CONTENT" xml:space="preserve">
     <value>Para exportar archivos multimedia, MemoryLifter debe copiarlos a la carpeta de exportación. Esta operación puede durar cierto tiempo. ¿Desea exportar los archivos multimedia?</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_TEXT" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_TEXT" xml:space="preserve">
     <value>¿Desea exportar archivos multimedia?</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_TITLE" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_TITLE" xml:space="preserve">
     <value>Exportar archivos multimedia</value>
   </data>
-	<data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
     <value>Error al cargar el módulo de aprendizaje</value>
   </data>
-	<data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
     <value>Ha intentado abrir un módulo de aprendizaje que necesita el lápiz de memoria original.
 Inserte el lápiz de memoria original y ábralo desde allí.</value>
   </data>
-	<data name="SESSION_INVALID_DETAIL" xml:space="preserve">
+  <data name="SESSION_INVALID_DETAIL" xml:space="preserve">
     <value>Su sesión de Memorylifter ha sido cerrada por otro usuario que ha iniciado sesión con las mismas credenciales.</value>
   </data>
-	<data name="SESSION_INVALID_MAIN" xml:space="preserve">
+  <data name="SESSION_INVALID_MAIN" xml:space="preserve">
     <value>Su sesión ha sido cerrada por otro usuario.</value>
   </data>
-	<data name="SESSION_INVALID_TITLE" xml:space="preserve">
+  <data name="SESSION_INVALID_TITLE" xml:space="preserve">
     <value>Sesión cerrada</value>
   </data>
-	<data name="DEFAULT_CONNECTION_FILE" xml:space="preserve">
+  <data name="DEFAULT_CONNECTION_FILE" xml:space="preserve">
     <value>defaultConnection.mlcfg</value>
   </data>
-	<data name="DEFAULT_CONNECTION_NAME" xml:space="preserve">
+  <data name="DEFAULT_CONNECTION_NAME" xml:space="preserve">
     <value>Mis módulos de aprendizaje</value>
   </data>
-	<data name="SETUP_STARTUP_FOLDERS" xml:space="preserve">
+  <data name="SETUP_STARTUP_FOLDERS" xml:space="preserve">
     <value>Resources\StartupFolders.zip</value>
   </data>
-	<data name="RECENT_LEARNINGMODULES_MENUFORMAT" xml:space="preserve">
+  <data name="RECENT_LEARNINGMODULES_MENUFORMAT" xml:space="preserve">
     <value>&amp;{0} {1} ({2})</value>
   </data>
-	<data name="NEW_DIC_NO_CONNECTION_CAPTION" xml:space="preserve">
+  <data name="NEW_DIC_NO_CONNECTION_CAPTION" xml:space="preserve">
     <value>Ninguna conexión disponible con capacidad de escritura.</value>
   </data>
-	<data name="NEW_DIC_NO_CONNECTION_TEXT" xml:space="preserve">
+  <data name="NEW_DIC_NO_CONNECTION_TEXT" xml:space="preserve">
     <value>No hay conexión disponible para almacenar un nuevo módulo de aprendizaje.</value>
   </data>
-	<data name="RECENT_LEARNING_MODULES_FILE" xml:space="preserve">
+  <data name="RECENT_LEARNING_MODULES_FILE" xml:space="preserve">
     <value>Config\RecentLMs.index</value>
   </data>
-	<data name="DRAG_COPY_ERROR_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_COPY_ERROR_MAININTRODUCTION" xml:space="preserve">
     <value>Error al copiar el módulo de aprendizaje</value>
   </data>
-	<data name="DRAG_COPY_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_COPY_ERROR_TITLE" xml:space="preserve">
     <value>Error al copiar</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_CONTENT" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_CONTENT" xml:space="preserve">
     <value>Ya hay un módulo de aprendizaje con el mismo nombre en la carpeta predeterminada de módulos de aprendizaje. Puede borrar el módulo de aprendizaje de la carpeta predeterminada o cambiar su nombre.</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_MAININTRODUCTION" xml:space="preserve">
     <value>El módulo de aprendizaje ya existe</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_TITLE" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_TITLE" xml:space="preserve">
     <value>El módulo de aprendizaje ya existe</value>
   </data>
-	<data name="DRAG_MOVE_ERROR_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_MOVE_ERROR_MAININTRODUCTION" xml:space="preserve">
     <value>Error al mover el módulo de aprendizaje</value>
   </data>
-	<data name="DRAG_MOVE_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_MOVE_ERROR_TITLE" xml:space="preserve">
     <value>Error al mover</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_CONTENT" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_CONTENT" xml:space="preserve">
     <value>No se ha definido una carpeta de módulos de aprendizaje, MemoryLifter no puede copiar el módulo de aprendizaje sin una carpeta predeterminada.</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_MAININTRODUCTION" xml:space="preserve">
     <value>No hay ninguna carpeta predeterminada de módulos de aprendizaje.</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_TITLE" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_TITLE" xml:space="preserve">
     <value>No hay ninguna carpeta de módulos de aprendizaje</value>
   </data>
-	<data name="DRAG_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="DRAG_DIALOG_BUTTONS" xml:space="preserve">
     <value>Copiar el módulo de aprendizaje
 Copia el módulo de aprendizaje a la carpeta predeterminada de módulos de aprendizaje.|Mover el módulo de aprendizaje
 Mueve el módulo de aprendizaje a la carpeta predeterminada de módulos de aprendizaje.|Sólo estudiar
 Abre el módulo de aprendizaje para estudiar sin necesidad de copiarlo o moverlo.|Cancelar
 No hacer nada.</value>
   </data>
-	<data name="DRAG_DIALOG_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_DIALOG_MAININTRODUCTION" xml:space="preserve">
     <value>¿Qué quiere hacer con este módulo de aprendizaje?</value>
   </data>
-	<data name="DRAG_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_DIALOG_TITLE" xml:space="preserve">
     <value>¿Qué quiere hacer?</value>
   </data>
-	<data name="DRAG_LM_EXISTS_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="DRAG_LM_EXISTS_DIALOG_BUTTONS" xml:space="preserve">
     <value>Cambiar el módulo de aprendizaje
 Ya existe un módulo de aprendizaje con el mismo nombre en la carpeta predeterminada de módulos de aprendizaje. Esta operación lo sustituirá.|Sólo estudiar
 Abre el módulo de aprendizaje sin copiarlo ni moverlo.|Cancelar
 No hacer nada.</value>
   </data>
-	<data name="DRAG_LM_EXISTS_DIALOG_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_LM_EXISTS_DIALOG_MAININTRODUCTION" xml:space="preserve">
     <value>¿Qué quiere hacer con este módulo de aprendizaje?</value>
   </data>
-	<data name="DRAG_LM_EXISTS_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_LM_EXISTS_DIALOG_TITLE" xml:space="preserve">
     <value>¿Qué quiere hacer?</value>
   </data>
-	<data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
+  <data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
     <value>Error al cargar el archivo de configuración de MemoryLifter.</value>
   </data>
-	<data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
     <value>Error al cargar el archivo de configuración</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
     <value>MemoryLifter ha importado correctamente {0} conexiones.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
     <value>MemoryLifter ha importado correctamente 1 conexión.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
     <value>Se ha importado con éxito el archivo de configuración de MemoryLifter.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
     <value>Ningún dato para importar.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
     <value>La configuración se ha importado con éxito</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
     <value>El archivo de configuración de MemoryLifter no es válido. Póngase en contacto con el administrador del sistema.</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
     <value>Archivo de configuración de MemoryLifter no válido.</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
     <value>Archivo de configuración de MemoryLifter no válido</value>
   </data>
-	<data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
+  <data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
     <value>Cargando...</value>
   </data>
-	<data name="IMPORTING" xml:space="preserve">
+  <data name="IMPORTING" xml:space="preserve">
     <value>Importando...</value>
   </data>
-	<data name="HELP_FIRSTSTEPS" xml:space="preserve">
+  <data name="HELP_FIRSTSTEPS" xml:space="preserve">
     <value>/html/memo7omr.htm</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
     <value>Importar
 Añadir este archivo de configuración de MemoryLifter a la configuración actual.|Cancelar
 No hacer nada.</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
     <value>El archivo de configuración de MemoryLifter ampliará las conexiones disponibles en la página de inicio.</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
     <value>¿Desea importar este archivo de configuración de MemoryLifter?</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
     <value>¿Importar archivo de configuración?</value>
   </data>
-	<data name="RETURN_TO_LEARNING_MODE" xml:space="preserve">
+  <data name="RETURN_TO_LEARNING_MODE" xml:space="preserve">
     <value>Volver al modo de aprendizaje</value>
   </data>
-	<data name="SWITCH_TO_SLIDESHOW_MODE" xml:space="preserve">
+  <data name="SWITCH_TO_SLIDESHOW_MODE" xml:space="preserve">
     <value>Cambiar al modo presentación</value>
   </data>
-	<data name="SYNCHRONIZATION_FAILED_CONTENT" xml:space="preserve">
+  <data name="SYNCHRONIZATION_FAILED_CONTENT" xml:space="preserve">
     <value>Sus cambios se actualizarán en el servidor cuando vuelva a abrir el módulo de aprendizaje.</value>
   </data>
-	<data name="SYNCHRONIZATION_FAILED_TITLE" xml:space="preserve">
+  <data name="SYNCHRONIZATION_FAILED_TITLE" xml:space="preserve">
     <value>No es posible realizar la carga</value>
   </data>
-	<data name="SYNCHRONIZATION_SYNC_FAILED_MAIN" xml:space="preserve">
+  <data name="SYNCHRONIZATION_SYNC_FAILED_MAIN" xml:space="preserve">
     <value>Fallo al cargar los cambios en el servidor.</value>
   </data>
-	<data name="MAINTAIN_CARDS_LOAD_CARDS" xml:space="preserve">
+  <data name="MAINTAIN_CARDS_LOAD_CARDS" xml:space="preserve">
     <value>Cargando fichas...</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_BUTTONS" xml:space="preserve">
     <value>Continuar
 Continuar y crear una copia de seguridad.|Cancelar
 Cancelar la creación de la copia de seguridad.</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_MAIN" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_MAIN" xml:space="preserve">
     <value>Nota: Para copiar el módulo de aprendizaje se debe cerrar y volver a abrir. ¿Continuar?</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_TITLE" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_TITLE" xml:space="preserve">
     <value>Crear copia de seguridad</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_VERIFICATION" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_VERIFICATION" xml:space="preserve">
     <value>No mostrar de nuevo este mensaje.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>No se admite la versión del módulo de aprendizaje.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_CONTENT" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_CONTENT" xml:space="preserve">
     <value>MemoryLifter intentará actualizar ahora el módulo de aprendizaje.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_MAIN" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_MAIN" xml:space="preserve">
     <value>La versión de la base de datos del módulo de aprendizaje no se admite.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION" xml:space="preserve">
     <value>Fallo al actualizar el módulo de aprendizaje.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT" xml:space="preserve">
     <value>Póngase en contacto con el administrador del sistema o con el equipo de soporte técnico de MemoryLifter.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN" xml:space="preserve">
     <value>MemoryLifter no pudo actualizar el módulo de aprendizaje.</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
     <value>No hay espacio libre en disco.</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
     <value>El disco del que está intentado aprender está lleno. Libere espacio y vuelva a intentarlo.</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
     <value>No hay suficiente espacio en disco</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
     <value>Su historial de aprendizaje se ha guardado.</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
     <value>MemoryLifter necesita cerrar esta sesión de aprendizaje.</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
     <value>Error de conexión con el servidor</value>
   </data>
-	<data name="DIC_LOADING_ERROR_OFFLINE" xml:space="preserve">
+  <data name="DIC_LOADING_ERROR_OFFLINE" xml:space="preserve">
     <value>No se puede acceder al servidor en el que está almacenado el módulo de aprendizaje.</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_FILTER" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_FILTER" xml:space="preserve">
     <value>Módulo de aprendizaje de MemoryLifter (*.{0})|*.{0}</value>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CAPTION" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CAPTION" xml:space="preserve">
     <value>Activación en línea no disponible</value>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CONTENT" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CONTENT" xml:space="preserve">
     <value>Si utiliza un cortafuegos que provoca el fallo de la conexión, autorice el acceso de MemoryLifter a través del cortafuegos.</value>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_MAIN" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_MAIN" xml:space="preserve">
     <value>El servicio de activación en línea no está disponible. Compruebe la conexión de red o intente activar de nuevo este módulo de aprendizaje en un PC con acceso a Internet.</value>
   </data>
-	<data name="SPLASHSCREEN_PREPARING" xml:space="preserve">
+  <data name="SPLASHSCREEN_PREPARING" xml:space="preserve">
     <value>Preparando inicio</value>
   </data>
-	<data name="TEACHER_DEFAULT" xml:space="preserve">
+  <data name="TEACHER_DEFAULT" xml:space="preserve">
     <value>Default</value>
   </data>
-	<data name="TEACHER_NICEGUY" xml:space="preserve">
+  <data name="TEACHER_NICEGUY" xml:space="preserve">
     <value>Flexible</value>
   </data>
-	<data name="TEACHER_OCCASIONAL" xml:space="preserve">
+  <data name="TEACHER_OCCASIONAL" xml:space="preserve">
     <value>Alumno esporádico</value>
   </data>
-	<data name="TEACHER_STRICT" xml:space="preserve">
+  <data name="TEACHER_STRICT" xml:space="preserve">
     <value>Estricto</value>
   </data>
-	<data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
     <value>Elemento de distracción respuesta ({0})</value>
   </data>
-	<data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
     <value>Elemento de distracción pregunta ({0})</value>
   </data>
-	<data name="INSTALLED_EXTENSIONS_FILE" xml:space="preserve">
+  <data name="INSTALLED_EXTENSIONS_FILE" xml:space="preserve">
     <value>Config\InstalledExtensions.index</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_CAPTION" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_CAPTION" xml:space="preserve">
     <value>Extensión instalada</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_INSTALLED" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_INSTALLED" xml:space="preserve">
     <value>Se ha instalado la extensión {0} '{1}'.</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_SELECTED" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_SELECTED" xml:space="preserve">
     <value>Se ha instalado y seleccionado la extensión {0} '{1}'.</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_SKIN" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_SKIN" xml:space="preserve">
     <value>Aspecto</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_UNKNOWN" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_UNKNOWN" xml:space="preserve">
     <value>Desconocido</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Title" xml:space="preserve">
     <value>Versión de base de datos no compatible</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Caption" xml:space="preserve">
     <value>La versión de la base de datos seleccionada no es compatible.</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Text" xml:space="preserve">
     <value>Póngase en contacto con su administrador para actualizar la versión de su base de datos.</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Title" xml:space="preserve">
     <value>MemoryLifter es demasiado antiguo</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Caption" xml:space="preserve">
     <value>Su versión de MemoryLifter es demasiado antigua.</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Text" xml:space="preserve">
     <value>Entre en www.memorylifter.com y actualice su versión de MemoryLifter.</value>
   </data>
-	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
     <value>Error al iniciar aplicación externa</value>
   </data>
-	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
     <value>Error de MemoryLifter al iniciar una aplicación externa.</value>
   </data>
-	<data name="MLIFTER_ERROR_HANDLER" xml:space="preserve">
+  <data name="MLIFTER_ERROR_HANDLER" xml:space="preserve">
     <value>MLifterErrorHandler.exe</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Title" xml:space="preserve">
     <value>No se ha encontrado ninguna versión nueva</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Caption" xml:space="preserve">
     <value>No se ha encontrado ninguna versión nueva.</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Text" xml:space="preserve">
     <value>Repita la búsqueda dentro de unos días o active la búsqueda automática para que MemoryLifter busque actualizaciones cada vez que se inicie.</value>
   </data>
-	<data name="ACTIVE_CARDS" xml:space="preserve">
+  <data name="ACTIVE_CARDS" xml:space="preserve">
     <value>Fichas activas</value>
   </data>
-	<data name="INACTIVE_CARDS" xml:space="preserve">
+  <data name="INACTIVE_CARDS" xml:space="preserve">
     <value>Fichas inactivas</value>
   </data>
 </root>

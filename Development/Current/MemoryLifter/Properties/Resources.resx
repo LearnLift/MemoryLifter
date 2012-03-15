@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,652 +59,648 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\resources\infotext.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-	</data>
-	<data name="SOUND_SIMPLE_RECORD_SAVE_TEXT" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="InfoText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\infotext.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SOUND_SIMPLE_RECORD_SAVE_TEXT" xml:space="preserve">
     <value>Save recorded media file?</value>
   </data>
-	<data name="IMPORTER_FILE_LOADED" xml:space="preserve">
+  <data name="IMPORTER_FILE_LOADED" xml:space="preserve">
     <value>File loaded in {0}s, previewing {1} rows...</value>
   </data>
-	<data name="ANSWER_TYPOS_TEXT" xml:space="preserve">
+  <data name="ANSWER_TYPOS_TEXT" xml:space="preserve">
     <value>Too many typos</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_MAININSTRUCTION" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_MAININSTRUCTION" xml:space="preserve">
     <value>You are trying to open an old Learning Module file format. Do you want to continue?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Learning Module Folder?</value>
   </data>
-	<data name="IMPORT_FILE_IN_USE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FILE_IN_USE_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="REGISTRY_ERROR_CAPTION" xml:space="preserve">
+  <data name="REGISTRY_ERROR_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_ANSWER_TEXT" xml:space="preserve">
     <value>Answer ({0})</value>
     <comment>{0} = Title of Answer eg state/capital</comment>
   </data>
-	<data name="STATISTICS_DISTRIBUTION_CAPTION" xml:space="preserve">
+  <data name="STATISTICS_DISTRIBUTION_CAPTION" xml:space="preserve">
     <value>Memory Distribution</value>
   </data>
-	<data name="REG_LATER_TEXT" xml:space="preserve">
+  <data name="REG_LATER_TEXT" xml:space="preserve">
     <value>You may register later through our registration option in the "Help" menu.</value>
     <comment>"Help" = Cross-Reference to menu</comment>
   </data>
-	<data name="DIC_OVERWRITE_TEXT" xml:space="preserve">
+  <data name="DIC_OVERWRITE_TEXT" xml:space="preserve">
     <value>Overwrite the old file?</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_CLOSEDIC" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_CLOSEDIC" xml:space="preserve">
     <value>Close Learning Module without saving
 You will lose your progress and changes from this session.</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT2" xml:space="preserve">
     <value>Enter {0} below ({1} Synonyms)</value>
     <comment>{0} = Title of Answer, {1} = a number</comment>
   </data>
-	<data name="TOOLTIP_MAINTAIN_DELETE" xml:space="preserve">
+  <data name="TOOLTIP_MAINTAIN_DELETE" xml:space="preserve">
     <value>Delete Card</value>
   </data>
-	<data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_QUESTION_TEXT" xml:space="preserve">
     <value>Question ({0})</value>
     <comment>{0} = Title of Question</comment>
   </data>
-	<data name="INFO_HTML_SCORE" xml:space="preserve">
+  <data name="INFO_HTML_SCORE" xml:space="preserve">
     <value>High Score:</value>
   </data>
-	<data name="IMPORTER_IMPORTED" xml:space="preserve">
+  <data name="IMPORTER_IMPORTED" xml:space="preserve">
     <value>Card {0} / {1} imported...</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>The Learning Module already exists. Do you want to overwrite it?</value>
   </data>
-	<data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DIC_NOT_VALID_CAPTION" xml:space="preserve">
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DIC_NOT_VALID_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module</value>
   </data>
-	<data name="DIC_SAVEDIALOG_FILTER_NEW" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_FILTER_NEW" xml:space="preserve">
     <value>Learning Module files (*.{0})|*.{0}</value>
     <comment>{0} = file type eg .odx</comment>
   </data>
-	<data name="MAINTAIN_SEARCHHELP" xml:space="preserve">
+  <data name="MAINTAIN_SEARCHHELP" xml:space="preserve">
     <value>Type to search...</value>
   </data>
-	<data name="DEMOTE_CONF_TEXT" xml:space="preserve">
+  <data name="DEMOTE_CONF_TEXT" xml:space="preserve">
     <value>Demote card?
 [Yes] - demote, [No] - promote</value>
     <comment>Card is demoted to the previous box</comment>
   </data>
-	<data name="documentNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\document-new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
+  <data name="documentNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_SELF_ASSESSEMENT_YES" xml:space="preserve">
     <value>Promote card</value>
     <comment>promote means to put card to the next box</comment>
   </data>
-	<data name="DIC_DAMAGED_CAPTION" xml:space="preserve">
+  <data name="DIC_DAMAGED_CAPTION" xml:space="preserve">
     <value>Learning Module Inconsistency Found</value>
   </data>
-	<data name="MAINFORM_SLIDESHOW_LBLQUESTION_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SLIDESHOW_LBLQUESTION_TEXT" xml:space="preserve">
     <value>Slideshow mode - {0}</value>
     <comment>{0} = Title Question eg: "Slideshow mode - state/capital", "Slideshow mode - Image"</comment>
   </data>
-	<data name="SAVE_REQUEST_TEXT" xml:space="preserve">
+  <data name="SAVE_REQUEST_TEXT" xml:space="preserve">
     <value>Do you want to save the Learning Module?</value>
   </data>
-	<data name="CONVERT_REQUEST_TEXT" xml:space="preserve">
+  <data name="CONVERT_REQUEST_TEXT" xml:space="preserve">
     <value>This learning module is in an old format and needs to be converted. Do you want to proceed?</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_DONTSHOWAGAIN" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_DONTSHOWAGAIN" xml:space="preserve">
     <value>Always open without asking</value>
   </data>
-	<data name="MANAGECHAPTER_NEW_CHAPTER_DESC" xml:space="preserve">
+  <data name="MANAGECHAPTER_NEW_CHAPTER_DESC" xml:space="preserve">
     <value>No description</value>
   </data>
-	<data name="IMPORT_FILETYPE" xml:space="preserve">
+  <data name="IMPORT_FILETYPE" xml:space="preserve">
     <value>Comma separated values (*.csv)|*.csv|Text (*.txt)|*.txt|All files (*.*)|*.*</value>
     <comment>Dialog to open a File. This is the filter for file types. eg 
 Comma seperated values (*.csv)
 All Files (*.*)</comment>
   </data>
-	<data name="accessoriesCharacterMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\accessories-character-map.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="FIRSTSTART_CAPTION" xml:space="preserve">
+  <data name="accessoriesCharacterMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accessories-character-map.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FIRSTSTART_CAPTION" xml:space="preserve">
     <value>First Start</value>
   </data>
-	<data name="SELF_ASSESSEMENT_LBLCHAPTER_TEXT" xml:space="preserve">
+  <data name="SELF_ASSESSEMENT_LBLCHAPTER_TEXT" xml:space="preserve">
     <value>Did you know it? (Use the up/down arrow keys or click the "Do know/Don't know" buttons)</value>
     <comment>"Do know/Don't know" cross-references to buttons in interface</comment>
   </data>
-	<data name="IMPORT_END_OF_FILE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_END_OF_FILE_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_EXANSWER_TEXT" xml:space="preserve">
     <value>Ex. Sound Answer ({0})</value>
     <comment>{0} = Title of Answer (Ex. = example)</comment>
   </data>
-	<data name="PERSONAL_FOLDER_CAPTION" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_CAPTION" xml:space="preserve">
     <value>Specify Folder</value>
   </data>
-	<data name="COPY_MEDIA_TEXT" xml:space="preserve">
+  <data name="COPY_MEDIA_TEXT" xml:space="preserve">
     <value>The media file will be copied to the media folder of the Learning Module.
 If you make any changes to the media, remember to update it there as well.
 
 Show this information again?</value>
   </data>
-	<data name="DIC_IMPORT_SUCCESSFUL_CAPTION" xml:space="preserve">
+  <data name="DIC_IMPORT_SUCCESSFUL_CAPTION" xml:space="preserve">
     <value>Import Successful</value>
   </data>
-	<data name="MAINFORM_LEARNBOX_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LEARNBOX_TEXT" xml:space="preserve">
     <value>&amp;All Boxes</value>
   </data>
-	<data name="CONVERT_DIRDIALOG_DESCRIPTION" xml:space="preserve">
+  <data name="CONVERT_DIRDIALOG_DESCRIPTION" xml:space="preserve">
     <value>Select a target folder for the converted Learning Module.</value>
   </data>
-	<data name="IMPORT_PATH_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="IMPORT_PATH_NOT_FOUND_TEXT" xml:space="preserve">
     <value>Path not found.</value>
   </data>
-	<data name="PACK_DIRDIALOG_DESCRIPTION" xml:space="preserve">
+  <data name="PACK_DIRDIALOG_DESCRIPTION" xml:space="preserve">
     <value>Select a folder for the unpacked Learning Module.</value>
   </data>
-	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_NAME" xml:space="preserve">
+  <data name="MANAGECHAPTER_DEFAULT_CHAPTER_NAME" xml:space="preserve">
     <value>Chapter 1</value>
   </data>
-	<data name="APPLY_CHANGES_CAPTION" xml:space="preserve">
+  <data name="APPLY_CHANGES_CAPTION" xml:space="preserve">
     <value>Change Card</value>
   </data>
-	<data name="UNPACK_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
     <value>Should existing files be overwritten?</value>
   </data>
-	<data name="SETUPBOXES_BOXLABELI_TEXT" xml:space="preserve">
+  <data name="SETUPBOXES_BOXLABELI_TEXT" xml:space="preserve">
     <value>Box</value>
   </data>
-	<data name="FRMCARD_VIDEO" xml:space="preserve">
+  <data name="FRMCARD_VIDEO" xml:space="preserve">
     <value>Video</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_FOOTER" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_FOOTER" xml:space="preserve">
     <value>Make a backup copy of the Learning Module before opening it.</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_DELETEALL" xml:space="preserve">
     <value>Remove All Chapters from Selection</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_DONTASK" xml:space="preserve">
     <value>Don't Ask Card Again,
 Card is restorable in "Cards - Maintain"</value>
     <comment>"Cards - Maintain" = Cross-reference to menu</comment>
   </data>
-	<data name="DIC_IMPORT_SUCCESSFUL_TEXT" xml:space="preserve">
+  <data name="DIC_IMPORT_SUCCESSFUL_TEXT" xml:space="preserve">
     <value>Old Learning Module file {0}.odf
 successfully imported and saved as {1}.</value>
     <comment>{0}, {1} = filenames</comment>
   </data>
-	<data name="RECORD_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="RECORD_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Save Wave File As</value>
   </data>
-	<data name="REGISTRATION_LBLFREE_TEXT" xml:space="preserve">
-    <value>MemoryLifter {0} is absolutely Free!  Register now!</value>
-    <comment>Do not translate the word MemoryLifter. {0} = version</comment>
+  <data name="DisclaimerText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\disclaimertext.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-	<data name="DisclaimerText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\resources\disclaimertext.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-	</data>
-	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_CAPTION" xml:space="preserve">
+  <data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_CAPTION" xml:space="preserve">
     <value>Last Chapter</value>
   </data>
-	<data name="RECORD_DONE_TEXT2" xml:space="preserve">
+  <data name="RECORD_DONE_TEXT2" xml:space="preserve">
     <value>&amp;Next</value>
   </data>
-	<data name="goNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\go-next.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="UNPACK_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
+  <data name="goNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-next.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UNPACK_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Files?</value>
   </data>
-	<data name="IMPORT_PATH_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="IMPORT_PATH_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="MAINFORM_LBLCHAPTER_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLCHAPTER_TEXT" xml:space="preserve">
     <value>(Chapter: {0})</value>
     <comment>{0} = name of chapter</comment>
   </data>
-	<data name="newDoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\new1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="EMAIL_MLIFTER_SUPPORT_MAIL" xml:space="preserve">
+  <data name="newDoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMAIL_MLIFTER_SUPPORT_MAIL" xml:space="preserve">
     <value>mailto:support@memorylifter.com</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_DEFAULT_TEXT1" xml:space="preserve">
     <value>Enter {0} below</value>
     <comment>{0} = Title of Answer</comment>
   </data>
-	<data name="MAINTAIN_POOL" xml:space="preserve">
+  <data name="MAINTAIN_POOL" xml:space="preserve">
     <value>Pool</value>
   </data>
-	<data name="PRINT_QUERYORDER_Box" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Box" xml:space="preserve">
     <value>Box</value>
   </data>
-	<data name="CARD_NO_ANSWER_ERROR_TEXT" xml:space="preserve">
+  <data name="CARD_NO_ANSWER_ERROR_TEXT" xml:space="preserve">
     <value>Card has no answer!</value>
   </data>
-	<data name="systemFileManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\system-file-manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
+  <data name="systemFileManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\system-file-manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LABEL_FRMCHAPTER_MDESCR" xml:space="preserve">
     <value>Multiple chapters selected</value>
   </data>
-	<data name="PRINT_BOXNO" xml:space="preserve">
+  <data name="PRINT_BOXNO" xml:space="preserve">
     <value>Box {0}</value>
     <comment>{0} = Number of Box</comment>
   </data>
-	<data name="IMPORTER_IMPORTED_END" xml:space="preserve">
+  <data name="IMPORTER_IMPORTED_END" xml:space="preserve">
     <value>{0} Cards imported in {1} sec.</value>
   </data>
-	<data name="NO_CARDS_TEXT" xml:space="preserve">
+  <data name="NO_CARDS_TEXT" xml:space="preserve">
     <value>There are no cards in this Learning Module. Add some cards.</value>
   </data>
-	<data name="SNOOZE_CONEXTMENU_TIME_TEXT" xml:space="preserve">
+  <data name="SNOOZE_CONEXTMENU_TIME_TEXT" xml:space="preserve">
     <value>&amp;Learn ({0} min.)</value>
     <comment>{0} = minutes</comment>
   </data>
-	<data name="EXPORT_STATUS_CAPTION" xml:space="preserve">
+  <data name="EXPORT_STATUS_CAPTION" xml:space="preserve">
     <value>Exporting Learning Module...</value>
   </data>
-	<data name="DIC_IMPORT_OLD_TEXT" xml:space="preserve">
+  <data name="DIC_IMPORT_OLD_TEXT" xml:space="preserve">
     <value>Importing old Learning Module.</value>
   </data>
-	<data name="PRINT_SELECT_CAPTION" xml:space="preserve">
+  <data name="PRINT_SELECT_CAPTION" xml:space="preserve">
     <value>Select Chapters/Boxes</value>
   </data>
-	<data name="MAINFORM_SOUND_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SOUND_AVAILABLE_TEXT" xml:space="preserve">
     <value>Sound</value>
   </data>
-	<data name="STYLESHEET_CODE_ERROR_CAPTION" xml:space="preserve">
+  <data name="STYLESHEET_CODE_ERROR_CAPTION" xml:space="preserve">
     <value>Error in Stylesheet</value>
   </data>
-	<data name="UNPACK_TLOADMSG" xml:space="preserve">
+  <data name="UNPACK_TLOADMSG" xml:space="preserve">
     <value>Unpacking Learning Module...</value>
   </data>
-	<data name="INITIALIZE_ENVIRONMENT_ERROR_CAPTION" xml:space="preserve">
+  <data name="INITIALIZE_ENVIRONMENT_ERROR_CAPTION" xml:space="preserve">
     <value>Error Setting Up User Environment</value>
   </data>
-	<data name="PERSONAL_FOLDER_2_TEXT" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_2_TEXT" xml:space="preserve">
     <value>The default Learning Modules Folder is not specified, the folder of the last opened Learning Module will be used.</value>
   </data>
-	<data name="NEW_DICT_CAPTION" xml:space="preserve">
+  <data name="NEW_DICT_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
+  <data name="DIC_MEDIA_ERROR_CAPTION" xml:space="preserve">
     <value>Media Directory Error</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_DESCRIPTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_DESCRIPTION" xml:space="preserve">
     <value>{0}
 
 If you would like your progress and changes to be saved, insert the stick again and wait until this window closes.</value>
     <comment>{0} = filename</comment>
   </data>
-	<data name="CONVERT_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_REPLACE_FILES_MBX_TEXT" xml:space="preserve">
     <value>Should existing files be overwritten?</value>
   </data>
-	<data name="IMPORT_END_OF_FILE_TEXT" xml:space="preserve">
+  <data name="IMPORT_END_OF_FILE_TEXT" xml:space="preserve">
     <value>Not enough lines found in source file.</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_CAPTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_CAPTION" xml:space="preserve">
     <value>Memory Stick Removed</value>
   </data>
-	<data name="NEWDIC_CAPTION" xml:space="preserve">
+  <data name="NEWDIC_CAPTION" xml:space="preserve">
     <value>Create New Learning Module</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_STOP_TEXT" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_STOP_TEXT" xml:space="preserve">
     <value>Recording stops as soon as you click [OK].
 Then the sound will be played.</value>
   </data>
-	<data name="MAINFORM_SOUND_NOTAVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SOUND_NOTAVAILABLE_TEXT" xml:space="preserve">
     <value>Sound (not available)</value>
   </data>
-	<data name="PERSONAL_FOLDER_TEXT" xml:space="preserve">
+  <data name="PERSONAL_FOLDER_TEXT" xml:space="preserve">
     <value>Specify a personal folder for Learning Modules.</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_ESOUNDDIR" xml:space="preserve">
     <value>Directory Where Recorded Sounds Should Be Saved</value>
   </data>
-	<data name="EXPORT_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="EXPORT_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Select File to Export</value>
   </data>
-	<data name="MAINTAIN_CHANGEALL" xml:space="preserve">
+  <data name="MAINTAIN_CHANGEALL" xml:space="preserve">
     <value>Change all cards</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>A Learning Module already exists in this folder!</value>
   </data>
-	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_CAPTION" xml:space="preserve">
+  <data name="CHAPTER_NO_CARDS_SELECTED_ERROR_CAPTION" xml:space="preserve">
     <value>Select Chapter</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_SENTENCES_TEXT" xml:space="preserve">
     <value>Enter {0} sentence below</value>
     <comment>{0} = Title of Answer</comment>
   </data>
-	<data name="RECORD_PATH_TEXT" xml:space="preserve">
+  <data name="RECORD_PATH_TEXT" xml:space="preserve">
     <value>Path:</value>
   </data>
-	<data name="DIC_DIR_MISSING_TEXT" xml:space="preserve">
+  <data name="DIC_DIR_MISSING_TEXT" xml:space="preserve">
     <value>Use 'Tools -&gt; Specify Learning Module Folder' to select a folder.</value>
   </data>
-	<data name="DIC_ERROR_OPEN_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_OPEN_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module.</value>
   </data>
-	<data name="MAINFORM_SLIDESHOW_MODE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_SLIDESHOW_MODE_TEXT" xml:space="preserve">
     <value>Slideshow mode -</value>
     <comment>Image, Sound, Image (not available), Sound (not available) follows here</comment>
   </data>
-	<data name="RESTART_WARNING_CAPTION" xml:space="preserve">
+  <data name="RESTART_WARNING_CAPTION" xml:space="preserve">
     <value>Clear All Boxes</value>
   </data>
-	<data name="SAVE_REQUEST_CAPTION" xml:space="preserve">
+  <data name="SAVE_REQUEST_CAPTION" xml:space="preserve">
     <value>Save</value>
   </data>
-	<data name="IMPORT_OUT_OF_MEMORY_CAPTION" xml:space="preserve">
+  <data name="IMPORT_OUT_OF_MEMORY_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="EXPORTER_NOTHING_SELECTED_CAPTION" xml:space="preserve">
+  <data name="EXPORTER_NOTHING_SELECTED_CAPTION" xml:space="preserve">
     <value>Nothing Selected</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE1_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE1_TEXT" xml:space="preserve">
     <value>&amp;1.</value>
     <comment>Numeration for multiple choice answers</comment>
   </data>
-	<data name="HINT_TEXT3" xml:space="preserve">
+  <data name="HINT_TEXT3" xml:space="preserve">
     <value>Almost!</value>
   </data>
-	<data name="CONVERT_TMOVEMSG" xml:space="preserve">
+  <data name="CONVERT_TMOVEMSG" xml:space="preserve">
     <value>Moving Learning Module...</value>
   </data>
-	<data name="DIP_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DIP_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>Error Opening Learning Module</value>
   </data>
-	<data name="NO_CHAPTERS_CAPTION" xml:space="preserve">
+  <data name="NO_CHAPTERS_CAPTION" xml:space="preserve">
     <value>No Chapters</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_CONTENT" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_CONTENT" xml:space="preserve">
     <value>You tried to open a Learning Module which was created with an older version of MemoryLifter, opening it in this version may lead to incompatibilities with earlier MemoryLifter versions.</value>
   </data>
-	<data name="ADD_CARD_TEXT" xml:space="preserve">
+  <data name="ADD_CARD_TEXT" xml:space="preserve">
     <value>Add this card?</value>
   </data>
-	<data name="folderSavedSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\folder-saved-search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="preferencesDesktopScreensaver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\preferences-desktop-screensaver.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="URL_MLIFTER_FAQ" xml:space="preserve">
+  <data name="folderSavedSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder-saved-search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="preferencesDesktopScreensaver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preferences-desktop-screensaver.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="URL_MLIFTER_FAQ" xml:space="preserve">
     <value>http://www.memorylifter.com/faq</value>
   </data>
-	<data name="STATISTICS_TIMESPAN_FORMAT_STRING" xml:space="preserve">
+  <data name="STATISTICS_TIMESPAN_FORMAT_STRING" xml:space="preserve">
     <value>{0:# d ;;#}{1} h {2} m {3} s</value>
     <comment>{0} = days, {1} = hours, {2} = minutes, {3} = seconds</comment>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Learning Module Folder?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter found an existing version of this Learning Module in this folder. If you continue existing files may be replaced. This could lead to conflicting media file and resource references. Do you still want to proceed?</value>
   </data>
-	<data name="FILETYPE_TAB" xml:space="preserve">
+  <data name="FILETYPE_TAB" xml:space="preserve">
     <value>Tab separator (tab)</value>
   </data>
-	<data name="IMPORT_ERROR_FIELDSNUM" xml:space="preserve">
+  <data name="IMPORT_ERROR_FIELDSNUM" xml:space="preserve">
     <value>Not enough elements in file.</value>
   </data>
-	<data name="DIC_ERROR_CREATENEW_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_CREATENEW_TEXT" xml:space="preserve">
     <value>Unable to create new Learning Module.</value>
   </data>
-	<data name="RESTART_WARNING_TEXT" xml:space="preserve">
+  <data name="RESTART_WARNING_TEXT" xml:space="preserve">
     <value>This will reset your learning progress by deleting the contents of all boxes!
 Are you sure you want to continue?</value>
   </data>
-	<data name="dialogInformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\dialog-information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
+  <data name="dialogInformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dialog-information.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADD" xml:space="preserve">
     <value>Add Field to Selection</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>A Learning Module already exists in this folder!</value>
   </data>
-	<data name="MISTAKE_CAPTION" xml:space="preserve">
+  <data name="MISTAKE_CAPTION" xml:space="preserve">
     <value>Grade Typing</value>
   </data>
-	<data name="accessoriesTextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\accessories-text-editor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="TOOLTIP_NEWDICT_EQUESTION" xml:space="preserve">
+  <data name="accessoriesTextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accessories-text-editor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_NEWDICT_EQUESTION" xml:space="preserve">
     <value>Language of Questions, e.g. Español</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_EANSWER" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_EANSWER" xml:space="preserve">
     <value>Language of Answers, e.g. English</value>
   </data>
-	<data name="documentPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\document-print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DIC_ERROR_NEWERVERSION_CAPTION" xml:space="preserve">
+  <data name="documentPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DIC_ERROR_NEWERVERSION_CAPTION" xml:space="preserve">
     <value>New Version</value>
   </data>
-	<data name="STATISTICS_PERCENT" xml:space="preserve">
+  <data name="STATISTICS_PERCENT" xml:space="preserve">
     <value>0 %</value>
     <comment>Format of %-number</comment>
   </data>
-	<data name="PRINT_SELECTED" xml:space="preserve">
+  <data name="PRINT_SELECTED" xml:space="preserve">
     <value>{0} of {1} Cards selected</value>
     <comment>{0} = Amount of selected cards, {1} = Total amount of cards</comment>
   </data>
-	<data name="PRINT_QUERYORDER_Question" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Question" xml:space="preserve">
     <value>Question</value>
   </data>
-	<data name="CARD_NO_ANSWER_ERROR_CAPTION" xml:space="preserve">
+  <data name="CARD_NO_ANSWER_ERROR_CAPTION" xml:space="preserve">
     <value>No Text</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_TITLE" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_TITLE" xml:space="preserve">
     <value>Importing media files</value>
   </data>
-	<data name="COMMON_NUMBER_FORMAT" xml:space="preserve">
+  <data name="COMMON_NUMBER_FORMAT" xml:space="preserve">
     <value>0.0</value>
     <comment>Format of a number with decimals</comment>
   </data>
-	<data name="NO_WORDS_TEXT" xml:space="preserve">
+  <data name="NO_WORDS_TEXT" xml:space="preserve">
     <value>No more cards left to ask! Use "Select Chapters..." in the "Learn" menu.</value>
     <comment>"Learn", "Specify Chapters to learn" = Cross-References to menu</comment>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_TEXT" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_TEXT" xml:space="preserve">
     <value>Where can the media files be found?</value>
   </data>
-	<data name="NO_CARDS_CAPTION" xml:space="preserve">
+  <data name="NO_CARDS_CAPTION" xml:space="preserve">
     <value>No Cards</value>
   </data>
-	<data name="INT_OVERFLOW_CAPTION" xml:space="preserve">
+  <data name="INT_OVERFLOW_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="STATISTICS_OTHER_TAB_POOL_SIZE_STRING" xml:space="preserve">
+  <data name="STATISTICS_OTHER_TAB_POOL_SIZE_STRING" xml:space="preserve">
     <value>Pool: {0}</value>
     <comment>{0} = number of cards in pool</comment>
   </data>
-	<data name="DIC_DIR_MISSING_CAPTION" xml:space="preserve">
+  <data name="DIC_DIR_MISSING_CAPTION" xml:space="preserve">
     <value>No Valid Learning Module Folder!</value>
   </data>
-	<data name="LEARNSTAT_TIME_FORMAT" xml:space="preserve">
+  <data name="LEARNSTAT_TIME_FORMAT" xml:space="preserve">
     <value>{0} h {1} m {2} s</value>
     <comment>{0} = hours, {1} = minutes, {2} = seconds</comment>
   </data>
-	<data name="NO_CHAPTERS_TEXT" xml:space="preserve">
+  <data name="NO_CHAPTERS_TEXT" xml:space="preserve">
     <value>No chapter information available. Add chapters before adding cards!</value>
   </data>
-	<data name="EDIT_FIELD_FLY_CAPTION" xml:space="preserve">
+  <data name="EDIT_FIELD_FLY_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="RECORD_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="RECORD_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Wave File ({0})|{0}</value>
     <comment>{0} = file format (.wav)</comment>
   </data>
-	<data name="EXPORT_FILETYPE" xml:space="preserve">
+  <data name="EXPORT_FILETYPE" xml:space="preserve">
     <value>Comma separated values (*.csv)|*.csv|Text (*.txt)|*.txt|All files (*.*)|*.*</value>
     <comment>Dialog to open a File. This is the filter for file types. eg 
 Comma seperated values (*.csv)
 All Files (*.*)</comment>
   </data>
-	<data name="ABOUT_HTML_DISCLAIMER_TEXT" xml:space="preserve">
+  <data name="ABOUT_HTML_DISCLAIMER_TEXT" xml:space="preserve">
     <value>This software is provided "as is", the authors shall in no way be held liable for any damage resulting from the direct or indirect use, or misuse of this software.</value>
   </data>
-	<data name="EXPORTER_NOTHING_SELECTED_TEXT" xml:space="preserve">
+  <data name="EXPORTER_NOTHING_SELECTED_TEXT" xml:space="preserve">
     <value>Select at least one chapter/field!</value>
   </data>
-	<data name="REG_DONE_TEXT" xml:space="preserve">
+  <data name="REG_DONE_TEXT" xml:space="preserve">
     <value>You are already registered. Do you want to register as a different user?</value>
   </data>
-	<data name="DIC_INVALID_FORMAT_CAPTION" xml:space="preserve">
+  <data name="DIC_INVALID_FORMAT_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module</value>
   </data>
-	<data name="REGISTRY_ERROR_2_TEXT" xml:space="preserve">
+  <data name="REGISTRY_ERROR_2_TEXT" xml:space="preserve">
     <value>Unable to write to the Windows Registry.
 
 Please contact the MemoryLifter Support at
 http://www.memorylifter.com</value>
     <comment>Do not translate the word MemoryLifter</comment>
   </data>
-	<data name="SOUND_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="SOUND_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Wave File {0})|{0}</value>
     <comment>{0} = file format (.wav)</comment>
   </data>
-	<data name="DIC_ERROR_CREATENEW_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_CREATENEW_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_NO" xml:space="preserve">
     <value>Demote Card</value>
     <comment>demote means to put card to the previous box</comment>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_QUESTION_TEXT" xml:space="preserve">
     <value>Sound Question ({0})</value>
     <comment>{0} = Title of Question</comment>
   </data>
-	<data name="UNPACK_TMOVEMSG" xml:space="preserve">
+  <data name="UNPACK_TMOVEMSG" xml:space="preserve">
     <value>Moving Learning Module...</value>
   </data>
-	<data name="preferencesSystem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\preferences-system.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DIC_ERROR_OLDERVERSION_PROCEED" xml:space="preserve">
+  <data name="preferencesSystem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preferences-system.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DIC_ERROR_OLDERVERSION_PROCEED" xml:space="preserve">
     <value>Convert and open
 This will convert the file to the new format.</value>
   </data>
-	<data name="PRINT_BOXNO_0" xml:space="preserve">
+  <data name="PRINT_BOXNO_0" xml:space="preserve">
     <value>Pool</value>
   </data>
-	<data name="STATISTICS_NO_STATS_MSGBOX_DESC" xml:space="preserve">
+  <data name="STATISTICS_NO_STATS_MSGBOX_DESC" xml:space="preserve">
     <value>No statistics available yet.</value>
   </data>
-	<data name="INT_OVERFLOW_TEXT" xml:space="preserve">
+  <data name="INT_OVERFLOW_TEXT" xml:space="preserve">
     <value>Maximum number of items reached.</value>
   </data>
-	<data name="DIC_ERROR_SAVING_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_SAVING_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="MAINTAIN_SELECTEDCARD" xml:space="preserve">
+  <data name="MAINTAIN_SELECTEDCARD" xml:space="preserve">
     <value>1 card selected.</value>
     <comment>Used for 1 card, see also MAINTAIN_SELECTEDCARDS</comment>
   </data>
-	<data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Answer" xml:space="preserve">
     <value>Answer</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_CANCEL" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_CANCEL" xml:space="preserve">
     <value>Do not open
 This will leave the file as it is.</value>
   </data>
-	<data name="OVERWRITE_TEXT" xml:space="preserve">
+  <data name="OVERWRITE_TEXT" xml:space="preserve">
     <value>File already exists. Overwrite?</value>
   </data>
-	<data name="document_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\document-open2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="officeAddressBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\x-office-address-book.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="STATISTICS_CLOSING_COUNTDOWN" xml:space="preserve">
+  <data name="document_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-open2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="officeAddressBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-office-address-book.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STATISTICS_CLOSING_COUNTDOWN" xml:space="preserve">
     <value>Closing in {0:0} secs...</value>
     <comment>{0} = seconds until program closes</comment>
   </data>
-	<data name="ABOUT_HTML_DISCLAIMER_CAPTION" xml:space="preserve">
+  <data name="ABOUT_HTML_DISCLAIMER_CAPTION" xml:space="preserve">
     <value>Disclaimer</value>
   </data>
-	<data name="MAINFORM_IMAGE_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_IMAGE_AVAILABLE_TEXT" xml:space="preserve">
     <value>Image</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_KNOWN_CARDS_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_KNOWN_CARDS_STRING" xml:space="preserve">
     <value>Known</value>
     <comment>Correct answered cards</comment>
   </data>
-	<data name="DIC_MODIFIED_TEXT" xml:space="preserve">
+  <data name="DIC_MODIFIED_TEXT" xml:space="preserve">
     <value>{0} has been modified outside of the program. It is possible the Learning Module is being used by someone else right now. Saving might lead to conflicts! Click
 
 * [Yes] to overwrite file
@@ -712,183 +708,183 @@ This will leave the file as it is.</value>
 * [Cancel] to interrupt process.</value>
     <comment>{0} = name of Learning Module</comment>
   </data>
-	<data name="STYLESHEET_NOT_AVAILABLE_CAPTION" xml:space="preserve">
+  <data name="STYLESHEET_NOT_AVAILABLE_CAPTION" xml:space="preserve">
     <value>Error Loading Stylesheet</value>
   </data>
-	<data name="ADD_CARD_CAPTION" xml:space="preserve">
+  <data name="ADD_CARD_CAPTION" xml:space="preserve">
     <value>Add Card</value>
   </data>
-	<data name="BAD_FILENAME_CAPTION" xml:space="preserve">
+  <data name="BAD_FILENAME_CAPTION" xml:space="preserve">
     <value>Error Adding File to Media Folder</value>
   </data>
-	<data name="UNPACK_ALREADY_EXISTS_CAPTION" xml:space="preserve">
+  <data name="UNPACK_ALREADY_EXISTS_CAPTION" xml:space="preserve">
     <value>File Already Exists</value>
   </data>
-	<data name="URL_MLIFTER_REFERPAGE" xml:space="preserve">
+  <data name="URL_MLIFTER_REFERPAGE" xml:space="preserve">
     <value>http://www.memorylifter.com/recommend</value>
   </data>
-	<data name="STATISTICS_XAXIS" xml:space="preserve">
+  <data name="STATISTICS_XAXIS" xml:space="preserve">
     <value>Time</value>
   </data>
-	<data name="DIC_SAVEDIALOG_TITLE_IMPORTED" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_TITLE_IMPORTED" xml:space="preserve">
     <value>Save Imported Learning Module {0} As</value>
   </data>
-	<data name="INFO_HTML_LANGUAGE" xml:space="preserve">
+  <data name="INFO_HTML_LANGUAGE" xml:space="preserve">
     <value>Learning Module language:</value>
   </data>
-	<data name="MAINFORM_STICKREMOVED_MAININSTRUCTION" xml:space="preserve">
+  <data name="MAINFORM_STICKREMOVED_MAININSTRUCTION" xml:space="preserve">
     <value>You removed the memory stick while the following Learning Module was still open.</value>
   </data>
-	<data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_TEXT" xml:space="preserve">
+  <data name="MANAGECHAPTER_LAST_CHAPTER_MESSAGE_TEXT" xml:space="preserve">
     <value>This chapter cannot be deleted because it is the last remaining chapter.</value>
   </data>
-	<data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
+  <data name="DIC_MEDIA_ERROR_TEXT" xml:space="preserve">
     <value>The media directory could not be saved properly. Please check that it is valid.</value>
   </data>
-	<data name="IMPORT_FILE_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FILE_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="STYLESHEET_CODE_ERROR_TEXT" xml:space="preserve">
+  <data name="STYLESHEET_CODE_ERROR_TEXT" xml:space="preserve">
     <value>There is an error in your stylesheet code. Correct it or use "Restore" to reload the default style sheet.</value>
     <comment>"Restore" = cross-reference</comment>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_CAPTION" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_CAPTION" xml:space="preserve">
     <value>Knowledge of Learning Module</value>
   </data>
-	<data name="NEW_DICT_TEXT" xml:space="preserve">
+  <data name="NEW_DICT_TEXT" xml:space="preserve">
     <value>Error setting up Learning Module</value>
   </data>
-	<data name="ABBREVIATION_SECONDS" xml:space="preserve">
+  <data name="ABBREVIATION_SECONDS" xml:space="preserve">
     <value>sec.</value>
     <comment>Abbreviation for seconds</comment>
   </data>
-	<data name="DIR_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="DIR_NOT_FOUND_TEXT" xml:space="preserve">
     <value>The Learning Module does not exist or the path is invalid.</value>
   </data>
-	<data name="CHAPTERS_ONE_CAPTION" xml:space="preserve">
+  <data name="CHAPTERS_ONE_CAPTION" xml:space="preserve">
     <value>Chapter Selected</value>
   </data>
-	<data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
+  <data name="TOOLTIP_FRMCARD_CHARACTER" xml:space="preserve">
     <value>Character Map</value>
     <comment>Map with Special Characters eg Ñ</comment>
   </data>
-	<data name="INITIALIZE_ENVIRONMENT_ERROR_TEXT" xml:space="preserve">
+  <data name="INITIALIZE_ENVIRONMENT_ERROR_TEXT" xml:space="preserve">
     <value>An error occurred while setting up the user environment. Check the Learning Module folder.</value>
   </data>
-	<data name="CARDS_GB_QUESTION_TEXT" xml:space="preserve">
+  <data name="CARDS_GB_QUESTION_TEXT" xml:space="preserve">
     <value>Q&amp;uestion ({0}):</value>
   </data>
-	<data name="DIC_MODIFIED_CAPTION" xml:space="preserve">
+  <data name="DIC_MODIFIED_CAPTION" xml:space="preserve">
     <value>Learning Module Modified</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_TEXT" xml:space="preserve">
     <value>The Learning Module already exists. Do you want to replace it?</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Yes, overwrite the Learning Module.</value>
   </data>
-	<data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_Chapter" xml:space="preserve">
     <value>Chapter</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter found an existing copy of this Learning Module in the folder. If you continue all existing files will be replaced.</value>
   </data>
-	<data name="PACKDIC_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="PACKDIC_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Save As</value>
   </data>
-	<data name="packageGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\package-x-generic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="packageGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package-x-generic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter found an existing copy of this Learning Module in the folder. If you continue all existing files will be replaced.</value>
   </data>
-	<data name="APPLY_CHANGES_TEXT" xml:space="preserve">
+  <data name="APPLY_CHANGES_TEXT" xml:space="preserve">
     <value>Apply changes to this card?</value>
   </data>
-	<data name="STATISTICS_YAXIS" xml:space="preserve">
+  <data name="STATISTICS_YAXIS" xml:space="preserve">
     <value>Cards</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE2_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE2_TEXT" xml:space="preserve">
     <value>&amp;2.</value>
     <comment>Numeration for multiple choice answers</comment>
   </data>
-	<data name="CONVERT_REQUEST_CAPTION" xml:space="preserve">
+  <data name="CONVERT_REQUEST_CAPTION" xml:space="preserve">
     <value>Convert Old-Format Learning Module?</value>
   </data>
-	<data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
+  <data name="TOOLTIP_FRMFIELDS_DELETE" xml:space="preserve">
     <value>Remove Field from Selection</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_CONTENT" xml:space="preserve">
     <value>MemoryLifter found an existing Learning Module in this folder. If you continue, existing files may be replaced. This could lead to conflicting media file and resource references. Do you still want to proceed?</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_ANSWER_TEXT" xml:space="preserve">
     <value>Sound Answer ({0})</value>
     <comment>{0} = Title of Answer</comment>
   </data>
-	<data name="POOL_EMPTY_TEXT" xml:space="preserve">
+  <data name="POOL_EMPTY_TEXT" xml:space="preserve">
     <value>The pool of cards is empty. Select addtional chapters to learn or add new cards to any of the selected chapters.</value>
     <comment>"Specify Capter to Learn", "Learn" = cross-references to menu</comment>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, do not replace the Learning Module.</value>
   </data>
-	<data name="DIC_ERROR_OPEN_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_OPEN_TEXT" xml:space="preserve">
     <value>Unable to open {0}.</value>
     <comment>{0} = name of Learning Module</comment>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_TEXT" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_TEXT" xml:space="preserve">
     <value>Delete chapter and all cards in it?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, cancel.</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_START_CAPTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_START_CAPTION" xml:space="preserve">
     <value>Wave Recorder</value>
   </data>
-	<data name="MAINTAIN_NONE" xml:space="preserve">
+  <data name="MAINTAIN_NONE" xml:space="preserve">
     <value>None</value>
   </data>
-	<data name="IMPORT_ERROR_ONCLICK_CAPTION" xml:space="preserve">
+  <data name="IMPORT_ERROR_ONCLICK_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="goUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\go-up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="CHAPTER_NO_CARDS_SELECTED_ERROR_DESC" xml:space="preserve">
+  <data name="goUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CHAPTER_NO_CARDS_SELECTED_ERROR_DESC" xml:space="preserve">
     <value>You have to select at least one chapter with active cards to start learning.</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, do not overwrite the Learning Module.</value>
   </data>
-	<data name="DIC_ERROR_SAVING_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_SAVING_TEXT" xml:space="preserve">
     <value>Error saving Learning Module. Check if disk is full or write-protected, then try again.</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Learning Module?</value>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Choose a different location.</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBDEL" xml:space="preserve">
     <value>Remove Chapter from Selection</value>
   </data>
-	<data name="NO_WORDS_CAPTION" xml:space="preserve">
+  <data name="NO_WORDS_CAPTION" xml:space="preserve">
     <value>No More Words</value>
   </data>
-	<data name="IMPORT_ERROR_ONCLICK_TEXT" xml:space="preserve">
+  <data name="IMPORT_ERROR_ONCLICK_TEXT" xml:space="preserve">
     <value>File could not be opened. Please retry.</value>
   </data>
-	<data name="NOTHING" xml:space="preserve">
+  <data name="NOTHING" xml:space="preserve">
     <value>&lt;Nothing&gt;</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="IMPORT_HEADERLINE_ERROR_TEXT" xml:space="preserve">
+  <data name="IMPORT_HEADERLINE_ERROR_TEXT" xml:space="preserve">
     <value>No header line found in the first eight rows.</value>
   </data>
-	<data name="CARDS_BUTTON_ADD_TEXT" xml:space="preserve">
+  <data name="CARDS_BUTTON_ADD_TEXT" xml:space="preserve">
     <value>&amp;Change</value>
   </data>
-	<data name="CARDS_OPENDIALOG_FILTER" xml:space="preserve">
+  <data name="CARDS_OPENDIALOG_FILTER" xml:space="preserve">
     <value>All supported media types|{0};{1};{2}|Images ({0})|{0}|Audio ({1})|{1}|Video ({2})|{2}</value>
     <comment>Dialog to open a File. This is the filter for file types. eg 
 All supported media types
@@ -896,202 +892,202 @@ Image (*.jpg, *.jpeg, *.png)
 Audio (*.wav, *.mp3, *.mid)
 Video (*.avi, *.wmv)</comment>
   </data>
-	<data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_VIDEO_ANSWER_TEXT" xml:space="preserve">
     <value>Video Answer ({0})</value>
     <comment>{0} = Title of Answer</comment>
   </data>
-	<data name="XSL_STYLE" xml:space="preserve">
+  <data name="XSL_STYLE" xml:space="preserve">
     <value>Style settings</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT" xml:space="preserve">
     <value>Are you sure you want to delete the selected card(s)?</value>
   </data>
-	<data name="REGISTRY_ERROR_TEXT" xml:space="preserve">
+  <data name="REGISTRY_ERROR_TEXT" xml:space="preserve">
     <value>Unable to open the Windows Registry.
 
 Please contact the MemoryLifter Support at
 http://www.memorylifter.com</value>
     <comment>Do not translate the word MemoryLifter</comment>
   </data>
-	<data name="STATISTICS_OTHER" xml:space="preserve">
+  <data name="STATISTICS_OTHER" xml:space="preserve">
     <value>Current distribution</value>
   </data>
-	<data name="DIC_SAVEDIALOG_TITLE_NEW" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_TITLE_NEW" xml:space="preserve">
     <value>New Learning Module</value>
   </data>
-	<data name="MSGBOX_LABEL_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
+  <data name="MSGBOX_LABEL_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
     <value>Question and answer fields must not be empty!</value>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Choose a different location.</value>
   </data>
-	<data name="editUndo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\edit-undo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="INFO_HTML_CATEGORY" xml:space="preserve">
+  <data name="editUndo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-undo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFO_HTML_CATEGORY" xml:space="preserve">
     <value>Category:</value>
   </data>
-	<data name="SETUP_STICKMODE_DRIVELETTERREPLACEMENT" xml:space="preserve">
+  <data name="SETUP_STICKMODE_DRIVELETTERREPLACEMENT" xml:space="preserve">
     <value>MEMSTICK:\</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="DIC_HEADER_ODFFILE_TEXT" xml:space="preserve">
+  <data name="DIC_HEADER_ODFFILE_TEXT" xml:space="preserve">
     <value>OMICRON Learning Module File</value>
   </data>
-	<data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_VIDEO_QUESTION_TEXT" xml:space="preserve">
     <value>Video Question ({0})</value>
     <comment>{0} = Title of Question</comment>
   </data>
-	<data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_EXQUESTION_TEXT" xml:space="preserve">
     <value>Ex. Question ({0})</value>
     <comment>{0} = Title of Question (Ex. = example)</comment>
   </data>
-	<data name="BAD_FILENAME_TEXT" xml:space="preserve">
+  <data name="BAD_FILENAME_TEXT" xml:space="preserve">
     <value>Filename already exists - Rename your file.</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_BOX_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_BOX_STRING" xml:space="preserve">
     <value>Box {0}</value>
     <comment>{0} = number</comment>
   </data>
-	<data name="PRINT_WIZARD_TITLE" xml:space="preserve">
+  <data name="PRINT_WIZARD_TITLE" xml:space="preserve">
     <value>Print Cards</value>
   </data>
-	<data name="TOOLTIP_SELF_ASSESSEMENT_CARDS" xml:space="preserve">
+  <data name="TOOLTIP_SELF_ASSESSEMENT_CARDS" xml:space="preserve">
     <value>Fill Status of Current Box</value>
   </data>
-	<data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_TEXT" xml:space="preserve">
     <value>Error loading Learning Module {0}.</value>
     <comment>{0} = name of Learning Module</comment>
   </data>
-	<data name="DIC_DAMAGED_TEXT" xml:space="preserve">
+  <data name="DIC_DAMAGED_TEXT" xml:space="preserve">
     <value>Some parts of your Learning Module may be damaged,
 if there are further error messages after this one,
 please contact the MemoryLifter Support at
 http://www.memorylifter.com</value>
     <comment>Do not translate the word MemoryLifter</comment>
   </data>
-	<data name="MAINFORM_IMAGE_NOTAVAILABE_TEXT" xml:space="preserve">
+  <data name="MAINFORM_IMAGE_NOTAVAILABE_TEXT" xml:space="preserve">
     <value>Image (not available)</value>
   </data>
-	<data name="goDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\go-down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="goDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Choose a different location.</value>
   </data>
-	<data name="documentOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\document-open1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
+  <data name="documentOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-open1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOOLTIP_FRMFIELDS_ADDALL" xml:space="preserve">
     <value>Add All Fields to Selection</value>
   </data>
-	<data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_CAPTION" xml:space="preserve">
     <value>Delete Cards</value>
   </data>
-	<data name="SOUND_ERROR_TEXT" xml:space="preserve">
+  <data name="SOUND_ERROR_TEXT" xml:space="preserve">
     <value>Unable to play sound. Missing file {0}</value>
     <comment>{0} = filename</comment>
   </data>
-	<data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_IMAGE_QUESTION_TEXT" xml:space="preserve">
     <value>Image Question ({0})</value>
     <comment>{0} = Title of Question</comment>
   </data>
-	<data name="PACK_SAVEDIALOG_FILTER" xml:space="preserve">
+  <data name="PACK_SAVEDIALOG_FILTER" xml:space="preserve">
     <value>Packed Learning Module files ({0})|{0}</value>
     <comment>{0} = file type eg .odx</comment>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_CAPTION" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_CAPTION" xml:space="preserve">
     <value>Not an Original MemoryLifter File.</value>
   </data>
-	<data name="TOOLTIP_NEWDICT_SBRECORD" xml:space="preserve">
+  <data name="TOOLTIP_NEWDICT_SBRECORD" xml:space="preserve">
     <value>Record Commentary</value>
   </data>
-	<data name="documentProperties" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\document-properties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="UNPACK_NOT_ORIGINAL_TEXT" xml:space="preserve">
+  <data name="documentProperties" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-properties.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UNPACK_NOT_ORIGINAL_TEXT" xml:space="preserve">
     <value>The file is not an original MemoryLifter Learning Module. Continue anyway?</value>
   </data>
-	<data name="SETUPBOXES_BOXLABEL0_TEXT" xml:space="preserve">
+  <data name="SETUPBOXES_BOXLABEL0_TEXT" xml:space="preserve">
     <value>Pool</value>
     <comment>Pool contains all cards from all boxes</comment>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBDELALL" xml:space="preserve">
     <value>Remove All Chapters from Selection</value>
   </data>
-	<data name="PRINT_BOX_TOOLTIP" xml:space="preserve">
+  <data name="PRINT_BOX_TOOLTIP" xml:space="preserve">
     <value>Contains {0} Cards.</value>
     <comment>{0} = amount of cards in the current box</comment>
   </data>
-	<data name="FILETYPE_COMMA" xml:space="preserve">
+  <data name="FILETYPE_COMMA" xml:space="preserve">
     <value>Comma separator (,)</value>
   </data>
-	<data name="DIC_OVERWRITE_CAPTION" xml:space="preserve">
+  <data name="DIC_OVERWRITE_CAPTION" xml:space="preserve">
     <value>Learning Module Modified</value>
   </data>
-	<data name="PRINT_SELECT_TEXT" xml:space="preserve">
+  <data name="PRINT_SELECT_TEXT" xml:space="preserve">
     <value>You have to select at least one chapter and one box for printing.</value>
   </data>
-	<data name="HINT_TEXT2" xml:space="preserve">
+  <data name="HINT_TEXT2" xml:space="preserve">
     <value>Sorry, card was demoted to box one.</value>
   </data>
-	<data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_SOUND_EXQUESTION_TEXT" xml:space="preserve">
     <value>Ex. Sound Question ({0})</value>
     <comment>{0} = Title of Question (Ex. = example)</comment>
   </data>
-	<data name="SOUND_ERROR_CAPTION" xml:space="preserve">
+  <data name="SOUND_ERROR_CAPTION" xml:space="preserve">
     <value>Missing File</value>
   </data>
-	<data name="IMPORT_OUT_OF_MEMORY_TEXT" xml:space="preserve">
+  <data name="IMPORT_OUT_OF_MEMORY_TEXT" xml:space="preserve">
     <value>File is too short.</value>
   </data>
-	<data name="URL_MLIFTER_HOMEPAGE" xml:space="preserve">
+  <data name="URL_MLIFTER_HOMEPAGE" xml:space="preserve">
     <value>http://www.memorylifter.com</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_START_TEXT" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_START_TEXT" xml:space="preserve">
     <value>Recording starts as soon as you click [OK].</value>
   </data>
-	<data name="REG_LATER_CAPTION" xml:space="preserve">
+  <data name="REG_LATER_CAPTION" xml:space="preserve">
     <value>Free Registration</value>
   </data>
-	<data name="TIMESTAMPS_TEXT" xml:space="preserve">
+  <data name="TIMESTAMPS_TEXT" xml:space="preserve">
     <value>The timestamps in the Learning Module are more recent than your system time.
 Please check your system time, MemoryLifter will
 continue working with relative timestamps until the problem is solved.</value>
   </data>
-	<data name="STATISTICS_KNOWLEDGE_TAB_TARGET_CARDS_STRING" xml:space="preserve">
+  <data name="STATISTICS_KNOWLEDGE_TAB_TARGET_CARDS_STRING" xml:space="preserve">
     <value>Target</value>
     <comment>Cards to be answered</comment>
   </data>
-	<data name="ABBREVIATION_PERCENT" xml:space="preserve">
+  <data name="ABBREVIATION_PERCENT" xml:space="preserve">
     <value>%</value>
     <comment>Abbreviation for per cent</comment>
   </data>
-	<data name="CONVERT_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_REPLACE_FILES_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Files?</value>
   </data>
-	<data name="DIC_NOT_SUPPORTED_TEXT" xml:space="preserve">
+  <data name="DIC_NOT_SUPPORTED_TEXT" xml:space="preserve">
     <value>Learning Module file is too old. This version is not fully supported and may contain errors.</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBADDALL" xml:space="preserve">
     <value>Add All Chapters to Selection</value>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_SAVE_QUESTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_SAVE_QUESTION" xml:space="preserve">
     <value>Wave Recorder</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_CAPTION" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONFIRM_CAPTION" xml:space="preserve">
     <value>Confirmation</value>
   </data>
-	<data name="FILETYPE_SEMICOLON" xml:space="preserve">
+  <data name="FILETYPE_SEMICOLON" xml:space="preserve">
     <value>Semicolon separator (;)</value>
   </data>
-	<data name="STATISTICS_NO_STATS_MSGBOX_CAPT" xml:space="preserve">
+  <data name="STATISTICS_NO_STATS_MSGBOX_CAPT" xml:space="preserve">
     <value>Not Available</value>
   </data>
-	<data name="REG_DONE_CAPTION" xml:space="preserve">
+  <data name="REG_DONE_CAPTION" xml:space="preserve">
     <value>Free Registration</value>
   </data>
-	<data name="EDIT_FIELD_FLY_TEXT" xml:space="preserve">
+  <data name="EDIT_FIELD_FLY_TEXT" xml:space="preserve">
     <value>This is a special input field that only allows typing
 correct characters. You can NOT delete, backspace, cut,
 paste, or change lines in this field.
@@ -1099,921 +1095,907 @@ If you prefer standard input mode, go to "Learn –
 Learning Options", and uncheck "Correct on the fly".</value>
     <comment>Tools - Option = Cross-Reference to menu, "Correct on the fly" = Reference to interface</comment>
   </data>
-	<data name="MANAGECHAPTER_NEW_CHAPTER_NAME" xml:space="preserve">
+  <data name="MANAGECHAPTER_NEW_CHAPTER_NAME" xml:space="preserve">
     <value>New Chapter</value>
   </data>
-	<data name="ABOUT_VERSION" xml:space="preserve">
+  <data name="ABOUT_VERSION" xml:space="preserve">
     <value>Version {0}</value>
     <comment>e.g. Version 2.0.1</comment>
   </data>
-	<data name="MAINTAIN_UNCHANGED" xml:space="preserve">
+  <data name="MAINTAIN_UNCHANGED" xml:space="preserve">
     <value>(unchanged)</value>
   </data>
-	<data name="ABOUT_COPYRIGHT" xml:space="preserve">
+  <data name="ABOUT_COPYRIGHT" xml:space="preserve">
     <value>Copyright © 2012 OMICRON electronics GmbH</value>
     <comment>{0} = current year</comment>
   </data>
-	<data name="CONVERT_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_EXISTS_MBX_CAPTION" xml:space="preserve">
     <value>Overwrite Learning Module?</value>
   </data>
-	<data name="TOOLTIP_MAINTAIN_ADD" xml:space="preserve">
+  <data name="TOOLTIP_MAINTAIN_ADD" xml:space="preserve">
     <value>Add New Card</value>
   </data>
-	<data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Yes, continue.</value>
   </data>
-	<data name="DIC_INVALID_FORMAT_TEXT" xml:space="preserve">
+  <data name="DIC_INVALID_FORMAT_TEXT" xml:space="preserve">
     <value>The format of file {0} is invalid or too old.</value>
     <comment>{0} =  filename</comment>
   </data>
-	<data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module</value>
   </data>
-	<data name="IMPORT_HEADERLINE_ERROR_CAPTION" xml:space="preserve">
+  <data name="IMPORT_HEADERLINE_ERROR_CAPTION" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="COPY_MEDIA_CAPTION" xml:space="preserve">
+  <data name="COPY_MEDIA_CAPTION" xml:space="preserve">
     <value>Copy Media Files to Media Folder</value>
   </data>
-	<data name="REGISTRATION_TEXT" xml:space="preserve">
-    <value>In order to assist you best, please provide us with the following information. We are particularly interested in your needs and planned use of MemoryLifter . The information will only be used internally.  We do not rent or sell this information to anyone. Thank you.
-{0}dloadver: {1}
-{0}First name:
-{0}Last name:
-{0}Email:
-{0}Briefly describe your planned usage of MemoryLifter:
-{0}Do you want to receive news by e-mail on what's new with MemoryLifter? (Y/N):</value>
-    <comment>{0} = linebreak, {1} = version of memorylifter eg 2.0</comment>
-  </data>
-	<data name="DIC_SAVEDIALOG_FILTER_IMPORTED" xml:space="preserve">
+  <data name="DIC_SAVEDIALOG_FILTER_IMPORTED" xml:space="preserve">
     <value>Learning Module files (*.{0})|*.{0}</value>
     <comment>{0} = file type eg .odx</comment>
   </data>
-	<data name="DIP_NOT_SUPPORTED_TEXT" xml:space="preserve">
+  <data name="DIP_NOT_SUPPORTED_TEXT" xml:space="preserve">
     <value>Packed Learning Modules with extension .dip are not supported by this version of MemoryLifter.
 Use .dzp or .zip files or contact MemoryLifter Support (support@memorylifter.com) for help.</value>
     <comment>Do not translate the word MemoryLifter</comment>
   </data>
-	<data name="RECORD_LWORD_TEXT" xml:space="preserve">
+  <data name="RECORD_LWORD_TEXT" xml:space="preserve">
     <value>Please select the fields for recording below and start recording. You can also record a single file by pressing the record button.</value>
   </data>
-	<data name="FRMCARD_IMAGE" xml:space="preserve">
+  <data name="FRMCARD_IMAGE" xml:space="preserve">
     <value>Image</value>
   </data>
-	<data name="MAINFORM_MULTIPLECHOICE3_TEXT" xml:space="preserve">
+  <data name="MAINFORM_MULTIPLECHOICE3_TEXT" xml:space="preserve">
     <value>&amp;3.</value>
     <comment>Numeration for multiple choice answers</comment>
   </data>
-	<data name="STATISTICS_OTHER_TAB_BOX_SIZE_STRING" xml:space="preserve">
+  <data name="STATISTICS_OTHER_TAB_BOX_SIZE_STRING" xml:space="preserve">
     <value>Box {0}: {1}</value>
     <comment>{0} = box number, {1} = number of cards in it</comment>
   </data>
-	<data name="INFO_HTML_AUTHOR" xml:space="preserve">
+  <data name="INFO_HTML_AUTHOR" xml:space="preserve">
     <value>Author:</value>
   </data>
-	<data name="MANAGECHAPTER_DEFAULT_CHAPTER_DESC" xml:space="preserve">
+  <data name="MANAGECHAPTER_DEFAULT_CHAPTER_DESC" xml:space="preserve">
     <value>Default chapter</value>
   </data>
-	<data name="MAIN_LOADREG_CAPTION" xml:space="preserve">
+  <data name="MAIN_LOADREG_CAPTION" xml:space="preserve">
     <value>Load Old Settings?</value>
   </data>
-	<data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_EXANSWER_TEXT" xml:space="preserve">
     <value>Ex. Answer ({0})</value>
     <comment>{0} = Title of Answer (Ex. = example)</comment>
   </data>
-	<data name="HINT_TEXT1" xml:space="preserve">
+  <data name="HINT_TEXT1" xml:space="preserve">
     <value>Awesome! Card has been promoted to the next box!</value>
   </data>
-	<data name="MAIN_LOADREG_TEXT" xml:space="preserve">
+  <data name="MAIN_LOADREG_TEXT" xml:space="preserve">
     <value>Would you like to load the previous settings from V2.0?</value>
   </data>
-	<data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
+  <data name="TOOLTIP_FRMCHAPTER_SBADD" xml:space="preserve">
     <value>Add Chapter to Selection</value>
   </data>
-	<data name="MAINFORM_LBLBOXNO_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLBOXNO_TEXT" xml:space="preserve">
     <value>Pool</value>
     <comment>Pool contains all cards from all boxes</comment>
   </data>
-	<data name="DEMOTE_CONF_CAPTION" xml:space="preserve">
+  <data name="DEMOTE_CONF_CAPTION" xml:space="preserve">
     <value>Confirm Demote</value>
   </data>
-	<data name="DIC_NOT_VALID_TEXT" xml:space="preserve">
+  <data name="DIC_NOT_VALID_TEXT" xml:space="preserve">
     <value>{0} is not a valid MemoryLifter Learning Module file.</value>
     <comment>{0} = name of Learning Module. Do not translate the word MemoryLifter</comment>
   </data>
-	<data name="FRMCARD_AUDIO" xml:space="preserve">
+  <data name="FRMCARD_AUDIO" xml:space="preserve">
     <value>Audio</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Yes, continue.</value>
   </data>
-	<data name="MAINTAIN_SELECTEDCARDS" xml:space="preserve">
+  <data name="MAINTAIN_SELECTEDCARDS" xml:space="preserve">
     <value>{0} cards selected.</value>
     <comment>{0} = number of cards, see also MAINTAIN_SELECTEDCARD</comment>
   </data>
-	<data name="IMPORT_FILE_IN_USE_TEXT" xml:space="preserve">
+  <data name="IMPORT_FILE_IN_USE_TEXT" xml:space="preserve">
     <value>This file is being used by another program. Close this program and try again.</value>
   </data>
-	<data name="officeSpreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\x-office-spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="SPLASH_VERSION_TEXT" xml:space="preserve">
+  <data name="officeSpreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-office-spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SPLASH_VERSION_TEXT" xml:space="preserve">
     <value>Version {0}</value>
   </data>
-	<data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
+  <data name="MAINTAIN_DICTOVERVIEW_TEXT" xml:space="preserve">
     <value>All cards</value>
     <comment>Listbox entry</comment>
   </data>
-	<data name="MSGBOX_CAPTION_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
+  <data name="MSGBOX_CAPTION_NEWDICT_REQUIRED_FIELDS_EMPTY" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="TIMESTAMPS_CAPTION" xml:space="preserve">
+  <data name="TIMESTAMPS_CAPTION" xml:space="preserve">
     <value>Warning</value>
   </data>
-	<data name="SOUND_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="SOUND_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Save Wave File As</value>
   </data>
-	<data name="CARDS_BUTTON_ADD_TEXT2" xml:space="preserve">
+  <data name="CARDS_BUTTON_ADD_TEXT2" xml:space="preserve">
     <value>&amp;Add Card</value>
   </data>
-	<data name="XSL_DEFAULT" xml:space="preserve">
+  <data name="XSL_DEFAULT" xml:space="preserve">
     <value>Global settings</value>
   </data>
-	<data name="OVERWRITE_CAPTION" xml:space="preserve">
+  <data name="OVERWRITE_CAPTION" xml:space="preserve">
     <value>Confirmation Requested</value>
   </data>
-	<data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
+  <data name="DIALOG_NEWDICT_SOUND_DIRECTORY" xml:space="preserve">
     <value>Select the media directory:</value>
   </data>
-	<data name="IMPORT_FILE_NOT_FOUND_TEXT" xml:space="preserve">
+  <data name="IMPORT_FILE_NOT_FOUND_TEXT" xml:space="preserve">
     <value>File not found.</value>
   </data>
-	<data name="DIC_ERROR_NEWERVERSION_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_NEWERVERSION_TEXT" xml:space="preserve">
     <value>You tried to open a Learning Module which has been created with a newer version of MemoryLifter.
 Please visit the MemoryLifter Website to download the latest version.</value>
   </data>
-	<data name="helpBrowser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\help-browser.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="INFO_HTML_DESCRIPTION" xml:space="preserve">
+  <data name="helpBrowser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help-browser.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFO_HTML_DESCRIPTION" xml:space="preserve">
     <value>Description:</value>
   </data>
-	<data name="DIC_ERROR_OLDERVERSION_TITLE" xml:space="preserve">
+  <data name="DIC_ERROR_OLDERVERSION_TITLE" xml:space="preserve">
     <value>Old Learning Module Version</value>
   </data>
-	<data name="PACK_TLOADMSG" xml:space="preserve">
+  <data name="PACK_TLOADMSG" xml:space="preserve">
     <value>Packing Learning Module...</value>
   </data>
-	<data name="UNPACK_ALREADY_EXISTS_TEXT" xml:space="preserve">
+  <data name="UNPACK_ALREADY_EXISTS_TEXT" xml:space="preserve">
     <value>File {0} already exists. Overwrite?</value>
     <comment>{0} = filename</comment>
   </data>
-	<data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_IMAGE_ANSWER_TEXT" xml:space="preserve">
     <value>Image Answer ({0})</value>
     <comment>{0} = Title of Answer</comment>
   </data>
-	<data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DICTIONARY_EXISTS_MBX_OPTION_YES" xml:space="preserve">
     <value>Yes, replace the Learning Module.</value>
   </data>
-	<data name="STYLESHEET_NOT_AVAILABLE_TEXT" xml:space="preserve">
+  <data name="STYLESHEET_NOT_AVAILABLE_TEXT" xml:space="preserve">
     <value>Current Stylesheet is unavailable. Uncheck the option "Use Learning Module Style"
 or contact the MemoryLifter Support at http://www.memorylifter.com</value>
     <comment>"Use Dictionarey Style" = cross-reference</comment>
   </data>
-	<data name="CARDS_GB_ANSWER_TEXT" xml:space="preserve">
+  <data name="CARDS_GB_ANSWER_TEXT" xml:space="preserve">
     <value>A&amp;nswer ({0}):</value>
   </data>
-	<data name="PACK_SAVEDIALOG_TITLE" xml:space="preserve">
+  <data name="PACK_SAVEDIALOG_TITLE" xml:space="preserve">
     <value>Save As</value>
   </data>
-	<data name="URL_MLIFTER_FEEDBACK" xml:space="preserve">
+  <data name="URL_MLIFTER_FEEDBACK" xml:space="preserve">
     <value>http://www.memorylifter.com/contact</value>
   </data>
-	<data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
+  <data name="MAINFORM_LBLANSWER_MULTI_TEXT" xml:space="preserve">
     <value>Select {0} below</value>
     <comment>{0} = Title of Answer eg: "Select state/capital below"</comment>
   </data>
-	<data name="REGISTRATION_HEAD_TEXT" xml:space="preserve">
-    <value>Welcome to MemoryLifter {0}</value>
-    <comment>Do not translate the word MemoryLifter</comment>
-  </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_NO" xml:space="preserve">
     <value>No, cancel.</value>
   </data>
-	<data name="DIC_SYNONYM_DELIMITER_TEXT" xml:space="preserve">
+  <data name="DIC_SYNONYM_DELIMITER_TEXT" xml:space="preserve">
     <value>;</value>
     <comment>Synonym delimiter when printing out synonyms</comment>
   </data>
-	<data name="POOL_EMPTY_CAPTION" xml:space="preserve">
+  <data name="POOL_EMPTY_CAPTION" xml:space="preserve">
     <value>Pool Empty</value>
     <comment>Pool contains all cards from all boxes</comment>
   </data>
-	<data name="SOUND_SIMPLE_RECORD_STOP_CAPTION" xml:space="preserve">
+  <data name="SOUND_SIMPLE_RECORD_STOP_CAPTION" xml:space="preserve">
     <value>Wave Recorder</value>
   </data>
-	<data name="CARDS_OPENDIALOG_TITLE" xml:space="preserve">
+  <data name="CARDS_OPENDIALOG_TITLE" xml:space="preserve">
     <value>Add Media File</value>
   </data>
-	<data name="DIC_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DIC_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>Learning Module Not Fully Supported</value>
   </data>
-	<data name="SETUP_STICKMODE_CONFIGFILE" xml:space="preserve">
+  <data name="SETUP_STICKMODE_CONFIGFILE" xml:space="preserve">
     <value>{0}.user</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="DIR_NOT_FOUND_CAPTION" xml:space="preserve">
+  <data name="DIR_NOT_FOUND_CAPTION" xml:space="preserve">
     <value>Learning Module Not Found</value>
   </data>
-	<data name="IMPORT_OPENDIALOG_TITLE" xml:space="preserve">
+  <data name="IMPORT_OPENDIALOG_TITLE" xml:space="preserve">
     <value>Select File to Import</value>
   </data>
-	<data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="CONVERT_DICTIONARY_FOLDER_EXISTS_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Choose a different location.</value>
   </data>
-	<data name="MISTAKE_TEXT" xml:space="preserve">
+  <data name="MISTAKE_TEXT" xml:space="preserve">
     <value>You had a few typing mistakes. Still count the word as correct?</value>
   </data>
-	<data name="MAINTAIN_NA" xml:space="preserve">
+  <data name="MAINTAIN_NA" xml:space="preserve">
     <value>N/A</value>
   </data>
-	<data name="RECORD_DONE_TEXT" xml:space="preserve">
+  <data name="RECORD_DONE_TEXT" xml:space="preserve">
     <value>&amp;Done</value>
   </data>
-	<data name="CHAPTERS_ONE_TEXT" xml:space="preserve">
+  <data name="CHAPTERS_ONE_TEXT" xml:space="preserve">
     <value>This learning module contains only one chapter which has been selected for learning automatically!</value>
   </data>
-	<data name="MAINTAIN_ACTIVATE" xml:space="preserve">
+  <data name="MAINTAIN_ACTIVATE" xml:space="preserve">
     <value>Activate</value>
   </data>
-	<data name="MAINTAIN_DEACTIVATE" xml:space="preserve">
+  <data name="MAINTAIN_DEACTIVATE" xml:space="preserve">
     <value>Deactivate</value>
   </data>
-	<data name="folder16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\resources\folder16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="viewRefresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\resources\view-refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="LEARN_OPTIONS_NOTEACHERSFOUND" xml:space="preserve">
+  <data name="folder16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\folder16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viewRefresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\view-refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LEARN_OPTIONS_NOTEACHERSFOUND" xml:space="preserve">
     <value>No teacher entries found.</value>
   </data>
-	<data name="LEARN_OPTIONS_TEACHERSNOTLOADED" xml:space="preserve">
+  <data name="LEARN_OPTIONS_TEACHERSNOTLOADED" xml:space="preserve">
     <value>The teacher file could not be loaded properly.
 
 {0}
 {1}</value>
     <comment>{0} = exception text, {1} = inner exception text</comment>
   </data>
-	<data name="PRINT_QUERYORDER_None" xml:space="preserve">
+  <data name="PRINT_QUERYORDER_None" xml:space="preserve">
     <value>None</value>
     <comment>Do not sort printouts</comment>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_CAPTION" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_CAPTION" xml:space="preserve">
     <value>Unpack Learning Module</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_CONTENT" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_CONTENT" xml:space="preserve">
     <value>The default path is {0}.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_OPTION_CANCEL" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_OPTION_CANCEL" xml:space="preserve">
     <value>Cancel.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_OPTION_NO" xml:space="preserve">
     <value>No, choose a different folder.</value>
   </data>
-	<data name="UNPACK_DEFAULT_MBX_TEXT" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_MBX_TEXT" xml:space="preserve">
     <value>Should MemoryLifter unpack this Learning Module in the default folder?</value>
   </data>
-	<data name="UNPACK_DEFAULT_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_DEFAULT_OPTION_YES" xml:space="preserve">
     <value>Yes, use the default folder.</value>
   </data>
-	<data name="PRINT_STYLE_PRINTALL" xml:space="preserve">
+  <data name="PRINT_STYLE_PRINTALL" xml:space="preserve">
     <value>Print All</value>
   </data>
-	<data name="PRINT_STYLE_WITHOUTMEDIA" xml:space="preserve">
+  <data name="PRINT_STYLE_WITHOUTMEDIA" xml:space="preserve">
     <value>Print without Media</value>
   </data>
-	<data name="STYLE_DEFAULT_STYLENAME" xml:space="preserve">
+  <data name="STYLE_DEFAULT_STYLENAME" xml:space="preserve">
     <value>Default</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="STYLE_STYLE_EXTENSION" xml:space="preserve">
+  <data name="STYLE_STYLE_EXTENSION" xml:space="preserve">
     <value>.style</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
+  <data name="PRINT_STATUS_FETCHINGCARDS" xml:space="preserve">
     <value>Fetching cards...</value>
   </data>
-	<data name="PRINT_STATUS_MEDIA" xml:space="preserve">
+  <data name="PRINT_STATUS_MEDIA" xml:space="preserve">
     <value>Preparing media...</value>
   </data>
-	<data name="PRINT_STATUS_PAGES" xml:space="preserve">
+  <data name="PRINT_STATUS_PAGES" xml:space="preserve">
     <value>Preparing pages...</value>
   </data>
-	<data name="PRINT_STATUS_RENDERING" xml:space="preserve">
+  <data name="PRINT_STATUS_RENDERING" xml:space="preserve">
     <value>Rendering pages...</value>
   </data>
-	<data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
+  <data name="LISTBOXFIELDS_CHAPTER" xml:space="preserve">
     <value>Chapter</value>
   </data>
-	<data name="MAINTAIN_TOOLTIP_IMPORTED" xml:space="preserve">
+  <data name="MAINTAIN_TOOLTIP_IMPORTED" xml:space="preserve">
     <value>This card is highlighted because it was created with the last import.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_OPTION_YES" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_OPTION_YES" xml:space="preserve">
     <value>Yes, continue.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_OPTION_NO" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_OPTION_NO" xml:space="preserve">
     <value>No, cancel.</value>
   </data>
-	<data name="UNPACK_NOT_ORIGINAL_CONTENT" xml:space="preserve">
+  <data name="UNPACK_NOT_ORIGINAL_CONTENT" xml:space="preserve">
     <value>You tried to open a packed file which was not created for MemoryLifter.</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT_OPTION_YES" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT_OPTION_YES" xml:space="preserve">
     <value>Yes, delete.</value>
   </data>
-	<data name="MAINTAIN_DELETE_TEXT_OPTION_NO" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_TEXT_OPTION_NO" xml:space="preserve">
     <value>No, do not delete.</value>
   </data>
-	<data name="MAINTAIN_DELETE_WARNING" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_WARNING" xml:space="preserve">
     <value>Warning, this action cannot be undone!</value>
   </data>
-	<data name="MAINTAIN_DELETE_CONTENT" xml:space="preserve">
+  <data name="MAINTAIN_DELETE_CONTENT" xml:space="preserve">
     <value>You have selected {0} card(s) for deletion.</value>
     <comment>{0} = number of cards</comment>
   </data>
-	<data name="CONVERT_REQUEST_OPTION_YES" xml:space="preserve">
+  <data name="CONVERT_REQUEST_OPTION_YES" xml:space="preserve">
     <value>Yes, convert.</value>
   </data>
-	<data name="CONVERT_REQUEST_OPTION_NO" xml:space="preserve">
+  <data name="CONVERT_REQUEST_OPTION_NO" xml:space="preserve">
     <value>No, do not convert.</value>
   </data>
-	<data name="CONVERT_REQUEST_CONTENT" xml:space="preserve">
+  <data name="CONVERT_REQUEST_CONTENT" xml:space="preserve">
     <value>This Learning Module has been created with a previous version of MemoryLifter. MemoryLifter needs to convert it to the new format in order to use it.  Do you want to proceed?</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_CONTENT" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_CONTENT" xml:space="preserve">
     <value>This will delete the chapter '{0}' and the {1} card(s) in it.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_NO" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_NO" xml:space="preserve">
     <value>No, do not delete.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_YES" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_OPTION_YES" xml:space="preserve">
     <value>Yes, delete.</value>
   </data>
-	<data name="MANAGECHAPTER_DELETE_CHAPTER_WARNING" xml:space="preserve">
+  <data name="MANAGECHAPTER_DELETE_CHAPTER_WARNING" xml:space="preserve">
     <value>Warning, this action cannot be undone!</value>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_COMMANDS" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_COMMANDS" xml:space="preserve">
     <value>Import using import file path.
 {0}.|Import using Learning Module path.
 {1}.|Cancel Import.</value>
     <comment>Newlines important for optical reasons.</comment>
   </data>
-	<data name="IMPORTER_MEDIA_WARNING_CONTENT" xml:space="preserve">
+  <data name="IMPORTER_MEDIA_WARNING_CONTENT" xml:space="preserve">
     <value>You chose to import media files. Please specify the folder in which they can be found.</value>
   </data>
-	<data name="IMPORT_CHARSET_FORMAT" xml:space="preserve">
+  <data name="IMPORT_CHARSET_FORMAT" xml:space="preserve">
     <value>{0} (CP {1})</value>
     <comment>{0} = Encoding name, {1} = number of codepage</comment>
   </data>
-	<data name="PACK_IOEXCEPTION_CAPTION" xml:space="preserve">
+  <data name="PACK_IOEXCEPTION_CAPTION" xml:space="preserve">
     <value>Unable to Open File!</value>
   </data>
-	<data name="PACK_IOEXCEPTION_TEXT" xml:space="preserve">
+  <data name="PACK_IOEXCEPTION_TEXT" xml:space="preserve">
     <value>Unable to open file for writing! The file may be in use or write-protected.</value>
   </data>
-	<data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
+  <data name="PROGRESS_MESSAGE_SAVE_AS" xml:space="preserve">
     <value>Saving Learning Module...</value>
   </data>
-	<data name="IMPORT_FAILURE_CAPTION" xml:space="preserve">
+  <data name="IMPORT_FAILURE_CAPTION" xml:space="preserve">
     <value>Import failed</value>
   </data>
-	<data name="IMPORT_FAILURE_TEXT" xml:space="preserve">
+  <data name="IMPORT_FAILURE_TEXT" xml:space="preserve">
     <value>MemoryLifter failed to import your cards.</value>
   </data>
-	<data name="IMPORT_SUCCESS_CAPTION" xml:space="preserve">
+  <data name="IMPORT_SUCCESS_CAPTION" xml:space="preserve">
     <value>Import Succeeded</value>
   </data>
-	<data name="IMPORT_SUCCESS_TEXT" xml:space="preserve">
+  <data name="IMPORT_SUCCESS_TEXT" xml:space="preserve">
     <value>MemoryLifter successfully imported {0} cards.</value>
     <comment>{0} = amount of cards</comment>
   </data>
-	<data name="INITIALIZE_SETTINGS_CAPTION" xml:space="preserve">
+  <data name="INITIALIZE_SETTINGS_CAPTION" xml:space="preserve">
     <value>Initializing MemoryLifter</value>
   </data>
-	<data name="INITIALIZE_SETTINGS_ERROR" xml:space="preserve">
+  <data name="INITIALIZE_SETTINGS_ERROR" xml:space="preserve">
     <value>Settings updated, please restart the program...</value>
   </data>
-	<data name="DICPATH_DEFAULTNAME" xml:space="preserve">
+  <data name="DICPATH_DEFAULTNAME" xml:space="preserve">
     <value>LearningModules</value>
     <comment>Do not translate!</comment>
   </data>
-	<data name="DICPATH_DEFAULTNAME_OLD" xml:space="preserve">
+  <data name="DICPATH_DEFAULTNAME_OLD" xml:space="preserve">
     <value>MLDictionaries</value>
     <comment>Do not translate!</comment>
   </data>
-	<data name="MLIcon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\icon32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
+  <data name="MLIcon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EXAMPLE_CARD_ANSWER" xml:space="preserve">
     <value>Answer</value>
   </data>
-	<data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
+  <data name="EXAMPLE_CARD_ANSWER_EXAMPLE" xml:space="preserve">
     <value>Answer example</value>
   </data>
-	<data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
+  <data name="EXAMPLE_CARD_QUESTION" xml:space="preserve">
     <value>Question</value>
   </data>
-	<data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
+  <data name="EXAMPLE_CARD_QUESTION_EXAMPLE" xml:space="preserve">
     <value>Question example</value>
   </data>
-	<data name="HELP_FILEPATH" xml:space="preserve">
+  <data name="HELP_FILEPATH" xml:space="preserve">
     <value>Resources\en\help_en.chm</value>
   </data>
-	<data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
+  <data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
     <value>Audio disabled</value>
   </data>
-	<data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
+  <data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
     <value>Due to an error with the audio player, sound has been disabled. Restart MemoryLifter to enable sound.</value>
   </data>
-	<data name="MANAGECHAPTER_EMPTY_TITLE" xml:space="preserve">
+  <data name="MANAGECHAPTER_EMPTY_TITLE" xml:space="preserve">
     <value>The chapter title must not be empty!</value>
   </data>
-	<data name="DIC_SAVEASDIALOG_TITLE" xml:space="preserve">
+  <data name="DIC_SAVEASDIALOG_TITLE" xml:space="preserve">
     <value>Save As</value>
   </data>
-	<data name="menu_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_addEditCards" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_addEditCards.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_boxsetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_boxsetup.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_chapters" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_chapters.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_characterMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_characterMap.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_clearStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_clearStats.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_collect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_collect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_editStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_editStyle.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_exit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_export" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_export.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_homepage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_import" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_import.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_mlicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_mlicon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_preferences" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_preferences.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_saveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_saveAs.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_slideshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_slideshow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_snooze" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_snooze.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_statistics" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_statistics.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="menu_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\menu_pack.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="list_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\list-add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
+  <data name="menu_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_addEditCards" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_addEditCards.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_boxsetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_boxsetup.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_chapters" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_chapters.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_characterMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_characterMap.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_clearStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_clearStats.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_collect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_collect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_editStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_editStyle.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_exit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_export.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_homepage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_import.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_mlicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_mlicon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_new.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_preferences" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_preferences.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_print.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_saveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_saveAs.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_slideshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_slideshow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_snooze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_snooze.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_statistics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_statistics.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_pack.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list-add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DIC_ERROR_LOADING_LOCKED_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module</value>
   </data>
-	<data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_LOADING_LOCKED_TEXT" xml:space="preserve">
     <value>Error loading Learning Module {0}.
 The file may be in use by another application. Please close it and try again.</value>
     <comment>{0} = name of Learning Module</comment>
   </data>
-	<data name="MLSplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\MLSplashScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="EXPORTER_COPY_MEDIA_COMMANDS" xml:space="preserve">
+  <data name="MLSplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MLSplashScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EXPORTER_COPY_MEDIA_COMMANDS" xml:space="preserve">
     <value>Yes, export media files.
 |No, do not export media files.</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_CONTENT" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_CONTENT" xml:space="preserve">
     <value>In order to export media files, MemoryLifter must copy the files to the export folder. This can take some time. Do you still wish to export media files?</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_TEXT" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_TEXT" xml:space="preserve">
     <value>Do you want do export media files?</value>
   </data>
-	<data name="EXPORTER_COPY_MEDIA_TITLE" xml:space="preserve">
+  <data name="EXPORTER_COPY_MEDIA_TITLE" xml:space="preserve">
     <value>Export media files</value>
   </data>
-	<data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
+  <data name="DIC_ERROR_NOT_DECRYPTED_CAPTION" xml:space="preserve">
     <value>Error Loading Learning Module</value>
   </data>
-	<data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
+  <data name="DIC_ERROR_NOT_DECRYPTED_TEXT" xml:space="preserve">
     <value>You tried to open a Learning Module which requires the memory stick it came with.
 Please insert the original memory stick and open it from there.</value>
   </data>
-	<data name="SESSION_INVALID_DETAIL" xml:space="preserve">
+  <data name="SESSION_INVALID_DETAIL" xml:space="preserve">
     <value>Your Memorylifter Session was closed by another user logging in with the same credentials.</value>
   </data>
-	<data name="SESSION_INVALID_MAIN" xml:space="preserve">
+  <data name="SESSION_INVALID_MAIN" xml:space="preserve">
     <value>Your session was closed by another user!</value>
   </data>
-	<data name="SESSION_INVALID_TITLE" xml:space="preserve">
+  <data name="SESSION_INVALID_TITLE" xml:space="preserve">
     <value>Session closed</value>
   </data>
-	<data name="DEFAULT_CONNECTION_FILE" xml:space="preserve">
+  <data name="DEFAULT_CONNECTION_FILE" xml:space="preserve">
     <value>defaultConnection.mlcfg</value>
   </data>
-	<data name="DEFAULT_CONNECTION_NAME" xml:space="preserve">
+  <data name="DEFAULT_CONNECTION_NAME" xml:space="preserve">
     <value>My Learning Modules</value>
   </data>
-	<data name="SETUP_STARTUP_FOLDERS" xml:space="preserve">
+  <data name="SETUP_STARTUP_FOLDERS" xml:space="preserve">
     <value>Resources\StartupFolders.zip</value>
     <comment>do not translate!</comment>
   </data>
-	<data name="RECENT_LEARNINGMODULES_MENUFORMAT" xml:space="preserve">
+  <data name="RECENT_LEARNINGMODULES_MENUFORMAT" xml:space="preserve">
     <value>&amp;{0} {1} ({2})</value>
   </data>
-	<data name="NEW_DIC_NO_CONNECTION_CAPTION" xml:space="preserve">
+  <data name="NEW_DIC_NO_CONNECTION_CAPTION" xml:space="preserve">
     <value>No writable connection available.</value>
   </data>
-	<data name="NEW_DIC_NO_CONNECTION_TEXT" xml:space="preserve">
+  <data name="NEW_DIC_NO_CONNECTION_TEXT" xml:space="preserve">
     <value>There is no connection available to store a new Learning Module!</value>
   </data>
-	<data name="RECENT_LEARNING_MODULES_FILE" xml:space="preserve">
+  <data name="RECENT_LEARNING_MODULES_FILE" xml:space="preserve">
     <value>Config\RecentLMs.index</value>
   </data>
-	<data name="DRAG_COPY_ERROR_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_COPY_ERROR_MAININTRODUCTION" xml:space="preserve">
     <value>Error while copying your Learning Module</value>
   </data>
-	<data name="DRAG_COPY_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_COPY_ERROR_TITLE" xml:space="preserve">
     <value>Error while copying</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_CONTENT" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_CONTENT" xml:space="preserve">
     <value>There is already a Learning Module with the same name in the default Learning Module folder. You can either delete the Learning Module from the default folder or rename one of them.</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_MAININTRODUCTION" xml:space="preserve">
     <value>The Learning Module already exists</value>
   </data>
-	<data name="DRAG_FILE_EXISTS_TITLE" xml:space="preserve">
+  <data name="DRAG_FILE_EXISTS_TITLE" xml:space="preserve">
     <value>The Learning Module already exists</value>
   </data>
-	<data name="DRAG_MOVE_ERROR_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_MOVE_ERROR_MAININTRODUCTION" xml:space="preserve">
     <value>Error while moving your Learning Module</value>
   </data>
-	<data name="DRAG_MOVE_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_MOVE_ERROR_TITLE" xml:space="preserve">
     <value>Error while moving</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_CONTENT" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_CONTENT" xml:space="preserve">
     <value>There is no Learning Module Folder set, MemoryLifter cannot copy the Learning Module without a default folder.</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_MAININTRODUCTION" xml:space="preserve">
     <value>No default Learning Module folder available.</value>
   </data>
-	<data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_TITLE" xml:space="preserve">
+  <data name="DRAG_NO_DEFAULT_CONNECTION_AVAILABLE_TITLE" xml:space="preserve">
     <value>No Learning Module Folder available</value>
   </data>
-	<data name="DRAG_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="DRAG_DIALOG_BUTTONS" xml:space="preserve">
     <value>Copy the Learning Module
 Copies the Learning Module into the default Learning Module folder.|Move the Learning Module
 Moves the Learning Module into the default Learning Module folder.|Just learn it
 Opens the Learning Module for learning without copying or moving it.|Cancel
 Do nothing at all.</value>
   </data>
-	<data name="DRAG_DIALOG_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_DIALOG_MAININTRODUCTION" xml:space="preserve">
     <value>What do you want to do with this Learning Module?</value>
   </data>
-	<data name="DRAG_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_DIALOG_TITLE" xml:space="preserve">
     <value>What to do?</value>
   </data>
-	<data name="edit_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\edit-copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="edit_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\edit-cut.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="process_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\process-stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DRAG_LM_EXISTS_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="edit_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-cut.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="process_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process-stop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_LM_EXISTS_DIALOG_BUTTONS" xml:space="preserve">
     <value>Replace Learning Module
 A Learning Module with the same name already exists in the default Learning Module folder. This will replace it.|Just learn it
 Opens the Learning Module without copying or moving it.|Cancel
 Do nothing at all.</value>
   </data>
-	<data name="DRAG_LM_EXISTS_DIALOG_MAININTRODUCTION" xml:space="preserve">
+  <data name="DRAG_LM_EXISTS_DIALOG_MAININTRODUCTION" xml:space="preserve">
     <value>What do you want to do with this Learning Module?</value>
   </data>
-	<data name="DRAG_LM_EXISTS_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_LM_EXISTS_DIALOG_TITLE" xml:space="preserve">
     <value>What to do?</value>
   </data>
-	<data name="edit_find_replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\edit-find-replace.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="applications_system" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\applications-system.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
+  <data name="edit_find_replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-find-replace.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="applications_system" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\applications-system.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_GENERAL_ERROR_MAININSTRUCTION" xml:space="preserve">
     <value>Error loading the MemoryLifter configuration file.</value>
   </data>
-	<data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_GENERAL_ERROR_TITLE" xml:space="preserve">
     <value>Error loading configuration file</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_CONTENT_PLUR" xml:space="preserve">
     <value>MemoryLifter imported {0} connections successfully.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_CONTENT_SING" xml:space="preserve">
     <value>MemoryLifter imported 1 connection successfully.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_MAIN" xml:space="preserve">
     <value>Import of the MemoryLifter configuration file was successful.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED" xml:space="preserve">
     <value>There was nothing to import.</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_TITLE" xml:space="preserve">
     <value>Configuration import successful</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_CONTENT" xml:space="preserve">
     <value>The MemoryLifter configuration file was invalid. Please contact your system administator.</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_MAININSTRUCTION" xml:space="preserve">
     <value>Invalid MemoryLifter configuration file.</value>
   </data>
-	<data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
+  <data name="DRAG_INVALID_CFG_FILE_TITLE" xml:space="preserve">
     <value>Invalid MemoryLifter configuration file</value>
   </data>
-	<data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
+  <data name="COPYTO_STATUS_MESSAGE" xml:space="preserve">
     <value>Loading...</value>
   </data>
-	<data name="IMPORTING" xml:space="preserve">
+  <data name="IMPORTING" xml:space="preserve">
     <value>Importing...</value>
   </data>
-	<data name="HELP_FIRSTSTEPS" xml:space="preserve">
+  <data name="HELP_FIRSTSTEPS" xml:space="preserve">
     <value>/html/memo7omr.htm</value>
   </data>
-	<data name="menu_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="toolbar_slideshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\toolbar_slideshow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="menu_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toolbar_slideshow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toolbar_slideshow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DRAG_CFG_DIALOG_BUTTONS" xml:space="preserve">
     <value>Import
 Add this MemoryLifter configuration file to the current configuration.|Cancel
 Do nothing at all.</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_CONTENT" xml:space="preserve">
     <value>This MemoryLifter configuration file will extend the available connections on the startpage.</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_MAIN" xml:space="preserve">
     <value>Do you want to import this MemoryLifter configuration file?</value>
   </data>
-	<data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
+  <data name="DRAG_CFG_DIALOG_TITLE" xml:space="preserve">
     <value>Import config file?</value>
   </data>
-	<data name="learning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\learning_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="world_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\world_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="RETURN_TO_LEARNING_MODE" xml:space="preserve">
+  <data name="learning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\learning_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="world_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RETURN_TO_LEARNING_MODE" xml:space="preserve">
     <value>Return to Learning Mode</value>
   </data>
-	<data name="SWITCH_TO_SLIDESHOW_MODE" xml:space="preserve">
+  <data name="SWITCH_TO_SLIDESHOW_MODE" xml:space="preserve">
     <value>Switch to Slideshow Mode</value>
   </data>
-	<data name="SYNCHRONIZATION_FAILED_CONTENT" xml:space="preserve">
+  <data name="SYNCHRONIZATION_FAILED_CONTENT" xml:space="preserve">
     <value>Your changes will be uploaded to the server the next time you open this Learning Module.</value>
   </data>
-	<data name="SYNCHRONIZATION_FAILED_TITLE" xml:space="preserve">
+  <data name="SYNCHRONIZATION_FAILED_TITLE" xml:space="preserve">
     <value>Upload not possible</value>
   </data>
-	<data name="SYNCHRONIZATION_SYNC_FAILED_MAIN" xml:space="preserve">
+  <data name="SYNCHRONIZATION_SYNC_FAILED_MAIN" xml:space="preserve">
     <value>Failed to upload changes to the server.</value>
   </data>
-	<data name="gadu_grau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gadu_grau.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="gBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gBlue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="gGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gGreen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="gOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gOrange.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="gPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gPurple.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="gYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\gYellow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="MAINTAIN_CARDS_LOAD_CARDS" xml:space="preserve">
+  <data name="gadu_grau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gadu_grau.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gBlue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gGreen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gOrange.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gPurple.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gYellow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAINTAIN_CARDS_LOAD_CARDS" xml:space="preserve">
     <value>Loading cards...</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_BUTTONS" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_BUTTONS" xml:space="preserve">
     <value>Proceed
 Continue to create backup.|Cancel
 Cancel create backup operation.</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_MAIN" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_MAIN" xml:space="preserve">
     <value>Note: In order to copy the learning module it must be closed and reopened. Continue?</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_TITLE" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_TITLE" xml:space="preserve">
     <value>Create Backup</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_VERIFICATION" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_VERIFICATION" xml:space="preserve">
     <value>Don't show this message again.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_CAPTION" xml:space="preserve">
     <value>Learning Module version not supported!</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_CONTENT" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_CONTENT" xml:space="preserve">
     <value>MemoryLifter will try to update your Learning Module now. If you do not want to update or you want to create a backup first, hit cancel and reopen the file later.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_MAIN" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_MAIN" xml:space="preserve">
     <value>The database version of your Learning Module is not supported.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CAPTION" xml:space="preserve">
     <value>Failed to update Learning Module!</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_CONTENT" xml:space="preserve">
     <value>Contact your system administrator or the MemoryLifter support team.</value>
   </data>
-	<data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN" xml:space="preserve">
+  <data name="DBVERSION_NOT_SUPPORTED_UPGRADE_FAILED_MAIN" xml:space="preserve">
     <value>MemoryLifter failed to update your Learning Module.</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_CAPTION" xml:space="preserve">
     <value>Not enought free disk space!</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_TEXT" xml:space="preserve">
     <value>The disk you are trying to learn from is full. Please free some space and try again.</value>
   </data>
-	<data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
+  <data name="TASK_DIALOG_DISK_FULL_TITLE" xml:space="preserve">
     <value>Not enought disk space</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_CONTENT" xml:space="preserve">
     <value>Your learning success up to now has been saved.</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_MAIN" xml:space="preserve">
     <value>MemoryLifter needs to close this learning session.</value>
   </data>
-	<data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
+  <data name="LEARNING_WINDOW_SERVER_OFFLINE_DIALOG_TITLE" xml:space="preserve">
     <value>Server Connection Error</value>
   </data>
-	<data name="DIC_LOADING_ERROR_OFFLINE" xml:space="preserve">
+  <data name="DIC_LOADING_ERROR_OFFLINE" xml:space="preserve">
     <value>The server, where the selected learning module is stored on is not reachable.</value>
   </data>
-	<data name="MAINFORM_CREATE_BACKUP_DIALOG_FILTER" xml:space="preserve">
+  <data name="MAINFORM_CREATE_BACKUP_DIALOG_FILTER" xml:space="preserve">
     <value>MemoryLifter Learning Module (*{0})|*{0}</value>
     <comment>{0} = file extension (.mlm)</comment>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CAPTION" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CAPTION" xml:space="preserve">
     <value>Online Activation Unavailable</value>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CONTENT" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_CONTENT" xml:space="preserve">
     <value>If you have a firewall which is causing the connection attempt to fail, allow MemoryLifter access through the firewall.</value>
   </data>
-	<data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_MAIN" xml:space="preserve">
+  <data name="MAINFORM_ACTIVATION_SERVICE_OFFLINE_MAIN" xml:space="preserve">
     <value>The Online Activation Service is unavailable. Please check your network connectivity or try again to activate this Learning Module on a PC with internet access.</value>
   </data>
-	<data name="SPLASHSCREEN_PREPARING" xml:space="preserve">
+  <data name="SPLASHSCREEN_PREPARING" xml:space="preserve">
     <value>Preparing startup</value>
   </data>
-	<data name="TEACHER_DEFAULT" xml:space="preserve">
+  <data name="TEACHER_DEFAULT" xml:space="preserve">
     <value>Default</value>
     <comment>Describes a set of preset learning settings.</comment>
   </data>
-	<data name="TEACHER_NICEGUY" xml:space="preserve">
+  <data name="TEACHER_NICEGUY" xml:space="preserve">
     <value>Mr. Nice Guy</value>
     <comment>Describes a set of preset learning settings.</comment>
   </data>
-	<data name="TEACHER_OCCASIONAL" xml:space="preserve">
+  <data name="TEACHER_OCCASIONAL" xml:space="preserve">
     <value>Occasional Learner</value>
     <comment>Describes a set of preset learning settings.</comment>
   </data>
-	<data name="TEACHER_STRICT" xml:space="preserve">
+  <data name="TEACHER_STRICT" xml:space="preserve">
     <value>Strict</value>
     <comment>Describes a set of preset learning settings.</comment>
   </data>
-	<data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_ANSWER_DISTRACTORS_TEXT" xml:space="preserve">
     <value>Answer Distractors ({0})</value>
     <comment>{0} = Title of Answer eg state/capital</comment>
   </data>
-	<data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
+  <data name="LISTBOXFIELDS_QUESTION_DISTRACTORS_TEXT" xml:space="preserve">
     <value>Question Distractors ({0})</value>
     <comment>{0} = Title of Question</comment>
   </data>
-	<data name="INSTALLED_EXTENSIONS_FILE" xml:space="preserve">
+  <data name="INSTALLED_EXTENSIONS_FILE" xml:space="preserve">
     <value>Config\InstalledExtensions.index</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_CAPTION" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_CAPTION" xml:space="preserve">
     <value>Extension Installed</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_INSTALLED" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_INSTALLED" xml:space="preserve">
     <value>The {0} extension '{1}' was installed.</value>
     <comment>{0} = ext. type, {1} = ext. name</comment>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_SELECTED" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_SELECTED" xml:space="preserve">
     <value>The {0} extension '{1}' was installed and selected.</value>
     <comment>{0} = ext. type, {1} = ext. name</comment>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_SKIN" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_SKIN" xml:space="preserve">
     <value>Skin</value>
   </data>
-	<data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_UNKNOWN" xml:space="preserve">
+  <data name="EXTENSION_INFORMUSER_MESSAGE_TYPE_UNKNOWN" xml:space="preserve">
     <value>Unknown</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Title" xml:space="preserve">
     <value>Incompatible Database Version</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Caption" xml:space="preserve">
     <value>The selected Database has an incompatible Version!</value>
   </data>
-	<data name="TASK_DIALOG_IncompatibleDatabaseVersion_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_IncompatibleDatabaseVersion_Text" xml:space="preserve">
     <value>Please contact your Administrator to update your Database Version.</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Title" xml:space="preserve">
     <value>MemoryLifter too old</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Caption" xml:space="preserve">
     <value>Your MemoryLifter version is too old!</value>
   </data>
-	<data name="TASK_DIALOG_MemoryLifterTooOld_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_MemoryLifterTooOld_Text" xml:space="preserve">
     <value>Please go to www.memorylifter.com and update your version of MemoryLifter.</value>
   </data>
-	<data name="MLIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\resources\icon48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
+  <data name="MLIcon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION" xml:space="preserve">
     <value>Failed to Launch External Application</value>
   </data>
-	<data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
+  <data name="ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT" xml:space="preserve">
     <value>MemoryLifter failed to launch an external application.</value>
   </data>
-	<data name="MLIFTER_ERROR_HANDLER" xml:space="preserve">
+  <data name="MLIFTER_ERROR_HANDLER" xml:space="preserve">
     <value>MLifterErrorHandler.exe</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Title" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Title" xml:space="preserve">
     <value>No new Version found</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Caption" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Caption" xml:space="preserve">
     <value>No new Version found!</value>
   </data>
-	<data name="TASK_DIALOG_NoNewVersionFound_Text" xml:space="preserve">
+  <data name="TASK_DIALOG_NoNewVersionFound_Text" xml:space="preserve">
     <value>Please search again in some days or enable the automatic search to let MemoryLifter search for Updates on every startup of MemoryLifter.</value>
   </data>
-	<data name="ACTIVE_CARDS" xml:space="preserve">
+  <data name="ACTIVE_CARDS" xml:space="preserve">
     <value>Active cards</value>
   </data>
-	<data name="INACTIVE_CARDS" xml:space="preserve">
+  <data name="INACTIVE_CARDS" xml:space="preserve">
     <value>Inactive cards</value>
   </data>
-	<data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_CAPTION" xml:space="preserve">
+  <data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_CAPTION" xml:space="preserve">
     <value>The selected learning module is protected!</value>
   </data>
-	<data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_TEXT" xml:space="preserve">
+  <data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_TEXT" xml:space="preserve">
     <value>This Learning Module was purchased prior to the open source release of MemoryLifter and is protected by proprietary protection technology. This functionality could not be integrated into the current version of MemoryLifter because of license restrictions.
 Please use MemoryLifter 2.3 to open this Learning Module.</value>
   </data>
-	<data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_TITLE" xml:space="preserve">
+  <data name="TASK_DIALOG_LEARNING_MODULE_PROTECTED_TITLE" xml:space="preserve">
     <value>Protected Learning Module</value>
   </data>
-	<data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED_DETAIL" xml:space="preserve">
+  <data name="DRAG_CFG_SUCCESS_MAIN_NOTHING_IMPORTED_DETAIL" xml:space="preserve">
     <value>Either there were no connections in the file or they have been imported already.</value>
   </data>
 </root>

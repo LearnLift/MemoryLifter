@@ -786,9 +786,6 @@ To deactivate or modify resizing for cards added later, click the resize button 
     <value>Keep me informed (Reactivate using "Help - MemoryLifter News")</value>
     <comment>"Help - MemoryLifter News" = Cross-reference to interface</comment>
   </data>
-  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
-    <value>A valid e-mail address is required, please correct your input.</value>
-  </data>
   <data name="IMPORTING" xml:space="preserve">
     <value>Importing...</value>
   </data>
@@ -1001,9 +998,6 @@ To deactivate or modify resizing for cards added later, click the resize button 
   </data>
   <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
     <value>&amp;Cancel</value>
-  </data>
-  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
-    <value>Invalid input</value>
   </data>
   <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
     <value>If you think that you know this card you can still move it into a higher box.</value>

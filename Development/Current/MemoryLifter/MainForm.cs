@@ -1443,39 +1443,6 @@ namespace MLifter
 		}
 
 		/// <summary>
-		/// Creates E-Mail for registration and sets Registry-Entry
-		/// "MLReg" to "Done".
-		/// </summary>
-		/// <remarks>Documented by Dev04, 2007-07-25</remarks>
-		public static void Registration()
-		{
-			if (Tools.IsUserOnline())
-			{
-				Wizard registerwizard = new Wizard(MLifter.Classes.Help.HelpPath);
-				registerwizard.Pages.Add(new MLifter.Controls.Wizards.Startup.RegisterPage(MLifter.Properties.Settings.Default.RegistrationServiceUrl));
-				registerwizard.ShowDialog();
-
-				if (((MLifter.Controls.Wizards.Startup.RegisterPage)registerwizard.Pages[0]).RegistrationSent)
-					Settings.Default.Registered = true;
-			}
-			else
-			{
-
-				try
-				{
-					System.Diagnostics.Process.Start(
-						String.Format(Resources.REGISTRATION_TEXT, System.Web.HttpUtility.UrlEncode(String.Format(Resources.REGISTRATION_TEXT, Environment.NewLine, AssemblyData.Version)))
-						);
-					Settings.Default.Registered = true;
-				}
-				catch
-				{
-					MessageBox.Show(MLifter.Properties.Resources.ERROR_LAUNCH_EXTERNAL_APPLICATION_TEXT, MLifter.Properties.Resources.ERROR_LAUNCH_EXTERNAL_APPLICATION_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				}
-			}
-		}
-
-		/// <summary>
 		/// Handles the Click event of the recentFileMenuItem control.
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>
@@ -2069,9 +2036,7 @@ namespace MLifter
 			RefreshLanguageMenu();
 			NoDictionaryLoaded();
 			LoadWindowSettings();
-
-			bool showStartupHelp = false;
-
+			
 			BringToFront();
 			TopMost = true;
 			TopMost = false;
@@ -2082,22 +2047,18 @@ namespace MLifter
 				Wizard startupWizard = new Wizard(MLifter.Classes.Help.HelpPath);
 				startupWizard.StartPosition = FormStartPosition.CenterParent;
 				startupWizard.Text = Resources.FIRSTSTART_CAPTION;
-				startupWizard.Pages.Add(new Controls.Wizards.Startup.WelcomePage(Properties.Settings.Default.RegistrationServiceUrl));
-				startupWizard.Pages.Add(new Controls.Wizards.Startup.DictionaryPathPage(Setup.DictionaryParentPath, Properties.Resources.DICPATH_DEFAULTNAME, Properties.Resources.DICPATH_DEFAULTNAME_OLD));
+				startupWizard.Pages.Add(new Controls.Wizards.Startup.DictionaryPathPage(Setup.DictionaryParentPath, 
+					Properties.Resources.DICPATH_DEFAULTNAME, Properties.Resources.DICPATH_DEFAULTNAME_OLD));
 				startupWizard.ShowDialog();
-
-				if (startupWizard.Pages.Count == 3 && (startupWizard.Pages[2] as Controls.Wizards.Startup.RegisterPage).RegistrationSent)
-					Properties.Settings.Default.Registered = true;
-
-				Controls.Wizards.Startup.DictionaryPathPage dictionaryPathPage = startupWizard.Pages[1] as Controls.Wizards.Startup.DictionaryPathPage;
+				
+				Controls.Wizards.Startup.DictionaryPathPage dictionaryPathPage = startupWizard.Pages[0] as Controls.Wizards.Startup.DictionaryPathPage;
 				Setup.InitializeProfile(dictionaryPathPage.CopyDemoDictionary, dictionaryPathPage.DictionaryPath);
 
-				Properties.Settings.Default.DicDir = (startupWizard.Pages[1] as Controls.Wizards.Startup.DictionaryPathPage).DictionaryPath;
+				Properties.Settings.Default.DicDir = dictionaryPathPage.DictionaryPath;
 
-				ConnectionStringHandler.CreateUncConnection(Resources.DEFAULT_CONNECTION_NAME, Settings.Default.DicDir, Setup.UserConfigPath, Resources.DEFAULT_CONNECTION_FILE, true, OnStickMode);
-
-				showStartupHelp = (startupWizard.Pages[0] as Controls.Wizards.Startup.WelcomePage).ShowHelpAtStartup;
-
+				ConnectionStringHandler.CreateUncConnection(Resources.DEFAULT_CONNECTION_NAME, Settings.Default.DicDir, 
+					Setup.UserConfigPath, Resources.DEFAULT_CONNECTION_FILE, true, OnStickMode);
+				
 				Settings.Default.FirstUse = false;
 				Settings.Default.Save();
 
@@ -2121,7 +2082,7 @@ namespace MLifter
 			}
 			else if (Settings.Default.ShowStartPage && CommandLineParam == string.Empty)
 			{
-				ShowLearningModulesPage(showStartupHelp, firstUse);
+				ShowLearningModulesPage(firstUse);
 			}
 			else
 			{
@@ -2133,9 +2094,6 @@ namespace MLifter
 
 				//open most recent LM
 				CheckAndLoadStartUpDic();
-
-				if (showStartupHelp)
-					firstStepsToolStripMenuItem.PerformClick();
 			}
 		}
 
@@ -2167,20 +2125,9 @@ namespace MLifter
 		/// <summary>
 		/// Shows the learning modules page.
 		/// </summary>
-		/// <param name="showStartupHelp">if set to <c>true</c> [show startup help].</param>
+		/// <param name="showStartupHelp">set to <c>true</c> for first use.</param>
 		/// <remarks>Documented by Dev05, 2008-12-09</remarks>
-		private void ShowLearningModulesPage(bool showStartupHelp)
-		{
-			ShowLearningModulesPage(showStartupHelp, false);
-		}
-
-		/// <summary>
-		/// Shows the learning modules page.
-		/// </summary>
-		/// <param name="showStartupHelp">if set to <c>true</c> [show startup help].</param>
-		/// <param name="firstUse">if set to <c>true</c> [first use].</param>
-		/// <remarks>Documented by Dev03, 2009-06-03</remarks>
-		private void ShowLearningModulesPage(bool showStartupHelp, bool firstUse)
+		private void ShowLearningModulesPage(bool firstUse)
 		{
 			using (LearningModulesForm lmf = new LearningModulesForm(MLifter.Classes.Help.HelpPath))
 			{
@@ -2191,10 +2138,7 @@ namespace MLifter
 				lmf.FirstUse = firstUse;
 
 				lmf.LoadLearningModules();
-
-				if (showStartupHelp)
-					Help.ShowHelp(lmf, MLifter.Classes.Help.HelpPath, HelpNavigator.Topic, Resources.HELP_FIRSTSTEPS);
-
+				
 				DialogResult dr = lmf.ShowDialog(this);
 
 				if (dr == DialogResult.OK && !lmf.IsUsedDragAndDrop)
