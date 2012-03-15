@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings">
+            <section name="MLifter.Controls.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <MLifter.Properties.Settings>
+            <setting name="FirstUse" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Statistics" serializeAs="String">
+                <value>4</value>
+            </setting>
+            <setting name="RecentFiles" serializeAs="String">
+                <value></value>
+            </setting>
+            <setting name="CurrentLanguage" serializeAs="String">
+                <value>en</value>
+            </setting>
+            <setting name="CurrentStyle" serializeAs="String">
+                <value>Recording</value>
+            </setting>
+            <setting name="DicDir" serializeAs="String">
+                <value>MEMSTICK:\LearningModules</value>
+            </setting>
+            <setting name="Location" serializeAs="String">
+                <value>167, 17</value>
+            </setting>
+            <setting name="Size" serializeAs="String">
+                <value>1100, 754</value>
+            </setting>
+            <setting name="SynonymPromt" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="LayoutValues" serializeAs="String">
+                <value>550, 212</value>
+            </setting>
+            <setting name="Play" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Blink" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Maximized" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Slideshow" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="AllowOnlyOneInstance" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="LastImportTimestamp" serializeAs="String">
+                <value>1900-01-01</value>
+            </setting>
+        </MLifter.Properties.Settings>
+        <MLifter.Controls.Properties.Settings>
+            <setting name="NewsDate" serializeAs="String">
+                <value>Thu, 07 Feb 2008 06:33:00 -0500</value>
+            </setting>
+        </MLifter.Controls.Properties.Settings>
+    </userSettings>
+</configuration>

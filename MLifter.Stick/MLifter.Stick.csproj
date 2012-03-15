@@ -27,7 +27,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,7 +36,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -102,13 +102,13 @@
     </VisualStudio>
   </ProjectExtensions>
   <ItemGroup>
-    <None Include="Autorun.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="autorun.inf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Data\license.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="LearningModules\ML World Capitals.mlm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Start.hta">
@@ -135,9 +135,6 @@
     <None Include="Images\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Images\introVideo.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Images\learning.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -147,7 +144,7 @@
     <None Include="Images\startML.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="MemoryLifter\MLifter.exe.config.user">
+    <None Include="MemoryLifter\MemoryLifter.exe.config.user">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MLifter.sys">
@@ -156,20 +153,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Install\" />
-    <Folder Include="LearningModules\" />
-    <Folder Include="Master\Images\" />
-    <Folder Include="Master\MemoryLifter24\Config\" />
     <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Master\Start.hta" />
-  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>del $(TargetDir)MLifterStick.*
+
+copy $(SolutionDir)Autorun\$(ConfigurationName)\Autorun.exe $(TargetDir)Autorun.exe
+
+mkdir $(TargetDir)Install
+copy $(SolutionDir)MemoryLifter.Setup\$(ConfigurationName)\MemoryLifter-Setup.exe $(TargetDir)Install\MemoryLifter-Setup.exe
+
+xcopy $(SolutionDir)MemoryLifter\$(OutDir)*.* $(TargetDir)MemoryLifter /S /I /Y
+del /S $(TargetDir)MemoryLifter\*.pdb
+del /S $(TargetDir)MemoryLifter\*.vshost.*
+del $(TargetDir)MemoryLifter\*.xml</PostBuildEvent>
+  </PropertyGroup>
 </Project>
