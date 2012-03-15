@@ -151,18 +151,6 @@ namespace MLifter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Registered {
-            get {
-                return ((bool)(this["Registered"]));
-            }
-            set {
-                this["Registered"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool SynonymPromt {
             get {
@@ -692,15 +680,6 @@ namespace MLifter.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public string ENABLE_ErrorReportviaWebservice {
-            get {
-                return ((string)(this["ENABLE_ErrorReportviaWebservice"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -728,15 +707,6 @@ namespace MLifter.Properties {
         public bool CheckForUpdates {
             get {
                 return ((bool)(this["CheckForUpdates"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://services.memorylifter.com/registration/RegistrationHandler.ashx")]
-        public string RegistrationServiceUrl {
-            get {
-                return ((string)(this["RegistrationServiceUrl"]));
             }
         }
     }

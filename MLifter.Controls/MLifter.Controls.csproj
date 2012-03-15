@@ -464,18 +464,6 @@
     <Compile Include="Wizards\Startup\DictionaryPathPage.Designer.cs">
       <DependentUpon>DictionaryPathPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wizards\Startup\RegisterPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\Startup\RegisterPage.Designer.cs">
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\Startup\WelcomePage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\Startup\WelcomePage.Designer.cs">
-      <DependentUpon>WelcomePage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Wizards\WizardPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1424,46 +1412,6 @@
     <EmbeddedResource Include="Wizards\Startup\DictionaryPathPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DictionaryPathPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\RegisterPage.de.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\RegisterPage.es.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\RegisterPage.fr.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\RegisterPage.pt.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\RegisterPage.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RegisterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\WelcomePage.de.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>WelcomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\WelcomePage.es.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>WelcomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\WelcomePage.fr.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>WelcomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\WelcomePage.pt.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>WelcomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\Startup\WelcomePage.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\WizardPage.de.resx">
       <SubType>Designer</SubType>
