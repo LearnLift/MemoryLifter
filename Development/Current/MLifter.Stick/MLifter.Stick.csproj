@@ -102,31 +102,63 @@
     </VisualStudio>
   </ProjectExtensions>
   <ItemGroup>
-    <Content Include="Autorun.exe" />
-    <Content Include="autorun.inf" />
-    <Content Include="Master\Autorun.exe" />
-    <Content Include="Master\autorun.inf" />
-    <Content Include="Master\Data\license.html" />
-    <Content Include="Start.hta" />
-    <None Include="Master\Images\App.ico" />
-    <None Include="Master\MemoryLifter24\Config\defaultConnection.mlcfg" />
-    <Content Include="Master\Images\Audiobook.jpg" />
-    <Content Include="Master\Images\Banner.jpg" />
-    <Content Include="Master\Images\button.png" />
-    <Content Include="Master\Images\button_search.png" />
-    <Content Include="Master\Images\close.png" />
-    <Content Include="Master\Images\introVideo.jpg" />
-    <Content Include="Master\Images\learning.gif" />
-    <Content Include="Master\Images\menu_bg.gif" />
-    <Content Include="Master\Images\startML.jpg" />
-    <Content Include="Master\MemoryLifter24\MLifter.exe.config.user" />
-    <Content Include="Master\Start.hta" />
-    <None Include="Master\MLifter.sys" />
-    <Content Include="Master\Data\presentation_en.mpg" />
+    <None Include="Autorun.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="autorun.inf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\license.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Start.hta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\App.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MemoryLifter\Config\defaultConnection.mlcfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Audiobook.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\button_search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\introVideo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\learning.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\menu_bg.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\startML.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MemoryLifter\MLifter.exe.config.user">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MLifter.sys">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Master\Install\" />
-    <Folder Include="Master\LearningModules\" />
+    <Folder Include="Install\" />
+    <Folder Include="LearningModules\" />
+    <Folder Include="Master\Images\" />
+    <Folder Include="Master\MemoryLifter24\Config\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -136,5 +168,8 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Start.hta" />
   </ItemGroup>
 </Project>
