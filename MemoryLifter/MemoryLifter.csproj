@@ -1487,8 +1487,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="Resources\demoteCard.png" />
-    <Content Include="Resources\de\license.rtf">
-    </Content>
     <Content Include="Resources\de\help_de.chm">
     </Content>
     <None Include="Resources\document-open2.png" />
@@ -1536,19 +1534,13 @@
     <Content Include="Resources\en\lgpl-3_0.txt" />
     <Content Include="Resources\prepare-stick-config.vbs" />
     <Content Include="Resources\promoteCard.png" />
-    <Content Include="Resources\es\license.rtf">
-    </Content>
     <Content Include="Resources\es\help_es.chm">
-    </Content>
-    <Content Include="Resources\fr\license.rtf">
     </Content>
     <Content Include="Resources\fr\help_fr.chm">
     </Content>
     <None Include="Resources\media-record.png" />
     <None Include="Resources\media-playback-start1.png" />
     <None Include="Resources\media-playback-stop.png" />
-    <Content Include="Resources\pt\license.rtf">
-    </Content>
     <Content Include="Resources\pt\help_pt.chm">
     </Content>
     <None Include="Resources\Search.ico" />
