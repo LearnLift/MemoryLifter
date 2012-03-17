@@ -1077,7 +1077,7 @@ namespace MLifter.Controls.LearningModulesPage
 								break;
 							}
 						}
-						if (exists)
+						if (!exists)
 							modules.Add(item);
 					}
 
