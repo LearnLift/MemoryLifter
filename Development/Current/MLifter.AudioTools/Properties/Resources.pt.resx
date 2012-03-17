@@ -117,44 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AUDIO_WAVE_EXTENSION" xml:space="preserve">
-    <value>.wav</value>
-  </data>
-  <data name="DEFAULT_CODECS_XML" xml:space="preserve">
-    <value>&lt;?xml version="1.0"?&gt;
-&lt;ArrayOfCodec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;Codec&gt;
-    &lt;extension&gt;.mp3&lt;/extension&gt;
-    &lt;name&gt;MPEG Layer 3&lt;/name&gt;
-    &lt;EncodeApp&gt;Codecs\Lame\lame.exe&lt;/EncodeApp&gt;
-    &lt;EncodeArgs&gt;--cbr -b 128 -c -o -p {0} {1}&lt;/EncodeArgs&gt;
-    &lt;DecodeApp&gt;Codecs\Lame\lame.exe&lt;/DecodeApp&gt;
-    &lt;DecodeArgs&gt;--decode {0} {1}&lt;/DecodeArgs&gt;
-  &lt;/Codec&gt;
-  &lt;Codec&gt;
-    &lt;extension&gt;.ogg&lt;/extension&gt;
-    &lt;name&gt;Ogg Vorbis&lt;/name&gt;
-    &lt;EncodeApp&gt;Codecs\VorbisTools\oggenc.exe&lt;/EncodeApp&gt;
-    &lt;EncodeArgs&gt;-o{1} {0}&lt;/EncodeArgs&gt;
-    &lt;DecodeApp&gt;Codecs\VorbisTools\oggdec.exe&lt;/DecodeApp&gt;
-    &lt;DecodeArgs&gt;-o{1} {0}&lt;/DecodeArgs&gt;
-  &lt;/Codec&gt;
-&lt;/ArrayOfCodec&gt;</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="document_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ML_FORUM_LINK" xml:space="preserve">
-    <value>http://www.memorylifter.com/forum</value>
-  </data>
-  <data name="setup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setup.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AUDIOPLAYER_CRASHED_CAPTION" xml:space="preserve">
-    <value>Audio disabled</value>
+    <value>Som desativado</value>
   </data>
   <data name="AUDIOPLAYER_CRASHED_TEXT" xml:space="preserve">
-    <value>Due to an error with the audio player, sound has been disabled. Restart MemoryLifter to enable sound.</value>
+    <value>Por motivos de erros, alguns sons forão deletados. Ative o MemoryLifter novamente para corrigir o problema.</value>
   </data>
 </root>

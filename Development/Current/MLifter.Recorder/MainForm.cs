@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using MLifter.AudioTools.Codecs;
-using MLifter.BusinessLayer.Helper;
 using MLifter.Controls;
 using MLifter.Recorder.Properties;
 
