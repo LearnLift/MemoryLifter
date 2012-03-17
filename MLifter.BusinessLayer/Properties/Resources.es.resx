@@ -112,21 +112,15 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AUDIOPLAYER_CRASHED_CAPTION">
-    <value>Sonido apagado</value>
-  </data>
-  <data name="AUDIOPLAYER_CRASHED_TEXT">
-    <value>Debido a un error del reproductor de audio, el sonido está apagado. Reinicie MemoryLifter para arreglar el sonido.</value>
-  </data>
-  <data name="CSH_CONNECTION_NAME">
+  <data name="CSH_CONNECTION_NAME" xml:space="preserve">
     <value>Memoria USB de MemoryLifter en {0}</value>
   </data>
-  <data name="ERROR_PAGE">
+  <data name="ERROR_PAGE" xml:space="preserve">
     <value>&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;{0}&lt;/title&gt;
@@ -136,90 +130,90 @@
     &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
-  <data name="EXCEPTION_POOL_EMPTY">
+  <data name="EXCEPTION_POOL_EMPTY" xml:space="preserve">
     <value>El grupo está vacío.</value>
   </data>
-  <data name="ExtensionURI_Suffix">
+  <data name="ExtensionURI_Suffix" xml:space="preserve">
     <value>?guid={0}</value>
   </data>
-  <data name="LEARNING_MODULES_PAGE_EMPTY_LM">
+  <data name="LEARNING_MODULES_PAGE_EMPTY_LM" xml:space="preserve">
     <value>¡Módulo vacío!</value>
   </data>
-  <data name="LEARNING_MODULES_PAGE_NO_IMAGES">
+  <data name="LEARNING_MODULES_PAGE_NO_IMAGES" xml:space="preserve">
     <value>No hay ninguna imagen,</value>
   </data>
-  <data name="LOCAL_MODULE">
+  <data name="LOCAL_MODULE" xml:space="preserve">
     <value>localhost</value>
   </data>
-  <data name="MediaURI_Suffix">
+  <data name="MediaURI_Suffix" xml:space="preserve">
     <value>?id={0}</value>
   </data>
-  <data name="STICK_KEY_EXTENSION">
+  <data name="STICK_KEY_EXTENSION" xml:space="preserve">
     <value>.key</value>
   </data>
-  <data name="STICK_KEY_FOLDER">
+  <data name="STICK_KEY_FOLDER" xml:space="preserve">
     <value>LMKeys</value>
   </data>
-  <data name="TEACHER_DEFAULT">
+  <data name="TEACHER_DEFAULT" xml:space="preserve">
     <value>Predeterminado</value>
   </data>
-  <data name="TEACHER_NICEGUY">
+  <data name="TEACHER_NICEGUY" xml:space="preserve">
     <value>Flexible</value>
   </data>
-  <data name="TEACHER_OCCASIONAL">
+  <data name="TEACHER_OCCASIONAL" xml:space="preserve">
     <value>Alumno esporádico</value>
   </data>
-  <data name="TEACHER_STRICT">
+  <data name="TEACHER_STRICT" xml:space="preserve">
     <value>Estricto</value>
   </data>
-  <data name="XSL_CLICKFORE">
+  <data name="XSL_CLICKFORE" xml:space="preserve">
     <value>Haga clic en el botón para ver un ejemplo:</value>
   </data>
-  <data name="XSL_CLICKFORQ">
+  <data name="XSL_CLICKFORQ" xml:space="preserve">
     <value>Haga clic en el botón para ver la pregunta:</value>
   </data>
-  <data name="XSL_CORRECT">
+  <data name="XSL_CORRECT" xml:space="preserve">
     <value>La respuesta correcta es:</value>
   </data>
-  <data name="XSL_DEMOTE_MESSAGE">
+  <data name="XSL_DEMOTE_MESSAGE" xml:space="preserve">
     <value>La ficha se ha relegado al fichero 1.</value>
   </data>
-  <data name="XSL_ERROR_CAPTION">
+  <data name="XSL_ERROR_CAPTION" xml:space="preserve">
     <value>Error de la hoja de estilos</value>
   </data>
-  <data name="XSL_ERROR_TEXT">
+  <data name="XSL_ERROR_TEXT" xml:space="preserve">
     <value>Se ha producido un error al compilar {0}.&lt;br /&gt;
 Es posible que la hoja de estilos o los elementos vinculados contengan errores.&lt;br /&gt;
 En caso de duda, restaure el archivo original en "Herramientas - Editor de estilos".</value>
   </data>
-  <data name="XSL_FEEDBACK_CORRECT">
+  <data name="XSL_FEEDBACK_CORRECT" xml:space="preserve">
     <value>Su respuesta es correcta.</value>
   </data>
-  <data name="XSL_FEEDBACK_WRONG">
+  <data name="XSL_FEEDBACK_WRONG" xml:space="preserve">
     <value>Su respuesta es incorrecta.</value>
   </data>
-  <data name="XSL_LISTENING_MODE_IMAGE_BUTTON_TEXT">
+  <data name="XSL_LISTENING_MODE_IMAGE_BUTTON_TEXT" xml:space="preserve">
     <value>Haga clic aquí para mostrar la imagen.</value>
   </data>
-  <data name="XSL_PROMOTE_HIGHEST_MESSAGE">
+  <data name="XSL_PROMOTE_HIGHEST_MESSAGE" xml:space="preserve">
     <value>Esta ficha ha alcanzado el fichero más alto.</value>
   </data>
-  <data name="XSL_PROMOTE_MESSAGE">
+  <data name="XSL_PROMOTE_MESSAGE" xml:space="preserve">
     <value>Las fichas no se han promocionado al fichero {box_number}.</value>
   </data>
-  <data name="XSL_RESIZE_PICTURE">
+  <data name="XSL_RESIZE_PICTURE" xml:space="preserve">
     <value>Haga clic en la imagen para verla en el tamaño original.</value>
   </data>
-  <data name="XSL_RESTORE_PICTURE">
+  <data name="XSL_RESTORE_PICTURE" xml:space="preserve">
     <value>Haga clic en la imagen para verla en tamaño reducido.</value>
   </data>
-  <data name="XSL_SELFASSESMENT_DEMOTE_MESSAGE">
+  <data name="XSL_SELFASSESMENT_DEMOTE_MESSAGE" xml:space="preserve">
     <value>¿Desea relegar la ficha?</value>
   </data>
-  <data name="XSL_SELFASSESMENT_PROMOTE_MESSAGE">
+  <data name="XSL_SELFASSESMENT_PROMOTE_MESSAGE" xml:space="preserve">
     <value>¿Desea promocionar la ficha?</value>
   </data>
-  <data name="XSL_YOUENTERED">
+  <data name="XSL_YOUENTERED" xml:space="preserve">
     <value>Ha introducido:</value>
   </data>
 </root>

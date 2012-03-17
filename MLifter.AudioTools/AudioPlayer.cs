@@ -2,22 +2,38 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Diagnostics;
+using System.Text;
+using System.Threading;
+using MLifterAudioTools.Properties;
+using WMPLib;
 
-using Microsoft.DirectX.AudioVideoPlayback;
-
-namespace MLifter.BusinessLayer.Helper
+namespace MLifter.AudioTools
 {
-	public class AudioPlayer
+	public class AudioPlayer : IDisposable
 	{
 		private Thread playThread = null;
 		private Queue<string> playQueue = new Queue<string>();
 		private bool stopCurrentPlay = false;
 		private bool stopThread = false;
+
+		/// <summary>
+		/// Occurs when the current played audio is ending.
+		/// </summary>
+		/// <remarks>CFI, 2012-03-17</remarks>
+		public event EventHandler Ending;
+		/// <summary>
+		/// Raises the <see cref="E:Ending"/> event.
+		/// </summary>
+		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+		/// <remarks>CFI, 2012-03-17</remarks>
+		protected virtual void OnEnding(EventArgs e)
+		{
+			if (Ending != null)
+				Ending(this, e);
+		}
 
 		/// <summary>
 		/// Gets a value indicating whether this instance is playing an audio file.
@@ -32,7 +48,7 @@ namespace MLifter.BusinessLayer.Helper
 			{
 				if (playThread == null)
 					return false;
-				return playThread.ThreadState == System.Threading.ThreadState.Running;
+				return playThread.ThreadState == System.Threading.ThreadState.Running || playThread.ThreadState == System.Threading.ThreadState.Background;
 			}
 		}
 
@@ -75,6 +91,7 @@ namespace MLifter.BusinessLayer.Helper
 				playThread.CurrentCulture = Thread.CurrentThread.CurrentCulture;
 				playThread.CurrentUICulture = Thread.CurrentThread.CurrentUICulture;
 				playThread.Priority = ThreadPriority.Lowest;
+				playThread.IsBackground = true;
 				playThread.Start();
 			}
 #if DEBUG && debug_output
@@ -102,7 +119,7 @@ namespace MLifter.BusinessLayer.Helper
 		private void PlayThread()
 		{
 			stopThread = false;
-			Audio audio = null;
+			WindowsMediaPlayer audio = null;
 
 			while (true)
 			{
@@ -125,8 +142,7 @@ namespace MLifter.BusinessLayer.Helper
 					stopCurrentPlay = false;
 					if (audio != null)
 					{
-						audio.Stop();
-						audio.Dispose();
+						audio.controls.stop();
 						audio = null;
 					}
 
@@ -135,21 +151,30 @@ namespace MLifter.BusinessLayer.Helper
 #if debug_output
 						Trace.WriteLine("Fetching audio object for " + filename);
 #endif
-						audio = new Audio(filename, false);
+						audio = new WindowsMediaPlayer();
+						audio.URL = filename;
 
 #if debug_output
-						Trace.WriteLine(string.Format("Starting playing {0}. Duration: {1}.", filename, audio.Duration.ToString()));
+						Trace.WriteLine(string.Format("Starting playing {0}. Duration: {1}.", filename, audio.currentMedia.duration.ToString()));
 #endif
-						audio.Play();
+						audio.controls.play();
+						try
+						{
+							while (audio.playState == WMPPlayState.wmppsTransitioning || audio.playState == WMPPlayState.wmppsBuffering)
+								Thread.Sleep(25);
+						}
+						catch { Thread.Sleep(250); }
 
 						//wait for completion
-						while (audio.CurrentPosition < audio.Duration)
+						while (audio.controls.currentPosition < audio.currentMedia.duration &&
+							(audio.playState == WMPPlayState.wmppsPlaying || audio.playState == WMPPlayState.wmppsBuffering))
 						{
 							System.Threading.Thread.Sleep(100);
-							if (stopCurrentPlay && (audio.Duration - audio.CurrentPosition) > 3) //don't stop short sounds
+							if (stopCurrentPlay && (audio.currentMedia.duration - audio.controls.currentPosition) > 3) //don't stop short sounds
 								break;
 						}
-						audio.Stop();
+						audio.controls.stop();
+						OnEnding(EventArgs.Empty);
 #if debug_output
 						Trace.WriteLine("Finished/Stopped playing " + filename);
 #endif
@@ -161,7 +186,7 @@ namespace MLifter.BusinessLayer.Helper
 					{
 						//Display a message and terminate player thread
 						//[ML-724] On-Stick-Mode: Audioplayer thread crashes when the stick is pulled off and plugged back in (DAC, 2008-03-05)
-						System.Windows.Forms.MessageBox.Show(Properties.Resources.AUDIOPLAYER_CRASHED_TEXT, Properties.Resources.AUDIOPLAYER_CRASHED_CAPTION,
+						System.Windows.Forms.MessageBox.Show(Resources.AUDIOPLAYER_CRASHED_TEXT, Resources.AUDIOPLAYER_CRASHED_CAPTION,
 							System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
 						break;
 					}
@@ -183,14 +208,15 @@ namespace MLifter.BusinessLayer.Helper
 		}
 
 		/// <summary>
+		/// Stops the playback.
+		/// </summary>
+		/// <remarks>CFI, 2012-03-17</remarks>
+		public void Stop() { StopThread(true); }
+		/// <summary>
 		/// Plays the current audio file and stops the thread afterwards.
 		/// </summary>
 		/// <remarks>Documented by Dev02, 2008-02-22</remarks>
-		public void StopThread()
-		{
-			StopThread(false);
-		}
-
+		public void StopThread() { StopThread(false); }
 		/// <summary>
 		/// Stops the thread.
 		/// </summary>
@@ -204,5 +230,19 @@ namespace MLifter.BusinessLayer.Helper
 			lock (playQueue)
 				Monitor.Pulse(playQueue);
 		}
+
+		/// <summary>
+		/// Gets or sets a value indicating whether this instance is disposed.
+		/// </summary>
+		/// <value>
+		/// 	<c>true</c> if this instance is disposed; otherwise, <c>false</c>.
+		/// </value>
+		/// <remarks>CFI, 2012-03-17</remarks>
+		public bool IsDisposed { get; set; }
+		/// <summary>
+		/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+		/// </summary>
+		/// <remarks>CFI, 2012-03-17</remarks>
+		public void Dispose() { IsDisposed = true; }
 	}
 }

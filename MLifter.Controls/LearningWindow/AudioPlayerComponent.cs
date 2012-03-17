@@ -1,11 +1,10 @@
 using System;
-using System.ComponentModel;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
-using System.Text;
-using MLifter.BusinessLayer.Helper;
-using MLifter.BusinessLayer;
 using System.IO;
+using System.Text;
+using MLifter.BusinessLayer;
 using MLifter.DAL.Interfaces;
 
 namespace MLifter.Controls.LearningWindow

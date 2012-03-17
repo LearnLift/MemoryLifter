@@ -1,21 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-
+using MLifter;
+using MLifter.AudioTools;
 using MLifter.BusinessLayer.Properties;
-using MLifter.BusinessLayer.Helper;
 using MLifter.DAL;
+using MLifter.DAL.DB.PostgreSQL;
 using MLifter.DAL.Interfaces;
 using MLifter.DAL.Interfaces.DB;
-using System.ComponentModel;
 using MLifter.DAL.Tools;
-
-using MLifter;
 using MLifter.Generics;
-using MLifter.DAL.DB.PostgreSQL;
 using Npgsql;
 
 
