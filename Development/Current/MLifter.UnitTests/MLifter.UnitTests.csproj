@@ -170,9 +170,6 @@
     <Content Include="Resources\homer2.jpg" />
     <Content Include="Resources\homer2.wav" />
     <Content Include="Resources\big_audio.wav" />
-    <None Include="TestSources.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MLifter.AudioTools\MLifter.AudioTools.csproj">
