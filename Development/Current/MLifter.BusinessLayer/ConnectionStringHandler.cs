@@ -794,22 +794,22 @@ namespace MLifter.BusinessLayer
 				switch (reader.Name)
 				{
 					case "Name":
-						Name = reader.ReadElementContentAsString();
+						Name = reader.ReadElementContentAsString().Trim();
 						break;
 					case "LearningModulesURI":
-						LearningModulesURI = reader.ReadElementContentAsString();
+						LearningModulesURI = reader.ReadElementContentAsString().Trim();
 						break;
 					case "SyncType":
-						SyncType = (SyncType)Enum.Parse(typeof(SyncType), reader.ReadElementContentAsString());
+						SyncType = (SyncType)Enum.Parse(typeof(SyncType), reader.ReadElementContentAsString().Trim());
 						break;
 					case "SyncURI":
-						SyncURI = reader.ReadElementContentAsString();
+						SyncURI = reader.ReadElementContentAsString().Trim();
 						break;
 					case "MediaURI":
-						MediaURI = reader.ReadElementContentAsString() + Resources.MediaURI_Suffix;
+						MediaURI = reader.ReadElementContentAsString().Trim() + Resources.MediaURI_Suffix;
 						break;
 					case "ExtensionURI":
-						ExtensionURI = reader.ReadElementContentAsString() + Resources.ExtensionURI_Suffix;
+						ExtensionURI = reader.ReadElementContentAsString().Trim() + Resources.ExtensionURI_Suffix;
 						break;
 					default:
 #if debug_output
@@ -1052,28 +1052,28 @@ namespace MLifter.BusinessLayer
 				switch (reader.Name)
 				{
 					case "Name":
-						name = reader.ReadElementContentAsString();
+						name = reader.ReadElementContentAsString().Trim();
 						break;
 					case "Server":
-						server = reader.ReadElementContentAsString();
+						server = reader.ReadElementContentAsString().Trim();
 						break;
 					case "Port":
 						port = reader.ReadElementContentAsInt();
 						break;
 					case "UserId":
-						userId = reader.ReadElementContentAsString();
+						userId = reader.ReadElementContentAsString().Trim();
 						break;
 					case "Password":
-						password = reader.ReadElementContentAsString();
+						password = reader.ReadElementContentAsString().Trim();
 						break;
 					case "Ssl":
 						ssl = reader.ReadElementContentAsBoolean();
 						break;
 					case "Database":
-						database = reader.ReadElementContentAsString();
+						database = reader.ReadElementContentAsString().Trim();
 						break;
 					case "SyncType":
-						SyncType = (SyncType)Enum.Parse(typeof(SyncType), reader.ReadElementContentAsString());
+						SyncType = (SyncType)Enum.Parse(typeof(SyncType), reader.ReadElementContentAsString().Trim());
 
 						// [ML-2349]  Deactivate HalfSynchronizedWithDbAccess sync mode
 						if (SyncType == SyncType.HalfSynchronizedWithDbAccess)
@@ -1081,13 +1081,13 @@ namespace MLifter.BusinessLayer
 
 						break;
 					case "SyncURI":
-						SyncURI = reader.ReadElementContentAsString();
+						SyncURI = reader.ReadElementContentAsString().Trim();
 						break;
 					case "MediaURI":
-						MediaURI = reader.ReadElementContentAsString() + Resources.MediaURI_Suffix;
+						MediaURI = reader.ReadElementContentAsString().Trim() + Resources.MediaURI_Suffix;
 						break;
 					case "ExtensionURI":
-						ExtensionURI = reader.ReadElementContentAsString() + Resources.ExtensionURI_Suffix;
+						ExtensionURI = reader.ReadElementContentAsString().Trim() + Resources.ExtensionURI_Suffix;
 						break;
 					case "OtherProperties":
 						otherProperties = otherPropertiesSerializer.Deserialize(reader) as SerializableDictionary<string, object>;
@@ -1262,10 +1262,10 @@ namespace MLifter.BusinessLayer
 				switch (reader.Name)
 				{
 					case "Name":
-						name = reader.ReadElementContentAsString();
+						name = reader.ReadElementContentAsString().Trim();
 						break;
 					case "UncPath":
-						connectionString = reader.ReadElementContentAsString().Replace("%MLMyDocuments%", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+						connectionString = reader.ReadElementContentAsString().Trim().Replace("%MLMyDocuments%", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
 						connectionString = connectionString.Replace("MEMSTICK:\\", Path.GetPathRoot(Environment.CommandLine.Replace("\"", string.Empty)));
 						break;
 					case "IsDefault":

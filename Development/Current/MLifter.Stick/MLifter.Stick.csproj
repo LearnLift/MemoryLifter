@@ -89,7 +89,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>5822</DevelopmentServerPort>
+          <DevelopmentServerPort>2447</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:90/MLifterStick</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

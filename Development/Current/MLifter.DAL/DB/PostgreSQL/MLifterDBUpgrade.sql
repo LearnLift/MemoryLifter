@@ -319,6 +319,285 @@ $BODY$
 			RAISE INFO 'Updating V% to V1.0.3 %', current_version, new_line;
 			
 			DROP TABLE IF EXISTS "ClientAccessList" CASCADE;
+			DROP FUNCTION "RenderBatchAnchors"(IN sync_min_received_anchor timestamp with time zone, IN sync_max_received_anchor timestamp with time zone, IN sync_batch_size BIGINT, IN sync_client_id_hash INTEGER, IN session_lm_id INTEGER, IN session_user_id INTEGER, IN isNewDb BOOLEAN, OUT sync_row_count INTEGER, OUT sync_batch_count INTEGER);
+			CREATE OR REPLACE FUNCTION "RenderBatchAnchors"(IN sync_min_received_anchor timestamp with time zone, IN sync_max_received_anchor timestamp with time zone, IN sync_batch_size BIGINT, IN sync_client_id_hash INTEGER, IN current_session_lm_id INTEGER, IN current_session_user_id INTEGER, IN isNewDb BOOLEAN, OUT sync_row_count INTEGER, OUT sync_batch_count INTEGER)
+			  RETURNS SETOF record AS $$
+			DECLARE
+				tablename character varying;
+				row_number integer;
+			BEGIN
+				CREATE TEMPORARY TABLE "RowTimestamps" (
+					create_timestamp timestamp without time zone NOT NULL,
+					update_timestamp timestamp without time zone,
+					updated timestamp without time zone
+					) ON COMMIT DROP;
+
+				-- caching of complex query results
+				CREATE TEMPORARY TABLE "SyncSettings" ON COMMIT DROP
+					AS SELECT id, synonym_gradings, type_gradings, multiple_choice_options, query_directions, query_types, logo, question_stylesheet, answer_stylesheet, snooze_options, cardstyle, boxes 
+						FROM "Settings" 
+						WHERE id IN 
+							(SELECT id FROM "Syncview_Settings" AS S WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id);
+
+				CREATE TEMPORARY TABLE "SyncMediaContent" ON COMMIT DROP
+					AS SELECT id FROM "Syncview_MediaContent" AS S 
+						WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id;
+
+				-- collecting row timestamps from every table
+				INSERT INTO "RowTimestamps" 
+					SELECT create_timestamp, update_timestamp FROM "DatabaseInformation" UNION
+					SELECT create_timestamp, update_timestamp FROM "Categories" UNION
+					SELECT create_timestamp, update_timestamp FROM "LearningModules";
+		
+				INSERT INTO "RowTimestamps"
+					SELECT create_timestamp, update_timestamp FROM "Extensions"
+						WHERE lm_id=current_session_lm_id UNION
+					SELECT create_timestamp, update_timestamp FROM "ExtensionActions"
+						WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id);
+	
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps" 
+						SELECT create_timestamp, update_timestamp FROM "DatabaseInformation_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Categories_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "LearningModules_tombstone";
+				END IF;
+	
+				IF NOT isNewDb THEN
+					 INSERT INTO "RowTimestamps" 
+						SELECT create_timestamp, update_timestamp FROM "Extensions_tombstone"
+							WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id) UNION
+						SELECT create_timestamp, update_timestamp FROM "ExtensionActions_tombstone"
+							WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id);
+				END IF;
+
+				INSERT INTO "RowTimestamps" -- user profile
+					SELECT create_timestamp, update_timestamp FROM "UserProfiles" 
+						WHERE id=current_session_user_id UNION
+					SELECT create_timestamp, update_timestamp FROM "UserCardState"
+						WHERE user_id=current_session_user_id AND cards_id IN 
+							(SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "LearningSessions"
+						WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id UNION
+					SELECT create_timestamp, update_timestamp FROM "LearnLog"
+						WHERE session_id IN 
+							(SELECT id FROM "LearningSessions" WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "UserProfilesLearningModulesSettings"
+						WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id;
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps"
+						SELECT create_timestamp, update_timestamp FROM "UserProfiles_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "UserCardState_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "LearningSessions_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "LearnLog_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "UserProfilesLearningModulesSettings_tombstone";
+				END IF;
+
+				INSERT INTO "RowTimestamps" -- user security stuff
+					SELECT create_timestamp, update_timestamp FROM "Permissions" UNION
+					SELECT create_timestamp, update_timestamp FROM "TypeDefinitions" UNION
+					SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups" 
+						WHERE users_id=current_session_user_id UNION
+					SELECT create_timestamp, update_timestamp FROM "UserGroups" 
+						WHERE id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList" 
+						WHERE users_id=current_session_user_id  UNION
+					SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList" 
+						WHERE groups_id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "AccessControlList" 
+						WHERE id IN (SELECT id FROM "Syncview_AccessControlList" AS s 
+							WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "ObjectList" 
+						WHERE id IN (SELECT a.object_id FROM "AccessControlList" AS a JOIN "Syncview_AccessControlList" AS s ON a.id=s.id 
+							WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id);
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps"
+						SELECT create_timestamp, update_timestamp FROM "Permissions_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "TypeDefinitions_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "UserGroups_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups_tombstone"UNION			
+						SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "AccessControlList_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "ObjectList_tombstone";
+				END IF;
+
+				INSERT INTO "RowTimestamps" -- learn content
+					SELECT create_timestamp, update_timestamp FROM "LearningModules_Cards"
+						WHERE lm_id=current_session_lm_id UNION
+					SELECT create_timestamp, update_timestamp FROM "Chapters"
+						WHERE lm_id=current_session_lm_id UNION
+					SELECT create_timestamp, update_timestamp FROM "SelectedLearnChapters" 
+						WHERE settings_id IN (SELECT id FROM "SyncSettings") 
+						AND chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "Cards" 
+						WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "TextContent"
+						WHERE cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "Chapters_Cards"
+						WHERE chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id);	
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps"
+						SELECT create_timestamp, update_timestamp FROM "LearningModules_Cards_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Chapters_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "SelectedLearnChapters_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Cards_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "TextContent_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Chapters_Cards_tombstone";
+				END IF;	
+	
+				INSERT INTO "RowTimestamps" -- settings
+					SELECT create_timestamp, update_timestamp FROM "Settings" 
+						WHERE id IN (SELECT id FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "SynonymGradings"
+						WHERE id IN (SELECT synonym_gradings FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "TypeGradings"
+						WHERE id IN (SELECT type_gradings FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "MultipleChoiceOptions"
+						WHERE id IN (SELECT multiple_choice_options FROm "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "QueryDirections"
+						WHERE id IN (SELECT query_directions FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "QueryTypes"
+						WHERE id IN (SELECT query_types FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "StyleSheets"
+						WHERE id IN (SELECT question_stylesheet FROM "SyncSettings" UNION SELECT answer_stylesheet FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "SnoozeOptions"
+						WHERE id IN (SELECT snooze_options FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "CardStyles"
+						WHERE id IN (SELECT cardstyle FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "MediaContent_CardStyles"
+						WHERE cardstyles_id IN (SELECT cardstyle FROM "SyncSettings") UNION
+					SELECT create_timestamp, update_timestamp FROM "Boxes"
+						WHERE id IN (SELECT boxes FROM "SyncSettings");
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps" 
+						SELECT create_timestamp, update_timestamp FROM "Settings_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "SynonymGradings_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "TypeGradings_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "MultipleChoiceOptions_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "QueryDirections_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "QueryTypes_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "StyleSheets_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "SnoozeOptions_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "CardStyles_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "MediaContent_CardStyles_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Boxes_tombstone";
+				END IF;	
+
+				INSERT INTO "RowTimestamps" -- media stuff
+					SELECT create_timestamp, update_timestamp FROM "MediaContent" 
+						WHERE id IN (SELECT id FROM "SyncMediaContent") UNION
+					SELECT create_timestamp, update_timestamp FROM "Cards_MediaContent"
+						WHERE media_id IN (SELECT id FROM "SyncMediaContent")
+						OR cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
+					SELECT create_timestamp, update_timestamp FROM "CommentarySounds"
+						WHERE settings_id IN (SELECT logo FROM "SyncSettings") 
+						OR media_id IN (SELECT id FROM "SyncMediaContent") UNION
+					SELECT create_timestamp, update_timestamp FROM "MediaProperties"
+						WHERE media_id IN (SELECT id FROM "SyncMediaContent");
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps" 
+						SELECT create_timestamp, update_timestamp FROM "MediaContent_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Cards_MediaContent_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "CommentarySounds_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "MediaProperties_tombstone";
+				END IF;	
+
+				INSERT INTO "RowTimestamps" -- tags
+					SELECT create_timestamp, update_timestamp FROM "MediaContent_Tags"
+						WHERE media_id IN (SELECT id FROM "SyncMediaContent") UNION
+					SELECT create_timestamp, update_timestamp FROM "LearningModules_Tags"
+						WHERE lm_id=current_session_lm_id UNION
+					SELECT create_timestamp, update_timestamp FROM "Tags"
+						WHERE id IN (SELECT tags_id FROM "MediaContent_Tags" AS M JOIN "SyncMediaContent" AS S ON M.media_id=S.id)
+						OR id IN (SELECT tags_id FROM "LearningModules_Tags" WHERE lm_id=current_session_lm_id);
+		
+				IF NOT isNewDb THEN
+					INSERT INTO "RowTimestamps" 
+						SELECT create_timestamp, update_timestamp FROM "MediaContent_Tags_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "LearningModules_Tags_tombstone" UNION
+						SELECT create_timestamp, update_timestamp FROM "Tags_tombstone";
+				END IF;	
+
+				-- calculate updated value
+				UPDATE "RowTimestamps" SET updated=GREATEST(create_timestamp, update_timestamp);
+
+				-- clean up timestamps
+				DELETE FROM "RowTimestamps"
+					WHERE updated<sync_min_received_anchor
+					OR updated>sync_max_received_anchor;
+
+				-- calculations
+				sync_row_count := count(*) FROM "RowTimestamps";
+				sync_batch_count := CEILING(sync_row_count::real/sync_batch_size);
+
+				-- insert timestamps into session table
+				DELETE FROM "BatchSessions" WHERE client_id=sync_client_id_hash;
+				INSERT INTO "BatchSessions" (client_id, batch_size, batch_count)
+					VALUES (sync_client_id_hash, sync_batch_size, sync_batch_count);
+
+				INSERT INTO "BatchTimestamps" SELECT sync_client_id_hash, updated FROM "RowTimestamps" ORDER BY updated ASC;		
+	
+				RETURN NEXT;
+			END;
+			$$ LANGUAGE 'plpgsql' SECURITY DEFINER;
+			DROP FUNCTION "GetNewBatchAnchor"(IN sync_last_received_anchor timestamp with time zone, IN sync_batch_size bigint, OUT sync_max_received_anchor timestamp with time zone, OUT sync_new_received_anchor timestamp with time zone, INOUT sync_batch_count INTEGER, IN sync_client_id_hash INTEGER, IN session_lm_id INTEGER, IN session_user_id INTEGER, IN isNewDb BOOLEAN);
+			CREATE OR REPLACE FUNCTION "GetNewBatchAnchor"(IN sync_last_received_anchor timestamp with time zone, IN sync_batch_size bigint, OUT sync_max_received_anchor timestamp with time zone, OUT sync_new_received_anchor timestamp with time zone, INOUT sync_batch_count INTEGER, IN sync_client_id_hash INTEGER, IN current_session_lm_id INTEGER, IN current_session_user_id INTEGER, IN isNewDb BOOLEAN)
+			  RETURNS SETOF record AS $$
+			DECLARE
+				batch_size		BIGINT;
+				last_received_anchor	TIMESTAMP WITH TIME ZONE;
+				sync_row_count		INTEGER;
+			BEGIN
+				-- Set a default batch size if a valid one is not passed in.
+				IF sync_batch_size IS NULL OR sync_batch_size<=0 THEN
+					batch_size := 1000;
+				ELSE
+					batch_size := sync_batch_size;
+				END IF;
+
+				-- Before selecting the first batch of changes,
+				-- set the maximum anchor value for this synchronization session.
+				sync_max_received_anchor := now();
+
+				-- If this is the first synchronization session for a database,
+				-- get the lowest possible timestamp value. 
+				IF sync_last_received_anchor IS NULL THEN 
+					last_received_anchor := '-infinity'::timestamp;
+				ELSE
+					last_received_anchor := sync_last_received_anchor;
+				END IF;
+
+				-- Calculate the batch anchors in case this is the first batch of a synchronization session
+				IF (sync_batch_count <= 0) THEN
+					SELECT r.sync_row_count, r.sync_batch_count INTO sync_row_count, sync_batch_count 
+					FROM "RenderBatchAnchors"(last_received_anchor, sync_max_received_anchor, sync_batch_size, sync_client_id_hash, current_session_lm_id, current_session_user_id, isNewDb) AS r;
+				END IF;
+
+				-- Select the current anchor timestamp
+				SELECT updated FROM "BatchTimestamps"
+					WHERE client_id=sync_client_id_hash 
+					LIMIT 1 OFFSET sync_batch_size
+					INTO sync_new_received_anchor;
+
+				-- If last batch: clean up whole session
+				IF sync_new_received_anchor IS NULL THEN
+					sync_new_received_anchor = sync_max_received_anchor;
+					DELETE FROM "BatchSessions" WHERE client_id = sync_client_id_hash;
+				END IF;
+
+				-- Delete old Timestamps
+				DELETE FROM "BatchTimestamps"
+					WHERE client_id = sync_client_id_hash
+					AND updated <= sync_new_received_anchor;
+
+				RETURN NEXT;
+			END;
+			$$ LANGUAGE 'plpgsql' SECURITY DEFINER;
 
 			-- update current version
 			UPDATE "DatabaseInformation" SET value='1.0.3' WHERE property='Version';

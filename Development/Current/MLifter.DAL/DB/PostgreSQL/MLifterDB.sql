@@ -2782,7 +2782,7 @@ CREATE TABLE "BatchTimestamps"
 );
 
 -- synchronisation helper functions
-CREATE OR REPLACE FUNCTION "RenderBatchAnchors"(IN sync_min_received_anchor timestamp with time zone, IN sync_max_received_anchor timestamp with time zone, IN sync_batch_size BIGINT, IN sync_client_id_hash INTEGER, IN session_lm_id INTEGER, IN session_user_id INTEGER, IN isNewDb BOOLEAN, OUT sync_row_count INTEGER, OUT sync_batch_count INTEGER)
+CREATE OR REPLACE FUNCTION "RenderBatchAnchors"(IN sync_min_received_anchor timestamp with time zone, IN sync_max_received_anchor timestamp with time zone, IN sync_batch_size BIGINT, IN sync_client_id_hash INTEGER, IN current_session_lm_id INTEGER, IN current_session_user_id INTEGER, IN isNewDb BOOLEAN, OUT sync_row_count INTEGER, OUT sync_batch_count INTEGER)
   RETURNS SETOF record AS $$
 DECLARE
 	tablename character varying;
@@ -2799,11 +2799,11 @@ BEGIN
 		AS SELECT id, synonym_gradings, type_gradings, multiple_choice_options, query_directions, query_types, logo, question_stylesheet, answer_stylesheet, snooze_options, cardstyle, boxes 
 			FROM "Settings" 
 			WHERE id IN 
-				(SELECT id FROM "Syncview_Settings" AS S WHERE S.session_lm_id=session_lm_id OR S.session_user_id=session_user_id);
+				(SELECT id FROM "Syncview_Settings" AS S WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id);
 
 	CREATE TEMPORARY TABLE "SyncMediaContent" ON COMMIT DROP
 		AS SELECT id FROM "Syncview_MediaContent" AS S 
-			WHERE S.session_lm_id=session_lm_id OR S.session_user_id=session_user_id;
+			WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id;
 
 	-- collecting row timestamps from every table
 	INSERT INTO "RowTimestamps" 
@@ -2813,9 +2813,9 @@ BEGIN
 		
 	INSERT INTO "RowTimestamps"
 		SELECT create_timestamp, update_timestamp FROM "Extensions"
-			WHERE lm_id=session_lm_id UNION
+			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "ExtensionActions"
-			WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=session_lm_id);
+			WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id);
 	
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps" 
@@ -2827,24 +2827,24 @@ BEGIN
 	IF NOT isNewDb THEN
 		 INSERT INTO "RowTimestamps" 
 			SELECT create_timestamp, update_timestamp FROM "Extensions_tombstone"
-				WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=session_lm_id) UNION
+				WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id) UNION
 			SELECT create_timestamp, update_timestamp FROM "ExtensionActions_tombstone"
-				WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=session_lm_id);
+				WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id);
 	END IF;
 
 	INSERT INTO "RowTimestamps" -- user profile
 		SELECT create_timestamp, update_timestamp FROM "UserProfiles" 
-			WHERE id=session_user_id UNION
+			WHERE id=current_session_user_id UNION
 		SELECT create_timestamp, update_timestamp FROM "UserCardState"
-			WHERE user_id=session_user_id AND cards_id IN 
-				(SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=session_lm_id) UNION
+			WHERE user_id=current_session_user_id AND cards_id IN 
+				(SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "LearningSessions"
-			WHERE user_id=session_user_id AND lm_id=session_lm_id UNION
+			WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "LearnLog"
 			WHERE session_id IN 
-				(SELECT id FROM "LearningSessions" WHERE user_id=session_user_id AND lm_id=session_lm_id) UNION
+				(SELECT id FROM "LearningSessions" WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "UserProfilesLearningModulesSettings"
-			WHERE user_id=session_user_id AND lm_id=session_lm_id;
+			WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id;
 		
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
@@ -2859,19 +2859,19 @@ BEGIN
 		SELECT create_timestamp, update_timestamp FROM "Permissions" UNION
 		SELECT create_timestamp, update_timestamp FROM "TypeDefinitions" UNION
 		SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups" 
-			WHERE users_id=session_user_id UNION
+			WHERE users_id=current_session_user_id UNION
 		SELECT create_timestamp, update_timestamp FROM "UserGroups" 
-			WHERE id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=session_user_id) UNION
+			WHERE id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList" 
-			WHERE users_id=session_user_id  UNION
+			WHERE users_id=current_session_user_id  UNION
 		SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList" 
-			WHERE groups_id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=session_user_id) UNION
+			WHERE groups_id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "AccessControlList" 
 			WHERE id IN (SELECT id FROM "Syncview_AccessControlList" AS s 
-				WHERE s.session_lm_id=session_lm_id OR s.session_user_id=session_user_id) UNION
+				WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "ObjectList" 
 			WHERE id IN (SELECT a.object_id FROM "AccessControlList" AS a JOIN "Syncview_AccessControlList" AS s ON a.id=s.id 
-				WHERE s.session_lm_id=session_lm_id OR s.session_user_id=session_user_id);
+				WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id);
 		
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
@@ -2887,18 +2887,18 @@ BEGIN
 
 	INSERT INTO "RowTimestamps" -- learn content
 		SELECT create_timestamp, update_timestamp FROM "LearningModules_Cards"
-			WHERE lm_id=session_lm_id UNION
+			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "Chapters"
-			WHERE lm_id=session_lm_id UNION
+			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "SelectedLearnChapters" 
 			WHERE settings_id IN (SELECT id FROM "SyncSettings") 
-			AND chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=session_lm_id) UNION
+			AND chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "Cards" 
-			WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=session_lm_id) UNION
+			WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "TextContent"
-			WHERE cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=session_lm_id) UNION
+			WHERE cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "Chapters_Cards"
-			WHERE chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=session_lm_id);	
+			WHERE chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id);	
 		
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
@@ -2954,7 +2954,7 @@ BEGIN
 			WHERE id IN (SELECT id FROM "SyncMediaContent") UNION
 		SELECT create_timestamp, update_timestamp FROM "Cards_MediaContent"
 			WHERE media_id IN (SELECT id FROM "SyncMediaContent")
-			OR cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=session_lm_id) UNION
+			OR cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "CommentarySounds"
 			WHERE settings_id IN (SELECT logo FROM "SyncSettings") 
 			OR media_id IN (SELECT id FROM "SyncMediaContent") UNION
@@ -2973,10 +2973,10 @@ BEGIN
 		SELECT create_timestamp, update_timestamp FROM "MediaContent_Tags"
 			WHERE media_id IN (SELECT id FROM "SyncMediaContent") UNION
 		SELECT create_timestamp, update_timestamp FROM "LearningModules_Tags"
-			WHERE lm_id=session_lm_id UNION
+			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "Tags"
 			WHERE id IN (SELECT tags_id FROM "MediaContent_Tags" AS M JOIN "SyncMediaContent" AS S ON M.media_id=S.id)
-			OR id IN (SELECT tags_id FROM "LearningModules_Tags" WHERE lm_id=session_lm_id);
+			OR id IN (SELECT tags_id FROM "LearningModules_Tags" WHERE lm_id=current_session_lm_id);
 		
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps" 
@@ -3008,7 +3008,7 @@ BEGIN
 END;
 $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
 
-CREATE OR REPLACE FUNCTION "GetNewBatchAnchor"(IN sync_last_received_anchor timestamp with time zone, IN sync_batch_size bigint, OUT sync_max_received_anchor timestamp with time zone, OUT sync_new_received_anchor timestamp with time zone, INOUT sync_batch_count INTEGER, IN sync_client_id_hash INTEGER, IN session_lm_id INTEGER, IN session_user_id INTEGER, IN isNewDb BOOLEAN)
+CREATE OR REPLACE FUNCTION "GetNewBatchAnchor"(IN sync_last_received_anchor timestamp with time zone, IN sync_batch_size bigint, OUT sync_max_received_anchor timestamp with time zone, OUT sync_new_received_anchor timestamp with time zone, INOUT sync_batch_count INTEGER, IN sync_client_id_hash INTEGER, IN current_session_lm_id INTEGER, IN current_session_user_id INTEGER, IN isNewDb BOOLEAN)
   RETURNS SETOF record AS $$
 DECLARE
 	batch_size		BIGINT;
@@ -3037,7 +3037,7 @@ BEGIN
 	-- Calculate the batch anchors in case this is the first batch of a synchronization session
 	IF (sync_batch_count <= 0) THEN
 		SELECT r.sync_row_count, r.sync_batch_count INTO sync_row_count, sync_batch_count 
-		FROM "RenderBatchAnchors"(last_received_anchor, sync_max_received_anchor, sync_batch_size, sync_client_id_hash, session_lm_id, session_user_id, isNewDb) AS r;
+		FROM "RenderBatchAnchors"(last_received_anchor, sync_max_received_anchor, sync_batch_size, sync_client_id_hash, current_session_lm_id, current_session_user_id, isNewDb) AS r;
 	END IF;
 
 	-- Select the current anchor timestamp
