@@ -250,8 +250,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>if not exist "$(TargetDir)\Libraries" md "$(TargetDir)Libraries"
-copy "$(ProjectDir)..\..\3rdParty\Lame\*.dll" "$(TargetDir)Libraries"
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
