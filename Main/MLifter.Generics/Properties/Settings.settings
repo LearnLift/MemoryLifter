@@ -5,5 +5,8 @@
     <Setting Name="MLifterStickCheckFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">LearningModules</Value>
     </Setting>
+    <Setting Name="CacheFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MemoryLifter\2.4\Cache</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -70,6 +70,24 @@ namespace MLifterAudioTools.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Audio disabled.
+        /// </summary>
+        internal static string AUDIOPLAYER_CRASHED_CAPTION {
+            get {
+                return ResourceManager.GetString("AUDIOPLAYER_CRASHED_CAPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Due to an error with the audio player, sound has been disabled. Restart MemoryLifter to enable sound..
+        /// </summary>
+        internal static string AUDIOPLAYER_CRASHED_TEXT {
+            get {
+                return ResourceManager.GetString("AUDIOPLAYER_CRASHED_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;ArrayOfCodec xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
         ///  &lt;Codec&gt;

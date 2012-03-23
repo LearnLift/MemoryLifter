@@ -573,9 +573,6 @@ Pour désactiver ou modifier les cartes ajoutées par la suite, cliquez sur le b
   <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
     <value>Continuez à m'informer</value>
   </data>
-  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
-    <value>Une adresse e-mail valable est requise. Corrigez votre entrée, s'il vous plaît.</value>
-  </data>
   <data name="IMPORTING" xml:space="preserve">
     <value>Importation en cours</value>
   </data>
@@ -735,9 +732,6 @@ Ajoutez de nouvelles cartes en sélectionnant "Spécifier les chapitres à appre
   </data>
   <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
     <value>Annuler</value>
-  </data>
-  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
-    <value>Entrée non valide</value>
   </data>
   <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
     <value>Si vous pensez maîtriser cette carte vous pouvez toujours la basculer dans une boîte supérieure.</value>

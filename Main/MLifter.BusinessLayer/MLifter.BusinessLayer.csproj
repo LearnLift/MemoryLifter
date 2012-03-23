@@ -21,6 +21,8 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -35,8 +37,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -83,9 +83,6 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\..\3rdParty\Microsoft\DirectX\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Synchronization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\..\3rdParty\Microsoft\Synchronisation\x86\Microsoft.Synchronization.dll</HintPath>
     </Reference>
@@ -117,7 +114,6 @@
     <Compile Include="ConnectionStringHandler.cs" />
     <Compile Include="Dictionary.cs" />
     <Compile Include="Helper\Exception.cs" />
-    <Compile Include="Helper\AudioPlayer.cs" />
     <Compile Include="LearningModulesIndex\LearningModulesIndex.cs" />
     <Compile Include="LearningModulesIndex\LearningModulesIndex.LoadIndexEntry.cs" />
     <Compile Include="LearningModulesIndex\LearningModulesIndex.PreviewGeneration.cs" />

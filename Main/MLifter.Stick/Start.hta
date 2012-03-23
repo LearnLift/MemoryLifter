@@ -1,1306 +1,1059 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	 PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Welcome to the ML Pocket Suite</title>
-    <hta:application applicationname="MemoryLifter" icon="Images/App.ico" border="thin"
-        borderstyle="normal" caption="yes" maximizebutton="no" minimizebutton="yes" showintaskbar="yes"
-        singleinstance="yes" sysmenu="yes" version="1.0" windowstate="normal" scroll="no" />
+	<title>Welcome to the MemoryLifter Pocket Suite</title>
+	<hta:application applicationname="MemoryLifter" icon="Images/App.ico" border="thin"
+		borderstyle="normal" caption="yes" maximizebutton="no" minimizebutton="yes" showintaskbar="yes"
+		singleinstance="yes" sysmenu="yes" version="1.0" windowstate="normal" scroll="no" />
 
-    <script language="javascript" type="text/javascript">
+	<script language="javascript" type="text/javascript">
 
-        window.onerror = function()
-        {
-            alert("An unknown error occured!");
-            return true;
-        }
+		window.onerror = function()
+		{
+			alert("An unknown error occured!");
+			return true;
+		}
 
-        var DOTNETFRAMEWORK_IDENTIFIER = ".NET CLR";
-        var majorVersion = 0;
-        var autorun = false;
-        var rssFeedUri = "http://www.memorylifter.com/news-publications/rss.xml";
-        var curVersionUri = "http://www.memorylifter.com/fileadmin/program/curMLver.xml";
-        var allowStartML = true;
-        var maxNews = 3;
-        var maxRecentFiles = 4;
-        var showRecentFiles = true;
-        var maxLearningModulesWithoutScroll = 9;
-        var MEDIA_PLAYER_INSTALLER = "http://www.microsoft.com/windows/windowsmedia/";
-        var MLIFTER_EXE = "MemoryLifter22\\MLifter.exe";
-        var MLIFTER_CONFIG = "MemoryLifter22\\MLifter.exe.config.user";
-        var DOTNETFRAMEWORK_INSTALLER = "Install\\dotnetfx.exe";
-        var MLIFTER_INSTALLER = "Install\\MLifter22Setup.exe";
-        var MLIFTER_INSTALLER_FULL = "Install\\MLifter22Setup_withDotNet.exe";
-        var MLIFTER_LEARNING_MODULES = "LearningModules\\";
-        var MLIFTER_LICENSE = "Data\\license.html";
-        var MLIFTER_VIDEO = "Data\\presentation_en.mpg";
-        var MLIFTER_VIDEO_DE = "Data\\presentation_de.mpg";
-        var MLIFTER_VERSION_FILE = "MemoryLifter22\\MLifter.exe.version";
-        var MLIFTER_LM_ICON = "Images/learning.gif";
-        var basePath = "";
-        var windowWidth = 660;
-        var windowHeight = 580;
+		var DOTNETFRAMEWORK_IDENTIFIER = ".NET CLR";
+		var majorVersion = 0;
+		var autorun = false;
+		var rssFeedUri = "http://www.memorylifter.com/news/rss.xml";
+		var maxNews = 3;
+		var maxRecentFiles = 4;
+		var showRecentFiles = true;
+		var maxLearningModulesWithoutScroll = 9;
+		var MEDIA_PLAYER_INSTALLER = "http://www.microsoft.com/windows/windowsmedia/";
+		var MLIFTER_EXE = "MemoryLifter\\MemoryLifter.exe";
+		var MLIFTER_CONFIG = "MemoryLifter\\MemoryLifter.exe.config.user";
+		var DOTNETFRAMEWORK_INSTALLER = "http://www.microsoft.com/download/en/details.aspx?id=17851";
+		var MLIFTER_INSTALLER = "Install\\MemoryLifter-Setup.exe";
+		var MLIFTER_LEARNING_MODULES = "LearningModules\\";
+		var MLIFTER_LICENSE = "Data\\license.html";
+		var MLIFTER_LM_ICON = "Images/learning.gif";
+		var basePath = "";
+		var windowWidth = 668;
+		var windowHeight = 615;
 
-        var isMatch = document.URL.match(/^(.*\\)start\.hta/gi);
-        if (isMatch)
-        {
-            if (isMatch.length > 0)
-            {
-                basePath = String(RegExp.$1);
-            }
-        }
-
-        //Check WindowsMediaPlayer Version
-        var fHasWMP64 = navigator.mimeTypes && navigator.mimeTypes["video/x-ms-wm"] && (navigator.mimeTypes["video/x-ms-wm"].enabledPlugin != null) && navigator.mimeTypes["video/x-ms-wmv"] && (navigator.mimeTypes["video/x-ms-wmv"].enabledPlugin != null);
-        if (window.ActiveXObject)
-        {
-            try
-            {
-                fHasWMP64 = new ActiveXObject("MediaPlayer.MediaPlayer.1");
-            }
-            catch (e)
-            {
-                fHasWMP64 = false;
-            }
-        }
-
-        //Check Framework Version
-        var frameworkVersions = window.navigator.userAgent.match(/\.NET CLR [\d\.]+/g);
-        if (frameworkVersions.length > 0)
-        {
-            for (var i = 0; i < frameworkVersions.length; ++i)
-            {
-                var thisMatch = frameworkVersions[i].match(/\.NET CLR ([\d]+)\./g);
-                var thisVersion = parseInt(RegExp.$1);
-                if ((thisVersion != NaN) && (majorVersion < thisVersion))
-                    majorVersion = thisVersion;
-            }
-            //majorVersion = 1;
-        }
-
-        //Check WindowsMediaPlayer version and return an error message if required version not available
-        function checkMediaPlayer()
-        {
-            if (!fHasWMP64)
-            {
-                document.getElementById('errors').innerHTML = "<div>It seems as Windows Media Player (version 6.4 or higher) is not available. You cannot use MemoryLifter until you install the Windows Media Player. <a href='" + MEDIA_PLAYER_INSTALLER + "'>Click here</a> to install Windows Media Player now.</div>";
-                document.getElementById('errors').style.display = 'block';
-
-                reSizeContent();
-            }
-        }
-
-        //Check .NET Framework version and return an error message if required version not available
-        function checkFramework()
-        {
-            if (majorVersion == 0)      //no Framework detected
-            {
-                document.getElementById('errors').innerHTML = "<div>The .NET Framework was not detected. You cannot install this product until you install the .NET Framework 2.0. <a href='" + basePath + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
-                document.getElementById('errors').style.display = 'block';
-
-                reSizeContent();
-            }
-            else if (majorVersion < 2)  //Framework has not the required Version 
-            {
-                document.getElementById('errors').innerHTML = "<div>The required version of the .NET Framework was not detected. You cannot install this product until you install the .NET Framework 2.0. <a href='" + basePath + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
-                document.getElementById('errors').style.display = 'block';
-
-                reSizeContent();
-            }
-        }
-
-        //Starts the MemoryLifter with/without Paramters
-        function startML(closeWindow, cmdLineParam)
-        {
-            if (!allowStartML)
-                return;
-
-            var cmdLine = basePath + MLIFTER_EXE;
-            if (cmdLineParam)
-                cmdLine += ' ' + cmdLineParam + '';
-            if (majorVersion < 2)
-                return;
-
-            var objShell = new ActiveXObject("WScript.Shell");
-            var lngReturn = objShell.Run(cmdLine, 1, false);
-            if (closeWindow)
-                window.close();
-        }
-
-        //Starts the installer of MemoryLifter
-        function installML()
-        {
-            if (majorVersion < 2)
-            {
-                var objShell = new ActiveXObject("WScript.Shell");
-                var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER_FULL, 1, 0);
-            }
-            else
-            {
-                var objShell = new ActiveXObject("WScript.Shell");
-                var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER, 1, 0);
-            }
-        }
-
-        //Plays the video 
-        function playVideo(videoPath)
-        {
-            var objShell = new ActiveXObject("WScript.Shell");
-            try
-            {
-                var lngReturn = objShell.Run('wmplayer "' + basePath + videoPath + '"', 1, 0);
-            }
-            catch (e)
-            {
-                try
-                {
-                    var lngReturn = objShell.Run('mplayer2 "' + basePath + videoPath + '"', 1, 0);
-                }
-                catch (e)
-                {
-                    alert("Could not start media player!");
-                }
-            }
-        }
-
-        //This function returns all folders in Stick:\MLIFTER_LEARNING_MODULES\
-        //returns the baseNames of all folders when onlyBaseName = true, otherwise it returns the absolute path.
-        function loadLearningModuleFolderList(onlyBaseName)
-        {
-            try
-            {
-                var fso = new ActiveXObject("Scripting.FileSystemObject");
-                var lmFolders = fso.GetFolder(MLIFTER_LEARNING_MODULES);
-                var lmFolder = new Enumerator(lmFolders.SubFolders);
-
-                var output = new Array();
-                for (; !lmFolder.atEnd(); lmFolder.moveNext())
-                {
-                    var s = lmFolder.item();
-                    if (onlyBaseName == true)
-                        s = fso.GetBaseName(s);
-                    //output.push(s);
-                    output[output.length] = s;      //IE 5.0 hack
-                }
-                return output;
-            }
-            catch (e)
-            {
-                var output = new Array();
-                return output;
-            }
-        }
-
-        //This function does the same like loadLearningModulesFolderList(...), only with the different that this function returns the file names (with/without path)
-        function loadLearningModuleFileList(onlyBaseName)
-        {
-            var output = new Array();
-            var fso = new ActiveXObject("Scripting.FileSystemObject");
-            var lmFoldersArray = new Array();
-            lmFoldersArray = loadLearningModuleFolderList(true);
-            var root = MLIFTER_LEARNING_MODULES;
-
-            try         //The LearningModule Path should not contain a "." in it's path, otherwise it will not be listed. (because of a bug in FileSystemObject).
+		var isMatch = document.URL.match(/^(.*\\)start\.hta/gi);
+		if (isMatch)
+		{
+			if (isMatch.length > 0)
 			{
-                var lmRootFiles = fso.GetFolder(root + "\\");
-                var lmRootFile = new Enumerator(lmRootFiles.Files);
+				basePath = String(RegExp.$1);
+			}
+		}
 
-                for (; !lmRootFile.atEnd(); lmRootFile.moveNext())
-                {
-                    var s = lmRootFile.item() + "";
+		//Check WindowsMediaPlayer Version
+		var fHasWMP64 = navigator.mimeTypes && navigator.mimeTypes["video/x-ms-wm"] && (navigator.mimeTypes["video/x-ms-wm"].enabledPlugin != null) && navigator.mimeTypes["video/x-ms-wmv"] && (navigator.mimeTypes["video/x-ms-wmv"].enabledPlugin != null);
+		if (window.ActiveXObject)
+		{
+			try
+			{
+				fHasWMP64 = new ActiveXObject("MediaPlayer.MediaPlayer.1");
+			}
+			catch (e)
+			{
+				fHasWMP64 = false;
+			}
+		}
 
-                    if (s.search(/(.odx|.mlm)$/i) == -1)        //Show only *.odx files
-                        continue;
+		//Check Framework Version
+		var frameworkVersions = window.navigator.userAgent.match(/\.NET[\d\.]+E/g);
+		if (frameworkVersions.length > 0)
+		{
+			for (var i = 0; i < frameworkVersions.length; ++i)
+			{
+				var thisMatch = frameworkVersions[i].match(/\.NET([\d]+)\./g);
+				var thisVersion = parseInt(RegExp.$1);
+				if ((thisVersion != NaN) && (majorVersion < thisVersion))
+					majorVersion = thisVersion;
+			}
+		}
 
-                    if (s.search(/backup/i) != -1)       //Do not show Backup *.odx files
-                        continue;
+		//Check WindowsMediaPlayer version and return an error message if required version not available
+		function checkMediaPlayer()
+		{
+			if (!fHasWMP64)
+			{
+				document.getElementById('errors').innerHTML = "<div>It seems as Windows Media Player (version 6.4 or higher) is not available. You cannot use MemoryLifter until you install the Windows Media Player. <a href='" + MEDIA_PLAYER_INSTALLER + "'>Click here</a> to install Windows Media Player now.</div>";
+				document.getElementById('errors').style.display = 'block';
 
-                    output[output.length] = s;      //IE 5.0 hack
-                }
-            }
-            catch (e)
+				reSizeContent();
+			}
+		}
+
+		//Check .NET Framework version and return an error message if required version not available
+		function checkFramework()
+		{
+			if (majorVersion == 0)      //no Framework detected
+			{
+				document.getElementById('errors').innerHTML = "<div>The .NET Framework was not detected. You cannot install this product until you install the .NET Framework 4.0 Full Profile. <a href='" + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
+				document.getElementById('errors').style.display = 'block';
+
+				reSizeContent();
+			}
+			else if (majorVersion < 4)  //Framework has not the required Version 
+			{
+				document.getElementById('errors').innerHTML = "<div>The required version of the .NET Framework was not detected. You cannot install this product until you install the .NET Framework 4.0 Full Profile. <a href='" + DOTNETFRAMEWORK_INSTALLER + "'>Click here</a> to install the .NET framework now.</div>";
+				document.getElementById('errors').style.display = 'block';
+
+				reSizeContent();
+			}
+		}
+
+		//Starts the MemoryLifter with/without Paramters
+		function startML(closeWindow, cmdLineParam)
+		{
+			var cmdLine = basePath + MLIFTER_EXE;
+			if (cmdLineParam)
+				cmdLine += ' ' + cmdLineParam + '';
+			if (majorVersion < 4)
+				return;
+
+			var objShell = new ActiveXObject("WScript.Shell");
+			var lngReturn = objShell.Run(cmdLine, 1, false);
+			if (closeWindow)
+				window.close();
+		}
+
+		//Starts the installer of MemoryLifter
+		function installML()
+		{
+			var objShell = new ActiveXObject("WScript.Shell");
+			var lngReturn = objShell.Run(basePath + MLIFTER_INSTALLER, 1, 0);
+		}
+
+		//This function returns all folders in Stick:\MLIFTER_LEARNING_MODULES\
+		//returns the baseNames of all folders when onlyBaseName = true, otherwise it returns the absolute path.
+		function loadLearningModuleFolderList(onlyBaseName)
+		{
+			try
+			{
+				var fso = new ActiveXObject("Scripting.FileSystemObject");
+				var lmFolders = fso.GetFolder(MLIFTER_LEARNING_MODULES);
+				var lmFolder = new Enumerator(lmFolders.SubFolders);
+
+				var output = new Array();
+				for (; !lmFolder.atEnd(); lmFolder.moveNext())
+				{
+					var s = lmFolder.item();
+					if (onlyBaseName == true)
+						s = fso.GetBaseName(s);
+					//output.push(s);
+					output[output.length] = s;      //IE 5.0 hack
+				}
+				return output;
+			}
+			catch (e)
+			{
+				var output = new Array();
+				return output;
+			}
+		}
+
+		//This function does the same like loadLearningModulesFolderList(...), only with the different that this function returns the file names (with/without path)
+		function loadLearningModuleFileList(onlyBaseName)
+		{
+			var output = new Array();
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			var lmFoldersArray = new Array();
+			lmFoldersArray = loadLearningModuleFolderList(true);
+			var root = MLIFTER_LEARNING_MODULES;
+
+			try         //The LearningModule Path should not contain a "." in it's path, otherwise it will not be listed. (because of a bug in FileSystemObject).
+			{
+				var lmRootFiles = fso.GetFolder(root + "\\");
+				var lmRootFile = new Enumerator(lmRootFiles.Files);
+
+				for (; !lmRootFile.atEnd(); lmRootFile.moveNext())
+				{
+					var s = lmRootFile.item() + "";
+
+					if (s.search(/(.odx|.mlm)$/i) == -1)        //Show only *.odx files
+						continue;
+
+					if (s.search(/backup/i) != -1)       //Do not show Backup *.odx files
+						continue;
+
+					output[output.length] = s;      //IE 5.0 hack
+				}
+			}
+			catch (e)
 			{ }
 
-            for (var i = 0; i < lmFoldersArray.length; i++)
-            {
-                try         //The LearningModule Path should not contain a "." in it's path, otherwise it will not be listed. (because of a bug in FileSystemObject).
-			    {
-                    var lmFiles = fso.GetFolder(root + lmFoldersArray[i] + "\\");
-                    var lmFile = new Enumerator(lmFiles.Files);
+			for (var i = 0; i < lmFoldersArray.length; i++)
+			{
+				try         //The LearningModule Path should not contain a "." in it's path, otherwise it will not be listed. (because of a bug in FileSystemObject).
+				{
+					var lmFiles = fso.GetFolder(root + lmFoldersArray[i] + "\\");
+					var lmFile = new Enumerator(lmFiles.Files);
 
-                    for (; !lmFile.atEnd(); lmFile.moveNext())
-                    {
-                        var s = lmFile.item() + "";
+					for (; !lmFile.atEnd(); lmFile.moveNext())
+					{
+						var s = lmFile.item() + "";
 
-                        if (s.search(/(.odx|.mlm)$/i) == -1)        //Show only *.odx files
-                            continue;
+						if (s.search(/(.odx|.mlm)$/i) == -1)        //Show only *.odx files
+							continue;
 
-                        if (s.search(/backup/i) != -1)       //Do not show Backup *.odx files
-                            continue;
+						if (s.search(/backup/i) != -1)       //Do not show Backup *.odx files
+							continue;
 
-                        output[output.length] = s;      //IE 5.0 hack
-                    }
-                }
-                catch (e)
+						output[output.length] = s;      //IE 5.0 hack
+					}
+				}
+				catch (e)
 				{ }
-            }
+			}
 
-            output.sort();      //sort output from 0 - 9; a - Z
+			output.sort();      //sort output from 0 - 9; a - Z
 
-            if (onlyBaseName == true)
-            {
-                for (var i = 0; i < output.length; i++)
-                    output[i] = fso.GetBaseName(output[i]);
-            }
+			if (onlyBaseName == true)
+			{
+				for (var i = 0; i < output.length; i++)
+					output[i] = fso.GetBaseName(output[i]);
+			}
 
-            return output;
-        }
+			return output;
+		}
 
-        //Container function to load all LMs on Stick
-        function loadAvailableLMs()
-        {
-            document.getElementById('learningModulesContent').style.display = 'none';
-            parseAvailableLMs();
-        }
+		//Container function to load all LMs on Stick
+		function loadAvailableLMs()
+		{
+			document.getElementById('learningModulesContent').style.display = 'none';
+			parseAvailableLMs();
+		}
 
-        //Generates the output HTML to display all available LMs
-        function parseAvailableLMs()
-        {
-            var fileList = new Array();
-            var fileListBaseName = new Array();
+		//Generates the output HTML to display all available LMs
+		function parseAvailableLMs()
+		{
+			var fileList = new Array();
+			var fileListBaseName = new Array();
 
-            fileList = loadLearningModuleFileList(false);
-            fileListBaseName = loadLearningModuleFileList(true);
+			fileList = loadLearningModuleFileList(false);
+			fileListBaseName = loadLearningModuleFileList(true);
 
-            if (fileList.length == 0)
-                return;
+			if (fileList.length == 0)
+				return;
 
-            document.getElementById('learningModulesContent').innerHTML = ""; 	//delete content, (necessary if users changed Language) --> obsolete
+			document.getElementById('learningModulesContent').innerHTML = ""; 	//delete content, (necessary if users changed Language) --> obsolete
 
-            var divCont = document.getElementById('learningModulesContent');
-            for (var i = 0; i < fileList.length; i++)
-            {
-                var div = document.createElement('div');
-                var a = document.createElement('a');
-                var img = document.createElement('img');
-                var lmPath = '"' + fileList[i] + '"'; 	//this converts the object to a string
+			var divCont = document.getElementById('learningModulesContent');
+			for (var i = 0; i < fileList.length; i++)
+			{
+				var div = document.createElement('div');
+				var a = document.createElement('a');
+				var img = document.createElement('img');
+				var lmPath = '"' + fileList[i] + '"'; 	//this converts the object to a string
 
-                img.src = MLIFTER_LM_ICON;
-                img.align = "absmiddle";
+				img.src = MLIFTER_LM_ICON;
+				img.align = "absmiddle";
 
-                a.href = "#";
-                var onClick = "startML(false, '" + lmPath.replace(/\\/g, "\\\\") + "'); return false;";
-                a.onclick = new Function(onClick);
+				a.href = "#";
+				var onClick = "startML(true, '" + lmPath.replace(/\\/g, "\\\\") + "'); return false;";
+				a.onclick = new Function(onClick);
 
-                a.appendChild(img);
-                a.innerHTML += fileListBaseName[i];
+				a.appendChild(img);
+				a.innerHTML += fileListBaseName[i];
 
-                div.appendChild(a);
-                divCont.appendChild(div);
-            }
+				div.appendChild(a);
+				divCont.appendChild(div);
+			}
 
-            if (i > maxLearningModulesWithoutScroll)
-            {
-                divCont.style.overflow = 'auto';
-                divCont.style.border = '1px solid silver';
-                divCont.style.scrollbarFaceColor = '#DDDDDD';
-                divCont.style.scrollbarArrowColor = '#000000';
-                divCont.style.scrollbarShadowColor = '#AAAAAA';
-                divCont.style.scrollbarDarkShadowColor = '#888888';
-            }
+			if (i > maxLearningModulesWithoutScroll)
+			{
+				divCont.style.overflow = 'auto';
+				divCont.style.border = '1px solid silver';
+				divCont.style.scrollbarFaceColor = '#DDDDDD';
+				divCont.style.scrollbarArrowColor = '#000000';
+				divCont.style.scrollbarShadowColor = '#AAAAAA';
+				divCont.style.scrollbarDarkShadowColor = '#888888';
+			}
 
-            document.getElementById('learningModulesContent').style.display = 'block';
-        }
+			document.getElementById('learningModulesContent').style.display = 'block';
+		}
 
-        //Container function to load all recently opened LearningModules		
-        function loadRecentFiles()
-        {
-            if (showRecentFiles == false)
-                return;
+		//Container function to load all recently opened LearningModules		
+		function loadRecentFiles()
+		{
+			if (showRecentFiles == false)
+				return;
 
-            document.getElementById('recentFiles').style.display = 'none';
-            loadXMLDoc(basePath + MLIFTER_CONFIG, parseRecentFiles);
-        }
+			document.getElementById('recentFiles').style.display = 'none';
+			loadXMLDoc(basePath + MLIFTER_CONFIG, parseRecentFiles);
+		}
 
-        //Container function to load the news from the MemoryLifter RSS Feed 
-        function loadNewsFeed()
-        {
-            //document.getElementById('newsFeedContent').style.display = 'none';
-            loadXMLDoc(rssFeedUri, parseNewsFeed);
-        }
+		//Container function to load the news from the MemoryLifter RSS Feed 
+		function loadNewsFeed()
+		{
+			//document.getElementById('newsFeedContent').style.display = 'none';
+			loadXMLDoc(rssFeedUri, parseNewsFeed);
+		}
 
-        //Load the RSS-Feed (XML file) from HTTP		
-        function loadXMLDoc(url, handler)
-        {
-            var req;
-            if (window.ActiveXObject)
-            {
-                try
-                {
-                    req = new ActiveXObject("Msxml2.DOMDocument.3.0");
-                }
-                catch (e)
-                {
-                    try
-                    {
-                        req = new ActiveXObject("Microsoft.XMLDOM");
-                    }
-                    catch (e)
-                    {
-                        req = false;
-                    }
-                }
-            }
-            if (req)
-            {
-                try
-                {
-                    req.onreadystatechange = function() { processReqChange(handler, req); };
-                    req.load(url);
-                }
-                catch (e)
+		//Load the RSS-Feed (XML file) from HTTP		
+		function loadXMLDoc(url, handler)
+		{
+			var req;
+			if (window.ActiveXObject)
+			{
+				try
+				{
+					req = new ActiveXObject("Msxml2.DOMDocument.3.0");
+				}
+				catch (e)
+				{
+					try
+					{
+						req = new ActiveXObject("Microsoft.XMLDOM");
+					}
+					catch (e)
+					{
+						req = false;
+					}
+				}
+			}
+			if (req)
+			{
+				try
+				{
+					req.onreadystatechange = function() { processReqChange(handler, req); };
+					req.load(url);
+				}
+				catch (e)
 				{ }
-            }
-        }
+			}
+		}
 
-        function processReqChange(handler, req)
-        {
-            if (req.readyState == 4)
-            {
-                var err = req.parseError;
-                if (err.errorCode == 0)
-                    handler(req);
-            }
-        }
+		function processReqChange(handler, req)
+		{
+			if (req.readyState == 4)
+			{
+				var err = req.parseError;
+				if (err.errorCode == 0)
+					handler(req);
+			}
+		}
 
-        //Generate the HTML output to display the loaded NewsFeed
-        function parseNewsFeed(req)
-        {
-            var ela = document.getElementById('newsFeedContent');
-            ela.innerHTML = '';
+		//Generate the HTML output to display the loaded NewsFeed
+		function parseNewsFeed(req)
+		{
+			var ela = document.getElementById('newsFeedContent');
+			ela.innerHTML = '';
 
-            var nl = req.selectNodes('//item');
-            for (var i = 0; i < nl.length; i++)
-            {
-                if ((i + 1) > maxNews)
-                    break;
-                var nli = nl.item(i);
-                var title = nli.selectSingleNode('title').text;
-                var link = nli.selectSingleNode('link').text;
-                var description = nli.selectSingleNode('description').text;
-                var date = new Date(Date.parse(nli.selectSingleNode('pubDate').text));
+			var nl = req.selectNodes('//item');
+			for (var i = 0; i < nl.length; i++)
+			{
+				if ((i + 1) > maxNews)
+					break;
+				var nli = nl.item(i);
+				var title = nli.selectSingleNode('title').text;
+				var link = nli.selectSingleNode('link').text;
+				var description = nli.selectSingleNode('description').text;
+				var date = new Date(Date.parse(nli.selectSingleNode('pubDate').text));
 
-                var elDiv = document.createElement('div');
-                elDiv.className = 'news';
+				var elDiv = document.createElement('div');
+				elDiv.className = 'news';
 
-                var elTitle = document.createElement('span');
-                elTitle.className = 'title';
+				var elTitle = document.createElement('span');
+				elTitle.className = 'title';
 
-                var elDate = document.createElement('span');
-                elDate.className = 'date';
-                elDate.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;" + date.toLocaleString();
-                elDiv.appendChild(elTitle);
-                elDiv.appendChild(elDate);
+				var elDate = document.createElement('span');
+				elDate.className = 'date';
+				elDate.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;" + date.toLocaleString();
+				elDiv.appendChild(elTitle);
+				elDiv.appendChild(elDate);
 
-                var elTitleLink = document.createElement('a');
-                elTitleLink.href = link;
-                elTitleLink.innerHTML = title;
-                elTitleLink.target = '_blank';
-                elTitle.appendChild(elTitleLink);
+				var elTitleLink = document.createElement('a');
+				elTitleLink.href = link;
+				elTitleLink.innerHTML = title;
+				elTitleLink.target = '_blank';
+				elTitle.appendChild(elTitleLink);
 
-                var elDescription = document.createElement('div');
-                elDescription.className = 'description';
-                elDescription.innerHTML = description;
-                elDiv.appendChild(elDescription);
+				var elDescription = document.createElement('div');
+				elDescription.className = 'description';
+				elDescription.innerHTML = description;
+				elDiv.appendChild(elDescription);
 
-                ela.appendChild(elDiv);
-                ela.innerHTML += "<hr noshade='noshade' style='size:0px; height: 1px; border:1px solid #BCD2FF;'>";
-            }
-            document.getElementById('newsFeedContent').style.display = 'block';
+				ela.appendChild(elDiv);
+				ela.innerHTML += "<hr noshade='noshade' style='size:0px; height: 1px; border:1px solid #BCD2FF;'>";
+			}
+			document.getElementById('newsFeedContent').style.display = 'block';
 
-            ela.innerHTML += "<p style='font-size:9pt; text-align:center; margin:0px; padding:0px;'>Get more news on <a href='http://www.memorylifter.com'>www.memorylifter.com</a></p>";
-        }
+			ela.innerHTML += "<p style='font-size:9pt; text-align:center; margin:0px; padding:0px;'>Get more news on <a href='http://www.memorylifter.com'>www.memorylifter.com</a></p>";
+		}
 
-        //generate the HTML output to display all recent files/LearningModules
-        function parseRecentFiles(req)
-        {
-            var foundaFile = false;
-            var ela = document.getElementById("recentFilesContent");
-            ela.innerHTML = '';
+		//generate the HTML output to display all recent files/LearningModules
+		function parseRecentFiles(req)
+		{
+			var foundaFile = false;
+			var ela = document.getElementById("recentFilesContent");
+			ela.innerHTML = '';
 
-            var recentFilesTxt = req.selectSingleNode("//setting[@name='RecentFiles']/value").text;
-            recentFilesTxt = recentFilesTxt.replace(/MEMSTICK\:\\/gi, basePath.replace(/^file:\/\//i, ""));
-            var recentFiles = recentFilesTxt.split(",");
-            for (var i = 0; i < recentFiles.length; i++)
-            {
-                if ((i + 1) > maxRecentFiles)
-                    break;
-                var link = recentFiles[i];
-                var name;
-                var fileName = link.match(/.*\\([^\\]+)\.(odx|mlm)"$/gi);
-                if (fileName)
-                {
-                    if (fileName.length > 0)
-                    {
-                        name = String(RegExp.$1);
-                        var elDiv = document.createElement("div");
-                        var elLink = document.createElement("a");
-                        var elImg = document.createElement("img");
-                        elImg.src = MLIFTER_LM_ICON;
-                        elImg.align = "absmiddle";
-                        elLink.href = "#";
-                        var onClick = "startML(false, '" + link.replace(/\\/g, "\\\\") + "'); return false;";
-                        elLink.onclick = new Function(onClick);
-                        elLink.appendChild(elImg);
-                        elLink.innerHTML += name;
-                        elDiv.appendChild(elLink);
+			var recentFilesTxt = req.selectSingleNode("//setting[@name='RecentFiles']/value").text;
+			recentFilesTxt = recentFilesTxt.replace(/MEMSTICK\:\\/gi, basePath.replace(/^file:\/\//i, ""));
+			var recentFiles = recentFilesTxt.split(",");
+			for (var i = 0; i < recentFiles.length; i++)
+			{
+				if ((i + 1) > maxRecentFiles)
+					break;
+				var link = recentFiles[i];
+				var name;
+				var fileName = link.match(/.*\\([^\\]+)\.(odx|mlm)"$/gi);
+				if (fileName)
+				{
+					if (fileName.length > 0)
+					{
+						name = String(RegExp.$1);
+						var elDiv = document.createElement("div");
+						var elLink = document.createElement("a");
+						var elImg = document.createElement("img");
+						elImg.src = MLIFTER_LM_ICON;
+						elImg.align = "absmiddle";
+						elLink.href = "#";
+						var onClick = "startML(true, '" + link.replace(/\\/g, "\\\\") + "'); return false;";
+						elLink.onclick = new Function(onClick);
+						elLink.appendChild(elImg);
+						elLink.innerHTML += name;
+						elDiv.appendChild(elLink);
 
-                        ela.appendChild(elDiv);
-                        foundaFile = true;
-                    }
-                }
-            }
-            if (foundaFile)
-                document.getElementById('recentFiles').style.display = 'block';
-        }
+						ela.appendChild(elDiv);
+						foundaFile = true;
+					}
+				}
+			}
+			if (foundaFile)
+				document.getElementById('recentFiles').style.display = 'block';
+		}
 
-        function activateTabPage(pageId)
-        {
-            disableAllTabPages();
-            document.getElementById(pageId).style.display = "";
-            document.getElementById('tabButton' + pageId).style.backgroundColor = "#FFFFFF"; //"#B7CFFF";
-            document.getElementById('tabButton' + pageId).style.borderTop = '3px solid #E4751E'; //#E4751E';
+		function activateTabPage(pageId)
+		{
+			disableAllTabPages();
+			document.getElementById(pageId).style.display = "";
+			document.getElementById('tabButton' + pageId).style.backgroundColor = "#FFFFFF"; //"#B7CFFF";
+			document.getElementById('tabButton' + pageId).style.borderTop = '3px solid #E4751E'; //#E4751E';
 
-            document.getElementById("main").focus();        //Disable the focus of the clicked button
-        }
+			document.getElementById("main").focus();        //Disable the focus of the clicked button
+		}
 
-        function disableAllTabPages()
-        {
-            document.getElementById("GetStarted").style.display = "none";
-            document.getElementById('tabButtonGetStarted').style.backgroundColor = "#FFFFFF";
-            document.getElementById('tabButtonGetStarted').style.borderTop = '1px solid silver';
-            document.getElementById("NewsFeed").style.display = "none";
-            document.getElementById('tabButtonNewsFeed').style.backgroundColor = "#FFFFFF";
-            document.getElementById('tabButtonNewsFeed').style.borderTop = '1px solid silver';
-            document.getElementById("GoodToKnow").style.display = "none";
-            document.getElementById('tabButtonGoodToKnow').style.backgroundColor = "#FFFFFF";
-            document.getElementById('tabButtonGoodToKnow').style.borderTop = '1px solid silver';
-            document.getElementById("BonusMaterial").style.display = "none";
-            document.getElementById('tabButtonBonusMaterial').style.backgroundColor = "#FFFFFF";
-            document.getElementById('tabButtonBonusMaterial').style.borderTop = '1px solid silver';
-            document.getElementById("Update").style.display = "none";
-            document.getElementById('tabButtonUpdate').style.backgroundColor = "#FFFFFF";
-            document.getElementById('tabButtonUpdate').style.borderTop = '1px solid silver';
-        }
+		function disableAllTabPages()
+		{
+			document.getElementById("NewsFeed").style.display = "none";
+			document.getElementById('tabButtonNewsFeed').style.backgroundColor = "#FFFFFF";
+			document.getElementById('tabButtonNewsFeed').style.borderTop = '1px solid silver';
+			document.getElementById("GoodToKnow").style.display = "none";
+			document.getElementById('tabButtonGoodToKnow').style.backgroundColor = "#FFFFFF";
+			document.getElementById('tabButtonGoodToKnow').style.borderTop = '1px solid silver';
+		}
 
-        //Accept license
-        function acceptLicense(value)
-        {
-            if (value == true)
-            {
-                var fso = new ActiveXObject("Scripting.FileSystemObject");
-                fso.CreateTextFile("Data\\fs.dat", true);
-                reloadWindow();
-            }
-            else
-            {
-                alert("In order to use MemoryLifter and its Learning Modules you must agree to the terms and conditions of use.");
-            }
-        }
+		//Accept license
+		function acceptLicense(value)
+		{
+			if (value == true)
+			{
+				var fso = new ActiveXObject("Scripting.FileSystemObject");
+				fso.CreateTextFile("Data\\fs.dat", true);
+				reloadWindow();
+			}
+			else
+			{
+				alert("In order to use MemoryLifter and its Learning Modules you must agree to the terms and conditions of use.");
+			}
+		}
 
-        //Reload Window --> obsolete! 
-        function reloadWindow()
-        {
-            try
+		//Reload Window --> obsolete! 
+		function reloadWindow()
+		{
+			try
 			{ rssFeedUri = "http://www.memorylifter.com/news-publications/rss.xml" }
-            catch (e) { }
+			catch (e) { }
 
-            window.onload();
-        }
+			window.onload();
+		}
 
-        /////////////////////////////////////////////////////////////////////////////////
-        //returns the current build number (saved in a text file)
-        function getCurrentBuildNumber()
-        {
-            var fso = new ActiveXObject("Scripting.FileSystemObject");
+		/////////////////////////////////////////////////////////////////////////////////
+		//returns true if the Launcher is started the first time and the user has not accepted the license yet.
+		function isFirstStart()
+		{
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
 
-            if (!fso.FileExists(MLIFTER_VERSION_FILE))
-                return 0;
+			if (fso.FileExists("Data\\fs.dat"))
+				return false;
+			else
+				return true;
+		}
 
-            file = fso.OpenTextFile(MLIFTER_VERSION_FILE, 1);
-            return file.ReadAll();
-        }
+		/////////////////////////////////////////////////////////////////////////////////
+		//enable/disable the content to show the firstStart-Screen or the default-Screen
+		function firstStart()
+		{
+			if (isFirstStart())
+			{
+				document.getElementById('content').style.display = "none";
+				document.getElementById('firstStart').style.display = "block";
 
-        /////////////////////////////////////////////////////////////////////////////////
-        //returns true if the Launcher is started the first time and the user has not accepted the license yet.
-        function isFirstStart()
-        {
-            var fso = new ActiveXObject("Scripting.FileSystemObject");
+				var fso = new ActiveXObject("Scripting.FileSystemObject");
+				var lic = fso.OpenTextFile(MLIFTER_LICENSE, 1);
+				var licTxt = lic.ReadAll();
 
-            if (fso.FileExists("Data\\fs.dat"))
-                return false;
-            else
-                return true;
-        }
+				document.getElementById('licenseText').innerHTML = licTxt;
 
-        /////////////////////////////////////////////////////////////////////////////////
-        //enable/disable the content to show the firstStart-Screen or the default-Screen
-        function firstStart()
-        {
-            if (isFirstStart())
-            {
-                document.getElementById('content').style.display = "none";
-                document.getElementById('firstStart').style.display = "block";
+			}
+			else
+			{
+				document.getElementById('content').style.display = "block";
+				document.getElementById('firstStart').style.display = "none";
+			}
+		}
 
-                var fso = new ActiveXObject("Scripting.FileSystemObject");
-                var lic = fso.OpenTextFile(MLIFTER_LICENSE, 1);
-                var licTxt = lic.ReadAll();
+		///////////////////////////////////////////////////////////////////////////////
+		//Resize the content when an error message appears (see Framework / WMP errors)
+		function reSizeContent()
+		{
+			document.getElementById('learningModulesContent').style.height = "130px";
+			document.getElementById('recentFilesContent').style.height = "90px";
+			document.getElementById('lmWrapper').style.height = "160px";
+		}
 
-                document.getElementById('licenseText').innerHTML = licTxt;
+		//////////////////////////////////////////////////////////////////////////
+		//Window OnLoad Event
+		function window.onload()
+		{
+			if (autorun)
+				startML(true);
 
-            }
-            else
-            {
-                document.getElementById('content').style.display = "block";
-                document.getElementById('firstStart').style.display = "none";
-            }
-        }
+			window.focus();
+			window.resizeTo(windowWidth, windowHeight);
 
-        ///////////////////////////////////////////////////////////////////////////////
-        //Resize the content when an error message appears (see Framework / WMP errors)
-        function reSizeContent()
-        {
-            document.getElementById('learningModulesContent').style.height = "130px";
-            document.getElementById('recentFilesContent').style.height = "90px";
-            document.getElementById('lmWrapper').style.height = "160px";
-        }
+			firstStart();
+			checkFramework();
+			checkMediaPlayer();
+			loadNewsFeed();
+			loadRecentFiles();
+			loadAvailableLMs();
+			activateTabPage("GoodToKnow");
+		}
+	</script>
 
-        //////////////////////////////////////////////////////////////////////////
-        //Checks if a newer version on ML is available
-        function updateAvailable()
-        {
-            loadXMLDoc(curVersionUri, showUpdateRequest);
-        }
-
-        //////////////////////////////////////////////////////////////////////////
-        //Gets the current and new version number and comparse them. If an update 
-        //is available, it activates the overlay div with the update message!
-        function showUpdateRequest(request)
-        {
-            try
-            {
-                var currentVersion = request.selectNodes('//CurrentVersion');
-                var currentVersionSubItems = currentVersion.item(0);
-                var buildNumber = currentVersionSubItems.selectSingleNode('BuildNumber').text;
-                var description = currentVersionSubItems.selectSingleNode('Description').text;
-                var url = currentVersionSubItems.selectSingleNode('URL').text;
-
-                var newBuildNumberInt = parseInt(buildNumber);
-                var curBuildNumberInt = parseInt(getCurrentBuildNumber());
-
-                if (isNaN(newBuildNumberInt) || isNaN(curBuildNumberInt))
-                    return;
-
-                if (newBuildNumberInt > curBuildNumberInt)
-                {
-                    allowStartML = false;
-                    document.getElementById('updateLayer').style.display = "";
-                    document.getElementById('updateLink').href = url;
-                    document.getElementById('updateDescription').innerHTML = description;
-                }
-            }
-            catch (e) { }
-        }
-
-        //////////////////////////////////////////////////////////////////
-        //Hides the Update request in case of, the user clicked on the close button
-        function hideUpdateRequest()
-        {
-            allowStartML = true;
-            document.getElementById('updateLayer').style.display = "none";
-        }
-
-        //////////////////////////////////////////////////////////////////////////
-        //Window OnLoad Event
-        function window.onload()
-        {
-            if (autorun)
-                startML(true);
-
-            window.focus();
-            window.resizeTo(windowWidth, windowHeight);
-
-            firstStart();
-            checkFramework();
-            checkMediaPlayer();
-            loadNewsFeed();
-            loadRecentFiles();
-            loadAvailableLMs();
-            activateTabPage("GetStarted");
-            updateAvailable();
-        }
-    </script>
-
-    <style type="text/css">
-        body
-        {
-            background-color: #ffffff;
-            margin: 0;
-            color: #000000;
-            font-family: Arial,Helvetica,sans-serif;
-            font-size: 10pt;
-        }
-        a
-        {
-            color: #458989;
-            text-decoration: none;
-        }
-        a:hover
-        {
-            color: #FF8000;
-            text-decoration: underline;
-        }
-        #main
-        {
-            width: 650px;
-            margin: 0;
-            padding: 0;
-        }
-        #header
-        {
-            width: 650px;
-            height: 80px;
-            margin: 0;
-            padding: 0;
-        }
-        #header h1
-        {
-            display: none;
-        }
-        #menu
-        {
-            background-image: url(Images/menu_bg.gif);
-            background-repeat: repeat-x;
-            width: 650px;
-            height: 30px;
-            margin: 0;
-            padding: 0;
-            background-color: #E67B11;
-        }
-        #menu a
-        {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        #search
-        {
-            margin: 0;
-            padding: 0;
-        }
-        .links a
-        {
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 9pt;
-        }
-        table.search
-        {
-            width: 640;
-            height: 30px;
-            margin: 0;
-            padding: 0;
-            table-layout: fixed;
-        }
-        table.search td.search
-        {
-            width: 250px;
-            text-align: left;
-            vertical-align: middle;
-            padding: 0 5px;
-        }
-        table.search td.links
-        {
-            color: #ffffff;
-            font-size: x-small;
-            text-align: right;
-            vertical-align: middle;
-            padding: 0 5px;
-        }
-        .searchfield
-        {
-            border: 2px;
-            color: #000000;
-            font-family: Arial,Helvetica,sans-serif;
-            font-size: 9px;
-            font-style: normal;
-            height: 12px !important;
-            margin: 0px;
-            padding: 0px;
-            vertical-align: middle;
-            width: 160px;
-        }
-        .searchbutton
-        {
-            display: inline !important;
-            vertical-align: middle;
-        }
-        #content
-        {
-            display: none;
-            padding: 10px;
-            padding-top: 5px;
-        }
-        #errors
-        {
-            width: 630;
-            display: none;
-            padding: 0;
-            margin: 0px;
-            margin-bottom: 5px;
-        }
-        #errors div
-        {
-            width: 630;
-            border: 3px solid red;
-            padding: 6px;
-            text-align: center;
-            background-color: #FFBFBF;
-        }
-        button
-        {
-            width: 250px;
-            height: 35px;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-            vertical-align: middle;
-        }
-        button.start
-        {
-            background-color: #E67B11;
-        }
-        button.install
-        {
-            background-color: #3B9E68;
-        }
-        button.download
-        {
-            background-color: #2D5386;
-        }
-        #NewsFeed
-        {
-            width: 630px;
-            text-align: left;
-            overflow: auto;
-            border: 1px solid silver;
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-        }
-        /*#newsFeed h2
-        {
-            margin: 10px 0;
-            margin-bottom:0px;
-            padding-bottom:0px;
-            padding: 0;
-            font-size: 11pt;
-        }*/.news
-        {
-            width: 600px;
-            margin: 0px;
-        }
-        .news .title
-        {
-        }
-        .news .date
-        {
-            font-style: italic;
-            color: silver;
-        }
-        #newsFeedContent
-        {
-            margin: 5px;
-        }
-        #recentFiles
-        {
-            width: 295px;
-            border: 0px solid black;
-            float: left;
-            text-align: left;
-            display: none;
-        }
-        #recentFiles h2
-        {
-            margin: 0px;
-            margin-bottom: 4px;
-            padding: 0;
-            font-size: 11pt;
-        }
-        #recentFiles img
-        {
-            margin: 2px;
-            border: 0px;
-        }
-        #learningModules
-        {
-            width: 330px;
-            float: left;
-            text-align: left;
-            border: 0px solid black;
-        }
-        #learningModules h2
-        {
-            margin: 0px;
-            margin-bottom: 4px;
-            padding: 0px;
-            font-size: 11pt;
-        }
-        #learningModules img
-        {
-            margin: 2px;
-            border: 0px;
-        }
-        #learningModulesContent
-        {
-            height: 180px;
-            max-height: 180px;
-            width: 320px;
-        }
-        #control
-        {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            display: none;
-        }
-        #lmWrapper
-        {
-            height: 220px;
-        }
-        /* Tab Styles */.tab
-        {
-            border: 1px solid silver;
-            width: 630px;
-            height: 164px;
-        }
-        .tabButtons
-        {
-            border: 0px solid black;
-            width: 630px;
-            height: 30px;
-        }
-        .tabHeader
-        {
-            margin: 5px 5px;
-            margin-bottom: 4px;
-            padding: 0px;
-            font-size: 11pt;
-        }
-        .tabButton
-        {
-            border: 1px solid silver;
-            width: 120px;
-            height: 25px;
-            background-color: #FFFFFF;
-            color: #000000;
-            text-align: center;
-            margin-right: 5px;
-            padding: 0px;
-            font-family: Arial,Helvetica,sans-serif;
-            cursor: pointer;
-        }
-        #GetStarted
-        {
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-        }
-        #GetStarted p
-        {
-            margin: 5px;
-            margin-top: 10px;
-            text-align: justify;
-        }
-        #GetStarted img
-        {
-            margin-top: 10px;
-        }
-        #GoodToKnow
-        {
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-        }
-        #GoodToKnow p
-        {
-            margin: 5px;
-            font-weight: bold;
-        }
-        #GoodToKnow ol
-        {
-            margin: 8px 0px 0px 33px;
-            padding: 0px;
-        }
-        #GoodToKnow ol li
-        {
-            margin: 0px 0px 5px 0px;
-            padding: 0px;
-        }
-        #BonusMaterial
-        {
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-        }
-        #BonusMaterial p
-        {
-            margin: 5px;
-            font-weight: bold;
-        }
-        #BonusMaterial ol
-        {
-            margin: 8px 0px 0px 33px;
-            padding: 0px;
-        }
-        #BonusMaterial ol li
-        {
-            margin: 0px 0px 5px 0px;
-            padding: 0px;
-        }
-        /* Start ML button */#startMlContainer
-        {
-            position: absolute;
-            left: 375px;
-            top: 262px;
-            border: 0px solid black;
-        }
-        #StartMlButton
-        {
-            background-image: url(   'Images/startML.jpg' );
-            background-repeat: no-repeat;
-            background-color: #FFFFFF;
-            color: #000000;
-            border: 0px solid black;
-            width: 239px;
-            height: 56px;
-            cursor: pointer;
-        }
-        #firstStart
-        {
-            display: none;
-        }
-        .license
-        {
-            width: 310px;
-            height: 25px;
-            color: #000000;
-            font-family: Arial,Helvetica,sans-serif;
-            font-size: 12px;
-            font-weight: normal;
-            cursor: pointer;
-        }
-        #licenseText
-        {
-            width: 630px;
-            height: 150px;
-            border: 1px solid silver;
-            overflow: auto;
-            text-align: left;
-            background-color: #FAFAFA;
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-            padding: 5px;
-            text-align: justify;
-            font-size: 9pt;
-            margin-bottom: 3px;
-        }
-        #licenseText h1
-        {
-            font-size: 14pt;
-            padding: 0px;
-            margin: 0px;
-            margin-bottom: 10px;
-        }
-        #licenseText h2
-        {
-            font-size: 12pt;
-            padding: 0px;
-            margin: 0px;
-            margin-bottom: 10px;
-            margin-top: 15px;
-        }
-        #licenseText ol
-        {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-        #firstStartInfo
-        {
-            border: 0px solid silver;
-            width: 630px;
-            height: 215px;
-            text-align: left;
-            padding: 5px;
-            overflow: auto;
-            margin-bottom: 5px;
-            scrollbar-face-color: #DDDDDD;
-            scrollbar-arrow-color: #000000;
-            scrollbar-shadow-color: #AAAAAA;
-            scrollbar-dark-shadow-color: #888888;
-        }
-        #firstStartInfo h1
-        {
-            font-size: 14pt;
-            padding: 0px;
-            margin: 0px;
-            margin-bottom: 5px;
-        }
-        #firstStartInfo p
-        {
-            font-size: 10pt;
-            padding: 0px;
-            margin: 0px;
-            text-align: justify;
-            padding-bottom: 5px;
-        }
-        #firstStartInfo ul
-        {
-            font-size: 10pt;
-            padding: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            margin-left: 22px;
-        }
-        #GetStarted .picture
-        {
-            background-color: #F9F9F9;
-            border: 1px solid #CCCCCC;
-            padding: 3px;
-            font: 11px/1.4em Arial, sans-serif;
-            margin-top: -3px;
-        }
-        #GetStarted .picture img
-        {
-            border: 1px solid #CCCCCC;
-            vertical-align: middle;
-            margin-bottom: 3px;
-            margin: 0px;
-        }
-        #BonusMaterial .picture
-        {
-            background-color: #F9F9F9;
-            border: 1px solid #CCCCCC;
-            padding: 3px;
-            font: 11px/1.4em Arial, sans-serif;
-            margin-top: 5px;
-        }
-        #BonusMaterial .picture img
-        {
-            border: 1px solid #CCCCCC;
-            vertical-align: middle;
-            margin-bottom: 3px;
-            margin: 0px;
-        }
-        .right
-        {
-            margin: 0.5em 0.5em 0.5em 0.8em;
-            float: right;
-        }
-        .left
-        {
-            margin: 0.5em 0.8em 0.5em 0.5em;
-            float: left;
-        }
-    </style>
+	<style type="text/css">
+		body
+		{
+			background-color: #ffffff;
+			margin: 0;
+			color: #000000;
+			font-family: Arial,Helvetica,sans-serif;
+			font-size: 10pt;
+		}
+		a
+		{
+			color: #458989;
+			text-decoration: none;
+		}
+		a:hover
+		{
+			color: #FF8000;
+			text-decoration: underline;
+		}
+		#main
+		{
+			width: 650px;
+			margin: 0;
+			padding: 0;
+		}
+		#header
+		{
+			width: 650px;
+			height: 80px;
+			margin: 0;
+			padding: 0;
+		}
+		#header h1
+		{
+			display: none;
+		}
+		#menu
+		{
+			background-image: url(Images/menu_bg.gif);
+			background-repeat: repeat-x;
+			width: 650px;
+			height: 30px;
+			margin: 0;
+			padding: 0;
+			background-color: #E67B11;
+		}
+		#menu a
+		{
+			color: #ffffff;
+			text-decoration: none;
+		}
+		#search
+		{
+			margin: 0;
+			padding: 0;
+		}
+		.links a
+		{
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size: 9pt;
+		}
+		table.search
+		{
+			width: 640;
+			height: 30px;
+			margin: 0;
+			padding: 0;
+			table-layout: fixed;
+		}
+		table.search td.search
+		{
+			width: 250px;
+			text-align: left;
+			vertical-align: middle;
+			padding: 0 5px;
+		}
+		table.search td.links
+		{
+			color: #ffffff;
+			font-size: x-small;
+			text-align: right;
+			vertical-align: middle;
+			padding: 0 5px;
+		}
+		.searchfield
+		{
+			border: 2px;
+			color: #000000;
+			font-family: Arial,Helvetica,sans-serif;
+			font-size: 9px;
+			font-style: normal;
+			height: 12px !important;
+			margin: 0px;
+			padding: 0px;
+			vertical-align: middle;
+			width: 160px;
+		}
+		.searchbutton
+		{
+			display: inline !important;
+			vertical-align: middle;
+		}
+		#content
+		{
+			display: none;
+			padding: 10px;
+			padding-top: 5px;
+		}
+		#errors
+		{
+			width: 630;
+			display: none;
+			padding: 0;
+			margin: 0px;
+			margin-bottom: 5px;
+		}
+		#errors div
+		{
+			width: 630;
+			border: 3px solid red;
+			padding: 6px;
+			text-align: center;
+			background-color: #FFBFBF;
+		}
+		button
+		{
+			width: 250px;
+			height: 35px;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: middle;
+		}
+		button.start
+		{
+			background-color: #E67B11;
+		}
+		button.install
+		{
+			background-color: #3B9E68;
+		}
+		button.download
+		{
+			background-color: #2D5386;
+		}
+		#NewsFeed
+		{
+			width: 630px;
+			text-align: left;
+			overflow: auto;
+			border: 1px solid silver;
+			scrollbar-face-color: #DDDDDD;
+			scrollbar-arrow-color: #000000;
+			scrollbar-shadow-color: #AAAAAA;
+			scrollbar-dark-shadow-color: #888888;
+		}
+		/*#newsFeed h2
+		{
+			margin: 10px 0;
+			margin-bottom:0px;
+			padding-bottom:0px;
+			padding: 0;
+			font-size: 11pt;
+		}*/.news
+		{
+			width: 600px;
+			margin: 0px;
+		}
+		.news .title
+		{
+		}
+		.news .date
+		{
+			font-style: italic;
+			color: silver;
+		}
+		#newsFeedContent
+		{
+			margin: 5px;
+		}
+		#recentFiles
+		{
+			width: 295px;
+			border: 0px solid black;
+			float: left;
+			text-align: left;
+			display: none;
+		}
+		#recentFiles h2
+		{
+			margin: 0px;
+			margin-bottom: 4px;
+			padding: 0;
+			font-size: 11pt;
+		}
+		#recentFiles img
+		{
+			margin: 2px;
+			border: 0px;
+		}
+		#learningModules
+		{
+			width: 330px;
+			float: left;
+			text-align: left;
+			border: 0px solid black;
+		}
+		#learningModules h2
+		{
+			margin: 0px;
+			margin-bottom: 4px;
+			padding: 0px;
+			font-size: 11pt;
+		}
+		#learningModules img
+		{
+			margin: 2px;
+			border: 0px;
+		}
+		#learningModulesContent
+		{
+			height: 180px;
+			max-height: 180px;
+			width: 320px;
+		}
+		#control
+		{
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			display: none;
+		}
+		#lmWrapper
+		{
+			height: 220px;
+		}
+		/* Tab Styles */.tab
+		{
+			border: 1px solid silver;
+			width: 630px;
+			height: 200px;
+		}
+		.tabButtons
+		{
+			border: 0px solid black;
+			width: 630px;
+			height: 30px;
+		}
+		.tabHeader
+		{
+			margin: 5px 5px;
+			margin-bottom: 4px;
+			padding: 0px;
+			font-size: 11pt;
+		}
+		.tabButton
+		{
+			border: 1px solid silver;
+			width: 120px;
+			height: 25px;
+			background-color: #FFFFFF;
+			color: #000000;
+			text-align: center;
+			margin-right: 5px;
+			padding: 0px;
+			font-family: Arial,Helvetica,sans-serif;
+			cursor: pointer;
+		}
+		#GoodToKnow
+		{
+			scrollbar-face-color: #DDDDDD;
+			scrollbar-arrow-color: #000000;
+			scrollbar-shadow-color: #AAAAAA;
+			scrollbar-dark-shadow-color: #888888;
+		}
+		#GoodToKnow p
+		{
+			margin: 5px;
+			font-weight: bold;
+		}
+		#GoodToKnow ol
+		{
+			margin: 8px 0px 0px 33px;
+			padding: 0px;
+		}
+		#GoodToKnow ol li
+		{
+			margin: 0px 0px 5px 0px;
+			padding: 0px;
+		}
+		/* Start ML button */#startMlContainer
+		{
+			position: absolute;
+			left: 375px;
+			top: 262px;
+			border: 0px solid black;
+		}
+		#StartMlButton
+		{
+			background-image: url(   'Images/startML.jpg' );
+			background-repeat: no-repeat;
+			background-color: #FFFFFF;
+			color: #000000;
+			border: 0px solid black;
+			width: 239px;
+			height: 56px;
+			cursor: pointer;
+		}
+		#firstStart
+		{
+			display: none;
+		}
+		.license
+		{
+			width: 310px;
+			height: 25px;
+			color: #000000;
+			font-family: Arial,Helvetica,sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		#licenseText
+		{
+			width: 630px;
+			height: 225px;
+			border: 1px solid silver;
+			overflow: auto;
+			text-align: left;
+			background-color: #FAFAFA;
+			scrollbar-face-color: #DDDDDD;
+			scrollbar-arrow-color: #000000;
+			scrollbar-shadow-color: #AAAAAA;
+			scrollbar-dark-shadow-color: #888888;
+			padding: 5px;
+			text-align: justify;
+			font-size: 9pt;
+			margin-bottom: 8px;
+		}
+		#licenseText h1
+		{
+			font-size: 14pt;
+			padding: 0px;
+			margin: 0px;
+			margin-bottom: 10px;
+		}
+		#licenseText h2
+		{
+			font-size: 12pt;
+			padding: 0px;
+			margin: 0px;
+			margin-bottom: 10px;
+			margin-top: 15px;
+		}
+		#licenseText ol
+		{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		#firstStartInfo
+		{
+			border: 0px solid silver;
+			width: 630px;
+			height: 170px;
+			text-align: left;
+			padding: 5px;
+			overflow: auto;
+			margin-bottom: 5px;
+			scrollbar-face-color: #DDDDDD;
+			scrollbar-arrow-color: #000000;
+			scrollbar-shadow-color: #AAAAAA;
+			scrollbar-dark-shadow-color: #888888;
+		}
+		#firstStartInfo h1
+		{
+			font-size: 14pt;
+			padding: 0px;
+			margin: 0px;
+			margin-bottom: 5px;
+		}
+		#firstStartInfo p
+		{
+			font-size: 10pt;
+			padding: 0px;
+			margin: 0px;
+			text-align: justify;
+			padding-bottom: 5px;
+		}
+		#firstStartInfo ul
+		{
+			font-size: 10pt;
+			padding: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 22px;
+		}
+		.right
+		{
+			margin: 0.5em 0.5em 0.5em 0.8em;
+			float: right;
+		}
+		.left
+		{
+			margin: 0.5em 0.8em 0.5em 0.5em;
+			float: left;
+		}
+	</style>
 </head>
 <body>
-    <div id="main">
-        <div id="header">
-            <img border="0px" src="Images/banner.jpg" width="650px" height="80px" usemap="#Links">
-            <map name="Links">
-                <area shape="rect" coords="19,15,227,62" href="http://www.memorylifter.com" title="Visit the MemoryLifter homepage!">
-            </map>
-        </div>
-        <div id="menu">
-            <table class="search" border="0" cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr>
-                        <td class="search" align="left">
-                        </td>
-                        <td class="links" align="right">
-                            <a href="http://www.memorylifter.com/get-flashcards.html" target="_blank" title="Search for more Learning Modules.">
-                                Learning Modules</a> | <a href="http://www.memorylifter.com/about-memorylifter/faq.html"
-                                    target="_blank" title="You need help? Our Frequently asked questions will help you!">
-                                    FAQ</a> | <a href="http://www.memorylifter.com/tools/newsletter.html" target="_blank"
-                                        title="Stay informed and subscribe our newsletter!">Newsletter</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- First Start Window -->
-        <div id="firstStart" align="center">
-            <div id="firstStartInfo">
-                <h1>
-                    Welcome!</h1>
-                <p>
-                    Thank you for using the MemoryLifter Pocket Suite. You now have a very powerful
-                    and versatile learning tool at your disposal. Our scientifically based software
-                    was specifically developed to maximize study efficiency and retain information in
-                    the long term memory.
-                    <br>
-                    So get started and experience MemoryLifter: The fastest way to memorize.
-                </p>
-                <ul>
-                    <!--<li>Please note that the Flashcard Learning Modules which you bought with this USB Stick are <b>encrypted</b>. You can only learn these Modules from this USB Stick.</li>-->
-                    <li>Please note that the right of use of these Flashcard Learning Modules is limited
-                        to the owner of this USB Stick.</li>
-                    <li>Be aware that in order to display the simplified Chinese characters in your Learning
-                        Modules, the font files for East Asian languages have to be installed on the PC
-                        you are learning.</li>
-                    <li>In order to protect your Flashcard Learning Modules, in case of power or hardware
-                        failures, we strongly suggest that you create <b>regular backups</b>.</li>
-                    <!--<li>Click <a href="Data/warranty.html" target="_blank">here for information about our
-                        warranty</a>.</li>-->
-                </ul>
-            </div>
-            <div id="licenseText">
-            </div>
-            <button class="license" onclick="acceptLicense(false);">
-                I do not accept the terms of the license agreement</button>&nbsp;
-            <button class="license" onclick="acceptLicense(true);">
-                I accept the terms of the license agreement</button>
-        </div>
-        <!-- Default Window -->
-        <div id="content">
-            <div id="errors">
-            </div>
-            <div id="lmWrapper">
-                <div id="learningModules">
-                    <h2 id="learningModulesHeader">
-                        Learning Modules on Stick:</h2>
-                    <div id="learningModulesContent">
-                    </div>
-                </div>
-                <div id="recentFiles">
-                    <h2 id="recentFilesHeader">
-                        Recently opened:</h2>
-                    <div id="recentFilesContent">
-                    </div>
-                </div>
-                &nbsp;
-                <div id="startMlContainer">
-                    <button id="StartMlButton" onclick="startML()">
-                        &nbsp;</button>
-                </div>
-            </div>
-            <!-- Tabs started -->
-            <div class="tabButtons">
-                <button class="tabButton" id="tabButtonGetStarted" onclick="activateTabPage('GetStarted');">
-                    Get Started</button>
-                <button class="tabButton" id="tabButtonGoodToKnow" onclick="activateTabPage('GoodToKnow');">
-                    Good to know</button>
-                <button class="tabButton" id="tabButtonNewsFeed" onclick="activateTabPage('NewsFeed');">
-                    News</button>
-                <button class="tabButton" id="tabButtonBonusMaterial" onclick="activateTabPage('BonusMaterial');">
-                    Bonus Material</button>
-                <button class="tabButton" style="display: none" id="tabButtonUpdate" onclick="activateTabPage('Update');">
-                    Update</button>
-            </div>
-            <div id="GetStarted" class="tab" style="display: none">
-                <p>
-                    <div class="picture left" style="width: 162px;">
-                        <a href="#" onclick="playVideo(MLIFTER_VIDEO); return false;" title="Introduction Video (en)">
-                            <img width="160" height="120" src="Images/introVideo.jpg" alt="Introduction Video (en)"></a><br />
-                        English introduction video.</div>
-                    Familiarize yourself with some of the most important features of MemoryLifter by
-                    watching our short introductory video and then get started by choosing one of our
-                    multimedia Learning Modules. Remember, MemoryLifter runs off the USB stick, which
-                    means that your learning progress is saved wherever you go.
-                </p>
-            </div>
-            <div id="NewsFeed" class="tab" style="display: none;">
-                <div id="newsFeedContent">
-                    Loading News from www.memorylifter.com</div>
-            </div>
-            <div id="GoodToKnow" class="tab" style="display: none; overflow: auto">
-                <p>
-                    Good to know...</p>
-                <ol>
-                    <li><u>Install ML on your computer:</u> This memory stick also contains an installation
-                        package of MemoryLifter if you wish to install MemoryLifter on a PC. Please keep
-                        in mind that the learning modules that you bought with this memory stick are bound
-                        to be used only with this stick.<br />
-                        <a href="#" onclick="installML(false); return false;">Click here</a> if you want
-                        to install MemoryLifter on this PC. </li>
-                    <li>For additional Learning Modules visit our website <a href="http://www.memorylifter.com/get-flashcards.html">
-                        www.memorylifter.com</a>. </li>
-                    <li><u>Backup:</u> In order to protect your Flashcard Learning Modules, in case of power
-                        or hardware failures, we strongly suggest that you create <b>regular backups</b>.
-                        To create a backup either copy the folder <b>Learning Modules</b> from your memory
-                        stick to your PC, or use <b>Pack...</b> from the MemoryLifter <b>File</b> menu to
-                        create a backup archive of your Learning Module.</li>
-                    <li>Click <a href="Data/license.html" target="_blank">here for license and warranty
-                        information</a>. </li>
-                    <li>Be aware that in order to display the simplified Chinese characters in your Learning
-                        Modules, the font files for East Asian languages have to be installed on the PC
-                        you are learning. </li>
-                    <li>Add a new Learning Module to this stick by copying it to <a href="LearningModules">
-                        this folder</a>.</li>
-                </ol>
-            </div>
-            <div id="BonusMaterial" class="tab" style="display: none; overflow: auto">
-                <div class="picture right" style="width: 162px;">
-                    <a href="#" onclick="playVideo(MLIFTER_VIDEO_DE); return false;" title="Introduction Video (de)">
-                        <img width="160" height="120" src="Images/introVideo.jpg" alt="Introduction Video (de)"></a><br />
-                    International Engineering booklet.</div>
-                <p>
-                    Booklets for the International Engineering Learning Module</p>
-                <ul>
-                    <li>English language booklet for International Engineering.</li>
-                    <li>German language booklet for International Engineering.</li>
-                </ul>
-            </div>
-            <div id="Update" class="tab" style="display: none; overflow: auto">
-                Update!
-            </div>
-            <!-- Tab end -->
-        </div>
-        <div id="updateLayer" style="position: absolute; width: 500px; left: 80px; top: 170px;
-            min-height: 230px; text-align: center; border: 2px solid black; background-color: #EEE;
-            display: none;">
-            <div style="margin: 10px 10px 10px 10px; padding: 3px 6px 3px 6px; float: right;
-                cursor: pointer;">
-                <a onclick="hideUpdateRequest()">
-                    <img src="Images/close.png" alt="Close" /></a></div>
-            <div style="margin: 10px 10px 10px 10px; padding: 3px 6px 3px 6px; float: left; cursor: pointer;">
-                &nbsp;</div>
-            <br />
-            A new MemoryLifter update is available.<br />
-            <br />
-            <b><a style="text-decoration: underline" id="updateLink" href="#" onclick="window.close()"
-                style="font-size: 36px">Update now!</a></b><br />
-            <br />
-            <div style="width: 90%; border: 1px solid silver; text-align: left" id="updateDescription">
-                <b>&nbsp;&nbsp;How to update:</b>
-                <ol>
-                    <li>Click on "Update now" and download the installer to your PC.</li>
-                    <li>Close all programs before running the installer.</li>
-                    <li>If the download fails, visit our homepage: <a href="http://www.memorylifter.com">
-                        www.memorylifter.com</a></li>
-                </ol>
-            </div>
-            <br />
-        </div>
-    </div>
-    </div>
+	<div id="main">
+		<div id="header">
+			<img border="0px" src="Images/banner.jpg" width="650px" height="80px" usemap="#Links">
+			<map name="Links">
+				<area shape="rect" coords="19,15,227,62" href="http://www.memorylifter.com" title="Visit the MemoryLifter homepage!">
+			</map>
+		</div>
+		<div id="menu">
+			<table class="search" border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="search" align="left">
+						</td>
+						<td class="links" align="right">
+							<a href="http://www.memorylifter.com/modules" target="_blank" title="Search for more Learning Modules.">
+								Learning Modules</a> | <a href="http://www.memorylifter.com/faq"
+									target="_blank" title="You need help? Our Frequently asked questions will help you!">
+									FAQ</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- First Start Window -->
+		<div id="firstStart" align="center">
+			<div id="firstStartInfo">
+				<h1>
+					Welcome!</h1>
+				<p>
+					Thank you for using the MemoryLifter Pocket Suite. You now have a very powerful
+					and versatile learning tool at your disposal. Our scientifically based software
+					was specifically developed to maximize study efficiency and retain information in
+					the long term memory.
+					<br>
+					So get started and experience MemoryLifter: The fastest way to memorize.
+				</p>
+				<ul>
+					<li>Be aware that in order to display the simplified Chinese characters in your Learning
+						Modules, the font files for East Asian languages have to be installed on the PC
+						you are learning.</li>
+					<li>In order to protect your Learning Modules, in case of power loss or hardware
+						failures, we strongly suggest that you create <b>regular backups</b>.</li>
+				</ul>
+			</div>
+			<div id="licenseText">
+			</div>
+			<button class="license" onclick="acceptLicense(false);">
+				I do not accept the terms of the license agreement</button>&nbsp;
+			<button class="license" onclick="acceptLicense(true);">
+				I accept the terms of the license agreement</button>
+		</div>
+		<!-- Default Window -->
+		<div id="content">
+			<div id="errors">
+			</div>
+			<div id="lmWrapper">
+				<div id="learningModules">
+					<h2 id="learningModulesHeader">
+						Learning Modules on Stick:</h2>
+					<div id="learningModulesContent">
+					</div>
+				</div>
+				<div id="recentFiles">
+					<h2 id="recentFilesHeader">
+						Recently opened:</h2>
+					<div id="recentFilesContent">
+					</div>
+				</div>
+				&nbsp;
+				<div id="startMlContainer">
+					<button id="StartMlButton" onclick="startML(true)">
+						&nbsp;</button>
+				</div>
+			</div>
+			<!-- Tabs started -->
+			<div class="tabButtons">
+				<button class="tabButton" id="tabButtonGoodToKnow" onclick="activateTabPage('GoodToKnow');">
+					Good to know</button>
+				<button class="tabButton" id="tabButtonNewsFeed" onclick="activateTabPage('NewsFeed');">
+					News</button>
+			</div>
+			<div id="NewsFeed" class="tab" style="display: none;">
+				<div id="newsFeedContent">
+					Loading News from www.memorylifter.com</div>
+			</div>
+			<div id="GoodToKnow" class="tab" style="display: none; overflow: auto">
+				<ol>
+					<li><u>Install MemoryLifter on your computer:</u> This memory stick also contains an installation
+						package if you wish to install MemoryLifter on a PC. <a href="#" onclick="installML(false); return false;">Click here</a> 
+						to install MemoryLifter on this PC. </li>
+					<li>For additional Learning Modules visit our website <a href="http://www.memorylifter.com/modules">
+						www.memorylifter.com</a>.</li>
+					<li>Add a new Learning Module to this memory stick by copying it to <a href="LearningModules">
+						this folder</a>.</li>
+					<li><u>Backup:</u> In order to protect your Learning Modules, in case of power loss
+						or hardware failures, we strongly suggest that you create <b>regular backups</b>.
+						To create a backup copy the folder <b>Learning Modules</b> from your memory
+						stick to your PC to	create a backup of your Learning Modules.</li>
+					<li>Click <a href="Data/license.html" target="_blank">here for license and warranty
+						information</a>. </li>
+					<li>Be aware that in order to display the simplified Chinese characters in your Learning
+						Modules, the font files for East Asian languages have to be installed on the PC
+						you are learning. </li>
+				</ol>
+			</div>
+			<!-- Tab end -->
+		</div>
+	</div>
+	</div>
 </body>
 </html>
