@@ -8,6 +8,7 @@ body {{color: {0}; background-color: {1}; font-family: Arial, Helvetica; font-si
 <BODY>
 <U>{2}</U>
 <BR>{3}
+<BR>Copyright © 2001-2012 OMICRON electronics GmbH
 <BR><FONT class="hidden">programmed by the MemoryLifter team.</FONT>
 </BODY>
 </HTML>
