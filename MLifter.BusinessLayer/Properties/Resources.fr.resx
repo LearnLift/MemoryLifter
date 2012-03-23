@@ -112,21 +112,15 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AUDIOPLAYER_CRASHED_CAPTION">
-    <value>Son/Audio arrêté</value>
-  </data>
-  <data name="AUDIOPLAYER_CRASHED_TEXT">
-    <value>A cause d'une erreur du lecteur audio le son a été arrêté. Redémarrez MemoryLifter pour mettre en marche le son.</value>
-  </data>
-  <data name="CSH_CONNECTION_NAME">
+  <data name="CSH_CONNECTION_NAME" xml:space="preserve">
     <value>Clé USB MemoryLifter sur {0}</value>
   </data>
-  <data name="ERROR_PAGE">
+  <data name="ERROR_PAGE" xml:space="preserve">
     <value>&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;{0}&lt;/title&gt;
@@ -136,90 +130,90 @@
     &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
-  <data name="EXCEPTION_POOL_EMPTY">
+  <data name="EXCEPTION_POOL_EMPTY" xml:space="preserve">
     <value>Le pool est vide !</value>
   </data>
-  <data name="ExtensionURI_Suffix">
+  <data name="ExtensionURI_Suffix" xml:space="preserve">
     <value>?guid={0}</value>
   </data>
-  <data name="LEARNING_MODULES_PAGE_EMPTY_LM">
+  <data name="LEARNING_MODULES_PAGE_EMPTY_LM" xml:space="preserve">
     <value>Module vide !</value>
   </data>
-  <data name="LEARNING_MODULES_PAGE_NO_IMAGES">
+  <data name="LEARNING_MODULES_PAGE_NO_IMAGES" xml:space="preserve">
     <value>Pas d'images !</value>
   </data>
-  <data name="LOCAL_MODULE">
+  <data name="LOCAL_MODULE" xml:space="preserve">
     <value>localhost</value>
   </data>
-  <data name="MediaURI_Suffix">
+  <data name="MediaURI_Suffix" xml:space="preserve">
     <value>?id={0}</value>
   </data>
-  <data name="STICK_KEY_EXTENSION">
+  <data name="STICK_KEY_EXTENSION" xml:space="preserve">
     <value>.key</value>
   </data>
-  <data name="STICK_KEY_FOLDER">
+  <data name="STICK_KEY_FOLDER" xml:space="preserve">
     <value>LMKeys</value>
   </data>
-  <data name="TEACHER_DEFAULT">
+  <data name="TEACHER_DEFAULT" xml:space="preserve">
     <value>Par défaut</value>
   </data>
-  <data name="TEACHER_NICEGUY">
+  <data name="TEACHER_NICEGUY" xml:space="preserve">
     <value>M. Gentil</value>
   </data>
-  <data name="TEACHER_OCCASIONAL">
+  <data name="TEACHER_OCCASIONAL" xml:space="preserve">
     <value>Apprenant occasionnel</value>
   </data>
-  <data name="TEACHER_STRICT">
+  <data name="TEACHER_STRICT" xml:space="preserve">
     <value>Strict</value>
   </data>
-  <data name="XSL_CLICKFORE">
+  <data name="XSL_CLICKFORE" xml:space="preserve">
     <value>Cliquez sur le bouton pour obtenir un exemple :</value>
   </data>
-  <data name="XSL_CLICKFORQ">
+  <data name="XSL_CLICKFORQ" xml:space="preserve">
     <value>Cliquez sur le bouton pour obtenir une question :</value>
   </data>
-  <data name="XSL_CORRECT">
+  <data name="XSL_CORRECT" xml:space="preserve">
     <value>La réponse correcte est :</value>
   </data>
-  <data name="XSL_DEMOTE_MESSAGE">
+  <data name="XSL_DEMOTE_MESSAGE" xml:space="preserve">
     <value>La carte a été déclassée dans la boîte 1 !</value>
   </data>
-  <data name="XSL_ERROR_CAPTION">
+  <data name="XSL_ERROR_CAPTION" xml:space="preserve">
     <value>Erreur de feuille de style</value>
   </data>
-  <data name="XSL_ERROR_TEXT">
+  <data name="XSL_ERROR_TEXT" xml:space="preserve">
     <value>Une erreur s'est produite lors de la compilation de {0}.&lt;br /&gt;
 Votre feuille de style ou les éléments liés peuvent contenir des erreurs.&lt;br /&gt;
 Si vous hésitez sur la procédure à suivre, restaurez le fichier original dans "Outils - Editeur de style".</value>
   </data>
-  <data name="XSL_FEEDBACK_CORRECT">
+  <data name="XSL_FEEDBACK_CORRECT" xml:space="preserve">
     <value>Votre réponse était correcte !</value>
   </data>
-  <data name="XSL_FEEDBACK_WRONG">
+  <data name="XSL_FEEDBACK_WRONG" xml:space="preserve">
     <value>Votre réponse était erronée !</value>
   </data>
-  <data name="XSL_LISTENING_MODE_IMAGE_BUTTON_TEXT">
+  <data name="XSL_LISTENING_MODE_IMAGE_BUTTON_TEXT" xml:space="preserve">
     <value>Cliquez ici pour afficher l'image.</value>
   </data>
-  <data name="XSL_PROMOTE_HIGHEST_MESSAGE">
+  <data name="XSL_PROMOTE_HIGHEST_MESSAGE" xml:space="preserve">
     <value>Cette carte a atteint la boîte la plus haute.</value>
   </data>
-  <data name="XSL_PROMOTE_MESSAGE">
+  <data name="XSL_PROMOTE_MESSAGE" xml:space="preserve">
     <value>La carte a été surclassée dans la boîte {box_number}!</value>
   </data>
-  <data name="XSL_RESIZE_PICTURE">
+  <data name="XSL_RESIZE_PICTURE" xml:space="preserve">
     <value>Cliquez sur l'image pour l'afficher en taille réelle.</value>
   </data>
-  <data name="XSL_RESTORE_PICTURE">
+  <data name="XSL_RESTORE_PICTURE" xml:space="preserve">
     <value>Cliquez sur l'image pour la réduire.</value>
   </data>
-  <data name="XSL_SELFASSESMENT_DEMOTE_MESSAGE">
+  <data name="XSL_SELFASSESMENT_DEMOTE_MESSAGE" xml:space="preserve">
     <value>Souhaitez-vous déclasser la carte ?</value>
   </data>
-  <data name="XSL_SELFASSESMENT_PROMOTE_MESSAGE">
+  <data name="XSL_SELFASSESMENT_PROMOTE_MESSAGE" xml:space="preserve">
     <value>Souhaitez-vous surclasser la carte ?</value>
   </data>
-  <data name="XSL_YOUENTERED">
+  <data name="XSL_YOUENTERED" xml:space="preserve">
     <value>Vous avez saisi :</value>
   </data>
 </root>

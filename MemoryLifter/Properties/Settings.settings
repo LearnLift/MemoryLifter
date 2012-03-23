@@ -35,9 +35,6 @@
     <Setting Name="Size" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">940, 700</Value>
     </Setting>
-    <Setting Name="Registered" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="SynonymPromt" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
@@ -200,9 +197,6 @@
     <Setting Name="AppDataFolderErrorReportsNew" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ErrorReports\New</Value>
     </Setting>
-    <Setting Name="ENABLE_ErrorReportviaWebservice" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="CheckForBetaUpdates" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -211,9 +205,6 @@
     </Setting>
     <Setting Name="CheckForUpdates" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="RegistrationServiceUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://services.memorylifter.com/registration/RegistrationHandler.ashx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

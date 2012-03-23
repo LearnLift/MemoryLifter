@@ -1,4 +1,4 @@
-﻿namespace MLifter.Components
+namespace MLifter.Components
 {
     partial class GlassButton
     {

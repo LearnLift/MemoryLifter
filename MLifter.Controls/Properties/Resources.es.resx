@@ -573,9 +573,6 @@ Para desactivar o modificar el cambio de tamaño del las fichas añadidas más t
   <data name="NEWS_CBSTARTUP_TEXT2" xml:space="preserve">
     <value>Mantenerme informado</value>
   </data>
-  <data name="REGISTER_NOVALIDEMAIL_TEXT" xml:space="preserve">
-    <value>Es necessario indicar un correo electrónico válido. Por favor, corrija su entrada de datos.</value>
-  </data>
   <data name="IMPORTING" xml:space="preserve">
     <value>Importando...</value>
   </data>
@@ -735,9 +732,6 @@ Para añadir nuevas fichas seleccione "Especificar capítulos de aprendizaje" en
   </data>
   <data name="BUTTON_TEXT_CANCEL" xml:space="preserve">
     <value>Cancelar</value>
-  </data>
-  <data name="REGISTER_NOVALIDEMAIL_CAPTION" xml:space="preserve">
-    <value>Entrada no válida</value>
   </data>
   <data name="CONFIRM_DEMOTE_DESCRIPTION" xml:space="preserve">
     <value>Aunque considere que ya conoce esta ficha, la puede pasar a un fichero superior.</value>

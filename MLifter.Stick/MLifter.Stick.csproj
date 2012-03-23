@@ -27,7 +27,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,7 +36,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -89,7 +89,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>5822</DevelopmentServerPort>
+          <DevelopmentServerPort>2447</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:90/MLifterStick</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
@@ -102,39 +102,70 @@
     </VisualStudio>
   </ProjectExtensions>
   <ItemGroup>
-    <Content Include="Autorun.exe" />
-    <Content Include="autorun.inf" />
-    <Content Include="Master\Autorun.exe" />
-    <Content Include="Master\autorun.inf" />
-    <Content Include="Master\Data\license.html" />
-    <Content Include="Start.hta" />
-    <None Include="Master\Images\App.ico" />
-    <None Include="Master\MemoryLifter24\Config\defaultConnection.mlcfg" />
-    <Content Include="Master\Images\Audiobook.jpg" />
-    <Content Include="Master\Images\Banner.jpg" />
-    <Content Include="Master\Images\button.png" />
-    <Content Include="Master\Images\button_search.png" />
-    <Content Include="Master\Images\close.png" />
-    <Content Include="Master\Images\introVideo.jpg" />
-    <Content Include="Master\Images\learning.gif" />
-    <Content Include="Master\Images\menu_bg.gif" />
-    <Content Include="Master\Images\startML.jpg" />
-    <Content Include="Master\MemoryLifter24\MLifter.exe.config.user" />
-    <Content Include="Master\Start.hta" />
-    <None Include="Master\MLifter.sys" />
-    <Content Include="Master\Data\presentation_en.mpg" />
+    <None Include="autorun.inf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\license.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="LearningModules\ML World Capitals.mlm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Start.hta">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\App.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MemoryLifter\Config\defaultConnection.mlcfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Audiobook.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\button_search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\learning.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\menu_bg.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\startML.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MemoryLifter\MemoryLifter.exe.config.user">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MLifter.sys">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Master\Install\" />
-    <Folder Include="Master\LearningModules\" />
+    <Folder Include="Install\" />
     <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>del $(TargetDir)MLifterStick.*
+
+copy $(SolutionDir)Autorun\$(ConfigurationName)\Autorun.exe $(TargetDir)Autorun.exe
+
+mkdir $(TargetDir)Install
+copy $(SolutionDir)MemoryLifter.Setup\$(ConfigurationName)\MemoryLifter-Setup.exe $(TargetDir)Install\MemoryLifter-Setup.exe
+
+xcopy $(SolutionDir)MemoryLifter\$(OutDir)*.* $(TargetDir)MemoryLifter /S /I /Y
+del /S $(TargetDir)MemoryLifter\*.pdb
+del /S $(TargetDir)MemoryLifter\*.vshost.*
+del $(TargetDir)MemoryLifter\*.xml</PostBuildEvent>
+  </PropertyGroup>
 </Project>

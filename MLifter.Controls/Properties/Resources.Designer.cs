@@ -3112,24 +3112,6 @@ namespace MLifter.Controls.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid input.
-        /// </summary>
-        internal static string REGISTER_NOVALIDEMAIL_CAPTION {
-            get {
-                return ResourceManager.GetString("REGISTER_NOVALIDEMAIL_CAPTION", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A valid e-mail address is required, please correct your input..
-        /// </summary>
-        internal static string REGISTER_NOVALIDEMAIL_TEXT {
-            get {
-                return ResourceManager.GetString("REGISTER_NOVALIDEMAIL_TEXT", resourceCulture);
-            }
-        }
-        
         internal static System.Drawing.Bitmap resize {
             get {
                 object obj = ResourceManager.GetObject("resize", resourceCulture);
