@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f1c4445e-e349-457d-816d-918dde227fec}</ProjectGuid>
+    <OutputType>msi</OutputType>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MemoryLifter.Setup.aip</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <AssemblyName>MemoryLifter.Setup</AssemblyName>
+    <Name>MemoryLifter.Setup</Name>
+    <RootNamespace>MemoryLifter.Setup</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'All' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>msi\</OutputPath>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' " />
+  <ItemGroup>
+    <Compile Include="MemoryLifter.Setup.aip">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Target Name="Build">
+    <!--Create the output directory-->
+    <!-- <MakeDir Directories="$(OutputPath)"  Condition="!Exists('$(OutputPath)')" /> -->
+    <!-- Run the advanced installer on the .aip project - build -->
+    <Exec Condition="Exists(%(Compile.Identity)) AND '$(Configuration)'=='All'" Command="&quot;$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\SOFTWARE\Caphyon\Advanced Installer\Extension for VS`, 9.0))bin\x86\AdvancedInstaller.com&quot; /build &quot;%(Compile.Identity)&quot;" />
+    <Exec Condition="Exists(%(Compile.Identity)) AND '$(Configuration)'!='All'" Command="&quot;$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\SOFTWARE\Caphyon\Advanced Installer\Extension for VS`, 9.0))bin\x86\AdvancedInstaller.com&quot; /build &quot;%(Compile.Identity)&quot; -buildslist $(Configuration)" />
+  </Target>
+  <Target Name="Rebuild">
+    <!--Create the output directory-->
+    <!-- MakeDir Directories="$(OutputPath)"  Condition="!Exists('$(OutputPath)')" /> -->
+    <!-- Run the advanced installer on the .aip project - rebuild -->
+    <Exec Condition="Exists(%(Compile.Identity)) AND '$(Configuration)'=='All'" Command="&quot;$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\SOFTWARE\Caphyon\Advanced Installer\Extension for VS`, 9.0))bin\x86\AdvancedInstaller.com&quot; /rebuild &quot;%(Compile.Identity)&quot;" />
+    <Exec Condition="Exists(%(Compile.Identity)) AND '$(Configuration)'!='All'" Command="&quot;$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\SOFTWARE\Caphyon\Advanced Installer\Extension for VS`, 9.0))bin\x86\AdvancedInstaller.com&quot; /rebuild &quot;%(Compile.Identity)&quot; -buildslist $(Configuration)" />
+  </Target>
+  <Target Name="Clean">
+  </Target>
+  <Target Name="ResolveAssemblyReferences">
+  </Target>
+</Project>

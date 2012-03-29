@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.0" version="9.0" Modules="enterprise" RootPath="." Language="en" Id="{6D9FBCC8-369A-4AC0-82E8-38CD4DB850B3}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BackgroundColor" Value="lightblue" MultiBuildValue="Build_1:orange" MsiKey="AI_BackgroundColor"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="Build_1:aiui"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_FrameBtnsColor" Value="powderblue" MultiBuildValue="Build_1:orange" MsiKey="AI_FrameBtnsColor"/>
+    <ROW Property="AI_FrameColor" Value="powderblue" MultiBuildValue="Build_1:orange" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_ImagesColor" Value="powderblue" MultiBuildValue="Build_1:orange" MsiKey="AI_ImagesColor"/>
+    <ROW Property="AI_MINIEVERCAPTION" MultiBuildValue="Build_1:6.0" ValueLocId="-"/>
+    <ROW Property="AI_MINIEVERSION" MultiBuildValue="Build_1:6.0" ValueLocId="-"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="MemoryLifter"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="ALLUSERS" Value="2" MultiBuildValue="Build_1:1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPLINK" Value="http://www.memorylifter.com/"/>
+    <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPPRODUCTICON" Value="ML_1.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://www.memorylifter.com/"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="http://memorylifter.codeplex.com/"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="OMICRON electronics GmbH" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{2B92F381-B06C-4E61-A02E-1EEBF6DA4F00} 1031:{8D859A5A-D965-4F21-9E26-94E0BB1BF288} 2070:{CD594C1F-14C0-47DA-B147-68D5160A55F1} 1036:{E09005BA-EB8D-481E-BAE0-61756A63C2FD} 3082:{E4C5843C-59A7-486F-90A2-A9E9B08674A4} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="MemoryLifter" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="2.5.0"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{673DE9D9-2058-4C44-8175-EEB5B018CC53}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="Build_1:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="Build_1:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="Build_1:Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="Build_1:Windows XP x64, Windows XP x64 Service Pack 1, Windows Server 2003 x64, Windows Server 2003 x64 Service Pack 1" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="Build_1:Windows XP x64, Windows XP x64 Service Pack 1, Windows Server 2003 x64, Windows Server 2003 x64 Service Pack 1" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="Build_1:Windows NT 4.0, Windows 2000, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Audio_Dir" Directory_Parent="Media_Dir" DefaultDir="Audio"/>
+    <ROW Directory="BumbleBee_Dir" Directory_Parent="Designs_Dir" DefaultDir="Bumble~1|BumbleBee"/>
+    <ROW Directory="Classic_Dir" Directory_Parent="Designs_Dir" DefaultDir="Classic"/>
+    <ROW Directory="Codecs_Dir" Directory_Parent="APPDIR" DefaultDir="Codecs"/>
+    <ROW Directory="Config_Dir" Directory_Parent="APPDIR" DefaultDir="Config"/>
+    <ROW Directory="Default_Dir" Directory_Parent="Designs_Dir" DefaultDir="Default"/>
+    <ROW Directory="Designs_Dir" Directory_Parent="APPDIR" DefaultDir="Designs"/>
+    <ROW Directory="ErrorHandler_Dir" Directory_Parent="System_Dir" DefaultDir="ErrorH~1|ErrorHandler"/>
+    <ROW Directory="Export_Dir" Directory_Parent="System_Dir" DefaultDir="Export"/>
+    <ROW Directory="Icons_Dir" Directory_Parent="Resources_Dir" DefaultDir="Icons"/>
+    <ROW Directory="Images_Dir" Directory_Parent="Server_Dir" DefaultDir="Images"/>
+    <ROW Directory="Kids_Dir" Directory_Parent="Designs_Dir" DefaultDir="Kids"/>
+    <ROW Directory="LameABG_Dir" Directory_Parent="Lame_Dir" DefaultDir=".:LameABG"/>
+    <ROW Directory="LameR_Dir" Directory_Parent="Lame_Dir" DefaultDir=".:LameR"/>
+    <ROW Directory="LameSM_Dir" Directory_Parent="Lame_Dir" DefaultDir=".:LameSM"/>
+    <ROW Directory="Lame_Dir" Directory_Parent="Codecs_Dir" DefaultDir="Lame"/>
+    <ROW Directory="Languages_Dir" Directory_Parent="APPDIR" DefaultDir="Langua~1|Languages"/>
+    <ROW Directory="Libraries_Dir" Directory_Parent="APPDIR" DefaultDir="Librar~1|Libraries"/>
+    <ROW Directory="Media_Dir" Directory_Parent="APPDIR" DefaultDir="Media"/>
+    <ROW Directory="MemoryLifterWebService_Dir" Directory_Parent="Server_Dir" DefaultDir="Memory~1|MemoryLifterWebService"/>
+    <ROW Directory="Print_Dir" Directory_Parent="System_Dir" DefaultDir="Print"/>
+    <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="Progra~1|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Resources_Dir" Directory_Parent="APPDIR" DefaultDir="Resour~1|Resources"/>
+    <ROW Directory="Server_1_Dir" Directory_Parent="_BCF8172A840E45E5B6C63C73A3555684" DefaultDir="Server"/>
+    <ROW Directory="Server_Dir" Directory_Parent="APPDIR" DefaultDir="Server"/>
+    <ROW Directory="System_Dir" Directory_Parent="Designs_Dir" DefaultDir="System"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="Tools_Dir" Directory_Parent="_BCF8172A840E45E5B6C63C73A3555684" DefaultDir="Tools"/>
+    <ROW Directory="Transformer_Dir" Directory_Parent="System_Dir" DefaultDir="Transf~1|Transformer"/>
+    <ROW Directory="VorbisABG_Dir" Directory_Parent="VorbisTools_Dir" DefaultDir=".:Vorbis~1|VorbisABG"/>
+    <ROW Directory="VorbisR_Dir" Directory_Parent="VorbisTools_Dir" DefaultDir=".:VorbisR"/>
+    <ROW Directory="VorbisSM_Dir" Directory_Parent="VorbisTools_Dir" DefaultDir=".:VorbisSM"/>
+    <ROW Directory="VorbisTools_Dir" Directory_Parent="Codecs_Dir" DefaultDir="Vorbis~1|VorbisTools"/>
+    <ROW Directory="_BCF8172A840E45E5B6C63C73A3555684" Directory_Parent="ProgramMenuFolder" DefaultDir="Memory~1|MemoryLifter"/>
+    <ROW Directory="bin_Dir" Directory_Parent="MemoryLifterWebService_Dir" DefaultDir="bin"/>
+    <ROW Directory="de_1_Dir" Directory_Parent="Resources_Dir" DefaultDir="de"/>
+    <ROW Directory="de_2_Dir" Directory_Parent="Languages_Dir" DefaultDir="de"/>
+    <ROW Directory="de_Dir" Directory_Parent="bin_Dir" DefaultDir="de"/>
+    <ROW Directory="en_Dir" Directory_Parent="Resources_Dir" DefaultDir="en"/>
+    <ROW Directory="es_1_Dir" Directory_Parent="Resources_Dir" DefaultDir="es"/>
+    <ROW Directory="es_2_Dir" Directory_Parent="Languages_Dir" DefaultDir="es"/>
+    <ROW Directory="es_Dir" Directory_Parent="bin_Dir" DefaultDir="es"/>
+    <ROW Directory="fr_1_Dir" Directory_Parent="Resources_Dir" DefaultDir="fr"/>
+    <ROW Directory="fr_2_Dir" Directory_Parent="Languages_Dir" DefaultDir="fr"/>
+    <ROW Directory="fr_Dir" Directory_Parent="bin_Dir" DefaultDir="fr"/>
+    <ROW Directory="iLifter_Dir" Directory_Parent="Designs_Dir" DefaultDir="iLifter"/>
+    <ROW Directory="pt_1_Dir" Directory_Parent="Resources_Dir" DefaultDir="pt"/>
+    <ROW Directory="pt_2_Dir" Directory_Parent="Languages_Dir" DefaultDir="pt"/>
+    <ROW Directory="pt_Dir" Directory_Parent="bin_Dir" DefaultDir="pt"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_CustomARPName" ComponentId="{4FC4D770-4490-46B8-B5ED-0421538C28B1}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{43AE2E64-980F-4666-A2B1-2BD2D2AD598D}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="Arrow_Left.png" ComponentId="{ABD56FE7-E68E-4CC1-9C97-577705B40361}" Directory_="BumbleBee_Dir" Attributes="0" KeyPath="Arrow_Left.png" Type="0"/>
+    <ROW Component="Arrow_Left.png_1" ComponentId="{CF1B09A2-F60C-40DA-BEA2-4E67FB3275F1}" Directory_="Classic_Dir" Attributes="0" KeyPath="Arrow_Left.png_1" Type="0"/>
+    <ROW Component="Arrow_Left.png_2" ComponentId="{8496B047-FA3E-4CF1-83EC-76BEF494D387}" Directory_="Default_Dir" Attributes="0" KeyPath="Arrow_Left.png_2" Type="0"/>
+    <ROW Component="Arrow_Left.png_3" ComponentId="{DE0E0DDF-7A17-47DA-9097-D774E1AC5B62}" Directory_="iLifter_Dir" Attributes="0" KeyPath="Arrow_Left.png_3" Type="0"/>
+    <ROW Component="Arrow_Left.png_4" ComponentId="{01349A47-5A0E-4863-B058-925EB5235D14}" Directory_="Kids_Dir" Attributes="0" KeyPath="Arrow_Left.png_4" Type="0"/>
+    <ROW Component="AxInterop.WMPLib.dll" ComponentId="{3260D888-07F3-424C-924D-D79985055629}" Directory_="bin_Dir" Attributes="0" KeyPath="AxInterop.WMPLib.dll"/>
+    <ROW Component="AxInterop.WMPLib.dll_1" ComponentId="{CDCED28C-747C-4B16-8893-D7FCB1E123FA}" Directory_="Libraries_Dir" Attributes="0" KeyPath="AxInterop.WMPLib.dll_1"/>
+    <ROW Component="BumbleBee.style" ComponentId="{192980AB-15A1-4196-A57B-DBF1AD730735}" Directory_="Designs_Dir" Attributes="0" KeyPath="BumbleBee.style" Type="0"/>
+    <ROW Component="CPOL.html" ComponentId="{8223EC5E-55E9-49F8-A8A2-3103DEA59F68}" Directory_="en_Dir" Attributes="0" KeyPath="CPOL.html" Type="0"/>
+    <ROW Component="DirectDatabaseAccess_Demo.mlcfg_1" ComponentId="{5A7E8D28-9F58-44F2-88AF-F14E54CE1FE7}" Directory_="Server_Dir" Attributes="0" KeyPath="DirectDatabaseAccess_Demo.mlcfg" Type="0"/>
+    <ROW Component="Esent.Collections.dll" ComponentId="{A56FA9C5-8DCC-47BE-885C-0B0D6C00DB35}" Directory_="bin_Dir" Attributes="0" KeyPath="Esent.Collections.dll"/>
+    <ROW Component="Esent.Collections.dll_1" ComponentId="{B2E124C8-4BA0-48D9-9129-AA042D912906}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Esent.Collections.dll_1"/>
+    <ROW Component="Esent.Interop.dll" ComponentId="{0D8506F8-5BF0-4A3B-ABB7-06A523A2E006}" Directory_="bin_Dir" Attributes="0" KeyPath="Esent.Interop.dll"/>
+    <ROW Component="Esent.Interop.dll_1" ComponentId="{0BFD7C6A-4536-401B-973B-63D92DBFCC22}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Esent.Interop.dll_1"/>
+    <ROW Component="ExtensionFileHandler.ashx" ComponentId="{5B07BEF9-BC5D-4C2A-8D34-09CFD8DD2049}" Directory_="MemoryLifterWebService_Dir" Attributes="0" KeyPath="ExtensionFileHandler.ashx" Type="0"/>
+    <ROW Component="ICSharpCode.SharpZipLib.dll" ComponentId="{5F8EF1D3-BA37-431D-AF70-C78307291D83}" Directory_="bin_Dir" Attributes="0" KeyPath="ICSharpCode.SharpZipLib.dll"/>
+    <ROW Component="ICSharpCode.SharpZipLib.dll_1" ComponentId="{07D08375-2CD9-451A-A480-715DE3B2DCD7}" Directory_="Libraries_Dir" Attributes="0" KeyPath="ICSharpCode.SharpZipLib.dll_1"/>
+    <ROW Component="Interop.WMPLib.dll" ComponentId="{AB49F361-DA8E-4BA6-BD0E-2A34D3934342}" Directory_="bin_Dir" Attributes="0" KeyPath="Interop.WMPLib.dll"/>
+    <ROW Component="Interop.WMPLib.dll_1" ComponentId="{B7D22597-A272-4483-9AB4-6FA98AF32CB1}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Interop.WMPLib.dll_1"/>
+    <ROW Component="J832.Common.dll" ComponentId="{18860628-7D0D-4A8C-AF07-31F73B23D046}" Directory_="Libraries_Dir" Attributes="0" KeyPath="J832.Common.dll"/>
+    <ROW Component="J832.Wpf.BagOTricksLib.dll" ComponentId="{6CA72ED6-2200-40CC-88E7-572410920714}" Directory_="Libraries_Dir" Attributes="0" KeyPath="J832.Wpf.BagOTricksLib.dll"/>
+    <ROW Component="LICENSE.txt" ComponentId="{67C81AEA-ACA6-4A75-B3AA-FAD6EED767B1}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="LICENSE.txt_4" Type="0"/>
+    <ROW Component="LICENSE.txt_1" ComponentId="{E82BF21C-4044-4B35-8F46-374DBFE22AAB}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="LICENSE.txt_5" Type="0"/>
+    <ROW Component="LICENSE.txt_2" ComponentId="{7606D065-6D04-44D5-BE9A-6E488F490AC6}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="LICENSE.txt_8" Type="0"/>
+    <ROW Component="MLifter.AudioBookGenerator.exe" ComponentId="{950736E7-691D-4566-9929-AEE23724E100}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.AudioBookGenerator.exe"/>
+    <ROW Component="MLifter.AudioBookGenerator.exe.config" ComponentId="{941A3817-0128-4404-93CC-0A1D939DFC28}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.AudioBookGenerator.exe.config" Type="0"/>
+    <ROW Component="MLifter.AudioTools.dll" ComponentId="{11EEDFCF-BBEF-4F05-9637-511A877DAF0F}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.AudioTools.dll"/>
+    <ROW Component="MLifter.AudioTools.dll_1" ComponentId="{00C1BA27-C1B4-4966-83F9-D9AAA9FE5704}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.AudioTools.dll_1"/>
+    <ROW Component="MLifter.AudioTools.resources.dll" ComponentId="{1B0A63B9-54BA-4AD8-9075-679E557FBE03}" Directory_="de_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_1" ComponentId="{1595A0FC-A83E-4003-9831-ADAD74EFD947}" Directory_="es_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_1"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_2" ComponentId="{6F77024F-E7B0-47CD-B801-3F2F95EC64B0}" Directory_="fr_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_2"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_3" ComponentId="{1E08D897-93F2-4EBE-BB76-E38C3B1B54E2}" Directory_="pt_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_3"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_4" ComponentId="{BE6AD2D3-6CBC-478E-BF2C-144BBE6CC59F}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_4"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_5" ComponentId="{EDBDF55E-C7A1-4E12-8F36-C1E6895CB08F}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_5"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_6" ComponentId="{441DBAE9-4658-4AFA-BE7F-592E66CC67F8}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_6"/>
+    <ROW Component="MLifter.AudioTools.resources.dll_7" ComponentId="{9B5A179B-853C-4C22-87CD-3C06C1C81199}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.AudioTools.resources.dll_7"/>
+    <ROW Component="MLifter.BusinessLayer.XmlSerializers.dll" ComponentId="{C35B8E79-942A-4D8D-873C-84A56E6189B7}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.XmlSerializers.dll"/>
+    <ROW Component="MLifter.BusinessLayer.dll" ComponentId="{98F7E089-7AD1-4BAE-B795-C5B8FE56AAD0}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.dll"/>
+    <ROW Component="MLifter.BusinessLayer.dll_1" ComponentId="{94955B4B-BEF5-4F05-A43C-F6D75E3D9C15}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.dll_1"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll" ComponentId="{F09B7869-CD6A-4561-81DC-E02ADA95DCB8}" Directory_="de_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_1" ComponentId="{ACF53E55-357C-4DB8-A47E-A47426903CDD}" Directory_="es_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_1"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_2" ComponentId="{1C65CF5E-2F87-46D4-890D-F88A21D4FD60}" Directory_="fr_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_2"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_3" ComponentId="{5F4F9DF5-EDC1-460F-BB06-F8867AF6F182}" Directory_="pt_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_3"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_4" ComponentId="{36C24FCA-8122-443B-8272-FC4E690E376B}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_4"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_5" ComponentId="{AF14753A-1AD9-4255-AAE9-B80F0DFC51F5}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_5"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_6" ComponentId="{58652538-15F6-42AE-A304-364190D5609A}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_6"/>
+    <ROW Component="MLifter.BusinessLayer.resources.dll_7" ComponentId="{0A884029-BE96-4E98-8EB8-CD37C3A718D5}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.BusinessLayer.resources.dll_7"/>
+    <ROW Component="MLifter.CardCollector.dll" ComponentId="{19423EDA-8EE4-4EDD-8466-E472B9BBE8A3}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.CardCollector.dll"/>
+    <ROW Component="MLifter.CardCollector.resources.dll" ComponentId="{78B3D787-4B39-417E-AE76-07967244BE7C}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.CardCollector.resources.dll"/>
+    <ROW Component="MLifter.CardCollector.resources.dll_1" ComponentId="{54197851-D430-4C3E-8271-E14F4DEB651A}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.CardCollector.resources.dll_1"/>
+    <ROW Component="MLifter.CardCollector.resources.dll_2" ComponentId="{3D6C3363-AE8B-475A-991E-2B75E66372CC}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.CardCollector.resources.dll_2"/>
+    <ROW Component="MLifter.CardCollector.resources.dll_3" ComponentId="{E10ABD2D-395A-47BC-A84B-843AC68A9371}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.CardCollector.resources.dll_3"/>
+    <ROW Component="MLifter.Components.dll" ComponentId="{83A35FD3-892E-499C-BDE7-D066A6D47CF6}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.Components.dll"/>
+    <ROW Component="MLifter.Components.resources.dll" ComponentId="{4E1F9F8F-8A9E-413F-B852-05DE5601C157}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.Components.resources.dll"/>
+    <ROW Component="MLifter.Components.resources.dll_1" ComponentId="{FBA5C1AB-0F0F-4823-A846-7C3381FF7B95}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.Components.resources.dll_1"/>
+    <ROW Component="MLifter.Components.resources.dll_2" ComponentId="{D8CC8F91-FAF2-4CA5-972A-2D05C4B4FEEF}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.Components.resources.dll_2"/>
+    <ROW Component="MLifter.Components.resources.dll_3" ComponentId="{2357AA05-9C4F-448E-9310-3A4B93EFA352}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.Components.resources.dll_3"/>
+    <ROW Component="MLifter.Controls.dll" ComponentId="{83DE2EE1-E2E6-49B7-8187-68E7522EF7CF}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.Controls.dll"/>
+    <ROW Component="MLifter.Controls.resources.dll" ComponentId="{B7152438-5430-44B8-87B7-C22AA0B9A2BC}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.Controls.resources.dll"/>
+    <ROW Component="MLifter.Controls.resources.dll_1" ComponentId="{B1F38567-F5B5-4CC3-83F0-AA6DB9955E0C}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.Controls.resources.dll_1"/>
+    <ROW Component="MLifter.Controls.resources.dll_2" ComponentId="{0853864B-97ED-43BC-8AA3-E699625CF5AD}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.Controls.resources.dll_2"/>
+    <ROW Component="MLifter.Controls.resources.dll_3" ComponentId="{686BE8BF-FC44-41CB-A290-93C00CCC8BB7}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.Controls.resources.dll_3"/>
+    <ROW Component="MLifter.DAL.XmlSerializers.dll" ComponentId="{E04109E7-2104-4B73-8621-9473EEDD305D}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.DAL.XmlSerializers.dll"/>
+    <ROW Component="MLifter.DAL.dll" ComponentId="{C934F56C-41FC-44AB-9C96-7E247A00C3BF}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.DAL.dll"/>
+    <ROW Component="MLifter.DAL.dll_1" ComponentId="{2E0A9488-0CFB-4E59-8114-FC9FEB8B8F70}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.DAL.dll_1"/>
+    <ROW Component="MLifter.DAL.resources.dll" ComponentId="{F1D76EAF-54A3-428D-814F-FA8E7AF10C82}" Directory_="de_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll"/>
+    <ROW Component="MLifter.DAL.resources.dll_1" ComponentId="{50890AE0-28B8-4856-AD6A-B216413D1549}" Directory_="es_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_1"/>
+    <ROW Component="MLifter.DAL.resources.dll_2" ComponentId="{EA330BA0-E325-40FA-BB89-16168E3F82E9}" Directory_="fr_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_2"/>
+    <ROW Component="MLifter.DAL.resources.dll_3" ComponentId="{062901EB-CBC7-405C-B21B-438A74B3364C}" Directory_="pt_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_3"/>
+    <ROW Component="MLifter.DAL.resources.dll_4" ComponentId="{9FE89449-B312-41DB-8110-3119D5285C03}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_4"/>
+    <ROW Component="MLifter.DAL.resources.dll_5" ComponentId="{A84D780D-ADFC-4F3C-B43E-C475FC8CD105}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_5"/>
+    <ROW Component="MLifter.DAL.resources.dll_6" ComponentId="{38F41B4E-F41F-4CC3-ADC9-7B347627113D}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_6"/>
+    <ROW Component="MLifter.DAL.resources.dll_7" ComponentId="{173CAF63-BF52-427F-8669-29CB2BD4FDA6}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifter.DAL.resources.dll_7"/>
+    <ROW Component="MLifter.Generics.dll" ComponentId="{D42EA2BE-B9FD-400C-B848-C5B0B8796007}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.Generics.dll"/>
+    <ROW Component="MLifter.Generics.dll_1" ComponentId="{8640D8F7-F508-462B-8A85-FF6FA04ADE5D}" Directory_="Libraries_Dir" Attributes="0" KeyPath="MLifter.Generics.dll_1"/>
+    <ROW Component="MLifter.Recorder.exe" ComponentId="{12CF43E3-81F2-40FB-96D2-937146DED60E}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.Recorder.exe"/>
+    <ROW Component="MLifter.Recorder.exe.config" ComponentId="{0F296A4C-4AED-4F8D-A990-1A4E35D27352}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.Recorder.exe.config" Type="0"/>
+    <ROW Component="MLifter.Remoting.dll" ComponentId="{B8200801-A2DA-456D-8826-7B10144A06BE}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.Remoting.dll"/>
+    <ROW Component="MLifter.SettingsManager.exe" ComponentId="{75ABBFDE-76BE-44B6-9A51-101863E68CFE}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.SettingsManager.exe"/>
+    <ROW Component="MLifter.SettingsManager.exe.config" ComponentId="{94EC036C-6D03-447E-A30C-6F0C7BCC9744}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.SettingsManager.exe.config" Type="0"/>
+    <ROW Component="MLifter.SyncService.dll" ComponentId="{30DD2007-803E-4D12-91B2-7248DB9B93B7}" Directory_="bin_Dir" Attributes="0" KeyPath="MLifter.SyncService.dll"/>
+    <ROW Component="MLifter.Unbind.exe" ComponentId="{08069881-448F-4B98-B074-6C31F4FE3E7A}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.Unbind.exe"/>
+    <ROW Component="MLifter.Unbind.exe.config" ComponentId="{822C3825-229B-4C3E-8B90-B3CD4509550D}" Directory_="APPDIR" Attributes="0" KeyPath="MLifter.Unbind.exe.config" Type="0"/>
+    <ROW Component="MLifterErrorHandler.exe" ComponentId="{23960644-8D26-4262-BE94-F8A2B2D140AA}" Directory_="APPDIR" Attributes="0" KeyPath="MLifterErrorHandler.exe"/>
+    <ROW Component="MLifterErrorHandler.resources.dll" ComponentId="{3B28A0D7-1E24-4D93-BE09-0A225E5168EE}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifterErrorHandler.resources.dll"/>
+    <ROW Component="MLifterErrorHandler.resources.dll_1" ComponentId="{C7A5BBCC-E934-41E5-9BA9-46245F6B1C12}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifterErrorHandler.resources.dll_1"/>
+    <ROW Component="MLifterErrorHandler.resources.dll_2" ComponentId="{DFFD397C-4D9C-4FAB-903E-D8F7C4904F0B}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifterErrorHandler.resources.dll_2"/>
+    <ROW Component="MLifterErrorHandler.resources.dll_3" ComponentId="{2729C774-7ACA-486A-BDA6-5244101478D7}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifterErrorHandler.resources.dll_3"/>
+    <ROW Component="MLifterUpdateHandler.exe" ComponentId="{9823B7DE-BA82-41EF-B469-E15AC6CEF0BF}" Directory_="APPDIR" Attributes="0" KeyPath="MLifterUpdateHandler.exe"/>
+    <ROW Component="MLifterUpdateHandler.resources.dll" ComponentId="{2374C9FD-AB6A-4B28-B06C-A0916AABF2EC}" Directory_="de_2_Dir" Attributes="0" KeyPath="MLifterUpdateHandler.resources.dll"/>
+    <ROW Component="MLifterUpdateHandler.resources.dll_1" ComponentId="{1E2E7B80-C065-48AB-B742-DB1D61087EEA}" Directory_="es_2_Dir" Attributes="0" KeyPath="MLifterUpdateHandler.resources.dll_1"/>
+    <ROW Component="MLifterUpdateHandler.resources.dll_2" ComponentId="{7B6D0F94-D302-4E99-884A-5FCEDBE57DE5}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MLifterUpdateHandler.resources.dll_2"/>
+    <ROW Component="MLifterUpdateHandler.resources.dll_3" ComponentId="{6CA416AE-EB29-49F1-9595-F1E72EAB573F}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MLifterUpdateHandler.resources.dll_3"/>
+    <ROW Component="MemoryLifter" ComponentId="{A07E204A-59DD-4127-B383-CDE3B0405337}" Directory_="_BCF8172A840E45E5B6C63C73A3555684" Attributes="0"/>
+    <ROW Component="MemoryLifter.exe" ComponentId="{188AC89B-4587-4D1C-9F2B-0B5DF8167097}" Directory_="APPDIR" Attributes="0" KeyPath="MemoryLifter.exe"/>
+    <ROW Component="MemoryLifter.exe.config" ComponentId="{4A2EA2B8-088E-400F-969E-384709A62E57}" Directory_="APPDIR" Attributes="0" KeyPath="MemoryLifter.exe.config" Type="0"/>
+    <ROW Component="MemoryLifter.resources.dll" ComponentId="{A6755258-3B08-4BDD-9870-F4C0A719BAF6}" Directory_="de_2_Dir" Attributes="0" KeyPath="MemoryLifter.resources.dll"/>
+    <ROW Component="MemoryLifter.resources.dll_1" ComponentId="{4D3C01C5-AE6A-46F5-A9CE-8EAAFDDF8CA7}" Directory_="es_2_Dir" Attributes="0" KeyPath="MemoryLifter.resources.dll_1"/>
+    <ROW Component="MemoryLifter.resources.dll_2" ComponentId="{956D5F30-E56E-4491-9A7C-872DABFCDE4A}" Directory_="fr_2_Dir" Attributes="0" KeyPath="MemoryLifter.resources.dll_2"/>
+    <ROW Component="MemoryLifter.resources.dll_3" ComponentId="{E78E444F-C4DF-411F-8ACC-3BBECF68D34F}" Directory_="pt_2_Dir" Attributes="0" KeyPath="MemoryLifter.resources.dll_3"/>
+    <ROW Component="Microsoft.Practices.Composite.Wpf.dll" ComponentId="{5A872E01-8EA5-452B-82DA-68BC9845B37A}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Microsoft.Practices.Composite.Wpf.dll"/>
+    <ROW Component="Microsoft.Practices.Composite.dll" ComponentId="{3BCD97D4-8421-4A0F-A889-F0DCA93385E1}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Microsoft.Practices.Composite.dll"/>
+    <ROW Component="Microsoft.Synchronization.Data.Server.dl" ComponentId="{4AB10A8D-522A-45BF-8595-2EB3E0B2EC41}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.Data.Server.dll"/>
+    <ROW Component="Microsoft.Synchronization.Data.SqlServer" ComponentId="{395EE591-F0C9-4AD0-B5BD-586C945EEA47}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.Data.SqlServerCe.dll"/>
+    <ROW Component="Microsoft.Synchronization.Data.dll" ComponentId="{48872185-4335-4EBA-8792-6F1079185B9C}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.Data.dll"/>
+    <ROW Component="Microsoft.Synchronization.Data.dll_1" ComponentId="{2267D45F-BD95-4CD3-ACAC-13898FFDED78}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.Data.dll_1"/>
+    <ROW Component="Microsoft.Synchronization.dll" ComponentId="{091CE29D-0B0B-491C-91E9-C7E9133C5BCF}" Directory_="bin_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.dll"/>
+    <ROW Component="Microsoft.Synchronization.dll_1" ComponentId="{6AED1DDC-9958-456E-9536-AF9C891957A6}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Microsoft.Synchronization.dll_1"/>
+    <ROW Component="Mono.Security.dll" ComponentId="{9901DC16-71A8-401E-8FF7-03BD8BD4B95E}" Directory_="bin_Dir" Attributes="0" KeyPath="Mono.Security.dll"/>
+    <ROW Component="Mono.Security.dll_1" ComponentId="{008C67D9-8B44-42F9-89C6-836F61C37E87}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Mono.Security.dll_1"/>
+    <ROW Component="MySql.Data.dll" ComponentId="{1AEDF4F0-5441-4863-8A1F-8EA5A0ABFF17}" Directory_="bin_Dir" Attributes="0" KeyPath="MySql.Data.dll"/>
+    <ROW Component="Npgsql.dll" ComponentId="{B547CDA9-3CFA-48D6-858F-11306428A3D4}" Directory_="bin_Dir" Attributes="0" KeyPath="Npgsql.dll"/>
+    <ROW Component="Npgsql.dll_1" ComponentId="{BB6C3308-A2A8-45A6-AED3-65817A4D92FD}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Npgsql.dll_1"/>
+    <ROW Component="Npgsql.resources.dll" ComponentId="{55411461-D243-4E7B-AC9C-3343877813DF}" Directory_="de_Dir" Attributes="0" KeyPath="Npgsql.resources.dll"/>
+    <ROW Component="Npgsql.resources.dll_1" ComponentId="{B4CDDA82-2955-49F7-B126-21209B5A6A3F}" Directory_="es_Dir" Attributes="0" KeyPath="Npgsql.resources.dll_1"/>
+    <ROW Component="Npgsql.resources.dll_3" ComponentId="{76C5158C-40DA-48DA-8B1B-E39EE5A74517}" Directory_="fr_Dir" Attributes="0" KeyPath="Npgsql.resources.dll_3"/>
+    <ROW Component="Npgsql.resources.dll_6" ComponentId="{6E3EC791-DC24-43C1-B673-23A17BF12206}" Directory_="de_2_Dir" Attributes="0" KeyPath="Npgsql.resources.dll_6"/>
+    <ROW Component="Npgsql.resources.dll_7" ComponentId="{3F55C6F1-FB5B-41FF-B8AA-06BC5273DCD7}" Directory_="es_2_Dir" Attributes="0" KeyPath="Npgsql.resources.dll_7"/>
+    <ROW Component="Npgsql.resources.dll_9" ComponentId="{48F0E3F3-EED3-4977-8C51-D6F86AFAE890}" Directory_="fr_2_Dir" Attributes="0" KeyPath="Npgsql.resources.dll_9"/>
+    <ROW Component="OfficePickers.dll" ComponentId="{763A7EC7-7B4F-412F-A9AC-4913F03BC6BE}" Directory_="Libraries_Dir" Attributes="0" KeyPath="OfficePickers.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{A629F34E-54F8-49AD-AC30-F8B5405BF702}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="ReadMe.html" ComponentId="{8E905B9D-C6E7-439A-961D-28C2AA9C2810}" Directory_="Server_Dir" Attributes="0" KeyPath="ReadMe.html"/>
+    <ROW Component="ReadMe.url" ComponentId="{417CC7D4-A81C-4486-A64E-A0819A095BBC}" Directory_="en_Dir" Attributes="0" KeyPath="ReadMe.url"/>
+    <ROW Component="Security.Framework.Base.dll" ComponentId="{1BD9BA0D-9982-42D3-9E30-F972C2DFDF78}" Directory_="bin_Dir" Attributes="0" KeyPath="Security.Framework.Base.dll"/>
+    <ROW Component="Security.Framework.Base.dll_1" ComponentId="{E8E69A81-C9D9-4F86-93D3-7E91E03E23F7}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Security.Framework.Base.dll_1"/>
+    <ROW Component="Security.PgSqlAdapter.dll" ComponentId="{7FCB3298-278C-4FB5-9914-9AF128801AD7}" Directory_="bin_Dir" Attributes="0" KeyPath="Security.PgSqlAdapter.dll"/>
+    <ROW Component="Security.PgSqlAdapter.dll_1" ComponentId="{2F2D8E2E-2B0B-426F-976C-CEC6DF5ADB94}" Directory_="Libraries_Dir" Attributes="0" KeyPath="Security.PgSqlAdapter.dll_1"/>
+    <ROW Component="SecurityAdminSuite.exe" ComponentId="{FACDC876-CCDE-4FB3-8661-A4105F17DC47}" Directory_="APPDIR" Attributes="0" KeyPath="SecurityAdminSuite.exe"/>
+    <ROW Component="SecurityAdminSuite.exe.config" ComponentId="{362A326C-D770-46F3-9980-C5A359838CC9}" Directory_="APPDIR" Attributes="0" KeyPath="SecurityAdminSuite.exe.config" Type="0"/>
+    <ROW Component="Server" ComponentId="{CC1399BF-C5FD-48B6-ABF0-E4CFFA143E9C}" Directory_="Server_1_Dir" Attributes="0"/>
+    <ROW Component="Tools" ComponentId="{EE24ADD1-2FCA-423E-91BB-A584988D7B2A}" Directory_="Tools_Dir" Attributes="0"/>
+    <ROW Component="XPTable.dll" ComponentId="{1A77D7BF-DCD0-4B4C-9028-7B0E37BC8088}" Directory_="Libraries_Dir" Attributes="0" KeyPath="XPTable.dll"/>
+    <ROW Component="ZedGraph.dll" ComponentId="{032B451E-9E79-4E32-84DB-F7944C09EBD3}" Directory_="Libraries_Dir" Attributes="0" KeyPath="ZedGraph.dll"/>
+    <ROW Component="ZedGraph.resources.dll" ComponentId="{9165BF96-1F35-47EA-B7BF-7C9DBD61C6A5}" Directory_="de_2_Dir" Attributes="0" KeyPath="ZedGraph.resources.dll"/>
+    <ROW Component="ZedGraph.resources.dll_1" ComponentId="{9866A023-A3A9-4455-A358-C620E36DFE8A}" Directory_="es_2_Dir" Attributes="0" KeyPath="ZedGraph.resources.dll_1"/>
+    <ROW Component="ZedGraph.resources.dll_2" ComponentId="{C18795B0-5272-4733-8C1B-DF2CA8FB4BCB}" Directory_="fr_2_Dir" Attributes="0" KeyPath="ZedGraph.resources.dll_2"/>
+    <ROW Component="ZedGraph.resources.dll_3" ComponentId="{155746A5-4902-4D3D-A31D-FA01F413C300}" Directory_="pt_2_Dir" Attributes="0" KeyPath="ZedGraph.resources.dll_3"/>
+    <ROW Component="about.txt" ComponentId="{1C2E317C-7412-4A47-832A-F039FEF6ACB8}" Directory_="LameABG_Dir" Attributes="0" KeyPath="about.txt" Type="0"/>
+    <ROW Component="about.txt_2" ComponentId="{A97B309C-FF7D-4519-B749-E529B4CA8977}" Directory_="LameR_Dir" Attributes="0" KeyPath="about.txt_2" Type="0"/>
+    <ROW Component="about.txt_3" ComponentId="{6947037A-A04E-4551-ACD3-0AF0D8FCF1CC}" Directory_="LameSM_Dir" Attributes="0" KeyPath="about.txt_3" Type="0"/>
+    <ROW Component="accessoriescharactermap.png" ComponentId="{ACB7EF08-5848-43F3-BE0E-7162D651AB2B}" Directory_="Resources_Dir" Attributes="0" KeyPath="StartupFolders.zip" Type="0"/>
+    <ROW Component="animatedFeedback.xsl" ComponentId="{7D4AB516-C802-4BD7-8B7E-39D7854920AC}" Directory_="System_Dir" Attributes="0" KeyPath="animatedFeedback.xsl" Type="0"/>
+    <ROW Component="default.mlcfg" ComponentId="{6777B099-FED4-4160-86BB-0CC54BAD164F}" Directory_="Config_Dir" Attributes="0" KeyPath="default.mlcfg" Type="0"/>
+    <ROW Component="default.xsl" ComponentId="{EEB16AEC-011A-4F19-935A-3CD965C6F5EB}" Directory_="ErrorHandler_Dir" Attributes="0" KeyPath="default.xsl" Type="0"/>
+    <ROW Component="default.xsl_1" ComponentId="{BC729F1B-0D88-4567-8F87-0AC8AEF073F2}" Directory_="Export_Dir" Attributes="0" KeyPath="default.xsl_1" Type="0"/>
+    <ROW Component="default.xsl_2" ComponentId="{00FBCA57-5B21-49A1-A20A-D912F477C5EA}" Directory_="Print_Dir" Attributes="0" KeyPath="default.xsl_2" Type="0"/>
+    <ROW Component="help.ico" ComponentId="{E84A56C4-B8F5-4983-BDCB-9479D81CF528}" Directory_="Icons_Dir" Attributes="0" KeyPath="help.ico" Type="0"/>
+    <ROW Component="help_de.chm" ComponentId="{B32AE176-D1CD-4BCD-95F0-773DF61D583B}" Directory_="de_1_Dir" Attributes="0" KeyPath="help_de.chm" Type="1"/>
+    <ROW Component="help_en.chm" ComponentId="{CF74C7C6-8DE2-43E8-99D6-90D5AE32BEE4}" Directory_="en_Dir" Attributes="0" KeyPath="help_en.chm" Type="1"/>
+    <ROW Component="help_es.chm" ComponentId="{39FB706F-D779-45C0-AECE-1EC6FAF9D23A}" Directory_="es_1_Dir" Attributes="0" KeyPath="help_es.chm" Type="1"/>
+    <ROW Component="help_fr.chm" ComponentId="{8D78CA2E-E83E-4558-B6DF-CBCAE42473AA}" Directory_="fr_1_Dir" Attributes="0" KeyPath="help_fr.chm" Type="1"/>
+    <ROW Component="help_pt.chm" ComponentId="{1F847868-0C14-48B8-9437-848A69F000E9}" Directory_="pt_1_Dir" Attributes="0" KeyPath="help_pt.chm" Type="1"/>
+    <ROW Component="lame.exe" ComponentId="{A750997D-03BD-4600-B81F-93413FD19681}" Directory_="LameABG_Dir" Attributes="0" KeyPath="lame.exe"/>
+    <ROW Component="lame.exe_2" ComponentId="{DBA9A598-5A28-448C-8293-229F638EFA0F}" Directory_="LameR_Dir" Attributes="0" KeyPath="lame.exe_2"/>
+    <ROW Component="lame.exe_3" ComponentId="{3C7DBA41-8941-492E-B3E6-72DB0DA474C5}" Directory_="LameSM_Dir" Attributes="0" KeyPath="lame.exe_3"/>
+    <ROW Component="lame_enc.dll" ComponentId="{3C77C0C0-F762-4952-B22C-E8AD250C731F}" Directory_="LameABG_Dir" Attributes="0" KeyPath="lame_enc.dll"/>
+    <ROW Component="lame_enc.dll_2" ComponentId="{73C9FF24-980F-4A60-B0B4-A5460B20410F}" Directory_="LameR_Dir" Attributes="0" KeyPath="lame_enc.dll_2"/>
+    <ROW Component="lame_enc.dll_3" ComponentId="{BF87FC2E-42FF-48FB-82FE-DC20BC4D16E0}" Directory_="LameSM_Dir" Attributes="0" KeyPath="lame_enc.dll_3"/>
+    <ROW Component="libFLAC_dynamic.dll" ComponentId="{245DACC6-71D4-4AE7-9A73-2A302EEF0ACC}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="libFLAC_dynamic.dll"/>
+    <ROW Component="libFLAC_dynamic.dll_1" ComponentId="{A505F156-75C7-4321-90F9-0A3582BC6674}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="libFLAC_dynamic.dll_1"/>
+    <ROW Component="libFLAC_dynamic.dll_2" ComponentId="{407B3F58-4654-4705-B809-EFECCFA1168B}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="libFLAC_dynamic.dll_2"/>
+    <ROW Component="libogg.dll" ComponentId="{B1FDC7F9-046C-49BA-8471-EA2CA50C88FB}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="libogg.dll"/>
+    <ROW Component="libogg.dll_1" ComponentId="{18B6AF49-59FD-4E6E-9F20-487C3DF2FABF}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="libogg.dll_1"/>
+    <ROW Component="libogg.dll_2" ComponentId="{66302C43-0D46-4D3B-95CB-6601C94E3999}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="libogg.dll_2"/>
+    <ROW Component="libvorbis.dll" ComponentId="{FAF6EAE6-CD23-48F5-985B-EE48D6CC9736}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="libvorbis.dll"/>
+    <ROW Component="libvorbis.dll_1" ComponentId="{703DDC8F-A223-4EF7-86C6-36CB5D8EA9BA}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="libvorbis.dll_1"/>
+    <ROW Component="libvorbis.dll_2" ComponentId="{18552AA6-D2BA-4253-B8A5-E76D576C1381}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="libvorbis.dll_2"/>
+    <ROW Component="libvorbisfile.dll" ComponentId="{DD66C9BB-76AB-468B-92B4-E1DA29321389}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="libvorbisfile.dll"/>
+    <ROW Component="libvorbisfile.dll_1" ComponentId="{A3B81AA8-58EA-48EC-92BB-C5166AA0A075}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="libvorbisfile.dll_1"/>
+    <ROW Component="libvorbisfile.dll_2" ComponentId="{A386491F-6E01-446B-92D8-5BBDC6DC2F67}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="libvorbisfile.dll_2"/>
+    <ROW Component="logo.gif" ComponentId="{9B5F13BC-9D70-4369-B878-6FCC8E39593C}" Directory_="Images_Dir" Attributes="0" KeyPath="logo.gif" Type="0"/>
+    <ROW Component="oggdec.exe" ComponentId="{5DF79532-F3B9-433E-A7C8-1234AA6E10F2}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="oggdec.exe"/>
+    <ROW Component="oggdec.exe_1" ComponentId="{B4C3054A-319D-4888-9A16-A23E0ACA67ED}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="oggdec.exe_1"/>
+    <ROW Component="oggdec.exe_2" ComponentId="{AEE1C324-CCAF-4395-9F7E-44E28202E99C}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="oggdec.exe_2"/>
+    <ROW Component="oggenc.exe" ComponentId="{1C0D6F65-D59F-492E-B8AA-E7713D380AEF}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="oggenc.exe"/>
+    <ROW Component="oggenc.exe_1" ComponentId="{BC87ED28-39BA-4125-8A4F-6F812CAF43FD}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="oggenc.exe_1"/>
+    <ROW Component="oggenc.exe_2" ComponentId="{E651E160-3EC1-4006-BAA5-91E770000CC3}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="oggenc.exe_2"/>
+    <ROW Component="ogginfo.exe" ComponentId="{63C6036B-5D63-497E-ABB0-CCECD8293FDB}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="ogginfo.exe"/>
+    <ROW Component="ogginfo.exe_1" ComponentId="{20764780-ACE2-430A-8ECB-5D0CD4FE9A9F}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="ogginfo.exe_1"/>
+    <ROW Component="ogginfo.exe_2" ComponentId="{4EDF8078-D118-4E77-8716-9A8468A5E68D}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="ogginfo.exe_2"/>
+    <ROW Component="start.mp3" ComponentId="{92580703-A8DA-49F2-BFC6-B3C1709642FD}" Directory_="Audio_Dir" Attributes="0" KeyPath="start.mp3" Type="0"/>
+    <ROW Component="vcut.exe" ComponentId="{1E205FD0-7483-4C42-AB1C-16BD37B93556}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="vcut.exe"/>
+    <ROW Component="vcut.exe_1" ComponentId="{E47B6148-A3CD-41A1-9BB6-C44617FBDCA2}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="vcut.exe_1"/>
+    <ROW Component="vcut.exe_2" ComponentId="{B1E395AE-FF16-4C2C-A3AE-56427373061C}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="vcut.exe_2"/>
+    <ROW Component="versionTransform10_11.xsl" ComponentId="{40EA36E3-64AE-4890-A28A-4044F3BB1032}" Directory_="Transformer_Dir" Attributes="0" KeyPath="versionTransform10_11.xsl" Type="0"/>
+    <ROW Component="vorbiscomment.exe" ComponentId="{4A548C14-40D3-400C-BA6C-CCFAA9658DED}" Directory_="VorbisABG_Dir" Attributes="0" KeyPath="vorbiscomment.exe"/>
+    <ROW Component="vorbiscomment.exe_1" ComponentId="{5B272835-22CC-40F4-9BD9-991CD87142CA}" Directory_="VorbisR_Dir" Attributes="0" KeyPath="vorbiscomment.exe_1"/>
+    <ROW Component="vorbiscomment.exe_2" ComponentId="{C7BE89F2-7F01-45D8-9169-131F43DA8CFC}" Directory_="VorbisSM_Dir" Attributes="0" KeyPath="vorbiscomment.exe_2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="AdminSuite" Feature_Parent="ServerTools" Title="Admin Suite" Description="The Admin Suite which can be used to configure a MemoryLifter Server." Display="3" Level="4" Directory_="APPDIR" Attributes="0" Components="Microsoft.Practices.Composite.Wpf.dll Microsoft.Practices.Composite.dll SecurityAdminSuite.exe SecurityAdminSuite.exe.config"/>
+    <ROW Feature="AudioBookGenerator" Feature_Parent="Tools" Title="Audio Book Generator" Description="This is to create audio books out of your learning modules." Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="LICENSE.txt MLifter.AudioBookGenerator.exe MLifter.AudioBookGenerator.exe.config about.txt lame.exe lame_enc.dll libFLAC_dynamic.dll libogg.dll libvorbis.dll libvorbisfile.dll oggdec.exe oggenc.exe ogginfo.exe vcut.exe vorbiscomment.exe"/>
+    <ROW Feature="FileTypeAssociations" Feature_Parent="Main" Title="File Type Associations" Display="2" Level="1" Directory_="APPDIR" Attributes="0" Options="13"/>
+    <ROW Feature="Main" Title="Main Application" Description="The main MemoryLifter program." Display="3" Level="1" Directory_="APPDIR" Attributes="24" Components="AI_CustomARPName AI_ExePath Arrow_Left.png Arrow_Left.png_1 Arrow_Left.png_2 Arrow_Left.png_3 Arrow_Left.png_4 AxInterop.WMPLib.dll_1 BumbleBee.style CPOL.html Esent.Collections.dll_1 Esent.Interop.dll_1 ICSharpCode.SharpZipLib.dll_1 Interop.WMPLib.dll_1 MLifter.AudioTools.dll_1 MLifter.AudioTools.resources.dll_4 MLifter.AudioTools.resources.dll_5 MLifter.AudioTools.resources.dll_6 MLifter.AudioTools.resources.dll_7 MLifter.BusinessLayer.dll_1 MLifter.BusinessLayer.resources.dll_4 MLifter.BusinessLayer.resources.dll_5 MLifter.BusinessLayer.resources.dll_6 MLifter.BusinessLayer.resources.dll_7 MLifter.CardCollector.dll MLifter.CardCollector.resources.dll MLifter.CardCollector.resources.dll_1 MLifter.CardCollector.resources.dll_2 MLifter.CardCollector.resources.dll_3 MLifter.Components.dll MLifter.Components.resources.dll MLifter.Components.resources.dll_1 MLifter.Components.resources.dll_2 MLifter.Components.resources.dll_3 MLifter.Controls.dll MLifter.Controls.resources.dll MLifter.Controls.resources.dll_1 MLifter.Controls.resources.dll_2 MLifter.Controls.resources.dll_3 MLifter.DAL.dll_1 MLifter.DAL.resources.dll_4 MLifter.DAL.resources.dll_5 MLifter.DAL.resources.dll_6 MLifter.DAL.resources.dll_7 MLifter.Generics.dll_1 MLifter.Remoting.dll MLifterErrorHandler.exe MLifterErrorHandler.resources.dll MLifterErrorHandler.resources.dll_1 MLifterErrorHandler.resources.dll_2 MLifterErrorHandler.resources.dll_3 MLifterUpdateHandler.exe MLifterUpdateHandler.resources.dll MLifterUpdateHandler.resources.dll_1 MLifterUpdateHandler.resources.dll_2 MLifterUpdateHandler.resources.dll_3 MemoryLifter MemoryLifter.exe MemoryLifter.exe.config MemoryLifter.resources.dll MemoryLifter.resources.dll_1 MemoryLifter.resources.dll_2 MemoryLifter.resources.dll_3 Microsoft.Synchronization.Data.SqlServer Microsoft.Synchronization.Data.dll_1 Microsoft.Synchronization.dll_1 Mono.Security.dll_1 Npgsql.dll_1 Npgsql.resources.dll_6 Npgsql.resources.dll_7 Npgsql.resources.dll_9 OfficePickers.dll ProductInformation ReadMe.url Security.Framework.Base.dll_1 Security.PgSqlAdapter.dll_1 XPTable.dll ZedGraph.dll ZedGraph.resources.dll ZedGraph.resources.dll_1 ZedGraph.resources.dll_2 ZedGraph.resources.dll_3 accessoriescharactermap.png animatedFeedback.xsl default.mlcfg default.xsl default.xsl_1 default.xsl_2 help.ico help_de.chm help_en.chm help_es.chm help_fr.chm help_pt.chm start.mp3 versionTransform10_11.xsl"/>
+    <ROW Feature="Recorder" Feature_Parent="Tools" Title="Recorder" Description="This is to record sounds for your learning modules in a fast and easy way." Display="7" Level="1" Directory_="APPDIR" Attributes="0" Components="LICENSE.txt_1 MLifter.Recorder.exe MLifter.Recorder.exe.config about.txt_2 lame.exe_2 lame_enc.dll_2 libFLAC_dynamic.dll_1 libogg.dll_1 libvorbis.dll_1 libvorbisfile.dll_1 oggdec.exe_1 oggenc.exe_1 ogginfo.exe_1 vcut.exe_1 vorbiscomment.exe_1"/>
+    <ROW Feature="ServerFiles" Feature_Parent="ServerTools" Title="Server Setup Package" Description="This contains the documentation and all files necessary to setup a MemoryLifter Server." Display="5" Level="4" Directory_="APPDIR" Attributes="0" Components="AxInterop.WMPLib.dll DirectDatabaseAccess_Demo.mlcfg_1 Esent.Collections.dll Esent.Interop.dll ExtensionFileHandler.ashx ICSharpCode.SharpZipLib.dll Interop.WMPLib.dll MLifter.AudioTools.dll MLifter.AudioTools.resources.dll MLifter.AudioTools.resources.dll_1 MLifter.AudioTools.resources.dll_2 MLifter.AudioTools.resources.dll_3 MLifter.BusinessLayer.XmlSerializers.dll MLifter.BusinessLayer.dll MLifter.BusinessLayer.resources.dll MLifter.BusinessLayer.resources.dll_1 MLifter.BusinessLayer.resources.dll_2 MLifter.BusinessLayer.resources.dll_3 MLifter.DAL.XmlSerializers.dll MLifter.DAL.dll MLifter.DAL.resources.dll MLifter.DAL.resources.dll_1 MLifter.DAL.resources.dll_2 MLifter.DAL.resources.dll_3 MLifter.Generics.dll MLifter.SyncService.dll Microsoft.Synchronization.Data.Server.dl Microsoft.Synchronization.Data.dll Microsoft.Synchronization.dll Mono.Security.dll MySql.Data.dll Npgsql.dll Npgsql.resources.dll Npgsql.resources.dll_1 Npgsql.resources.dll_3 ReadMe.html Security.Framework.Base.dll Security.PgSqlAdapter.dll logo.gif"/>
+    <ROW Feature="ServerTools" Title="Server Tools" Description="This contains the tools and files to setup and configure a MemoryLifter Server." Display="7" Level="4" Directory_="APPDIR" Attributes="0" Components="Server"/>
+    <ROW Feature="SettingsManager" Feature_Parent="Tools" Title="Settings Manager" Description="This is to set individual settings to cards/chapters." Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="J832.Common.dll J832.Wpf.BagOTricksLib.dll LICENSE.txt_2 MLifter.SettingsManager.exe MLifter.SettingsManager.exe.config about.txt_3 lame.exe_3 lame_enc.dll_3 libFLAC_dynamic.dll_2 libogg.dll_2 libvorbis.dll_2 libvorbisfile.dll_2 oggdec.exe_2 oggenc.exe_2 ogginfo.exe_2 vcut.exe_2 vorbiscomment.exe_2"/>
+    <ROW Feature="Tools" Title="Tools" Description="This contains the tools which can be installed with MemoryLifter." Display="5" Level="1" Directory_="APPDIR" Attributes="8" Components="Tools"/>
+    <ROW Feature="Unbind" Feature_Parent="Tools" Title="Unbind" Description="This is to remove the user &lt;-&gt; learning success binding to continoue learning a module with a different user." Display="9" Level="1" Directory_="APPDIR" Attributes="0" Components="MLifter.Unbind.exe MLifter.Unbind.exe.config"/>
+    <ROW Feature="dzp" Feature_Parent="FileTypeAssociations" Title=".dzp" Description="The extension for older packed learning modules." Display="9" Level="1" Directory_="APPDIR" Attributes="0" Options="27" Components="MemoryLifter.exe"/>
+    <ROW Feature="mlcfg" Feature_Parent="FileTypeAssociations" Title=".mlcfg" Description="The extension of MemoryLifter configuration files." Display="5" Level="1" Directory_="APPDIR" Attributes="0" Options="27" Components="MemoryLifter.exe"/>
+    <ROW Feature="mlm" Feature_Parent="FileTypeAssociations" Title=".mlm" Description="The default learning module extension." Display="3" Level="1" Directory_="APPDIR" Attributes="24" Options="27" Components="MemoryLifter.exe"/>
+    <ROW Feature="odf" Feature_Parent="FileTypeAssociations" Title=".odf" Description="The extension for MemoryLifter 1 learning modules." Display="11" Level="1" Directory_="APPDIR" Attributes="0" Options="27" Components="MemoryLifter.exe"/>
+    <ROW Feature="odx" Feature_Parent="FileTypeAssociations" Title=".odx" Description="The extension of older MemoryLifter learning modules." Display="7" Level="1" Directory_="APPDIR" Attributes="0" Options="27" Components="MemoryLifter.exe"/>
+    <ATTRIBUTE name="CurrentFeature" value="Main"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Arrow_Left.png" Component_="Arrow_Left.png" FileName="Arrow_~1.png|Arrow_Left.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\Arrow_Left.png" SelfReg="false" NextFile="Arrow_Left_grey.png"/>
+    <ROW File="Arrow_Left.png_1" Component_="Arrow_Left.png_1" FileName="Arrow_~1.png|Arrow_Left.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Arrow_Left.png" SelfReg="false" NextFile="Arrow_Left_grey.png_1"/>
+    <ROW File="Arrow_Left.png_2" Component_="Arrow_Left.png_2" FileName="Arrow_~1.png|Arrow_Left.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Arrow_Left.png" SelfReg="false" NextFile="Arrow_Left_grey.png_2"/>
+    <ROW File="Arrow_Left.png_3" Component_="Arrow_Left.png_3" FileName="Arrow_~1.png|Arrow_Left.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Arrow_Left.png" SelfReg="false" NextFile="Arrow_Left_grey.png_3"/>
+    <ROW File="Arrow_Left.png_4" Component_="Arrow_Left.png_4" FileName="Arrow_~1.png|Arrow_Left.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Arrow_Left.png" SelfReg="false" NextFile="Arrow_Left_grey.png_4"/>
+    <ROW File="Arrow_Left_grey.png" Component_="Arrow_Left.png" FileName="Arrow_~2.png|Arrow_Left_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\Arrow_Left_grey.png" SelfReg="false" NextFile="Arrow_Right.png"/>
+    <ROW File="Arrow_Left_grey.png_1" Component_="Arrow_Left.png_1" FileName="Arrow_~2.png|Arrow_Left_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Arrow_Left_grey.png" SelfReg="false" NextFile="Arrow_Right.png_1"/>
+    <ROW File="Arrow_Left_grey.png_2" Component_="Arrow_Left.png_2" FileName="Arrow_~2.png|Arrow_Left_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Arrow_Left_grey.png" SelfReg="false" NextFile="Arrow_Right.png_2"/>
+    <ROW File="Arrow_Left_grey.png_3" Component_="Arrow_Left.png_3" FileName="Arrow_~2.png|Arrow_Left_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Arrow_Left_grey.png" SelfReg="false" NextFile="Arrow_Right.png_3"/>
+    <ROW File="Arrow_Left_grey.png_4" Component_="Arrow_Left.png_4" FileName="Arrow_~2.png|Arrow_Left_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Arrow_Left_grey.png" SelfReg="false" NextFile="Arrow_Right.png_4"/>
+    <ROW File="Arrow_Right.png" Component_="Arrow_Left.png" FileName="Arrow_~3.png|Arrow_Right.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\Arrow_Right.png" SelfReg="false" NextFile="Arrow_Right_grey.png"/>
+    <ROW File="Arrow_Right.png_1" Component_="Arrow_Left.png_1" FileName="Arrow_~3.png|Arrow_Right.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Arrow_Right.png" SelfReg="false" NextFile="Arrow_Right_grey.png_1"/>
+    <ROW File="Arrow_Right.png_2" Component_="Arrow_Left.png_2" FileName="Arrow_~3.png|Arrow_Right.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Arrow_Right.png" SelfReg="false" NextFile="Arrow_Right_grey.png_2"/>
+    <ROW File="Arrow_Right.png_3" Component_="Arrow_Left.png_3" FileName="Arrow_~3.png|Arrow_Right.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Arrow_Right.png" SelfReg="false" NextFile="Arrow_Right_grey.png_3"/>
+    <ROW File="Arrow_Right.png_4" Component_="Arrow_Left.png_4" FileName="Arrow_~3.png|Arrow_Right.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Arrow_Right.png" SelfReg="false" NextFile="Arrow_Right_grey.png_4"/>
+    <ROW File="Arrow_Right_grey.png" Component_="Arrow_Left.png" FileName="Arrow_~4.png|Arrow_Right_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\Arrow_Right_grey.png" SelfReg="false" NextFile="Checkbutton.png"/>
+    <ROW File="Arrow_Right_grey.png_1" Component_="Arrow_Left.png_1" FileName="Arrow_~4.png|Arrow_Right_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Arrow_Right_grey.png" SelfReg="false" NextFile="checkmark.png"/>
+    <ROW File="Arrow_Right_grey.png_2" Component_="Arrow_Left.png_2" FileName="Arrow_~4.png|Arrow_Right_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Arrow_Right_grey.png" SelfReg="false" NextFile="checkmark.png_1"/>
+    <ROW File="Arrow_Right_grey.png_3" Component_="Arrow_Left.png_3" FileName="Arrow_~4.png|Arrow_Right_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Arrow_Right_grey.png" SelfReg="false" NextFile="checkmark.png_2"/>
+    <ROW File="Arrow_Right_grey.png_4" Component_="Arrow_Left.png_4" FileName="Arrow_~4.png|Arrow_Right_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Arrow_Right_grey.png" SelfReg="false" NextFile="Checkmark.png_3"/>
+    <ROW File="AxInterop.WMPLib.dll" Component_="AxInterop.WMPLib.dll" FileName="AxInte~1.dll|AxInterop.WMPLib.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\AxInterop.WMPLib.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll"/>
+    <ROW File="AxInterop.WMPLib.dll_1" Component_="AxInterop.WMPLib.dll_1" FileName="AxInte~1.dll|AxInterop.WMPLib.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\AxInterop.WMPLib.dll" SelfReg="false" NextFile="Esent.Collections.dll_1"/>
+    <ROW File="BumbleBee.style" Component_="BumbleBee.style" FileName="Bumble~1.sty|BumbleBee.style" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee.style" SelfReg="false" NextFile="Arrow_Left.png_1"/>
+    <ROW File="COPYING.txt" Component_="about.txt" FileName="COPYING.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\COPYING.txt" SelfReg="false" NextFile="lame.exe"/>
+    <ROW File="COPYING.txt_2" Component_="about.txt_2" FileName="COPYING.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\COPYING.txt" SelfReg="false" NextFile="lame.exe_2"/>
+    <ROW File="COPYING.txt_3" Component_="about.txt_3" FileName="COPYING.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\COPYING.txt" SelfReg="false" NextFile="lame.exe_3"/>
+    <ROW File="CPOL.html" Component_="CPOL.html" FileName="CPOL~1.htm|CPOL.html" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\CPOL.html" SelfReg="false" NextFile="gpl2_0.txt"/>
+    <ROW File="Checkbutton.png" Component_="Arrow_Left.png" FileName="Checkb~1.png|Checkbutton.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\Checkbutton.png" SelfReg="false" NextFile="checkmarkRound.png"/>
+    <ROW File="Checkmark.png_3" Component_="Arrow_Left.png_4" FileName="Checkm~1.png|Checkmark.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Checkmark.png" SelfReg="false" NextFile="closeButton.gif_4"/>
+    <ROW File="Classic.style" Component_="BumbleBee.style" FileName="Classi~1.sty|Classic.style" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic.style" SelfReg="false" NextFile="Arrow_Left.png_2"/>
+    <ROW File="Default.style" Component_="BumbleBee.style" FileName="Defaul~1.sty|Default.style" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default.style" SelfReg="false" NextFile="Arrow_Left.png_3"/>
+    <ROW File="DirectDatabaseAccess_Demo.mlcfg" Component_="DirectDatabaseAccess_Demo.mlcfg_1" FileName="Direct~1.mlc|DirectDatabaseAccess_Demo.mlcfg" Attributes="1" SourcePath="..\MLifter.SyncService\Package\DirectDatabaseAccess_Demo.mlcfg" SelfReg="false" NextFile="ReadMe.html"/>
+    <ROW File="Esent.Collections.dll" Component_="Esent.Collections.dll" FileName="EsentC~1.dll|Esent.Collections.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Esent.Collections.dll" SelfReg="false" NextFile="Esent.Interop.dll"/>
+    <ROW File="Esent.Collections.dll_1" Component_="Esent.Collections.dll_1" FileName="EsentC~1.dll|Esent.Collections.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Esent.Collections.dll" SelfReg="false" NextFile="Esent.Interop.dll_1"/>
+    <ROW File="Esent.Interop.dll" Component_="Esent.Interop.dll" FileName="EsentI~1.dll|Esent.Interop.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Esent.Interop.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_2"/>
+    <ROW File="Esent.Interop.dll_1" Component_="Esent.Interop.dll_1" FileName="EsentI~1.dll|Esent.Interop.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Esent.Interop.dll" SelfReg="false" NextFile="ICSharpCode.SharpZipLib.dll_1"/>
+    <ROW File="ExtensionFileHandler.ashx" Component_="ExtensionFileHandler.ashx" FileName="Extens~1.ash|ExtensionFileHandler.ashx" Attributes="1" SourcePath="..\MLifter.SyncService\ExtensionFileHandler.ashx" SelfReg="false" NextFile="MediaFileHandler.ashx"/>
+    <ROW File="ICSharpCode.SharpZipLib.dll" Component_="ICSharpCode.SharpZipLib.dll" FileName="ICShar~1.dll|ICSharpCode.SharpZipLib.dll" Attributes="1" SourcePath="..\MLifter.SyncService\bin\ICSharpCode.SharpZipLib.dll" SelfReg="false" NextFile="Interop.WMPLib.dll"/>
+    <ROW File="ICSharpCode.SharpZipLib.dll_1" Component_="ICSharpCode.SharpZipLib.dll_1" FileName="ICShar~1.dll|ICSharpCode.SharpZipLib.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\ICSharpCode.SharpZipLib.dll" SelfReg="false" NextFile="Interop.WMPLib.dll_1"/>
+    <ROW File="Interop.WMPLib.dll" Component_="Interop.WMPLib.dll" FileName="Intero~1.dll|Interop.WMPLib.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Interop.WMPLib.dll" SelfReg="false" NextFile="Microsoft.Synchronization.Data.dll"/>
+    <ROW File="Interop.WMPLib.dll_1" Component_="Interop.WMPLib.dll_1" FileName="Intero~1.dll|Interop.WMPLib.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Interop.WMPLib.dll" SelfReg="false" NextFile="MLifter.AudioTools.dll_1"/>
+    <ROW File="J832.Common.dll" Component_="J832.Common.dll" FileName="J832Co~1.dll|J832.Common.dll" Attributes="1" SourcePath="..\..\3rdParty\J832\J832.Common.dll" SelfReg="false" NextFile="J832.Wpf.BagOTricksLib.dll"/>
+    <ROW File="J832.Wpf.BagOTricksLib.dll" Component_="J832.Wpf.BagOTricksLib.dll" FileName="J832Wp~1.dll|J832.Wpf.BagOTricksLib.dll" Attributes="1" SourcePath="..\..\3rdParty\J832\J832.Wpf.BagOTricksLib.dll" SelfReg="false" NextFile="Microsoft.Practices.Composite.dll"/>
+    <ROW File="Kids.style" Component_="BumbleBee.style" FileName="Kids~1.sty|Kids.style" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids.style" SelfReg="false" NextFile="answer.xsl"/>
+    <ROW File="LICENSE.txt" Component_="about.txt" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\LICENSE.txt" SelfReg="false" NextFile="README.txt"/>
+    <ROW File="LICENSE.txt_4" Component_="LICENSE.txt" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\LICENSE.txt" SelfReg="false" NextFile="oggdec.exe"/>
+    <ROW File="LICENSE.txt_5" Component_="LICENSE.txt_1" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\LICENSE.txt" SelfReg="false" NextFile="oggdec.exe_1"/>
+    <ROW File="LICENSE.txt_6" Component_="about.txt_2" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\LICENSE.txt" SelfReg="false" NextFile="README.txt_3"/>
+    <ROW File="LICENSE.txt_7" Component_="about.txt_3" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\LICENSE.txt" SelfReg="false" NextFile="README.txt_4"/>
+    <ROW File="LICENSE.txt_8" Component_="LICENSE.txt_2" FileName="LICENSE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\LICENSE.txt" SelfReg="false" NextFile="oggdec.exe_2"/>
+    <ROW File="LightBulb.png" Component_="Arrow_Left.png_1" FileName="LightB~1.png|LightBulb.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\LightBulb.png" SelfReg="false" NextFile="LightBulbOff.png"/>
+    <ROW File="LightBulbOff.png" Component_="Arrow_Left.png_1" FileName="LightB~2.png|LightBulbOff.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\LightBulbOff.png" SelfReg="false" NextFile="LightBulbOn.png"/>
+    <ROW File="LightBulbOn.png" Component_="Arrow_Left.png_1" FileName="LightB~3.png|LightBulbOn.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\LightBulbOn.png" SelfReg="false" NextFile="play.gif_1"/>
+    <ROW File="ML.ico" Component_="help.ico" FileName="ML.ico" Attributes="1" SourcePath="..\MemoryLifter\Resources\Icons\ML.ico" SelfReg="false" NextFile="MLCFG.ico"/>
+    <ROW File="MLCFG.ico" Component_="help.ico" FileName="MLCFG.ico" Attributes="1" SourcePath="..\MemoryLifter\Resources\Icons\MLCFG.ico" SelfReg="false" NextFile="RUL.ico"/>
+    <ROW File="MLifter.AudioBookGenerator.exe" Component_="MLifter.AudioBookGenerator.exe" FileName="MLifte~6.exe|MLifter.AudioBookGenerator.exe" Attributes="0" SourcePath="..\MLifter.AudioBookGenerator\bin\Release\MLifter.AudioBookGenerator.exe" SelfReg="false" NextFile="MLifter.AudioBookGenerator.exe.config"/>
+    <ROW File="MLifter.AudioBookGenerator.exe.config" Component_="MLifter.AudioBookGenerator.exe.config" FileName="MLifte~6.con|MLifter.AudioBookGenerator.exe.config" Attributes="0" SourcePath="..\MLifter.AudioBookGenerator\bin\Release\MLifter.AudioBookGenerator.exe.config" SelfReg="false" NextFile="DirectDatabaseAccess_Demo.mlcfg"/>
+    <ROW File="MLifter.AudioTools.dll" Component_="MLifter.AudioTools.dll" FileName="MLifte~1.dll|MLifter.AudioTools.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.AudioTools.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.dll"/>
+    <ROW File="MLifter.AudioTools.dll_1" Component_="MLifter.AudioTools.dll_1" FileName="MLifte~1.dll|MLifter.AudioTools.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.AudioTools.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.dll_1"/>
+    <ROW File="MLifter.AudioTools.resources.dll" Component_="MLifter.AudioTools.resources.dll" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\de\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll"/>
+    <ROW File="MLifter.AudioTools.resources.dll_1" Component_="MLifter.AudioTools.resources.dll_1" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\es\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_1"/>
+    <ROW File="MLifter.AudioTools.resources.dll_2" Component_="MLifter.AudioTools.resources.dll_2" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\fr\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_2"/>
+    <ROW File="MLifter.AudioTools.resources.dll_3" Component_="MLifter.AudioTools.resources.dll_3" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\pt\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_3"/>
+    <ROW File="MLifter.AudioTools.resources.dll_4" Component_="MLifter.AudioTools.resources.dll_4" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_4"/>
+    <ROW File="MLifter.AudioTools.resources.dll_5" Component_="MLifter.AudioTools.resources.dll_5" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_5"/>
+    <ROW File="MLifter.AudioTools.resources.dll_6" Component_="MLifter.AudioTools.resources.dll_6" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_6"/>
+    <ROW File="MLifter.AudioTools.resources.dll_7" Component_="MLifter.AudioTools.resources.dll_7" FileName="MLifte~1.dll|MLifter.AudioTools.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.AudioTools.resources.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.resources.dll_7"/>
+    <ROW File="MLifter.BusinessLayer.XmlSerializers.dll" Component_="MLifter.BusinessLayer.XmlSerializers.dll" FileName="MLifte~3.dll|MLifter.BusinessLayer.XmlSerializers.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.BusinessLayer.XmlSerializers.dll" SelfReg="false" NextFile="MLifter.DAL.dll"/>
+    <ROW File="MLifter.BusinessLayer.dll" Component_="MLifter.BusinessLayer.dll" FileName="MLifte~2.dll|MLifter.BusinessLayer.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.BusinessLayer.dll" SelfReg="false" NextFile="MLifter.BusinessLayer.XmlSerializers.dll"/>
+    <ROW File="MLifter.BusinessLayer.dll_1" Component_="MLifter.BusinessLayer.dll_1" FileName="MLifte~2.dll|MLifter.BusinessLayer.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.BusinessLayer.dll" SelfReg="false" NextFile="MLifter.CardCollector.dll"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll" Component_="MLifter.BusinessLayer.resources.dll" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\de\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_1" Component_="MLifter.BusinessLayer.resources.dll_1" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\es\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_1"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_2" Component_="MLifter.BusinessLayer.resources.dll_2" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\fr\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_2"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_3" Component_="MLifter.BusinessLayer.resources.dll_3" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\pt\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_3"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_4" Component_="MLifter.BusinessLayer.resources.dll_4" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.CardCollector.resources.dll"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_5" Component_="MLifter.BusinessLayer.resources.dll_5" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.CardCollector.resources.dll_1"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_6" Component_="MLifter.BusinessLayer.resources.dll_6" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.CardCollector.resources.dll_2"/>
+    <ROW File="MLifter.BusinessLayer.resources.dll_7" Component_="MLifter.BusinessLayer.resources.dll_7" FileName="MLifte~2.dll|MLifter.BusinessLayer.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.BusinessLayer.resources.dll" SelfReg="false" NextFile="MLifter.CardCollector.resources.dll_3"/>
+    <ROW File="MLifter.CardCollector.dll" Component_="MLifter.CardCollector.dll" FileName="MLifte~4.dll|MLifter.CardCollector.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.CardCollector.dll" SelfReg="false" NextFile="MLifter.Components.dll"/>
+    <ROW File="MLifter.CardCollector.resources.dll" Component_="MLifter.CardCollector.resources.dll" FileName="MLifte~3.dll|MLifter.CardCollector.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.CardCollector.resources.dll" SelfReg="false" NextFile="MLifter.Components.resources.dll"/>
+    <ROW File="MLifter.CardCollector.resources.dll_1" Component_="MLifter.CardCollector.resources.dll_1" FileName="MLifte~3.dll|MLifter.CardCollector.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.CardCollector.resources.dll" SelfReg="false" NextFile="MLifter.Components.resources.dll_1"/>
+    <ROW File="MLifter.CardCollector.resources.dll_2" Component_="MLifter.CardCollector.resources.dll_2" FileName="MLifte~3.dll|MLifter.CardCollector.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.CardCollector.resources.dll" SelfReg="false" NextFile="MLifter.Components.resources.dll_2"/>
+    <ROW File="MLifter.CardCollector.resources.dll_3" Component_="MLifter.CardCollector.resources.dll_3" FileName="MLifte~3.dll|MLifter.CardCollector.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.CardCollector.resources.dll" SelfReg="false" NextFile="MLifter.Components.resources.dll_3"/>
+    <ROW File="MLifter.Components.dll" Component_="MLifter.Components.dll" FileName="MLifte~5.dll|MLifter.Components.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.Components.dll" SelfReg="false" NextFile="MLifter.Controls.dll"/>
+    <ROW File="MLifter.Components.resources.dll" Component_="MLifter.Components.resources.dll" FileName="MLifte~4.dll|MLifter.Components.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.Components.resources.dll" SelfReg="false" NextFile="MLifter.Controls.resources.dll"/>
+    <ROW File="MLifter.Components.resources.dll_1" Component_="MLifter.Components.resources.dll_1" FileName="MLifte~4.dll|MLifter.Components.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.Components.resources.dll" SelfReg="false" NextFile="MLifter.Controls.resources.dll_1"/>
+    <ROW File="MLifter.Components.resources.dll_2" Component_="MLifter.Components.resources.dll_2" FileName="MLifte~4.dll|MLifter.Components.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.Components.resources.dll" SelfReg="false" NextFile="MLifter.Controls.resources.dll_2"/>
+    <ROW File="MLifter.Components.resources.dll_3" Component_="MLifter.Components.resources.dll_3" FileName="MLifte~4.dll|MLifter.Components.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.Components.resources.dll" SelfReg="false" NextFile="MLifter.Controls.resources.dll_3"/>
+    <ROW File="MLifter.Controls.dll" Component_="MLifter.Controls.dll" FileName="MLifte~6.dll|MLifter.Controls.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.Controls.dll" SelfReg="false" NextFile="MLifter.DAL.dll_1"/>
+    <ROW File="MLifter.Controls.resources.dll" Component_="MLifter.Controls.resources.dll" FileName="MLifte~5.dll|MLifter.Controls.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.Controls.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_4"/>
+    <ROW File="MLifter.Controls.resources.dll_1" Component_="MLifter.Controls.resources.dll_1" FileName="MLifte~5.dll|MLifter.Controls.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.Controls.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_5"/>
+    <ROW File="MLifter.Controls.resources.dll_2" Component_="MLifter.Controls.resources.dll_2" FileName="MLifte~5.dll|MLifter.Controls.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.Controls.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_6"/>
+    <ROW File="MLifter.Controls.resources.dll_3" Component_="MLifter.Controls.resources.dll_3" FileName="MLifte~5.dll|MLifter.Controls.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.Controls.resources.dll" SelfReg="false" NextFile="MLifter.DAL.resources.dll_7"/>
+    <ROW File="MLifter.DAL.XmlSerializers.dll" Component_="MLifter.DAL.XmlSerializers.dll" FileName="MLifte~5.dll|MLifter.DAL.XmlSerializers.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.DAL.XmlSerializers.dll" SelfReg="false" NextFile="MLifter.Generics.dll"/>
+    <ROW File="MLifter.DAL.dll" Component_="MLifter.DAL.dll" FileName="MLifte~4.dll|MLifter.DAL.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.DAL.dll" SelfReg="false" NextFile="MLifter.DAL.XmlSerializers.dll"/>
+    <ROW File="MLifter.DAL.dll_1" Component_="MLifter.DAL.dll_1" FileName="MLifte~7.dll|MLifter.DAL.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.DAL.dll" SelfReg="false" NextFile="MLifter.Generics.dll_1"/>
+    <ROW File="MLifter.DAL.resources.dll" Component_="MLifter.DAL.resources.dll" FileName="MLifte~3.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\de\MLifter.DAL.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll"/>
+    <ROW File="MLifter.DAL.resources.dll_1" Component_="MLifter.DAL.resources.dll_1" FileName="MLifte~3.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\es\MLifter.DAL.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll_1"/>
+    <ROW File="MLifter.DAL.resources.dll_2" Component_="MLifter.DAL.resources.dll_2" FileName="MLifte~3.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\fr\MLifter.DAL.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll_3"/>
+    <ROW File="MLifter.DAL.resources.dll_3" Component_="MLifter.DAL.resources.dll_3" FileName="MLifte~3.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\pt\MLifter.DAL.resources.dll" SelfReg="false" NextFile="Security.Framework.Base.dll"/>
+    <ROW File="MLifter.DAL.resources.dll_4" Component_="MLifter.DAL.resources.dll_4" FileName="MLifte~6.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifter.DAL.resources.dll" SelfReg="false" NextFile="MLifterErrorHandler.resources.dll"/>
+    <ROW File="MLifter.DAL.resources.dll_5" Component_="MLifter.DAL.resources.dll_5" FileName="MLifte~6.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifter.DAL.resources.dll" SelfReg="false" NextFile="MLifterErrorHandler.resources.dll_1"/>
+    <ROW File="MLifter.DAL.resources.dll_6" Component_="MLifter.DAL.resources.dll_6" FileName="MLifte~6.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifter.DAL.resources.dll" SelfReg="false" NextFile="MLifterErrorHandler.resources.dll_2"/>
+    <ROW File="MLifter.DAL.resources.dll_7" Component_="MLifter.DAL.resources.dll_7" FileName="MLifte~6.dll|MLifter.DAL.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifter.DAL.resources.dll" SelfReg="false" NextFile="MLifterErrorHandler.resources.dll_3"/>
+    <ROW File="MLifter.Generics.dll" Component_="MLifter.Generics.dll" FileName="MLifte~6.dll|MLifter.Generics.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.Generics.dll" SelfReg="false" NextFile="MLifter.SyncService.dll"/>
+    <ROW File="MLifter.Generics.dll_1" Component_="MLifter.Generics.dll_1" FileName="MLifte~9.dll|MLifter.Generics.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\MLifter.Generics.dll" SelfReg="false" NextFile="Mono.Security.dll_1"/>
+    <ROW File="MLifter.Recorder.exe" Component_="MLifter.Recorder.exe" FileName="MLifte~4.exe|MLifter.Recorder.exe" Attributes="0" SourcePath="..\MLifter.Recorder\bin\Release\MLifter.Recorder.exe" SelfReg="false" NextFile="MLifter.Recorder.exe.config"/>
+    <ROW File="MLifter.Recorder.exe.config" Component_="MLifter.Recorder.exe.config" FileName="MLifte~4.con|MLifter.Recorder.exe.config" Attributes="0" SourcePath="..\MLifter.Recorder\bin\Release\MLifter.Recorder.exe.config" SelfReg="false" NextFile="MLifterErrorHandler.exe"/>
+    <ROW File="MLifter.Remoting.dll" Component_="MLifter.Remoting.dll" FileName="MLifte~1.dll|MLifter.Remoting.dll" Attributes="0" SourcePath="..\MLifter.Remoting\bin\Release\MLifter.Remoting.dll" SelfReg="false" NextFile="MLifter.Recorder.exe"/>
+    <ROW File="MLifter.SettingsManager.exe" Component_="MLifter.SettingsManager.exe" FileName="MLifte~3.exe|MLifter.SettingsManager.exe" Attributes="0" SourcePath="..\MLifter.SettingsManager\bin\Release\MLifter.SettingsManager.exe" SelfReg="false" NextFile="MLifter.SettingsManager.exe.config"/>
+    <ROW File="MLifter.SettingsManager.exe.config" Component_="MLifter.SettingsManager.exe.config" FileName="MLifte~3.con|MLifter.SettingsManager.exe.config" Attributes="0" SourcePath="..\MLifter.SettingsManager\bin\Release\MLifter.SettingsManager.exe.config" SelfReg="false" NextFile="MLifter.Remoting.dll"/>
+    <ROW File="MLifter.SyncService.dll" Component_="MLifter.SyncService.dll" FileName="MLifte~7.dll|MLifter.SyncService.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MLifter.SyncService.dll" SelfReg="false" NextFile="Mono.Security.dll"/>
+    <ROW File="MLifter.Unbind.exe" Component_="MLifter.Unbind.exe" FileName="MLifte~2.exe|MLifter.Unbind.exe" Attributes="0" SourcePath="..\MLifter.Unbind\bin\Release\MLifter.Unbind.exe" SelfReg="false" NextFile="MLifter.Unbind.exe.config"/>
+    <ROW File="MLifter.Unbind.exe.config" Component_="MLifter.Unbind.exe.config" FileName="MLifte~2.con|MLifter.Unbind.exe.config" Attributes="0" SourcePath="..\MLifter.Unbind\bin\Release\MLifter.Unbind.exe.config" SelfReg="false" NextFile="MLifter.SettingsManager.exe"/>
+    <ROW File="MLifterDB.sql" Component_="DirectDatabaseAccess_Demo.mlcfg_1" FileName="Memory~1.sql|MemoryLifterServerDatabaseScript.sql" Attributes="1" SourcePath="..\MLifter.DAL\DB\PostgreSQL\MLifterDB.sql" SelfReg="false" NextFile="logo.gif"/>
+    <ROW File="MLifterErrorHandler.exe" Component_="MLifterErrorHandler.exe" FileName="MLifte~5.exe|MLifterErrorHandler.exe" Attributes="0" SourcePath="..\MLifter.ErrorHandler\bin\Release\MLifterErrorHandler.exe" SelfReg="false" NextFile="MLifterErrorHandler.exe.config"/>
+    <ROW File="MLifterErrorHandler.exe.config" Component_="MemoryLifter.exe.config" FileName="MLifte~5.con|MLifterErrorHandler.exe.config" Attributes="0" SourcePath="..\MLifter.ErrorHandler\bin\Release\MLifterErrorHandler.exe.config" SelfReg="false" NextFile="MLifter.AudioBookGenerator.exe"/>
+    <ROW File="MLifterErrorHandler.resources.dll" Component_="MLifterErrorHandler.resources.dll" FileName="MLifte~7.dll|MLifterErrorHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifterErrorHandler.resources.dll" SelfReg="false" NextFile="MLifterUpdateHandler.resources.dll"/>
+    <ROW File="MLifterErrorHandler.resources.dll_1" Component_="MLifterErrorHandler.resources.dll_1" FileName="MLifte~7.dll|MLifterErrorHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifterErrorHandler.resources.dll" SelfReg="false" NextFile="MLifterUpdateHandler.resources.dll_1"/>
+    <ROW File="MLifterErrorHandler.resources.dll_2" Component_="MLifterErrorHandler.resources.dll_2" FileName="MLifte~7.dll|MLifterErrorHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifterErrorHandler.resources.dll" SelfReg="false" NextFile="MLifterUpdateHandler.resources.dll_2"/>
+    <ROW File="MLifterErrorHandler.resources.dll_3" Component_="MLifterErrorHandler.resources.dll_3" FileName="MLifte~7.dll|MLifterErrorHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifterErrorHandler.resources.dll" SelfReg="false" NextFile="MLifterUpdateHandler.resources.dll_3"/>
+    <ROW File="MLifterLearningModulesService.asmx" Component_="ExtensionFileHandler.ashx" FileName="MLifte~1.asm|MLifterLearningModulesService.asmx" Attributes="1" SourcePath="..\MLifter.SyncService\MLifterLearningModulesService.asmx" SelfReg="false" NextFile="PgSyncService.asmx"/>
+    <ROW File="MLifterUpdateHandler.exe" Component_="MLifterUpdateHandler.exe" FileName="MLifte~1.exe|MLifterUpdateHandler.exe" Attributes="0" SourcePath="..\MLifter.UpdateHandler\bin\Release\MLifterUpdateHandler.exe" SelfReg="false" NextFile="MLifterUpdateHandler.exe.config"/>
+    <ROW File="MLifterUpdateHandler.exe.config" Component_="MemoryLifter.exe.config" FileName="MLifte~1.con|MLifterUpdateHandler.exe.config" Attributes="0" SourcePath="..\MLifter.UpdateHandler\bin\Release\MLifterUpdateHandler.exe.config" SelfReg="false" NextFile="MLifter.Unbind.exe"/>
+    <ROW File="MLifterUpdateHandler.resources.dll" Component_="MLifterUpdateHandler.resources.dll" FileName="MLifte~8.dll|MLifterUpdateHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MLifterUpdateHandler.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll_6"/>
+    <ROW File="MLifterUpdateHandler.resources.dll_1" Component_="MLifterUpdateHandler.resources.dll_1" FileName="MLifte~8.dll|MLifterUpdateHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MLifterUpdateHandler.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll_7"/>
+    <ROW File="MLifterUpdateHandler.resources.dll_2" Component_="MLifterUpdateHandler.resources.dll_2" FileName="MLifte~8.dll|MLifterUpdateHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MLifterUpdateHandler.resources.dll" SelfReg="false" NextFile="Npgsql.resources.dll_9"/>
+    <ROW File="MLifterUpdateHandler.resources.dll_3" Component_="MLifterUpdateHandler.resources.dll_3" FileName="MLifte~8.dll|MLifterUpdateHandler.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MLifterUpdateHandler.resources.dll" SelfReg="false" NextFile="ZedGraph.resources.dll_3"/>
+    <ROW File="MediaFileHandler.ashx" Component_="ExtensionFileHandler.ashx" FileName="MediaF~1.ash|MediaFileHandler.ashx" Attributes="1" SourcePath="..\MLifter.SyncService\MediaFileHandler.ashx" SelfReg="false" NextFile="MLifterLearningModulesService.asmx"/>
+    <ROW File="MemoryLifter.exe" Component_="MemoryLifter.exe" FileName="Memory~1.exe|MemoryLifter.exe" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\MemoryLifter.exe" SelfReg="false" NextFile="MemoryLifter.exe.config"/>
+    <ROW File="MemoryLifter.exe.config" Component_="MemoryLifter.exe.config" FileName="Memory~1.con|MemoryLifter.exe.config" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\MemoryLifter.exe.config" SelfReg="false" NextFile="SecurityAdminSuite.exe"/>
+    <ROW File="MemoryLifter.resources.dll" Component_="MemoryLifter.resources.dll" FileName="Memory~1.dll|MemoryLifter.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\MemoryLifter.resources.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_4"/>
+    <ROW File="MemoryLifter.resources.dll_1" Component_="MemoryLifter.resources.dll_1" FileName="Memory~1.dll|MemoryLifter.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\MemoryLifter.resources.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_5"/>
+    <ROW File="MemoryLifter.resources.dll_2" Component_="MemoryLifter.resources.dll_2" FileName="Memory~1.dll|MemoryLifter.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\MemoryLifter.resources.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_6"/>
+    <ROW File="MemoryLifter.resources.dll_3" Component_="MemoryLifter.resources.dll_3" FileName="Memory~1.dll|MemoryLifter.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\MemoryLifter.resources.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_7"/>
+    <ROW File="MemoryLifterFeed.mlcfg" Component_="default.mlcfg" FileName="Memory~1.mlc|MemoryLifterFeed.mlcfg" Attributes="1" SourcePath="..\MemoryLifter\Config\MemoryLifterFeed.mlcfg" SelfReg="false" NextFile="about.txt"/>
+    <ROW File="Microsoft.Practices.Composite.Wpf.dll" Component_="Microsoft.Practices.Composite.Wpf.dll" FileName="Micros~5.dll|Microsoft.Practices.Composite.Wpf.dll" Attributes="1" SourcePath="..\..\3rdParty\Microsoft\Microsoft.Practices.Composite.Wpf.dll" SelfReg="false" NextFile="MemoryLifter.resources.dll"/>
+    <ROW File="Microsoft.Practices.Composite.dll" Component_="Microsoft.Practices.Composite.dll" FileName="Micros~4.dll|Microsoft.Practices.Composite.dll" Attributes="1" SourcePath="..\..\3rdParty\Microsoft\Microsoft.Practices.Composite.dll" SelfReg="false" NextFile="Microsoft.Practices.Composite.Wpf.dll"/>
+    <ROW File="Microsoft.Synchronization.Data.Server.dll" Component_="Microsoft.Synchronization.Data.Server.dl" FileName="Micros~2.dll|Microsoft.Synchronization.Data.Server.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Microsoft.Synchronization.Data.Server.dll" SelfReg="false" NextFile="Microsoft.Synchronization.dll"/>
+    <ROW File="Microsoft.Synchronization.Data.SqlServerCe.dll" Component_="Microsoft.Synchronization.Data.SqlServer" FileName="Micros~3.dll|Microsoft.Synchronization.Data.SqlServerCe.dll" Attributes="1" SourcePath="..\..\3rdParty\Microsoft\Synchronisation\ADO.NET\V2.0\x86\Microsoft.Synchronization.Data.SqlServerCe.dll" SelfReg="false" NextFile="J832.Common.dll"/>
+    <ROW File="Microsoft.Synchronization.Data.dll" Component_="Microsoft.Synchronization.Data.dll" FileName="Micros~1.dll|Microsoft.Synchronization.Data.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Microsoft.Synchronization.Data.dll" SelfReg="false" NextFile="Microsoft.Synchronization.Data.Server.dll"/>
+    <ROW File="Microsoft.Synchronization.Data.dll_1" Component_="Microsoft.Synchronization.Data.dll_1" FileName="Micros~2.dll|Microsoft.Synchronization.Data.dll" Attributes="1" SourcePath="..\..\3rdParty\Microsoft\Synchronisation\ADO.NET\V2.0\x86\Microsoft.Synchronization.Data.dll" SelfReg="false" NextFile="Microsoft.Synchronization.Data.SqlServerCe.dll"/>
+    <ROW File="Microsoft.Synchronization.dll" Component_="Microsoft.Synchronization.dll" FileName="Micros~3.dll|Microsoft.Synchronization.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Microsoft.Synchronization.dll" SelfReg="false" NextFile="MLifter.AudioTools.dll"/>
+    <ROW File="Microsoft.Synchronization.dll_1" Component_="Microsoft.Synchronization.dll_1" FileName="Micros~1.dll|Microsoft.Synchronization.dll" Attributes="1" SourcePath="..\..\3rdParty\Microsoft\Synchronisation\x86\Microsoft.Synchronization.dll" SelfReg="false" NextFile="Microsoft.Synchronization.Data.dll_1"/>
+    <ROW File="Mono.Security.dll" Component_="Mono.Security.dll" FileName="MonoSe~1.dll|Mono.Security.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Mono.Security.dll" SelfReg="false" NextFile="MySql.Data.dll"/>
+    <ROW File="Mono.Security.dll_1" Component_="Mono.Security.dll_1" FileName="MonoSe~1.dll|Mono.Security.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Mono.Security.dll" SelfReg="false" NextFile="Npgsql.dll_1"/>
+    <ROW File="MySql.Data.dll" Component_="MySql.Data.dll" FileName="MySqlD~1.dll|MySql.Data.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\MySql.Data.dll" SelfReg="false" NextFile="Npgsql.dll"/>
+    <ROW File="Npgsql.dll" Component_="Npgsql.dll" FileName="Npgsql.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Npgsql.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_3"/>
+    <ROW File="Npgsql.dll_1" Component_="Npgsql.dll_1" FileName="Npgsql.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Npgsql.dll" SelfReg="false" NextFile="OfficePickers.dll"/>
+    <ROW File="Npgsql.resources.dll" Component_="Npgsql.resources.dll" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\de\Npgsql.resources.dll" SelfReg="false" NextFile="MLifter.AudioTools.resources.dll_1"/>
+    <ROW File="Npgsql.resources.dll_1" Component_="Npgsql.resources.dll_1" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\es\Npgsql.resources.dll" SelfReg="false" NextFile="Esent.Collections.dll"/>
+    <ROW File="Npgsql.resources.dll_3" Component_="Npgsql.resources.dll_3" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\fr\Npgsql.resources.dll" SelfReg="false" NextFile="ICSharpCode.SharpZipLib.dll"/>
+    <ROW File="Npgsql.resources.dll_6" Component_="Npgsql.resources.dll_6" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\Npgsql.resources.dll" SelfReg="false" NextFile="ZedGraph.resources.dll"/>
+    <ROW File="Npgsql.resources.dll_7" Component_="Npgsql.resources.dll_7" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\Npgsql.resources.dll" SelfReg="false" NextFile="ZedGraph.resources.dll_1"/>
+    <ROW File="Npgsql.resources.dll_9" Component_="Npgsql.resources.dll_9" FileName="Npgsql~1.dll|Npgsql.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\Npgsql.resources.dll" SelfReg="false" NextFile="ZedGraph.resources.dll_2"/>
+    <ROW File="OK_active.png" Component_="Arrow_Left.png" FileName="OK_act~1.png|OK_active.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\OK_active.png" SelfReg="false" NextFile="OK_inactive.png"/>
+    <ROW File="OK_active.png_1" Component_="Arrow_Left.png_2" FileName="OK_act~1.png|OK_active.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\OK_active.png" SelfReg="false" NextFile="OK_inactive.png_1"/>
+    <ROW File="OK_active.png_2" Component_="Arrow_Left.png_3" FileName="OK_act~1.png|OK_active.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\OK_active.png" SelfReg="false" NextFile="OK_inactive.png_2"/>
+    <ROW File="OK_active.png_3" Component_="Arrow_Left.png_4" FileName="OK_act~1.png|OK_active.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\OK_active.png" SelfReg="false" NextFile="OK_inactive.png_3"/>
+    <ROW File="OK_inactive.png" Component_="Arrow_Left.png" FileName="OK_ina~1.png|OK_inactive.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\OK_inactive.png" SelfReg="false" NextFile="play.gif"/>
+    <ROW File="OK_inactive.png_1" Component_="Arrow_Left.png_2" FileName="OK_ina~1.png|OK_inactive.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\OK_inactive.png" SelfReg="false" NextFile="play.gif_2"/>
+    <ROW File="OK_inactive.png_2" Component_="Arrow_Left.png_3" FileName="OK_ina~1.png|OK_inactive.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\OK_inactive.png" SelfReg="false" NextFile="play.gif_3"/>
+    <ROW File="OK_inactive.png_3" Component_="Arrow_Left.png_4" FileName="OK_ina~1.png|OK_inactive.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\OK_inactive.png" SelfReg="false" NextFile="play.gif_4"/>
+    <ROW File="OfficePickers.dll" Component_="OfficePickers.dll" FileName="Office~1.dll|OfficePickers.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\OfficePickers.dll" SelfReg="false" NextFile="Security.Framework.Base.dll_1"/>
+    <ROW File="PgSyncService.asmx" Component_="ExtensionFileHandler.ashx" FileName="PgSync~1.asm|PgSyncService.asmx" Attributes="1" SourcePath="..\MLifter.SyncService\PgSyncService.asmx" SelfReg="false" NextFile="Web.config"/>
+    <ROW File="README.txt" Component_="about.txt" FileName="README.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\README.txt" SelfReg="false" NextFile="USAGE.txt"/>
+    <ROW File="README.txt_3" Component_="about.txt_2" FileName="README.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\README.txt" SelfReg="false" NextFile="USAGE.txt_2"/>
+    <ROW File="README.txt_4" Component_="about.txt_3" FileName="README.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\README.txt" SelfReg="false" NextFile="USAGE.txt_3"/>
+    <ROW File="RUL.ico" Component_="help.ico" FileName="RUL.ico" Attributes="1" SourcePath="..\MemoryLifter\Resources\Icons\RUL.ico" SelfReg="false" NextFile="help_pt.chm"/>
+    <ROW File="ReadMe.html" Component_="ReadMe.html" FileName="ReadMe~1.htm|ReadMe.html" Attributes="1" SourcePath="..\MLifter.SyncService\Package\ReadMe.html" SelfReg="false" NextFile="MLifterDB.sql"/>
+    <ROW File="ReadMe.url" Component_="ReadMe.url" FileName="ReadMe.url" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\ReadMe.url" SelfReg="false" NextFile="Teachers.xml"/>
+    <ROW File="SQLServerCompact3.5redistlicenseEnglish111907.rtf" Component_="CPOL.html" FileName="SQLSer~1.rtf|SQL Server Compact 3.5 redist license (English) 111907.rtf" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\SQL Server Compact 3.5 redist license (English) 111907.rtf" SelfReg="false" NextFile="help_es.chm"/>
+    <ROW File="Security.Framework.Base.dll" Component_="Security.Framework.Base.dll" FileName="Securi~1.dll|Security.Framework.Base.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Security.Framework.Base.dll" SelfReg="false" NextFile="Security.PgSqlAdapter.dll"/>
+    <ROW File="Security.Framework.Base.dll_1" Component_="Security.Framework.Base.dll_1" FileName="Securi~1.dll|Security.Framework.Base.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Security.Framework.Base.dll" SelfReg="false" NextFile="Security.PgSqlAdapter.dll_1"/>
+    <ROW File="Security.PgSqlAdapter.dll" Component_="Security.PgSqlAdapter.dll" FileName="Securi~2.dll|Security.PgSqlAdapter.dll" Attributes="0" SourcePath="..\MLifter.SyncService\bin\Security.PgSqlAdapter.dll" SelfReg="false" NextFile="help_de.chm"/>
+    <ROW File="Security.PgSqlAdapter.dll_1" Component_="Security.PgSqlAdapter.dll_1" FileName="Securi~2.dll|Security.PgSqlAdapter.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\Security.PgSqlAdapter.dll" SelfReg="false" NextFile="XPTable.dll"/>
+    <ROW File="SecurityAdminSuite.exe" Component_="SecurityAdminSuite.exe" FileName="Securi~1.exe|SecurityAdminSuite.exe" Attributes="0" SourcePath="..\SecurityAdminSuite\bin\Release\SecurityAdminSuite.exe" SelfReg="false" NextFile="SecurityAdminSuite.exe.config"/>
+    <ROW File="SecurityAdminSuite.exe.config" Component_="SecurityAdminSuite.exe.config" FileName="Securi~1.con|SecurityAdminSuite.exe.config" Attributes="0" SourcePath="..\SecurityAdminSuite\bin\Release\SecurityAdminSuite.exe.config" SelfReg="false" NextFile="MLifterUpdateHandler.exe"/>
+    <ROW File="Stack.png_1" Component_="Arrow_Left.png_1" FileName="Stack.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Stack.png" SelfReg="false" NextFile="ThumbDown.png"/>
+    <ROW File="Stack.png_2" Component_="Arrow_Left.png_2" FileName="Stack.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Stack.png" SelfReg="false" NextFile="ThumbDown.png_1"/>
+    <ROW File="Stack.png_3" Component_="Arrow_Left.png_3" FileName="Stack.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Stack.png" SelfReg="false" NextFile="synapsen_portrait.png"/>
+    <ROW File="StartupFolders.zip" Component_="accessoriescharactermap.png" FileName="Startu~1.zip|StartupFolders.zip" Attributes="1" SourcePath="..\MemoryLifter\Resources\StartupFolders.zip" SelfReg="false" NextFile="ReadMe.url"/>
+    <ROW File="Teachers.xml" Component_="accessoriescharactermap.png" FileName="Teachers.xml" Attributes="1" SourcePath="..\MemoryLifter\Resources\Teachers.xml" SelfReg="false" NextFile="start.mp3"/>
+    <ROW File="ThumbDown.png" Component_="Arrow_Left.png_1" FileName="Thumb-~1.png|Thumb-Down.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Thumb-Down.png" SelfReg="false" NextFile="ThumbDown_grey.png"/>
+    <ROW File="ThumbDown.png_1" Component_="Arrow_Left.png_2" FileName="Thumb-~1.png|Thumb-Down.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Thumb-Down.png" SelfReg="false" NextFile="ThumbDown_grey.png_1"/>
+    <ROW File="ThumbDown.png_2" Component_="Arrow_Left.png_3" FileName="Thumb-~1.png|Thumb-Down.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Thumb-Down.png" SelfReg="false" NextFile="ThumbDown_grey.png_2"/>
+    <ROW File="ThumbDown.png_3" Component_="Arrow_Left.png_4" FileName="Thumb-~1.png|Thumb-Down.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Thumb-Down.png" SelfReg="false" NextFile="ThumbDown_grey.png_3"/>
+    <ROW File="ThumbDown_grey.png" Component_="Arrow_Left.png_1" FileName="Thumb-~2.png|Thumb-Down_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Thumb-Down_grey.png" SelfReg="false" NextFile="ThumbUp.png"/>
+    <ROW File="ThumbDown_grey.png_1" Component_="Arrow_Left.png_2" FileName="Thumb-~2.png|Thumb-Down_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Thumb-Down_grey.png" SelfReg="false" NextFile="ThumbUp.png_1"/>
+    <ROW File="ThumbDown_grey.png_2" Component_="Arrow_Left.png_3" FileName="Thumb-~2.png|Thumb-Down_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Thumb-Down_grey.png" SelfReg="false" NextFile="ThumbUp.png_2"/>
+    <ROW File="ThumbDown_grey.png_3" Component_="Arrow_Left.png_4" FileName="Thumb-~2.png|Thumb-Down_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Thumb-Down_grey.png" SelfReg="false" NextFile="ThumbUp.png_3"/>
+    <ROW File="ThumbUp.png" Component_="Arrow_Left.png_1" FileName="Thumb-Up.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Thumb-Up.png" SelfReg="false" NextFile="ThumbUp_grey.png"/>
+    <ROW File="ThumbUp.png_1" Component_="Arrow_Left.png_2" FileName="Thumb-Up.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Thumb-Up.png" SelfReg="false" NextFile="ThumbUp_grey.png_1"/>
+    <ROW File="ThumbUp.png_2" Component_="Arrow_Left.png_3" FileName="Thumb-Up.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Thumb-Up.png" SelfReg="false" NextFile="ThumbUp_grey.png_2"/>
+    <ROW File="ThumbUp.png_3" Component_="Arrow_Left.png_4" FileName="Thumb-Up.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Thumb-Up.png" SelfReg="false" NextFile="ThumbUp_grey.png_3"/>
+    <ROW File="ThumbUp_grey.png" Component_="Arrow_Left.png_1" FileName="Thumb-~3.png|Thumb-Up_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\Thumb-Up_grey.png" SelfReg="false" NextFile="Classic.style"/>
+    <ROW File="ThumbUp_grey.png_1" Component_="Arrow_Left.png_2" FileName="Thumb-~3.png|Thumb-Up_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\Thumb-Up_grey.png" SelfReg="false" NextFile="Default.style"/>
+    <ROW File="ThumbUp_grey.png_2" Component_="Arrow_Left.png_3" FileName="Thumb-~3.png|Thumb-Up_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\Thumb-Up_grey.png" SelfReg="false" NextFile="iLifter.style"/>
+    <ROW File="ThumbUp_grey.png_3" Component_="Arrow_Left.png_4" FileName="Thumb-~3.png|Thumb-Up_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\Thumb-Up_grey.png" SelfReg="false" NextFile="Kids.style"/>
+    <ROW File="USAGE.txt" Component_="about.txt" FileName="USAGE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\USAGE.txt" SelfReg="false" NextFile="libFLAC_dynamic.dll"/>
+    <ROW File="USAGE.txt_2" Component_="about.txt_2" FileName="USAGE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\USAGE.txt" SelfReg="false" NextFile="about.txt_3"/>
+    <ROW File="USAGE.txt_3" Component_="about.txt_3" FileName="USAGE.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\USAGE.txt" SelfReg="false" NextFile="libFLAC_dynamic.dll_2"/>
+    <ROW File="Web.config" Component_="ExtensionFileHandler.ashx" FileName="Web~1.con|Web.config" Attributes="1" SourcePath="..\MLifter.SyncService\Web.config" SelfReg="false" NextFile="AxInterop.WMPLib.dll"/>
+    <ROW File="XPTable.dll" Component_="XPTable.dll" FileName="XPTable.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\XPTable.dll" SelfReg="false" NextFile="ZedGraph.dll"/>
+    <ROW File="ZedGraph.dll" Component_="ZedGraph.dll" FileName="ZedGraph.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Libraries\ZedGraph.dll" SelfReg="false" NextFile="Microsoft.Synchronization.dll_1"/>
+    <ROW File="ZedGraph.resources.dll" Component_="ZedGraph.resources.dll" FileName="ZedGra~1.dll|ZedGraph.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\de\ZedGraph.resources.dll" SelfReg="false" NextFile="MemoryLifter.resources.dll_1"/>
+    <ROW File="ZedGraph.resources.dll_1" Component_="ZedGraph.resources.dll_1" FileName="ZedGra~1.dll|ZedGraph.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\es\ZedGraph.resources.dll" SelfReg="false" NextFile="MemoryLifter.resources.dll_2"/>
+    <ROW File="ZedGraph.resources.dll_2" Component_="ZedGraph.resources.dll_2" FileName="ZedGra~1.dll|ZedGraph.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\fr\ZedGraph.resources.dll" SelfReg="false" NextFile="MemoryLifter.resources.dll_3"/>
+    <ROW File="ZedGraph.resources.dll_3" Component_="ZedGraph.resources.dll_3" FileName="ZedGra~1.dll|ZedGraph.resources.dll" Attributes="0" SourcePath="..\MemoryLifter\bin\Release\Languages\pt\ZedGraph.resources.dll" SelfReg="false" NextFile="Arrow_Left.png"/>
+    <ROW File="about.txt" Component_="about.txt" FileName="about.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\about.txt" SelfReg="false" NextFile="COPYING.txt"/>
+    <ROW File="about.txt_2" Component_="about.txt_2" FileName="about.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\about.txt" SelfReg="false" NextFile="COPYING.txt_2"/>
+    <ROW File="about.txt_3" Component_="about.txt_3" FileName="about.txt" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\about.txt" SelfReg="false" NextFile="COPYING.txt_3"/>
+    <ROW File="animatedFeedback.xsl" Component_="animatedFeedback.xsl" FileName="animat~1.xsl|animatedFeedback.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\animatedFeedback.xsl" SelfReg="false" NextFile="answer.xsl_5"/>
+    <ROW File="answer.xsl" Component_="Arrow_Left.png" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\answer.xsl" SelfReg="false" NextFile="question.xsl"/>
+    <ROW File="answer.xsl_1" Component_="Arrow_Left.png_1" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\answer.xsl" SelfReg="false" NextFile="question.xsl_1"/>
+    <ROW File="answer.xsl_2" Component_="Arrow_Left.png_2" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\answer.xsl" SelfReg="false" NextFile="question.xsl_2"/>
+    <ROW File="answer.xsl_3" Component_="Arrow_Left.png_3" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\answer.xsl" SelfReg="false" NextFile="question.xsl_3"/>
+    <ROW File="answer.xsl_4" Component_="Arrow_Left.png_4" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\answer.xsl" SelfReg="false" NextFile="question.xsl_4"/>
+    <ROW File="answer.xsl_5" Component_="animatedFeedback.xsl" FileName="answer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\answer.xsl" SelfReg="false" NextFile="answerLogic.xsl"/>
+    <ROW File="answerLogic.xsl" Component_="animatedFeedback.xsl" FileName="answer~1.xsl|answerLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\answerLogic.xsl" SelfReg="false" NextFile="blockLogic.xsl"/>
+    <ROW File="blockLogic.xsl" Component_="animatedFeedback.xsl" FileName="blockL~1.xsl|blockLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\blockLogic.xsl" SelfReg="false" NextFile="default.xsl"/>
+    <ROW File="checkmark.png" Component_="Arrow_Left.png_1" FileName="checkm~1.png|checkmark.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\checkmark.png" SelfReg="false" NextFile="checkmark20.png"/>
+    <ROW File="checkmark.png_1" Component_="Arrow_Left.png_2" FileName="checkm~1.png|checkmark.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\checkmark.png" SelfReg="false" NextFile="closeButton.gif_2"/>
+    <ROW File="checkmark.png_2" Component_="Arrow_Left.png_3" FileName="checkm~1.png|checkmark.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\checkmark.png" SelfReg="false" NextFile="closeButton.gif_3"/>
+    <ROW File="checkmark20.png" Component_="Arrow_Left.png_1" FileName="checkm~2.png|checkmark20.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\checkmark20.png" SelfReg="false" NextFile="closeButton.gif_1"/>
+    <ROW File="checkmarkRound.png" Component_="Arrow_Left.png" FileName="checkm~1.png|checkmarkRound.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\checkmarkRound.png" SelfReg="false" NextFile="closeButton.gif"/>
+    <ROW File="closeButton.gif" Component_="Arrow_Left.png" FileName="closeB~1.gif|closeButton.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\closeButton.gif" SelfReg="false" NextFile="closeButtonHover.gif"/>
+    <ROW File="closeButton.gif_1" Component_="Arrow_Left.png_1" FileName="closeB~1.gif|closeButton.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\closeButton.gif" SelfReg="false" NextFile="closeButtonHover.gif_1"/>
+    <ROW File="closeButton.gif_2" Component_="Arrow_Left.png_2" FileName="closeB~1.gif|closeButton.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\closeButton.gif" SelfReg="false" NextFile="closeButtonHover.gif_2"/>
+    <ROW File="closeButton.gif_3" Component_="Arrow_Left.png_3" FileName="closeB~1.gif|closeButton.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\closeButton.gif" SelfReg="false" NextFile="closeButtonHover.gif_3"/>
+    <ROW File="closeButton.gif_4" Component_="Arrow_Left.png_4" FileName="closeB~1.gif|closeButton.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\closeButton.gif" SelfReg="false" NextFile="closeButtonHover.gif_4"/>
+    <ROW File="closeButtonHover.gif" Component_="Arrow_Left.png" FileName="closeB~2.gif|closeButtonHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\closeButtonHover.gif" SelfReg="false" NextFile="facecrying.png"/>
+    <ROW File="closeButtonHover.gif_1" Component_="Arrow_Left.png_1" FileName="closeB~2.gif|closeButtonHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\closeButtonHover.gif" SelfReg="false" NextFile="defaultBackGroundImageAnswerPanel.png"/>
+    <ROW File="closeButtonHover.gif_2" Component_="Arrow_Left.png_2" FileName="closeB~2.gif|closeButtonHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\closeButtonHover.gif" SelfReg="false" NextFile="defaultBackGroundImageAnswerPanel.png_1"/>
+    <ROW File="closeButtonHover.gif_3" Component_="Arrow_Left.png_3" FileName="closeB~2.gif|closeButtonHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\closeButtonHover.gif" SelfReg="false" NextFile="defaultBackGroundImageAnswerPanel.png_2"/>
+    <ROW File="closeButtonHover.gif_4" Component_="Arrow_Left.png_4" FileName="closeB~2.gif|closeButtonHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\closeButtonHover.gif" SelfReg="false" NextFile="feedbackCorrect.gif_4"/>
+    <ROW File="default.mlcfg" Component_="default.mlcfg" FileName="defaul~1.mlc|default.mlcfg" Attributes="1" SourcePath="..\MemoryLifter\Config\default.mlcfg" SelfReg="false" NextFile="MemoryLifterFeed.mlcfg"/>
+    <ROW File="default.xsl" Component_="default.xsl" FileName="default.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\ErrorHandler\default.xsl" SelfReg="false" NextFile="default.xsl_1"/>
+    <ROW File="default.xsl_1" Component_="default.xsl_1" FileName="default.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\Export\default.xsl" SelfReg="false" NextFile="imagemodeLogic.xsl"/>
+    <ROW File="default.xsl_2" Component_="default.xsl_2" FileName="default.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\Print\default.xsl" SelfReg="false" NextFile="withoutMedia.xsl"/>
+    <ROW File="defaultBackGroundImageAnswerPanel.png" Component_="Arrow_Left.png_1" FileName="defaul~1.png|defaultBackGroundImageAnswerPanel.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\defaultBackGroundImageAnswerPanel.png" SelfReg="false" NextFile="feedbackCorrect.gif_1"/>
+    <ROW File="defaultBackGroundImageAnswerPanel.png_1" Component_="Arrow_Left.png_2" FileName="defaul~1.png|defaultBackGroundImageAnswerPanel.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\defaultBackGroundImageAnswerPanel.png" SelfReg="false" NextFile="feedbackCorrect.gif_2"/>
+    <ROW File="defaultBackGroundImageAnswerPanel.png_2" Component_="Arrow_Left.png_3" FileName="defaul~1.png|defaultBackGroundImageAnswerPanel.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\defaultBackGroundImageAnswerPanel.png" SelfReg="false" NextFile="feedbackCorrect.gif_3"/>
+    <ROW File="facecrying.png" Component_="Arrow_Left.png" FileName="face-c~1.png|face-crying.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\face-crying.png" SelfReg="false" NextFile="facecrying_grey.png"/>
+    <ROW File="facecrying_grey.png" Component_="Arrow_Left.png" FileName="face-c~2.png|face-crying_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\face-crying_grey.png" SelfReg="false" NextFile="facegrin.png"/>
+    <ROW File="facegrin.png" Component_="Arrow_Left.png" FileName="face-g~1.png|face-grin.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\face-grin.png" SelfReg="false" NextFile="facegrin_grey.png"/>
+    <ROW File="facegrin_grey.png" Component_="Arrow_Left.png" FileName="face-g~2.png|face-grin_grey.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\face-grin_grey.png" SelfReg="false" NextFile="feedbackCorrect.gif"/>
+    <ROW File="feedbackCorrect.gif" Component_="Arrow_Left.png" FileName="feedba~1.gif|feedbackCorrect.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\feedbackCorrect.gif" SelfReg="false" NextFile="feedbackCorrectSmall.gif"/>
+    <ROW File="feedbackCorrect.gif_1" Component_="Arrow_Left.png_1" FileName="feedba~1.gif|feedbackCorrect.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\feedbackCorrect.gif" SelfReg="false" NextFile="feedbackCorrectSmall.gif_1"/>
+    <ROW File="feedbackCorrect.gif_2" Component_="Arrow_Left.png_2" FileName="feedba~1.gif|feedbackCorrect.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\feedbackCorrect.gif" SelfReg="false" NextFile="feedbackCorrectSmall.gif_2"/>
+    <ROW File="feedbackCorrect.gif_3" Component_="Arrow_Left.png_3" FileName="feedba~1.gif|feedbackCorrect.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\feedbackCorrect.gif" SelfReg="false" NextFile="feedbackCorrectSmall.gif_3"/>
+    <ROW File="feedbackCorrect.gif_4" Component_="Arrow_Left.png_4" FileName="feedba~1.gif|feedbackCorrect.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\feedbackCorrect.gif" SelfReg="false" NextFile="feedbackCorrectSmall.gif_4"/>
+    <ROW File="feedbackCorrectSmall.gif" Component_="Arrow_Left.png" FileName="feedba~2.gif|feedbackCorrectSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\feedbackCorrectSmall.gif" SelfReg="false" NextFile="feedbackWrong.gif"/>
+    <ROW File="feedbackCorrectSmall.gif_1" Component_="Arrow_Left.png_1" FileName="feedba~2.gif|feedbackCorrectSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\feedbackCorrectSmall.gif" SelfReg="false" NextFile="feedbackWrong.gif_1"/>
+    <ROW File="feedbackCorrectSmall.gif_2" Component_="Arrow_Left.png_2" FileName="feedba~2.gif|feedbackCorrectSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\feedbackCorrectSmall.gif" SelfReg="false" NextFile="feedbackWrong.gif_2"/>
+    <ROW File="feedbackCorrectSmall.gif_3" Component_="Arrow_Left.png_3" FileName="feedba~2.gif|feedbackCorrectSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\feedbackCorrectSmall.gif" SelfReg="false" NextFile="feedbackWrong.gif_3"/>
+    <ROW File="feedbackCorrectSmall.gif_4" Component_="Arrow_Left.png_4" FileName="feedba~2.gif|feedbackCorrectSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\feedbackCorrectSmall.gif" SelfReg="false" NextFile="feedbackWrong.gif_4"/>
+    <ROW File="feedbackWrong.gif" Component_="Arrow_Left.png" FileName="feedba~3.gif|feedbackWrong.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\feedbackWrong.gif" SelfReg="false" NextFile="feedbackWrongSmall.gif"/>
+    <ROW File="feedbackWrong.gif_1" Component_="Arrow_Left.png_1" FileName="feedba~3.gif|feedbackWrong.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\feedbackWrong.gif" SelfReg="false" NextFile="feedbackWrongSmall.gif_1"/>
+    <ROW File="feedbackWrong.gif_2" Component_="Arrow_Left.png_2" FileName="feedba~3.gif|feedbackWrong.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\feedbackWrong.gif" SelfReg="false" NextFile="feedbackWrongSmall.gif_2"/>
+    <ROW File="feedbackWrong.gif_3" Component_="Arrow_Left.png_3" FileName="feedba~3.gif|feedbackWrong.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\feedbackWrong.gif" SelfReg="false" NextFile="feedbackWrongSmall.gif_3"/>
+    <ROW File="feedbackWrong.gif_4" Component_="Arrow_Left.png_4" FileName="feedba~3.gif|feedbackWrong.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\feedbackWrong.gif" SelfReg="false" NextFile="feedbackWrongSmall.gif_4"/>
+    <ROW File="feedbackWrongSmall.gif" Component_="Arrow_Left.png" FileName="feedba~4.gif|feedbackWrongSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\feedbackWrongSmall.gif" SelfReg="false" NextFile="OK_active.png"/>
+    <ROW File="feedbackWrongSmall.gif_1" Component_="Arrow_Left.png_1" FileName="feedba~4.gif|feedbackWrongSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\feedbackWrongSmall.gif" SelfReg="false" NextFile="LightBulb.png"/>
+    <ROW File="feedbackWrongSmall.gif_2" Component_="Arrow_Left.png_2" FileName="feedba~4.gif|feedbackWrongSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\feedbackWrongSmall.gif" SelfReg="false" NextFile="OK_active.png_1"/>
+    <ROW File="feedbackWrongSmall.gif_3" Component_="Arrow_Left.png_3" FileName="feedba~4.gif|feedbackWrongSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\feedbackWrongSmall.gif" SelfReg="false" NextFile="OK_active.png_2"/>
+    <ROW File="feedbackWrongSmall.gif_4" Component_="Arrow_Left.png_4" FileName="feedba~4.gif|feedbackWrongSmall.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\feedbackWrongSmall.gif" SelfReg="false" NextFile="OK_active.png_3"/>
+    <ROW File="gpl2_0.txt" Component_="CPOL.html" FileName="gpl-2_0.txt" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\gpl-2_0.txt" SelfReg="false" NextFile="help_en.chm"/>
+    <ROW File="help.ico" Component_="help.ico" FileName="help.ico" Attributes="1" SourcePath="..\MemoryLifter\Resources\Icons\help.ico" SelfReg="false" NextFile="ML.ico"/>
+    <ROW File="help_de.chm" Component_="help_de.chm" FileName="help_de.chm" Attributes="1" SourcePath="..\MemoryLifter\Resources\de\help_de.chm" SelfReg="false" NextFile="CPOL.html"/>
+    <ROW File="help_en.chm" Component_="help_en.chm" FileName="help_en.chm" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\help_en.chm" SelfReg="false" NextFile="lgpl3_0.txt"/>
+    <ROW File="help_es.chm" Component_="help_es.chm" FileName="help_es.chm" Attributes="1" SourcePath="..\MemoryLifter\Resources\es\help_es.chm" SelfReg="false" NextFile="help_fr.chm"/>
+    <ROW File="help_fr.chm" Component_="help_fr.chm" FileName="help_fr.chm" Attributes="1" SourcePath="..\MemoryLifter\Resources\fr\help_fr.chm" SelfReg="false" NextFile="help.ico"/>
+    <ROW File="help_pt.chm" Component_="help_pt.chm" FileName="help_pt.chm" Attributes="1" SourcePath="..\MemoryLifter\Resources\pt\help_pt.chm" SelfReg="false" NextFile="StartupFolders.zip"/>
+    <ROW File="iLifter.style" Component_="BumbleBee.style" FileName="iLifte~1.sty|iLifter.style" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter.style" SelfReg="false" NextFile="Arrow_Left.png_4"/>
+    <ROW File="imagemodeLogic.xsl" Component_="animatedFeedback.xsl" FileName="imagem~1.xsl|imagemodeLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\imagemodeLogic.xsl" SelfReg="false" NextFile="jquerytimer.xsl"/>
+    <ROW File="jquery.xsl" Component_="animatedFeedback.xsl" FileName="jquery.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\jquery.xsl" SelfReg="false" NextFile="listeningmodeLogic.xsl"/>
+    <ROW File="jquerytimer.xsl" Component_="animatedFeedback.xsl" FileName="jquery~1.xsl|jquery-timer.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\jquery-timer.xsl" SelfReg="false" NextFile="jqueryui.xsl"/>
+    <ROW File="jqueryui.xsl" Component_="animatedFeedback.xsl" FileName="jquery~2.xsl|jquery-ui.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\jquery-ui.xsl" SelfReg="false" NextFile="jquery.xsl"/>
+    <ROW File="lame.exe" Component_="lame.exe" FileName="lame.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame.exe" SelfReg="false" NextFile="lame_enc.dll"/>
+    <ROW File="lame.exe_2" Component_="lame.exe_2" FileName="lame.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame.exe" SelfReg="false" NextFile="lame_enc.dll_2"/>
+    <ROW File="lame.exe_3" Component_="lame.exe_3" FileName="lame.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame.exe" SelfReg="false" NextFile="lame_enc.dll_3"/>
+    <ROW File="lame_enc.dll" Component_="lame_enc.dll" FileName="lame_enc.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame_enc.dll" SelfReg="false" NextFile="LICENSE.txt"/>
+    <ROW File="lame_enc.dll_2" Component_="lame_enc.dll_2" FileName="lame_enc.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame_enc.dll" SelfReg="false" NextFile="LICENSE.txt_6"/>
+    <ROW File="lame_enc.dll_3" Component_="lame_enc.dll_3" FileName="lame_enc.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\Lame\lame_enc.dll" SelfReg="false" NextFile="LICENSE.txt_7"/>
+    <ROW File="lgpl3_0.txt" Component_="CPOL.html" FileName="lgpl-3_0.txt" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\lgpl-3_0.txt" SelfReg="false" NextFile="license.rtf_1"/>
+    <ROW File="libFLAC_dynamic.dll" Component_="libFLAC_dynamic.dll" FileName="libFLA~1.dll|libFLAC_dynamic.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libFLAC_dynamic.dll" SelfReg="false" NextFile="libogg.dll"/>
+    <ROW File="libFLAC_dynamic.dll_1" Component_="libFLAC_dynamic.dll_1" FileName="libFLA~1.dll|libFLAC_dynamic.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libFLAC_dynamic.dll" SelfReg="false" NextFile="libogg.dll_1"/>
+    <ROW File="libFLAC_dynamic.dll_2" Component_="libFLAC_dynamic.dll_2" FileName="libFLA~1.dll|libFLAC_dynamic.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libFLAC_dynamic.dll" SelfReg="false" NextFile="libogg.dll_2"/>
+    <ROW File="libogg.dll" Component_="libogg.dll" FileName="libogg.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libogg.dll" SelfReg="false" NextFile="libvorbis.dll"/>
+    <ROW File="libogg.dll_1" Component_="libogg.dll_1" FileName="libogg.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libogg.dll" SelfReg="false" NextFile="libvorbis.dll_1"/>
+    <ROW File="libogg.dll_2" Component_="libogg.dll_2" FileName="libogg.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libogg.dll" SelfReg="false" NextFile="libvorbis.dll_2"/>
+    <ROW File="libvorbis.dll" Component_="libvorbis.dll" FileName="libvor~1.dll|libvorbis.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbis.dll" SelfReg="false" NextFile="libvorbisfile.dll"/>
+    <ROW File="libvorbis.dll_1" Component_="libvorbis.dll_1" FileName="libvor~1.dll|libvorbis.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbis.dll" SelfReg="false" NextFile="libvorbisfile.dll_1"/>
+    <ROW File="libvorbis.dll_2" Component_="libvorbis.dll_2" FileName="libvor~1.dll|libvorbis.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbis.dll" SelfReg="false" NextFile="libvorbisfile.dll_2"/>
+    <ROW File="libvorbisfile.dll" Component_="libvorbisfile.dll" FileName="libvor~2.dll|libvorbisfile.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbisfile.dll" SelfReg="false" NextFile="LICENSE.txt_4"/>
+    <ROW File="libvorbisfile.dll_1" Component_="libvorbisfile.dll_1" FileName="libvor~2.dll|libvorbisfile.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbisfile.dll" SelfReg="false" NextFile="LICENSE.txt_5"/>
+    <ROW File="libvorbisfile.dll_2" Component_="libvorbisfile.dll_2" FileName="libvor~2.dll|libvorbisfile.dll" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\libvorbisfile.dll" SelfReg="false" NextFile="LICENSE.txt_8"/>
+    <ROW File="license.rtf_1" Component_="CPOL.html" FileName="license.rtf" Attributes="1" SourcePath="..\MemoryLifter\Resources\en\license.rtf" SelfReg="false" NextFile="SQLServerCompact3.5redistlicenseEnglish111907.rtf"/>
+    <ROW File="listeningmodeLogic.xsl" Component_="animatedFeedback.xsl" FileName="listen~1.xsl|listeningmodeLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\listeningmodeLogic.xsl" SelfReg="false" NextFile="default.xsl_2"/>
+    <ROW File="logo.gif" Component_="logo.gif" FileName="logo.gif" Attributes="1" SourcePath="..\MLifter.SyncService\Package\Images\logo.gif" SelfReg="false" NextFile="ExtensionFileHandler.ashx"/>
+    <ROW File="oggdec.exe" Component_="oggdec.exe" FileName="oggdec.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggdec.exe" SelfReg="false" NextFile="oggenc.exe"/>
+    <ROW File="oggdec.exe_1" Component_="oggdec.exe_1" FileName="oggdec.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggdec.exe" SelfReg="false" NextFile="oggenc.exe_1"/>
+    <ROW File="oggdec.exe_2" Component_="oggdec.exe_2" FileName="oggdec.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggdec.exe" SelfReg="false" NextFile="oggenc.exe_2"/>
+    <ROW File="oggenc.exe" Component_="oggenc.exe" FileName="oggenc.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggenc.exe" SelfReg="false" NextFile="ogginfo.exe"/>
+    <ROW File="oggenc.exe_1" Component_="oggenc.exe_1" FileName="oggenc.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggenc.exe" SelfReg="false" NextFile="ogginfo.exe_1"/>
+    <ROW File="oggenc.exe_2" Component_="oggenc.exe_2" FileName="oggenc.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\oggenc.exe" SelfReg="false" NextFile="ogginfo.exe_2"/>
+    <ROW File="ogginfo.exe" Component_="ogginfo.exe" FileName="ogginfo.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\ogginfo.exe" SelfReg="false" NextFile="vcut.exe"/>
+    <ROW File="ogginfo.exe_1" Component_="ogginfo.exe_1" FileName="ogginfo.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\ogginfo.exe" SelfReg="false" NextFile="vcut.exe_1"/>
+    <ROW File="ogginfo.exe_2" Component_="ogginfo.exe_2" FileName="ogginfo.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\ogginfo.exe" SelfReg="false" NextFile="vcut.exe_2"/>
+    <ROW File="play.gif" Component_="Arrow_Left.png" FileName="play.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\play.gif" SelfReg="false" NextFile="playClick.gif"/>
+    <ROW File="play.gif_1" Component_="Arrow_Left.png_1" FileName="play.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\play.gif" SelfReg="false" NextFile="playClick.gif_1"/>
+    <ROW File="play.gif_2" Component_="Arrow_Left.png_2" FileName="play.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\play.gif" SelfReg="false" NextFile="playClick.gif_2"/>
+    <ROW File="play.gif_3" Component_="Arrow_Left.png_3" FileName="play.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\play.gif" SelfReg="false" NextFile="playClick.gif_3"/>
+    <ROW File="play.gif_4" Component_="Arrow_Left.png_4" FileName="play.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\play.gif" SelfReg="false" NextFile="playClick.gif_4"/>
+    <ROW File="playClick.gif" Component_="Arrow_Left.png" FileName="playCl~1.gif|playClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\playClick.gif" SelfReg="false" NextFile="playHover.gif"/>
+    <ROW File="playClick.gif_1" Component_="Arrow_Left.png_1" FileName="playCl~1.gif|playClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\playClick.gif" SelfReg="false" NextFile="playHover.gif_1"/>
+    <ROW File="playClick.gif_2" Component_="Arrow_Left.png_2" FileName="playCl~1.gif|playClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\playClick.gif" SelfReg="false" NextFile="playHover.gif_2"/>
+    <ROW File="playClick.gif_3" Component_="Arrow_Left.png_3" FileName="playCl~1.gif|playClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\playClick.gif" SelfReg="false" NextFile="playHover.gif_3"/>
+    <ROW File="playClick.gif_4" Component_="Arrow_Left.png_4" FileName="playCl~1.gif|playClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\playClick.gif" SelfReg="false" NextFile="playHover.gif_4"/>
+    <ROW File="playHover.gif" Component_="Arrow_Left.png" FileName="playHo~1.gif|playHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\playHover.gif" SelfReg="false" NextFile="playVideo.gif"/>
+    <ROW File="playHover.gif_1" Component_="Arrow_Left.png_1" FileName="playHo~1.gif|playHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\playHover.gif" SelfReg="false" NextFile="playVideo.gif_1"/>
+    <ROW File="playHover.gif_2" Component_="Arrow_Left.png_2" FileName="playHo~1.gif|playHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\playHover.gif" SelfReg="false" NextFile="playVideo.gif_2"/>
+    <ROW File="playHover.gif_3" Component_="Arrow_Left.png_3" FileName="playHo~1.gif|playHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\playHover.gif" SelfReg="false" NextFile="playVideo.gif_3"/>
+    <ROW File="playHover.gif_4" Component_="Arrow_Left.png_4" FileName="playHo~1.gif|playHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\playHover.gif" SelfReg="false" NextFile="playVideo.gif_4"/>
+    <ROW File="playVideo.gif" Component_="Arrow_Left.png" FileName="playVi~1.gif|playVideo.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\playVideo.gif" SelfReg="false" NextFile="playVideoClick.gif"/>
+    <ROW File="playVideo.gif_1" Component_="Arrow_Left.png_1" FileName="playVi~1.gif|playVideo.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\playVideo.gif" SelfReg="false" NextFile="playVideoClick.gif_1"/>
+    <ROW File="playVideo.gif_2" Component_="Arrow_Left.png_2" FileName="playVi~1.gif|playVideo.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\playVideo.gif" SelfReg="false" NextFile="playVideoClick.gif_2"/>
+    <ROW File="playVideo.gif_3" Component_="Arrow_Left.png_3" FileName="playVi~1.gif|playVideo.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\playVideo.gif" SelfReg="false" NextFile="playVideoClick.gif_3"/>
+    <ROW File="playVideo.gif_4" Component_="Arrow_Left.png_4" FileName="playVi~1.gif|playVideo.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\playVideo.gif" SelfReg="false" NextFile="playVideoClick.gif_4"/>
+    <ROW File="playVideoClick.gif" Component_="Arrow_Left.png" FileName="playVi~2.gif|playVideoClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\playVideoClick.gif" SelfReg="false" NextFile="playVideoHover.gif"/>
+    <ROW File="playVideoClick.gif_1" Component_="Arrow_Left.png_1" FileName="playVi~2.gif|playVideoClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\playVideoClick.gif" SelfReg="false" NextFile="playVideoHover.gif_1"/>
+    <ROW File="playVideoClick.gif_2" Component_="Arrow_Left.png_2" FileName="playVi~2.gif|playVideoClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\playVideoClick.gif" SelfReg="false" NextFile="playVideoHover.gif_2"/>
+    <ROW File="playVideoClick.gif_3" Component_="Arrow_Left.png_3" FileName="playVi~2.gif|playVideoClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\playVideoClick.gif" SelfReg="false" NextFile="playVideoHover.gif_3"/>
+    <ROW File="playVideoClick.gif_4" Component_="Arrow_Left.png_4" FileName="playVi~2.gif|playVideoClick.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\playVideoClick.gif" SelfReg="false" NextFile="playVideoHover.gif_4"/>
+    <ROW File="playVideoHover.gif" Component_="Arrow_Left.png" FileName="playVi~3.gif|playVideoHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\playVideoHover.gif" SelfReg="false" NextFile="stack.png"/>
+    <ROW File="playVideoHover.gif_1" Component_="Arrow_Left.png_1" FileName="playVi~3.gif|playVideoHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\playVideoHover.gif" SelfReg="false" NextFile="Stack.png_1"/>
+    <ROW File="playVideoHover.gif_2" Component_="Arrow_Left.png_2" FileName="playVi~3.gif|playVideoHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\playVideoHover.gif" SelfReg="false" NextFile="Stack.png_2"/>
+    <ROW File="playVideoHover.gif_3" Component_="Arrow_Left.png_3" FileName="playVi~3.gif|playVideoHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\playVideoHover.gif" SelfReg="false" NextFile="Stack.png_3"/>
+    <ROW File="playVideoHover.gif_4" Component_="Arrow_Left.png_4" FileName="playVi~3.gif|playVideoHover.gif" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\playVideoHover.gif" SelfReg="false" NextFile="stack.png_4"/>
+    <ROW File="question.xsl" Component_="Arrow_Left.png" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\question.xsl" SelfReg="false" NextFile="style.xsl"/>
+    <ROW File="question.xsl_1" Component_="Arrow_Left.png_1" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\question.xsl" SelfReg="false" NextFile="style.xsl_1"/>
+    <ROW File="question.xsl_2" Component_="Arrow_Left.png_2" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\question.xsl" SelfReg="false" NextFile="style.xsl_2"/>
+    <ROW File="question.xsl_3" Component_="Arrow_Left.png_3" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\question.xsl" SelfReg="false" NextFile="style.xsl_3"/>
+    <ROW File="question.xsl_4" Component_="Arrow_Left.png_4" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\question.xsl" SelfReg="false" NextFile="style.xsl_4"/>
+    <ROW File="question.xsl_5" Component_="animatedFeedback.xsl" FileName="question.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\question.xsl" SelfReg="false" NextFile="questionLogic.xsl"/>
+    <ROW File="questionLogic.xsl" Component_="animatedFeedback.xsl" FileName="questi~1.xsl|questionLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\questionLogic.xsl" SelfReg="false" NextFile="scripts.xsl"/>
+    <ROW File="scripts.xsl" Component_="animatedFeedback.xsl" FileName="scripts.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\scripts.xsl" SelfReg="false" NextFile="sentencemodeLogic.xsl"/>
+    <ROW File="sentencemodeLogic.xsl" Component_="animatedFeedback.xsl" FileName="senten~1.xsl|sentencemodeLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\sentencemodeLogic.xsl" SelfReg="false" NextFile="style.xsl_5"/>
+    <ROW File="stack.png" Component_="Arrow_Left.png" FileName="stack.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\stack.png" SelfReg="false" NextFile="BumbleBee.style"/>
+    <ROW File="stack.png_4" Component_="Arrow_Left.png_4" FileName="stack.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\stack.png" SelfReg="false" NextFile="ThumbDown.png_3"/>
+    <ROW File="start.mp3" Component_="start.mp3" FileName="start.mp3" Attributes="1" SourcePath="..\MemoryLifter\Media\Audio\start.mp3" SelfReg="false" NextFile="stop.mp3"/>
+    <ROW File="stop.mp3" Component_="start.mp3" FileName="stop.mp3" Attributes="1" SourcePath="..\MemoryLifter\Media\Audio\stop.mp3" SelfReg="false" NextFile="AxInterop.WMPLib.dll_1"/>
+    <ROW File="style.xsl" Component_="Arrow_Left.png" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\BumbleBee\style.xsl" SelfReg="false" NextFile="answer.xsl_1"/>
+    <ROW File="style.xsl_1" Component_="Arrow_Left.png_1" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Classic\style.xsl" SelfReg="false" NextFile="answer.xsl_2"/>
+    <ROW File="style.xsl_2" Component_="Arrow_Left.png_2" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Default\style.xsl" SelfReg="false" NextFile="answer.xsl_3"/>
+    <ROW File="style.xsl_3" Component_="Arrow_Left.png_3" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\style.xsl" SelfReg="false" NextFile="answer.xsl_4"/>
+    <ROW File="style.xsl_4" Component_="Arrow_Left.png_4" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\Kids\style.xsl" SelfReg="false" NextFile="animatedFeedback.xsl"/>
+    <ROW File="style.xsl_5" Component_="animatedFeedback.xsl" FileName="style.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\style.xsl" SelfReg="false" NextFile="versionTransform10_11.xsl"/>
+    <ROW File="synapsen_portrait.png" Component_="Arrow_Left.png_3" FileName="synaps~1.png|synapsen_portrait.png" Attributes="1" SourcePath="..\MemoryLifter\Designs\iLifter\synapsen_portrait.png" SelfReg="false" NextFile="ThumbDown.png_2"/>
+    <ROW File="vcut.exe" Component_="vcut.exe" FileName="vcut.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vcut.exe" SelfReg="false" NextFile="vorbiscomment.exe"/>
+    <ROW File="vcut.exe_1" Component_="vcut.exe_1" FileName="vcut.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vcut.exe" SelfReg="false" NextFile="vorbiscomment.exe_1"/>
+    <ROW File="vcut.exe_2" Component_="vcut.exe_2" FileName="vcut.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vcut.exe" SelfReg="false" NextFile="vorbiscomment.exe_2"/>
+    <ROW File="versionTransform10_11.xsl" Component_="versionTransform10_11.xsl" FileName="versio~1.xsl|versionTransform10_11.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\Transformer\versionTransform10_11.xsl" SelfReg="false" NextFile="wordmodeLogic.xsl"/>
+    <ROW File="vorbiscomment.exe" Component_="vorbiscomment.exe" FileName="vorbis~1.exe|vorbiscomment.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vorbiscomment.exe" SelfReg="false" NextFile="libFLAC_dynamic.dll_1"/>
+    <ROW File="vorbiscomment.exe_1" Component_="vorbiscomment.exe_1" FileName="vorbis~1.exe|vorbiscomment.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vorbiscomment.exe" SelfReg="false" NextFile="about.txt_2"/>
+    <ROW File="vorbiscomment.exe_2" Component_="vorbiscomment.exe_2" FileName="vorbis~1.exe|vorbiscomment.exe" Attributes="1" SourcePath="..\MLifter.AudioTools\Codecs\VorbisTools\vorbiscomment.exe" SelfReg="false"/>
+    <ROW File="withoutMedia.xsl" Component_="default.xsl_2" FileName="withou~1.xsl|withoutMedia.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\Print\withoutMedia.xsl" SelfReg="false" NextFile="question.xsl_5"/>
+    <ROW File="wordmodeLogic.xsl" Component_="animatedFeedback.xsl" FileName="wordmo~1.xsl|wordmodeLogic.xsl" Attributes="1" SourcePath="..\MemoryLifter\Designs\System\wordmodeLogic.xsl" SelfReg="false" NextFile="default.mlcfg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="Build_1" BuildName="Release" BuildOrder="1" BuildType="1" PackageFolder="." PackageFileName="MemoryLifter-Setup" Languages="en;de;pt;fr;es" LangOpt="1" InstallationType="2" CabsLocation="1" UseLzma="true" LzmaCompressionLevel="4" PackageType="1" FilesInsideExe="true" ExeIconPath="..\MemoryLifter\Resources\Icons\ML.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install" ExtUI="true" Options="4" Unicode="true" ExeName="MemoryLifter-Setup" MsiPackageType="AI_ALL"/>
+    <ATTRIBUTE name="CurrentBuild" value="Build_1"/>
+    <ATTRIBUTE name="ShareDatabase" value="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_de.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_pt.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_fr.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_es.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FirewallExceptionComponent">
+    <ROW FirewallException="MemoryLifter" DisplayName="MemoryLifter" Enabled="1" Scope="*" Condition="((?MemoryLifter.exe=2) AND ($MemoryLifter.exe=3))" Profiles="0" AppPath="[#MemoryLifter.exe]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\FolderDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\LicenseAgreementDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;azure\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="SetupTypeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\SetupTypeDlg.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;azure\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_FwConfig" Description="Executing Windows Firewall configurations" Template="Configuring Windows Firewall rule: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_FwConfig" TemplateLocId="ActionText.Template.AI_FwConfig"/>
+    <ROW Action="AI_FwInstall" Description="Generating actions to configure Windows Firewall" DescriptionLocId="ActionText.Description.AI_FwInstall"/>
+    <ROW Action="AI_FwRemove" Description="Executing Windows Firewall configurations" Template="Configuring Windows Firewall rule:  &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_FwRemove" TemplateLocId="ActionText.Template.AI_FwRemove"/>
+    <ROW Action="AI_FwRollback" Description="Rolling back Windows Firewall configurations." Template="Rolling back Windows Firewall configurations." DescriptionLocId="ActionText.Description.AI_FwRollback" TemplateLocId="ActionText.Template.AI_FwRollback"/>
+    <ROW Action="AI_FwUninstall" Description="Generating actions to configure Windows Firewall" DescriptionLocId="ActionText.Description.AI_FwUninstall"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="Build_1"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="Build_1"/>
+    <ROW Property="AI_IESEARCH" Signature_="AI_IESearchSgn" Builds="Build_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
+    <ROW Name="NetFirewall.dll" SourcePath="&lt;AI_CUSTACTS&gt;NetFirewall.dll"/>
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="LicenseAgreementDlg" Control="Title" Type="Text" X="55" Y="23" Width="378" Height="21" Attributes="196611" Text="Read the [ProductName] Licence Terms" TextStyle="TitleFont" Order="500" TextLocId="-" MsiKey="LicenseAgreementDlg#Title"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Description" Type="Text" X="55" Y="76" Width="329" Height="42" Attributes="196611" Text="To continue you must read and accept the terms of this agreement. If you do not want to accept the [ProductName] Licence Terms, close this window to cancel the installation." Order="600" TextLocId="-" MsiKey="LicenseAgreementDlg#Description"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="FileScrollableText" X="55" Y="110" Width="372" Height="180" Attributes="3" Property="EulaRead" Text="..\MemoryLifter\Resources\en\license.rtf" Order="800" MsiKey="LicenseAgreementDlg#AgreementText"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="EulaAgreeCheckBox" Type="CheckBox" X="55" Y="300" Width="230" Height="13" Attributes="3" Property="IAgree" Text="I &amp;accept the terms of this agreement." Order="1000" TextLocId="Azure.Control.Text.LicenseAgreementDlg#EulaAgreeCheckBox" MsiKey="LicenseAgreementDlg#EulaAgreeCheckBox"/>
+    <ATTRIBUTE name="FixedSizeBitmaps" value="2"/>
+    <ATTRIBUTE name="MultiBuildFixedSizeBitmaps" value="Build_1:0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlConditionComponent">
+    <ROW Dialog_="LicenseAgreementDlg" Control_="EulaAgreeCheckBox" Action="Enable" Condition="EulaRead OR NOT AIEXTERNALUI" MsiKey="LicenseAgreementDlg#EulaAgreeCheckBox#Enable#EulaRead OR NOT AIEXTERNALUI"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CustomButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="101"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="401"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="204"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="205"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="102"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="3"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CompleteButton" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="_BCF8172A840E45E5B6C63C73A3555684" Component_="MemoryLifter"/>
+    <ROW Directory_="Server_1_Dir" Component_="Server"/>
+    <ROW Directory_="Tools_Dir" Component_="Tools"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_FwConfig" Type="11265" Source="NetFirewall.dll" Target="OnFwConfig" WithoutSeq="true"/>
+    <ROW Action="AI_FwInstall" Type="1" Source="NetFirewall.dll" Target="OnFwInstall"/>
+    <ROW Action="AI_FwRemove" Type="11265" Source="NetFirewall.dll" Target="OnFwRemove" WithoutSeq="true"/>
+    <ROW Action="AI_FwRollback" Type="11521" Source="NetFirewall.dll" Target="OnFwRollback" WithoutSeq="true"/>
+    <ROW Action="AI_FwUninstall" Type="1" Source="NetFirewall.dll" Target="OnFwUninstall"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#MemoryLifter.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
+    <ROW Action="AI_SETPROGRAMFILES" Type="51" Source="AI_ProgramFiles" Target="[ProgramFilesFolder]"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Type="51" Source="AI_ProgramFiles" Target="[ProgramFiles64Folder]"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][ProductName]" MultiBuildTarget="Build_1:[AI_ProgramFiles][ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDrLocatorComponent">
+    <ROW Signature_="AI_IESearchSgn" Path="[SystemFolder]" Depth="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiExtComponent">
+    <ROW Extension="mlcfg" Component_="MemoryLifter.exe" ProgId_="MemoryLifter Configuration File" Feature_="mlcfg" Options="39"/>
+    <ROW Extension="mlm" Component_="MemoryLifter.exe" ProgId_="MemoryLifter Learning Module" Feature_="mlm" Options="39"/>
+    <ROW Extension="odx" Component_="MemoryLifter.exe" ProgId_="MemoryLifter Learning Module" Feature_="odx" Options="39"/>
+    <ROW Extension="odf" Component_="MemoryLifter.exe" ProgId_="MemoryLifter Learning Module" Feature_="odf" Options="39"/>
+    <ROW Extension="dzp" Component_="MemoryLifter.exe" ProgId_="MemoryLifter Learning Module" Feature_="dzp" Options="39"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="ML_1.exe" SourcePath="..\MemoryLifter\Resources\Icons\ML.ico" Index="0"/>
+    <ROW Name="ReadMe.exe" SourcePath="..\MemoryLifter\Resources\Icons\RUL.ico" Index="0"/>
+    <ROW Name="ext.exe" SourcePath="..\MemoryLifter\Resources\Icons\MLCFG.ico" Index="0"/>
+    <ROW Name="help_en.exe" SourcePath="..\MemoryLifter\Resources\Icons\help.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="747"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="748"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="749"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="Build_1"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="Build_1"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="Build_1"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="Build_1"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="Build_1"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="Build_1"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="Build_1"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="51"/>
+    <ROW Action="AI_FwInstall" Condition="(VersionNT &gt;= 501) AND (REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5849"/>
+    <ROW Action="AI_FwUninstall" Condition="(VersionNT &gt;= 501) AND (REMOVE=&quot;ALL&quot;)" Sequence="1698"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="747"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="748"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="749"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR ( NOT VersionNT64 ) OR ( VersionNT64 AND ((VersionNT64 &lt;&gt; 502) OR (((VersionNT64 = 502) AND (ServicePackLevel &gt;= 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 502) OR (((VersionNT64 = 502) AND (ServicePackLevel &lt;&gt; 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 502) OR ((VersionNT64 = 502) AND ((MsiNTProductType = 1) OR (ServicePackLevel &gt;= 1)))) AND ((VersionNT64 &lt;&gt; 502) OR ((VersionNT64 = 502) AND ((MsiNTProductType = 1) OR (ServicePackLevel &lt;&gt; 1)))) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT64Display]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="Build_1"/>
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &gt;= 1))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 1))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 2))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 3))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 4))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 5))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 6))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &gt;= 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 2))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 3))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 4))) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &gt;= 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &lt;&gt; 2))) OR VersionNT64) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="Build_1"/>
+    <ROW Condition="AI_IESEARCH" Description="[ProductName] cannot be installed on systems with Internet Explorer version lower than [AI_MINIEVERCAPTION]" DescriptionLocId="AI.LaunchCondition.IE" IsPredefined="true" Builds="Build_1"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="Build_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiProgIdComponent">
+    <ROW ProgId="MemoryLifter Configuration File" Icon_="ext.exe"/>
+    <ROW ProgId="MemoryLifter Learning Module" Icon_="ML_1.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
+    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#2" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#5" Component_="AI_CustomARPName"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="AdminSuite" Directory_="Server_1_Dir" Name="AdminS~1|Admin Suite" Component_="SecurityAdminSuite.exe" Target="[#SecurityAdminSuite.exe]" Description="The Admin Suite can be used to configure a MemoryLifter Server." Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="AudioBookGenerator" Directory_="Tools_Dir" Name="AudioB~1|Audio Book Generator" Component_="MLifter.AudioBookGenerator.exe" Target="[#MLifter.AudioBookGenerator.exe]" Description="This is to create audio books out of your learning modules." Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Help" Directory_="_BCF8172A840E45E5B6C63C73A3555684" Name="Help" Component_="help_en.chm" Target="[#help_en.chm]" Hotkey="0" Icon_="help_en.exe" IconIndex="0" ShowCmd="1" WkDir="en_Dir"/>
+    <ROW Shortcut="MemoryLifter" Directory_="_BCF8172A840E45E5B6C63C73A3555684" Name="Memory~1|MemoryLifter" Component_="MemoryLifter.exe" Target="[#MemoryLifter.exe]" Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Readme" Directory_="_BCF8172A840E45E5B6C63C73A3555684" Name="Readme" Component_="ReadMe.url" Target="[#ReadMe.url]" Hotkey="0" Icon_="ReadMe.exe" IconIndex="0" ShowCmd="1" WkDir="en_Dir"/>
+    <ROW Shortcut="Readme_1" Directory_="Server_1_Dir" Name="Readme" Component_="ReadMe.html" Target="[#ReadMe.html]" Hotkey="0" Icon_="ReadMe.exe" IconIndex="0" ShowCmd="1" WkDir="Server_Dir"/>
+    <ROW Shortcut="Recorder" Directory_="Tools_Dir" Name="Recorder" Component_="MLifter.Recorder.exe" Target="[#MLifter.Recorder.exe]" Description="This is to record sounds for your learning modules in a fast and easy way." Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="SettingsManager" Directory_="Tools_Dir" Name="Settin~1|Settings Manager" Component_="MLifter.SettingsManager.exe" Target="[#MLifter.SettingsManager.exe]" Description="This is to set individual settings to cards/chapters." Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Unbind" Directory_="Tools_Dir" Name="Unbind" Component_="MLifter.Unbind.exe" Target="[#MLifter.Unbind.exe]" Description="This is to remove the user &lt;-&gt; learning success binding to continoue learning a module with a different user." Hotkey="0" Icon_="ML_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiSignatureComponent">
+    <ROW Signature="AI_IESearchSgn" FileName="wininet.dll" MinVersion="[|AI_MINIEVERSION]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="azure"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiVerbComponent">
+    <ROW Extension_="mlcfg" Component_="MemoryLifter.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mlm" Component_="MemoryLifter.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="odx" Component_="MemoryLifter.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="odf" Component_="MemoryLifter.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="dzp" Component_="MemoryLifter.exe" Verb="open" Sequence="0" Command="&amp;Open" Argument="&quot;%1&quot;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="A9B48_8408_472C_8975_B606D4D61EE1" DisplayName="SQL Server Compact 3.5 SP2 x86" VersionMin="3.5" SetupFileUrl="http://services.memorylifter.com/update/program/SSCERuntime_x86-ENU.msi" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1" Operator="1" ComLine="/passive" BasicUiComLine="/passive" NoUiComLine="/quiet" Options="m"/>
+    <ROW PrereqKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" DisplayName=".NET Framework 4.0" VersionMin="4.0" SetupFileUrl="http://download.microsoft.com/download/1/B/E/1BE39E79-7E39-46A3-96FF-047F95396215/dotNetFx40_Full_setup.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" Operator="1" ComLine="/passive /showfinalerror /promptrestart" BasicUiComLine="/passive /showfinalerror" NoUiComLine="/q" Options="m"/>
+    <ROW PrereqKey="SQLServerCompact3" DisplayName="SQL Server Compact 3.5 SP2 x64" VersionMin="3.5" SetupFileUrl="http://services.memorylifter.com/update/program/SSCERuntime_x64-ENU.msi" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT/2k/XP/Vista/Windows7 x86" Operator="1" ComLine="/passive" BasicUiComLine="/passive" NoUiComLine="/quiet" Options="m"/>
+    <ATTRIBUTE name="PrereqsOrder" value="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD A9B48_8408_472C_8975_B606D4D61EE1 SQLServerCompact3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="A9B48_8408_472C_8975_B606D4D61EE1_SQL_COMPACT_35_SP1_SEARCH" Prereq="A9B48_8408_472C_8975_B606D4D61EE1" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v3.5\ENU\DesktopRuntimeServicePackLevel" RefContent="G0" Order="1" Property="AI_SQL_COMPACT_35_SP1_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD_NET_40_SEARCH" Prereq="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Install" RefContent="M1" Order="1" Property="AI_NET_40_ORIGINAL_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="DesktopRuntimeServicePackLevel" Prereq="SQLServerCompact3" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server Compact Edition\v3.5\ENU\DesktopRuntimeServicePackLevel" RefContent="G0" Order="1" Property="AI_SQL_COMPACT_35_SP1_PREREQSEARCH_PROP_1"/>
+  </COMPONENT>
+</DOCUMENT>
