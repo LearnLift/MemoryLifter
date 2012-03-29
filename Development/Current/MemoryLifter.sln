@@ -28,7 +28,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLifter.Generics", "MLifter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLifter.Stick", "MLifter.Stick\MLifter.Stick.csproj", "{B44E2EC4-D885-4292-A397-AA2B027EDB85}"
 	ProjectSection(ProjectDependencies) = postProject
-		{68C5300E-1CF3-47FB-B29A-33124BCFF587} = {68C5300E-1CF3-47FB-B29A-33124BCFF587}
 		{01BAF746-1EB4-4BC5-86AC-322C2E7996BD} = {01BAF746-1EB4-4BC5-86AC-322C2E7996BD}
 		{B93BBD55-3BB5-48D0-ADF5-4C007D3D52C0} = {B93BBD55-3BB5-48D0-ADF5-4C007D3D52C0}
 	EndProjectSection
@@ -79,8 +78,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLifter", "MemoryLifte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLifter.ModuleService", "MLifter.ModuleService\MLifter.ModuleService.csproj", "{DE1F5169-A1B2-431D-BF5C-25FD3C336A1F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MemoryLifter.Setup", "MemoryLifter.Setup\MemoryLifter.Setup.vdproj", "{68C5300E-1CF3-47FB-B29A-33124BCFF587}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLifter.ErrorService", "MLifter.ErrorService\MLifter.ErrorService.csproj", "{FAA25E97-B978-4BDE-A93D-5DB04670FC63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{B0EF2517-6CDE-47EB-ABC0-E79AE9F120CD}"
@@ -88,6 +85,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stick", "Stick", "{DC972D9D-288A-46E6-A6A3-EBD35BE1FB43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLifter.RegistrationService", "MLifter.RegistrationService\MLifter.RegistrationService.csproj", "{BA2C05D0-12D2-416B-B60D-229D49ED39AC}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "MemoryLifter.Setup", "MemoryLifter.Setup\MemoryLifter.Setup.aiproj", "{F1C4445E-E349-457D-816D-918DDE227FEC}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -202,17 +201,17 @@ Global
 		SccProjectTopLevelParentUniqueName27 = MemoryLifter.sln
 		SccProjectName27 = MLifter.ModuleService
 		SccLocalPath27 = MLifter.ModuleService
-		SccProjectUniqueName28 = MemoryLifter.Setup\\MemoryLifter.Setup.vdproj
-		SccProjectName28 = MemoryLifter.Setup
-		SccLocalPath28 = MemoryLifter.Setup
-		SccProjectUniqueName29 = MLifter.ErrorService\\MLifter.ErrorService.csproj
+		SccProjectUniqueName28 = MLifter.ErrorService\\MLifter.ErrorService.csproj
+		SccProjectTopLevelParentUniqueName28 = MemoryLifter.sln
+		SccProjectName28 = MLifter.ErrorService
+		SccLocalPath28 = MLifter.ErrorService
+		SccProjectUniqueName29 = MLifter.RegistrationService\\MLifter.RegistrationService.csproj
 		SccProjectTopLevelParentUniqueName29 = MemoryLifter.sln
-		SccProjectName29 = MLifter.ErrorService
-		SccLocalPath29 = MLifter.ErrorService
-		SccProjectUniqueName30 = MLifter.RegistrationService\\MLifter.RegistrationService.csproj
-		SccProjectTopLevelParentUniqueName30 = MemoryLifter.sln
-		SccProjectName30 = MLifter.RegistrationService
-		SccLocalPath30 = MLifter.RegistrationService
+		SccProjectName29 = MLifter.RegistrationService
+		SccLocalPath29 = MLifter.RegistrationService
+		SccProjectUniqueName30 = MemoryLifter.Setup\\MemoryLifter.Setup.aiproj
+		SccProjectName30 = MemoryLifter.Setup
+		SccLocalPath30 = MemoryLifter.Setup
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MemoryLifter.vsmdi
@@ -328,9 +327,6 @@ Global
 		{DE1F5169-A1B2-431D-BF5C-25FD3C336A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE1F5169-A1B2-431D-BF5C-25FD3C336A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE1F5169-A1B2-431D-BF5C-25FD3C336A1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Debug|Any CPU.ActiveCfg = Debug
-		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Any CPU.ActiveCfg = Release
-		{68C5300E-1CF3-47FB-B29A-33124BCFF587}.Release|Any CPU.Build.0 = Release
 		{FAA25E97-B978-4BDE-A93D-5DB04670FC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FAA25E97-B978-4BDE-A93D-5DB04670FC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAA25E97-B978-4BDE-A93D-5DB04670FC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -339,6 +335,9 @@ Global
 		{BA2C05D0-12D2-416B-B60D-229D49ED39AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA2C05D0-12D2-416B-B60D-229D49ED39AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA2C05D0-12D2-416B-B60D-229D49ED39AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C4445E-E349-457D-816D-918DDE227FEC}.Debug|Any CPU.ActiveCfg = Release|x86
+		{F1C4445E-E349-457D-816D-918DDE227FEC}.Release|Any CPU.ActiveCfg = Release|x86
+		{F1C4445E-E349-457D-816D-918DDE227FEC}.Release|Any CPU.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
