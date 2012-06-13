@@ -97,7 +97,7 @@ namespace MLifter.AudioTools
 			{
 				if (playThread == null)
 					return false;
-				return playThread.ThreadState == System.Threading.ThreadState.Running || playThread.ThreadState == System.Threading.ThreadState.Background;
+				return playThread.isAlive || playThread.isBackground;
 			}
 		}
 
