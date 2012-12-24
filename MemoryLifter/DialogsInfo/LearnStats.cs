@@ -107,6 +107,7 @@ namespace MLifter
                 timerCountdown.Enabled = true;
                 timerCountdown.Start();
             }
+            this.StartPosition = FormStartPosition.CenterParent;
             this.ShowDialog();
         }
 
