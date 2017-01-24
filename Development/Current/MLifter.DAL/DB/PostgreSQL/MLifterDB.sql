@@ -1,7 +1,7 @@
 ﻿-- to ensure to get a clean database to first manualy delete and recreate the "memorylifter" database:
 -- DROP DATABASE IF EXISTS memorylifter;
 -- CREATE DATABASE memorylifter;
- 
+
 -- should clean the whole database
 DROP SCHEMA IF EXISTS public CASCADE;
 CREATE SCHEMA public;
@@ -20,27 +20,27 @@ $$ LANGUAGE 'plpgsql';
 -- function to create a new setting
 CREATE OR REPLACE FUNCTION "CreateNewSetting"()
   RETURNS integer AS $$
-  
+
 	DECLARE
 		result INTEGER;
-	
+
 	BEGIN
-		
+
 		INSERT INTO "SnoozeOptions"
 			(cards_enabled,rights_enabled,time_enabled)
 			VALUES
 			(null,null,null);
-			
+
 		INSERT INTO "MultipleChoiceOptions"
 			(allow_multiple_correct_answers, allow_random_distractors, max_correct_answers, number_of_choices)
 			VALUES
 			(null, null, null, null);
-			
+
 		INSERT INTO "QueryTypes"
 			(image_recognition, listening_comprehension, multiple_choice, sentence, word)
 			VALUES
 			(null,null,null,null,null);
-			
+
 		INSERT INTO "TypeGradings"
 			(all_correct, half_correct, none_correct, prompt)
 			VALUES
@@ -50,31 +50,31 @@ CREATE OR REPLACE FUNCTION "CreateNewSetting"()
 			(all_known, half_known, one_known, first_known, prompt)
 			VALUES
 			(null,null,null,null,null);
-			
+
 		INSERT INTO "QueryDirections"
 			(question2answer, answer2question, mixed)
 			VALUES
 			(null,null,null);
-			
+
 		INSERT INTO "CardStyles"
 			(id)
 			VALUES
 			(DEFAULT);
-			
+
 		INSERT INTO "Boxes"
 			(box1_size, box2_size, box3_size, box4_size, box5_size, box6_size, box7_size, box8_size, box9_size)
 			VALUES
 			(null, null, null, null, null, null, null, null, null);
 
 		INSERT INTO "Settings"
-			(snooze_options, query_types, query_directions, multiple_choice_options, synonym_gradings, type_gradings, cardstyle, boxes, autoplay_audio, case_sensitive, confirm_demote, 
-			enable_commentary, correct_on_the_fly, enable_timer, random_pool, self_assessment, show_images, stripchars, auto_boxsize, pool_empty_message_shown, 
+			(snooze_options, query_types, query_directions, multiple_choice_options, synonym_gradings, type_gradings, cardstyle, boxes, autoplay_audio, case_sensitive, confirm_demote,
+			enable_commentary, correct_on_the_fly, enable_timer, random_pool, self_assessment, show_images, stripchars, auto_boxsize, pool_empty_message_shown,
 			show_statistics, skip_correct_answers, use_lm_stylesheets, question_culture, answer_culture)
 			VALUES
 			(
-				currval('"SnoozeOptions_id_seq"'), 
-				currval('"QueryTypes_id_seq"'), 
-				currval('"QueryDirections_id_seq"'), 
+				currval('"SnoozeOptions_id_seq"'),
+				currval('"QueryTypes_id_seq"'),
+				currval('"QueryDirections_id_seq"'),
 				currval('"MultipleChoiceOptions_id_seq"'),
 				currval('"SynonymGradings_id_seq"'),
 				currval('"TypeGradings_id_seq"'),
@@ -84,7 +84,7 @@ CREATE OR REPLACE FUNCTION "CreateNewSetting"()
 				null, null, null, null, null, null, null, null, null,
 				null, null, null, 'en', 'en'
 			);
-			
+
 		SELECT INTO result CAST(currval('"Settings_id_seq"') AS integer);
 
 		RETURN result;
@@ -99,17 +99,17 @@ CREATE TABLE "DatabaseInformation" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "DatabaseInformation_tombstone";
 CREATE TABLE "DatabaseInformation_tombstone" (
 	property varchar(100) PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "DatabaseInformation_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "DatabaseInformation_tombstone" (property, create_timestamp, update_originator_id) 
+	INSERT INTO "DatabaseInformation_tombstone" (property, create_timestamp, update_originator_id)
 		VALUES (OLD.property, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -134,17 +134,17 @@ CREATE TABLE "SynonymGradings" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-    
+
 DROP TABLE IF EXISTS "SynonymGradings_tombstone";
 CREATE TABLE "SynonymGradings_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "SynonymGradings_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "SynonymGradings_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "SynonymGradings_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -164,17 +164,17 @@ CREATE TABLE "TypeGradings" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "TypeGradings_tombstone";
 CREATE TABLE "TypeGradings_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "TypeGradings_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "TypeGradings_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "TypeGradings_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -194,17 +194,17 @@ CREATE TABLE "MultipleChoiceOptions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "MultipleChoiceOptions_tombstone";
 CREATE TABLE "MultipleChoiceOptions_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "MultipleChoiceOptions_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "MultipleChoiceOptions_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "MultipleChoiceOptions_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -223,17 +223,17 @@ CREATE TABLE "QueryDirections" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "QueryDirections_tombstone";
 CREATE TABLE "QueryDirections_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "QueryDirections_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "QueryDirections_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "QueryDirections_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -254,17 +254,17 @@ CREATE TABLE "QueryTypes" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "QueryTypes_tombstone";
 CREATE TABLE "QueryTypes_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "QueryTypes_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "QueryTypes_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "QueryTypes_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -281,17 +281,17 @@ CREATE TABLE "StyleSheets" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "StyleSheets_tombstone";
 CREATE TABLE "StyleSheets_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "StyleSheets_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "StyleSheets_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "StyleSheets_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -319,17 +319,17 @@ CREATE TABLE "SnoozeOptions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "SnoozeOptions_tombstone";
 CREATE TABLE "SnoozeOptions_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "SnoozeOptions_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "SnoozeOptions_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "SnoozeOptions_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -337,7 +337,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "SnoozeOptions_update_trigger" BEFORE UPDATE ON "SnoozeOptions" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "SnoozeOptions_delete_trigger" BEFORE DELETE ON "SnoozeOptions" FOR EACH ROW EXECUTE PROCEDURE "SnoozeOptions_delete_trigger"();
-	
+
 -- table CardStyles
 DROP TABLE IF EXISTS "CardStyles" CASCADE;
 CREATE TABLE "CardStyles" (
@@ -346,17 +346,17 @@ CREATE TABLE "CardStyles" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "CardStyles_tombstone";
 CREATE TABLE "CardStyles_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "CardStyles_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "CardStyles_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "CardStyles_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -376,7 +376,7 @@ CREATE TYPE "mediatype" AS ENUM ('Audio', 'Video', 'Image', 'Unknown');
 CREATE TYPE "commentarytype" AS ENUM ('RightStandAlone', 'WrongStandAlone', 'AlmostStandAlone', 'Right', 'Wrong', 'Almost');
 
 
--- table MediaContent: stores the media objects	
+-- table MediaContent: stores the media objects
 DROP TABLE IF EXISTS "MediaContent" CASCADE;
 CREATE TABLE "MediaContent" (
 	id serial PRIMARY KEY NOT NULL,
@@ -385,7 +385,7 @@ CREATE TABLE "MediaContent" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "MediaContent_tombstone";
 CREATE TABLE "MediaContent_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
@@ -393,10 +393,10 @@ CREATE TABLE "MediaContent_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "MediaContent_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "MediaContent_tombstone" (id, data, create_timestamp, update_originator_id) 
+	INSERT INTO "MediaContent_tombstone" (id, data, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.data, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -430,7 +430,7 @@ CREATE TABLE "MediaContent_CardStyles_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "MediaContent_CardStyles_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -441,7 +441,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE media_id = OLD.media_id AND cardstyles_id = OLD.cardstyles_id;
 	ELSE
-		INSERT INTO "MediaContent_CardStyles_tombstone" (media_id, cardstyles_id, create_timestamp, update_originator_id) 
+		INSERT INTO "MediaContent_CardStyles_tombstone" (media_id, cardstyles_id, create_timestamp, update_originator_id)
 			VALUES (OLD.media_id, OLD.cardstyles_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -469,24 +469,24 @@ CREATE TABLE "Boxes" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Boxes_tombstone";
 CREATE TABLE "Boxes_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Boxes_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Boxes_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Boxes_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
 $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "Boxes_update_trigger" BEFORE UPDATE ON "Boxes" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
-CREATE TRIGGER "Boxes_delete_trigger" BEFORE DELETE ON "Boxes" FOR EACH ROW EXECUTE PROCEDURE "Boxes_delete_trigger"();	
+CREATE TRIGGER "Boxes_delete_trigger" BEFORE DELETE ON "Boxes" FOR EACH ROW EXECUTE PROCEDURE "Boxes_delete_trigger"();
 
 -- table Settings
 DROP TABLE IF EXISTS "Settings" CASCADE;
@@ -537,17 +537,17 @@ CREATE TABLE "Settings" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Settings_tombstone";
 CREATE TABLE "Settings_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Settings_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Settings_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Settings_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -565,17 +565,17 @@ CREATE TABLE "Categories" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Categories_tombstone";
 CREATE TABLE "Categories_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Categories_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Categories_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Categories_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -605,17 +605,17 @@ CREATE TABLE "LearningModules" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "LearningModules_tombstone";
 CREATE TABLE "LearningModules_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "LearningModules_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "LearningModules_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "LearningModules_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -638,15 +638,15 @@ CREATE TABLE "Extensions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Extensions_tombstone";
 CREATE TABLE "Extensions_tombstone" (
 	guid char(36) PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
-       
+
+
 CREATE OR REPLACE FUNCTION "Extensions_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -657,7 +657,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE guid = OLD.guid;
 	ELSE
-		INSERT INTO "Extensions_tombstone" (guid, create_timestamp, update_originator_id) 
+		INSERT INTO "Extensions_tombstone" (guid, create_timestamp, update_originator_id)
 			VALUES (OLD.guid, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -666,7 +666,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "Extensions_update_trigger" BEFORE UPDATE ON "Extensions" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "Extensions_delete_trigger" BEFORE DELETE ON "Extensions" FOR EACH ROW EXECUTE PROCEDURE "Extensions_delete_trigger"();
-	
+
 -- table ExtensionActions
 DROP TABLE IF EXISTS "ExtensionActions";
 CREATE TABLE "ExtensionActions" (
@@ -678,7 +678,7 @@ CREATE TABLE "ExtensionActions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "ExtensionActions_tombstone";
 CREATE TABLE "ExtensionActions_tombstone" (
 	guid char(36) NOT NULL,
@@ -687,7 +687,7 @@ CREATE TABLE "ExtensionActions_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "ExtensionActions_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -698,7 +698,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE guid = OLD.guid AND action = OLD.action;
 	ELSE
-		INSERT INTO "ExtensionActions_tombstone" (guid, action, create_timestamp, update_originator_id) 
+		INSERT INTO "ExtensionActions_tombstone" (guid, action, create_timestamp, update_originator_id)
 			VALUES (OLD.guid, OLD.action, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -722,24 +722,24 @@ CREATE TABLE "Chapters" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-    
+
 CREATE OR REPLACE FUNCTION "Chapters_insert_trigger"() RETURNS trigger AS $$
 BEGIN
 	NEW.settings_id := "CreateNewSetting"();
 	RETURN NEW;
 END;
 $$ LANGUAGE 'plpgsql';
-	
+
 DROP TABLE IF EXISTS "Chapters_tombstone";
 CREATE TABLE "Chapters_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Chapters_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Chapters_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Chapters_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -760,24 +760,24 @@ CREATE TABLE "Cards" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-    
+
 CREATE OR REPLACE FUNCTION "Cards_insert_trigger"() RETURNS trigger AS $$
 BEGIN
 	NEW.settings_id := "CreateNewSetting"();
 	RETURN NEW;
 END;
 $$ LANGUAGE 'plpgsql';
-	
+
 DROP TABLE IF EXISTS "Cards_tombstone";
 CREATE TABLE "Cards_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Cards_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Cards_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Cards_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -787,7 +787,7 @@ CREATE TRIGGER "Cards_insert_trigger" BEFORE INSERT ON "Cards" FOR EACH ROW EXEC
 CREATE TRIGGER "Cards_update_trigger" BEFORE UPDATE ON "Cards" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "Cards_delete_trigger" BEFORE DELETE ON "Cards" FOR EACH ROW EXECUTE PROCEDURE "Cards_delete_trigger"();
 
--- table TextContent: stores the text content of the cards (words, sentences, distractors)	
+-- table TextContent: stores the text content of the cards (words, sentences, distractors)
 DROP TABLE IF EXISTS "TextContent" CASCADE;
 CREATE TABLE "TextContent" (
 	id serial PRIMARY KEY NOT NULL,
@@ -801,17 +801,17 @@ CREATE TABLE "TextContent" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "TextContent_tombstone";
 CREATE TABLE "TextContent_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "TextContent_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "TextContent_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "TextContent_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -819,7 +819,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "TextContent_update_trigger" BEFORE UPDATE ON "TextContent" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "TextContent_delete_trigger" BEFORE DELETE ON "TextContent" FOR EACH ROW EXECUTE PROCEDURE "TextContent_delete_trigger"();
-	
+
 -- table MediaProperties: stores the text properties for media objects (e.g. mime-type, width, height, size, lenght, etc.)
 DROP TABLE IF EXISTS "MediaProperties" CASCADE;
 CREATE TABLE "MediaProperties" (
@@ -831,7 +831,7 @@ CREATE TABLE "MediaProperties" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "MediaProperties_tombstone";
 CREATE TABLE "MediaProperties_tombstone" (
 	media_id integer NOT NULL,
@@ -840,7 +840,7 @@ CREATE TABLE "MediaProperties_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "MediaProperties_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -851,7 +851,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE media_id = OLD.media_id AND property = OLD.property;
 	ELSE
-		INSERT INTO "MediaProperties_tombstone" (media_id, property, create_timestamp, update_originator_id) 
+		INSERT INTO "MediaProperties_tombstone" (media_id, property, create_timestamp, update_originator_id)
 			VALUES (OLD.media_id, OLD.property, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -860,7 +860,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "MediaProperties_update_trigger" BEFORE UPDATE ON "MediaProperties" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "MediaProperties_delete_trigger" BEFORE DELETE ON "MediaProperties" FOR EACH ROW EXECUTE PROCEDURE "MediaProperties_delete_trigger"();
-	
+
 -- table Cards_MediaContent: junction table to connect media with cards
 DROP TABLE IF EXISTS "Cards_MediaContent" CASCADE;
 CREATE TABLE "Cards_MediaContent" (
@@ -875,7 +875,7 @@ CREATE TABLE "Cards_MediaContent" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Cards_MediaContent_tombstone";
 CREATE TABLE "Cards_MediaContent_tombstone" (
 	media_id integer NOT NULL,
@@ -886,7 +886,7 @@ CREATE TABLE "Cards_MediaContent_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Cards_MediaContent_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -898,7 +898,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE media_id = OLD.media_id AND cards_id = OLD.cards_id AND side = OLD.side AND type = OLD.type;
 	ELSE
-		INSERT INTO "Cards_MediaContent_tombstone" (media_id, cards_id, side, type, create_timestamp, update_originator_id) 
+		INSERT INTO "Cards_MediaContent_tombstone" (media_id, cards_id, side, type, create_timestamp, update_originator_id)
 			VALUES (OLD.media_id, OLD.cards_id, OLD.side, OLD.type, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -921,7 +921,7 @@ CREATE TABLE "CommentarySounds" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "CommentarySounds_tombstone";
 CREATE TABLE "CommentarySounds_tombstone" (
 	media_id integer NOT NULL,
@@ -932,7 +932,7 @@ CREATE TABLE "CommentarySounds_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "CommentarySounds_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -943,7 +943,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE media_id = OLD.media_id AND settings_id = OLD.settings_id;
 	ELSE
-		INSERT INTO "CommentarySounds_tombstone" (media_id, settings_id, side, type, create_timestamp, update_originator_id) 
+		INSERT INTO "CommentarySounds_tombstone" (media_id, settings_id, side, type, create_timestamp, update_originator_id)
 			VALUES (OLD.media_id, OLD.settings_id, OLD.side, OLD.type, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -952,7 +952,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "CommentarySounds_update_trigger" BEFORE UPDATE ON "CommentarySounds" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "CommentarySounds_delete_trigger" BEFORE DELETE ON "CommentarySounds" FOR EACH ROW EXECUTE PROCEDURE "CommentarySounds_delete_trigger"();
-	
+
 -- table Chapters_Cards: junction table to connect chapters with cards
 DROP TABLE IF EXISTS "Chapters_Cards" CASCADE;
 CREATE TABLE "Chapters_Cards" (
@@ -964,7 +964,7 @@ CREATE TABLE "Chapters_Cards" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Chapters_Cards_tombstone";
 CREATE TABLE "Chapters_Cards_tombstone" (
 	chapters_id integer NOT NULL,
@@ -973,7 +973,7 @@ CREATE TABLE "Chapters_Cards_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Chapters_Cards_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -984,7 +984,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE chapters_id = OLD.chapters_id AND cards_id = OLD.cards_id;
 	ELSE
-		INSERT INTO "Chapters_Cards_tombstone" (chapters_id, cards_id, create_timestamp, update_originator_id) 
+		INSERT INTO "Chapters_Cards_tombstone" (chapters_id, cards_id, create_timestamp, update_originator_id)
 			VALUES (OLD.chapters_id, OLD.cards_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -993,7 +993,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "Chapters_Cards_update_trigger" BEFORE UPDATE ON "Chapters_Cards" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "Chapters_Cards_delete_trigger" BEFORE DELETE ON "Chapters_Cards" FOR EACH ROW EXECUTE PROCEDURE "Chapters_Cards_delete_trigger"();
-	
+
 -- table SelectedLearnChapters: junction table to connect chapters with settings (=learning chapters/querychapters)
 DROP TABLE IF EXISTS "SelectedLearnChapters" CASCADE;
 CREATE TABLE "SelectedLearnChapters" (
@@ -1005,7 +1005,7 @@ CREATE TABLE "SelectedLearnChapters" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "SelectedLearnChapters_tombstone";
 CREATE TABLE "SelectedLearnChapters_tombstone" (
 	chapters_id integer NOT NULL,
@@ -1014,7 +1014,7 @@ CREATE TABLE "SelectedLearnChapters_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "SelectedLearnChapters_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1025,7 +1025,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE chapters_id = OLD.chapters_id AND settings_id = OLD.settings_id;
 	ELSE
-		INSERT INTO "SelectedLearnChapters_tombstone" (chapters_id, settings_id, create_timestamp, update_originator_id) 
+		INSERT INTO "SelectedLearnChapters_tombstone" (chapters_id, settings_id, create_timestamp, update_originator_id)
 			VALUES (OLD.chapters_id, OLD.settings_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1046,7 +1046,7 @@ CREATE TABLE "LearningModules_Cards" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "LearningModules_Cards_tombstone";
 CREATE TABLE "LearningModules_Cards_tombstone" (
 	lm_id integer NOT NULL,
@@ -1055,7 +1055,7 @@ CREATE TABLE "LearningModules_Cards_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "LearningModules_Cards_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1066,7 +1066,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE lm_id = OLD.lm_id AND cards_id = OLD.cards_id;
 	ELSE
-		INSERT INTO "LearningModules_Cards_tombstone" (lm_id, cards_id, create_timestamp, update_originator_id) 
+		INSERT INTO "LearningModules_Cards_tombstone" (lm_id, cards_id, create_timestamp, update_originator_id)
 			VALUES (OLD.lm_id, OLD.cards_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1084,17 +1084,17 @@ CREATE TABLE "Tags" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "Tags_tombstone";
 CREATE TABLE "Tags_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Tags_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Tags_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Tags_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1114,7 +1114,7 @@ CREATE TABLE "LearningModules_Tags" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "LearningModules_Tags_tombstone";
 CREATE TABLE "LearningModules_Tags_tombstone" (
 	lm_id integer NOT NULL,
@@ -1123,7 +1123,7 @@ CREATE TABLE "LearningModules_Tags_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "LearningModules_Tags_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1134,7 +1134,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE lm_id = OLD.lm_id AND tags_id = OLD.tags_id;
 	ELSE
-		INSERT INTO "LearningModules_Tags_tombstone" (lm_id, tags_id, create_timestamp, update_originator_id) 
+		INSERT INTO "LearningModules_Tags_tombstone" (lm_id, tags_id, create_timestamp, update_originator_id)
 			VALUES (OLD.lm_id, OLD.tags_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1155,7 +1155,7 @@ CREATE TABLE "MediaContent_Tags" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "MediaContent_Tags_tombstone";
 CREATE TABLE "MediaContent_Tags_tombstone" (
 	media_id integer NOT NULL,
@@ -1164,7 +1164,7 @@ CREATE TABLE "MediaContent_Tags_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "MediaContent_Tags_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1175,7 +1175,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE media_id = OLD.media_id AND tags_id = OLD.tags_id;
 	ELSE
-		INSERT INTO "MediaContent_Tags_tombstone" (media_id, tags_id, create_timestamp, update_originator_id) 
+		INSERT INTO "MediaContent_Tags_tombstone" (media_id, tags_id, create_timestamp, update_originator_id)
 			VALUES (OLD.media_id, OLD.tags_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1184,7 +1184,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "MediaContent_Tags_update_trigger" BEFORE UPDATE ON "MediaContent_Tags" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "MediaContent_Tags_delete_trigger" BEFORE DELETE ON "MediaContent_Tags" FOR EACH ROW EXECUTE PROCEDURE "MediaContent_Tags_delete_trigger"();
-	
+
 DROP TYPE IF EXISTS "usertype" CASCADE;
 CREATE TYPE "usertype" AS ENUM ('ListAuthentication', 'FormsAuthentication', 'LocalDirectoryAuthentication');
 
@@ -1200,17 +1200,17 @@ CREATE TABLE "UserProfiles" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "UserProfiles_tombstone";
 CREATE TABLE "UserProfiles_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserProfiles_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "UserProfiles_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "UserProfiles_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1236,10 +1236,10 @@ CREATE TABLE "UserGroups_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserGroups_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "UserGroups_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "UserGroups_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1274,7 +1274,7 @@ CREATE TABLE "UserProfiles_UserGroups_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserProfiles_UserGroups_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1285,7 +1285,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE users_id = OLD.users_id AND groups_id = OLD.groups_id;
 	ELSE
-		INSERT INTO "UserProfiles_UserGroups_tombstone" (users_id, groups_id, create_timestamp, update_originator_id) 
+		INSERT INTO "UserProfiles_UserGroups_tombstone" (users_id, groups_id, create_timestamp, update_originator_id)
 			VALUES (OLD.users_id, OLD.groups_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1312,10 +1312,10 @@ CREATE TABLE "TypeDefinitions_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "TypeDefinitions_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "TypeDefinitions_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "TypeDefinitions_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1345,10 +1345,10 @@ CREATE TABLE "Permissions_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "Permissions_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "Permissions_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "Permissions_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1374,10 +1374,10 @@ CREATE TABLE "ObjectList_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "ObjectList_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "ObjectList_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "ObjectList_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1410,10 +1410,10 @@ CREATE TABLE "AccessControlList_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "AccessControlList_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "AccessControlList_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "AccessControlList_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1447,7 +1447,7 @@ CREATE TABLE "UserProfiles_AccessControlList_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserProfiles_AccessControlList_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1458,7 +1458,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE user_id = OLD.users_id AND acl_id = OLD.acl_id;
 	ELSE
-		INSERT INTO "UserProfiles_AccessControlList_tombstone" (users_id, acl_id, create_timestamp, update_originator_id) 
+		INSERT INTO "UserProfiles_AccessControlList_tombstone" (users_id, acl_id, create_timestamp, update_originator_id)
 			VALUES (OLD.users_id, OLD.acl_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1493,7 +1493,7 @@ CREATE TABLE "UserGroups_AccessControlList_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserGroups_AccessControlList_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1504,7 +1504,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE groups_id = OLD.groups_id AND acl_id = OLD.acl_id;
 	ELSE
-		INSERT INTO "UserGroups_AccessControlList_tombstone" (groups_id, acl_id, create_timestamp, update_originator_id) 
+		INSERT INTO "UserGroups_AccessControlList_tombstone" (groups_id, acl_id, create_timestamp, update_originator_id)
 			VALUES (OLD.groups_id, OLD.acl_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1528,7 +1528,7 @@ CREATE TABLE "UserSessions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "UserSessions_tombstone";
 CREATE TABLE "UserSessions_tombstone" (
 	id serial NOT NULL,
@@ -1537,7 +1537,7 @@ CREATE TABLE "UserSessions_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserSessions_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1548,7 +1548,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE id = OLD.id AND sid = OLD.sid;
 	ELSE
-		INSERT INTO "UserSessions_tombstone" (id, sid, create_timestamp, update_originator_id) 
+		INSERT INTO "UserSessions_tombstone" (id, sid, create_timestamp, update_originator_id)
 			VALUES (OLD.id, OLD.sid, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1566,13 +1566,13 @@ CREATE TABLE "UserProfilesLearningModulesSettings" (
 	settings_id integer NOT NULL,
 	highscore numeric(18,2) DEFAULT 0,
 	PRIMARY KEY (user_id, lm_id),
-	CONSTRAINT user_id_fk FOREIGN KEY (user_id) REFERENCES "UserProfiles"(id) ON DELETE CASCADE,	
+	CONSTRAINT user_id_fk FOREIGN KEY (user_id) REFERENCES "UserProfiles"(id) ON DELETE CASCADE,
 	CONSTRAINT lm_id_fk FOREIGN KEY (lm_id) REFERENCES "LearningModules"(id) ON DELETE CASCADE,
 	CONSTRAINT settings_id_fk FOREIGN KEY (settings_id) REFERENCES "Settings"(id) ON DELETE CASCADE,
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "UserProfilesLearningModulesSettings_tombstone";
 CREATE TABLE "UserProfilesLearningModulesSettings_tombstone" (
 	user_id	integer NOT NULL,
@@ -1581,7 +1581,7 @@ CREATE TABLE "UserProfilesLearningModulesSettings_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserProfilesLearningModulesSettings_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1592,7 +1592,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE lm_id = OLD.lm_id AND user_id = OLD.user_id;
 	ELSE
-		INSERT INTO "UserProfilesLearningModulesSettings_tombstone" (user_id, lm_id, create_timestamp, update_originator_id) 
+		INSERT INTO "UserProfilesLearningModulesSettings_tombstone" (user_id, lm_id, create_timestamp, update_originator_id)
 			VALUES (OLD.user_id, OLD.lm_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1616,7 +1616,7 @@ CREATE TABLE "UserCardState" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "UserCardState_tombstone";
 CREATE TABLE "UserCardState_tombstone" (
 	user_id integer NOT NULL,
@@ -1625,7 +1625,7 @@ CREATE TABLE "UserCardState_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "UserCardState_delete_trigger"() RETURNS trigger AS $$
 	DECLARE
 		c integer;
@@ -1636,7 +1636,7 @@ BEGIN
 			SET update_timestamp = now(), create_timestamp = OLD.create_timestamp, update_originator_id = 0
 			WHERE user_id = OLD.user_id AND cards_id = OLD.cards_id;
 	ELSE
-		INSERT INTO "UserCardState_tombstone" (user_id, cards_id, create_timestamp, update_originator_id) 
+		INSERT INTO "UserCardState_tombstone" (user_id, cards_id, create_timestamp, update_originator_id)
 			VALUES (OLD.user_id, OLD.cards_id, OLD.create_timestamp, 0);
 	END IF;
 	RETURN OLD;
@@ -1673,7 +1673,7 @@ CREATE TABLE "LearningSessions" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "LearningSessions_tombstone";
 CREATE TABLE "LearningSessions_tombstone" (
 	id integer NOT NULL,
@@ -1683,10 +1683,10 @@ CREATE TABLE "LearningSessions_tombstone" (
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "LearningSessions_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "LearningSessions_tombstone" (id, user_id, lm_id, create_timestamp, update_originator_id) 
+	INSERT INTO "LearningSessions_tombstone" (id, user_id, lm_id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.user_id, OLD.lm_id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1694,7 +1694,7 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "LearningSessions_update_trigger" BEFORE UPDATE ON "LearningSessions" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "LearningSessions_delete_trigger" BEFORE DELETE ON "LearningSessions" FOR EACH ROW EXECUTE PROCEDURE "LearningSessions_delete_trigger"();
-	
+
 DROP TYPE IF EXISTS "learnmode" CASCADE;
 DROP TYPE IF EXISTS "movetype" CASCADE;
 DROP TYPE IF EXISTS "direction" CASCADE;
@@ -1727,17 +1727,17 @@ CREATE TABLE "LearnLog" (
 	update_originator_id integer default 0,
 	update_timestamp timestamp,
 	create_timestamp timestamp default now());
-	
+
 DROP TABLE IF EXISTS "LearnLog_tombstone";
 CREATE TABLE "LearnLog_tombstone" (
 	id integer PRIMARY KEY NOT NULL,
 	update_originator_id integer default 0,
     update_timestamp timestamp default now(),
     create_timestamp timestamp);
-    
+
 CREATE OR REPLACE FUNCTION "LearnLog_delete_trigger"() RETURNS trigger AS $$
 BEGIN
-	INSERT INTO "LearnLog_tombstone" (id, create_timestamp, update_originator_id) 
+	INSERT INTO "LearnLog_tombstone" (id, create_timestamp, update_originator_id)
 		VALUES (OLD.id, OLD.create_timestamp, 0);
 	RETURN OLD;
 END;
@@ -1745,10 +1745,10 @@ $$ LANGUAGE 'plpgsql';
 
 CREATE TRIGGER "LearnLog_update_trigger" BEFORE UPDATE ON "LearnLog" FOR EACH ROW EXECUTE PROCEDURE update_trigger();
 CREATE TRIGGER "LearnLog_delete_trigger" BEFORE DELETE ON "LearnLog" FOR EACH ROW EXECUTE PROCEDURE "LearnLog_delete_trigger"();
-	
+
 -- views
 -- vwGetCardsIndex - combines a cards text contents (question and answer) with chapter and box
-CREATE OR REPLACE VIEW "vwGetCardsIndex" AS 
+CREATE OR REPLACE VIEW "vwGetCardsIndex" AS
  SELECT "Cards".id, "Chapters_Cards".chapters_id, "Chapters".title, "UserCardState".box, "UserCardState".active, "UserCardState"."timestamp", "TextContent".text, "TextContent".side, "LearningModules_Cards".lm_id, "UserCardState".user_id
    FROM "Cards"
    JOIN "Chapters_Cards" ON "Chapters_Cards".cards_id = "Cards".id
@@ -1757,7 +1757,7 @@ CREATE OR REPLACE VIEW "vwGetCardsIndex" AS
    JOIN "TextContent" ON "Cards".id = "TextContent".cards_id AND "TextContent".type = 'Word'::type
    JOIN "LearningModules_Cards" ON "Cards".id = "LearningModules_Cards".cards_id
   ORDER BY "Cards".id, "TextContent".side, "TextContent"."position";
-  
+
 CREATE OR REPLACE VIEW "vwGetCardsForCache" AS
  SELECT "Cards".id AS cards_id, "Chapters_Cards".chapters_id, "Chapters".title AS chapters_title, "UserCardState".box, "UserCardState".active, "UserCardState"."timestamp",
 	"TextContent".text, "TextContent".side, "LearningModules_Cards".lm_id, "UserCardState".user_id
@@ -1779,10 +1779,10 @@ CREATE OR REPLACE FUNCTION "DeleteLearningModule"(integer) RETURNS void AS $$
 		foundTriggerVariant_2 BOOLEAN;
 		triggerCmd TEXT;
 	BEGIN
-		-- [ML-2511] Postgre migration from version 8.3 to 8.4 cause LM delete to fail 
+		-- [ML-2511] Postgre migration from version 8.3 to 8.4 cause LM delete to fail
 		-- check if the attribute 'reltriggers' or 'relhastriggers' exists (changed from ver 8.3 to 8.4)
 		SELECT count(*) > 0 INTO foundTriggerVariant_1 FROM pg_attribute WHERE attrelid = (SELECT oid FROM pg_class WHERE relname = 'pg_class') AND attname = 'reltriggers';
-		SELECT count(*) > 0 INTO foundTriggerVariant_2 FROM pg_attribute WHERE attrelid = (SELECT oid FROM pg_class WHERE relname = 'pg_class') AND attname = 'relhastriggers'; 
+		SELECT count(*) > 0 INTO foundTriggerVariant_2 FROM pg_attribute WHERE attrelid = (SELECT oid FROM pg_class WHERE relname = 'pg_class') AND attname = 'relhastriggers';
 		SELECT foundTriggerVariant_1 OR foundTriggerVariant_2 INTO foundTrigger;
 		IF foundTriggerVariant_1 THEN
 			SELECT 'SELECT relname FROM pg_class WHERE reltriggers > 0 AND NOT relname LIKE ''pg_%''' INTO triggerCmd;
@@ -1844,40 +1844,40 @@ CREATE OR REPLACE FUNCTION "RedistributeChapterPositions"(integer) RETURNS void 
 		lmid ALIAS FOR $1;
 		rec RECORD;
 	BEGIN
-		DROP SEQUENCE IF EXISTS serialchapters; 
-		CREATE TEMPORARY SEQUENCE serialchapters INCREMENT BY 10 START 10; 
+		DROP SEQUENCE IF EXISTS serialchapters;
+		CREATE TEMPORARY SEQUENCE serialchapters INCREMENT BY 10 START 10;
 		FOR rec IN  (SELECT * FROM "Chapters" WHERE lm_id=lmid ORDER BY position ASC)  LOOP
 		UPDATE "Chapters" SET position = nextval('serialchapters') WHERE "Chapters".id=rec.id;
 		END LOOP;
-		DROP SEQUENCE serialchapters; 
+		DROP SEQUENCE serialchapters;
 	END;
 $$ language 'plpgsql';
 
 -- function to create a new learning module
 CREATE OR REPLACE FUNCTION "CreateNewLearningModule"(character, integer, text)
   RETURNS integer AS $$
-  
+
 	DECLARE
 		allowed_id INTEGER;
 		default_id INTEGER;
 		result INTEGER;
-	
+
 	BEGIN
 		INSERT INTO "SnoozeOptions"
 			(cards_enabled,rights_enabled,time_enabled)
 			VALUES
 			(TRUE,TRUE,TRUE);
-			
+
 		INSERT INTO "MultipleChoiceOptions"
 			(allow_multiple_correct_answers, allow_random_distractors)
 			VALUES
 			(TRUE, TRUE);
-			
+
 		INSERT INTO "QueryTypes"
 			(image_recognition, listening_comprehension, multiple_choice, sentence, word)
 			VALUES
 			(TRUE,TRUE,TRUE,TRUE,TRUE);
-			
+
 		INSERT INTO "TypeGradings"
 			(all_correct, half_correct, none_correct, prompt)
 			VALUES
@@ -1887,7 +1887,7 @@ CREATE OR REPLACE FUNCTION "CreateNewLearningModule"(character, integer, text)
 			(all_known, half_known, one_known, first_known, prompt)
 			VALUES
 			(TRUE,TRUE,TRUE,TRUE,TRUE);
-			
+
 		INSERT INTO "QueryDirections"
 			(question2answer, answer2question, mixed)
 			VALUES
@@ -1897,32 +1897,32 @@ CREATE OR REPLACE FUNCTION "CreateNewLearningModule"(character, integer, text)
 			(snooze_options, query_types, query_directions, multiple_choice_options, synonym_gradings, type_gradings, question_culture, answer_culture)
 			VALUES
 			(
-				currval('"SnoozeOptions_id_seq"'), 
-				currval('"QueryTypes_id_seq"'), 
-				currval('"QueryDirections_id_seq"'), 
+				currval('"SnoozeOptions_id_seq"'),
+				currval('"QueryTypes_id_seq"'),
+				currval('"QueryDirections_id_seq"'),
 				currval('"MultipleChoiceOptions_id_seq"'),
 				currval('"SynonymGradings_id_seq"'),
 				currval('"TypeGradings_id_seq"'),
 				'en', 'en'
 			);
-			
+
 		SELECT INTO allowed_id CAST(currval('"Settings_id_seq"') AS integer);
-		
+
 		INSERT INTO "SnoozeOptions"
 			(cards_enabled,rights_enabled,time_enabled)
 			VALUES
 			(FALSE,FALSE,FALSE);
-			
+
 		INSERT INTO "MultipleChoiceOptions"
 			(allow_multiple_correct_answers, allow_random_distractors, max_correct_answers, number_of_choices)
 			VALUES
 			(FALSE, TRUE, 1, 4);
-			
+
 		INSERT INTO "QueryTypes"
 			(image_recognition, listening_comprehension, multiple_choice, sentence, word)
 			VALUES
 			(FALSE,FALSE,TRUE,FALSE,TRUE);
-			
+
 		INSERT INTO "TypeGradings"
 			(all_correct, half_correct, none_correct, prompt)
 			VALUES
@@ -1932,26 +1932,26 @@ CREATE OR REPLACE FUNCTION "CreateNewLearningModule"(character, integer, text)
 			(all_known, half_known, one_known, first_known, prompt)
 			VALUES
 			(FALSE,FALSE,TRUE,FALSE,FALSE);
-			
+
 		INSERT INTO "QueryDirections"
 			(question2answer, answer2question, mixed)
 			VALUES
 			(TRUE,FALSE,FALSE);
-			
+
 		INSERT INTO "Boxes"
 			(box1_size, box2_size, box3_size, box4_size, box5_size, box6_size, box7_size, box8_size, box9_size)
 			VALUES
 			(10, 20, 50, 100, 250, 500, 1000, 2000, 4000);
 
 		INSERT INTO "Settings"
-			(snooze_options, query_types, query_directions, multiple_choice_options, synonym_gradings, type_gradings, boxes, autoplay_audio, case_sensitive, confirm_demote, 
-			enable_commentary, correct_on_the_fly, enable_timer, random_pool, self_assessment, show_images, stripchars, auto_boxsize, pool_empty_message_shown, 
+			(snooze_options, query_types, query_directions, multiple_choice_options, synonym_gradings, type_gradings, boxes, autoplay_audio, case_sensitive, confirm_demote,
+			enable_commentary, correct_on_the_fly, enable_timer, random_pool, self_assessment, show_images, stripchars, auto_boxsize, pool_empty_message_shown,
 			show_statistics, skip_correct_answers, use_lm_stylesheets, question_culture, answer_culture)
 			VALUES
 			(
-				currval('"SnoozeOptions_id_seq"'), 
-				currval('"QueryTypes_id_seq"'), 
-				currval('"QueryDirections_id_seq"'), 
+				currval('"SnoozeOptions_id_seq"'),
+				currval('"QueryTypes_id_seq"'),
+				currval('"QueryDirections_id_seq"'),
 				currval('"MultipleChoiceOptions_id_seq"'),
 				currval('"SynonymGradings_id_seq"'),
 				currval('"TypeGradings_id_seq"'),
@@ -1960,14 +1960,14 @@ CREATE OR REPLACE FUNCTION "CreateNewLearningModule"(character, integer, text)
 				FALSE, FALSE, FALSE, TRUE, FALSE, TRUE, '!,.?;', FALSE, FALSE,
 				TRUE, FALSE, TRUE, 'en', 'en'
 			);
-			
+
 		SELECT INTO default_id CAST(currval('"Settings_id_seq"') AS integer);
 
 		INSERT INTO "LearningModules" (guid, categories_id, allowed_settings_id, default_settings_id, title)
 			VALUES	($1, $2, allowed_id, default_id, $3);
 
 		SELECT INTO result CAST(currval('"LearningModules_id_seq"') AS integer);
-		
+
 		RETURN result;
 	END;
 $$ LANGUAGE 'plpgsql';
@@ -1981,7 +1981,7 @@ CREATE OR REPLACE FUNCTION "GetCardState"(param_user_id integer, param_cards_id 
 		result "CardState";
 	BEGIN
 		SELECT count(*) INTO cnt FROM "UserCardState" WHERE user_id=param_user_id and cards_id=param_cards_id;
-		
+
 		If cnt < 1 THEN
 			INSERT INTO "UserCardState" (user_id, cards_id, box, active) VALUES (param_user_id, param_cards_id, 0, true);
 		END IF;
@@ -1997,7 +1997,7 @@ CREATE OR REPLACE FUNCTION "SetCardState"(param_user_id integer, param_cards_id 
 		result "CardState";
 	BEGIN
 		SELECT count(*) INTO cnt FROM "UserCardState" WHERE user_id=param_user_id and cards_id=param_cards_id;
-		
+
 		If cnt < 1 THEN
 			INSERT INTO "UserCardState" (user_id, cards_id, box, active, timestamp) VALUES (param_user_id, param_cards_id, param_box, param_active, param_timestamp);
 		ELSE
@@ -2013,19 +2013,19 @@ CREATE OR REPLACE FUNCTION "GetUserSettings"(param_user_id integer, param_lm_id 
 		result integer;
 	BEGIN
 		SELECT count(*) INTO cnt FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id;
-		
+
 		IF cnt < 1 THEN
 			INSERT INTO "UserProfilesLearningModulesSettings" VALUES (param_user_id, param_lm_id, "CreateNewSetting"());
-		
+
 			SELECT settings_id INTO result FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id;
-			
+
 			FOR cid IN SELECT id FROM "Chapters" WHERE lm_id=param_lm_id LOOP
 				INSERT INTO "SelectedLearnChapters" VALUES (cid, result);
 			END LOOP;
-			
+
 			RETURN result;
-		ELSE		
-			SELECT settings_id INTO result FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id;	
+		ELSE
+			SELECT settings_id INTO result FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id;
 			RETURN result;
 		END IF;
 	END;
@@ -2033,7 +2033,7 @@ $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
 
 -- This function returns the settings
 DROP TYPE IF EXISTS "AllSettings" CASCADE;
-CREATE TYPE "AllSettings" AS (autoplay_audio boolean, 
+CREATE TYPE "AllSettings" AS (autoplay_audio boolean,
 			      case_sensitive boolean,
 			      confirm_demote boolean,
 			      enable_commentary boolean,
@@ -2129,9 +2129,9 @@ CREATE OR REPLACE FUNCTION "GetAllSettings"(settings_id integer) RETURNS "AllSet
 	   result "AllSettings";
 	BEGIN
 		SELECT 	"Settings".autoplay_audio, "Settings".case_sensitive, "Settings".confirm_demote, "Settings".enable_commentary, "Settings".correct_on_the_fly, "Settings".enable_timer, "Settings".synonym_gradings,
-			"Settings".type_gradings, "Settings".multiple_choice_options, "Settings".query_directions, "Settings".query_types, 
+			"Settings".type_gradings, "Settings".multiple_choice_options, "Settings".query_directions, "Settings".query_types,
 			"Settings".random_pool,	"Settings".self_assessment, "Settings".show_images, "Settings".stripchars, "Settings".question_culture, "Settings".answer_culture, "Settings".question_caption,
-			"Settings".answer_caption, "Settings".logo, "Settings".auto_boxsize, "Settings".pool_empty_message_shown, "Settings".show_statistics, "Settings".skip_correct_answers, "Settings".snooze_options, 
+			"Settings".answer_caption, "Settings".logo, "Settings".auto_boxsize, "Settings".pool_empty_message_shown, "Settings".show_statistics, "Settings".skip_correct_answers, "Settings".snooze_options,
 			"Settings".use_lm_stylesheets, "Settings".cardstyle, "Settings".boxes, "Settings".isCached,
 			/*"SnoozeOptions".cards_enabled, "SnoozeOptions".rights_enabled, "SnoozeOptions".time_enabled, "SnoozeOptions".snooze_cards, "SnoozeOptions".snooze_high, "SnoozeOptions".snooze_low,
 			"SnoozeOptions".snooze_mode, "SnoozeOptions".snooze_rights, "SnoozeOptions".snooze_time,
@@ -2141,7 +2141,7 @@ CREATE OR REPLACE FUNCTION "GetAllSettings"(settings_id integer) RETURNS "AllSet
 			"QueryTypes".image_recognition, "QueryTypes".listening_comprehension, "QueryTypes".multiple_choice, "QueryTypes".sentence, "QueryTypes".word,
 			"SynonymGradings".all_known, "SynonymGradings".half_known, "SynonymGradings".one_known, "SynonymGradings".first_known, "SynonymGradings".prompt,
 			"QueryDirections".question2answer, "QueryDirections".answer2question, "QueryDirections".mixed,*/
-	
+
 		CASE WHEN "Settings".question_stylesheet > 0 THEN
 			(SELECT "StyleSheets".value FROM "StyleSheets" WHERE "StyleSheets".id = "Settings".question_stylesheet )
 		END AS question_stylesheet,
@@ -2194,15 +2194,15 @@ CREATE OR REPLACE FUNCTION "GetBoxSizes"(param_user_id integer, param_lm_id inte
 		result_user "BoxSizes";
 	BEGIN
 		SELECT count(*) INTO cnt FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id;
-		
-		SELECT (SELECT count(*) FROM "Cards" WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=param_lm_id)), box1_size, box2_size, box3_size, box4_size, box5_size, 
-			box6_size, box7_size, box8_size, box9_size, (SELECT count(*) FROM "Cards" WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=param_lm_id)) 
+
+		SELECT (SELECT count(*) FROM "Cards" WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=param_lm_id)), box1_size, box2_size, box3_size, box4_size, box5_size,
+			box6_size, box7_size, box8_size, box9_size, (SELECT count(*) FROM "Cards" WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=param_lm_id))
 			INTO result FROM "Boxes" WHERE id=(SELECT boxes FROM "Settings" WHERE id=(SELECT default_settings_id FROM "LearningModules" WHERE id=param_lm_id));
-			
+
 		IF cnt > 0 THEN
 			SELECT boxes INTO bid FROM "Settings" WHERE id=(SELECT settings_id FROM "UserProfilesLearningModulesSettings" WHERE user_id=param_user_id and lm_id=param_lm_id);
-						
-			SELECT count(*), 
+
+			SELECT count(*),
 				COALESCE((SELECT box1_size FROM "Boxes" WHERE id=bid), result.box1),
 				COALESCE((SELECT box2_size FROM "Boxes" WHERE id=bid), result.box2),
 				COALESCE((SELECT box3_size FROM "Boxes" WHERE id=bid), result.box3),
@@ -2224,76 +2224,76 @@ $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
 -- b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10,
 --   ,  9, 15,  7,  3,   ,   ,   ,   ,   ,    ,
 CREATE OR REPLACE FUNCTION "GetBoxContent"(endSessionId integer) RETURNS "BoxSizes" AS $$
-	DECLARE 
+	DECLARE
 		counter integer;
 		result "BoxSizes";
 	BEGIN
 		SELECT COUNT(*) INTO result.box1 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 1;
-			
+
 		SELECT COUNT(*) INTO result.box2 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 2;
-			
+
 		SELECT COUNT(*) INTO result.box3 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 3;
-			
+
 		SELECT COUNT(*) INTO result.box4 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 4;
-			
+
 		SELECT COUNT(*) INTO result.box5 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 5;
-			
+
 		SELECT COUNT(*) INTO result.box6 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 6;
-			
+
 		SELECT COUNT(*) INTO result.box7 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 7;
-			
+
 		SELECT COUNT(*) INTO result.box8 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 8;
-			
+
 		SELECT COUNT(*) INTO result.box9 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 9;
-			
+
 		SELECT COUNT(*) INTO result.box10 FROM
 			(SELECT DISTINCT ON ("LearnLog".cards_id) "LearnLog".new_box FROM
-				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id = 
+				"LearnLog" WHERE "LearnLog".session_id IN (SELECT id FROM "LearningSessions" WHERE "LearningSessions".lm_id =
 				(SELECT lm_id FROM "LearningSessions" WHERE "LearningSessions".id = endSessionId)) AND "LearnLog".session_id <= endSessionId ORDER BY cards_id, timestamp DESC
 			) AS boxes
 			WHERE new_box = 10;
@@ -2308,13 +2308,13 @@ CREATE OR REPLACE FUNCTION "FillUpUserCardState"(param_user_id integer, param_lm
 		cardstatecount integer;
 		cardid integer;
 	BEGIN
-		
-		SELECT count(*) INTO cardstatecount FROM "UserCardState" WHERE user_id = param_user_id AND cards_id IN 
+
+		SELECT count(*) INTO cardstatecount FROM "UserCardState" WHERE user_id = param_user_id AND cards_id IN
 			(SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id = param_lm_id);
 		SELECT count(*) INTO cardcount FROM "LearningModules_Cards" WHERE lm_id = param_lm_id;
 
 		IF cardcount <> cardstatecount THEN
-			FOR cardid IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id = param_lm_id AND cards_id NOT IN 
+			FOR cardid IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id = param_lm_id AND cards_id NOT IN
 				(SELECT cards_id FROM "UserCardState" WHERE user_id = param_user_id)) LOOP
 					INSERT INTO "UserCardState" (user_id, cards_id, box, active) VALUES (param_user_id, cardid, 0, TRUE);
 			END LOOP;
@@ -2339,7 +2339,7 @@ CREATE OR REPLACE FUNCTION "StartLearningSession"(p_user_id integer, p_lm_id int
 				UPDATE "LearningSessions" SET endtime=CURRENT_TIMESTAMP WHERE id = lastSessionId;
 			END IF;
 		END IF;
-                
+
 		SELECT INTO newid CAST(nextval('"LearningSessions_id_seq"') AS integer);
 		INSERT INTO "LearningSessions" (id, user_id, lm_id, starttime, sum_right, sum_wrong, pool_content, box1_content,
 					        box2_content, box3_content, box4_content, box5_content, box6_content, box7_content,
@@ -2360,14 +2360,14 @@ CREATE TYPE "UserStruct" AS (username varchar(100), typ usertype);
 
 CREATE OR REPLACE FUNCTION "GetUserList"() RETURNS SETOF "UserStruct" AS $$
 		SELECT username, user_type FROM "UserProfiles" WHERE user_type != 'LocalDirectoryAuthentication';
-$$ LANGUAGE 'SQL' SECURITY DEFINER;
+$$ LANGUAGE 'sql' SECURITY DEFINER;
 
 CREATE OR REPLACE FUNCTION "CheckUserSession"(session_id varchar(36)) RETURNS varchar(100) AS $$
 	DECLARE
     	validsession INTEGER;
     BEGIN
     	SELECT id INTO validsession FROM "UserSessions" WHERE sid=session_id AND logout_time > now() ORDER BY logout_time DESC LIMIT 1;
-        
+
         IF COUNT(validsession)>0 THEN
         	UPDATE "UserSessions" SET refresh_time=now(), logout_time=now()+'7 days' WHERE sid=session_id;
         	RETURN NULL;
@@ -2387,42 +2387,42 @@ CREATE OR REPLACE FUNCTION "LoginListUser"(param_username varchar(100), new_sess
         isValide varchar(100);
 	BEGIN
 		SELECT value INTO allowed FROM "DatabaseInformation" WHERE property='ListAuthentication';
-		
+
 		IF NOT allowed THEN
 			RETURN -4;
 		ELSE
 			SELECT count(*) INTO user_count FROM "UserProfiles" WHERE username=param_username;
-			
+
 			IF user_count < 1 THEN
 				RETURN -1;
 			ELSE
 				SELECT user_type INTO user_auth_type FROM "UserProfiles" WHERE username=param_username;
-				
+
 				IF user_auth_type <> 'ListAuthentication' THEN
 					RETURN -3;
 				ELSE
 					SELECT id INTO uid FROM "UserProfiles" WHERE username=param_username;
-					
+
                     SELECT sid INTO session_id FROM "UserSessions" WHERE user_id=uid AND logout_time>now() ORDER BY logout_time DESC LIMIT 1;
-                    
+
                     IF count(session_id)<1 OR stand_alone THEN
                     	INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                         	new_session_id,
                             uid,
                             now(),
                             now()+'7 days');
-                            
+
 						RETURN uid;
                     ELSE
                     	SELECT * INTO isValide FROM "CheckUserSession"(session_id);
-                        
+
                         IF count(isValide)=1 THEN
                           INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                               new_session_id,
                               uid,
                               now(),
                               now()+'7 days');
-                            
+
                         	RETURN uid;
                         ELSE
                         	IF close_open_sessions THEN
@@ -2450,47 +2450,47 @@ CREATE OR REPLACE FUNCTION "LoginFormsUser"(param_username varchar(100), param_p
         isValide varchar(100);
 	BEGIN
 		SELECT value INTO allowed FROM "DatabaseInformation" WHERE property='FormsAuthentication';
-		
+
 		IF NOT allowed THEN
 			RETURN -4;
 		ELSE
 			SELECT count(*) INTO user_count FROM "UserProfiles" WHERE username=param_username;
-			
+
 			IF user_count < 1 THEN
 				RETURN -1;
 			ELSE
 				SELECT user_type INTO user_auth_type FROM "UserProfiles" WHERE username=param_username;
-				
+
 				IF user_auth_type <> 'FormsAuthentication' THEN
 					RETURN -3;
 				ELSE
 					SELECT (password = param_password) INTO passed FROM "UserProfiles" WHERE username=param_username;
-					
+
 					IF NOT passed THEN
 						RETURN -2;
 					ELSE
 						SELECT id INTO uid FROM "UserProfiles" WHERE username=param_username;
-					
+
                         SELECT sid INTO session_id FROM "UserSessions" WHERE user_id=uid AND logout_time>now() ORDER BY logout_time DESC LIMIT 1;
-                        
+
                         IF count(session_id)<1 OR stand_alone THEN
                           INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                               new_session_id,
                               uid,
                               now(),
                               now()+'7 days');
-                            
+
                             RETURN uid;
                         ELSE
                             SELECT * INTO isValide FROM "CheckUserSession"(session_id);
-                            
+
                             IF count(isValide)=1 THEN
                             	INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                                     new_session_id,
                                     uid,
                                     now(),
                                     now()+'7 days');
-                            
+
                             	RETURN uid;
                             ELSE
                               IF close_open_sessions THEN
@@ -2519,47 +2519,47 @@ CREATE OR REPLACE FUNCTION "LoginLocalDirectoryUser"(param_username varchar(100)
         isValide varchar(100);
 	BEGIN
 		SELECT value INTO allowed FROM "DatabaseInformation" WHERE property='LocalDirectoryAuthentication';
-		
+
 		IF NOT allowed THEN
 			RETURN -4;
 		ELSE
 			SELECT count(*) INTO user_count FROM "UserProfiles" WHERE username=param_username;
-			
+
 			IF user_count < 1 THEN
 				RETURN -1;
 			ELSE
 				SELECT user_type INTO user_auth_type FROM "UserProfiles" WHERE username=param_username;
-				
+
 				IF user_auth_type <> 'LocalDirectoryAuthentication' THEN
 					RETURN -3;
 				ELSE
 					SELECT (local_directory_id = param_ld_id) INTO passed FROM "UserProfiles" WHERE username=param_username;
-					
+
 					IF NOT passed THEN
 						RETURN -2;
 					ELSE
 						SELECT id INTO uid FROM "UserProfiles" WHERE username=param_username;
-					
+
                         SELECT sid INTO session_id FROM "UserSessions" WHERE user_id=uid AND logout_time>now() ORDER BY logout_time DESC LIMIT 1;
-                        
+
                         IF count(session_id)<1 OR stand_alone THEN
                             INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                                 new_session_id,
                                 uid,
                                 now(),
                                 now()+'7 days');
-                            
+
                             RETURN uid;
                         ELSE
                             SELECT * INTO isValide FROM "CheckUserSession"(session_id);
-                            
+
                             IF count(isValide)=1 THEN
                                 INSERT INTO "UserSessions"(sid, user_id, login_time, logout_time) VALUES (
                                     new_session_id,
                                     uid,
                                     now(),
                                     now()+'7 days');
-                            
+
                                 RETURN uid;
                             ELSE
                               IF close_open_sessions THEN
@@ -2674,7 +2674,7 @@ $BODY$
 	END;
 $BODY$
   LANGUAGE 'plpgsql' SECURITY DEFINER;
-  
+
 CREATE OR REPLACE FUNCTION "AddGroupToUserByName"(p_username varchar(100), p_groupname varchar(100)) RETURNS INTEGER AS $$
 	DECLARE
 		userid INTEGER;
@@ -2690,7 +2690,7 @@ CREATE OR REPLACE FUNCTION "AddGroupToUserByName"(p_username varchar(100), p_gro
 		END IF;
 	END;
 $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
-  
+
 CREATE OR REPLACE FUNCTION "InsertGroupPermission"(p_groupname varchar(100), p_permission varchar(100), p_clr_name varchar(100), p_access boolean) RETURNS integer AS $$
 	DECLARE
 		groupid INTEGER;
@@ -2751,9 +2751,9 @@ CREATE OR REPLACE VIEW "Syncview_Settings" AS
 	SELECT u.lm_id AS session_lm_id, u.user_id AS session_user_id, u.settings_id AS id FROM "UserProfilesLearningModulesSettings" AS u WHERE settings_id IS NOT NULL;
 
 CREATE OR REPLACE VIEW "Syncview_MediaContent" AS
-	SELECT l.lm_id AS session_lm_id, null::integer AS session_user_id, c.media_id AS id FROM "Cards_MediaContent" AS c 
+	SELECT l.lm_id AS session_lm_id, null::integer AS session_user_id, c.media_id AS id FROM "Cards_MediaContent" AS c
 	JOIN "LearningModules_Cards" AS l ON c.cards_id=l.cards_id
-	UNION 
+	UNION
 	SELECT sy.session_lm_id AS session_lm_id, sy.session_user_id AS session_user_id, s.logo AS id FROM "Syncview_Settings" AS sy JOIN "Settings" AS s ON sy.id=s.id WHERE s.logo IS NOT NULL
 	UNION
 	SELECT sy.session_lm_id AS session_lm_id, sy.session_user_id AS session_user_id, c.media_id AS id FROM "CommentarySounds" AS c JOIN "Syncview_Settings" AS sy ON c.settings_id=sy.id;
@@ -2762,7 +2762,7 @@ CREATE OR REPLACE VIEW "Syncview_AccessControlList" AS
 	SELECT null::integer AS session_lm_id, up.users_id AS session_user_id, up.acl_id AS id FROM "UserProfiles_AccessControlList" AS up
 	UNION
 	SELECT null::integer AS session_lm_id, uu.users_id AS session_user_id, ua.acl_id AS id FROM "UserGroups_AccessControlList" AS ua JOIN "UserProfiles_UserGroups" AS uu ON ua.groups_id=uu.groups_id;
-	
+
 -- synchronization helper tables
 CREATE TABLE "BatchSessions"
 (
@@ -2796,36 +2796,36 @@ BEGIN
 
 	-- caching of complex query results
 	CREATE TEMPORARY TABLE "SyncSettings" ON COMMIT DROP
-		AS SELECT id, synonym_gradings, type_gradings, multiple_choice_options, query_directions, query_types, logo, question_stylesheet, answer_stylesheet, snooze_options, cardstyle, boxes 
-			FROM "Settings" 
-			WHERE id IN 
+		AS SELECT id, synonym_gradings, type_gradings, multiple_choice_options, query_directions, query_types, logo, question_stylesheet, answer_stylesheet, snooze_options, cardstyle, boxes
+			FROM "Settings"
+			WHERE id IN
 				(SELECT id FROM "Syncview_Settings" AS S WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id);
 
 	CREATE TEMPORARY TABLE "SyncMediaContent" ON COMMIT DROP
-		AS SELECT id FROM "Syncview_MediaContent" AS S 
+		AS SELECT id FROM "Syncview_MediaContent" AS S
 			WHERE S.session_lm_id=current_session_lm_id OR S.session_user_id=current_session_user_id;
 
 	-- collecting row timestamps from every table
-	INSERT INTO "RowTimestamps" 
+	INSERT INTO "RowTimestamps"
 		SELECT create_timestamp, update_timestamp FROM "DatabaseInformation" UNION
 		SELECT create_timestamp, update_timestamp FROM "Categories" UNION
 		SELECT create_timestamp, update_timestamp FROM "LearningModules";
-		
+
 	INSERT INTO "RowTimestamps"
 		SELECT create_timestamp, update_timestamp FROM "Extensions"
 			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "ExtensionActions"
 			WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id);
-	
+
 	IF NOT isNewDb THEN
-		INSERT INTO "RowTimestamps" 
+		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "DatabaseInformation_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "Categories_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "LearningModules_tombstone";
 	END IF;
-	
+
 	IF NOT isNewDb THEN
-		 INSERT INTO "RowTimestamps" 
+		 INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "Extensions_tombstone"
 				WHERE guid IN (SELECT guid FROM "Extensions" WHERE lm_id=current_session_lm_id) UNION
 			SELECT create_timestamp, update_timestamp FROM "ExtensionActions_tombstone"
@@ -2833,19 +2833,19 @@ BEGIN
 	END IF;
 
 	INSERT INTO "RowTimestamps" -- user profile
-		SELECT create_timestamp, update_timestamp FROM "UserProfiles" 
+		SELECT create_timestamp, update_timestamp FROM "UserProfiles"
 			WHERE id=current_session_user_id UNION
 		SELECT create_timestamp, update_timestamp FROM "UserCardState"
-			WHERE user_id=current_session_user_id AND cards_id IN 
+			WHERE user_id=current_session_user_id AND cards_id IN
 				(SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "LearningSessions"
 			WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "LearnLog"
-			WHERE session_id IN 
+			WHERE session_id IN
 				(SELECT id FROM "LearningSessions" WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "UserProfilesLearningModulesSettings"
 			WHERE user_id=current_session_user_id AND lm_id=current_session_lm_id;
-		
+
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "UserProfiles_tombstone" UNION
@@ -2858,27 +2858,27 @@ BEGIN
 	INSERT INTO "RowTimestamps" -- user security stuff
 		SELECT create_timestamp, update_timestamp FROM "Permissions" UNION
 		SELECT create_timestamp, update_timestamp FROM "TypeDefinitions" UNION
-		SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups" 
+		SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups"
 			WHERE users_id=current_session_user_id UNION
-		SELECT create_timestamp, update_timestamp FROM "UserGroups" 
+		SELECT create_timestamp, update_timestamp FROM "UserGroups"
 			WHERE id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
-		SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList" 
+		SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList"
 			WHERE users_id=current_session_user_id  UNION
-		SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList" 
+		SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList"
 			WHERE groups_id IN (SELECT groups_id FROM "UserProfiles_UserGroups" WHERE users_id=current_session_user_id) UNION
-		SELECT create_timestamp, update_timestamp FROM "AccessControlList" 
-			WHERE id IN (SELECT id FROM "Syncview_AccessControlList" AS s 
+		SELECT create_timestamp, update_timestamp FROM "AccessControlList"
+			WHERE id IN (SELECT id FROM "Syncview_AccessControlList" AS s
 				WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id) UNION
-		SELECT create_timestamp, update_timestamp FROM "ObjectList" 
-			WHERE id IN (SELECT a.object_id FROM "AccessControlList" AS a JOIN "Syncview_AccessControlList" AS s ON a.id=s.id 
+		SELECT create_timestamp, update_timestamp FROM "ObjectList"
+			WHERE id IN (SELECT a.object_id FROM "AccessControlList" AS a JOIN "Syncview_AccessControlList" AS s ON a.id=s.id
 				WHERE s.session_lm_id=current_session_lm_id OR s.session_user_id=current_session_user_id);
-		
+
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "Permissions_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "TypeDefinitions_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "UserGroups_tombstone" UNION
-			SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups_tombstone"UNION			
+			SELECT create_timestamp, update_timestamp FROM "UserProfiles_UserGroups_tombstone"UNION
 			SELECT create_timestamp, update_timestamp FROM "UserProfiles_AccessControlList_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "UserGroups_AccessControlList_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "AccessControlList_tombstone" UNION
@@ -2890,16 +2890,16 @@ BEGIN
 			WHERE lm_id=current_session_lm_id UNION
 		SELECT create_timestamp, update_timestamp FROM "Chapters"
 			WHERE lm_id=current_session_lm_id UNION
-		SELECT create_timestamp, update_timestamp FROM "SelectedLearnChapters" 
-			WHERE settings_id IN (SELECT id FROM "SyncSettings") 
+		SELECT create_timestamp, update_timestamp FROM "SelectedLearnChapters"
+			WHERE settings_id IN (SELECT id FROM "SyncSettings")
 			AND chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id) UNION
-		SELECT create_timestamp, update_timestamp FROM "Cards" 
+		SELECT create_timestamp, update_timestamp FROM "Cards"
 			WHERE id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "TextContent"
 			WHERE cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "Chapters_Cards"
-			WHERE chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id);	
-		
+			WHERE chapters_id IN (SELECT id FROM "Chapters" WHERE lm_id=current_session_lm_id);
+
 	IF NOT isNewDb THEN
 		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "LearningModules_Cards_tombstone" UNION
@@ -2908,10 +2908,10 @@ BEGIN
 			SELECT create_timestamp, update_timestamp FROM "Cards_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "TextContent_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "Chapters_Cards_tombstone";
-	END IF;	
-	
+	END IF;
+
 	INSERT INTO "RowTimestamps" -- settings
-		SELECT create_timestamp, update_timestamp FROM "Settings" 
+		SELECT create_timestamp, update_timestamp FROM "Settings"
 			WHERE id IN (SELECT id FROM "SyncSettings") UNION
 		SELECT create_timestamp, update_timestamp FROM "SynonymGradings"
 			WHERE id IN (SELECT synonym_gradings FROM "SyncSettings") UNION
@@ -2933,9 +2933,9 @@ BEGIN
 			WHERE cardstyles_id IN (SELECT cardstyle FROM "SyncSettings") UNION
 		SELECT create_timestamp, update_timestamp FROM "Boxes"
 			WHERE id IN (SELECT boxes FROM "SyncSettings");
-		
+
 	IF NOT isNewDb THEN
-		INSERT INTO "RowTimestamps" 
+		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "Settings_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "SynonymGradings_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "TypeGradings_tombstone" UNION
@@ -2947,27 +2947,27 @@ BEGIN
 			SELECT create_timestamp, update_timestamp FROM "CardStyles_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "MediaContent_CardStyles_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "Boxes_tombstone";
-	END IF;	
+	END IF;
 
 	INSERT INTO "RowTimestamps" -- media stuff
-		SELECT create_timestamp, update_timestamp FROM "MediaContent" 
+		SELECT create_timestamp, update_timestamp FROM "MediaContent"
 			WHERE id IN (SELECT id FROM "SyncMediaContent") UNION
 		SELECT create_timestamp, update_timestamp FROM "Cards_MediaContent"
 			WHERE media_id IN (SELECT id FROM "SyncMediaContent")
 			OR cards_id IN (SELECT cards_id FROM "LearningModules_Cards" WHERE lm_id=current_session_lm_id) UNION
 		SELECT create_timestamp, update_timestamp FROM "CommentarySounds"
-			WHERE settings_id IN (SELECT logo FROM "SyncSettings") 
+			WHERE settings_id IN (SELECT logo FROM "SyncSettings")
 			OR media_id IN (SELECT id FROM "SyncMediaContent") UNION
 		SELECT create_timestamp, update_timestamp FROM "MediaProperties"
 			WHERE media_id IN (SELECT id FROM "SyncMediaContent");
-		
+
 	IF NOT isNewDb THEN
-		INSERT INTO "RowTimestamps" 
+		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "MediaContent_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "Cards_MediaContent_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "CommentarySounds_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "MediaProperties_tombstone";
-	END IF;	
+	END IF;
 
 	INSERT INTO "RowTimestamps" -- tags
 		SELECT create_timestamp, update_timestamp FROM "MediaContent_Tags"
@@ -2977,13 +2977,13 @@ BEGIN
 		SELECT create_timestamp, update_timestamp FROM "Tags"
 			WHERE id IN (SELECT tags_id FROM "MediaContent_Tags" AS M JOIN "SyncMediaContent" AS S ON M.media_id=S.id)
 			OR id IN (SELECT tags_id FROM "LearningModules_Tags" WHERE lm_id=current_session_lm_id);
-		
+
 	IF NOT isNewDb THEN
-		INSERT INTO "RowTimestamps" 
+		INSERT INTO "RowTimestamps"
 			SELECT create_timestamp, update_timestamp FROM "MediaContent_Tags_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "LearningModules_Tags_tombstone" UNION
 			SELECT create_timestamp, update_timestamp FROM "Tags_tombstone";
-	END IF;	
+	END IF;
 
 	-- calculate updated value
 	UPDATE "RowTimestamps" SET updated=GREATEST(create_timestamp, update_timestamp);
@@ -3002,8 +3002,8 @@ BEGIN
 	INSERT INTO "BatchSessions" (client_id, batch_size, batch_count)
 		VALUES (sync_client_id_hash, sync_batch_size, sync_batch_count);
 
-	INSERT INTO "BatchTimestamps" SELECT sync_client_id_hash, updated FROM "RowTimestamps" ORDER BY updated ASC;		
-	
+	INSERT INTO "BatchTimestamps" SELECT sync_client_id_hash, updated FROM "RowTimestamps" ORDER BY updated ASC;
+
 	RETURN NEXT;
 END;
 $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
@@ -3027,8 +3027,8 @@ BEGIN
 	sync_max_received_anchor := now();
 
 	-- If this is the first synchronization session for a database,
-	-- get the lowest possible timestamp value. 
-	IF sync_last_received_anchor IS NULL THEN 
+	-- get the lowest possible timestamp value.
+	IF sync_last_received_anchor IS NULL THEN
 		last_received_anchor := '-infinity'::timestamp;
 	ELSE
 		last_received_anchor := sync_last_received_anchor;
@@ -3036,13 +3036,13 @@ BEGIN
 
 	-- Calculate the batch anchors in case this is the first batch of a synchronization session
 	IF (sync_batch_count <= 0) THEN
-		SELECT r.sync_row_count, r.sync_batch_count INTO sync_row_count, sync_batch_count 
+		SELECT r.sync_row_count, r.sync_batch_count INTO sync_row_count, sync_batch_count
 		FROM "RenderBatchAnchors"(last_received_anchor, sync_max_received_anchor, sync_batch_size, sync_client_id_hash, current_session_lm_id, current_session_user_id, isNewDb) AS r;
 	END IF;
 
 	-- Select the current anchor timestamp
 	SELECT updated FROM "BatchTimestamps"
-		WHERE client_id=sync_client_id_hash 
+		WHERE client_id=sync_client_id_hash
 		LIMIT 1 OFFSET sync_batch_size
 		INTO sync_new_received_anchor;
 
@@ -3060,7 +3060,7 @@ BEGIN
 	RETURN NEXT;
 END;
 $$ LANGUAGE 'plpgsql' SECURITY DEFINER;
-  
+
 -- insert sample data (demo dictionary)
 INSERT INTO "DatabaseInformation" VALUES ('ListAuthentication', 'true');
 INSERT INTO "DatabaseInformation" VALUES ('FormsAuthentication', 'true');
@@ -3079,27 +3079,27 @@ INSERT INTO "Categories" (global_id, name) VALUES (2, 'Languages');
 INSERT INTO "Categories" (global_id, name) VALUES (3, 'Miscellaneous');
 INSERT INTO "Categories" (global_id, name) VALUES (4, 'Natural Sciences');
 INSERT INTO "Categories" (global_id, name) VALUES (5, 'Social Sciences');
-	
+
 --SELECT "CreateNewLearningModule"
 	--(CAST('-' AS character), CAST(currval('"Categories_id_seq"') AS integer), CAST('Test-LM' AS text));
-	
+
 --UPDATE "LearningModules" SET
 	--author='LearnLift', description='Test-Description'
 	--WHERE id=currval('"LearningModules_id_seq"');
-	
+
 --UPDATE "Settings" SET
 	--question_culture='en-us', answer_culture='de-at', question_caption='English', answer_caption='German'
 	--WHERE id=(
-		--SELECT default_settings_id 
-		--FROM "LearningModules" 
+		--SELECT default_settings_id
+		--FROM "LearningModules"
 		--WHERE id=currval('"LearningModules_id_seq"')
 	--);
-	
+
 --INSERT INTO "Chapters"
 	--(lm_id,title,description,position)
 	--VALUES
 	--(currval('"LearningModules_id_seq"'),'First Chapter','Chapter Description',10);
-	
+
 --INSERT INTO "SelectedLearnChapters"
 	--(chapters_id, settings_id)
 	--VALUES
@@ -3109,7 +3109,7 @@ INSERT INTO "Categories" (global_id, name) VALUES (5, 'Social Sciences');
 --*********************************************
 -- create default security setup
 --*********************************************
--- type definitions	
+-- type definitions
 SELECT "InsertTypeDefinitions"('MLifter.DAL.DB.DbDictionaries', '');
 SELECT "InsertTypeDefinitions"('MLifter.DAL.DB.DbDictionary', 'MLifter.DAL.DB.DbDictionaries');
 --SELECT "InsertTypeDefinitions"('MLifter.DAL.DB.DbChapters', 'MLifter.DAL.DB.DbDictionary');
@@ -3157,7 +3157,7 @@ INSERT INTO "ObjectList"(locator) VALUES ('DUMMYOBJECT');
 SELECT "InsertUserGroups"('Administrator');
 SELECT "InsertUserGroups"('Teacher');
 SELECT "InsertUserGroups"('Student');
-    
+
 -- assign default permissions to groups
 SELECT "InsertGroupPermission"('Administrator', 'IsAdmin', 'MLifter.DAL.DB.DbDictionaries', true);
 SELECT "InsertGroupPermission"('Administrator', 'Visible', 'MLifter.DAL.DB.DbDictionaries', true);
@@ -3204,7 +3204,7 @@ SELECT "InsertGroupPermission"('Teacher', 'CanModify', 'MLifter.DAL.DB.DbCard', 
 SELECT "InsertUserProfile"('admin', 'admin', '', 'FormsAuthentication'); SELECT "AddGroupToUserByName"('admin', 'Administrator');
 SELECT "InsertUserProfile"('teacher', 'teacher', '', 'FormsAuthentication'); SELECT "AddGroupToUserByName"('teacher', 'Teacher');
 SELECT "InsertUserProfile"('student', 'student', '', 'FormsAuthentication'); SELECT "AddGroupToUserByName"('student', 'Student');
-	
+
 --*********************************************
 -- create indices (general)
 --*********************************************
@@ -3215,14 +3215,14 @@ CREATE INDEX tc_cards_id
   USING btree
   (cards_id);
 ALTER TABLE "TextContent" CLUSTER ON tc_cards_id;
-	
+
 -- Index: cm_cards_id
 DROP INDEX IF EXISTS cm_cards_id;
 CREATE INDEX cm_cards_id
   ON "Cards_MediaContent"
   USING btree
   (cards_id);
-ALTER TABLE "Cards_MediaContent" CLUSTER ON cm_cards_id;	
+ALTER TABLE "Cards_MediaContent" CLUSTER ON cm_cards_id;
 
 -- Index: cm_cards_id_type_side
 DROP INDEX IF EXISTS cm_cards_id_type_side;
@@ -3238,28 +3238,28 @@ CREATE INDEX slc_settings_id
   USING btree
   (settings_id);
 ALTER TABLE "SelectedLearnChapters" CLUSTER ON slc_settings_id;
-	
+
 -- Index: idx_user_card
 DROP INDEX IF EXISTS idx_user_card;
 CREATE INDEX idx_user_card
   ON "UserCardState"
   USING btree
   (user_id, cards_id);
-  
+
 -- Index: idx_extensions
 DROP INDEX IF EXISTS idx_extensions;
 CREATE INDEX idx_extensions
 	ON "Extensions"
 	USING btree
 	(guid);
-	
+
 -- Index: idx_extensionactions
 DROP INDEX IF EXISTS idx_extensionactions;
 CREATE INDEX idx_extensionactions
 	ON "ExtensionActions"
 	USING btree
 	(guid);
-  
+
 --*********************************************
 -- create indices for security framework
 --*********************************************
@@ -3269,7 +3269,7 @@ CREATE INDEX idx_objectlist_locator
   ON "ObjectList"
   USING btree
   (locator);
- 
+
 -- Index: idx_permissions_name
 DROP INDEX IF EXISTS idx_permissions_name;
 CREATE INDEX idx_permissions_name
