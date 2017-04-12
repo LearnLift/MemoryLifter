@@ -1,0 +1,93 @@
+<div class="wikidoc">
+<p><font size="6">How to install the database server <br>
+</font></p>
+<p><strong>1. Installation of the PostgreSQL database</strong></p>
+<blockquote>
+<p>Download the PostgreSQL database software (version 8.4 or later) from <a href="http://www.postgresql.org/download/" target="_blank">
+http://www.postgresql.org/download/</a> and copy the installer file(s) to your database server. Start the installer and follow the installation wizard using the default settings until following pages:
+<br>
+<font color="#c0504d">ATTENTION: When using PostgreSQL &gt;9 you may need to install it to &lsquo;C:\PorstgreSQL\&rsquo; instead of &lsquo;C:\Program Files\PostgreSQL\&rsquo; as it may fail to initialize the database otherwise.
+<br>
+<a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347937"><img title="clip_image002" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347938" alt="clip_image002" width="440" height="175" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></font></p>
+<ul>
+<li>Enter the password for the database super user (this will be the main user for the whole database).
+<br>
+<font color="#c0504d">Please note: In case your server has a user password complexity policy enforced (enabled by default on Windows&reg; Server), the password you enter must meet these requirements.</font>
+</li></ul>
+<p><font color="#000000">Click &ldquo;Next&rdquo; and use the default values again until:</font></p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347939"><img title="clip_image002[6]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347940" alt="clip_image002[6]" width="447" height="157" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></p>
+<p>Confirm the success of the installation, but <strong>uncheck</strong> the checkbox &quot;Launch Stack Builder at exit&quot; before finishing.</p>
+</blockquote>
+<p><strong>2. Configuration of the PostgreSQL database</strong></p>
+<blockquote>
+<p>Start pgAdmin III which allows you to configure the PostgreSQL database:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347941"><img title="clip_image002[8]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347942" alt="clip_image002[8]" width="444" height="198" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></p>
+<p>Now click on &quot;File&quot; =&gt; &quot;Open pg_hba.conf&hellip;&quot; and open the configuration file from:
+<br>
+<em>C:\Program Files\PostgreSQL\8.4\data\pg_hba.conf <br>
+</em>(This directory depends on your installation path and PostgreSQL version). The following dialog will appear:
+</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347943"><img title="clip_image002[10]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347944" alt="clip_image002[10]" width="450" height="201" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></p>
+<p>First, double-click the second row and check &quot;Enabled&quot; to allow IPv6 loopback connectivity:</p>
+<p>NOTE: Newer Versions of PostgreSQL may already have this enabled.</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347945"><img title="clip_image002[12]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347946" alt="clip_image002[12]" width="320" height="244" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></p>
+<p>Click &quot;OK&quot; to close the dialog.</p>
+<p>Double-click the third (empty) row to create a new entry and change the values to the following:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347947"><img title="clip_image002[14]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347948" alt="clip_image002[14]" width="322" height="232" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border-width:0px"></a></p>
+<p><strong>Direct database access mode:</strong> Enter &quot;0.0.0.0/0&quot; to accept connections from all computers.</p>
+<p><strong>MemoryLifter web service mode:</strong> Only enter the IP address of your server and if necessary, the IP addresses of the users who need admin access (via Admin Suite).</p>
+<p>Don't forget to save the settings before closing the dialog.</p>
+</blockquote>
+<p><strong>3. Create a new database user</strong></p>
+<blockquote>
+<p>The following point is just an additional nice to have feature. To avoid using the super user account, you can create a new account with restricted rights (e.g. only read/write access to the MemoryLifter database). If you do not want to create a special
+ database user for the MemoryLifter Server, skip to &quot;Initialize the MemoryLifter Database&quot; (Section 3.4) and use the default database user.</p>
+<p>First of all connect to your database:</p>
+<p>Right click on &quot;PostgreSQL x.x ...&quot; and then click on &quot;Connect&quot;.</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347949"><img title="clip_image002[16]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347950" alt="clip_image002[16]" width="341" height="234" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Enter your super user password into the following dialog and click &quot;OK&quot;.</p>
+<p>Now you can create a new database user:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347951"><img title="clip_image002[18]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347952" alt="clip_image002[18]" width="344" height="282" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Right click on &quot;Login Roles (1)&quot; then click on &quot;New Login Role&hellip;&quot; to create a new database user.</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347953"><img title="clip_image002[20]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347954" alt="clip_image002[20]" width="348" height="376" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Add the values like above into the dialog (use a new password for the 'mlifterUser' account).</p>
+<p>Now switch to the tab &quot;Role privileges&quot; and add the values like above into the dialog:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347955"><img title="clip_image002[22]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347956" alt="clip_image002[22]" width="350" height="378" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Click &quot;OK&quot;.</p>
+<p>A new database user has been created. Now click on your PostgreSQL server in the tree view and disconnect from the server:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347957"><img title="clip_image002[24]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347958" alt="clip_image002[24]" width="354" height="205" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Now right click on the PostgreSQL server and click on Properties.</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347959"><img title="clip_image002[26]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347960" alt="clip_image002[26]" width="357" height="258" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>The properties dialog appears:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347961"><img title="clip_image002[28]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347962" alt="clip_image002[28]" width="276" height="402" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Change the username (case sensitive) to the newly created user and press OK. <strong>
+<br>
+<font color="#c0504d">Attention:</font></strong><font color="#c0504d"> From now on you will login as &quot;mlifterUser&quot; when you double click on the &quot;PostgreSQL Database Server&quot; node. If you want to do some major changes, which require the super user account, repeat
+ the last three steps and use the &quot;postgres&quot; user instead of &quot;mlifterUser&quot;.</font></p>
+</blockquote>
+<p><strong>4. Initialize the MemoryLifter database</strong></p>
+<blockquote>
+<p>To initialize the database select &quot;PostgreSQL Database Server&quot; from the tree view, enter your super user password and select the node &quot;Databases (1)&quot;. If you created a special database user account, please disconnect from the PostgreSQL database server and
+ reconnect with your special database user account (how to: see above section).</p>
+<p>Right click on &quot;Databases (1)&quot;, than click on &quot;New Database...&quot; to create a new database:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347963"><img title="clip_image002[30]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347964" alt="clip_image002[30]" width="430" height="229" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347965"><img title="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347966" alt="image" width="482" height="329" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Set the values shown above in the dialog and click &quot;OK&quot;. Do not forget to select UTF8 for the encoding!</p>
+<p>Now select the &quot;memorylifter&quot; database and click on the &quot;Execute SQL query&quot; button (see image). A new dialog appears:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347967"><img title="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347968" alt="image" width="497" height="283" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Click on &quot;File&quot;, &quot;Open&quot; and select the &quot;MemoryLifterServerDatabaseScript.sql&quot; file from your MemoryLifter Server package (ATTENTION: the current version has a minor bug in the SQL script you need to fix manually - please see
+<a href="http://memorylifter.codeplex.com/workitem/1360" target="_blank">HERE</a>):</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347969"><img title="clip_image002[32]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347970" alt="clip_image002[32]" width="456" height="228" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>Now click on the execute button (green &ldquo;play&rdquo;-button). After a few seconds, you will see the result of the query in the output pane:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347971"><img title="clip_image002[34]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347972" alt="clip_image002[34]" width="466" height="248" border="0" style="padding-left:0px; padding-right:0px; display:inline; padding-top:0px; border:0px"></a></p>
+<p>The database initialization has been successfully completed when the last output line reads &quot;Query returned successfully with no result in &hellip; ms&quot;. If this is not the case, copy the output message and contact us at
+<a href="mailto:support@memorylifter.com">support@memorylifter.com</a>.</p>
+<p>Now the PostgreSQL database system and the MemoryLifter database are fully installed and configured. For directions on how to use the MemoryLifter Server, continue reading this documentation.</p>
+</blockquote>
+<p><strong>5. Help</strong></p>
+<blockquote>
+<p>For more help regarding the configuration and installation of a PostgreSQL database system or MemoryLifter database, have a look at
+<a href="http://www.postgresql.org/docs/">http://www.postgresql.org/docs/</a> or contact us directly at
+<a href="mailto:support@memorylifter.com">support@memorylifter.com</a>.</p>
+</blockquote>
+</div><div class="ClearBoth"></div>

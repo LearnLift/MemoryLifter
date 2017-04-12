@@ -1,0 +1,123 @@
+<div class="wikidoc">
+<p><span style="font-size:x-large"><font size="6">Introduction to MemoryLifter Development</font></span></p>
+<p>This will give new developers a short overview of the MemoryLifter source code and help them to get started:</p>
+<ul>
+<li>How to get the source code </li><li>Solution/projects overview </li><li>Basic workflow descriptions </li></ul>
+<p><strong>&#160;</strong></p>
+<p><strong><span style="font-size:small"><font size="3">How to get the source code</font></span></strong></p>
+<p>There are two way to get the MemoryLifter source code:</p>
+<ul>
+<li>use SVN access (read-only for everyone) </li><li>TFS (project membership required and recommended for write access) </li></ul>
+<p>If you want to join us and help develope MemoryLifter go to the <a href="http://memorylifter.codeplex.com/team/view" target="_blank">
+People</a> page and click “Request to join project”.</p>
+<p>Otherwise just use SVN access to get a copy of the source code.&#160; You can <a href="http://memorylifter.codeplex.com/SourceControl/list/patches/upload" target="_blank">
+supply a source code path</a> if you just want to supply us a fix and/or new feature using SVN (and only read access).</p>
+<blockquote>
+<p><strong>SVN access:</strong></p>
+<p>To access the source code with SVN use “<a title="https://memorylifter.svn.codeplex.com/svn" href="https://memorylifter.svn.codeplex.com/svn">https://memorylifter.svn.codeplex.com/svn</a>” as the URL.</p>
+<p>If you are a project member you can also supply your CodePlex username and password to gain write access.</p>
+<p><strong>TFS access:</strong></p>
+<p>To access the source code with TFS use the following settings to <a href="http://codeplex.codeplex.com/wikipage?title=Connect%20to%20TFS%20with%20Team%20Explorer%202010" target="_blank">
+connect to the TFS using Team Explorer</a>:</p>
+<ul>
+<li>Server name: <strong>tfs.codeplex.com</strong> </li><li>Path: <strong>tfs</strong> </li><li>Port number: <strong>443</strong> </li><li>Protocol: <strong>https</strong> </li><li>Project Collection: <strong>TFS37</strong> </li><li>Project Name: <strong>MemoryLifter</strong> </li><li>Username: <strong>snd\</strong>YourCodeplexUsername<strong>_cp</strong> </li><li>Password: Your CodePlex password </li></ul>
+<p>Then you can map and get the source code.</p>
+<p>This way is recommended because the management of tasks and bugs etc is much easier this way.</p>
+<p>&#160;</p>
+</blockquote>
+<p><strong><span style="font-size:small"><font size="3">Solution/projects overview</font></span></strong></p>
+<p>This will give you a short overview of what is in each project:</p>
+<ul>
+<li><strong>MemoryLifter.sln</strong>
+<ul>
+<li><span style="text-decoration:underline">Applications</span><em> contains applications which are installed with MemoryLifter.</em>
+<ul>
+<li><strong>MLifter.ErrorHandler</strong> <em>sends error reports to us.</em> </li><li><strong>MLifter.UpdateHandler</strong> <em>checks and downloads MemoryLifter updates.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">BusinessLayer</span> <em>contains the business logic components of MemoryLifter.</em>
+<ul>
+<li><strong>MLifter.AudioTools</strong> <em>are tools which can be used to encode and decode audio files and streams.</em>
+</li><li><strong>MLifter.BusinessLayer</strong> <em>is the core MemoryLifter business logic containing the ‘LearnLogic’ which implements the Leitner algorithm.</em>
+</li><li><strong>MLifter.Remoting</strong> <em>contains business logic which allows remote control of MemoryLifter.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">Common</span>
+<ul>
+<li><strong>MLifter.Generics</strong> <em>general components and classes used by multiple solutions.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">DataAccessLayer</span> <em>contains projects which directly access databases.</em>
+<ul>
+<li><strong>MLifter.DAL</strong> <em>is the general data access project.</em>
+<ul>
+<li>DB
+<ul>
+<li>MSSQLCE <em>is the implementation of SQL CE access classes.</em> </li><li>PostgreSQL <em>is the implementation of PgSQL access classes.</em> </li></ul>
+</li><li>Interfaces <em>- these are the interfaces used to implement the database access layer.</em>
+</li></ul>
+</li><li><strong>Security.Framework.Base</strong> <em>is the base framework for rights management.</em>
+</li><li><strong>Security.PgSqlAdapter</strong> <em>is the security adapter for use with a PgSQL database.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">Solution Items</span> </li><li><span style="text-decoration:underline">Stick</span><em> contains everything necessary to create a MemoryLifter (USB) stick.</em>
+<ul>
+<li><strong>Autorun</strong> <em>the autorun.exe file on the stick is created from this project (C&#43;&#43;).</em>
+</li><li><strong>MLifter.Stick</strong> <em>contains the files and structure needed to create a stick.</em>
+</li><li><a href="/wikipage?title=StickFactory"><strong>StickFactory</strong></a> </li></ul>
+</li><li><span style="text-decoration:underline">Testing</span>
+<ul>
+<li><strong>MLifter.GenerateTestData</strong> <em>can fill up a PgSQL database with test data.</em>
+</li><li><strong>MLifter.UnitTests</strong> <em>the unit tests for the MemoryLifter application.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">Tools</span> <em>contains tools which can be used with MemoryLifter.</em>
+<ul>
+<li><a href="/wikipage?title=AudioBookGenerator"><strong>MLifter.AudioBookGenerator</strong></a>
+</li><li><a href="/wikipage?title=Recorder"><strong>MLifter.Recorder</strong></a> </li><li><a href="/wikipage?title=SettingsManager"><strong>MLifter.SettingsManager</strong></a>
+</li><li><a href="/wikipage?title=Unbind"><strong>MLifter.Unbind</strong></a> </li><li><a href="/wikipage?title=AdminSuite"><strong>SecurityAdminSuite</strong></a> </li></ul>
+</li><li><span style="text-decoration:underline">UserInterface</span>
+<ul>
+<li><strong>MLifter.CardCollector</strong> <em>collects cards from data copied to the clipboard from a spreadsheet.</em>
+</li><li><strong>MLifter.Components</strong> <em>are components (single controls) used within MemoryLifter (or MLifter.Controls) for example the FolderTreeView.</em>
+</li><li><strong>MLifter.Controls</strong> <em>are controls and dialogs used within MemoryLifter for example the LearningModulesPage.</em>
+</li><li><strong>MLifter.Updater</strong> <em>is the *.dll which is used as the update logic for the MLifter.UpdateHandler.</em>
+</li></ul>
+</li><li><span style="text-decoration:underline">WebServices</span>
+<ul>
+<li><strong>MLifter.ErrorService</strong> <em>is the server side component the MLifter.ErrorHandler communicates with.</em>
+</li><li><strong>MLifter.ModuleService</strong> <em>is a demo implementation of a learning module feed (used on the MemoryLifter.com feed).</em>
+</li><li><strong>MLifter.RegistrationService</strong> <em>is the service which handles the MemoryLifter registrations.</em>
+</li><li><strong>MLifter.SyncService</strong> <em>is the service which is used in a server environment to sync modules between MemoryLifter and a PgSQL database.</em>
+</li><li><strong>MLifter.UpdateService</strong> <em>is the service used to deliver MemoryLifter program updates.</em>
+</li></ul>
+</li><li><strong>MemoryLifter</strong> <em>is the main project which generates the MemoryLifter.exe and also contains most of its dialogs/forms etc.</em>
+</li><li><strong>MemoryLifter.Setup</strong> <em>is a simple setup which is used to create the MemoryLifter installer.</em>
+</li></ul>
+</li></ul>
+<blockquote>
+<p><span style="color:#ff0000">HINT: It is recommended to unload the setup project to avoid building it every time, which slows down the build process while debugging significantly.</span></p>
+</blockquote>
+<p>&#160;</p>
+<p><em>&#160;</em></p>
+<p><strong><span style="font-size:small"><font size="3">Basic workflow descriptions</font></span></strong></p>
+<p><strong>Card selection:</strong></p>
+<blockquote>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=350788"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=350789" width="556" height="347" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+</blockquote>
+<p><strong>Answer validation:</strong></p>
+<blockquote>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=350802"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=350803" width="563" height="349" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+</blockquote>
+<p><strong>MemoryLifter Update:</strong></p>
+<ol>
+<li>On startup or by user request <em>VersionHandler.ashx</em> is called to get the newest available version.
+</li><li>If an update available, MemoryLifter is closed and the <em>MLifter.UpdateHandler
+</em>is started. </li><li>The <em>MLifter.Updater</em>-dll will be downloaded from <em>UpdateService.asmx-&gt;ServeLatestMLVersion</em> and loaded.
+</li><li>The logic in the dll will download the latest MemoryLifter Setup and execute it.
+</li></ol>
+<p><strong>MemoryLifter Error Report:</strong></p>
+<ol>
+<li>If an unhandled exception occurs a ZIP-file will be stored in the AppData folder containing the following:
+<ul>
+<li>Error report (required) </li><li>Screenshot (optional) </li><li>Profile footprint (optional) </li><li>Connections (optional) </li></ul>
+</li><li>The <em>MLifter.ErrorHandler</em> is executed. </li><li>The user can choose which information to send and enter additional info and contact data.
+</li><li>The error handler splits the ZIP-file into small packets. </li><li>Each packet is sent to <em>ErrorReportService.asmx-&gt;TransferChunk</em> after calling
+<em>TransferStart.</em> </li><li>After <em>TransferFinish</em> is triggered, the ErrorReportService sends the ZIP-file by email to
+<a href="mailto:support@memorylifter.com">support@memorylifter.com</a> </li></ol>
+</div><div class="ClearBoth"></div>

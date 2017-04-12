@@ -1,0 +1,30 @@
+<div class="wikidoc"><font size="6">How-to build MemoryLifter help</font>
+<p>The MemoryLifter help is based on <a href="http://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help">
+Microsoft Compiled HTML Help<span></span></a>. The format is deprecated but the software
+<a href="http://www.microsoft.com/download/en/details.aspx?id=21138">MicroSoft HTML Help Workshop<span></span></a> is available as a free download. The format (CHM) is still supported by Windows 7.
+<br>
+<br>
+<b>Always work on the files located at <i>$/MemoryLifter/Development/CurrentHelp</i>!</b>
+</p>
+<p><strong><font size="3"></font></strong></p>
+<p><strong><font size="3">Edit the HTML help</font></strong> </p>
+<ol>
+<li>Start Microsoft HTML Help Workshop. </li><li>Open the project file (e.g. <i>$/MemoryLifter/Development/CurrentHelp/en/memorylifter.hhp</i>).
+</li></ol>
+<p>&#160;</p>
+<p><strong><font size="3">Create a new localization </font></strong></p>
+<p>Currently the MemoryLifter help has been localized for german (de), spanish (es), french (fr) and portugese (pt). All localizations are based on the english (en) version.
+<br>
+</p>
+<ol>
+<li>Navigate to <i>$/MemoryLifter/Development/CurrentHelp</i>. </li><li>Create a copy of the folder <i>en</i> and rename it according to the new localization (e.g.
+<i>it</i> for <i>italian</i>). </li><li>Add the folder to the repository. </li><li>Translate all files contained in <i></i>$/MemoryLifter/Development/CurrentHelp/&lt;new-language&gt;/html_.
+</li><li>Translate the index file <i>$/MemoryLifter/Development/CurrentHelp/&lt;new-language&gt;/memorylifter.hhk</i>.
+</li></ol>
+<p>&#160;</p>
+<p><strong><font size="3">Add a new localization to the application </font></strong></p>
+<ol>
+<li>Copy the complied help file to <i>$/MemoryLifter/Development/Current/MemoryLifter/Resources/&lt;new-language&gt;/help_&lt;new-language&gt;.chm</i> and add it to the MemoryLifter application project.
+</li><li>Adapt the resource string HELP_FILEPATH (e.g. <i>Resources\&lt;new-language&gt;\help_&lt;new-language&gt;.chm</i>).
+</li></ol>
+</div><div class="ClearBoth"></div>

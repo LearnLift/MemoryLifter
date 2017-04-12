@@ -1,0 +1,97 @@
+<div class="wikidoc"><span style="font-size:x-large"><font size="6">How to install the Web Service</font></span>
+<p>You do not need to install a Web Service on your server if you are using direct database access. For details on server type please read the introduction at the beginning of this documentation. It's also possible to install the web service later, so that
+ you can first check the MemoryLifter database and MemoryLifter client configuration.
+</p>
+<p><strong>1. Software requirements</strong></p>
+<blockquote>
+<p>If you want to make use of MemoryLifter Web Service, your server workstation has to meet following demands:</p>
+<ul>
+<li>Internet Information Service (IIS) has to be installed (how to, see below) </li><li>Microsoft® .NET Framework 4.0 or higher has to be installed (how to, see below)
+</li></ul>
+<p><font color="#c0504d">Attention: Please make sure that all requirements are met. If you are not sure, try to install the required software. If you have already installed them, the installation wizard will inform you and you can continue.</font></p>
+</blockquote>
+<p><strong>2. Prepare MemoryLifter Web Service</strong></p>
+<blockquote>
+<p>Open the MemoryLifter Server Package and copy the folder named &quot;MemoryLifterWebService&quot; to anywhere on your server. Now open the file &quot;web.config&quot;, located in the root directory of the &quot;MemoryLifterWebService&quot; folder. Use a
+ simple text editor to open the file (e.g. notepad). Search for the following part in the file:
+<br>
+<a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347977"><img title="clip_image002" border="0" alt="clip_image002" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347978" width="519" height="167" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>Now change the &quot;connectionString&quot; to the following and save the file afterwards:</p>
+<p><font color="#0000ff">connectionString</font>=&quot;<font color="#c0504d"><font color="#ff0000">Server</font>=localhost;<font color="#ff0000">Port</font>=5432;<font color="#ff0000">Userid</font>=mlifterUser;<font color="#ff0000">password</font>=mlifter;<font color="#ff0000">Protocol</font>=3;<font color="#ff0000">SSL</font>=false;<font color="#ff0000">Pooling</font>=true;<font color="#ff0000">MinPoolSize</font>=1;<font color="#ff0000">MaxPoolSize</font>=20;<font color="#ff0000">Encoding</font>=UNICODE;<font color="#ff0000">Timeout</font>=15;<font color="#ff0000">SslMode</font>=Disable;<font color="#ff0000">database</font>=memorylifter;</font>&quot;</p>
+<p><b>Attention:</b> <font color="#ff0000">Userid</font>= and <font color="#ff0000">
+password</font>= should be set to the username and password you defined with PgAdmin III a few sections earlier.</p>
+</blockquote>
+<p><strong>3. Integrate MemoryLifter Web Service into IIS</strong></p>
+<blockquote>
+<p>The following paragraph shows you how to install and integrate the MemoryLifter Web Service into IIS (Internet Information Service), depending on the operating system you use on the server. This documentation explains IIS integration in a very simplified
+ manner. As each server has a unique configuration, use the following only as a rough guideline.
+</p>
+<p><strong>3.1&#160;&#160; Install IIS – Internet Information Service (Windows® XP Pro)</strong></p>
+<p>For the installation of IIS, you need to have your Windows® XP Pro setup disk ready (or the corresponding &quot;I386&quot; folder on it).
+</p>
+<ul>
+<li>Click on &quot;Start&quot; =&gt; &quot;Settings&quot; =&gt; &quot;Control Panel&quot; and double click on &quot;Add or Remove Programs&quot;.
+</li><li>Afterwards click on &quot;Add/Remove Windows Components&quot; (on the left side).
+</li><li>A new dialog appears. Scroll down the list to the entry &quot;Internet Information Services (IIS)&quot; and check it. If the checkbox is already checked, you can cancel the wizard and continue with the next step.
+</li><li>Click on &quot;Next&quot;. </li><li>A new dialog appears and asks for the Windows setup CD. Insert the CD and click on &quot;OK&quot;.
+</li><li>After the installation has finished, restart your workstation </li></ul>
+<p>Now you have successfully installed IIS. For general problems with IIS, contact Microsoft® (Internet Service Provider, etc…) for help.</p>
+<p><strong>3.2&#160;&#160; Install IIS – Internet Information Service (Windows® Vista / 7)</strong></p>
+<ul>
+<li>Click on &quot;Start&quot; =&gt; &quot;Control Panel&quot; and click on &quot;Programs and Features&quot;.
+</li><li>Afterwards click on &quot;Turn Windows features on or off&quot;. </li><li>After confirmation of the UAC message, a new dialog appears. Scroll down the list to the entry &quot;Internet Information Services&quot; and check it. Also check its sub-entry &quot;Internet Information Services&quot; / &quot;World Wide Web Services&quot;
+ / &quot;Application Developement Features&quot; / &quot;ASP.NET&quot;. If both checkboxes are already checked, you can cancel the wizard and continue with the next step.
+</li><li>Confirm with the &quot;OK&quot;-button and wait for the process to complete. </li><li>Restart the workstation if you are prompted to do so. </li></ul>
+<p>Now you have successfully enabled IIS. For general problems with IIS, contact Microsoft® (Internet Service Provider, etc…) for help.</p>
+<p><strong>3.3&#160;&#160; Install IIS – Internet Information Service (Windows® Server 2003 / 2008)</strong></p>
+<p>For the Windows® Server systems, IIS is already pre-installed, but it has to be enabled manually if it is not already active. To do this, you have to configure the server to an appropriate Role (either &quot;Application Server&quot; or &quot;Web Server (IIS)&quot;).</p>
+<p>Please consult the corresponding manual or online help for more information about Roles and how they can be configured.</p>
+<p><strong>3.4&#160;&#160; Update your workstation with the Microsoft® .NET 4.0 Framework
+<br>
+</strong><font color="#c0504d">Please note: If you know that the &quot;Microsoft® .NET 4.0 Framework&quot; is already installed you can skip this step.</font></p>
+<p>Open a web browser, search for the &quot;Microsoft .NET 4.0 Full Framework&quot; and download it. The .NET 4.0 Framework is free and can be downloaded from the Microsoft® homepage.
+<br>
+After you downloaded the .NET 4.0 Framework, install it on your server workstation. If the .NET Framework is already installed, you can cancel the installation and continue. After the installation is finished, restart your workstation.</p>
+<p>Now you have successfully installed the .NET 4.0 Framework. For problems during the installation, contact Microsoft® (Internet, etc…) for help.</p>
+<p><strong>3.5&#160;&#160; Integrate MemoryLifter Web Service into IIS (Windows® XP Pro / Server 2003)</strong></p>
+<p>Open the Computer Management dialog (&quot;Start&quot; =&gt; &quot;Settings&quot; =&gt; &quot;Control Panel&quot; =&gt; &quot;Administrative Tools&quot; =&gt; &quot;Computer Management&quot;) and expand the &quot;Internet Information Service&quot; tree node.
+<br>
+If there is no tree node &quot;Internet Information Service&quot; you have to install the &quot;Internet Information Service&quot; (IIS) first. See above for how to install it.</p>
+<p>Right click on &quot;Default Web Site&quot; … &quot;New&quot; … &quot;Virtual Directory…&quot;:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347979"><img title="clip_image002[5]" border="0" alt="clip_image002[5]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347980" width="415" height="365" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>In the following wizard enter this data:</p>
+<ul>
+<li><strong>Alias</strong>: MemoryLifterWebService </li><li><strong>Directory</strong>: (enter the path of the &quot;MemoryLifterWebService&quot; folder)
+</li><li><strong>Allow the following</strong>: Read; Run scripts (such as ASP) </li></ul>
+<p><strong>3.6&#160;&#160; Integrate MemoryLifter Web Service into IIS (Windows® Vista / 7 / Server 2008)</strong></p>
+<p>Open the Computer Management dialog (&quot;Start&quot; =&gt; &quot;Settings&quot; =&gt; &quot;Control Panel&quot; =&gt; &quot;Administrative Tools&quot; =&gt; &quot;Computer Management&quot;) and expand the &quot;Internet Information Service&quot; tree node.
+<br>
+If there is no tree node &quot;Internet Information Service&quot; you have to install the &quot;Internet Information Service&quot; (IIS) first. See above for how to install it.</p>
+<p>Right click on &quot;Default Web Site&quot; … &quot;Add Application…&quot;: <br>
+</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347981"><img title="clip_image002[7]" border="0" alt="clip_image002[7]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347982" width="447" height="414" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>In the following wizard enter this data:</p>
+<ul>
+<li><strong>Alias</strong>: MemoryLifterWebService </li><li><strong>Physical path</strong>: (enter the path of the &quot;MemoryLifterWebService&quot; folder)
+</li></ul>
+<p>Click on OK, and the new application should be visible in the list.</p>
+<p>After that, you still have one thing to setup – set the &quot;App_Data&quot; folder to writable:</p>
+<p>The application needs to have write permission for the folder App_Data in order to create log files and save cache data.
+</p>
+<p>To do this, open the node &quot;MemoryLifterWebService&quot;, right click on &quot;App_Data&quot; and select &quot;Edit Permissions...&quot;. In the appearing dialog, navigate to the tab &quot;Security&quot; and click on the button &quot;Edit...&quot;.
+<br>
+Click on &quot;Add...&quot; and enter the user the application runs under (by default &quot;NETWORK SERVICE&quot;):
+<br>
+</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347983"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347984" width="492" height="515" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>After that, close the user selection dialog and check the checkbox &quot;Allow&quot; in the row &quot;Full control&quot;:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347985"><img title="clip_image002[9]" border="0" alt="clip_image002[9]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347986" width="270" height="326" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>Then, you can close the dialogs with &quot;OK&quot; and the MemoryLifter Web Service integration is finished.</p>
+<p><strong>3.7 Test the MemoryLifter Web Service <br>
+</strong>Open Internet Explorer (or any other browser) and go to the following address:
+<br>
+<a href="http://localhost/MemoryLifterWebService/MLifterLearningModulesService.asmx">http://localhost/MemoryLifterWebService/MLifterLearningModulesService.asmx</a></p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347987"><img title="clip_image002[11]" border="0" alt="clip_image002[11]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347988" width="369" height="326" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>If the above page is shown without any errors, the MemoryLifter Web Service has been successfully integrated into IIS.</p>
+</blockquote>
+</div><div class="ClearBoth"></div>

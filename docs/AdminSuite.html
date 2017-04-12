@@ -1,0 +1,121 @@
+<div class="wikidoc">
+<p><font size="6">Admin Suite</font></p>
+<p>The Admin Suite allows you to configure users and groups on the server. The Admin Suite should only be used by an administrator and not by teachers or students.
+</p>
+<p><strong>5.1&#160;&#160; Create the configuration file for the client</strong></p>
+<blockquote>
+<p>Before you can start the Admin Suite or any other MemoryLifter client, you need to set up the configuration file which each client will need in their configuration directory. Configuration files make it possible to add new connections to clients. For example,
+ an admin PC can be set up to have direct database access, and student PCs can be setup to have access through the MemoryLifter Web Service.</p>
+<p>Open, from the MemoryLifter Server package, the demo configuration file &quot;DirectDatabaseAccess_Demo.mlcfg&quot; with a text editor (like Windows Notepad):</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347994"><img title="clip_image001" border="0" alt="clip_image001" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347995" width="401" height="323" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p><strong>Explanation of the configuration file:</strong></p>
+<ul>
+<li><strong>Name</strong>: This is the name of the connection that will be displayed to clients. You could enter a name like &quot;&lt;&lt;Institution Name&gt;&gt; – ML Server&quot;.
+</li><li><strong>Server</strong>: The DNS-resolvable server name or IP-address of the server.
+</li><li><strong>Port</strong>: The port number on the server (&quot;5432&quot; is the default port for a PostgreSQL database server).
+</li><li><strong>UserId</strong>: The PostgreSQL user, which you setup in Section 3.3: &quot;Create a new database user&quot; (or the default &quot;postgres&quot; super user).
+</li><li><strong>Password</strong>: The corresponding password here. </li><li><strong>SSL</strong>: Enter &quot;false&quot; as default. </li><li><strong>Database</strong>: The name of the database, which you setup in Section 3.4: &quot;Initialize the MemoryLifter Database&quot; (&quot;memorylifter&quot; is the default).
+</li><li><strong>SyncType</strong>: Enter &quot;NotSynchronized&quot; for direct database access (which is required for the Admin Suite).
+</li><li><strong>SyncURI, MediaURI, OtherProperties</strong>: Leave these blank as above unless you need to make special configurations.
+</li></ul>
+<p>Now save the modified configuration file to following directory:</p>
+<ul>
+<li><strong>Windows 2000, Windows XP: <br>
+</strong>C:\Documents and Settings\&lt;&lt;UserName&gt;&gt;\Application Data\LearnLift\MemoryLifter2.3\Config\
+</li><li><strong>Windows Vista, Windows 7: <br>
+</strong>C:\Users\&lt;&lt;UserName&gt;&gt;\AppData\Roaming\LearnLift\MemoryLifter2.3\Config\
+</li></ul>
+<p><strong>Tip</strong>: If you have a custom folder structure on your computer, or you can't find the directory, press [WIN] &#43; [R], enter following command and press OK:</p>
+<ul>
+<li>%AppData% </li></ul>
+<p>Afterwards Windows Explorer appears within a new window. The window represents your Application Data folder. Now you can add following folder structure to your AppData:</p>
+<ul>
+<li>LearnLift\MemoryLifter2.3\Config </li></ul>
+<p>If the directory does not exist, create it. <br>
+<strong>Important</strong>: You must save the configuration file on the PC which runs the Admin Suite.</p>
+</blockquote>
+<p><strong>2. Install the Admin Suite</strong></p>
+<blockquote>
+<p>To install the Admin Suite please go to <a href="http://memorylifter.codeplex.com/releases" target="_blank">
+http://memorylifter.codeplex.com/releases</a> and download/install the newest Version of the Admin Suite.</p>
+</blockquote>
+<p><strong>3. Using the Admin Suite</strong></p>
+<blockquote>
+<p>After you have installed the Admin Suite, open it. A login dialog should appear:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347996"><img title="clip_image002" border="0" alt="clip_image002" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347997" width="308" height="121" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>Login as &quot;admin&quot; by using your admin password (default is &quot;admin&quot;). If the login dialog doesn't appear (e.g. an error message appears instead), check the following:</p>
+<ul>
+<li>Is the configuration file saved to the correct directory </li><li>Are you running the Admin Suite on the same PC and with the same Windows user account that you saved the configuration file on?
+</li><li>Does the configuration file contain correct values? </li><li>Is the PostgreSQL database server available from your PC (network issues…)? </li></ul>
+<p>If you are still having problems, contact us at <a href="mailto:support@memorylifter.com">
+support@memorylifter.com</a>.</p>
+<p><strong>3.1 Groups</strong></p>
+<p>The Admin Suite allows you to manage different groups (for example Teachers, Students). After the initialization of the MemoryLifter database, you have three groups by default:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347998"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=347999" width="424" height="342" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p><strong>Explanation:</strong></p>
+<p>1. This list shows all groups. By default three groups are defined: Administrator&quot;, &quot;Teacher&quot; and &quot;Student&quot;. You can add a new group (right-click anywhere in pane 1) or rename/delete a group (right-click on the group):</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348000"><img title="clip_image002[5]" border="0" alt="clip_image002[5]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348001" width="241" height="180" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a>&#160;<a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348002"><img title="clip_image002[7]" border="0" alt="clip_image002[7]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348003" width="241" height="197" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>2. This list shows all members (users) in the current group. With a right-click in the member's field, you can add users to the group:
+</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348004"><img title="clip_image002[9]" border="0" alt="clip_image002[9]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348005" width="408" height="83" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>If you right-click on a user, you can remove a single user from the group:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348006"><img title="clip_image002[11]" border="0" alt="clip_image002[11]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348007" width="415" height="84" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>3. Type Permissions: Here you can set different permissions for a group. For example, you can disallow the print function (&quot;CanPrint&quot;) for students:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348008"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348009" width="443" height="207" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>A.&#160;&#160;&#160; Select the group you want to edit the permissions for. <br>
+B.&#160;&#160;&#160; In this field you see all members which the permissions will be applied to.
+<br>
+C.&#160;&#160;&#160; Here you can select which permissions you want to allow.</p>
+<p>4. Object Permissions: Here you can set different permissions for a group, <u>
+on specific Learning Modules or even chapters</u>. For example you can disallow the export function (&quot;CanExport&quot;) for students. Or you can make some chapters of a Learning Module invisible:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348010"><img title="clip_image002[13]" border="0" alt="clip_image002[13]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348011" width="390" height="218" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p><font color="#ff0000"><b>Important:</b> Do not delete the Administrator Group or user. Otherwise you will not be able to enter the Admin Suite again.</font></p>
+<p><strong><font color="#000000">3.2 </font>Users</strong></p>
+<p>The following section explains how to add and edit single users, or even import users from Microsoft® Active Directory or Novell® eDirectory:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348012"><img title="image" border="0" alt="image" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348013" width="450" height="363" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p><strong>Explanation:</strong></p>
+<p>1. This list shows all users. By default three users are defined: &quot;admin&quot;, &quot;teacher&quot;, &quot;student&quot;. You can add new user (by right-clicking on the panel), or edit/delete a user (by right-clicking on the user):</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348014"><img title="clip_image002[15]" border="0" alt="clip_image002[15]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348015" width="244" height="195" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a>&#160;<a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348016"><img title="clip_image002[17]" border="0" alt="clip_image002[17]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348017" width="244" height="189" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>2. This list shows all groups which the current user belongs to. With a right-click in the members field, you can add single groups to a user:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348018"><img title="clip_image002[19]" border="0" alt="clip_image002[19]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348019" width="441" height="111" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>If you right-click on a group, you can remove a single group from a user:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348020"><img title="clip_image002[21]" border="0" alt="clip_image002[21]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348021" width="438" height="89" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>3. It is possible to set special permissions for single users. The usage is the same as in the &quot;Groups&quot; tab.</p>
+<p>4. It is also possible to set special permissions for single users for specific Learning Modules or even chapters. The usage is the same as in the &quot;Groups&quot; tab.</p>
+<p><strong>3.3 Add single user</strong></p>
+<p>If you want to add a new user, go to the &quot;User&quot; tab, right-click in the left panel and select &quot;Add new user&quot;. A dialog appears:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348022"><img title="clip_image002[23]" border="0" alt="clip_image002[23]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348023" width="244" height="132" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>Enter a name for the new user and press &quot;OK&quot;. Another dialog appears:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348024"><img title="clip_image004" border="0" alt="clip_image004" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348025" width="244" height="132" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>If you want to create a user with a password:</p>
+<ul>
+<li>Enter a password for the user. </li><li>Press &quot;OK&quot;. </li></ul>
+<p>Otherwise:</p>
+<ul>
+<li>Press &quot;Cancel&quot;. </li></ul>
+<p>Now a new user is created. By default the user is not assigned to a group. If you would like to assign a group or groups, select the user in the left list box, right-click in the Group Membership field, and add the group &quot;Student&quot; to the &quot;testuser&quot;
+ (just as an example).</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348026"><img title="clip_image002[25]" border="0" alt="clip_image002[25]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348027" width="394" height="116" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>Now you have successfully created a user and assigned it to the group &quot;Student&quot;.</p>
+<p><strong>3.4 Importing Active Directory or Novell eDirectory users</strong></p>
+<p>The Admin Suite allows you to import all Microsoft® Active Directory or Novell® eDirectory users from your network. To import such users, select the &quot;Users&quot; tab, right-click the left panel, and click on &quot;Import user&quot;:</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348028"><img title="clip_image002[27]" border="0" alt="clip_image002[27]" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348029" width="199" height="171" style="border-bottom:0px; border-left:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348030"><img title="clip_image004" border="0" alt="clip_image004" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348031" width="461" height="461" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>A new dialog appears:</p>
+<p>1. Choose your directory type</p>
+<p>2. Enter your network data (server/port/…) and click on &quot;Search&quot; (this can take a few seconds).</p>
+<p>3. This list shows all users found by the search. Now drag all the users you want to import to the right side and press &quot;Import&quot;.</p>
+<p>Now the users you selected to import are added to the user list. By default they are not assigned to a group so you can do that and/or assign permissions to the imported users.</p>
+<p><strong>3.5 Authentication Settings</strong></p>
+<p>This tab allows you to configure the authentication settings.</p>
+<p><a href="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348032"><img title="clip_image003" border="0" alt="clip_image003" src="http://download.codeplex.com/Download?ProjectName=memorylifter&DownloadId=348033" width="376" height="255" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>1. List authentication: Allows normal users (<u>not</u> active directory/eDirectory users) to login. The client can select his username out of a list box.
+</p>
+<p>2. Forms authentication: Allows normal users (<u>not</u> active directory/eDirectory users) to login. The client has to enter his username and password in a textbox.</p>
+<p>3. Local directory authentication: The client gets automatically logged into MemoryLifter using their user account.
+</p>
+<p><u></u></p>
+<p><u>Attention:</u> Do not disable the authentication mode of your <u>current user (admin)</u>, otherwise you will not be able to login the Admin Suite again. All settings you change are immediately saved to the database. In case you restricted yourself the
+ access to Admin Suite, contact us at <a href="mailto:support@memorylifter.com">support@memorylifter.com</a>.</p>
+</blockquote>
+</div><div class="ClearBoth"></div>
